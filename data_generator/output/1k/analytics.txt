@@ -1,0 +1,40 @@
+=== GRAPH AND LCA ANALYSIS REPORT ===
+Target population: 1000
+Total people generated: 1000
+People alive at end of simulation (2005): 73
+Total families: 573
+
+--- POPULATION GROWTH OVER TIME ---
+Year 1800: Alive 160 people. Total generated: 160
+Year 1825: Alive 483 people. Total generated: 573
+Year 1850: Alive 505 people. Total generated: 739
+Year 1875: Alive 355 people. Total generated: 825
+Year 1900: Alive 189 people. Total generated: 869
+Year 1925: Alive 104 people. Total generated: 899
+Year 1950: Alive 76 people. Total generated: 927
+Year 1975: Alive 59 people. Total generated: 951
+Year 2000: Alive 65 people. Total generated: 987
+Year 2005 (END): Alive 73 people. Total generated: 1000
+
+--- GRAPH TOPOLOGY ---
+Max graph depth (from oldest ancestor to youngest descendant): 10 generations.
+
+(Target value of 8 reached at iteration 71. Stopping search early.)
+--- LOWEST COMMON ANCESTOR (LCA) SEARCH ---
+Target LCA path length required: 8
+Constraint: Person A and Person B are not closely related AND distance to LCA > 3 for both sides.
+Recommended for graph querying research:
+- Person A (ID: 863)
+- Person B (ID: 934)
+Path length from Person A to LCA: 4
+Path length from Person B to LCA: 4
+Total path length between A and B: 8
+Number of distinct LCAs at this exact shortest distance: 1
+List of LCA IDs with their individual distances:
+  - LCA ID: 45 (Dist A: 4, Dist B: 4)
+
+--- ANCESTOR RETRIEVAL SCENARIO ---
+Objective: Find person with most distinct ancestors up to 5 generations back.
+Recommended Person ID: 978
+Distinct ancestors found (Depth <= 5): 62
+Theoretical max (Perfect Tree): 62

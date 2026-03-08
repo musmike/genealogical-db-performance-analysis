@@ -1,0 +1,84 @@
+=== GRAPH AND LCA ANALYSIS REPORT ===
+Target population: 100000
+Total people generated: 100000
+People alive at end of simulation (2029): 10440
+Total families: 58583
+
+--- POPULATION GROWTH OVER TIME ---
+Year 900: Alive 2000 people. Total generated: 2000
+Year 925: Alive 6535 people. Total generated: 7816
+Year 950: Alive 6842 people. Total generated: 10045
+Year 975: Alive 4666 people. Total generated: 11125
+Year 1000: Alive 2876 people. Total generated: 12187
+Year 1025: Alive 2727 people. Total generated: 13593
+Year 1050: Alive 3343 people. Total generated: 15373
+Year 1075: Alive 3840 people. Total generated: 17204
+Year 1100: Alive 3974 people. Total generated: 18930
+Year 1125: Alive 3866 people. Total generated: 20560
+Year 1150: Alive 3739 people. Total generated: 22248
+Year 1175: Alive 3660 people. Total generated: 23885
+Year 1200: Alive 3603 people. Total generated: 25506
+Year 1225: Alive 3564 people. Total generated: 27088
+Year 1250: Alive 3596 people. Total generated: 28705
+Year 1275: Alive 3458 people. Total generated: 30196
+Year 1300: Alive 3325 people. Total generated: 31643
+Year 1325: Alive 3350 people. Total generated: 33187
+Year 1350: Alive 3582 people. Total generated: 34988
+Year 1375: Alive 3757 people. Total generated: 36721
+Year 1400: Alive 3965 people. Total generated: 38519
+Year 1425: Alive 4030 people. Total generated: 40415
+Year 1450: Alive 4089 people. Total generated: 42315
+Year 1475: Alive 4168 people. Total generated: 44244
+Year 1500: Alive 4185 people. Total generated: 46105
+Year 1525: Alive 4262 people. Total generated: 48047
+Year 1550: Alive 4241 people. Total generated: 49978
+Year 1575: Alive 4175 people. Total generated: 51776
+Year 1600: Alive 4150 people. Total generated: 53661
+Year 1625: Alive 4132 people. Total generated: 55565
+Year 1650: Alive 4207 people. Total generated: 57390
+Year 1675: Alive 4140 people. Total generated: 59211
+Year 1700: Alive 4207 people. Total generated: 61183
+Year 1725: Alive 4378 people. Total generated: 63225
+Year 1750: Alive 4464 people. Total generated: 65223
+Year 1775: Alive 4708 people. Total generated: 67500
+Year 1800: Alive 4930 people. Total generated: 69791
+Year 1825: Alive 5065 people. Total generated: 72073
+Year 1850: Alive 5269 people. Total generated: 74499
+Year 1875: Alive 5416 people. Total generated: 77020
+Year 1900: Alive 5721 people. Total generated: 79738
+Year 1925: Alive 6204 people. Total generated: 82751
+Year 1950: Alive 6482 people. Total generated: 85732
+Year 1975: Alive 7101 people. Total generated: 89265
+Year 2000: Alive 8290 people. Total generated: 93686
+Year 2025: Alive 10316 people. Total generated: 99281
+Year 2029 (END): Alive 10440 people. Total generated: 100000
+
+--- GRAPH TOPOLOGY ---
+Max graph depth (from oldest ancestor to youngest descendant): 48 generations.
+
+(Target value of 16 reached at iteration 1146. Stopping search early.)
+--- LOWEST COMMON ANCESTOR (LCA) SEARCH ---
+Target LCA path length required: 16
+Constraint: Person A and Person B are not closely related AND distance to LCA > 3 for both sides.
+Recommended for graph querying research:
+- Person A (ID: 98199)
+- Person B (ID: 97746)
+Path length from Person A to LCA: 9
+Path length from Person B to LCA: 7
+Total path length between A and B: 16
+Number of distinct LCAs at this exact shortest distance: 7
+List of LCA IDs with their individual distances:
+  - LCA ID: 65870 (Dist A: 9, Dist B: 7)
+  - LCA ID: 65933 (Dist A: 9, Dist B: 7)
+  - LCA ID: 64021 (Dist A: 8, Dist B: 8)
+  - LCA ID: 64046 (Dist A: 8, Dist B: 8)
+  - LCA ID: 64136 (Dist A: 8, Dist B: 8)
+  - LCA ID: 64156 (Dist A: 8, Dist B: 8)
+  - LCA ID: 64262 (Dist A: 8, Dist B: 8)
+
+--- ANCESTOR RETRIEVAL SCENARIO ---
+Objective: Find person with most distinct ancestors up to 15 generations back.
+Recommended Person ID: 99922
+Distinct ancestors found (Depth <= 15): 11441
+Theoretical max (Perfect Tree): 65534
+(Note: High pedigree collapse is biologically expected here.)
