@@ -1,1 +1,69 @@
- 
+services:
+  postgres:
+    image: postgres:16.13
+    container_name: postgres_db
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_USER: benchmark
+      POSTGRES_PASSWORD: benchmark
+      POSTGRES_DB: benchmark_db
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    # command: >
+    #   postgres
+    #   -c log_statement=none
+    #   -c log_min_duration_statement=-1
+    #   -c logging_collector=off
+
+    networks:
+      - benchmark_net
+
+    cpus: 4
+    mem_limit: 8g
+
+
+  neo4j:
+    image: neo4j:5.26.21-community
+    container_name: neo4j_db
+    restart: unless-stopped
+
+    environment:
+      NEO4J_AUTH: neo4j/benchmark
+
+      NEO4J_server_memory_heap_initial__size: 3G
+      NEO4J_server_memory_heap_max__size: 3G
+      NEO4J_server_memory_pagecache_size: 3G
+
+      # NEO4J_db_logs_query_enabled: "false"
+      # NEO4J_server_logs_gc_enabled: "false"
+
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+
+    networks:
+      - benchmark_net
+
+    cpus: 4
+    mem_limit: 8g
+
+
+networks:
+  benchmark_net:
+    driver: bridge
+
+
+volumes:
+  postgres_data:
+  neo4j_data:
+  neo4j_logs:
