@@ -1,0 +1,191 @@
+=== GRAPH AND LCA ANALYSIS REPORT ===
+Target population: 1000
+Total people generated: 1000
+People alive at end of simulation (2027): 67
+Total families: 582
+Note: all graph traversals follow biological relationships only.
+
+--- POPULATION GROWTH OVER TIME ---
+Year 1800: Alive 160 people. Total generated: 160
+Year 1825: Alive 451 people. Total generated: 559
+Year 1850: Alive 458 people. Total generated: 708
+Year 1875: Alive 316 people. Total generated: 794
+Year 1900: Alive 189 people. Total generated: 845
+Year 1925: Alive 115 people. Total generated: 874
+Year 1950: Alive 81 people. Total generated: 899
+Year 1975: Alive 62 people. Total generated: 928
+Year 2000: Alive 69 people. Total generated: 964
+Year 2025: Alive 64 people. Total generated: 996
+Year 2027 (END): Alive 67 people. Total generated: 1000
+
+--- GRAPH TOPOLOGY ---
+Max graph depth (biological links only, oldest ancestor to youngest descendant): 10 generations.
+
+(Target value of 8 reached at iteration 900. Stopping search early.)
+--- SCENARIO: LOWEST COMMON ANCESTOR (LCA) SEARCH ---
+Biological relationships only.
+Target LCA path length required: 8
+Constraint: Person A and Person B are not closely related AND
+            biological distance to LCA > 3 for both sides.
+Recommended for graph querying research:
+- Person A (ID: 926)
+- Person B (ID: 914)
+Path length from Person A to LCA: 4
+Path length from Person B to LCA: 4
+Total path length between A and B: 8
+Number of distinct LCAs at this exact shortest distance: 1
+List of LCA IDs with their individual distances:
+  - LCA ID: 265 (Dist A: 4, Dist B: 4)
+
+--- SCENARIO: ANCESTOR RETRIEVAL ---
+Biological relationships only.
+Objective: Find person with most distinct biological ancestors up to 5 generations back.
+Recommended Person ID: 927
+Distinct biological ancestors found (depth <= 5): 62
+Theoretical max (Perfect Tree): 62
+
+--- SCENARIO: DESCENDANT RETRIEVAL ---
+Biological relationships only.
+Objective: Find person with most distinct biological descendants up to 3 generations forward.
+Recommended Person ID: 841
+Name: Irena Nowakowska
+Birth year: 1898
+Distinct biological descendants found (depth <= 3): 48
+
+--- SCENARIO: FILTERING BY SURNAME AND BIRTH YEAR RANGE ---
+Recommended surname: Stępień
+Recommended birth year range: 1805-1854
+Matching records in dataset: 42
+
+--- SCENARIO: BIRTHS PER CITY PER QUARTER-CENTURY (top 10 cities) ---
+Cities: Chełmno, Cieszyn, Katowice, Kielce, Kraków, Krynica, Reszel, Sromowce, Zwierzyniec, Złoty Potok
+  Chełmno (total: 28):
+    1750-1774: 3
+    1775-1799: 2
+    1800-1824: 9
+    1825-1849: 5
+    1850-1874: 3
+    1875-1899: 1
+    1900-1924: 1
+    1975-1999: 2
+    2000-2024: 1
+    2025-2049: 1
+  Cieszyn (total: 32):
+    1750-1774: 2
+    1775-1799: 4
+    1800-1824: 9
+    1825-1849: 6
+    1850-1874: 5
+    1875-1899: 3
+    1925-1949: 1
+    1950-1974: 1
+    1975-1999: 1
+  Katowice (total: 31):
+    1750-1774: 2
+    1775-1799: 3
+    1800-1824: 13
+    1825-1849: 8
+    1875-1899: 1
+    1925-1949: 1
+    1950-1974: 1
+    1975-1999: 1
+    2000-2024: 1
+  Kielce (total: 28):
+    1775-1799: 5
+    1800-1824: 7
+    1825-1849: 3
+    1850-1874: 4
+    1875-1899: 3
+    1925-1949: 3
+    1950-1974: 1
+    1975-1999: 1
+    2000-2024: 1
+  Kraków (total: 29):
+    1750-1774: 1
+    1775-1799: 3
+    1800-1824: 11
+    1825-1849: 4
+    1850-1874: 2
+    1875-1899: 1
+    1900-1924: 1
+    1925-1949: 1
+    1950-1974: 2
+    1975-1999: 2
+    2000-2024: 1
+  Krynica (total: 29):
+    1750-1774: 1
+    1775-1799: 3
+    1800-1824: 15
+    1825-1849: 2
+    1850-1874: 2
+    1875-1899: 1
+    1900-1924: 3
+    1925-1949: 1
+    1950-1974: 1
+  Reszel (total: 28):
+    1750-1774: 1
+    1775-1799: 7
+    1800-1824: 12
+    1825-1849: 3
+    1875-1899: 1
+    1900-1924: 1
+    1925-1949: 1
+    1975-1999: 1
+    2000-2024: 1
+  Sromowce (total: 34):
+    1750-1774: 1
+    1775-1799: 4
+    1800-1824: 18
+    1825-1849: 3
+    1850-1874: 5
+    1875-1899: 1
+    1975-1999: 1
+    2000-2024: 1
+  Zwierzyniec (total: 28):
+    1750-1774: 1
+    1775-1799: 2
+    1800-1824: 9
+    1825-1849: 5
+    1850-1874: 2
+    1875-1899: 6
+    1900-1924: 2
+    2000-2024: 1
+  Złoty Potok (total: 31):
+    1750-1774: 1
+    1775-1799: 2
+    1800-1824: 14
+    1825-1849: 2
+    1850-1874: 5
+    1875-1899: 2
+    1900-1924: 2
+    1975-1999: 1
+    2000-2024: 2
+
+--- SCENARIO: YOUNGEST PARENT ---
+Biological relationships only. Both sexes considered.
+Age at first biological child birth: 19
+Number of persons tied at this age: 2
+  Person ID: 58 | Sex: F | Name: Maria Michalska | Birth year: 1782
+  Person ID: 715 | Sex: F | Name: Maja Kamińska | Birth year: 1853
+
+--- SCENARIO: INSERT/DELETE TEST CANDIDATE ---
+Recommended: an adopted person with no biological parents in the dataset.
+Benchmark: INSERT two biological parents + one sibling for this person,
+           then DELETE those three persons and their Family node.
+Person ID:    169
+Name:         Barbara Walczak
+Birth year:   1801
+Adopting Family ID: 27
+Biological parents: none in dataset — safe to INSERT new parents.
+
+--- SCENARIO: PLACE NAME UPDATE SCOPE ---
+Historical German city names to be replaced with their modern Polish equivalents:
+  Posen -> Poznań
+  Danzig -> Gdańsk
+  Breslau -> Wrocław
+  Stettin -> Szczecin
+  Bromberg -> Bydgoszcz
+  Thorn -> Toruń
+Match is substring-based (e.g. 'Cemetery in Breslau' is also captured).
+people:   253 rows affected
+families: 79 rows affected

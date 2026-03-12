@@ -18,17 +18,20 @@ SCENARIOS = {
     1000: {
         'min_lca_path': 8,
         'max_lca_path': 8,
-        'ancestors_depth': 5
+        'ancestors_depth': 5,
+        'descendants_depth': 3
     },
     10000: {
         'min_lca_path': 12,
         'max_lca_path': 12,
-        'ancestors_depth': 10
+        'ancestors_depth': 10,
+        'descendants_depth': 6
     },
     100000: {
         'min_lca_path': 16,
         'max_lca_path': 16,
-        'ancestors_depth': 15
+        'ancestors_depth': 15,
+        'descendants_depth': 10
     }
 }
 
@@ -57,7 +60,7 @@ SURNAMES = [
     "Stępień", "Malinowski", "Jaworski", "Adamczyk", "Dudek", "Górski", "Pawlak", "Sikora", "Walczak", "Baran"
 ]
 
-# Pool of Polish towns and villages used as birth, death, and marriage locations.
+# Pool of towns and villages used as birth, death, and marriage locations.
 PLACES = [
     "Warszawa", "Kraków", "Posen", "Danzig", "Breslau", "Łódź", "Lublin", "Stettin", "Bromberg", "Katowice",
     "Białystok", "Gdynia", "Częstochowa", "Radom", "Sosnowiec", "Thorn", "Kielce", "Rzeszów", "Gliwice", "Olsztyn",

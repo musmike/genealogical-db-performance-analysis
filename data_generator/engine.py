@@ -363,7 +363,7 @@ class SimulationEngine:
                         if married:
                             break
 
-    def export_to_csv(self):
+    def export_to_postgres_csv(self):
         """
         Write all simulation records to three CSV files in the output directory.
 
@@ -427,7 +427,7 @@ class SimulationEngine:
         - nodes_family.csv:    Every Family record as a Neo4j node labelled 'Family'.
         - rels_husband_of.csv: HUSBAND_OF relationship: husband Person → Family node.
         - rels_wife_of.csv:    WIFE_OF relationship: wife Person → Family node.
-        - rels_child_of.csv:   CHILD_OF relationship: child Person → Family node,
+        - rels_child_of.csv:   HAS_CHILD relationship: Family node → child Person,
                                with 'relationshipType' property.
 
         Import command (run from Neo4j home, database must be stopped):
@@ -438,7 +438,7 @@ class SimulationEngine:
               --nodes=Family=neo4j/nodes_family.csv \\
               --relationships=HUSBAND_OF=neo4j/rels_husband_of.csv \\
               --relationships=WIFE_OF=neo4j/rels_wife_of.csv \\
-              --relationships=CHILD_OF=neo4j/rels_child_of.csv \\
+              --relationships=HAS_CHILD=neo4j/rels_child_of.csv \\
               --overwrite-destination
         """
         neo4j_dir = os.path.join(self.output_dir, 'neo4j')
@@ -514,13 +514,16 @@ class SimulationEngine:
                 if fam.wife_id:
                     writer.writerow([fam.wife_id, fam.id, 'WIFE_OF'])
 
-        # ---- CHILD_OF relationships --------------------------------------
+        # ---- HAS_CHILD relationships (Family → Person) -------------------
+        # Direction: Family is the source, Person (child) is the target.
+        # Spouses point into the family node (HUSBAND_OF / WIFE_OF); children
+        # flow outward from it, which makes traversal patterns more natural.
         with open(f'{neo4j_dir}/rels_child_of.csv', 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow([':START_ID(Person)', ':END_ID(Family)', 'relationshipType:STRING', ':TYPE'])
+            writer.writerow([':START_ID(Family)', ':END_ID(Person)', 'relationshipType:STRING', ':TYPE'])
             for fam in self.families.values():
                 for child_dict in fam.children:
-                    writer.writerow([child_dict['id'], fam.id, child_dict['type'], 'CHILD_OF'])
+                    writer.writerow([fam.id, child_dict['id'], child_dict['type'], 'HAS_CHILD'])
 
         print(f"[{self.target_population}] Neo4j CSV export complete → {neo4j_dir}/")
 
@@ -528,65 +531,105 @@ class SimulationEngine:
         """
         Compute and write a graph-analytics report for the completed simulation.
 
-        The report covers four areas:
+        All traversals in this report follow biological relationships only.
+        Adopted and foster children are excluded from every graph scenario.
+
+        The report covers the following scenarios:
 
         1. Population growth log — snapshots recorded during the simulation run.
 
         2. Graph topology — the maximum generational depth of the family tree,
            measured as the longest path from any root individual (no parents) to
-           any descendant.
+           any descendant, following biological links only.
 
-        3. Place name migration impact — per-field row counts showing how many
-           records in the people and families tables contain each of the six
-           historical German city names targeted for replacement with their modern
-           Polish equivalents.
+        3. LCA (Lowest Common Ancestor) search — biological paths only. A
+           randomized search over pairs of young individuals from different
+           regions to find a pair whose shortest biological path through a
+           common ancestor matches the configured target length.
 
-        4. LCA (Lowest Common Ancestor) search — a randomized search over pairs
-           of young individuals from different regions to find a pair whose shortest
-           path through a common ancestor matches the configured target length.
-           The search respects a kinship exclusion constraint: neither individual
-           may be closely related to the other, and each must be at least 4 steps
-           away from the LCA.
+        4. Ancestor retrieval scenario — biological paths only. Identifies the
+           individual with the greatest number of distinct biological ancestors
+           within the configured depth limit.
 
-        5. Ancestor retrieval scenario — identifies the individual among a sample
-           of the youngest persons who has the greatest number of distinct ancestors
-           within the configured depth limit, providing a benchmark query target.
+        5. Descendant retrieval scenario — biological paths only. Identifies the
+           individual with the greatest number of distinct biological descendants
+           within the configured depth limit.
+
+        6. Surname and birth year filter scenario — selects a surname and 50-year
+           birth window that returns a representative result set.
+
+        7. Births per city per quarter-century — counts births grouped by place
+           and 25-year period across the top 10 cities by birth volume.
+
+        8. Youngest parent scenario — biological relationships only. Identifies
+           the person who had their first biological child at the youngest age.
+
+        9. Insert/Delete test candidate — identifies an adopted person with no
+           biological parents in the dataset, recommended as the anchor for
+           manual insert/delete benchmark queries.
+
+        10. Place name update scope — row counts for the German-to-Polish city
+            name migration.
 
         Results are written to analytics.txt in the output directory.
         """
+        from collections import Counter, defaultdict
+
         config = SCENARIOS.get(self.target_population, {'min_lca_path': 8, 'max_lca_path': 99, 'ancestors_depth': 5})
         target_lca_min = config['min_lca_path']
         target_lca_max = config.get('max_lca_path', 999)
         target_ancestors_depth = config['ancestors_depth']
+
+        # Descendant traversal depth is deliberately shallower than ancestor depth:
+        # the descendant tree fans out exponentially, so smaller N already yields
+        # a large and representative result set. Controlled via SCENARIOS in config.py.
+        target_descendants_depth = config.get('descendants_depth', 3 if self.target_population <= 1000 else (6 if self.target_population <= 10000 else 10))
 
         if target_lca_min == target_lca_max:
             target_label = str(target_lca_min)
         else:
             target_label = f"{target_lca_min}-{target_lca_max}"
 
-        filepath = os.path.join(self.output_dir, 'analytics.txt')
+        # ------------------------------------------------------------------
+        # Helper: check whether a person's link to their parents_family_id
+        # is biological (i.e. their entry in fam.children has type 'biological').
+        # ------------------------------------------------------------------
+        def is_biological_child(p_id):
+            p = self.people.get(p_id)
+            if not p or not p.parents_family_id:
+                return False
+            fam = self.families.get(p.parents_family_id)
+            if not fam:
+                return False
+            return any(c['id'] == p_id and c['type'] == 'biological' for c in fam.children)
+
+        filepath = os.path.join(self.output_dir, 'summary.txt')
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write("=== GRAPH AND LCA ANALYSIS REPORT ===\n")
             f.write(f"Target population: {self.target_population}\n")
             f.write(f"Total people generated: {len(self.people)}\n")
             f.write(f"People alive at end of simulation ({self.current_year}): {len(self.living_people_ids)}\n")
-            f.write(f"Total families: {len(self.families)}\n\n")
+            f.write(f"Total families: {len(self.families)}\n")
+            f.write("Note: all graph traversals follow biological relationships only.\n\n")
 
+            # ── 1. POPULATION GROWTH ──────────────────────────────────────────
             f.write("--- POPULATION GROWTH OVER TIME ---\n")
             for log in self.history_log:
                 f.write(log + "\n")
             f.write("\n")
 
-            # Compute generational depth for every individual via a single forward pass
-            # over IDs in insertion order (parents always have lower IDs than children).
+            # ── 2. GRAPH TOPOLOGY ─────────────────────────────────────────────
+            # Compute generational depth via a single forward pass over IDs in
+            # insertion order (parents always have lower IDs than children).
+            # Only biological parent links are followed.
             depths = {}
             max_depth = 0
             for p_id in sorted(self.people.keys()):
                 p = self.people[p_id]
-                if p.parents_family_id:
+                if is_biological_child(p_id):
                     fam = self.families[p.parents_family_id]
                     d_husband = depths.get(fam.husband_id, 0) if fam.husband_id else 0
-                    d_wife = depths.get(fam.wife_id, 0) if fam.wife_id else 0
+                    d_wife    = depths.get(fam.wife_id, 0)    if fam.wife_id    else 0
                     d = max(d_husband, d_wife) + 1
                 else:
                     d = 1
@@ -595,10 +638,9 @@ class SimulationEngine:
                     max_depth = d
 
             f.write("--- GRAPH TOPOLOGY ---\n")
-            f.write(f"Max graph depth (from oldest ancestor to youngest descendant): {max_depth} generations.\n\n")
+            f.write(f"Max graph depth (biological links only, oldest ancestor to youngest descendant): {max_depth} generations.\n\n")
 
-            # Restrict LCA search to a manageable sample of the youngest individuals
-            # to keep runtime proportional to population size.
+            # Sample pool shared by LCA, ancestor retrieval and descendant retrieval.
             if self.target_population >= 100000:
                 sample_size = 8000
             elif self.target_population >= 10000:
@@ -612,19 +654,19 @@ class SimulationEngine:
                 reverse=True
             )[:sample_size]
 
-            # Bucket sampled individuals by region to enforce cross-region pair selection.
+            # ── 3. LCA SEARCH ─────────────────────────────────────────────────
+            # Bucket sampled individuals by region to enforce cross-region pairs.
             regions = {0: [], 1: [], 2: [], 3: [], 4: []}
             for p_id in youngest_ids:
                 regions[self.people[p_id].region_id].append(p_id)
 
-            # Limit BFS depth to slightly beyond half the maximum target path length
-            # to avoid exploring ancestry far beyond what the target requires.
             bfs_limit = (target_lca_max // 2) + 10
 
-            def get_ancestors_with_paths_limited(p_id, limit):
+            def get_ancestors_biological(p_id, limit):
                 """
-                Return a dict mapping ancestor IDs to their BFS distance from p_id.
-                Traversal is capped at 'limit' steps to bound computation time.
+                BFS upward through biological parent links only.
+                Returns a dict mapping ancestor IDs to their distance from p_id.
+                Traversal is capped at 'limit' steps.
                 """
                 ancestors_paths = {p_id: 0}
                 queue = [(p_id, 0)]
@@ -632,18 +674,18 @@ class SimulationEngine:
                     curr_id, dist = queue.pop(0)
                     if dist >= limit:
                         continue
-                    p = self.people[curr_id]
-                    if p.parents_family_id:
-                        fam = self.families[p.parents_family_id]
-                        for parent_id in (fam.husband_id, fam.wife_id):
-                            if parent_id and parent_id not in ancestors_paths:
-                                ancestors_paths[parent_id] = dist + 1
-                                queue.append((parent_id, dist + 1))
+                    if not is_biological_child(curr_id):
+                        continue
+                    fam = self.families[self.people[curr_id].parents_family_id]
+                    for parent_id in (fam.husband_id, fam.wife_id):
+                        if parent_id and parent_id not in ancestors_paths:
+                            ancestors_paths[parent_id] = dist + 1
+                            queue.append((parent_id, dist + 1))
                 return ancestors_paths
 
-            max_distance = 0
+            max_distance  = 0
             best_pair_info = None
-            iterations = 1500
+            iterations    = 1500
 
             for i in range(iterations):
                 msg = f"\r[{self.target_population}] LCA search: {i + 1}/{iterations} | best so far: {max_distance} (target: {target_label})    "
@@ -654,53 +696,48 @@ class SimulationEngine:
                 if len(available_regions) < 2:
                     break
 
-                # Sample one individual from each of two distinct regions.
                 r1, r2 = random.sample(available_regions, 2)
-                p1_id = random.choice(regions[r1])
-                p2_id = random.choice(regions[r2])
+                p1_id  = random.choice(regions[r1])
+                p2_id  = random.choice(regions[r2])
 
                 if not is_too_closely_related(p1_id, p2_id, self.people, self.families):
-                    anc1 = get_ancestors_with_paths_limited(p1_id, bfs_limit)
-                    anc2 = get_ancestors_with_paths_limited(p2_id, bfs_limit)
+                    anc1 = get_ancestors_biological(p1_id, bfs_limit)
+                    anc2 = get_ancestors_biological(p2_id, bfs_limit)
 
                     common = set(anc1.keys()).intersection(set(anc2.keys()))
-                    # Require both individuals to be at least 4 steps from any candidate LCA
-                    # to ensure a non-trivial path through the ancestor graph.
-                    valid_lcas_for_check = [x for x in common if anc1[x] > 3 and anc2[x] > 3]
+                    # Both individuals must be at least 4 biological steps from the LCA.
+                    valid_lcas = [x for x in common if anc1[x] > 3 and anc2[x] > 3]
 
-                    if valid_lcas_for_check:
-                        min_total_dist = min(anc1[x] + anc2[x] for x in valid_lcas_for_check)
+                    if valid_lcas:
+                        min_total_dist = min(anc1[x] + anc2[x] for x in valid_lcas)
 
                         if min_total_dist > max_distance and min_total_dist <= target_lca_max:
                             max_distance = min_total_dist
-                            lcas_at_min_dist = [x for x in valid_lcas_for_check if
-                                                anc1[x] + anc2[x] == min_total_dist]
-                            lca_details = [(x, anc1[x], anc2[x]) for x in lcas_at_min_dist]
+                            lcas_at_min  = [x for x in valid_lcas if anc1[x] + anc2[x] == min_total_dist]
+                            lca_details  = [(x, anc1[x], anc2[x]) for x in lcas_at_min]
 
                             best_pair_info = {
-                                'p1': p1_id,
-                                'p2': p2_id,
+                                'p1': p1_id, 'p2': p2_id,
                                 'lcas': lca_details,
                                 'dist1': lca_details[0][1],
                                 'dist2': lca_details[0][2],
                                 'total_dist': max_distance
                             }
 
-                            # Early exit once a pair satisfying the configured target range is found.
                             if target_lca_min <= max_distance <= target_lca_max:
-                                sys.stdout.write(f"\n")
+                                sys.stdout.write("\n")
                                 sys.stdout.flush()
-                                f.write(
-                                    f"(Target value of {target_label} reached at iteration {i + 1}. Stopping search early.)\n"
-                                )
+                                f.write(f"(Target value of {target_label} reached at iteration {i + 1}. Stopping search early.)\n")
                                 break
             else:
                 sys.stdout.write("\n")
                 sys.stdout.flush()
 
-            f.write("--- LOWEST COMMON ANCESTOR (LCA) SEARCH ---\n")
+            f.write("--- SCENARIO: LOWEST COMMON ANCESTOR (LCA) SEARCH ---\n")
+            f.write("Biological relationships only.\n")
             f.write(f"Target LCA path length required: {target_label}\n")
-            f.write("Constraint: Person A and Person B are not closely related AND distance to LCA > 3 for both sides.\n")
+            f.write("Constraint: Person A and Person B are not closely related AND\n")
+            f.write("            biological distance to LCA > 3 for both sides.\n")
 
             if best_pair_info:
                 if best_pair_info['total_dist'] < target_lca_min:
@@ -713,7 +750,6 @@ class SimulationEngine:
                         f"[WARNING] Best found path ({best_pair_info['total_dist']}) EXCEEDS the required value "
                         f"({target_label}). Consider lowering the target in config.py.\n"
                     )
-
                 f.write("Recommended for graph querying research:\n")
                 f.write(f"- Person A (ID: {best_pair_info['p1']})\n")
                 f.write(f"- Person B (ID: {best_pair_info['p2']})\n")
@@ -726,52 +762,228 @@ class SimulationEngine:
                     f.write(f"  - LCA ID: {lca_id} (Dist A: {dist_a}, Dist B: {dist_b})\n")
                 f.write("\n")
             else:
-                f.write("No common ancestors found satisfying the strict criteria (>3 distance for both, within target).\n\n")
+                f.write("No common biological ancestors found satisfying the strict criteria.\n\n")
 
-            f.write("--- ANCESTOR RETRIEVAL SCENARIO ---\n")
-            f.write(f"Objective: Find person with most distinct ancestors up to {target_ancestors_depth} generations back.\n")
+            # ── 4. ANCESTOR RETRIEVAL SCENARIO ───────────────────────────────
+            f.write("--- SCENARIO: ANCESTOR RETRIEVAL ---\n")
+            f.write("Biological relationships only.\n")
+            f.write(f"Objective: Find person with most distinct biological ancestors up to {target_ancestors_depth} generations back.\n")
 
             best_ancestor_count = 0
-            best_person_id = None
-            # Use only the 200 youngest individuals to keep the search tractable.
+            best_ancestor_person_id = None
             sample_for_ancestors = youngest_ids[:200]
 
             for p_id in sample_for_ancestors:
                 distinct_ancestors = set()
-                # visited prevents re-queuing the same node via multiple paths,
-                # which causes exponential queue growth when pedigree collapse is present.
                 visited = {p_id}
-                queue = [(p_id, 0)]
+                queue   = [(p_id, 0)]
                 while queue:
                     curr, d = queue.pop(0)
                     if d >= target_ancestors_depth:
                         continue
-                    curr_p = self.people[curr]
-                    if curr_p.parents_family_id:
-                        fam = self.families[curr_p.parents_family_id]
-                        for parent_id in (fam.husband_id, fam.wife_id):
-                            if parent_id and parent_id not in visited:
-                                visited.add(parent_id)
-                                distinct_ancestors.add(parent_id)
-                                queue.append((parent_id, d + 1))
+                    if not is_biological_child(curr):
+                        continue
+                    fam = self.families[self.people[curr].parents_family_id]
+                    for parent_id in (fam.husband_id, fam.wife_id):
+                        if parent_id and parent_id not in visited:
+                            visited.add(parent_id)
+                            distinct_ancestors.add(parent_id)
+                            queue.append((parent_id, d + 1))
 
                 count = len(distinct_ancestors)
                 if count > best_ancestor_count:
-                    best_ancestor_count = count
-                    best_person_id = p_id
+                    best_ancestor_count     = count
+                    best_ancestor_person_id = p_id
 
-            if best_person_id:
-                f.write(f"Recommended Person ID: {best_person_id}\n")
-                f.write(f"Distinct ancestors found (Depth <= {target_ancestors_depth}): {best_ancestor_count}\n")
-                theoretical_max = sum([2 ** i for i in range(1, target_ancestors_depth + 1)])
+            if best_ancestor_person_id:
+                f.write(f"Recommended Person ID: {best_ancestor_person_id}\n")
+                f.write(f"Distinct biological ancestors found (depth <= {target_ancestors_depth}): {best_ancestor_count}\n")
+                theoretical_max = sum(2 ** i for i in range(1, target_ancestors_depth + 1))
                 f.write(f"Theoretical max (Perfect Tree): {theoretical_max}\n")
                 if target_ancestors_depth > 10:
                     f.write("(Note: High pedigree collapse is biologically expected here.)\n")
             else:
-                f.write("Could not find any ancestors for the sampled group.\n")
+                f.write("Could not find any biological ancestors for the sampled group.\n")
+            f.write("\n")
 
-            # Count people and families records that contain any of the target city names.
-            # Matching is substring-based, so values like 'Cemetery in Breslau' are included.
+            # ── 5. DESCENDANT RETRIEVAL SCENARIO ─────────────────────────────
+            f.write("--- SCENARIO: DESCENDANT RETRIEVAL ---\n")
+            f.write("Biological relationships only.\n")
+            f.write(f"Objective: Find person with most distinct biological descendants up to {target_descendants_depth} generations forward.\n")
+            # Build a map: person_id -> list of biological child IDs, for fast downward traversal.
+            bio_children_map = defaultdict(list)
+            for fam in self.families.values():
+                for child_dict in fam.children:
+                    if child_dict['type'] == 'biological':
+                        if fam.husband_id:
+                            bio_children_map[fam.husband_id].append(child_dict['id'])
+                        if fam.wife_id:
+                            bio_children_map[fam.wife_id].append(child_dict['id'])
+
+            best_descendant_count     = 0
+            best_descendant_person_id = None
+            # Sample up to 500 candidates from all persons to keep runtime bounded.
+            all_ids = list(self.people.keys())
+            sample_for_descendants = random.sample(all_ids, min(500, len(all_ids)))
+
+            for p_id in sample_for_descendants:
+                distinct_descendants = set()
+                visited = {p_id}
+                queue   = [(p_id, 0)]
+                while queue:
+                    curr, d = queue.pop(0)
+                    if d >= target_descendants_depth:
+                        continue
+                    for child_id in bio_children_map.get(curr, []):
+                        if child_id not in visited:
+                            visited.add(child_id)
+                            distinct_descendants.add(child_id)
+                            queue.append((child_id, d + 1))
+
+                count = len(distinct_descendants)
+                if count > best_descendant_count:
+                    best_descendant_count     = count
+                    best_descendant_person_id = p_id
+
+            if best_descendant_person_id:
+                dp = self.people[best_descendant_person_id]
+                f.write(f"Recommended Person ID: {best_descendant_person_id}\n")
+                f.write(f"Name: {dp.given_name} {dp.surname}\n")
+                f.write(f"Birth year: {dp.birth_year}\n")
+                f.write(f"Distinct biological descendants found (depth <= {target_descendants_depth}): {best_descendant_count}\n")
+            else:
+                f.write("Could not find any biological descendants for the sampled group.\n")
+            f.write("\n")
+
+            # ── 6. SURNAME + BIRTH YEAR FILTER SCENARIO ──────────────────────
+            surname_counts = Counter(p.surname for p in self.people.values())
+            top_surnames   = [s for s, _ in surname_counts.most_common(5)]
+            best_surname   = None
+            best_year_start = None
+            best_count      = 0
+            target_min = max(5, len(self.people) // 20)
+            target_max = max(20, len(self.people) // 8)
+
+            for surname in top_surnames:
+                birth_years = sorted(p.birth_year for p in self.people.values() if p.surname == surname)
+                if len(birth_years) < 2:
+                    continue
+                for start in range(birth_years[0], birth_years[-1] - 49):
+                    cnt = sum(1 for y in birth_years if start <= y < start + 50)
+                    if target_min <= cnt <= target_max:
+                        if best_surname is None or abs(cnt - target_min) < abs(best_count - target_min):
+                            best_surname    = surname
+                            best_year_start = start
+                            best_count      = cnt
+
+            f.write("--- SCENARIO: FILTERING BY SURNAME AND BIRTH YEAR RANGE ---\n")
+            if best_surname:
+                f.write(f"Recommended surname: {best_surname}\n")
+                f.write(f"Recommended birth year range: {best_year_start}-{best_year_start + 49}\n")
+                f.write(f"Matching records in dataset: {best_count}\n\n")
+            else:
+                fallback    = top_surnames[0] if top_surnames else 'Nowak'
+                all_years   = sorted(p.birth_year for p in self.people.values() if p.surname == fallback)
+                yr_start    = all_years[len(all_years) // 4] if all_years else self.start_year
+                cnt         = sum(1 for p in self.people.values()
+                                  if p.surname == fallback and yr_start <= p.birth_year < yr_start + 50)
+                f.write(f"Recommended surname: {fallback}\n")
+                f.write(f"Recommended birth year range: {yr_start}-{yr_start + 49}\n")
+                f.write(f"Matching records in dataset: {cnt}\n\n")
+
+            # ── 7. BIRTHS PER CITY PER QUARTER-CENTURY ───────────────────────
+            births_by_city_quarter = defaultdict(lambda: defaultdict(int))
+            for p in self.people.values():
+                quarter = (p.birth_year // 25) * 25
+                births_by_city_quarter[p.birth_place][quarter] += 1
+
+            city_totals = {city: sum(q.values()) for city, q in births_by_city_quarter.items()}
+            top_cities  = sorted(city_totals, key=city_totals.get, reverse=True)[:10]
+
+            # Sorted alphabetically for the detail table; comma-separated for easy copy-paste into queries.
+            top_cities_alpha = sorted(top_cities)
+            f.write("--- SCENARIO: BIRTHS PER CITY PER QUARTER-CENTURY (top 10 cities) ---\n")
+            f.write("Cities: " + ", ".join(top_cities_alpha) + "\n")
+            for city in top_cities_alpha:
+                quarters = births_by_city_quarter[city]
+                f.write(f"  {city} (total: {city_totals[city]}):\n")
+                for quarter in sorted(quarters):
+                    f.write(f"    {quarter}-{quarter + 24}: {quarters[quarter]}\n")
+            f.write("\n")
+
+            # ── 8. YOUNGEST PARENT SCENARIO ──────────────────────────────────
+            # Collect all parents (both sexes) tied at the minimum age, then report
+            # every one of them — there may be multiple individuals, male or female,
+            # who had their first biological child at exactly the same age.
+            f.write("--- SCENARIO: YOUNGEST PARENT ---\n")
+            f.write("Biological relationships only. Both sexes considered.\n")
+
+            youngest_parent_age = None
+            # Maps parent_id -> age-at-first-biological-child (running minimum per parent).
+            parent_first_child_age: dict = {}
+
+            for fam in self.families.values():
+                for child_dict in fam.children:
+                    if child_dict['type'] != 'biological':
+                        continue
+                    child = self.people.get(child_dict['id'])
+                    if not child:
+                        continue
+                    for parent_id in (fam.husband_id, fam.wife_id):
+                        parent = self.people.get(parent_id)
+                        if not parent:
+                            continue
+                        age = child.birth_year - parent.birth_year
+                        if age < 0:
+                            continue
+                        # Keep the earliest (youngest-age) child per parent.
+                        if parent_id not in parent_first_child_age or age < parent_first_child_age[parent_id]:
+                            parent_first_child_age[parent_id] = age
+
+            if parent_first_child_age:
+                youngest_parent_age = min(parent_first_child_age.values())
+                tied_parents = [pid for pid, age in parent_first_child_age.items() if age == youngest_parent_age]
+                f.write(f"Age at first biological child birth: {youngest_parent_age}\n")
+                f.write(f"Number of persons tied at this age: {len(tied_parents)}\n")
+                for pid in tied_parents:
+                    yp = self.people[pid]
+                    f.write(f"  Person ID: {pid} | Sex: {yp.sex} | Name: {yp.given_name} {yp.surname} | Birth year: {yp.birth_year}\n")
+                f.write("\n")
+            else:
+                f.write("No biological parent-child records found.\n\n")
+
+            # ── 9. INSERT/DELETE TEST CANDIDATE ──────────────────────────────
+            # Find an adopted person who has no biological parents in the dataset.
+            # This person is the recommended anchor for manual insert/delete benchmarks:
+            # add two biological parents + one sibling (INSERT), then remove them (DELETE).
+            f.write("--- SCENARIO: INSERT/DELETE TEST CANDIDATE ---\n")
+            f.write("Recommended: an adopted person with no biological parents in the dataset.\n")
+            f.write("Benchmark: INSERT two biological parents + one sibling for this person,\n")
+            f.write("           then DELETE those three persons and their Family node.\n")
+
+            candidate = None
+            for p in self.people.values():
+                if not p.parents_family_id:
+                    continue
+                fam = self.families.get(p.parents_family_id)
+                if not fam:
+                    continue
+                my_entry = next((c for c in fam.children if c['id'] == p.id), None)
+                if my_entry and my_entry['type'] == 'adopted':
+                    candidate = p
+                    break
+
+            if candidate:
+                f.write(f"Person ID:    {candidate.id}\n")
+                f.write(f"Name:         {candidate.given_name} {candidate.surname}\n")
+                f.write(f"Birth year:   {candidate.birth_year}\n")
+                f.write(f"Adopting Family ID: {candidate.parents_family_id}\n")
+                f.write("Biological parents: none in dataset — safe to INSERT new parents.\n\n")
+            else:
+                f.write("No suitable adopted person without biological parents found in dataset.\n\n")
+
+            # ── 10. PLACE NAME UPDATE SCOPE ───────────────────────────────────
+            # Substring match so values like 'Cemetery in Breslau' are included.
             people_to_update = sum(
                 1 for p in self.people.values()
                 if any(g in (p.birth_place or '') or g in (p.death_place or '') or g in (p.burial_place or '')
@@ -782,11 +994,16 @@ class SimulationEngine:
                 if any(g in (fam.marriage_place or '') for g in GERMAN_TO_POLISH)
             )
 
-            f.write("\n--- PLACE NAME UPDATE SCOPE ---\n")
+            f.write("--- SCENARIO: PLACE NAME UPDATE SCOPE ---\n")
+            f.write("Historical German city names to be replaced with their modern Polish equivalents:\n")
+            for german, polish in GERMAN_TO_POLISH.items():
+                f.write(f"  {german} -> {polish}\n")
+            f.write("Match is substring-based (e.g. 'Cemetery in Breslau' is also captured).\n")
             f.write(f"people:   {people_to_update} rows affected\n")
             f.write(f"families: {families_to_update} rows affected\n")
 
-        print(f"[{self.target_population}] Analytics report saved to '{filepath}'.")
+        print(f"[{self.target_population}] Summary report saved to '{filepath}'.")
+
 
     def run(self):
         """
@@ -852,6 +1069,6 @@ class SimulationEngine:
             print(log_end)
             print(f"Success! Target of {len(self.people)} people reached exactly in year {self.current_year}.")
 
-        self.export_to_csv()
+        self.export_to_postgres_csv()
         self.export_to_neo4j_csv()
         self.run_analytics()
