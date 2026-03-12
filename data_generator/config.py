@@ -6,7 +6,7 @@ and all name/place/occupation/cause-of-death pools used during generation.
 """
 
 # Fixed random seed ensures fully reproducible simulation runs across executions.
-SEED = 102
+SEED = 26
 
 # Per-population-size configuration for the LCA and ancestor-retrieval analytics.
 # - min_lca_path / max_lca_path: the required total path length between two individuals
@@ -59,8 +59,8 @@ SURNAMES = [
 
 # Pool of Polish towns and villages used as birth, death, and marriage locations.
 PLACES = [
-    "Warszawa", "Kraków", "Poznań", "Gdańsk", "Breslau", "Łódź", "Lublin", "Szczecin", "Bydgoszcz", "Katowice",
-    "Białystok", "Gdynia", "Częstochowa", "Radom", "Sosnowiec", "Toruń", "Kielce", "Rzeszów", "Gliwice", "Olsztyn",
+    "Warszawa", "Kraków", "Posen", "Danzig", "Breslau", "Łódź", "Lublin", "Stettin", "Bromberg", "Katowice",
+    "Białystok", "Gdynia", "Częstochowa", "Radom", "Sosnowiec", "Thorn", "Kielce", "Rzeszów", "Gliwice", "Olsztyn",
     "Lipce", "Bronowice", "Zalipie", "Chochołów", "Sromowce", "Lanckorona", "Złoty Potok", "Supraśl", "Tykocin", "Biecz",
     "Kazimierz Dolny", "Sandomierz", "Zwierzyniec", "Reszel", "Chełmno", "Pszczyna", "Cieszyn", "Sanok", "Krynica", "Wisła"
 ]
@@ -77,8 +77,8 @@ OCCUPATIONS = [
 # Pool of historically plausible causes of death.
 # None values represent cases where no cause of death was recorded.
 CAUSES_OF_DEATH = [
-    "Old age", "Infectious disease", "Accident", "Pneumonia", "Fever", "Unknown", "Consumption", "Heart failure",
-    "Stroke", "Cancer", "Childbirth", "Drowning", "War casualty", "Plague", "Smallpox", "Cholera", "Typhus",
-    "Dysentery", "Influenza", "Starvation", "Fire", "Murder", "Suicide", "Dropsy", "Apoplexy",
+    "Infectious disease", "Accident", "Pneumonia", "Fever", "Unknown", "Consumption", "Heart failure",
+    "Stroke", "Cancer", "Drowning", "War casualty", "Plague", "Smallpox", "Cholera", "Typhus",
+    "Dysentery", "Influenza", "Starvation", "Fire", "Murder", "Dropsy", "Apoplexy",
     None, None, None, None
 ]

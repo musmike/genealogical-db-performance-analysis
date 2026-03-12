@@ -4,8 +4,9 @@ Core simulation engine for the genealogical population generator.
 SimulationEngine drives year-by-year population dynamics: it initializes a
 founding generation, then iterates forward in time processing deaths, divorces,
 births, and marriages until the target population size is reached. On completion
-it exports all records to CSV files and runs a graph-analytics report covering
-LCA path lengths and ancestor-retrieval metrics.
+it exports all records to CSV files (PostgreSQL-compatible and Neo4j-admin-import-
+compatible) and runs a graph-analytics report covering LCA path lengths and
+ancestor-retrieval metrics.
 """
 
 import csv
@@ -18,6 +19,18 @@ from config import MALE_NAMES, FEMALE_NAMES, SURNAMES, PLACES, CAUSES_OF_DEATH, 
 from demographics import (get_planned_children_count, get_widow_planned_children_count, get_marriage_age,
                           get_lifespan, is_too_closely_related, random_date,
                           adjust_surname, get_family_status, get_child_relationship_type)
+
+
+# German city names that appear in the PLACES pool alongside their modern Polish equivalents.
+# Used in the analytics report to count how many records require a place-name update.
+GERMAN_TO_POLISH = {
+    'Posen':    'Poznań',
+    'Danzig':   'Gdańsk',
+    'Breslau':  'Wrocław',
+    'Stettin':  'Szczecin',
+    'Bromberg': 'Bydgoszcz',
+    'Thorn':    'Toruń',
+}
 
 
 class TargetReachedException(Exception):
@@ -354,12 +367,18 @@ class SimulationEngine:
         """
         Write all simulation records to three CSV files in the output directory.
 
+        Files are written to a postgresql/ subdirectory to keep them separate
+        from the Neo4j export.
+
         Files produced:
         - people.csv:          One row per individual with biographical attributes.
         - families.csv:        One row per family unit with marriage metadata.
         - family_children.csv: One row per parent-child link with relationship type.
         """
-        with open(f'{self.output_dir}/people.csv', 'w', newline='', encoding='utf-8') as f:
+        pg_dir = os.path.join(self.output_dir, 'postgresql')
+        os.makedirs(pg_dir, exist_ok=True)
+
+        with open(f'{pg_dir}/people.csv', 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow(
                 ['id', 'given_name', 'surname', 'sex', 'is_deceased', 'birth_place', 'birth_date', 'death_place',
@@ -375,7 +394,7 @@ class SimulationEngine:
                     p.occupation
                 ])
 
-        with open(f'{self.output_dir}/families.csv', 'w', newline='', encoding='utf-8') as f:
+        with open(f'{pg_dir}/families.csv', 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow(['id', 'status', 'marriage_date', 'marriage_place', 'husband_id', 'wife_id'])
             for fam in self.families.values():
@@ -384,18 +403,132 @@ class SimulationEngine:
                     fam.marriage_place, fam.husband_id, fam.wife_id
                 ])
 
-        with open(f'{self.output_dir}/family_children.csv', 'w', newline='', encoding='utf-8') as f:
+        with open(f'{pg_dir}/family_children.csv', 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow(['family_id', 'child_id', 'relationship_type'])
             for fam in self.families.values():
                 for child_dict in fam.children:
                     writer.writerow([fam.id, child_dict['id'], child_dict['type']])
 
+        print(f"[{self.target_population}] PostgreSQL CSV export complete → {pg_dir}/")
+
+    def export_to_neo4j_csv(self):
+        """
+        Write Neo4j-admin-import-compatible CSV files to <output_dir>/neo4j/.
+
+        neo4j-admin database import requires:
+          • Node files   — header column ':ID' (with optional ID-space) plus ':LABEL'
+          • Rel files    — ':START_ID', ':END_ID', ':TYPE'
+
+        Property names follow Neo4j camelCase convention.
+
+        Files produced:
+        - nodes_person.csv:    Every Person record as a Neo4j node labelled 'Person'.
+        - nodes_family.csv:    Every Family record as a Neo4j node labelled 'Family'.
+        - rels_husband_of.csv: HUSBAND_OF relationship: husband Person → Family node.
+        - rels_wife_of.csv:    WIFE_OF relationship: wife Person → Family node.
+        - rels_child_of.csv:   CHILD_OF relationship: child Person → Family node,
+                               with 'relationshipType' property.
+
+        Import command (run from Neo4j home, database must be stopped):
+
+            neo4j-admin database import full \\
+              --database=genealogy \\
+              --nodes=Person=neo4j/nodes_person.csv \\
+              --nodes=Family=neo4j/nodes_family.csv \\
+              --relationships=HUSBAND_OF=neo4j/rels_husband_of.csv \\
+              --relationships=WIFE_OF=neo4j/rels_wife_of.csv \\
+              --relationships=CHILD_OF=neo4j/rels_child_of.csv \\
+              --overwrite-destination
+        """
+        neo4j_dir = os.path.join(self.output_dir, 'neo4j')
+        os.makedirs(neo4j_dir, exist_ok=True)
+
+        # ---- Person nodes -----------------------------------------------
+        with open(f'{neo4j_dir}/nodes_person.csv', 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow([
+                'personId:ID(Person)',
+                'givenName:STRING',
+                'surname:STRING',
+                'sex:STRING',
+                'isDeceased:BOOLEAN',
+                'birthPlace:STRING',
+                'birthDate:DATE',
+                'deathPlace:STRING',
+                'deathDate:DATE',
+                'deathCause:STRING',
+                'burialPlace:STRING',
+                'occupation:STRING',
+                ':LABEL'
+            ])
+            for p in self.people.values():
+                writer.writerow([
+                    p.id,
+                    p.given_name,
+                    p.surname,
+                    p.sex,
+                    'true' if p.is_deceased else 'false',
+                    p.birth_place,
+                    p.birth_date.isoformat() if p.birth_date else '',
+                    p.death_place if p.is_deceased else '',
+                    p.death_date.isoformat() if p.death_date else '',
+                    p.death_cause if p.is_deceased else '',
+                    p.burial_place if p.is_deceased else '',
+                    p.occupation if p.occupation else '',
+                    'Person'
+                ])
+
+        # ---- Family nodes ------------------------------------------------
+        with open(f'{neo4j_dir}/nodes_family.csv', 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow([
+                'familyId:ID(Family)',
+                'status:STRING',
+                'marriageDate:DATE',
+                'marriagePlace:STRING',
+                ':LABEL'
+            ])
+            for fam in self.families.values():
+                writer.writerow([
+                    fam.id,
+                    fam.status,
+                    fam.marriage_date.isoformat() if fam.marriage_date else '',
+                    fam.marriage_place,
+                    'Family'
+                ])
+
+        # ---- HUSBAND_OF relationships ------------------------------------
+        with open(f'{neo4j_dir}/rels_husband_of.csv', 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow([':START_ID(Person)', ':END_ID(Family)', ':TYPE'])
+            for fam in self.families.values():
+                if fam.husband_id:
+                    writer.writerow([fam.husband_id, fam.id, 'HUSBAND_OF'])
+
+        # ---- WIFE_OF relationships ---------------------------------------
+        with open(f'{neo4j_dir}/rels_wife_of.csv', 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow([':START_ID(Person)', ':END_ID(Family)', ':TYPE'])
+            for fam in self.families.values():
+                if fam.wife_id:
+                    writer.writerow([fam.wife_id, fam.id, 'WIFE_OF'])
+
+        # ---- CHILD_OF relationships --------------------------------------
+        with open(f'{neo4j_dir}/rels_child_of.csv', 'w', newline='', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerow([':START_ID(Person)', ':END_ID(Family)', 'relationshipType:STRING', ':TYPE'])
+            for fam in self.families.values():
+                for child_dict in fam.children:
+                    writer.writerow([child_dict['id'], fam.id, child_dict['type'], 'CHILD_OF'])
+
+        print(f"[{self.target_population}] Neo4j CSV export complete → {neo4j_dir}/")
+
     def run_analytics(self):
         """
         Compute and write a graph-analytics report for the completed simulation.
 
-        The report covers three areas:
+        The report covers four areas:
 
         1. Population growth log — snapshots recorded during the simulation run.
 
@@ -403,14 +536,19 @@ class SimulationEngine:
            measured as the longest path from any root individual (no parents) to
            any descendant.
 
-        3. LCA (Lowest Common Ancestor) search — a randomized search over pairs
+        3. Place name migration impact — per-field row counts showing how many
+           records in the people and families tables contain each of the six
+           historical German city names targeted for replacement with their modern
+           Polish equivalents.
+
+        4. LCA (Lowest Common Ancestor) search — a randomized search over pairs
            of young individuals from different regions to find a pair whose shortest
            path through a common ancestor matches the configured target length.
            The search respects a kinship exclusion constraint: neither individual
            may be closely related to the other, and each must be at least 4 steps
            away from the LCA.
 
-        4. Ancestor retrieval scenario — identifies the individual among a sample
+        5. Ancestor retrieval scenario — identifies the individual among a sample
            of the youngest persons who has the greatest number of distinct ancestors
            within the configured depth limit, providing a benchmark query target.
 
@@ -600,6 +738,9 @@ class SimulationEngine:
 
             for p_id in sample_for_ancestors:
                 distinct_ancestors = set()
+                # visited prevents re-queuing the same node via multiple paths,
+                # which causes exponential queue growth when pedigree collapse is present.
+                visited = {p_id}
                 queue = [(p_id, 0)]
                 while queue:
                     curr, d = queue.pop(0)
@@ -608,12 +749,11 @@ class SimulationEngine:
                     curr_p = self.people[curr]
                     if curr_p.parents_family_id:
                         fam = self.families[curr_p.parents_family_id]
-                        if fam.husband_id:
-                            distinct_ancestors.add(fam.husband_id)
-                            queue.append((fam.husband_id, d + 1))
-                        if fam.wife_id:
-                            distinct_ancestors.add(fam.wife_id)
-                            queue.append((fam.wife_id, d + 1))
+                        for parent_id in (fam.husband_id, fam.wife_id):
+                            if parent_id and parent_id not in visited:
+                                visited.add(parent_id)
+                                distinct_ancestors.add(parent_id)
+                                queue.append((parent_id, d + 1))
 
                 count = len(distinct_ancestors)
                 if count > best_ancestor_count:
@@ -630,6 +770,22 @@ class SimulationEngine:
             else:
                 f.write("Could not find any ancestors for the sampled group.\n")
 
+            # Count people and families records that contain any of the target city names.
+            # Matching is substring-based, so values like 'Cemetery in Breslau' are included.
+            people_to_update = sum(
+                1 for p in self.people.values()
+                if any(g in (p.birth_place or '') or g in (p.death_place or '') or g in (p.burial_place or '')
+                       for g in GERMAN_TO_POLISH)
+            )
+            families_to_update = sum(
+                1 for fam in self.families.values()
+                if any(g in (fam.marriage_place or '') for g in GERMAN_TO_POLISH)
+            )
+
+            f.write("\n--- PLACE NAME UPDATE SCOPE ---\n")
+            f.write(f"people:   {people_to_update} rows affected\n")
+            f.write(f"families: {families_to_update} rows affected\n")
+
         print(f"[{self.target_population}] Analytics report saved to '{filepath}'.")
 
     def run(self):
@@ -640,7 +796,8 @@ class SimulationEngine:
         processing deaths, divorces, births, and marriages in that order.
         The loop terminates when the target population count is reached,
         the living population goes extinct, or a 2000-year safety cap is hit.
-        On completion, CSV export and analytics are triggered automatically.
+        On completion, CSV export (PostgreSQL and Neo4j) and analytics are
+        triggered automatically.
         """
         print(f"\nSimulation started from year {self.start_year}. Target population: {self.target_population}.")
 
@@ -696,4 +853,5 @@ class SimulationEngine:
             print(f"Success! Target of {len(self.people)} people reached exactly in year {self.current_year}.")
 
         self.export_to_csv()
+        self.export_to_neo4j_csv()
         self.run_analytics()
