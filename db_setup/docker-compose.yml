@@ -16,11 +16,17 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ../data_generator/output:/data:ro
 
-    # command: >
-    #   postgres
-    #   -c log_statement=none
-    #   -c log_min_duration_statement=-1
-    #   -c logging_collector=off
+    command: >
+      postgres
+      # Disable auto-vacuum to prevent background table cleanup
+      # from interfering with benchmark measurements
+      -c autovacuum=off
+      # Do not log any SQL statements (none = no logging at all)
+      -c log_statement=none
+      # Disable logging of slow queries (-1 = feature disabled)
+      -c log_min_duration_statement=-1
+      # Disable the background logging collector process entirely
+      -c logging_collector=off
 
     networks:
       - benchmark_net
@@ -35,14 +41,25 @@ services:
     restart: unless-stopped
 
     environment:
+      # user/password.
       NEO4J_AUTH: neo4j/password
 
-      NEO4J_server_memory_heap_initial__size: 3G
-      NEO4J_server_memory_heap_max__size: 3G
-      NEO4J_server_memory_pagecache_size: 3G
+      # Heap memory: initial and max set equal to avoid JVM heap resize overhead
+      NEO4J_server_memory_heap_initial__size: 2G
+      NEO4J_server_memory_heap_max__size: 2G
 
-      # NEO4J_db_logs_query_enabled: "false"
-      # NEO4J_server_logs_gc_enabled: "false"
+      # Page cache: main data cache used by Neo4j for nodes, relationships and properties
+      # Set to 4G to fit within the 8G container memory limit alongside heap
+      NEO4J_server_memory_pagecache__size: 4G
+
+      # Disable query execution logging to eliminate log I/O overhead during benchmarks
+      NEO4J_db_logs_query_enabled: "false"
+
+      # Disable GC logging to reduce background I/O noise
+      NEO4J_server_logs_gc__enabled: "false"
+
+      # Disable anonymous usage reporting to prevent outbound network calls
+      NEO4J_dbms_usage__report_enabled: "false"
 
     ports:
       - "7474:7474"
@@ -51,8 +68,9 @@ services:
     volumes:
       - neo4j_data:/data
       - neo4j_logs:/logs
-      - ../data_generator/output:/import:ro 
-      
+      # Mount CSV data directory as read-only for neo4j-admin import
+      - ../data_generator/output:/import:ro
+
     networks:
       - benchmark_net
 
