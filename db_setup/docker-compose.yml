@@ -16,16 +16,15 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ../data_generator/output:/data:ro
 
+    # Disable auto-vacuum to prevent background table cleanup from interfering with benchmarks
+    # Disable all SQL logging and slow query logging
+    # Disable logging collector
+
     command: >
       postgres
-      # Disable auto-vacuum to prevent background table cleanup
-      # from interfering with benchmark measurements
       -c autovacuum=off
-      # Do not log any SQL statements (none = no logging at all)
       -c log_statement=none
-      # Disable logging of slow queries (-1 = feature disabled)
       -c log_min_duration_statement=-1
-      # Disable the background logging collector process entirely
       -c logging_collector=off
 
     networks:
