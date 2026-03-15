@@ -1,4 +1,4 @@
-id,given_name,surname,sex,is_deceased,birth_place,birth_date,death_place,death_date,death_cause,burial_place,occupation
+id,given_name,surname,sex,is_deceased,birth_place,birth_date,death_place,death_date,cause_of_death,burial_place,occupation
 1,Józef,Jankowski,M,1,Wisła,0870-08-02,Rzeszów,0927-03-14,Stroke,Cemetery in Rzeszów,Fisherman
 2,Bożena,Jaworska,F,1,Kraków,0880-12-28,Krynica,0960-04-19,Cholera,Cemetery in Krynica,Innkeeper
 3,Michał,Zieliński,M,1,Supraśl,0872-06-28,Krynica,0915-03-04,Dysentery,Cemetery in Krynica,Priest

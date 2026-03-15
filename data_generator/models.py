@@ -32,7 +32,7 @@ class Person:
     birth_place: str                # Randomly selected from the PLACES pool.
     death_date: Optional[date] = None
     death_place: Optional[str] = None
-    death_cause: Optional[str] = None
+    cause_of_death: Optional[str] = None
     burial_place: Optional[str] = None
 
     # --- Social attributes ---

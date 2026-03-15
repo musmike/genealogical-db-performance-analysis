@@ -229,5 +229,5 @@ def get_child_relationship_type() -> str:
     The overwhelming majority of children are biological; small probabilities
     are assigned to adoption and foster care arrangements.
     """
-    return random.choices(['biological', 'adopted', 'foster'],
+    return random.choices(['BIOLOGICAL', 'ADOPTED', 'FOSTER'],
                           weights=[0.96, 0.03, 0.01], k=1)[0]

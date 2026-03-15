@@ -1,4 +1,4 @@
-id,given_name,surname,sex,is_deceased,birth_place,birth_date,death_place,death_date,death_cause,burial_place,occupation
+id,given_name,surname,sex,is_deceased,birth_place,birth_date,death_place,death_date,cause_of_death,burial_place,occupation
 1,Józef,Jankowski,M,1,Wisła,1570-08-02,Gliwice,1627-06-18,Cholera,Cemetery in Gliwice,Fisherman
 2,Bożena,Jaworska,F,1,Kraków,1580-12-28,Sanok,1660-10-02,Starvation,Cemetery in Sanok,Miller
 3,Michał,Zieliński,M,1,Supraśl,1572-06-28,Thorn,1615-06-01,Consumption,Cemetery in Thorn,Clerk

@@ -1,0 +1,4 @@
+// Scenario 03: Descendant Retrieval
+// Retrieves all distinct biological descendants of a selected individual
+// up to a configured depth (3 / 6 / 10 generations for 1k / 10k / 100k).
+// Uses the individual identified in summary.txt as having the most descendants.

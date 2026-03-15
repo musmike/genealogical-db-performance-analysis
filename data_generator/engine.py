@@ -240,7 +240,7 @@ class SimulationEngine:
                 p.is_deceased = True
                 p.death_date = random_date(self.current_year)
                 p.death_place = random.choice(PLACES)
-                p.death_cause = random.choice(CAUSES_OF_DEATH)
+                p.cause_of_death = random.choice(CAUSES_OF_DEATH)
                 p.burial_place = f"Cemetery in {p.death_place}"
 
                 if not p.occupation and (self.current_year - p.birth_year) >= 18:
@@ -367,7 +367,7 @@ class SimulationEngine:
         """
         Write all simulation records to three CSV files in the output directory.
 
-        Files are written to a postgresql/ subdirectory to keep them separate
+        Files are written to a postgres/ subdirectory to keep them separate
         from the Neo4j export.
 
         Files produced:
@@ -375,21 +375,21 @@ class SimulationEngine:
         - families.csv:        One row per family unit with marriage metadata.
         - family_children.csv: One row per parent-child link with relationship type.
         """
-        pg_dir = os.path.join(self.output_dir, 'postgresql')
+        pg_dir = os.path.join(self.output_dir, 'postgres')
         os.makedirs(pg_dir, exist_ok=True)
 
         with open(f'{pg_dir}/people.csv', 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow(
                 ['id', 'given_name', 'surname', 'sex', 'is_deceased', 'birth_place', 'birth_date', 'death_place',
-                 'death_date', 'death_cause', 'burial_place', 'occupation'])
+                 'death_date', 'cause_of_death', 'burial_place', 'occupation'])
             for p in self.people.values():
                 writer.writerow([
                     p.id, p.given_name, p.surname, p.sex, 1 if p.is_deceased else 0,
                     p.birth_place, p.birth_date.isoformat() if p.birth_date else '',
                     p.death_place if p.is_deceased else '',
                     p.death_date.isoformat() if p.death_date else '',
-                    p.death_cause if p.is_deceased else '',
+                    p.cause_of_death if p.is_deceased else '',
                     p.burial_place if p.is_deceased else '',
                     p.occupation
                 ])
@@ -457,7 +457,7 @@ class SimulationEngine:
                 'birthDate:DATE',
                 'deathPlace:STRING',
                 'deathDate:DATE',
-                'deathCause:STRING',
+                'causeOfDeath:STRING',
                 'burialPlace:STRING',
                 'occupation:STRING',
                 ':LABEL'
@@ -473,7 +473,7 @@ class SimulationEngine:
                     p.birth_date.isoformat() if p.birth_date else '',
                     p.death_place if p.is_deceased else '',
                     p.death_date.isoformat() if p.death_date else '',
-                    p.death_cause if p.is_deceased else '',
+                    p.cause_of_death if p.is_deceased else '',
                     p.burial_place if p.is_deceased else '',
                     p.occupation if p.occupation else '',
                     'Person'
@@ -571,7 +571,7 @@ class SimulationEngine:
         10. Place name update scope — row counts for the German-to-Polish city
             name migration.
 
-        Results are written to analytics.txt in the output directory.
+        Results are written to summary.txt in the output directory.
         """
         from collections import Counter, defaultdict
 
@@ -583,7 +583,8 @@ class SimulationEngine:
         # Descendant traversal depth is deliberately shallower than ancestor depth:
         # the descendant tree fans out exponentially, so smaller N already yields
         # a large and representative result set. Controlled via SCENARIOS in config.py.
-        target_descendants_depth = config.get('descendants_depth', 3 if self.target_population <= 1000 else (6 if self.target_population <= 10000 else 10))
+        target_descendants_depth = config.get('descendants_depth', 3 if self.target_population <= 1000
+            else (6 if self.target_population <= 10000 else 10))
 
         if target_lca_min == target_lca_max:
             target_label = str(target_lca_min)
@@ -592,7 +593,7 @@ class SimulationEngine:
 
         # ------------------------------------------------------------------
         # Helper: check whether a person's link to their parents_family_id
-        # is biological (i.e. their entry in fam.children has type 'biological').
+        # is biological (i.e. their entry in fam.children has type 'BIOLOGICAL').
         # ------------------------------------------------------------------
         def is_biological_child(p_id):
             p = self.people.get(p_id)
@@ -601,7 +602,7 @@ class SimulationEngine:
             fam = self.families.get(p.parents_family_id)
             if not fam:
                 return False
-            return any(c['id'] == p_id and c['type'] == 'biological' for c in fam.children)
+            return any(c['id'] == p_id and c['type'] == 'BIOLOGICAL' for c in fam.children)
 
         filepath = os.path.join(self.output_dir, 'summary.txt')
         with open(filepath, 'w', encoding='utf-8') as f:
@@ -688,7 +689,8 @@ class SimulationEngine:
             iterations    = 1500
 
             for i in range(iterations):
-                msg = f"\r[{self.target_population}] LCA search: {i + 1}/{iterations} | best so far: {max_distance} (target: {target_label})    "
+                msg = (f"\r[{self.target_population}] LCA search: {i + 1}/{iterations} | best so far: {max_distance} "
+                       f"(target: {target_label})    ")
                 sys.stdout.write(msg)
                 sys.stdout.flush()
 
@@ -814,7 +816,7 @@ class SimulationEngine:
             bio_children_map = defaultdict(list)
             for fam in self.families.values():
                 for child_dict in fam.children:
-                    if child_dict['type'] == 'biological':
+                    if child_dict['type'] == 'BIOLOGICAL':
                         if fam.husband_id:
                             bio_children_map[fam.husband_id].append(child_dict['id'])
                         if fam.wife_id:
@@ -924,7 +926,7 @@ class SimulationEngine:
 
             for fam in self.families.values():
                 for child_dict in fam.children:
-                    if child_dict['type'] != 'biological':
+                    if child_dict['type'] != 'BIOLOGICAL':
                         continue
                     child = self.people.get(child_dict['id'])
                     if not child:
@@ -969,7 +971,7 @@ class SimulationEngine:
                 if not fam:
                     continue
                 my_entry = next((c for c in fam.children if c['id'] == p.id), None)
-                if my_entry and my_entry['type'] == 'adopted':
+                if my_entry and my_entry['type'] == 'ADOPTED':
                     candidate = p
                     break
 

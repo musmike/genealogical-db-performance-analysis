@@ -1,4 +1,4 @@
-id,given_name,surname,sex,is_deceased,birth_place,birth_date,death_place,death_date,death_cause,burial_place,occupation
+id,given_name,surname,sex,is_deceased,birth_place,birth_date,death_place,death_date,cause_of_death,burial_place,occupation
 1,Józef,Jankowski,M,1,Wisła,1770-08-02,Sanok,1827-10-18,War casualty,Cemetery in Sanok,Fisherman
 2,Bożena,Jaworska,F,1,Kraków,1780-12-28,Supraśl,1860-12-28,Murder,Cemetery in Supraśl,Wheelwright
 3,Michał,Zieliński,M,1,Supraśl,1772-06-28,Bromberg,1815-05-24,Drowning,Cemetery in Bromberg,Doctor

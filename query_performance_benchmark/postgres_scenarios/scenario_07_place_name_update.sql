@@ -1,0 +1,6 @@
+-- Scenario 07: Place Name Update
+-- Updates all occurrences of historical German city names to their
+-- modern Polish equivalents across people (birth_place, death_place, burial_place)
+-- and families (marriage_place).
+-- Affected names: Posen→Poznań, Danzig→Gdańsk, Breslau→Wrocław,
+-- Stettin→Szczecin, Bromberg→Bydgoszcz, Thorn→Toruń.

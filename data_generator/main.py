@@ -3,7 +3,7 @@ Entry point for the genealogical simulation.
 
 Three separate simulation runs are executed sequentially, each targeting
 a different population size and start year. Results are written
-to dedicated output directories for further analysis.
+to dedicated output directories.
 """
 
 from engine import SimulationEngine

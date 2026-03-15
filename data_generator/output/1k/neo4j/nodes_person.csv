@@ -1,4 +1,4 @@
-personId:ID(Person),givenName:STRING,surname:STRING,sex:STRING,isDeceased:BOOLEAN,birthPlace:STRING,birthDate:DATE,deathPlace:STRING,deathDate:DATE,deathCause:STRING,burialPlace:STRING,occupation:STRING,:LABEL
+personId:ID(Person),givenName:STRING,surname:STRING,sex:STRING,isDeceased:BOOLEAN,birthPlace:STRING,birthDate:DATE,deathPlace:STRING,deathDate:DATE,causeOfDeath:STRING,burialPlace:STRING,occupation:STRING,:LABEL
 1,Józef,Jankowski,M,true,Wisła,1770-08-02,Sanok,1827-10-18,War casualty,Cemetery in Sanok,Fisherman,Person
 2,Bożena,Jaworska,F,true,Kraków,1780-12-28,Supraśl,1860-12-28,Murder,Cemetery in Supraśl,Wheelwright,Person
 3,Michał,Zieliński,M,true,Supraśl,1772-06-28,Bromberg,1815-05-24,Drowning,Cemetery in Bromberg,Doctor,Person
