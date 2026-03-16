@@ -43,19 +43,18 @@ services:
       # user/password.
       NEO4J_AUTH: neo4j/password
 
+      NEO4J_PLUGINS: '["apoc"]'
+
       # Heap memory: initial and max set equal to avoid JVM heap resize overhead
       NEO4J_server_memory_heap_initial__size: 2G
       NEO4J_server_memory_heap_max__size: 2G
 
       # Page cache: main data cache used by Neo4j for nodes, relationships and properties
       # Set to 4G to fit within the 8G container memory limit alongside heap
-      NEO4J_server_memory_pagecache__size: 4G
+      NEO4J_server_memory_pagecache_size: 4G
 
       # Disable query execution logging to eliminate log I/O overhead during benchmarks
-      NEO4J_db_logs_query_enabled: "false"
-
-      # Disable GC logging to reduce background I/O noise
-      NEO4J_server_logs_gc__enabled: "false"
+      NEO4J_db_logs_query_enabled: "OFF"
 
       # Disable anonymous usage reporting to prevent outbound network calls
       NEO4J_dbms_usage__report_enabled: "false"

@@ -1,4 +1,4 @@
-personId:ID(Person),givenName:STRING,surname:STRING,sex:STRING,isDeceased:BOOLEAN,birthPlace:STRING,birthDate:DATE,deathPlace:STRING,deathDate:DATE,causeOfDeath:STRING,burialPlace:STRING,occupation:STRING,:LABEL
+id:ID(Person),givenName:STRING,surname:STRING,sex:STRING,isDeceased:BOOLEAN,birthPlace:STRING,birthDate:DATE,deathPlace:STRING,deathDate:DATE,causeOfDeath:STRING,burialPlace:STRING,occupation:STRING,:LABEL
 1,Józef,Jankowski,M,true,Wisła,0870-08-02,Rzeszów,0927-03-14,Stroke,Cemetery in Rzeszów,Fisherman,Person
 2,Bożena,Jaworska,F,true,Kraków,0880-12-28,Krynica,0960-04-19,Cholera,Cemetery in Krynica,Innkeeper,Person
 3,Michał,Zieliński,M,true,Supraśl,0872-06-28,Krynica,0915-03-04,Dysentery,Cemetery in Krynica,Priest,Person

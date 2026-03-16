@@ -448,7 +448,7 @@ class SimulationEngine:
         with open(f'{neo4j_dir}/nodes_person.csv', 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow([
-                'personId:ID(Person)',
+                'id:ID(Person)',
                 'givenName:STRING',
                 'surname:STRING',
                 'sex:STRING',
@@ -483,7 +483,7 @@ class SimulationEngine:
         with open(f'{neo4j_dir}/nodes_family.csv', 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow([
-                'familyId:ID(Family)',
+                'id:ID(Family)',
                 'status:STRING',
                 'marriageDate:DATE',
                 'marriagePlace:STRING',

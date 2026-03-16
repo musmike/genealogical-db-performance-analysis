@@ -1,4 +1,4 @@
-personId:ID(Person),givenName:STRING,surname:STRING,sex:STRING,isDeceased:BOOLEAN,birthPlace:STRING,birthDate:DATE,deathPlace:STRING,deathDate:DATE,causeOfDeath:STRING,burialPlace:STRING,occupation:STRING,:LABEL
+id:ID(Person),givenName:STRING,surname:STRING,sex:STRING,isDeceased:BOOLEAN,birthPlace:STRING,birthDate:DATE,deathPlace:STRING,deathDate:DATE,causeOfDeath:STRING,burialPlace:STRING,occupation:STRING,:LABEL
 1,Józef,Jankowski,M,true,Wisła,1570-08-02,Gliwice,1627-06-18,Cholera,Cemetery in Gliwice,Fisherman,Person
 2,Bożena,Jaworska,F,true,Kraków,1580-12-28,Sanok,1660-10-02,Starvation,Cemetery in Sanok,Miller,Person
 3,Michał,Zieliński,M,true,Supraśl,1572-06-28,Thorn,1615-06-01,Consumption,Cemetery in Thorn,Clerk,Person

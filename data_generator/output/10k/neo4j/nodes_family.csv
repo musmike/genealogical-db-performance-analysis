@@ -1,4 +1,4 @@
-familyId:ID(Family),status:STRING,marriageDate:DATE,marriagePlace:STRING,:LABEL
+id:ID(Family),status:STRING,marriageDate:DATE,marriagePlace:STRING,:LABEL
 1,WIDOWED,1600-04-05,Bromberg,Family
 2,WIDOWED,1600-02-03,Bromberg,Family
 3,WIDOWED,1600-08-20,Sromowce,Family
