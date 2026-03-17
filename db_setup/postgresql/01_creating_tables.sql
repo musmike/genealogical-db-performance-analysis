@@ -30,6 +30,6 @@ CREATE TABLE families (
 CREATE TABLE family_children (
     family_id           INTEGER         NOT NULL REFERENCES families(id),
     child_id            INTEGER         NOT NULL REFERENCES people(id),
-    relationship_type   VARCHAR(20),
+    relationship_type   VARCHAR(20)     NOT NULL,
     PRIMARY KEY (family_id, child_id)
 );

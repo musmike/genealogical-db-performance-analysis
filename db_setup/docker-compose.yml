@@ -2,7 +2,7 @@ services:
   postgres:
     image: postgres:16.13
     container_name: postgres_db
-    restart: unless-stopped
+    restart: "no"
 
     environment:
       POSTGRES_USER: user
@@ -37,13 +37,11 @@ services:
   neo4j:
     image: neo4j:5.26.21-community
     container_name: neo4j_db
-    restart: unless-stopped
+    restart: "no"
 
     environment:
       # user/password.
       NEO4J_AUTH: neo4j/password
-
-      NEO4J_PLUGINS: '["apoc"]'
 
       # Heap memory: initial and max set equal to avoid JVM heap resize overhead
       NEO4J_server_memory_heap_initial__size: 2G
