@@ -534,7 +534,7 @@ class SimulationEngine:
         All traversals in this report follow biological relationships only.
         Adopted and foster children are excluded from every graph scenario.
 
-        The report covers the following scenarios:
+        The report covers the following items:
 
         1. Population growth log — snapshots recorded during the simulation run.
 
@@ -902,7 +902,6 @@ class SimulationEngine:
             city_totals = {city: sum(q.values()) for city, q in births_by_city_quarter.items()}
             top_cities  = sorted(city_totals, key=city_totals.get, reverse=True)[:10]
 
-            # Sorted alphabetically for the detail table; comma-separated for easy copy-paste into queries.
             top_cities_alpha = sorted(top_cities)
             f.write("--- SCENARIO: BIRTHS PER CITY PER QUARTER-CENTURY (top 10 cities) ---\n")
             f.write("Cities: " + ", ".join(top_cities_alpha) + "\n")

@@ -21,7 +21,7 @@ deduped AS (
     ORDER BY person_id, depth
 )
 SELECT p.id AS ancestor_id, d.depth AS generation,
-    p.given_name, p.surname, p.birth_date, p.birth_place,
+    p.given_name, p.surname, p.sex, p.birth_date, p.birth_place,
     fm.marriage_date, fm.marriage_place,
     p.death_date, p.death_place, p.burial_place, p.cause_of_death,
     pf.husband_id AS father_id, pf.wife_id AS mother_id
