@@ -934,7 +934,11 @@ class SimulationEngine:
                         parent = self.people.get(parent_id)
                         if not parent:
                             continue
-                        age = child.birth_year - parent.birth_year
+                        if not child.birth_date or not parent.birth_date:
+                            continue
+                        age = (child.birth_date.year - parent.birth_date.year
+                            - ((child.birth_date.month, child.birth_date.day)
+                                < (parent.birth_date.month, parent.birth_date.day)))
                         if age < 0:
                             continue
                         # Keep the earliest (youngest-age) child per parent.

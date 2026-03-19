@@ -281,14 +281,12 @@ Cities: Breslau, Kazimierz Dolny, Kielce, Lipce, Lublin, Reszel, Tykocin, Zwierz
 
 --- SCENARIO: YOUNGEST PARENT ---
 Biological relationships only. Both sexes considered.
-Age at first biological child birth: 17
-Number of persons tied at this age: 8
+Age at first biological child birth: 16
+Number of persons tied at this age: 6
   Person ID: 2833 | Sex: F | Name: Krystyna Sikora | Birth year: 1716
   Person ID: 2859 | Sex: F | Name: Małgorzata Adamczyk | Birth year: 1718
   Person ID: 3330 | Sex: F | Name: Julia Adamczyk | Birth year: 1746
   Person ID: 3388 | Sex: F | Name: Katarzyna Kamińska | Birth year: 1749
-  Person ID: 5208 | Sex: F | Name: Bożena Mazur | Birth year: 1837
-  Person ID: 6631 | Sex: F | Name: Aleksandra Wiśniewska | Birth year: 1907
   Person ID: 6955 | Sex: F | Name: Helena Wojciechowska | Birth year: 1923
   Person ID: 8712 | Sex: F | Name: Wanda Wojciechowska | Birth year: 1993
 

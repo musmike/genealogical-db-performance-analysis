@@ -163,7 +163,7 @@ Cities: Chełmno, Cieszyn, Katowice, Kielce, Kraków, Krynica, Reszel, Sromowce,
 
 --- SCENARIO: YOUNGEST PARENT ---
 Biological relationships only. Both sexes considered.
-Age at first biological child birth: 19
+Age at first biological child birth: 18
 Number of persons tied at this age: 2
   Person ID: 58 | Sex: F | Name: Maria Michalska | Birth year: 1782
   Person ID: 715 | Sex: F | Name: Maja Kamińska | Birth year: 1853

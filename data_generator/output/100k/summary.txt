@@ -592,75 +592,39 @@ Cities: Cieszyn, Częstochowa, Danzig, Gliwice, Lublin, Reszel, Supraśl, Thorn,
 
 --- SCENARIO: YOUNGEST PARENT ---
 Biological relationships only. Both sexes considered.
-Age at first biological child birth: 17
-Number of persons tied at this age: 103
-  Person ID: 5059 | Sex: F | Name: Ewa Pawłowska | Birth year: 907
-  Person ID: 9438 | Sex: F | Name: Danuta Kowalska | Birth year: 940
+Age at first biological child birth: 16
+Number of persons tied at this age: 51
   Person ID: 10940 | Sex: F | Name: Helena Woźniak | Birth year: 976
   Person ID: 11603 | Sex: F | Name: Anna Dudek | Birth year: 994
   Person ID: 12287 | Sex: F | Name: Krystyna Wróbel | Birth year: 1009
-  Person ID: 12445 | Sex: F | Name: Maja Pawlak | Birth year: 1012
   Person ID: 13537 | Sex: F | Name: Stefania Szymańska | Birth year: 1031
-  Person ID: 13957 | Sex: F | Name: Regina Woźniak | Birth year: 1037
-  Person ID: 14143 | Sex: F | Name: Ewa Majewska | Birth year: 1039
-  Person ID: 16362 | Sex: F | Name: Małgorzata Wróbel | Birth year: 1067
   Person ID: 18549 | Sex: F | Name: Barbara Dąbrowska | Birth year: 1096
   Person ID: 19228 | Sex: F | Name: Rozalia Dąbrowska | Birth year: 1105
-  Person ID: 20087 | Sex: F | Name: Bożena Olszewska | Birth year: 1117
-  Person ID: 20581 | Sex: F | Name: Ewa Majewska | Birth year: 1124
   Person ID: 21759 | Sex: F | Name: Agnieszka Dąbrowska | Birth year: 1142
-  Person ID: 21914 | Sex: F | Name: Julia Woźniak | Birth year: 1145
   Person ID: 22244 | Sex: F | Name: Monika Malinowska | Birth year: 1150
-  Person ID: 28035 | Sex: F | Name: Maria Jabłońska | Birth year: 1236
-  Person ID: 28755 | Sex: F | Name: Marianna Woźniak | Birth year: 1247
   Person ID: 29101 | Sex: F | Name: Bożena Woźniak | Birth year: 1252
-  Person ID: 31456 | Sex: F | Name: Genowefa Olszewska | Birth year: 1289
-  Person ID: 31590 | Sex: F | Name: Zuzanna Dąbrowska | Birth year: 1291
   Person ID: 33551 | Sex: F | Name: Ludwika Jaworska | Birth year: 1321
-  Person ID: 36602 | Sex: F | Name: Maja Kaczmarek | Birth year: 1368
   Person ID: 37218 | Sex: F | Name: Leokadia Olszewska | Birth year: 1379
-  Person ID: 38233 | Sex: F | Name: Teresa Wojciechowska | Birth year: 1394
   Person ID: 38559 | Sex: F | Name: Agnieszka Nowak | Birth year: 1399
   Person ID: 38970 | Sex: F | Name: Krystyna Dudek | Birth year: 1406
-  Person ID: 39524 | Sex: F | Name: Agnieszka Grabowska | Birth year: 1415
   Person ID: 41686 | Sex: F | Name: Rozalia Wieczorek | Birth year: 1448
-  Person ID: 42617 | Sex: F | Name: Leokadia Zielińska | Birth year: 1461
-  Person ID: 43276 | Sex: F | Name: Anna Kaczmarek | Birth year: 1470
-  Person ID: 43366 | Sex: F | Name: Katarzyna Zając | Birth year: 1471
   Person ID: 43549 | Sex: F | Name: Halina Dudek | Birth year: 1474
-  Person ID: 45062 | Sex: F | Name: Oliwia Król | Birth year: 1495
   Person ID: 45224 | Sex: F | Name: Julia Majewska | Birth year: 1498
   Person ID: 46321 | Sex: F | Name: Agnieszka Michalska | Birth year: 1513
-  Person ID: 46608 | Sex: F | Name: Genowefa Król | Birth year: 1517
   Person ID: 47254 | Sex: F | Name: Ewa Grabowska | Birth year: 1526
   Person ID: 47445 | Sex: F | Name: Katarzyna Grabowska | Birth year: 1528
-  Person ID: 47572 | Sex: F | Name: Oliwia Pawłowska | Birth year: 1530
-  Person ID: 48188 | Sex: F | Name: Rozalia Kowalczyk | Birth year: 1539
   Person ID: 48422 | Sex: F | Name: Julia Krawczyk | Birth year: 1542
   Person ID: 48668 | Sex: F | Name: Ludwika Dudek | Birth year: 1545
-  Person ID: 49703 | Sex: F | Name: Natalia Kowalska | Birth year: 1559
-  Person ID: 51614 | Sex: F | Name: Leokadia Adamczyk | Birth year: 1584
   Person ID: 52330 | Sex: F | Name: Czesława Michalska | Birth year: 1594
-  Person ID: 52592 | Sex: F | Name: Grażyna Grabowska | Birth year: 1598
   Person ID: 53835 | Sex: F | Name: Oliwia Nowak | Birth year: 1613
   Person ID: 55052 | Sex: F | Name: Anna Adamczyk | Birth year: 1630
-  Person ID: 55867 | Sex: F | Name: Irena Nowak | Birth year: 1640
   Person ID: 56162 | Sex: F | Name: Regina Zielińska | Birth year: 1643
-  Person ID: 56422 | Sex: F | Name: Irena Olszewska | Birth year: 1647
-  Person ID: 57293 | Sex: F | Name: Urszula Grabowska | Birth year: 1658
-  Person ID: 58184 | Sex: F | Name: Elżbieta Adamczyk | Birth year: 1669
-  Person ID: 59148 | Sex: F | Name: Kazimiera Wojciechowska | Birth year: 1681
-  Person ID: 59861 | Sex: F | Name: Regina Zielińska | Birth year: 1690
-  Person ID: 61830 | Sex: F | Name: Krystyna Wojciechowska | Birth year: 1714
   Person ID: 62459 | Sex: F | Name: Wanda Szymańska | Birth year: 1721
-  Person ID: 62515 | Sex: F | Name: Urszula Woźniak | Birth year: 1722
   Person ID: 62629 | Sex: F | Name: Genowefa Wojciechowska | Birth year: 1723
-  Person ID: 62679 | Sex: F | Name: Julia Adamczyk | Birth year: 1724
   Person ID: 63284 | Sex: F | Name: Czesława Krawczyk | Birth year: 1731
   Person ID: 63382 | Sex: F | Name: Elżbieta Zielińska | Birth year: 1732
   Person ID: 63340 | Sex: F | Name: Wanda Grabowska | Birth year: 1732
   Person ID: 65414 | Sex: F | Name: Maria Kowalczyk | Birth year: 1756
-  Person ID: 65745 | Sex: F | Name: Maja Król | Birth year: 1760
   Person ID: 68020 | Sex: F | Name: Natalia Olszewska | Birth year: 1786
   Person ID: 68629 | Sex: F | Name: Julia Adamczyk | Birth year: 1793
   Person ID: 68617 | Sex: F | Name: Zofia Szymańska | Birth year: 1793
@@ -668,35 +632,19 @@ Number of persons tied at this age: 103
   Person ID: 69691 | Sex: F | Name: Regina Górska | Birth year: 1805
   Person ID: 69914 | Sex: F | Name: Ludwika Zielińska | Birth year: 1808
   Person ID: 70500 | Sex: F | Name: Czesława Wojciechowska | Birth year: 1814
-  Person ID: 71399 | Sex: F | Name: Natalia Adamczyk | Birth year: 1824
   Person ID: 72202 | Sex: F | Name: Regina Wieczorek | Birth year: 1832
-  Person ID: 73489 | Sex: F | Name: Anna Dudek | Birth year: 1843
-  Person ID: 76021 | Sex: F | Name: Leokadia Wojciechowska | Birth year: 1869
   Person ID: 77014 | Sex: F | Name: Oliwia Król | Birth year: 1879
-  Person ID: 77161 | Sex: F | Name: Regina Wojciechowska | Birth year: 1881
   Person ID: 78211 | Sex: F | Name: Grażyna Zielińska | Birth year: 1890
-  Person ID: 80605 | Sex: F | Name: Katarzyna Olszewska | Birth year: 1910
-  Person ID: 80784 | Sex: F | Name: Grażyna Wojciechowska | Birth year: 1911
   Person ID: 81907 | Sex: F | Name: Czesława Krawczyk | Birth year: 1920
-  Person ID: 82725 | Sex: F | Name: Katarzyna Wieczorek | Birth year: 1927
   Person ID: 83113 | Sex: F | Name: Halina Wieczorek | Birth year: 1930
-  Person ID: 83691 | Sex: F | Name: Aleksandra Krawczyk | Birth year: 1935
   Person ID: 83805 | Sex: F | Name: Helena Jaworska | Birth year: 1936
   Person ID: 83972 | Sex: F | Name: Wiktoria Nowak | Birth year: 1938
-  Person ID: 84261 | Sex: F | Name: Natalia Wojciechowska | Birth year: 1940
   Person ID: 84657 | Sex: F | Name: Elżbieta Wojciechowska | Birth year: 1944
   Person ID: 84782 | Sex: F | Name: Leokadia Nowak | Birth year: 1945
   Person ID: 86025 | Sex: F | Name: Barbara Adamczyk | Birth year: 1954
   Person ID: 86769 | Sex: F | Name: Julia Jaworska | Birth year: 1958
   Person ID: 87202 | Sex: F | Name: Barbara Nowak | Birth year: 1961
   Person ID: 88117 | Sex: F | Name: Zofia Wojciechowska | Birth year: 1968
-  Person ID: 91510 | Sex: F | Name: Alicja Dąbrowska | Birth year: 1987
-  Person ID: 92185 | Sex: F | Name: Leokadia Pawłowska | Birth year: 1991
-  Person ID: 92099 | Sex: F | Name: Zofia Król | Birth year: 1991
-  Person ID: 92865 | Sex: F | Name: Julia Król | Birth year: 1996
-  Person ID: 93034 | Sex: F | Name: Rozalia Krawczyk | Birth year: 1997
-  Person ID: 95319 | Sex: F | Name: Ewa Nowak | Birth year: 2009
-  Person ID: 96145 | Sex: F | Name: Anna Adamczyk | Birth year: 2012
 
 --- SCENARIO: INSERT/DELETE TEST CANDIDATE ---
 Recommended: an adopted person with no biological parents in the dataset.
