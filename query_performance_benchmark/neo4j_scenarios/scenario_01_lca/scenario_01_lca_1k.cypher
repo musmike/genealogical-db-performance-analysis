@@ -32,6 +32,7 @@ RETURN
   c.anc.id         AS lca_id,
   c.anc.givenName  AS given_name,
   c.anc.surname    AS surname,
+  c.anc.sex        AS sex,
   c.anc.birthDate  AS birth_date,
   c.anc.birthPlace AS birth_place,
   c.anc.deathDate  AS death_date,

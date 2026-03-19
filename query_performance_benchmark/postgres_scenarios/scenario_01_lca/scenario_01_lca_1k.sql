@@ -33,7 +33,7 @@ common AS (
     FROM min_a a
     JOIN min_b b ON b.person_id = a.person_id
 )
-SELECT c.person_id AS lca_id, p.given_name, p.surname,
+SELECT c.person_id AS lca_id, p.given_name, p.surname, p.sex,
     p.birth_date, p.birth_place, p.death_date, p.death_place,
     c.dist_a AS path_length_from_a, c.dist_b AS path_length_from_b, c.total_dist
 FROM common c
