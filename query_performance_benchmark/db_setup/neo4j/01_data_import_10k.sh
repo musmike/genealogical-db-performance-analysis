@@ -5,7 +5,7 @@ sync; echo 3 > /proc/sys/vm/drop_caches
 
 docker run --rm \
   -v db_setup_neo4j_data:/data \
-  -v $(pwd)/../data_generator/output:/import:ro \
+  -v $(pwd)/../../data_generator/output:/import:ro \
   neo4j:5.26.21-community \
   neo4j-admin database import full neo4j \
   --id-type=integer \

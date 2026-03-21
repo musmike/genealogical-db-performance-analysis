@@ -14,7 +14,7 @@ services:
 
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ../data_generator/output:/data:ro
+      - ../../data_generator/output:/data:ro
 
     # Disable auto-vacuum to prevent background table cleanup from interfering with benchmarks
     # Disable all SQL logging and slow query logging
@@ -65,7 +65,7 @@ services:
       - neo4j_data:/data
       - neo4j_logs:/logs
       # Mount CSV data directory as read-only for neo4j-admin import
-      - ../data_generator/output:/import:ro
+      - ../../data_generator/output:/import:ro
 
     networks:
       - benchmark_net
