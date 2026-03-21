@@ -12,8 +12,6 @@ During the installation, choose the following options:
 - **Do not select any featured server snaps** – avoid unnecessary background services.  
 
 
----
-
 ## 2. Clone the repository
 
 Before cloning the repository, make sure Git is installed:
@@ -30,7 +28,6 @@ git clone <repository_url>
 cd <repository_folder>
 ```
 
----
 
 ## 3. Set up the environment
 
@@ -47,20 +44,56 @@ Once the script completes, **reboot the system** to apply group changes (e.g., D
 sudo reboot
 ```
 
----
 
 ## 4. Run the benchmark script
 
 After reboot, navigate to the repository folder and run the measurement script written in C#:
-
 ```bash
 cd <repository_folder>
-dotnet run --project <benchmark_project>
+sudo dotnet run --project <benchmark_project>
 ```
 
 > The script will configure and start the database containers and then execute the performance tests.
 
----
+
+## Generate data (optional)
+
+This step is only required if you want to regenerate the simulation data.
+The repository already contains pre-generated data in `data_generator/output/`.
+
+### Requirements
+
+- Python 3.13 — install via your system package manager:
+```bash
+sudo apt install -y python3.13 python3.13-venv
+```
+
+### Setup
+```bash
+cd data_generator
+python3.13 -m venv .venv
+source .venv/bin/activate
+```
+
+### Run
+```bash
+python main.py
+```
+
+This will generate three datasets into `data_generator/output/`:
+
+| Directory | Population | Generations |
+|-----------|-----------|-------------|
+| `1k/`     | 1,000     | ~10         |
+| `10k/`    | 10,000    | ~20         |
+| `100k/`   | 100,000   | ~50         |
+
+Generation takes approximately 1 minute depending on hardware.
+
+> **Warning:** Running this script will overwrite existing output files,
+> including `summary.txt` files that contain person IDs used in benchmark
+> queries. If you change the `SEED` value in `config.py`, the generated
+> person IDs will differ and the scenario query files must be updated accordingly.
 
 ## Notes
 

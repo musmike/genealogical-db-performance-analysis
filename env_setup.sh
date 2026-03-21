@@ -139,4 +139,4 @@ sudo apt install -y dotnet-sdk-10.0
 
 echo "=== Setup complete ==="
 echo "REBOOT REQUIRED to apply Docker group changes."
-echo "After reboot, run: dotnet run --project <benchmark_project>"
+echo "After reboot, run: sudo dotnet run --project <benchmark_project>"
