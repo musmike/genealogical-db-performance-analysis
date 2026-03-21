@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres:16.13
+    image: postgres:17.9
     container_name: postgres_db
     restart: "no"
 
@@ -16,21 +16,49 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ../../data_generator/output:/data:ro
 
-    # Disable auto-vacuum to prevent background table cleanup from interfering with benchmarks
-    # Disable all SQL logging and slow query logging
-    # Disable logging collector
 
     command: >
       postgres
-      -c autovacuum=off
       -c log_statement=none
       -c log_min_duration_statement=-1
       -c logging_collector=off
+      -c shared_buffers=2GB
+      -c effective_cache_size=7GB
+      -c work_mem=64MB
+      -c maintenance_work_mem=1GB
+      -c max_parallel_workers_per_gather=4
+      -c max_parallel_workers=4
+      -c random_page_cost=1.1
+
+    # log_statement=none, log_min_duration_statement=-1, logging_collector=off:
+    #   Disable all query logging and the logging collector to eliminate log I/O overhead during benchmarks.
+    #
+    # shared_buffers=2GB:
+    #   Main PostgreSQL buffer cache. Set to 25% of container memory (8GB) as recommended.
+    #
+    # effective_cache_size=7GB:
+    #   Planner hint for total memory available for caching. Does not allocate memory —
+    #   tells the query planner to prefer index scans over sequential scans.
+    #
+    # work_mem=64MB:
+    #   Memory allocated per sort or hash operation. With 4 parallel workers,
+    #   peak usage may reach ~256MB.
+    #
+    # maintenance_work_mem=1GB:
+    #   Memory for maintenance operations (VACUUM, CREATE INDEX).
+    #   Only used outside of benchmark execution.
+    #
+    # max_parallel_workers_per_gather=4, max_parallel_workers=4:
+    #   Allow PostgreSQL to use all 4 assigned CPU cores (cpuset 0-3) for parallel query execution.
+    #
+    # random_page_cost=1.1:
+    #   Reflects SSD storage characteristics. Default value of 4.0 assumes rotational disk
+    #   and causes the planner to avoid index scans. Setting 1.1 enables optimal plan selection.
 
     networks:
       - benchmark_net
 
-    cpus: 4
+    cpuset: "0-3"
     mem_limit: 8g
 
 
@@ -43,18 +71,19 @@ services:
       # user/password.
       NEO4J_AUTH: neo4j/password
 
-      # Heap memory: initial and max set equal to avoid JVM heap resize overhead
+      # Heap initial and max set equal to avoid JVM heap resize overhead during execution.
       NEO4J_server_memory_heap_initial__size: 2G
       NEO4J_server_memory_heap_max__size: 2G
 
-      # Page cache: main data cache used by Neo4j for nodes, relationships and properties
-      # Set to 4G to fit within the 8G container memory limit alongside heap
+      # Page cache is the primary data cache for nodes, relationships, and properties.
+      # Set to 4GB to fit within the 8GB container memory limit alongside the heap (2GB)
+      # and JVM/OS overhead (~2GB).
       NEO4J_server_memory_pagecache_size: 4G
 
-      # Disable query execution logging to eliminate log I/O overhead during benchmarks
+      # Disable query execution logging to eliminate log I/O overhead during benchmarks.
       NEO4J_db_logs_query_enabled: "OFF"
 
-      # Disable anonymous usage reporting to prevent outbound network calls
+      # Disable anonymous usage reporting to prevent outbound network calls during benchmarks.
       NEO4J_dbms_usage__report_enabled: "false"
 
     ports:
@@ -64,13 +93,12 @@ services:
     volumes:
       - neo4j_data:/data
       - neo4j_logs:/logs
-      # Mount CSV data directory as read-only for neo4j-admin import
       - ../../data_generator/output:/import:ro
 
     networks:
       - benchmark_net
 
-    cpus: 4
+    cpuset: "4-7"
     mem_limit: 8g
 
 
