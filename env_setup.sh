@@ -67,6 +67,35 @@ for svc in unattended-upgrades snapd multipathd thermald; do
     echo "enabled=$(systemctl is-enabled "$svc" 2>/dev/null) active=$(systemctl is-active "$svc" 2>/dev/null)"
 done
 
+
+# ==============================================================
+# Disable Transparent Huge Pages (for stable latency in benchmarks)
+# ==============================================================
+echo -e "\n=== Disabling Transparent Huge Pages ==="
+
+if [ -f /sys/kernel/mm/transparent_hugepage/enabled ]; then
+    echo never | sudo tee /sys/kernel/mm/transparent_hugepage/enabled
+    echo never | sudo tee /sys/kernel/mm/transparent_hugepage/defrag
+fi
+
+sudo tee /etc/systemd/system/disable-thp.service > /dev/null <<'EOF'
+[Unit]
+Description=Disable Transparent Huge Pages
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'echo never > /sys/kernel/mm/transparent_hugepage/enabled; echo never > /sys/kernel/mm/transparent_hugepage/defrag'
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now disable-thp.service
+
+
+
 # ==============================================================
 # CPU governor — set to performance mode
 # Prevents dynamic frequency scaling from causing jitter in benchmark results
