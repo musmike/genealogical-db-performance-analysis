@@ -3,10 +3,12 @@
 // up to a configured depth (5 generations for 1k).
 // Uses the individual identified in summary.txt as having the most ancestors.
 
+
+
 MATCH (start:Person {id: 927})
 
 MATCH path = (start)
-              ((:Person)<-[:child]-(:Family)<-[:husband|wife]-(:Person)){1,5}
+              ((:Person)<-[c:HAS_CHILD WHERE c.relationshipType = 'BIOLOGICAL']-(:Family)<-[:HUSBAND_OF|WIFE_OF]-(:Person)){1,5}
               (anc:Person)
 
 WITH anc, length(path)/2 AS generation

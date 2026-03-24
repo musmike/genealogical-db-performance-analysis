@@ -7,7 +7,7 @@
 MATCH (start:Person {id: 99993})
 
 MATCH path = (start)
-              ((:Person)<-[:child]-(:Family)<-[:husband|wife]-(:Person)){1,15}
+              ((:Person)<-[c:HAS_CHILD WHERE c.relationshipType = 'BIOLOGICAL']-(:Family)<-[:HUSBAND_OF|WIFE_OF]-(:Person)){1,15}
               (anc:Person)
 
 WITH anc, length(path)/2 AS generation

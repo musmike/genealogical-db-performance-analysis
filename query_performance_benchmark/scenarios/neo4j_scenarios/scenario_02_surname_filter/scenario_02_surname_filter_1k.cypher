@@ -3,7 +3,13 @@
 // The surname and window are chosen from summary.txt to return
 // a representative (non-trivial) result set.
 
-MATCH (n:person)
+MATCH (n:Person)
 WHERE n.birthDate.year >= 1805 and n.birthDate.year <= 1854
 AND n.surname = 'Stępień'
-RETURN n;
+RETURN 
+n.id as id,
+n.givenName as name,
+n.surname as surname,
+n.birthDate as birth_date,
+n.sex as sex
+;

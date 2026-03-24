@@ -5,16 +5,54 @@
 // Affected names: Posen→Poznań, Danzig→Gdańsk, Breslau→Wrocław,
 // Stettin→Szczecin, Bromberg→Bydgoszcz, Thorn→Toruń.
 
-with {Posen:'Poznań', Danzig:'Gdańsk', Breslau:'Wrocław', Stettin:'Szczecin',Bromberg:'Bydgoszcz',Thorn:'Toruń'} as map
-MATCH(n:person)
+WITH [
+  ['Posen','Poznań'],
+  ['Danzig','Gdańsk'],
+  ['Breslau','Wrocław'],
+  ['Stettin','Szczecin'],
+  ['Bromberg','Bydgoszcz'],
+  ['Thorn','Toruń']
+] AS replacements
+
+MATCH (n:Person)
+WHERE any(pair IN replacements WHERE
+  n.birthPlace CONTAINS pair[0] OR
+  n.deathPlace CONTAINS pair[0] OR
+  n.burialPlace CONTAINS pair[0]
+)
+
 SET
-  n.birth_place = COALESCE(map[n.birth_place], n.birth_place),
-  n.death_place = COALESCE(map[n.death_place], n.death_place),
-  n.burial_place = COALESCE(map[n.burial_place], n.burial_place)
+  n.birthPlace =
+    reduce(val = n.birthPlace, pair IN replacements |
+      replace(val, pair[0], pair[1])),
+
+  n.deathPlace =
+    reduce(val = n.deathPlace, pair IN replacements |
+      replace(val, pair[0], pair[1])),
+
+  n.burialPlace =
+    reduce(val = n.burialPlace, pair IN replacements |
+      replace(val, pair[0], pair[1]))
+
 RETURN n;
 
-with {Posen:'Poznań', Danzig:'Gdańsk', Breslau:'Wrocław', Stettin:'Szczecin',Bromberg:'Bydgoszcz',Thorn:'Toruń'} as map
-MATCH(n:family)
+WITH [
+  ['Posen','Poznań'],
+  ['Danzig','Gdańsk'],
+  ['Breslau','Wrocław'],
+  ['Stettin','Szczecin'],
+  ['Bromberg','Bydgoszcz'],
+  ['Thorn','Toruń']
+] AS replacements
+
+MATCH (n:Family)
+WHERE any(pair IN replacements WHERE
+  n.marriagePlace CONTAINS pair[0]
+)
+
 SET
-  n.marriage_place = COALESCE(map[n.marriage_place], n.marriage_place)
+  n.marriagePlace =
+    reduce(val = n.marriagePlace, pair IN replacements |
+      replace(val, pair[0], pair[1]))
+
 RETURN n;

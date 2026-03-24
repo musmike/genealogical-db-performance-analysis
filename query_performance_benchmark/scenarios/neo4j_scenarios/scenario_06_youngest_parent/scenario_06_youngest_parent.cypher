@@ -2,15 +2,28 @@
 // Identifies the individual who had their first biological child
 // at the youngest age. Traversal follows biological links only.
 
-MATCH (f:family)-[:child]->(c:person)
-MATCH (p:person)-[:wife|husband]->(f)
+MATCH (f:Family)-[:HAS_CHILD]->(c:Person)
+MATCH (p:Person)-[:HUSBAND_OF|WIFE_OF]->(f)
 
 WITH c, p,
-     duration.inDays(date(p.birthDate), date(c.birthDate)).days AS ageDiff
+     duration.inDays(p.birthDate, c.birthDate).days AS ageDiff
 
-ORDER BY ageDiff ASC
-LIMIT 1
+WITH min(ageDiff) AS minDiff
 
-RETURN c AS child,
-       p AS parent,
-       ageDiff AS ageDifferenceInDays;
+MATCH (f:Family)-[:HAS_CHILD]->(c:Person)
+MATCH (p:Person)-[:HUSBAND_OF|WIFE_OF]->(f)
+
+WITH c, p,
+     duration.inDays(p.birthDate, c.birthDate).days AS ageDiff,
+     minDiff
+
+WHERE ageDiff = minDiff
+
+RETURN c.givenName AS child_name,
+      c.surname as child_surname,
+      c.birthDate as child_birth,
+       p.givenName AS parent_name,
+      p.surname as parent_surname,
+      p.birthDate as parent_birth,
+       ageDiff AS ageDifferenceInDays
+LIMIT 1;
