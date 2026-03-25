@@ -51,7 +51,8 @@ namespace benchmark_scr.db {
 
         private static void RunIndexScripts(DbType db) {
             if (db == DbType.PostgreSQL) {
-                RunShell("docker", "exec postgres_db psql -U user -d benchmark_db -f db_setup/postgresql/03_creating_indexes.sql");
+                RunShell("bash", $"-c \"cat db_setup/postgresq/l03_creating_indexes.sql | docker exec -i postgres_db psql -U user -d benchmark_db\"");
+                //RunShell("docker", "exec postgres_db psql -U user -d benchmark_db -f db_setup/postgresql/03_creating_indexes.sql");
             }
             else {
                 WaitForNeo4j();
