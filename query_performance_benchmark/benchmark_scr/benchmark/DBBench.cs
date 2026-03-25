@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-[Config(typeof(CustomBenchConfig))]
+
 [MemoryDiagnoser]
 public class DBBench {
     [Params(0,1,2,3,4,5,6,7,8)]

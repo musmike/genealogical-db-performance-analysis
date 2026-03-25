@@ -79,10 +79,10 @@ static void SlaveRun(string[] args) {
     QueryStore.Load();
 
     DBBench.Configure(db, ds);
-
+    var config = new CustomBenchConfig().WithArtifactsPath($"artifacts_main/{ds}_{db}");
     Console.WriteLine("[SLAVE] Running benchmarks...");
 
-    BenchmarkRunner.Run<DBBench>();
+    BenchmarkRunner.Run<DBBench>(config);
 }
 
 

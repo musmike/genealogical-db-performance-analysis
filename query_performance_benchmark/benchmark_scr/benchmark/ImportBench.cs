@@ -7,10 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace benchmark_scr.benchmark {
-    [SimpleJob(
-        warmupCount: 1,
-        iterationCount: 10)]
-    [Config(typeof(CustomImportConfig))]
+
+
     public class ImportBench {
         private static DbType _db;
         private static Dataset _ds;
