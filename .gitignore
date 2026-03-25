@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/query_performance_benchmark/benchmark_scr/.vs/benchmark_scr/CopilotIndices/17.14.1593.33849
+/query_performance_benchmark/benchmark_scr/.vs/benchmark_scr/DesignTimeBuild
+/query_performance_benchmark/benchmark_scr/.vs/benchmark_scr/FileContentIndex
+/query_performance_benchmark/benchmark_scr/.vs/ProjectEvaluation
+/query_performance_benchmark/benchmark_scr/bin
+/query_performance_benchmark/benchmark_scr/obj
+/query_performance_benchmark/benchmark_scr/.vs/benchmark_scr/v17
