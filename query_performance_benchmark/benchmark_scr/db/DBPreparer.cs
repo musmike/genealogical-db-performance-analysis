@@ -27,6 +27,7 @@ namespace benchmark_scr.db {
 
         public static void RunImport(DbType db, Dataset ds) {
             if (db == DbType.PostgreSQL) {
+                Console.WriteLine("Importing for PostgreSQL!");
                 string file = ds switch {
                     Dataset._1k => "02_data_import_1k.sql",
                     Dataset._10k => "02_data_import_10k.sql",
@@ -40,6 +41,7 @@ namespace benchmark_scr.db {
                 //RunShell("docker", $"exec postgres_db psql -U user -d benchmark_db -f db_setup/postgresql/{file}");
             }
             else {
+                Console.WriteLine("Importing for Neo4j!");
                 string file = ds switch {
                     Dataset._1k => "01_data_import_1k.sh",
                     Dataset._10k => "01_data_import_10k.sh",
@@ -58,7 +60,7 @@ namespace benchmark_scr.db {
             else {
                 WaitForNeo4j();
                 Neo4jRunner.ResetConnection();
-                RunShell("bash", "db_setup/neo4j/02_creating_indexes.cypher");
+                RunShell("bash", "-c \"cat db_setup/neo4j/02_creating_indexes.cypher | docker exec -i neo4j_db cypher-shell -u neo4j -p password\"");
             }
         }
 
