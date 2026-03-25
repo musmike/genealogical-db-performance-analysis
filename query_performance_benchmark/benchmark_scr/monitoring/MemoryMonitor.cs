@@ -19,6 +19,7 @@ namespace benchmark_scr.monitoring {
         }
 
         private static string ResolvePath(string id) {
+            Console.WriteLine($"Resolving memory handler for id: docker-{id}");
             string v2 = $"/sys/fs/cgroup/system.slice/docker-{id}/memory.current";
             if(File.Exists(v2)) return v2;
 
