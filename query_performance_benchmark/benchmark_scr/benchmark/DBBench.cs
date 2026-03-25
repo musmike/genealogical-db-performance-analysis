@@ -20,9 +20,11 @@ public class DBBench {
 
     [GlobalSetup]
     public void Setup() {
-        var ctx = BenchState.Current;
-        _db = ctx.Db;
-        _queries = ctx.Queries;
+        var db = (DbType)int.Parse(Environment.GetEnvironmentVariable("DB")!);
+        var ds = (Dataset)int.Parse(Environment.GetEnvironmentVariable("DATASET")!);
+
+        _db = db;
+        _queries = QueryStore.GetSet(db, ds);
     }
 
     [Benchmark]

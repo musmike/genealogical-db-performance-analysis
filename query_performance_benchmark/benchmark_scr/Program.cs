@@ -66,21 +66,21 @@ static void MasterRun() {
     //        //    dataset);
     //    }
     //}
-    foreach(var dataset in Enum.GetValues<Dataset>())
-    foreach(var db in Enum.GetValues<DbType>()) {
+    foreach (var dataset in Enum.GetValues<Dataset>())
+        foreach (var db in Enum.GetValues<DbType>()) {
             Console.WriteLine($"[RUN] {db}/{dataset}");
-            var ctx = new Context {
-                Db = db,
-                Dataset = dataset,
-                Queries = QueryStore.GetSet(db, dataset)
+
+            var psi = new ProcessStartInfo {
+                FileName = "dotnet",
+                Arguments = $"run -c Release --no-build",
+                UseShellExecute = false
             };
-            BenchState.Current = ctx;
-            var config = new CustomBenchConfig().WithArtifactsPath($"artifacts_mains/{ctx.Db}_{ctx.Dataset}");
-            BenchmarkRunner.Run<DBBench>(config);
+
+            psi.Environment["DB"] = ((int)db).ToString();
+            psi.Environment["DATASET"] = ((int)dataset).ToString();
+
+            Process.Start(psi)!.WaitForExit();
         }
-
-
-    Console.WriteLine("[MASTER] All benchmarks completed.");
 }
 
 
