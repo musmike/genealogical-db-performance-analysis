@@ -32,8 +32,11 @@ namespace benchmark_scr.db {
                     Dataset._100k => "02_data_import_100k.sql",
                     _ => throw new ArgumentOutOfRangeException()
                 };
-                RunShell("docker", $"exec postgres_db psql -U user -d benchmark_db -f db_setup/postgresql/01_creating_tables.sql");
-                RunShell("docker", $"exec postgres_db psql -U user -d benchmark_db -f db_setup/postgresql/{file}");
+                RunShell("bash", $"-c \"cat db_setup/postgresql/01_creating_tables.sql | docker exec -i postgres_db psql -U user -d benchmark_db\"");
+                RunShell("bash", $"-c \"cat db_setup/postgresql/{file} | docker exec -i postgres_db psql -U user -d benchmark_db\"");
+
+                //RunShell("docker", $"exec postgres_db psql -U user -d benchmark_db -f db_setup/postgresql/01_creating_tables.sql");
+                //RunShell("docker", $"exec postgres_db psql -U user -d benchmark_db -f db_setup/postgresql/{file}");
             }
             else {
                 string file = ds switch {
@@ -67,10 +70,13 @@ namespace benchmark_scr.db {
             };
 
             using var p = Process.Start(psi)!;
+            string stdout = p.StandardOutput.ReadToEnd();
+            string stderr = p.StandardError.ReadToEnd();
             p.WaitForExit();
 
             if (p.ExitCode != 0)
-                throw new Exception($"Command failed: {file} {args}");
+                throw new Exception(
+            $"Command failed:\n{file} {args}\n\nSTDOUT:\n{stdout}\n\nSTDERR:\n{stderr}");
         }
         static void WaitForNeo4j() {
             var start = DateTime.UtcNow;

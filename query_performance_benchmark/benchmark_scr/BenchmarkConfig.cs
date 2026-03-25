@@ -67,6 +67,7 @@ public class CustomBenchConfig: ManualConfig {
         AddJob(
             Job.Default.WithWarmupCount(5)
             .WithIterationCount(20)
+            .WithToolchain()
             );
         Options = ConfigOptions.DisableOptimizationsValidator;
 

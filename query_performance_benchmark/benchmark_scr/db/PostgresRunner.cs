@@ -10,7 +10,7 @@ static class PostgresRunner {
     private static readonly NpgsqlConnection _conn;
     static PostgresRunner() {
         _conn = new NpgsqlConnection(
-            "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=postgres");
+            "Host=localhost;Port=5432;Username=user;Password=password;Database=benchmark_db");
         _conn.Open();
     }
 
