@@ -73,3 +73,13 @@ public class CustomBenchConfig: ManualConfig {
         AddExporter(CsvExporter.Default);
     }
 }
+
+public class CustomImportConfig : ManualConfig {
+    public CustomImportConfig() {
+        AddJob(
+            Job.Default.WithWarmupCount(1)
+            .WithIterationCount(10));
+        Options = ConfigOptions.DisableOptimizationsValidator;
+        AddExporter(CsvExporter.Default);
+    }
+}
