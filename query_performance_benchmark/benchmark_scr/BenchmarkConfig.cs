@@ -68,6 +68,7 @@ public class CustomBenchConfig: ManualConfig {
             Job.Default.WithWarmupCount(5)
             .WithIterationCount(20)
             );
+        Options = ConfigOptions.DisableOptimizationsValidator;
 
         AddExporter(CsvExporter.Default);
     }
