@@ -43,9 +43,9 @@ static void MasterRun() {
 
             // ================= MEMORY MONITOR =================
             var containerId = Config.ContainerId(dbType);
-            var monitor = new MemoryMonitor(containerId);
+            //var monitor = new MemoryMonitor(containerId);
 
-            monitor.Start();
+            //monitor.Start();
 
             var sw = Stopwatch.StartNew();
 
@@ -53,15 +53,15 @@ static void MasterRun() {
 
             sw.Stop();
 
-            monitor.Stop();
+            //monitor.Stop();
 
             Console.WriteLine($"[MASTER] Finished {dataset}/{dbType} in {sw.Elapsed}");
 
             // ================= SAVE =================
-            SampleWriter.Write(
-                monitor.Samples,
-                dbType,
-                dataset);
+            //SampleWriter.Write(
+            //    monitor.Samples,
+            //    dbType,
+            //    dataset);
         }
     }
 
