@@ -19,7 +19,7 @@ public class DBBench {
     //private string _query => _queries[queryIndex];
 
     [GlobalSetup]
-    public void Setup(Context context) {
+    public void Setup() {
         var ctx = BenchState.Current;
         _db = ctx.Db;
         _queries = ctx.Queries;
