@@ -21,7 +21,7 @@ static class Config {
     static string GetContainerId(string name) {
         var psi = new ProcessStartInfo {
             FileName = "docker",
-            Arguments = $"inspect -f {{.Id}} {name}",
+            Arguments = $"inspect --format={{.Id}} {name}",
             RedirectStandardOutput = true,
             RedirectStandardError = true,
             UseShellExecute = false
