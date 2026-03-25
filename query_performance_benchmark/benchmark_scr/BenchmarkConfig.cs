@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BenchmarkDotNet.Exporters.Csv;
 using BenchmarkDotNet.Loggers;
+using BenchmarkDotNet.Columns;
 
 static class Config {
     public const int sampleHz = 50;
@@ -70,7 +71,7 @@ public class CustomBenchConfig: ManualConfig {
             .WithIterationCount(20)
             );
         Options = ConfigOptions.DisableOptimizationsValidator;
-
+        
         AddExporter(CsvExporter.Default);
         AddLogger(ConsoleLogger.Default);
     }
@@ -82,6 +83,7 @@ public class CustomImportConfig : ManualConfig {
             Job.Default.WithWarmupCount(1)
             .WithIterationCount(10));
         Options = ConfigOptions.DisableOptimizationsValidator;
+        AddColumnProvider(DefaultColumnProviders.Instance);
         AddExporter(CsvExporter.Default);
         AddLogger(ConsoleLogger.Default);
     }

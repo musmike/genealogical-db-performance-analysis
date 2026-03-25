@@ -14,11 +14,14 @@ namespace benchmark_scr.db {
 
         public static void PrepareAndBenchmark(DbType db, Dataset ds) {
             Console.WriteLine($"[PREPARER] Running import benchmark: {db}/{ds}");
-            ImportBench.Configure(db, ds);
-            var config = new CustomImportConfig()
-                .WithArtifactsPath($"artifacts/{db}_{ds}");
+            //ImportBench.Configure(db, ds);
+            //var config = new CustomImportConfig()
+            //    .WithArtifactsPath($"artifacts/{db}_{ds}");
+            //WaitForNeo4j();
+            //BenchmarkRunner.Run<ImportBench>(config);
+
             WaitForNeo4j();
-            BenchmarkRunner.Run<ImportBench>(config);
+            RunImport(db, ds);
             WaitForNeo4j();
             RunIndexScripts(db);
 

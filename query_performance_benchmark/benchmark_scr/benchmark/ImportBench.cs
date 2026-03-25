@@ -10,10 +10,10 @@ namespace benchmark_scr.benchmark {
 
 
     public class ImportBench {
-        private static DbType _db;
-        private static Dataset _ds;
+        private readonly DbType _db;
+        private readonly Dataset _ds;
 
-        public static void Configure(DbType db, Dataset ds) {
+        public ImportBench(DbType db, Dataset ds) {
             _db = db;
             _ds = ds;
         }

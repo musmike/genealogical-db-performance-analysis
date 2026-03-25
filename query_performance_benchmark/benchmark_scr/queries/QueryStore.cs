@@ -41,6 +41,35 @@ static class QueryStore {
         }
     }
 
+    public static string[] GetSet(DbType db, Dataset ds) {
+        switch (db) {
+            case DbType.PostgreSQL:
+                switch (ds) {
+                    case Dataset._1k:
+                        return psqqueries1k;
+                    case Dataset._10k:
+                        return psqqueries10k;
+                    case Dataset._100k:
+                        return psqqueries100k;
+                    default:
+                        return null!;
+                }
+            case DbType.Neo4j:
+                switch (ds) {
+                    case Dataset._1k:
+                        return n4jqueries1k;
+                    case Dataset._10k:
+                        return n4jqueries10k;
+                    case Dataset._100k:
+                        return n4jqueries100k;
+                    default:
+                        return null!;
+                }
+            default:
+                return null!;
+        }
+    }
+
     public static void Load() {
         LoadPostgres();
         LoadN4j();
