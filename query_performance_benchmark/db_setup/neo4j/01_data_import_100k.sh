@@ -1,18 +1,45 @@
-docker stop neo4j_db
-docker run --rm -v db_setup_neo4j_data:/data neo4j:5.26.21-community \
-  rm -rf /data/databases/neo4j /data/transactions/neo4j
-sync; echo 3 > /proc/sys/vm/drop_caches
+#!/bin/bash
 
-docker run --rm \
-  -v db_setup_neo4j_data:/data \
-  -v $(pwd)/../../data_generator/output:/import:ro \
-  neo4j:5.26.21-community \
-  neo4j-admin database import full neo4j \
+# Stop and drop existing database if exists
+docker exec -it neo4j_db cypher-shell -u neo4j -p password --database system \
+  "STOP DATABASE benchmarkdb" 2>/dev/null || true
+docker exec -it neo4j_db cypher-shell -u neo4j -p password --database system \
+  "DROP DATABASE benchmarkdb IF EXISTS DESTROY DATA" 2>/dev/null || true
+docker exec -it neo4j_db rm -rf /data/databases/benchmarkdb
+docker exec -it neo4j_db rm -rf /data/transactions/benchmarkdb
+
+# Import data using neo4j-admin tool and capture output for timing
+OUTPUT=$(docker exec -i neo4j_db \
+  neo4j-admin database import full benchmarkdb \
   --id-type=integer \
   --nodes=Person=/import/100k/neo4j/nodes_person.csv \
   --nodes=Family=/import/100k/neo4j/nodes_family.csv \
   --relationships=HUSBAND_OF=/import/100k/neo4j/rels_husband_of.csv \
   --relationships=WIFE_OF=/import/100k/neo4j/rels_wife_of.csv \
-  --relationships=HAS_CHILD=/import/100k/neo4j/rels_child_of.csv
+  --relationships=HAS_CHILD=/import/100k/neo4j/rels_child_of.csv 2>&1)
 
-docker start neo4j_db
+echo "$OUTPUT"
+
+if echo "$OUTPUT" | grep -q "IMPORT DONE in"; then
+  if [[ $OUTPUT =~ IMPORT\ DONE\ in\ (([0-9]+)m\ )?(([0-9]+)s\ )?(([0-9]+)ms)? ]]; then
+    MINUTES=${BASH_REMATCH[2]:-0}
+    SECONDS=${BASH_REMATCH[4]:-0}
+    MILLIS=${BASH_REMATCH[6]:-0}
+    TOTAL_MS=$(( MINUTES * 60000 + SECONDS * 1000 + MILLIS ))
+    echo "NEO4J_IMPORT_MS=$TOTAL_MS"
+  fi
+else
+  echo "NEO4J_IMPORT FAILED"
+  exit 1
+fi
+
+TOTAL_MS=$(( MINUTES * 60000 + SECONDS * 1000 + MILLIS ))
+
+# Output the total time in milliseconds for use in the benchmark
+echo "NEO4J_IMPORT_MS=$TOTAL_MS"
+
+# Create the benchmarkdb database and start it
+docker exec -it neo4j_db cypher-shell -u neo4j -p password --database system \
+  "CREATE DATABASE benchmarkdb IF NOT EXISTS"
+docker exec -it neo4j_db cypher-shell -u neo4j -p password --database system \
+  "START DATABASE benchmarkdb"

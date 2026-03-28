@@ -26,7 +26,7 @@ services:
       -c effective_cache_size=7GB
       -c work_mem=64MB
       -c maintenance_work_mem=1GB
-      -c max_parallel_workers_per_gather=4
+      -c max_parallel_workers_per_gather=0
       -c max_parallel_workers=4
       -c random_page_cost=1.1
 
@@ -63,13 +63,16 @@ services:
 
 
   neo4j:
-    image: neo4j:5.26.21-community
+    image: neo4j:5.26.23-enterprise
     container_name: neo4j_db
     restart: "no"
 
     environment:
-      # user/password.
+      # user/password
       NEO4J_AUTH: neo4j/password
+      NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
+      NEO4J_server_metrics_enabled: "false"
+      NEO4J_server_cypher_parallel_worker__limit: "-100"
 
       # Heap initial and max set equal to avoid JVM heap resize overhead during execution.
       NEO4J_server_memory_heap_initial__size: 2G
