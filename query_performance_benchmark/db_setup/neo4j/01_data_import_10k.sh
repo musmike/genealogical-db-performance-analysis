@@ -26,17 +26,13 @@ if echo "$OUTPUT" | grep -q "IMPORT DONE in"; then
     SECONDS=${BASH_REMATCH[4]:-0}
     MILLIS=${BASH_REMATCH[6]:-0}
     TOTAL_MS=$(( MINUTES * 60000 + SECONDS * 1000 + MILLIS ))
+    # Output the total time in milliseconds for use in the benchmark
     echo "NEO4J_IMPORT_MS=$TOTAL_MS"
   fi
 else
   echo "NEO4J_IMPORT FAILED"
   exit 1
 fi
-
-TOTAL_MS=$(( MINUTES * 60000 + SECONDS * 1000 + MILLIS ))
-
-# Output the total time in milliseconds for use in the benchmark
-echo "NEO4J_IMPORT_MS=$TOTAL_MS"
 
 # Create the benchmarkdb database and start it
 docker exec -it neo4j_db cypher-shell -u neo4j -p password --database system \
