@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS family_children, families, people;
 
-CREATE TABLE people (
+CREATE TABLE IF NOT EXISTS people (
     id                INTEGER         PRIMARY KEY,
     given_name        VARCHAR(50),
     surname           VARCHAR(50),
@@ -15,7 +15,7 @@ CREATE TABLE people (
     occupation        VARCHAR(100)
 );
 
-CREATE TABLE families (
+CREATE TABLE IF NOT EXISTS families (
     id              INTEGER         PRIMARY KEY,
     status          VARCHAR(20),
     marriage_date   DATE,
@@ -27,7 +27,7 @@ CREATE TABLE families (
 );
 
 
-CREATE TABLE family_children (
+CREATE TABLE IF NOT EXISTS family_children (
     family_id           INTEGER         NOT NULL REFERENCES families(id),
     child_id            INTEGER         NOT NULL REFERENCES people(id),
     relationship_type   VARCHAR(20)     NOT NULL,
