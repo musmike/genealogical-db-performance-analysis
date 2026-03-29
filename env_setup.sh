@@ -177,19 +177,33 @@ sudo apt-mark hold docker-ce docker-ce-cli
 sudo usermod -aG docker $(logname)
 
 # ==============================================================
-# Install .NET 10 SDK (specific version for reproducibility)
+# Install .NET 9 SDK (specific version for reproducibility)
 # ==============================================================
 
-echo -e "\n=== Installing .NET 10 SDK ==="
+echo -e "\n=== Installing .NET 9 SDK ==="
 
-DOTNET_VERSION="10.0.104-0ubuntu1~24.04.1"
+sudo apt install -y software-properties-common
+sudo add-apt-repository -y ppa:dotnet/backports
+sudo apt update -y
 
-sudo apt install -y dotnet-sdk-10.0=$DOTNET_VERSION
+DOTNET_VERSION="9.0.115-0ubuntu1~24.04.1~ppa1"
+
+sudo apt install -y dotnet-sdk-9.0=$DOTNET_VERSION
 
 # Lock SDK to prevent upgrades
-sudo apt-mark hold dotnet-sdk-10.0
+sudo apt-mark hold dotnet-sdk-9.0
+
+
+# ==============================================================
+# Start databases via Docker Compose
+# ==============================================================
+
+echo -e "\n=== Starting Docker Compose services ==="
+sudo docker compose -f query_performance_benchmark/db_setup/docker-compose.yml up -d
+
+echo "Docker services started. Check status with: sudo docker ps"
 
 # ==============================================================
 echo -e "\n=== Setup complete ==="
 echo "REBOOT REQUIRED to apply Docker group changes."
-echo "After reboot, run: sudo dotnet run --project <benchmark_project>"
+echo "After reboot, build and run the benchmark binary — see README.md"

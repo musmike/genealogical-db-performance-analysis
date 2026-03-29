@@ -45,15 +45,23 @@ sudo reboot
 ```
 
 
-## 4. Run the benchmark script
+## 4. Build and run the benchmark
 
-After reboot, navigate to the repository folder and run the measurement script written in C#:
+After reboot, build the benchmark binary:
 ```bash
 cd <repository_folder>
-sudo dotnet run --project <benchmark_project>
+dotnet publish -c Release -r linux-x64 --self-contained true /p:PublishSingleFile=true \
+  -o query_performance_benchmark \
+  query_performance_benchmark/benchmark_scr/benchmark_scr.csproj
 ```
 
-> The script will configure and start the database containers and then execute the performance tests.
+Then run it:
+```bash
+chmod +x query_performance_benchmark/benchmark_scr
+sudo ./query_performance_benchmark/benchmark_scr
+```
+
+> The binary connects to the database containers and executes the performance tests.
 
 
 ## Generate data (optional)
