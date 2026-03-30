@@ -1,6 +1,6 @@
-// Scenario 04: Ancestor Retrieval
+// Scenario 04: Ancestor Retrieval (10k dataset)
 // Retrieves all distinct biological ancestors of a selected individual
-// up to a configured depth (10 generations for 10k).
+// up to a configured depth (10 generations in this case).
 // Uses the individual identified in summary.txt as having the most ancestors.
 // Should return the columns in the following order and with the following names:
 // ancestor_id, generation (distance from the starting individual), given_name, surname,
