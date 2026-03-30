@@ -2,6 +2,9 @@
 // Filters individuals by a selected surname and a 50-year birth window.
 // The surname and window are chosen from summary.txt to return
 // a representative (non-trivial) result set.
+// Should return the columns in the following order and with the following names
+// person_id, given_name, surname, sex, birth_date, birth_place, death_date, death_place.
+// Order the results by birth_date ascending.
 
 MATCH (n:Person)
 WHERE n.birthDate.year >= 1805 and n.birthDate.year <= 1854

@@ -4,6 +4,9 @@
 -- chosen such that the total path length through the LCA matches the
 -- configured target (8 hops for 1k dataset).
 -- Traversal follows biological relationships only (adopted/foster excluded).
+-- Should return the columns in the following order and with the following names:
+-- lca_id, given_name, surname, sex, birth_date, birth_place, death_date, death_place, path_length_from_a, path_length_from_b, total_dist.
+-- Orders the results by lca_id ascending.
 
 WITH RECURSIVE
 anc_a(person_id, depth, visited) AS (
