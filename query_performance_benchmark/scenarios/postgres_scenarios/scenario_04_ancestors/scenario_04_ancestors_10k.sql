@@ -1,6 +1,6 @@
--- Scenario 04: Ancestor Retrieval (100k dataset)
+-- Scenario 04: Ancestor Retrieval (10k dataset)
 -- Retrieves all distinct biological ancestors of a selected individual
--- up to a configured depth (15 generations in this case).
+-- up to a configured depth (10 generations in this case).
 -- Uses the individual identified in summary.txt as having the most ancestors.
 -- Should return the columns in the following order and with the following names:
 -- ancestor_id, generation (the shortest path length from the starting individual), given_name, surname,
@@ -14,6 +14,7 @@
 --       Their own parents (earlier generations) should only appear again if some of their column values differ 
 --       (for example, if they appear in a different generation or with a different marriage). 
 --       This ensures all relevant ancestral paths of the selected individual are captured without unnecessary duplicates.
+
 
 WITH RECURSIVE ancestors(person_id, depth, via_family_id, visited) AS (
     SELECT 9833, 0, NULL::int, ARRAY[9833]
