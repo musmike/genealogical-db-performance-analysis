@@ -3,15 +3,9 @@
 // up to a configured depth (10 generations in this case).
 // Uses the individual identified in summary.txt as having the most ancestors.
 // Should return the columns in the following order and with the following names:
-// ancestor_id, generation (distance from the starting individual), given_name, surname,
-// sex, birth_date, birth_place, marriage_date, marriage_place,
-// death_date, death_place, burial_place, cause_of_death, father_id, mother_id.
+// ancestor_id, generation (the shortest path length from the starting individual), given_name, surname,
+// sex, birth_date, birth_place, death_date, death_place, burial_place, cause_of_death, father_id, mother_id.
 // Orders the results first by generation ascending, then by ancestor_id ascending within each generation.
-// NOTE: marriage_date and marriage_place should correspond to the marriage with the ancestor
-//       that is in the lineage, not any other marriage that the ancestor may have had
-//       with someone who is not part of the ancestry.
-// NOTE: father_id and mother_id should be populated for all returned ancestors
-//       except those in the last generation being returned (i.e., the most distant ancestors in the result set).
 
 MATCH (start:Person {id: 9833})
 
