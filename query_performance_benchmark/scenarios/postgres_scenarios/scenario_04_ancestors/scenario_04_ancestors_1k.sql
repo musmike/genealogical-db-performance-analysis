@@ -3,10 +3,10 @@
 -- up to a configured depth (5 generations in this case).
 -- Uses the individual identified in summary.txt as having the most ancestors.
 -- Should return the columns in the following order and with the following names:
--- ancestor_id, generation (the shortest path length from the starting individual), given_name, surname,
--- sex, birth_date, birth_place, marriage_date, marriage_place, death_date, death_place, burial_place, cause_of_death, father_id, mother_id.
+-- ancestor_id, generation, given_name, surname, sex, birth_date, birth_place, family_id, marriage_date, marriage_place, 
+-- death_date, death_place, burial_place, cause_of_death, father_id, mother_id.
 -- Orders the results first by generation ascending, then by ancestor_id ascending within each generation.
--- NOTE: marriage_date and marriage_place should correspond to the marriage that connects this ancestor 
+-- NOTE: family_id, marriage_date and marriage_place should correspond to the marriage that connects this ancestor 
 --       to the specific parent-child lineage of the selected individual, 
 --       not any other marriage the ancestor may have had, even if with someone else in the ancestry tree.
 -- Note: An ancestor may appear more than once in the results if they occupy different generations
