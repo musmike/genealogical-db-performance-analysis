@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS people (
 
 CREATE TABLE IF NOT EXISTS families (
     id              INTEGER         PRIMARY KEY,
-    status          VARCHAR(20),
+    status          VARCHAR(20),    -- e.g., 'MARIED', 'DIVORCED', 'WIDOWED'
     marriage_date   DATE,
     marriage_place  VARCHAR(100),
     husband_id      INTEGER         REFERENCES people(id),
@@ -30,6 +30,6 @@ CREATE TABLE IF NOT EXISTS families (
 CREATE TABLE IF NOT EXISTS family_children (
     family_id           INTEGER         NOT NULL REFERENCES families(id),
     child_id            INTEGER         NOT NULL REFERENCES people(id),
-    relationship_type   VARCHAR(20)     NOT NULL,
+    relationship_type   VARCHAR(20)     NOT NULL,   -- e.g., 'BIOLOGICAL', 'ADOPTED', 'FOSTER'
     PRIMARY KEY (family_id, child_id)
 );

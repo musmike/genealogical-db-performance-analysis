@@ -27,33 +27,33 @@ services:
       -c work_mem=64MB
       -c maintenance_work_mem=1GB
       -c max_parallel_workers_per_gather=0
-      -c max_parallel_workers=4
+      -c max_parallel_workers=0
       -c random_page_cost=1.1
 
     # log_statement=none, log_min_duration_statement=-1, logging_collector=off:
     #   Disable all query logging and the logging collector to eliminate log I/O overhead during benchmarks.
     #
     # shared_buffers=2GB:
-    #   Main PostgreSQL buffer cache. Set to 25% of container memory (8GB) as recommended.
+    #   Main PostgreSQL buffer cache. Set to ~25% of container memory (8GB) as recommended.
     #
     # effective_cache_size=7GB:
-    #   Planner hint for total memory available for caching. Does not allocate memory —
-    #   tells the query planner to prefer index scans over sequential scans.
+    #   Planner hint for total memory available for caching. Does not allocate memory—
+    #   guides the planner to favor index scans over sequential scans.
     #
     # work_mem=64MB:
-    #   Memory allocated per sort or hash operation. With 4 parallel workers,
-    #   peak usage may reach ~256MB.
+    #   Memory allocated per sort or hash operation for a single thread.
+    #   With parallel workers disabled, peak usage will be 64MB per operation.
     #
     # maintenance_work_mem=1GB:
     #   Memory for maintenance operations (VACUUM, CREATE INDEX).
     #   Only used outside of benchmark execution.
     #
-    # max_parallel_workers_per_gather=4, max_parallel_workers=4:
-    #   Allow PostgreSQL to use all 4 assigned CPU cores (cpuset 0-3) for parallel query execution.
+    # max_parallel_workers_per_gather=0, max_parallel_workers=0:
+    #   Disable parallel query execution. Queries will run using a single thread only.
     #
     # random_page_cost=1.1:
-    #   Reflects SSD storage characteristics. Default value of 4.0 assumes rotational disk
-    #   and causes the planner to avoid index scans. Setting 1.1 enables optimal plan selection.
+    #   Reflects SSD storage characteristics. Default 4.0 assumes rotational disks.
+    #   Setting 1.1 allows the planner to better choose index scans.
 
     networks:
       - benchmark_net

@@ -7,31 +7,27 @@
 -- sex, birth_date, birth_place, death_date, death_place, burial_place, cause_of_death, father_id, mother_id.
 -- Orders the results first by generation ascending, then by ancestor_id ascending within each generation.
 
-WITH RECURSIVE ancestors(person_id, depth, via_family_id, visited) AS (
-    SELECT 927, 0, NULL::int, ARRAY[927]
+WITH RECURSIVE ancestors AS (
+    SELECT 927 AS person_id, 0 AS depth
     UNION ALL
-    SELECT parent.id, a.depth + 1, f.id, a.visited || parent.id
+    SELECT parent_id, a.depth + 1
     FROM ancestors a
     JOIN family_children fc ON fc.child_id = a.person_id AND fc.relationship_type = 'BIOLOGICAL'
     JOIN families f ON f.id = fc.family_id
-    JOIN people parent ON parent.id IN (f.husband_id, f.wife_id)
-    WHERE a.depth < 5
-      AND NOT (parent.id = ANY(a.visited))
+    CROSS JOIN LATERAL (VALUES (f.husband_id),(f.wife_id)) AS v(parent_id)
+    WHERE parent_id IS NOT NULL AND a.depth < 5
 ),
 deduped AS (
-    SELECT DISTINCT ON (person_id) person_id, depth, via_family_id
+    SELECT DISTINCT ON (person_id) person_id, depth
     FROM ancestors
     WHERE person_id <> 927
     ORDER BY person_id, depth
 )
-SELECT p.id AS ancestor_id, d.depth AS generation,
-    p.given_name, p.surname, p.sex, p.birth_date, p.birth_place,
-    fm.marriage_date, fm.marriage_place,
-    p.death_date, p.death_place, p.burial_place, p.cause_of_death,
-    pf.husband_id AS father_id, pf.wife_id AS mother_id
+SELECT p.id AS ancestor_id, d.depth AS generation, p.given_name, p.surname, p.sex, 
+    p.birth_date, p.birth_place, p.death_date, p.death_place, p.burial_place, 
+    p.cause_of_death, pf.husband_id AS father_id, pf.wife_id AS mother_id
 FROM deduped d
 JOIN people p ON p.id = d.person_id
-LEFT JOIN families fm ON fm.id = d.via_family_id
 LEFT JOIN family_children pfc ON pfc.child_id = p.id AND pfc.relationship_type = 'BIOLOGICAL'
 LEFT JOIN families pf ON pf.id = pfc.family_id
 ORDER BY generation, p.id;

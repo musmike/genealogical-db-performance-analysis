@@ -5,9 +5,9 @@
 // Should return the columns in the following order and with the following names:
 // parent_id, given_name, surname, sex, birth_date, birth_place, age_at_first_child, age_difference_in_days,
 // child_id, child_birth_date, child_birth_place
-// Orders the results by parent_id ascending.
+// Orders the results by parent_id ascending and then child_id ascending.
 // More than one individual may be returned if multiple parents had their first child
-// at the same youngest age.
+// at the same youngest age or if there are multiple children born to the same parent at the same age (e.g., twins).
 
 MATCH (f:Family)-[:HAS_CHILD]->(c:Person)
 MATCH (p:Person)-[:HUSBAND_OF|WIFE_OF]->(f)

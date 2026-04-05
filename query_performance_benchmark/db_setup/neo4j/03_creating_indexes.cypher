@@ -1,6 +1,6 @@
 // Scenario 01, 04, 05: lookup for traversal start nodes
-CREATE INDEX person_id IF NOT EXISTS FOR (p:Person) ON (p.id);
-CREATE INDEX family_id IF NOT EXISTS FOR (f:Family) ON (f.id);
+CREATE CONSTRAINT person_id_unique IF NOT EXISTS FOR (p:Person) REQUIRE p.id IS UNIQUE;
+CREATE CONSTRAINT family_id_unique IF NOT EXISTS FOR (f:Family) REQUIRE f.id IS UNIQUE;
 
 // Scenario 01, 04, 05: filters BIOLOGICAL links at each traversal step
 CREATE INDEX IF NOT EXISTS FOR ()-[r:HAS_CHILD]-() ON (r.relationshipType);
