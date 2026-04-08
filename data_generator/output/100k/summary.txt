@@ -1,80 +1,83 @@
 === POPULATION AND GRAPH TOPOLOGY REPORT ===
 Target population: 100000
 Total people generated: 100000
-People alive at end of simulation (1985): 17118
-Total families: 51566
+People alive at end of simulation (2034): 18400
+Total families: 49691
 
 --- POPULATION GROWTH OVER TIME ---
-Year 800: Alive 150 people. Total generated: 150
-Year 825: Alive 265 people. Total generated: 320
-Year 850: Alive 316 people. Total generated: 488
-Year 875: Alive 367 people. Total generated: 680
-Year 900: Alive 404 people. Total generated: 895
-Year 925: Alive 452 people. Total generated: 1114
-Year 950: Alive 526 people. Total generated: 1355
-Year 975: Alive 575 people. Total generated: 1641
-Year 1000: Alive 682 people. Total generated: 1967
-Year 1025: Alive 760 people. Total generated: 2322
-Year 1050: Alive 823 people. Total generated: 2725
-Year 1075: Alive 880 people. Total generated: 3155
-Year 1100: Alive 957 people. Total generated: 3621
-Year 1125: Alive 1048 people. Total generated: 4116
-Year 1150: Alive 1140 people. Total generated: 4636
-Year 1175: Alive 1250 people. Total generated: 5258
-Year 1200: Alive 1312 people. Total generated: 5830
-Year 1225: Alive 1348 people. Total generated: 6462
-Year 1250: Alive 1476 people. Total generated: 7214
-Year 1275: Alive 1595 people. Total generated: 7942
-Year 1300: Alive 1687 people. Total generated: 8758
-Year 1325: Alive 1814 people. Total generated: 9591
-Year 1350: Alive 1930 people. Total generated: 10525
-Year 1375: Alive 2048 people. Total generated: 11513
-Year 1400: Alive 2177 people. Total generated: 12535
-Year 1425: Alive 2379 people. Total generated: 13652
-Year 1450: Alive 2522 people. Total generated: 14881
-Year 1475: Alive 2781 people. Total generated: 16237
-Year 1500: Alive 3086 people. Total generated: 17770
-Year 1525: Alive 3498 people. Total generated: 19498
-Year 1550: Alive 3855 people. Total generated: 21387
-Year 1575: Alive 4253 people. Total generated: 23462
-Year 1600: Alive 4639 people. Total generated: 25669
-Year 1625: Alive 5043 people. Total generated: 28120
-Year 1650: Alive 5566 people. Total generated: 30864
-Year 1675: Alive 6215 people. Total generated: 33969
-Year 1700: Alive 6796 people. Total generated: 37195
-Year 1725: Alive 7231 people. Total generated: 40563
-Year 1750: Alive 7813 people. Total generated: 44333
-Year 1775: Alive 8508 people. Total generated: 48453
-Year 1800: Alive 9058 people. Total generated: 52661
-Year 1825: Alive 9747 people. Total generated: 57400
-Year 1850: Alive 10681 people. Total generated: 62662
-Year 1875: Alive 11666 people. Total generated: 68370
-Year 1900: Alive 12903 people. Total generated: 74719
-Year 1925: Alive 14026 people. Total generated: 81427
-Year 1950: Alive 15048 people. Total generated: 88679
-Year 1975: Alive 16379 people. Total generated: 96694
-Year 1985 (END): Alive 17118 people. Total generated: 100000
+Year 800: Alive 180 people. Total generated: 180
+Year 825: Alive 319 people. Total generated: 387
+Year 850: Alive 377 people. Total generated: 592
+Year 875: Alive 415 people. Total generated: 776
+Year 900: Alive 437 people. Total generated: 1005
+Year 925: Alive 437 people. Total generated: 1187
+Year 950: Alive 437 people. Total generated: 1391
+Year 975: Alive 458 people. Total generated: 1606
+Year 1000: Alive 470 people. Total generated: 1806
+Year 1025: Alive 483 people. Total generated: 2021
+Year 1050: Alive 499 people. Total generated: 2277
+Year 1075: Alive 537 people. Total generated: 2531
+Year 1100: Alive 572 people. Total generated: 2776
+Year 1125: Alive 660 people. Total generated: 3122
+Year 1150: Alive 718 people. Total generated: 3472
+Year 1175: Alive 791 people. Total generated: 3849
+Year 1200: Alive 868 people. Total generated: 4266
+Year 1225: Alive 928 people. Total generated: 4734
+Year 1250: Alive 999 people. Total generated: 5210
+Year 1275: Alive 1077 people. Total generated: 5721
+Year 1300: Alive 1238 people. Total generated: 6331
+Year 1325: Alive 1363 people. Total generated: 7017
+Year 1350: Alive 1497 people. Total generated: 7759
+Year 1375: Alive 1669 people. Total generated: 8579
+Year 1400: Alive 1816 people. Total generated: 9450
+Year 1425: Alive 1976 people. Total generated: 10386
+Year 1450: Alive 2163 people. Total generated: 11474
+Year 1475: Alive 2410 people. Total generated: 12622
+Year 1500: Alive 2618 people. Total generated: 13890
+Year 1525: Alive 2874 people. Total generated: 15301
+Year 1550: Alive 3177 people. Total generated: 16832
+Year 1575: Alive 3513 people. Total generated: 18595
+Year 1600: Alive 4010 people. Total generated: 20563
+Year 1625: Alive 4287 people. Total generated: 22571
+Year 1650: Alive 4616 people. Total generated: 24778
+Year 1675: Alive 4857 people. Total generated: 27098
+Year 1700: Alive 5330 people. Total generated: 29773
+Year 1725: Alive 5866 people. Total generated: 32643
+Year 1750: Alive 6439 people. Total generated: 35785
+Year 1775: Alive 7028 people. Total generated: 39161
+Year 1800: Alive 7757 people. Total generated: 42811
+Year 1825: Alive 8314 people. Total generated: 46825
+Year 1850: Alive 9076 people. Total generated: 51193
+Year 1875: Alive 9929 people. Total generated: 55923
+Year 1900: Alive 10887 people. Total generated: 61273
+Year 1925: Alive 12036 people. Total generated: 67106
+Year 1950: Alive 13195 people. Total generated: 73558
+Year 1975: Alive 14489 people. Total generated: 80588
+Year 2000: Alive 15769 people. Total generated: 88317
+Year 2025: Alive 17540 people. Total generated: 96823
+Year 2034 (END): Alive 18400 people. Total generated: 100000
 
 --- GRAPH TOPOLOGY & DEMOGRAPHICS ---
-Max graph depth (oldest root to youngest descendant): 49 generations
-Average depth of leaf nodes (endpoints): 37.73 generations
-Sex ratio: 49608 Males / 50392 Females
-Average lifespan (deceased individuals): 53.2 years
-Marriage rate: 75.9% of total population
-Total divorces: 664
-Families with children: 41149
-Average children per fertile family: 2.43
-Largest family generated: 10 children
+Max graph depth (oldest root to youngest descendant): 51 generations
+Average depth of leaf nodes (endpoints): 40.07 generations
+Sex ratio: 50181 Males / 49819 Females
+Average lifespan (deceased individuals): 53.1 years
+Marriage rate: 75.3% of total population
+Total divorces: 592
+Families with children: 39900
+Average children per fertile family: 2.50
+Largest family generated: 11 children
 Family distribution (children per family):
-  1 child(ren): 12699 families
-  2 child(ren): 11946 families
-  3 child(ren): 8302 families
-  4 child(ren): 4619 families
-  5 child(ren): 2245 families
-  6 child(ren): 883 families
-  7 child(ren): 323 families
-  8 child(ren): 104 families
-  9 child(ren): 19 families
-  10 child(ren): 9 families
-Orphans (adopted/foster without biological links): 3886 individuals
+  1 child(ren): 11725 families
+  2 child(ren): 11257 families
+  3 child(ren): 8206 families
+  4 child(ren): 4878 families
+  5 child(ren): 2285 families
+  6 child(ren): 1033 families
+  7 child(ren): 354 families
+  8 child(ren): 118 families
+  9 child(ren): 35 families
+  10 child(ren): 8 families
+  11 child(ren): 1 families
+Orphans (adopted/foster without biological links): 4030 individuals
 

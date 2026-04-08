@@ -5,6 +5,6 @@ The youngest parent is determined by the exact age difference in days between th
 
 Expected rows: 1
 
-parent_id | given_name | surname  | sex | birth_date | birth_place | age_at_first_child | age_difference_in_days | child_id | child_birth_date | child_birth_place
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
-75941     | Grażyna    | Adamczyk | F   | 1905-10-20 | Supraśl     | 16                 | 5937                   | 80562    | 1922-01-21       | Chochołów        
+parent_id | given_name | surname     | sex | birth_date | birth_place | age_at_first_child | age_difference_in_days | child_id | child_birth_date | child_birth_place
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+17276     | Irena      | Kwiatkowska | F   | 1557-12-02 | Gliwice     | 16                 | 5879                   | 18518    | 1574-01-06       | Supraśl          

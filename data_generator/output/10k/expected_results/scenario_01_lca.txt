@@ -4,13 +4,15 @@ Target LCA path length required: 12
 Constraint: Person A and Person B are not closely related AND
             biological distance to LCA > 3 for both sides.
 
-Recommended Person A (ID: 8192)
-Recommended Person B (ID: 9575)
+Recommended Person A (ID: 6523)
+Recommended Person B (ID: 9944)
 
 
-Expected rows: 2
+Expected rows: 4
 
-lca_id | given_name | surname  | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
--------------------------------------------------------------------------------------------------------------------------------------------------
-3457   | Krzysztof  | Kowalski | M   | 1748-08-01 | Lublin      | 1815-12-09 | Cieszyn     | 6                  | 6                  | 12        
-3706   | Halina     | Woźniak  | F   | 1759-11-13 | Częstochowa | 1838-11-10 | Lublin      | 6                  | 6                  | 12        
+lca_id | given_name | surname       | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
+------------------------------------------------------------------------------------------------------------------------------------------------------
+2279   | Antoni     | Wojciechowski | M   | 1699-01-10 | Sandomierz  | 1769-10-06 | Kielce      | 5                  | 7                  | 12        
+2757   | Joanna     | Kozłowska     | F   | 1726-03-02 | Łódź        | 1796-02-19 | Wisła       | 5                  | 7                  | 12        
+3107   | Leon       | Jankowski     | M   | 1745-03-03 | Posen       | 1814-09-02 | Stettin     | 4                  | 8                  | 12        
+3231   | Czesława   | Wojciechowska | F   | 1750-11-16 | Reszel      | 1817-01-10 | Wisła       | 4                  | 8                  | 12        

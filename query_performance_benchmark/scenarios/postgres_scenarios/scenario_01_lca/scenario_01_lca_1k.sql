@@ -9,11 +9,11 @@
 -- Orders the results by lca_id ascending.
 
 
--- RECOMMENDED PARAMETERS: Person A = 555, Person B = 539
+-- RECOMMENDED PARAMETERS: Person A = 582, Person B = 725
 
 WITH RECURSIVE
 anc_a(person_id, depth, visited) AS (
-    SELECT 555, 0, ARRAY[555]
+    SELECT 582, 0, ARRAY[582]
     UNION ALL
     SELECT parent_id, a.depth + 1, a.visited || parent_id
     FROM anc_a a
@@ -25,7 +25,7 @@ anc_a(person_id, depth, visited) AS (
     WHERE a.depth < 8 AND NOT (parent_id = ANY(a.visited))
 ),
 anc_b(person_id, depth, visited) AS (
-    SELECT 539, 0, ARRAY[539]
+    SELECT 725, 0, ARRAY[725]
     UNION ALL
     SELECT parent_id, b.depth + 1, b.visited || parent_id
     FROM anc_b b

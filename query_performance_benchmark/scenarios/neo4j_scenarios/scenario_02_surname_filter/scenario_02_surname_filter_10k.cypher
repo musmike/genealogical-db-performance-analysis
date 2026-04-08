@@ -7,11 +7,11 @@
 // Orders the results by birth_date ascending.
 
 
-// RECOMMENDED PARAMETERS: Surname = 'Adamczyk', Birth Year Range = 1701-1750
+// RECOMMENDED PARAMETERS: Surname = 'Zając', Birth Year Range = 1755-1804
 
 MATCH (n:Person)
-WHERE n.birthDate.year >= 1701 and n.birthDate.year <= 1750
-AND n.surname = 'Adamczyk'
+WHERE n.birthDate.year >= 1755 and n.birthDate.year <= 1804
+AND n.surname = 'Zając'
 RETURN 
 n.id as id,
 n.givenName as name,

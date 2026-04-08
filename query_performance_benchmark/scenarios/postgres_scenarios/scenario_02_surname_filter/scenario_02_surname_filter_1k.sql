@@ -7,7 +7,7 @@
 -- Orders the results by birth_date ascending.
 
 
--- RECOMMENDED PARAMETERS: Surname = 'Pawłowski', Birth Year Range = 1835-1884
+-- RECOMMENDED PARAMETERS: Surname = 'Michalski', Birth Year Range = 1814-1863
 
 SELECT
     p.id,
@@ -18,7 +18,7 @@ SELECT
     p.sex,
     p.death_date
 FROM people p
-WHERE p.surname = 'Pawłowski'
+WHERE p.surname = 'Michalski'
   AND p.birth_date IS NOT NULL
-  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1835 AND 1884
+  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1814 AND 1863
 ORDER BY p.birth_date;

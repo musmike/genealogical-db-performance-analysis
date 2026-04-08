@@ -5,7 +5,7 @@
 // as identified in expected_results/scenario_08_09_insert_delete.txt, to avoid FK/graph integrity complications.
 
 
-// RECOMMENDED PARAMETERS: Adopted Anchor Person ID = 109
+// RECOMMENDED PARAMETERS: Adopted Anchor Person ID = 113
 
 CREATE (:Person {id: 2001, givenName: 'Jan', surname: 'Kowalski', sex: 'M', isDeceased: true, birthDate: date('1722-06-15'), birthPlace: 'Kraków', deathDate: date('1787-11-02'), deathPlace: 'Kraków', causeOfDeath: 'Old age', burialPlace: 'Cemetery in Kraków', occupation: 'Farmer'});
 CREATE (:Person {id: 2002, givenName: 'Anna', surname: 'Kowalska', sex: 'F', isDeceased: true, birthDate: date('1725-03-22'), birthPlace: 'Kraków', deathDate: date('1795-01-10'), deathPlace: 'Kraków', causeOfDeath: 'Fever', burialPlace: 'Cemetery in Kraków', occupation: 'Weaver'});
@@ -15,7 +15,7 @@ CREATE (f:Family {id: 2001, status: 'MARRIED', marriageDate: date('1744-05-10'),
 CREATE (father)-[:HUSBAND_OF]->(f)
 CREATE (mother)-[:WIFE_OF]->(f);
 
-MATCH (f:Family {id: 2001}), (adopted:Person {id: 109})
+MATCH (f:Family {id: 2001}), (adopted:Person {id: 113})
 CREATE (f)-[:HAS_CHILD {relationshipType: 'BIOLOGICAL'}]->(adopted);
 
 CREATE (:Person {id: 2003, givenName: 'Piotr', surname: 'Kowalski', sex: 'M', isDeceased: true, birthDate: date('1755-09-01'), birthPlace: 'Kraków', deathDate: date('1785-04-12'), deathPlace: 'Kraków', causeOfDeath: 'Accident', burialPlace: 'Cemetery in Kraków', occupation: 'Blacksmith'});

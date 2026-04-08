@@ -1,79 +1,175 @@
 --- SCENARIO 02: SURNAME FILTER ---
-Recommended surname: Adamczyk
-Recommended birth year range: 1701-1750
+Recommended surname: Zając
+Recommended birth year range: 1755-1804
 
 
-Expected rows: 70
+Expected rows: 166
 
-person_id | given_name | surname  | sex | birth_date | birth_place     | death_date | death_place
--------------------------------------------------------------------------------------------------
-2628      | Marianna   | Adamczyk | F   | 1701-09-06 | Rzeszów         | 1797-07-13 | Krynica    
-2630      | Agnieszka  | Adamczyk | F   | 1701-09-09 | Bromberg        | 1773-09-04 | Białystok  
-2660      | Leon       | Adamczyk | M   | 1702-06-01 | Tykocin         | 1776-11-16 | Katowice   
-2653      | Alicja     | Adamczyk | F   | 1702-10-19 | Kraków          | 1764-11-02 | Zalipie    
-2671      | Urszula    | Adamczyk | F   | 1703-03-19 | Kraków          | 1755-04-28 | Biecz      
-2736      | Andrzej    | Adamczyk | M   | 1706-06-22 | Chochołów       | 1776-04-24 | Rzeszów    
-2768      | Regina     | Adamczyk | F   | 1707-11-13 | Łódź            | 1781-02-14 | Cieszyn    
-2803      | Grzegorz   | Adamczyk | M   | 1709-07-27 | Reszel          | 1777-08-19 | Białystok  
-2811      | Alicja     | Adamczyk | F   | 1710-10-22 | Sromowce        | 1768-11-25 | Supraśl    
-2827      | Leon       | Adamczyk | M   | 1711-04-06 | Chełmno         | 1768-04-12 | Bronowice  
-2852      | Stefania   | Adamczyk | F   | 1713-05-22 | Kraków          | 1765-12-11 | Gdynia     
-2849      | Maciej     | Adamczyk | M   | 1713-10-19 | Tykocin         | 1792-10-23 | Krynica    
-2864      | Teresa     | Adamczyk | F   | 1714-04-10 | Cieszyn         | 1785-02-21 | Tykocin    
-2930      | Irena      | Adamczyk | F   | 1718-11-15 | Biecz           | 1775-07-20 | Breslau    
-2945      | Ryszard    | Adamczyk | M   | 1719-05-22 | Kraków          | 1770-05-01 | Gdynia     
-2960      | Natalia    | Adamczyk | F   | 1720-06-15 | Sromowce        | 1792-05-19 | Sanok      
-2956      | Grzegorz   | Adamczyk | M   | 1720-09-13 | Reszel          | 1747-01-21 | Lublin     
-2977      | Zofia      | Adamczyk | F   | 1721-06-15 | Sanok           | 1726-05-07 | Cieszyn    
-2972      | Maciej     | Adamczyk | M   | 1721-10-02 | Złoty Potok     | 1784-07-20 | Lipce      
-2992      | Maja       | Adamczyk | F   | 1722-04-02 | Warszawa        | 1776-09-05 | Wisła      
-3004      | Wiesław    | Adamczyk | M   | 1722-10-18 | Posen           | 1764-04-11 | Sromowce   
-3018      | Mirosław   | Adamczyk | M   | 1723-07-26 | Zwierzyniec     | 1775-10-14 | Lipce      
-3030      | Leokadia   | Adamczyk | F   | 1723-11-16 | Katowice        | 1789-04-25 | Chełmno    
-3034      | Urszula    | Adamczyk | F   | 1724-03-10 | Biecz           | 1781-11-09 | Cieszyn    
-3037      | Zofia      | Adamczyk | F   | 1724-03-10 | Breslau         | 1729-11-26 | Chochołów  
-3040      | Marian     | Adamczyk | M   | 1724-12-14 | Posen           | 1796-01-19 | Bronowice  
-3070      | Paweł      | Adamczyk | M   | 1725-01-07 | Warszawa        | 1726-05-06 | Łódź       
-3073      | Władysław  | Adamczyk | M   | 1726-05-05 | Pszczyna        | 1776-04-26 | Thorn      
-3076      | Henryk     | Adamczyk | M   | 1726-07-03 | Częstochowa     | 1728-06-06 | Biecz      
-3090      | Wiktoria   | Adamczyk | F   | 1727-12-04 | Kazimierz Dolny | 1729-04-11 | Stettin    
-3101      | Grzegorz   | Adamczyk | M   | 1728-05-03 | Warszawa        | 1781-07-01 | Tykocin    
-3125      | Michał     | Adamczyk | M   | 1729-01-18 | Stettin         | 1779-02-11 | Krynica    
-3130      | Krzysztof  | Adamczyk | M   | 1729-05-02 | Kraków          | 1788-09-02 | Chełmno    
-3120      | Andrzej    | Adamczyk | M   | 1729-09-27 | Chełmno         | 1802-01-19 | Olsztyn    
-3148      | Genowefa   | Adamczyk | F   | 1730-05-13 | Rzeszów         | 1809-09-19 | Częstochowa
-3152      | Grażyna    | Adamczyk | F   | 1730-06-09 | Stettin         | 1774-05-05 | Sanok      
-3151      | Filip      | Adamczyk | M   | 1730-09-07 | Pszczyna        | 1808-02-12 | Bromberg   
-3165      | Urszula    | Adamczyk | F   | 1731-02-23 | Supraśl         | 1799-10-13 | Gdynia     
-3166      | Alicja     | Adamczyk | F   | 1731-07-11 | Biecz           | 1778-07-15 | Zwierzyniec
-3155      | Ewa        | Adamczyk | F   | 1731-07-16 | Breslau         | 1796-10-05 | Stettin    
-3171      | Władysław  | Adamczyk | M   | 1732-04-19 | Olsztyn         | 1811-05-19 | Lipce      
-3185      | Mateusz    | Adamczyk | M   | 1732-04-21 | Sanok           | 1789-11-11 | Radom      
-3172      | Irena      | Adamczyk | F   | 1732-04-26 | Gliwice         | 1814-08-24 | Danzig     
-3208      | Zygmunt    | Adamczyk | M   | 1733-04-11 | Radom           | 1738-02-02 | Lublin     
-3216      | Helena     | Adamczyk | F   | 1734-01-10 | Danzig          | 1809-12-24 | Wisła      
-3213      | Barbara    | Adamczyk | F   | 1734-02-15 | Warszawa        | 1790-09-17 | Rzeszów    
-3239      | Halina     | Adamczyk | F   | 1736-12-17 | Kielce          | 1777-05-04 | Zalipie    
-3270      | Katarzyna  | Adamczyk | F   | 1737-09-04 | Lipce           | 1792-08-06 | Cieszyn    
-3267      | Rozalia    | Adamczyk | F   | 1737-11-20 | Sromowce        | 1824-11-02 | Katowice   
-3290      | Irena      | Adamczyk | F   | 1738-08-15 | Kraków          | 1816-11-16 | Białystok  
-3314      | Genowefa   | Adamczyk | F   | 1740-01-02 | Wisła           | 1744-07-05 | Sosnowiec  
-3330      | Michał     | Adamczyk | M   | 1741-10-12 | Thorn           | 1790-01-01 | Rzeszów    
-3332      | Czesław    | Adamczyk | M   | 1741-12-01 | Thorn           | 1815-03-18 | Cieszyn    
-3351      | Julian     | Adamczyk | M   | 1742-03-10 | Chochołów       | 1814-04-27 | Zalipie    
-3366      | Maria      | Adamczyk | F   | 1743-02-13 | Gdynia          | 1748-04-24 | Reszel     
-3396      | Katarzyna  | Adamczyk | F   | 1745-04-18 | Gdynia          | 1803-04-22 | Sandomierz 
-3398      | Szymon     | Adamczyk | M   | 1745-05-08 | Gdynia          | 1798-05-02 | Tykocin    
-3399      | Aleksandra | Adamczyk | F   | 1745-06-05 | Białystok       | 1818-06-09 | Thorn      
-3412      | Dariusz    | Adamczyk | M   | 1746-10-12 | Biecz           | 1799-04-15 | Bronowice  
-3430      | Józefa     | Adamczyk | F   | 1747-04-22 | Zwierzyniec     | 1830-07-01 | Radom      
-3449      | Oliwia     | Adamczyk | F   | 1748-05-27 | Łódź            | 1793-05-13 | Gliwice    
-3459      | Łukasz     | Adamczyk | M   | 1748-06-26 | Biecz           | 1804-08-18 | Kraków     
-3451      | Kamil      | Adamczyk | M   | 1748-10-28 | Lanckorona      | 1776-07-21 | Gdynia     
-3466      | Tadeusz    | Adamczyk | M   | 1748-12-10 | Łódź            | 1811-10-07 | Lipce      
-3478      | Ignacy     | Adamczyk | M   | 1749-09-11 | Wisła           | 1808-08-19 | Bromberg   
-3485      | Anna       | Adamczyk | F   | 1749-11-16 | Tykocin         | 1804-09-25 | Kielce     
-3479      | Urszula    | Adamczyk | F   | 1749-11-19 | Pszczyna        | 1798-09-10 | Radom      
-3506      | Maja       | Adamczyk | F   | 1750-01-09 | Stettin         | 1781-11-10 | Cieszyn    
-3494      | Ludwika    | Adamczyk | F   | 1750-06-20 | Sandomierz      | 1785-03-01 | Złoty Potok
-3512      | Julian     | Adamczyk | M   | 1750-07-08 | Katowice        | 1752-03-16 | Łódź       
+person_id | given_name | surname | sex | birth_date | birth_place     | death_date | death_place    
+----------------------------------------------------------------------------------------------------
+3317      | Kamil      | Zając   | M   | 1755-09-15 | Tykocin         | 1813-01-17 | Lipce          
+3316      | Stefan     | Zając   | M   | 1755-10-28 | Danzig          | 1806-08-25 | Lipce          
+3333      | Andrzej    | Zając   | M   | 1756-08-21 | Zalipie         | 1822-03-26 | Kraków         
+3338      | Joanna     | Zając   | F   | 1756-11-06 | Sandomierz      | 1815-02-06 | Sandomierz     
+3351      | Stefan     | Zając   | M   | 1757-01-23 | Tykocin         | 1765-09-18 | Białystok      
+3363      | Maja       | Zając   | F   | 1757-02-12 | Sromowce        | 1817-10-09 | Sanok          
+3352      | Grzegorz   | Zając   | M   | 1757-03-13 | Lanckorona      | 1806-05-08 | Breslau        
+3361      | Marian     | Zając   | M   | 1757-12-01 | Bronowice       | 1817-08-14 | Biecz          
+3366      | Urszula    | Zając   | F   | 1758-08-01 | Bronowice       | 1790-10-13 | Pszczyna       
+3387      | Stefan     | Zając   | M   | 1759-05-08 | Częstochowa     | 1817-05-20 | Thorn          
+3401      | Łukasz     | Zając   | M   | 1759-09-10 | Breslau         | 1818-11-01 | Sanok          
+3407      | Dariusz    | Zając   | M   | 1760-07-06 | Lipce           | 1823-11-10 | Lublin         
+3415      | Elżbieta   | Zając   | F   | 1760-07-06 | Sromowce        | 1843-09-20 | Chochołów      
+3424      | Agnieszka  | Zając   | F   | 1761-08-12 | Supraśl         | 1765-12-10 | Częstochowa    
+3442      | Czesław    | Zając   | M   | 1762-05-05 | Chochołów       | 1795-08-09 | Częstochowa    
+3456      | Czesława   | Zając   | F   | 1763-06-01 | Danzig          | 1847-08-10 | Zalipie        
+3455      | Czesław    | Zając   | M   | 1763-11-02 | Białystok       | 1851-02-16 | Warszawa       
+3483      | Czesław    | Zając   | M   | 1764-05-24 | Kazimierz Dolny | 1828-07-13 | Sosnowiec      
+3484      | Elżbieta   | Zając   | F   | 1764-08-03 | Sandomierz      | 1821-02-27 | Sosnowiec      
+3525      | Marian     | Zając   | M   | 1766-03-05 | Częstochowa     | 1837-09-25 | Chochołów      
+3514      | Maja       | Zając   | F   | 1766-06-16 | Bromberg        | 1835-09-17 | Gdynia         
+3517      | Krzysztof  | Zając   | M   | 1766-09-23 | Lanckorona      | 1830-01-20 | Krynica        
+3560      | Jadwiga    | Zając   | F   | 1768-02-25 | Chochołów       | 1828-05-16 | Bromberg       
+3549      | Julian     | Zając   | M   | 1768-05-14 | Lanckorona      | 1837-02-11 | Sandomierz     
+3579      | Mateusz    | Zając   | M   | 1769-05-11 | Białystok       | 1827-05-22 | Chełmno        
+3576      | Filip      | Zając   | M   | 1769-07-20 | Tykocin         | 1835-10-13 | Sosnowiec      
+3577      | Maciej     | Zając   | M   | 1769-09-19 | Thorn           | 1828-06-14 | Chełmno        
+3599      | Antoni     | Zając   | M   | 1770-03-09 | Wisła           | 1844-06-15 | Tykocin        
+3586      | Paweł      | Zając   | M   | 1770-05-05 | Cieszyn         | 1843-06-06 | Biecz          
+3603      | Oliwia     | Zając   | F   | 1770-09-20 | Łódź            | 1856-04-11 | Sosnowiec      
+3608      | Oliwia     | Zając   | F   | 1771-04-14 | Złoty Potok     | 1830-07-01 | Gdynia         
+3612      | Jadwiga    | Zając   | F   | 1771-05-08 | Kraków          | 1829-10-09 | Lipce          
+3605      | Stefania   | Zając   | F   | 1771-07-26 | Biecz           | 1819-02-19 | Pszczyna       
+3623      | Anna       | Zając   | F   | 1771-09-21 | Kielce          | 1837-03-23 | Rzeszów        
+3625      | Mateusz    | Zając   | M   | 1771-11-23 | Złoty Potok     | 1834-05-24 | Supraśl        
+3611      | Zuzanna    | Zając   | F   | 1771-12-06 | Breslau         | 1831-01-18 | Chełmno        
+3622      | Bożena     | Zając   | F   | 1771-12-10 | Supraśl         | 1851-02-22 | Gliwice        
+3639      | Tomasz     | Zając   | M   | 1772-10-26 | Radom           | 1777-08-14 | Bromberg       
+3635      | Michał     | Zając   | M   | 1772-11-21 | Olsztyn         | 1849-11-12 | Białystok      
+3632      | Katarzyna  | Zając   | F   | 1772-11-26 | Sromowce        | 1857-11-07 | Kazimierz Dolny
+3651      | Grażyna    | Zając   | F   | 1773-04-17 | Sanok           | 1837-01-07 | Sosnowiec      
+3648      | Marianna   | Zając   | F   | 1773-08-14 | Lublin          | 1842-11-28 | Sosnowiec      
+3659      | Oliwia     | Zając   | F   | 1773-08-20 | Thorn           | 1821-02-10 | Złoty Potok    
+3662      | Maja       | Zając   | F   | 1773-09-13 | Łódź            | 1774-04-14 | Lublin         
+3676      | Barbara    | Zając   | F   | 1774-01-02 | Sosnowiec       | 1834-07-17 | Bronowice      
+3667      | Czesław    | Zając   | M   | 1774-04-01 | Lipce           | 1853-10-25 | Częstochowa    
+3669      | Barbara    | Zając   | F   | 1774-06-14 | Lanckorona      | 1832-04-11 | Łódź           
+3698      | Stefan     | Zając   | M   | 1775-01-25 | Radom           | 1843-11-17 | Zwierzyniec    
+3700      | Czesława   | Zając   | F   | 1775-02-04 | Danzig          | 1852-03-02 | Thorn          
+3691      | Dariusz    | Zając   | M   | 1775-09-13 | Kraków          | 1857-09-14 | Sromowce       
+3697      | Genowefa   | Zając   | F   | 1775-12-04 | Częstochowa     | 1836-09-19 | Posen          
+3708      | Agnieszka  | Zając   | F   | 1776-02-26 | Warszawa        | 1835-07-05 | Złoty Potok    
+3714      | Stefan     | Zając   | M   | 1776-03-09 | Wisła           | 1844-07-10 | Białystok      
+3718      | Monika     | Zając   | F   | 1776-07-03 | Lanckorona      | 1864-12-05 | Lipce          
+3719      | Zofia      | Zając   | F   | 1776-12-04 | Reszel          | 1860-03-12 | Reszel         
+3727      | Michał     | Zając   | M   | 1777-09-13 | Krynica         | 1861-06-18 | Cieszyn        
+3732      | Zuzanna    | Zając   | F   | 1777-11-27 | Thorn           | 1841-05-16 | Lanckorona     
+3734      | Leokadia   | Zając   | F   | 1777-12-10 | Posen           | 1853-10-09 | Kraków         
+3773      | Irena      | Zając   | F   | 1778-06-01 | Łódź            | 1865-11-17 | Wisła          
+3759      | Kamil      | Zając   | M   | 1778-12-05 | Złoty Potok     | 1838-12-15 | Katowice       
+3771      | Irena      | Zając   | F   | 1778-12-16 | Sromowce        | 1780-08-19 | Lublin         
+3758      | Adam       | Zając   | M   | 1778-12-26 | Zalipie         | 1822-02-10 | Lipce          
+3780      | Grzegorz   | Zając   | M   | 1779-04-05 | Zalipie         | 1821-09-07 | Lanckorona     
+3790      | Maja       | Zając   | F   | 1779-04-07 | Rzeszów         | 1831-01-01 | Posen          
+3811      | Grażyna    | Zając   | F   | 1780-06-22 | Danzig          | 1854-11-22 | Łódź           
+3830      | Józef      | Zając   | M   | 1781-06-19 | Sromowce        | 1842-04-13 | Danzig         
+3838      | Dariusz    | Zając   | M   | 1781-06-27 | Kraków          | 1833-05-27 | Cieszyn        
+3822      | Katarzyna  | Zając   | F   | 1781-10-25 | Łódź            | 1823-02-02 | Supraśl        
+3857      | Michał     | Zając   | M   | 1782-03-02 | Bronowice       | 1841-06-18 | Lanckorona     
+3854      | Alicja     | Zając   | F   | 1782-03-12 | Kazimierz Dolny | 1835-06-03 | Posen          
+3868      | Stefania   | Zając   | F   | 1782-06-23 | Tykocin         | 1869-12-27 | Supraśl        
+3862      | Adam       | Zając   | M   | 1782-06-25 | Lanckorona      | 1880-06-21 | Sosnowiec      
+3853      | Rozalia    | Zając   | F   | 1782-07-01 | Sromowce        | 1862-01-25 | Częstochowa    
+3869      | Stefan     | Zając   | M   | 1782-12-19 | Rzeszów         | 1836-11-27 | Gliwice        
+3894      | Oliwia     | Zając   | F   | 1783-04-04 | Gdynia          | 1864-03-24 | Złoty Potok    
+3886      | Maja       | Zając   | F   | 1783-05-19 | Zalipie         | 1856-03-10 | Danzig         
+3890      | Julia      | Zając   | F   | 1783-06-08 | Danzig          | 1844-07-09 | Kraków         
+3901      | Piotr      | Zając   | M   | 1783-07-28 | Olsztyn         | 1851-08-19 | Breslau        
+3879      | Zygmunt    | Zając   | M   | 1783-11-03 | Tykocin         | 1804-01-16 | Gdynia         
+3898      | Władysław  | Zając   | M   | 1783-12-07 | Biecz           | 1872-06-18 | Złoty Potok    
+3903      | Regina     | Zając   | F   | 1784-06-18 | Bromberg        | 1868-07-24 | Chełmno        
+3904      | Marek      | Zając   | M   | 1784-09-15 | Chełmno         | 1839-03-25 | Radom          
+3929      | Ignacy     | Zając   | M   | 1785-01-19 | Rzeszów         | 1878-06-14 | Warszawa       
+3934      | Ignacy     | Zając   | M   | 1785-02-06 | Thorn           | 1858-11-28 | Łódź           
+3952      | Szymon     | Zając   | M   | 1785-09-15 | Krynica         | 1857-04-10 | Sandomierz     
+3938      | Alicja     | Zając   | F   | 1785-10-20 | Rzeszów         | 1850-08-22 | Radom          
+3949      | Stanisław  | Zając   | M   | 1785-10-26 | Biecz           | 1873-02-03 | Danzig         
+3955      | Paweł      | Zając   | M   | 1786-02-13 | Sromowce        | 1848-09-08 | Kraków         
+3960      | Łukasz     | Zając   | M   | 1786-10-08 | Sandomierz      | 1788-05-05 | Wisła          
+3968      | Krystyna   | Zając   | F   | 1786-12-20 | Rzeszów         | 1863-07-28 | Supraśl        
+3973      | Alicja     | Zając   | F   | 1787-02-21 | Biecz           | 1788-09-06 | Łódź           
+3987      | Halina     | Zając   | F   | 1787-05-22 | Wisła           | 1871-05-20 | Bromberg       
+3991      | Julia      | Zając   | F   | 1787-11-13 | Częstochowa     | 1867-07-02 | Sandomierz     
+4022      | Leokadia   | Zając   | F   | 1788-03-07 | Złoty Potok     | 1852-02-27 | Gdynia         
+4012      | Katarzyna  | Zając   | F   | 1788-04-20 | Gliwice         | 1878-10-12 | Zwierzyniec    
+4004      | Ignacy     | Zając   | M   | 1788-07-02 | Chełmno         | 1793-03-09 | Thorn          
+4059      | Jan        | Zając   | M   | 1790-01-12 | Thorn           | 1864-09-06 | Krynica        
+4066      | Ewa        | Zając   | F   | 1790-06-27 | Biecz           | 1793-04-26 | Sandomierz     
+4045      | Katarzyna  | Zając   | F   | 1790-09-05 | Warszawa        | 1854-03-22 | Łódź           
+4067      | Rozalia    | Zając   | F   | 1790-12-22 | Olsztyn         | 1845-10-10 | Radom          
+4095      | Rozalia    | Zając   | F   | 1792-03-10 | Stettin         | 1849-10-14 | Krynica        
+4107      | Natalia    | Zając   | F   | 1792-06-16 | Gliwice         | 1850-12-14 | Olsztyn        
+4109      | Leokadia   | Zając   | F   | 1792-06-19 | Zwierzyniec     | 1833-01-13 | Częstochowa    
+4110      | Zofia      | Zając   | F   | 1792-07-20 | Lipce           | 1859-12-22 | Gdynia         
+4103      | Rozalia    | Zając   | F   | 1792-10-17 | Kazimierz Dolny | 1846-02-21 | Pszczyna       
+4115      | Barbara    | Zając   | F   | 1793-01-10 | Pszczyna        | 1840-07-15 | Reszel         
+4151      | Mateusz    | Zając   | M   | 1794-01-23 | Lublin          | 1846-01-27 | Lublin         
+4144      | Adam       | Zając   | M   | 1794-06-02 | Stettin         | 1874-09-15 | Kielce         
+4141      | Ryszard    | Zając   | M   | 1794-06-15 | Breslau         | 1799-05-25 | Tykocin        
+4158      | Bożena     | Zając   | F   | 1794-06-17 | Gliwice         | 1865-08-21 | Sanok          
+4147      | Elżbieta   | Zając   | F   | 1794-08-15 | Rzeszów         | 1832-09-06 | Cieszyn        
+4179      | Genowefa   | Zając   | F   | 1795-01-22 | Radom           | 1857-09-06 | Olsztyn        
+4175      | Paweł      | Zając   | M   | 1795-02-01 | Cieszyn         | 1872-05-26 | Sromowce       
+4170      | Agnieszka  | Zając   | F   | 1795-02-21 | Reszel          | 1798-04-25 | Warszawa       
+4164      | Danuta     | Zając   | F   | 1795-04-26 | Danzig          | 1868-12-02 | Chełmno        
+4162      | Andrzej    | Zając   | M   | 1795-06-28 | Supraśl         | 1873-04-13 | Białystok      
+4181      | Jerzy      | Zając   | M   | 1795-07-13 | Olsztyn         | 1852-10-19 | Stettin        
+4198      | Wiktoria   | Zając   | F   | 1796-07-04 | Breslau         | 1877-10-08 | Wisła          
+4189      | Czesława   | Zając   | F   | 1796-12-14 | Cieszyn         | 1823-02-10 | Częstochowa    
+4217      | Krystyna   | Zając   | F   | 1797-05-21 | Lipce           | 1886-11-18 | Sosnowiec      
+4227      | Zygmunt    | Zając   | M   | 1797-07-04 | Zalipie         | 1873-07-13 | Chełmno        
+4222      | Katarzyna  | Zając   | F   | 1797-07-11 | Supraśl         | 1864-07-24 | Cieszyn        
+4230      | Alicja     | Zając   | F   | 1797-09-14 | Lipce           | 1858-07-25 | Gliwice        
+4209      | Maja       | Zając   | F   | 1797-10-20 | Pszczyna        | 1874-02-27 | Chochołów      
+4220      | Natalia    | Zając   | F   | 1797-12-19 | Warszawa        | 1867-11-14 | Gliwice        
+4243      | Leokadia   | Zając   | F   | 1798-02-05 | Warszawa        | 1865-04-15 | Cieszyn        
+4240      | Marek      | Zając   | M   | 1798-06-12 | Wisła           | 1850-04-25 | Sosnowiec      
+4249      | Henryk     | Zając   | M   | 1798-07-12 | Kazimierz Dolny | 1844-02-15 | Zalipie        
+4252      | Michał     | Zając   | M   | 1798-09-15 | Katowice        | 1869-05-19 | Katowice       
+4242      | Jerzy      | Zając   | M   | 1798-11-01 | Częstochowa     | 1870-06-21 | Białystok      
+4260      | Oliwia     | Zając   | F   | 1799-03-23 | Katowice        | 1886-11-16 | Kielce         
+4267      | Zygmunt    | Zając   | M   | 1799-04-22 | Danzig          | 1846-07-08 | Chełmno        
+4280      | Oliwia     | Zając   | F   | 1799-06-07 | Radom           | 1885-04-28 | Sandomierz     
+4274      | Agnieszka  | Zając   | F   | 1799-06-08 | Gdynia          | 1803-06-12 | Katowice       
+4256      | Irena      | Zając   | F   | 1799-09-11 | Danzig          | 1892-09-18 | Posen          
+4269      | Jadwiga    | Zając   | F   | 1799-12-05 | Cieszyn         | 1801-01-22 | Sosnowiec      
+4297      | Rozalia    | Zając   | F   | 1800-02-11 | Zwierzyniec     | 1880-12-06 | Posen          
+4284      | Alicja     | Zając   | F   | 1800-03-04 | Katowice        | 1808-06-18 | Cieszyn        
+4286      | Wanda      | Zając   | F   | 1800-04-08 | Sosnowiec       | 1804-04-09 | Kazimierz Dolny
+4303      | Helena     | Zając   | F   | 1800-06-10 | Kazimierz Dolny | 1805-02-16 | Breslau        
+4326      | Natalia    | Zając   | F   | 1801-01-12 | Lanckorona      | 1860-09-19 | Katowice       
+4327      | Jerzy      | Zając   | M   | 1801-01-28 | Olsztyn         | 1826-08-12 | Pszczyna       
+4318      | Henryk     | Zając   | M   | 1801-02-26 | Breslau         | 1857-05-03 | Warszawa       
+4315      | Antoni     | Zając   | M   | 1801-04-01 | Białystok       | 1855-01-23 | Thorn          
+4308      | Maja       | Zając   | F   | 1801-06-12 | Złoty Potok     | 1806-02-21 | Lanckorona     
+4304      | Marianna   | Zając   | F   | 1801-08-01 | Warszawa        | 1880-11-14 | Sanok          
+4324      | Józefa     | Zając   | F   | 1801-10-04 | Posen           | 1852-12-08 | Lublin         
+4332      | Oliwia     | Zając   | F   | 1801-12-15 | Złoty Potok     | 1851-04-07 | Lanckorona     
+4335      | Marian     | Zając   | M   | 1802-02-08 | Chełmno         | 1892-02-15 | Tykocin        
+4340      | Krystyna   | Zając   | F   | 1802-03-18 | Danzig          | 1850-05-07 | Lanckorona     
+4353      | Ewa        | Zając   | F   | 1802-08-19 | Danzig          | 1891-10-05 | Reszel         
+4360      | Kazimiera  | Zając   | F   | 1802-09-24 | Częstochowa     | 1881-07-11 | Częstochowa    
+4337      | Józef      | Zając   | M   | 1802-12-09 | Złoty Potok     | 1881-09-10 | Zwierzyniec    
+4350      | Adam       | Zając   | M   | 1802-12-09 | Gdynia          | 1880-07-21 | Sandomierz     
+4367      | Ewa        | Zając   | F   | 1803-01-15 | Reszel          | 1860-02-26 | Bromberg       
+4373      | Łukasz     | Zając   | M   | 1803-05-19 | Breslau         | 1806-11-27 | Kazimierz Dolny
+4372      | Zuzanna    | Zając   | F   | 1803-10-07 | Sandomierz      | 1804-08-27 | Krynica        
+4380      | Łukasz     | Zając   | M   | 1803-12-14 | Tykocin         | 1865-04-05 | Gliwice        
+4411      | Stefania   | Zając   | F   | 1804-02-11 | Lublin          | 1861-01-09 | Katowice       
+4409      | Szymon     | Zając   | M   | 1804-04-03 | Radom           | 1865-11-20 | Bronowice      
+4396      | Józefa     | Zając   | F   | 1804-04-26 | Radom           | 1867-07-17 | Bromberg       
+4390      | Wojciech   | Zając   | M   | 1804-05-16 | Białystok       | 1892-08-22 | Breslau        
+4386      | Kazimiera  | Zając   | F   | 1804-05-21 | Rzeszów         | 1846-11-09 | Biecz          
+4402      | Jan        | Zając   | M   | 1804-06-27 | Thorn           | 1806-08-11 | Lublin         
+4393      | Stanisław  | Zając   | M   | 1804-07-14 | Lipce           | 1870-09-10 | Lanckorona     
+4399      | Marian     | Zając   | M   | 1804-12-18 | Thorn           | 1858-03-19 | Gliwice        

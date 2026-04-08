@@ -2,10 +2,10 @@
 Benchmark: Insert two biological parents and one sibling for an existing adopted person, then delete them.
 
 Target Person (Adopted child anchor):
-  - ID: 267
-  - Name: Krzysztof Adamczyk
+  - ID: 222
+  - Name: Małgorzata Wróbel
   - Birth year: 1501
-  - Adopting Family ID: 60
+  - Adopting Family ID: 76
 This person has no biological parents in the dataset, making it safe to INSERT new ones.
 
 [RECORDS TO BE INSERTED / DELETED]
@@ -20,6 +20,6 @@ Family entity to insert (Columns: id, status, marriage_date, marriage_place, hus
 Relationships to establish:
   - Father (ID 20001) is husband of Family (ID 20001)
   - Mother (ID 20002) is wife of Family (ID 20001)
-  - Biological parent-child link between Family (ID 20001) and the anchor child (ID 267)
+  - Biological parent-child link between Family (ID 20001) and the anchor child (ID 222)
   - Biological parent-child link between Family (ID 20001) and the new sibling (ID 20003)
 

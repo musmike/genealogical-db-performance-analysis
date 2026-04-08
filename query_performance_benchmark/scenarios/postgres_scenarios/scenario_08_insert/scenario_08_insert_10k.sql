@@ -5,7 +5,7 @@
 -- as identified in expected_results/scenario_08_09_insert_delete.txt, to avoid FK/graph integrity complications.
 
 
--- RECOMMENDED PARAMETERS: Adopted Anchor Person ID = 267
+-- RECOMMENDED PARAMETERS: Adopted Anchor Person ID = 222
 
 INSERT INTO people (id, given_name, surname, sex, is_deceased, birth_date, birth_place, death_date, death_place, cause_of_death, burial_place, occupation)
 VALUES
@@ -17,7 +17,7 @@ VALUES (20001, 'MARRIED', '1493-05-10', 'Kraków', 20001, 20002);
 
 -- ANCHOR
 INSERT INTO family_children (family_id, child_id, relationship_type)
-VALUES (20001, 267, 'BIOLOGICAL');
+VALUES (20001, 222, 'BIOLOGICAL');
 
 INSERT INTO people (id, given_name, surname, sex, is_deceased, birth_date, birth_place, death_date, death_place, cause_of_death, burial_place, occupation)
 VALUES (20003, 'Piotr', 'Kowalski', 'M', true, '1504-09-01', 'Kraków', '1534-04-12', 'Kraków', 'Accident', 'Cemetery in Kraków', 'Blacksmith');

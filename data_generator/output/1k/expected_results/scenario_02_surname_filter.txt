@@ -1,52 +1,32 @@
 --- SCENARIO 02: SURNAME FILTER ---
-Recommended surname: Pawłowski
-Recommended birth year range: 1835-1884
+Recommended surname: Michalski
+Recommended birth year range: 1814-1863
 
 
-Expected rows: 43
+Expected rows: 23
 
-person_id | given_name | surname   | sex | birth_date | birth_place | death_date | death_place    
---------------------------------------------------------------------------------------------------
-390       | Wojciech   | Pawłowski | M   | 1835-01-19 | Olsztyn     | 1895-06-01 | Biecz          
-401       | Jan        | Pawłowski | M   | 1836-08-05 | Lipce       | 1890-12-21 | Tykocin        
-409       | Paweł      | Pawłowski | M   | 1837-03-14 | Sosnowiec   | 1905-07-06 | Chełmno        
-411       | Ignacy     | Pawłowski | M   | 1838-01-25 | Łódź        | 1920-02-13 | Złoty Potok    
-417       | Ryszard    | Pawłowski | M   | 1838-08-11 | Białystok   | 1930-08-15 | Bronowice      
-421       | Jan        | Pawłowski | M   | 1839-03-12 | Lublin      | 1903-12-17 | Kazimierz Dolny
-418       | Zygmunt    | Pawłowski | M   | 1839-03-22 | Sosnowiec   | 1899-05-25 | Chochołów      
-423       | Marian     | Pawłowski | M   | 1839-09-05 | Radom       | 1923-11-09 | Częstochowa    
-424       | Bartosz    | Pawłowski | M   | 1840-02-02 | Pszczyna    | 1907-08-23 | Złoty Potok    
-430       | Tadeusz    | Pawłowski | M   | 1840-05-12 | Bronowice   | 1907-06-02 | Lanckorona     
-428       | Kamil      | Pawłowski | M   | 1840-10-24 | Gdynia      | 1922-09-27 | Warszawa       
-438       | Piotr      | Pawłowski | M   | 1841-07-15 | Bromberg    | 1918-12-12 | Chochołów      
-439       | Łukasz     | Pawłowski | M   | 1841-10-23 | Katowice    | 1896-03-05 | Tykocin        
-437       | Jerzy      | Pawłowski | M   | 1841-11-11 | Białystok   | 1902-12-08 | Pszczyna       
-441       | Jan        | Pawłowski | M   | 1841-12-01 | Thorn       | 1913-06-24 | Zwierzyniec    
-443       | Kamil      | Pawłowski | M   | 1842-03-02 | Tykocin     | 1914-11-25 | Posen          
-445       | Michał     | Pawłowski | M   | 1842-04-24 | Lipce       | 1914-01-25 | Katowice       
-444       | Marian     | Pawłowski | M   | 1842-04-28 | Sanok       | 1905-05-16 | Tykocin        
-446       | Łukasz     | Pawłowski | M   | 1842-08-10 | Wisła       | 1908-08-03 | Sanok          
-452       | Mateusz    | Pawłowski | M   | 1844-10-25 | Gliwice     | 1916-01-05 | Rzeszów        
-450       | Czesław    | Pawłowski | M   | 1844-11-10 | Biecz       | 1909-12-04 | Kazimierz Dolny
-454       | Marek      | Pawłowski | M   | 1845-08-27 | Chochołów   | 1915-09-06 | Breslau        
-457       | Marek      | Pawłowski | M   | 1847-09-07 | Olsztyn     | 1926-11-01 | Rzeszów        
-480       | Piotr      | Pawłowski | M   | 1854-06-13 | Gliwice     | 1903-09-20 | Cieszyn        
-491       | Jan        | Pawłowski | M   | 1856-02-07 | Wisła       | 1903-03-03 | Olsztyn        
-494       | Kamil      | Pawłowski | M   | 1857-11-19 | Chochołów   | 1943-04-12 | Złoty Potok    
-500       | Wojciech   | Pawłowski | M   | 1859-06-01 | Pszczyna    | 1941-05-26 | Biecz          
-524       | Władysław  | Pawłowski | M   | 1863-03-15 | Bromberg    | 1872-03-01 | Warszawa       
-535       | Tomasz     | Pawłowski | M   | 1864-03-03 | Krynica     | 1918-11-04 | Kraków         
-532       | Władysław  | Pawłowski | M   | 1864-03-27 | Bronowice   | 1918-02-07 | Sandomierz     
-541       | Jerzy      | Pawłowski | M   | 1866-01-05 | Gdynia      | 1939-02-07 | Sanok          
-545       | Marian     | Pawłowski | M   | 1867-07-19 | Lipce       | 1921-07-14 | Rzeszów        
-552       | Piotr      | Pawłowski | M   | 1869-12-16 | Tykocin     | 1945-04-10 | Sromowce       
-559       | Szymon     | Pawłowski | M   | 1871-04-20 | Biecz       | 1944-05-14 | Lipce          
-571       | Paweł      | Pawłowski | M   | 1874-05-10 | Radom       | 1882-07-24 | Zalipie        
-576       | Jan        | Pawłowski | M   | 1875-12-27 | Lipce       | 1946-01-02 | Białystok      
-580       | Jan        | Pawłowski | M   | 1876-03-27 | Złoty Potok | 1884-02-26 | Bronowice      
-584       | Kazimierz  | Pawłowski | M   | 1877-03-22 | Lanckorona  | 1931-07-08 | Sosnowiec      
-589       | Kazimierz  | Pawłowski | M   | 1878-09-06 | Posen       | 1949-12-04 | Lipce          
-599       | Stefan     | Pawłowski | M   | 1882-07-09 | Thorn       | 1931-01-04 | Pszczyna       
-606       | Tomasz     | Pawłowski | M   | 1883-06-05 | Bronowice   | 1935-08-21 | Sanok          
-607       | Czesław    | Pawłowski | M   | 1884-04-06 | Posen       | NULL       | NULL           
-609       | Antoni     | Pawłowski | M   | 1884-12-23 | Biecz       | 1955-11-19 | Kraków         
+person_id | given_name | surname   | sex | birth_date | birth_place | death_date | death_place
+----------------------------------------------------------------------------------------------
+370       | Ryszard    | Michalski | M   | 1814-01-23 | Zalipie     | 1904-05-28 | Rzeszów    
+371       | Grzegorz   | Michalski | M   | 1814-09-16 | Danzig      | 1878-10-21 | Częstochowa
+376       | Franciszek | Michalski | M   | 1814-12-23 | Łódź        | 1872-12-17 | Zalipie    
+388       | Julian     | Michalski | M   | 1817-09-22 | Stettin     | 1892-01-19 | Posen      
+389       | Tomasz     | Michalski | M   | 1818-09-27 | Olsztyn     | 1873-11-12 | Biecz      
+392       | Paweł      | Michalski | M   | 1819-02-12 | Tykocin     | 1888-02-04 | Sandomierz 
+397       | Ryszard    | Michalski | M   | 1820-12-12 | Danzig      | 1883-10-23 | Posen      
+401       | Jan        | Michalski | M   | 1821-01-01 | Pszczyna    | 1874-01-24 | Chochołów  
+402       | Andrzej    | Michalski | M   | 1821-10-01 | Tykocin     | 1873-07-18 | Cieszyn    
+431       | Antoni     | Michalski | M   | 1834-10-09 | Łódź        | 1876-09-21 | Stettin    
+438       | Julian     | Michalski | M   | 1835-10-20 | Sromowce    | 1904-02-15 | Reszel     
+448       | Bartosz    | Michalski | M   | 1837-04-09 | Częstochowa | 1883-09-13 | Sandomierz 
+454       | Jan        | Michalski | M   | 1838-01-16 | Pszczyna    | 1841-11-08 | Sandomierz 
+463       | Władysław  | Michalski | M   | 1840-04-02 | Łódź        | 1881-09-08 | Sandomierz 
+469       | Czesław    | Michalski | M   | 1840-08-05 | Wisła       | 1929-10-08 | Krynica    
+479       | Piotr      | Michalski | M   | 1842-10-05 | Breslau     | 1927-11-03 | Chełmno    
+487       | Szymon     | Michalski | M   | 1845-09-13 | Kraków      | 1914-10-18 | Krynica    
+502       | Mateusz    | Michalski | M   | 1850-02-09 | Cieszyn     | 1916-05-01 | Lanckorona 
+505       | Jakub      | Michalski | M   | 1851-01-28 | Gliwice     | 1879-05-05 | Posen      
+504       | Filip      | Michalski | M   | 1851-06-09 | Kraków      | 1939-12-22 | Sanok      
+512       | Wiesław    | Michalski | M   | 1855-07-05 | Chochołów   | 1924-03-01 | Krynica    
+537       | Grzegorz   | Michalski | M   | 1862-03-27 | Zwierzyniec | 1934-10-04 | Łódź       
+540       | Antoni     | Michalski | M   | 1863-02-09 | Lanckorona  | 1950-11-28 | Białystok  

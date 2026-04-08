@@ -4,13 +4,13 @@ Target LCA path length required: 8
 Constraint: Person A and Person B are not closely related AND
             biological distance to LCA > 3 for both sides.
 
-Recommended Person A (ID: 555)
-Recommended Person B (ID: 539)
+Recommended Person A (ID: 582)
+Recommended Person B (ID: 725)
 
 
 Expected rows: 2
 
-lca_id | given_name | surname   | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
---------------------------------------------------------------------------------------------------------------------------------------------------
-136    | Wiktoria   | Górska    | F   | 1753-01-03 | Radom       | 1814-04-08 | Thorn       | 4                  | 4                  | 8         
-158    | Mateusz    | Pawłowski | M   | 1755-01-22 | Rzeszów     | 1815-04-21 | Kraków      | 4                  | 4                  | 8         
+lca_id | given_name | surname     | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
+----------------------------------------------------------------------------------------------------------------------------------------------------
+105    | Teresa     | Lewandowska | F   | 1751-05-13 | Bromberg    | 1808-01-06 | Białystok   | 4                  | 4                  | 8         
+130    | Maciej     | Nowakowski  | M   | 1752-02-14 | Krynica     | 1808-05-13 | Chełmno     | 4                  | 4                  | 8         

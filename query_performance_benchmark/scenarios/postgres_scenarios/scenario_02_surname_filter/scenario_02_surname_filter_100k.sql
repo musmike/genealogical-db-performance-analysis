@@ -7,7 +7,7 @@
 -- Orders the results by birth_date ascending.
 
 
--- RECOMMENDED PARAMETERS: Surname = 'Stępień', Birth Year Range = 1574-1623
+-- RECOMMENDED PARAMETERS: Surname = 'Wróbel', Birth Year Range = 1646-1695
 
 SELECT
     p.id,
@@ -18,7 +18,7 @@ SELECT
     p.sex,
     p.death_date
 FROM people p
-WHERE p.surname = 'Stępień'
+WHERE p.surname = 'Wróbel'
   AND p.birth_date IS NOT NULL
-  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1574 AND 1623
+  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1646 AND 1695
 ORDER BY p.birth_date;

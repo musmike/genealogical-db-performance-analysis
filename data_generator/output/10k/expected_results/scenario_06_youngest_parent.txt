@@ -5,6 +5,6 @@ The youngest parent is determined by the exact age difference in days between th
 
 Expected rows: 1
 
-parent_id | given_name | surname   | sex | birth_date | birth_place | age_at_first_child | age_difference_in_days | child_id | child_birth_date | child_birth_place
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-9098      | Danuta     | Olszewska | F   | 1950-12-25 | Posen       | 16                 | 6012                   | 9858     | 1967-06-11       | Supraśl          
+parent_id | given_name | surname | sex | birth_date | birth_place | age_at_first_child | age_difference_in_days | child_id | child_birth_date | child_birth_place
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+6891      | Bożena     | Nowak   | F   | 1900-09-15 | Lublin      | 16                 | 5956                   | 7398     | 1917-01-05       | Bronowice        

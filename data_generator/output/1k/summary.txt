@@ -1,39 +1,40 @@
 === POPULATION AND GRAPH TOPOLOGY REPORT ===
 Target population: 1000
 Total people generated: 1000
-People alive at end of simulation (1959): 279
-Total families: 451
+People alive at end of simulation (1966): 250
+Total families: 446
 
 --- POPULATION GROWTH OVER TIME ---
-Year 1750: Alive 90 people. Total generated: 90
-Year 1775: Alive 161 people. Total generated: 189
-Year 1800: Alive 184 people. Total generated: 274
-Year 1825: Alive 193 people. Total generated: 361
-Year 1850: Alive 219 people. Total generated: 465
-Year 1875: Alive 241 people. Total generated: 576
-Year 1900: Alive 256 people. Total generated: 687
-Year 1925: Alive 256 people. Total generated: 801
-Year 1950: Alive 258 people. Total generated: 942
-Year 1959 (END): Alive 279 people. Total generated: 1000
+Year 1750: Alive 100 people. Total generated: 100
+Year 1775: Alive 174 people. Total generated: 202
+Year 1800: Alive 210 people. Total generated: 315
+Year 1825: Alive 212 people. Total generated: 411
+Year 1850: Alive 223 people. Total generated: 502
+Year 1875: Alive 223 people. Total generated: 600
+Year 1900: Alive 226 people. Total generated: 707
+Year 1925: Alive 244 people. Total generated: 815
+Year 1950: Alive 244 people. Total generated: 915
+Year 1966 (END): Alive 250 people. Total generated: 1000
 
 --- GRAPH TOPOLOGY & DEMOGRAPHICS ---
 Max graph depth (oldest root to youngest descendant): 10 generations
-Average depth of leaf nodes (endpoints): 6.53 generations
-Sex ratio: 512 Males / 488 Females
-Average lifespan (deceased individuals): 56.0 years
-Marriage rate: 72.1% of total population
-Total divorces: 6
-Families with children: 350
-Average children per fertile family: 2.60
-Largest family generated: 8 children
+Average depth of leaf nodes (endpoints): 6.34 generations
+Sex ratio: 528 Males / 472 Females
+Average lifespan (deceased individuals): 56.3 years
+Marriage rate: 73.3% of total population
+Total divorces: 2
+Families with children: 359
+Average children per fertile family: 2.51
+Largest family generated: 9 children
 Family distribution (children per family):
-  1 child(ren): 104 families
-  2 child(ren): 88 families
-  3 child(ren): 66 families
-  4 child(ren): 46 families
-  5 child(ren): 31 families
-  6 child(ren): 13 families
+  1 child(ren): 108 families
+  2 child(ren): 89 families
+  3 child(ren): 92 families
+  4 child(ren): 33 families
+  5 child(ren): 22 families
+  6 child(ren): 12 families
   7 child(ren): 1 families
   8 child(ren): 1 families
-Orphans (adopted/foster without biological links): 33 individuals
+  9 child(ren): 1 families
+Orphans (adopted/foster without biological links): 30 individuals
 

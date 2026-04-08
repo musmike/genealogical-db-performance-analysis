@@ -7,11 +7,11 @@
 // Orders the results by birth_date ascending.
 
 
-// RECOMMENDED PARAMETERS: Surname = 'Pawłowski', Birth Year Range = 1835-1884
+// RECOMMENDED PARAMETERS: Surname = 'Michalski', Birth Year Range = 1814-1863
 
 MATCH (n:Person)
-WHERE n.birthDate.year >= 1835 and n.birthDate.year <= 1884
-AND n.surname = 'Pawłowski'
+WHERE n.birthDate.year >= 1814 and n.birthDate.year <= 1863
+AND n.surname = 'Michalski'
 RETURN 
 n.id as id,
 n.givenName as name,
