@@ -2,20 +2,23 @@
 // Benchmarks inserting two biological parents and one sibling
 // for the selected person.
 // Uses an adopted individual with no biological parents as the anchor,
-// as identified in summary.txt, to avoid FK/graph integrity complications
+// as identified in expected_results/scenario_08_09_insert_delete.txt, to avoid FK/graph integrity complications.
 
-CREATE (:Person {id: 200001, givenName: 'Jan',  surname: 'Kowalski', sex: 'M', isDeceased: false, birthDate: date('0875-06-15'), birthPlace: 'Kraków'});
-CREATE (:Person {id: 200002, givenName: 'Anna', surname: 'Kowalska', sex: 'F', isDeceased: false, birthDate: date('0878-03-22'), birthPlace: 'Kraków'});
+
+// RECOMMENDED PARAMETERS: Adopted Anchor Person ID = 214
+
+CREATE (:Person {id: 200001, givenName: 'Jan', surname: 'Kowalski', sex: 'M', isDeceased: true, birthDate: date('0773-06-15'), birthPlace: 'Kraków', deathDate: date('0838-11-02'), deathPlace: 'Kraków', causeOfDeath: 'Old age', burialPlace: 'Cemetery in Kraków', occupation: 'Farmer'});
+CREATE (:Person {id: 200002, givenName: 'Anna', surname: 'Kowalska', sex: 'F', isDeceased: true, birthDate: date('0776-03-22'), birthPlace: 'Kraków', deathDate: date('0846-01-10'), deathPlace: 'Kraków', causeOfDeath: 'Fever', burialPlace: 'Cemetery in Kraków', occupation: 'Weaver'});
 
 MATCH (father:Person {id: 200001}), (mother:Person {id: 200002})
-CREATE (f:Family {id: 200001, status: 'MARRIED', marriageDate: date('0900-05-10'), marriagePlace: 'Kraków'})
+CREATE (f:Family {id: 200001, status: 'MARRIED', marriageDate: date('0795-05-10'), marriagePlace: 'Kraków'})
 CREATE (father)-[:HUSBAND_OF]->(f)
 CREATE (mother)-[:WIFE_OF]->(f);
 
-MATCH (f:Family {id: 200001}), (adopted:Person {id: 2105})
+MATCH (f:Family {id: 200001}), (adopted:Person {id: 214})
 CREATE (f)-[:HAS_CHILD {relationshipType: 'BIOLOGICAL'}]->(adopted);
 
-CREATE (:Person {id: 200003, givenName: 'Piotr', surname: 'Kowalski', sex: 'M', isDeceased: false, birthDate: date('0903-09-01'), birthPlace: 'Kraków'});
+CREATE (:Person {id: 200003, givenName: 'Piotr', surname: 'Kowalski', sex: 'M', isDeceased: true, birthDate: date('0806-09-01'), birthPlace: 'Kraków', deathDate: date('0836-04-12'), deathPlace: 'Kraków', causeOfDeath: 'Accident', burialPlace: 'Cemetery in Kraków', occupation: 'Blacksmith'});
 
 MATCH (f:Family {id: 200001}), (sibling:Person {id: 200003})
 CREATE (f)-[:HAS_CHILD {relationshipType: 'BIOLOGICAL'}]->(sibling);

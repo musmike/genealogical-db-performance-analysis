@@ -1,0 +1,21 @@
+--- SCENARIO 01: LOWEST COMMON ANCESTOR (LCA) ---
+Biological relationships only.
+Target LCA path length required: 16
+Constraint: Person A and Person B are not closely related AND
+            biological distance to LCA > 3 for both sides.
+
+Recommended Person A (ID: 95879)
+Recommended Person B (ID: 99031)
+
+
+Expected rows: 7
+
+lca_id | given_name | surname   | sex | birth_date | birth_place | death_date | death_place     | path_length_from_a | path_length_from_b | total_dist
+------------------------------------------------------------------------------------------------------------------------------------------------------
+35144  | Maciej     | Kowalczyk | M   | 1685-10-02 | Lanckorona  | 1773-06-26 | Kraków          | 9                  | 7                  | 16        
+36577  | Wojciech   | Kowalczyk | M   | 1696-12-28 | Lipce       | 1752-08-15 | Danzig          | 8                  | 8                  | 16        
+36762  | Wiktoria   | Kamińska  | F   | 1697-04-02 | Sandomierz  | 1762-07-26 | Krynica         | 9                  | 7                  | 16        
+37029  | Tomasz     | Zając     | M   | 1699-09-20 | Zwierzyniec | 1745-06-15 | Złoty Potok     | 9                  | 7                  | 16        
+38448  | Leokadia   | Mazur     | F   | 1710-05-05 | Pszczyna    | 1756-10-04 | Kazimierz Dolny | 8                  | 8                  | 16        
+42479  | Marian     | Kowalczyk | M   | 1738-11-03 | Katowice    | 1799-02-23 | Zalipie         | 8                  | 8                  | 16        
+42625  | Danuta     | Kowalczyk | F   | 1739-08-19 | Katowice    | 1809-12-20 | Chochołów       | 8                  | 8                  | 16        

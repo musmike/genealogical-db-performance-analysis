@@ -1,13 +1,16 @@
 // Scenario 04: Ancestor Retrieval (100k dataset)
 // Retrieves all distinct biological ancestors of a selected individual
 // up to a configured depth (15 generations in this case).
-// Uses the individual identified in summary.txt as having the most ancestors.
+// Uses the individual identified in expected_results/scenario_04_ancestors_100k.txt as having the most ancestors.
 // Should return the columns in the following order and with the following names:
 // ancestor_id, generation (the shortest path length from the starting individual), given_name, surname,
 // sex, birth_date, birth_place, death_date, death_place, burial_place, cause_of_death, father_id, mother_id.
 // Orders the results first by generation ascending, then by ancestor_id ascending within each generation.
 
-MATCH (start:Person {id: 99993})
+
+// RECOMMENDED PARAMETERS: Person ID = 99991
+
+MATCH (start:Person {id: 99991})
 
 MATCH path = (start)
               ((:Person)<-[c:HAS_CHILD WHERE c.relationshipType = 'BIOLOGICAL']-(:Family)<-[:HUSBAND_OF|WIFE_OF]-(:Person)){1,15}

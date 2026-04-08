@@ -1,0 +1,10 @@
+--- SCENARIO 06: YOUNGEST PARENT ---
+Biological relationships only.
+The youngest parent is determined by the exact age difference in days between the parent's birth and the child's birth.
+
+
+Expected rows: 1
+
+parent_id | given_name | surname   | sex | birth_date | birth_place | age_at_first_child | age_difference_in_days | child_id | child_birth_date | child_birth_place
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+9098      | Danuta     | Olszewska | F   | 1950-12-25 | Posen       | 16                 | 6012                   | 9858     | 1967-06-11       | Supraśl          

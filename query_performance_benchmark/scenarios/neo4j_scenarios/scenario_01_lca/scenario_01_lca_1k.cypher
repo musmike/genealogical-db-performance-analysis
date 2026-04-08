@@ -1,6 +1,6 @@
 // Scenario 01: Lowest Common Ancestor (LCA)
 // Finds the closest common biological ancestor of two selected individuals.
-// The specific pair of person IDs is taken from summary.txt (LCA section) —
+// The specific pair of person IDs is taken from expected_results/scenario_01_lca_1k.txt —
 // chosen such that the total path length through the LCA matches the
 // configured target (8 hops for 1k dataset).
 // Traversal follows biological relationships only (adopted/foster excluded).
@@ -8,15 +8,18 @@
 // lca_id, given_name, surname, sex, birth_date, birth_place, death_date, death_place, path_length_from_a, path_length_from_b, total_dist.
 // Orders the results by lca_id ascending.
 
+
+// RECOMMENDED PARAMETERS: Person A = 555, Person B = 539
+
 MATCH (startNode:Person) 
-WHERE startNode.id IN [926, 914]
+WHERE startNode.id IN [555, 539]
 MATCH p = SHORTEST 1 PATHS (startNode)
     ((:Person)<-[:HAS_CHILD {relationshipType: 'BIOLOGICAL'}]-(:Family)
     <-[:HUSBAND_OF|WIFE_OF]-()){0,7}(anc:Person)
 WITH anc, startNode.id AS sId, length(p)/2 AS dist
 WITH anc,
-     min(CASE WHEN sId=926 THEN dist END) AS distA,
-     min(CASE WHEN sId=914 THEN dist END) AS distB
+     min(CASE WHEN sId=555 THEN dist END) AS distA,
+     min(CASE WHEN sId=539 THEN dist END) AS distB
 WHERE distA IS NOT NULL AND distB IS NOT NULL
 WITH anc, distA, distB, distA+distB AS total_dist
 WITH min(total_dist) AS minTotal, 

@@ -98,10 +98,6 @@ This will generate three datasets into `data_generator/output/`:
 
 Generation takes approximately 1 minute depending on hardware.
 
-> **Warning:** Running this script will overwrite existing output files,
-> including `summary.txt` files that contain person IDs used in benchmark
-> queries. If you change the `SEED` value in `config.py`, the generated
-> person IDs will differ and the scenario query files must be updated accordingly.
 
 ## Notes
 

@@ -1,6 +1,6 @@
 -- Scenario 01: Lowest Common Ancestor (LCA)
 -- Finds the closest common biological ancestor of two selected individuals.
--- The specific pair of person IDs is taken from summary.txt (LCA section) —
+-- The specific pair of person IDs is taken from expected_results/scenario_01_lca_1k.txt —
 -- chosen such that the total path length through the LCA matches the
 -- configured target (8 hops for 1k dataset).
 -- Traversal follows biological relationships only (adopted/foster excluded).
@@ -8,9 +8,12 @@
 -- lca_id, given_name, surname, sex, birth_date, birth_place, death_date, death_place, path_length_from_a, path_length_from_b, total_dist.
 -- Orders the results by lca_id ascending.
 
+
+-- RECOMMENDED PARAMETERS: Person A = 555, Person B = 539
+
 WITH RECURSIVE
 anc_a(person_id, depth, visited) AS (
-    SELECT 926, 0, ARRAY[926]
+    SELECT 555, 0, ARRAY[555]
     UNION ALL
     SELECT parent_id, a.depth + 1, a.visited || parent_id
     FROM anc_a a
@@ -22,7 +25,7 @@ anc_a(person_id, depth, visited) AS (
     WHERE a.depth < 8 AND NOT (parent_id = ANY(a.visited))
 ),
 anc_b(person_id, depth, visited) AS (
-    SELECT 914, 0, ARRAY[914]
+    SELECT 539, 0, ARRAY[539]
     UNION ALL
     SELECT parent_id, b.depth + 1, b.visited || parent_id
     FROM anc_b b

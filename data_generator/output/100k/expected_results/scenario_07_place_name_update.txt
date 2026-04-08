@@ -1,0 +1,16 @@
+--- SCENARIO 07: PLACE NAME UPDATE ---
+Updates occurrences of historical German city names to their modern Polish equivalents.
+The update strictly replaces full field values, not substrings.
+Targeted fields:
+  - people.birth_place
+  - people.death_place
+  - families.marriage_place
+
+Replacements to be executed:
+  Posen -> Poznań
+  Danzig -> Gdańsk
+  Breslau -> Wrocław
+  Stettin -> Szczecin
+  Bromberg -> Bydgoszcz
+  Thorn -> Toruń
+

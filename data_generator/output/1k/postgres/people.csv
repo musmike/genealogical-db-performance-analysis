@@ -1,1001 +1,1001 @@
 id,given_name,surname,sex,is_deceased,birth_place,birth_date,death_place,death_date,cause_of_death,burial_place,occupation
-1,Józef,Jankowski,M,1,Wisła,1770-08-02,Sanok,1827-10-18,War casualty,Cemetery in Sanok,Fisherman
-2,Bożena,Jaworska,F,1,Kraków,1780-12-28,Supraśl,1860-12-28,Murder,Cemetery in Supraśl,Wheelwright
-3,Michał,Zieliński,M,1,Supraśl,1772-06-28,Bromberg,1815-05-24,Drowning,Cemetery in Bromberg,Doctor
-4,Małgorzata,Nowakowska,F,1,Reszel,1779-07-20,Breslau,1843-08-10,Consumption,Cemetery in Breslau,Shoemaker
-5,Szymon,Kamiński,M,1,Thorn,1772-06-04,Lipce,1823-05-05,,Cemetery in Lipce,Shoemaker
-6,Zuzanna,Kamińska,F,1,Supraśl,1780-11-23,Kazimierz Dolny,1836-10-14,,Cemetery in Kazimierz Dolny,Shoemaker
-7,Wiesław,Stępień,M,1,Supraśl,1780-01-10,Cieszyn,1830-12-17,Plague,Cemetery in Cieszyn,Clerk
-8,Alicja,Dąbrowska,F,1,Supraśl,1781-01-28,Białystok,1831-07-23,Fever,Cemetery in Białystok,Blacksmith
-9,Ignacy,Walczak,M,1,Katowice,1772-11-03,Olsztyn,1848-12-27,,Cemetery in Olsztyn,Teacher
-10,Zofia,Wiśniewska,F,1,Sandomierz,1782-08-07,Krynica,1825-07-19,,Cemetery in Krynica,Blacksmith
-11,Adam,Dudek,M,1,Radom,1778-02-14,Katowice,1851-06-21,Influenza,Cemetery in Katowice,Cooper
-12,Danuta,Pawłowska,F,1,Reszel,1780-04-22,Stettin,1814-08-22,Apoplexy,Cemetery in Stettin,Scribe
-13,Andrzej,Jabłoński,M,1,Kielce,1780-04-19,Sandomierz,1847-11-10,War casualty,Cemetery in Sandomierz,Carpenter
-14,Józefa,Jaworska,F,1,Zwierzyniec,1776-01-25,Sanok,1814-08-19,Drowning,Cemetery in Sanok,Soldier
-15,Marcin,Jabłoński,M,1,Sandomierz,1773-11-26,Złoty Potok,1847-09-02,,Cemetery in Złoty Potok,Tailor
-16,Wanda,Kowalczyk,F,1,Cieszyn,1777-04-24,Bronowice,1862-06-05,Murder,Cemetery in Bronowice,Judge
-17,Adam,Stępień,M,1,Częstochowa,1777-12-27,Zalipie,1824-08-07,Fever,Cemetery in Zalipie,Miller
-18,Zuzanna,Wiśniewska,F,1,Zalipie,1781-03-26,Sanok,1834-06-01,Fever,Cemetery in Sanok,Priest
-19,Tomasz,Malinowski,M,1,Chochołów,1770-03-20,Reszel,1802-02-27,Consumption,Cemetery in Reszel,Farmer
-20,Jadwiga,Malinowska,F,1,Bronowice,1774-01-22,Łódź,1855-11-28,Typhus,Cemetery in Łódź,Hunter
-21,Henryk,Wójcik,M,1,Reszel,1771-01-08,Sandomierz,1812-06-14,Heart failure,Cemetery in Sandomierz,Innkeeper
-22,Marianna,Baran,F,1,Kielce,1775-07-13,Bronowice,1851-12-22,,Cemetery in Bronowice,Farmer
-23,Piotr,Król,M,1,Bronowice,1771-06-26,Supraśl,1815-04-04,Murder,Cemetery in Supraśl,Shepherd
-24,Zuzanna,Wieczorek,F,1,Olsztyn,1775-08-10,Białystok,1826-09-26,,Cemetery in Białystok,Priest
-25,Łukasz,Kozłowski,M,1,Częstochowa,1770-06-05,Kraków,1825-12-22,Stroke,Cemetery in Kraków,Shepherd
-26,Małgorzata,Stępień,F,1,Supraśl,1777-09-10,Katowice,1838-10-26,War casualty,Cemetery in Katowice,Miller
-27,Szymon,Kamiński,M,1,Chełmno,1770-05-01,Kielce,1829-02-18,Heart failure,Cemetery in Kielce,Miner
-28,Julia,Krawczyk,F,1,Olsztyn,1781-08-11,Sandomierz,1833-05-12,Cholera,Cemetery in Sandomierz,Farmer
-29,Leon,Wieczorek,M,1,Chełmno,1777-10-17,Biecz,1836-11-11,,Cemetery in Biecz,Baker
-30,Alicja,Wojciechowska,F,1,Kraków,1775-03-03,Złoty Potok,1842-02-01,Unknown,Cemetery in Złoty Potok,Wheelwright
-31,Marcin,Górski,M,1,Stettin,1777-02-22,Sromowce,1833-11-20,Dysentery,Cemetery in Sromowce,Miner
-32,Anna,Wróbel,F,1,Lanckorona,1773-05-01,Thorn,1835-04-07,Fire,Cemetery in Thorn,Mason
-33,Jerzy,Stępień,M,1,Zwierzyniec,1771-11-20,Chochołów,1831-04-24,Pneumonia,Cemetery in Chochołów,Merchant
-34,Czesława,Kowalczyk,F,1,Sanok,1777-03-22,Sosnowiec,1837-09-18,Influenza,Cemetery in Sosnowiec,Baker
-35,Julian,Szymański,M,1,Breslau,1774-05-17,Pszczyna,1833-05-22,Murder,Cemetery in Pszczyna,Cooper
-36,Irena,Wójcik,F,1,Krynica,1782-09-02,Cieszyn,1825-12-08,Apoplexy,Cemetery in Cieszyn,Tailor
-37,Leon,Wieczorek,M,1,Sosnowiec,1776-06-14,Białystok,1817-02-26,Consumption,Cemetery in Białystok,Carpenter
-38,Anna,Kamińska,F,1,Kazimierz Dolny,1774-06-21,Zwierzyniec,1857-09-22,Starvation,Cemetery in Zwierzyniec,Priest
-39,Julian,Wójcik,M,1,Tykocin,1774-05-10,Złoty Potok,1833-03-08,Fire,Cemetery in Złoty Potok,Teacher
-40,Wanda,Szymańska,F,1,Kazimierz Dolny,1780-12-06,Sanok,1847-09-04,Smallpox,Cemetery in Sanok,Doctor
-41,Łukasz,Jaworski,M,1,Białystok,1774-06-02,Lanckorona,1821-03-03,,Cemetery in Lanckorona,Clerk
-42,Wanda,Dąbrowska,F,1,Lanckorona,1774-08-06,Kielce,1833-10-19,Plague,Cemetery in Kielce,Cooper
-43,Tadeusz,Wojciechowski,M,1,Breslau,1777-10-08,Supraśl,1821-11-20,Apoplexy,Cemetery in Supraśl,Shepherd
-44,Ludwika,Wieczorek,F,1,Katowice,1775-07-20,Wisła,1872-08-26,Fever,Cemetery in Wisła,Butcher
-45,Bartosz,Krawczyk,M,1,Supraśl,1776-02-27,Breslau,1820-06-10,Cancer,Cemetery in Breslau,Miller
-46,Leokadia,Dudek,F,1,Cieszyn,1776-05-15,Chełmno,1854-03-07,Cholera,Cemetery in Chełmno,Clerk
-47,Jerzy,Baran,M,1,Gliwice,1780-06-21,Biecz,1841-07-27,Heart failure,Cemetery in Biecz,Potter
-48,Katarzyna,Król,F,1,Radom,1777-04-07,Thorn,1837-11-15,Stroke,Cemetery in Thorn,Clerk
-49,Jan,Kaczmarek,M,1,Reszel,1775-01-20,Kielce,1850-11-18,Stroke,Cemetery in Kielce,Butcher
-50,Małgorzata,Wieczorek,F,1,Częstochowa,1773-11-15,Sandomierz,1843-10-24,Cancer,Cemetery in Sandomierz,Artist
-51,Bartosz,Wróbel,M,1,Cieszyn,1772-11-13,Pszczyna,1819-04-17,Infectious disease,Cemetery in Pszczyna,Shoemaker
-52,Katarzyna,Woźniak,F,1,Lipce,1772-10-09,Reszel,1853-05-25,Heart failure,Cemetery in Reszel,Teacher
-53,Józef,Walczak,M,1,Lanckorona,1772-05-24,Lanckorona,1821-12-15,Consumption,Cemetery in Lanckorona,Hunter
-54,Maria,Kowalczyk,F,1,Chochołów,1780-11-05,Warszawa,1813-07-22,Influenza,Cemetery in Warszawa,Doctor
-55,Mateusz,Dudek,M,1,Sosnowiec,1770-07-16,Tykocin,1838-03-05,Apoplexy,Cemetery in Tykocin,Shoemaker
-56,Irena,Zielińska,F,1,Kazimierz Dolny,1778-03-13,Pszczyna,1832-11-01,,Cemetery in Pszczyna,
-57,Andrzej,Adamczyk,M,1,Lanckorona,1778-04-25,Radom,1833-10-09,Accident,Cemetery in Radom,Shoemaker
-58,Maria,Michalska,F,1,Gliwice,1782-06-19,Reszel,1828-07-21,Consumption,Cemetery in Reszel,Doctor
-59,Marcin,Szymański,M,1,Kazimierz Dolny,1773-07-25,Białystok,1818-05-19,,Cemetery in Białystok,Mason
-60,Rozalia,Król,F,1,Chełmno,1774-11-16,Danzig,1829-01-15,Plague,Cemetery in Danzig,Farmer
-61,Ryszard,Pawlak,M,1,Gdynia,1780-08-12,Złoty Potok,1825-09-24,Smallpox,Cemetery in Złoty Potok,Priest
-62,Marianna,Mazur,F,1,Cieszyn,1772-03-13,Kazimierz Dolny,1829-02-10,Heart failure,Cemetery in Kazimierz Dolny,Shepherd
-63,Adam,Wróbel,M,1,Chełmno,1772-08-13,Breslau,1809-12-03,Murder,Cemetery in Breslau,Butcher
-64,Helena,Stępień,F,1,Radom,1776-12-20,Thorn,1836-05-22,,Cemetery in Thorn,Shepherd
-65,Szymon,Kamiński,M,1,Rzeszów,1774-01-26,Pszczyna,1815-12-13,Consumption,Cemetery in Pszczyna,Tailor
-66,Wanda,Michalska,F,1,Katowice,1779-04-17,Częstochowa,1836-09-28,Apoplexy,Cemetery in Częstochowa,Weaver
-67,Szymon,Jankowski,M,1,Biecz,1779-11-03,Bromberg,1812-10-18,Fire,Cemetery in Bromberg,Soldier
-68,Zuzanna,Krawczyk,F,1,Sosnowiec,1773-06-27,Lipce,1833-05-07,Dropsy,Cemetery in Lipce,Wheelwright
-69,Zygmunt,Nowak,M,1,Kazimierz Dolny,1779-08-18,Rzeszów,1831-07-10,Fever,Cemetery in Rzeszów,Priest
-70,Kazimiera,Zielińska,F,1,Złoty Potok,1781-07-10,Sandomierz,1829-02-06,,Cemetery in Sandomierz,Baker
-71,Mateusz,Kowalski,M,1,Posen,1772-05-08,Lublin,1853-02-23,Unknown,Cemetery in Lublin,Butcher
-72,Ewa,Nowakowska,F,1,Rzeszów,1782-10-02,Zalipie,1858-09-18,Accident,Cemetery in Zalipie,Farmer
-73,Dariusz,Kozłowski,M,1,Supraśl,1780-03-07,Wisła,1872-09-11,Infectious disease,Cemetery in Wisła,Miner
-74,Regina,Walczak,F,1,Posen,1772-04-06,Tykocin,1842-12-21,Fire,Cemetery in Tykocin,Artist
-75,Tomasz,Woźniak,M,1,Lipce,1776-05-22,Bromberg,1818-04-01,,Cemetery in Bromberg,Innkeeper
-76,Wanda,Kozłowska,F,1,Chełmno,1778-10-25,Sandomierz,1830-07-17,Murder,Cemetery in Sandomierz,Shoemaker
-77,Tadeusz,Wiśniewski,M,1,Złoty Potok,1777-07-19,Chełmno,1825-05-05,Starvation,Cemetery in Chełmno,Artist
-78,Zofia,Jabłońska,F,1,Reszel,1779-08-17,Łódź,1843-10-08,Consumption,Cemetery in Łódź,Potter
-79,Józef,Szymański,M,1,Katowice,1771-08-25,Sosnowiec,1863-02-01,Fire,Cemetery in Sosnowiec,Wheelwright
-80,Józefa,Sikora,F,1,Chochołów,1778-06-18,Chełmno,1824-08-05,Consumption,Cemetery in Chełmno,Miner
-81,Stanisław,Wiśniewski,M,1,Biecz,1777-10-07,Lanckorona,1858-03-10,Pneumonia,Cemetery in Lanckorona,Artist
-82,Krystyna,Adamczyk,F,1,Biecz,1774-03-19,Bronowice,1817-10-07,War casualty,Cemetery in Bronowice,Scribe
-83,Mirosław,Nowakowski,M,1,Wisła,1775-04-08,Posen,1822-09-14,Unknown,Cemetery in Posen,Scribe
-84,Krystyna,Majewska,F,1,Stettin,1780-08-06,Wisła,1843-12-08,Apoplexy,Cemetery in Wisła,Potter
-85,Leon,Pawlak,M,1,Breslau,1772-05-08,Łódź,1827-11-23,Apoplexy,Cemetery in Łódź,Soldier
-86,Urszula,Sikora,F,1,Supraśl,1777-10-07,Łódź,1832-05-24,Cancer,Cemetery in Łódź,Baker
-87,Ignacy,Stępień,M,1,Lublin,1777-08-13,Kazimierz Dolny,1854-02-03,Dysentery,Cemetery in Kazimierz Dolny,Shoemaker
-88,Zofia,Górska,F,1,Tykocin,1774-11-06,Warszawa,1847-10-16,Stroke,Cemetery in Warszawa,Miller
-89,Leon,Baran,M,1,Warszawa,1772-04-25,Rzeszów,1823-08-12,Starvation,Cemetery in Rzeszów,Mason
-90,Zuzanna,Jaworska,F,1,Stettin,1776-02-08,Łódź,1808-08-17,Plague,Cemetery in Łódź,Blacksmith
-91,Michał,Stępień,M,1,Cieszyn,1777-06-25,Chełmno,1816-04-11,Infectious disease,Cemetery in Chełmno,Butcher
-92,Agnieszka,Mazur,F,1,Sromowce,1780-05-09,Breslau,1845-07-10,Cancer,Cemetery in Breslau,Clerk
-93,Antoni,Kozłowski,M,1,Kielce,1779-03-16,Gdynia,1839-08-01,Stroke,Cemetery in Gdynia,Carpenter
-94,Stefania,Baran,F,1,Reszel,1778-11-17,Złoty Potok,1850-08-23,Smallpox,Cemetery in Złoty Potok,Lawyer
-95,Henryk,Lewandowski,M,1,Lanckorona,1777-10-11,Gdynia,1831-09-23,Fever,Cemetery in Gdynia,Hunter
-96,Agnieszka,Kaczmarek,F,1,Białystok,1774-12-09,Tykocin,1834-06-01,Consumption,Cemetery in Tykocin,Clerk
-97,Filip,Jabłoński,M,1,Bronowice,1774-03-04,Pszczyna,1847-03-15,,Cemetery in Pszczyna,Teacher
-98,Anna,Wieczorek,F,1,Lanckorona,1773-05-27,Breslau,1822-08-10,Heart failure,Cemetery in Breslau,Doctor
-99,Kamil,Michalski,M,1,Radom,1777-03-17,Sromowce,1845-02-06,Typhus,Cemetery in Sromowce,Weaver
-100,Oliwia,Król,F,1,Zwierzyniec,1778-09-26,Posen,1869-01-19,Cholera,Cemetery in Posen,Blacksmith
-101,Leon,Jaworski,M,1,Olsztyn,1778-11-11,Sosnowiec,1837-09-08,Fever,Cemetery in Sosnowiec,Shoemaker
-102,Stefania,Kaczmarek,F,1,Supraśl,1782-10-09,Gliwice,1846-08-14,Plague,Cemetery in Gliwice,Hunter
-103,Stefan,Nowakowski,M,1,Bronowice,1776-01-18,Chochołów,1828-06-13,Fever,Cemetery in Chochołów,Priest
-104,Oliwia,Lewandowska,F,1,Lublin,1778-12-03,Częstochowa,1820-03-17,,Cemetery in Częstochowa,Clerk
-105,Ignacy,Zieliński,M,1,Bromberg,1772-09-16,Danzig,1852-03-12,,Cemetery in Danzig,Potter
-106,Małgorzata,Pawłowska,F,1,Lanckorona,1775-12-19,Olsztyn,1825-07-16,Consumption,Cemetery in Olsztyn,Artist
-107,Maciej,Pawłowski,M,1,Wisła,1780-05-09,Zwierzyniec,1807-05-14,Infectious disease,Cemetery in Zwierzyniec,Clerk
-108,Helena,Grabowska,F,1,Chochołów,1776-01-17,Sromowce,1815-01-06,Accident,Cemetery in Sromowce,Cooper
-109,Marek,Wróbel,M,1,Zalipie,1778-08-06,Gliwice,1809-03-11,War casualty,Cemetery in Gliwice,Shoemaker
-110,Natalia,Kamińska,F,1,Sromowce,1780-11-08,Sanok,1833-07-02,Starvation,Cemetery in Sanok,Innkeeper
-111,Zygmunt,Jabłoński,M,1,Sosnowiec,1772-07-25,Krynica,1844-11-18,,Cemetery in Krynica,Clerk
-112,Irena,Kozłowska,F,1,Thorn,1780-02-08,Sanok,1851-04-18,Stroke,Cemetery in Sanok,Teacher
-113,Szymon,Wojciechowski,M,1,Krynica,1775-09-01,Krynica,1857-01-15,Pneumonia,Cemetery in Krynica,Carpenter
-114,Anna,Wiśniewska,F,1,Supraśl,1773-05-06,Tykocin,1839-08-12,Dysentery,Cemetery in Tykocin,Cooper
-115,Tadeusz,Kamiński,M,1,Danzig,1771-10-21,Krynica,1821-11-18,Typhus,Cemetery in Krynica,Mason
-116,Stefania,Dudek,F,1,Tykocin,1782-09-08,Rzeszów,1847-10-10,Influenza,Cemetery in Rzeszów,Weaver
-117,Czesław,Baran,M,1,Warszawa,1771-03-05,Danzig,1807-07-20,,Cemetery in Danzig,Merchant
-118,Danuta,Grabowska,F,1,Pszczyna,1777-12-12,Thorn,1826-06-06,War casualty,Cemetery in Thorn,Weaver
-119,Tomasz,Krawczyk,M,1,Sromowce,1770-08-27,Tykocin,1819-09-02,Smallpox,Cemetery in Tykocin,Hunter
-120,Helena,Kowalczyk,F,1,Biecz,1779-03-14,Stettin,1811-11-19,,Cemetery in Stettin,
-121,Zygmunt,Nowakowski,M,1,Lublin,1778-05-11,Białystok,1829-05-10,,Cemetery in Białystok,Doctor
-122,Natalia,Majewska,F,1,Kraków,1778-03-02,Lanckorona,1843-07-16,Unknown,Cemetery in Lanckorona,Doctor
-123,Szymon,Stępień,M,1,Thorn,1770-02-04,Sosnowiec,1829-01-25,Dropsy,Cemetery in Sosnowiec,Farmer
-124,Maja,Stępień,F,1,Gdynia,1777-06-27,Katowice,1820-07-25,Heart failure,Cemetery in Katowice,Miner
-125,Grzegorz,Pawlak,M,1,Biecz,1777-01-05,Łódź,1814-11-20,Heart failure,Cemetery in Łódź,Clerk
-126,Krystyna,Król,F,1,Lublin,1778-09-02,Chochołów,1829-01-20,Infectious disease,Cemetery in Chochołów,Lawyer
-127,Kamil,Zając,M,1,Rzeszów,1771-04-01,Breslau,1834-05-17,Murder,Cemetery in Breslau,Miner
-128,Józefa,Górska,F,1,Breslau,1777-06-14,Warszawa,1877-07-05,Heart failure,Cemetery in Warszawa,Scribe
-129,Mateusz,Sikora,M,1,Thorn,1778-01-07,Kraków,1846-11-22,Consumption,Cemetery in Kraków,Baker
-130,Natalia,Nowak,F,1,Danzig,1780-06-13,Sandomierz,1846-09-16,Cancer,Cemetery in Sandomierz,Lawyer
-131,Szymon,Jaworski,M,1,Radom,1777-08-27,Danzig,1824-10-26,Fever,Cemetery in Danzig,Baker
-132,Danuta,Kozłowska,F,1,Sromowce,1779-02-01,Lipce,1839-10-17,Fire,Cemetery in Lipce,Miner
-133,Jakub,Kowalczyk,M,1,Supraśl,1778-11-21,Wisła,1820-07-10,,Cemetery in Wisła,Shepherd
-134,Wanda,Pawłowska,F,1,Thorn,1779-11-11,Zwierzyniec,1863-11-15,Pneumonia,Cemetery in Zwierzyniec,Scribe
-135,Władysław,Kaczmarek,M,1,Tykocin,1771-09-06,Kielce,1817-10-20,,Cemetery in Kielce,Doctor
-136,Józefa,Pawlak,F,1,Breslau,1776-04-15,Reszel,1813-08-26,Drowning,Cemetery in Reszel,Wheelwright
-137,Jan,Kwiatkowski,M,1,Zalipie,1780-12-16,Chochołów,1855-05-16,Consumption,Cemetery in Chochołów,Carpenter
-138,Katarzyna,Jaworska,F,1,Chochołów,1781-12-14,Chełmno,1862-11-11,Plague,Cemetery in Chełmno,Merchant
-139,Mateusz,Kowalczyk,M,1,Częstochowa,1780-03-20,Lanckorona,1815-12-05,Typhus,Cemetery in Lanckorona,Blacksmith
-140,Ewa,Michalska,F,1,Reszel,1775-12-11,Supraśl,1848-10-24,Cancer,Cemetery in Supraśl,Miller
-141,Marek,Walczak,M,1,Kraków,1773-05-15,Wisła,1847-02-25,,Cemetery in Wisła,Soldier
-142,Aleksandra,Jankowska,F,1,Cieszyn,1777-09-19,Radom,1837-10-07,Plague,Cemetery in Radom,Wheelwright
-143,Piotr,Król,M,1,Radom,1771-12-28,Zalipie,1820-07-06,Cancer,Cemetery in Zalipie,Mason
-144,Kazimiera,Majewska,F,1,Pszczyna,1778-03-01,Kraków,1843-07-11,Cholera,Cemetery in Kraków,Farmer
-145,Antoni,Pawłowski,M,1,Olsztyn,1772-10-07,Białystok,1831-07-15,Unknown,Cemetery in Białystok,Hunter
-146,Zuzanna,Malinowska,F,1,Wisła,1778-09-27,Złoty Potok,1839-10-21,Dropsy,Cemetery in Złoty Potok,Soldier
-147,Stefan,Baran,M,1,Krynica,1774-11-22,Supraśl,1832-03-26,,Cemetery in Supraśl,Scribe
-148,Krystyna,Woźniak,F,1,Sromowce,1779-08-09,Lublin,1819-06-06,Accident,Cemetery in Lublin,Artist
-149,Zygmunt,Baran,M,1,Gliwice,1772-03-01,Stettin,1825-01-14,Cholera,Cemetery in Stettin,Blacksmith
-150,Zuzanna,Woźniak,F,1,Warszawa,1779-02-26,Tykocin,1832-11-21,Influenza,Cemetery in Tykocin,Miner
-151,Jerzy,Lewandowski,M,1,Krynica,1777-09-01,Sosnowiec,1833-12-01,,Cemetery in Sosnowiec,Farmer
-152,Ewa,Sikora,F,1,Częstochowa,1780-03-27,Sosnowiec,1838-04-08,Murder,Cemetery in Sosnowiec,Farmer
-153,Mateusz,Szymański,M,1,Kielce,1778-05-19,Sandomierz,1844-01-18,Stroke,Cemetery in Sandomierz,Clerk
-154,Helena,Jaworska,F,1,Wisła,1779-10-19,Lublin,1834-08-11,Unknown,Cemetery in Lublin,Teacher
-155,Stefan,Kozłowski,M,1,Reszel,1779-11-25,Katowice,1834-06-26,Fever,Cemetery in Katowice,Fisherman
-156,Ewa,Nowakowska,F,1,Kielce,1776-07-28,Danzig,1855-05-01,Drowning,Cemetery in Danzig,Wheelwright
-157,Franciszek,Wróbel,M,1,Bromberg,1771-05-03,Thorn,1833-04-18,Typhus,Cemetery in Thorn,Soldier
-158,Rozalia,Górska,F,1,Katowice,1781-09-28,Reszel,1837-12-01,Dropsy,Cemetery in Reszel,Wheelwright
-159,Bartosz,Lewandowski,M,1,Złoty Potok,1774-08-28,Radom,1829-02-11,Unknown,Cemetery in Radom,Tanner
-160,Kazimiera,Kowalczyk,F,1,Breslau,1778-09-13,Tykocin,1825-09-10,Starvation,Cemetery in Tykocin,Merchant
-161,Marianna,Zielińska,F,1,Kielce,1801-06-11,Gdynia,1887-12-23,,Cemetery in Gdynia,Blacksmith
-162,Rozalia,Kamińska,F,1,Sosnowiec,1801-07-27,Chełmno,1885-09-06,Fever,Cemetery in Chełmno,Judge
-163,Franciszek,Stępień,M,1,Rzeszów,1801-01-25,Tykocin,1828-02-02,Fire,Cemetery in Tykocin,Doctor
-164,Tadeusz,Kamiński,M,1,Sromowce,1801-01-28,Kazimierz Dolny,1858-11-16,Plague,Cemetery in Kazimierz Dolny,Priest
-165,Jan,Wieczorek,M,1,Gliwice,1801-12-05,Sosnowiec,1804-01-15,Starvation,Cemetery in Sosnowiec,
-166,Ludwika,Wójcik,F,1,Lipce,1801-07-24,Sandomierz,1862-03-02,Heart failure,Cemetery in Sandomierz,Mason
-167,Michał,Jaworski,M,1,Sanok,1801-11-05,Zalipie,1874-10-27,,Cemetery in Zalipie,Scribe
-168,Julian,Wojciechowski,M,1,Rzeszów,1801-07-12,Sanok,1803-12-04,Consumption,Cemetery in Sanok,
-169,Barbara,Walczak,F,1,Łódź,1801-04-01,Łódź,1852-12-27,Starvation,Cemetery in Łódź,Shoemaker
-170,Halina,Dudek,F,1,Zalipie,1801-09-23,Lipce,1854-10-24,Plague,Cemetery in Lipce,Mason
-171,Zofia,Adamczyk,F,1,Bromberg,1801-01-22,Wisła,1894-07-11,,Cemetery in Wisła,Mason
-172,Andrzej,Jankowski,M,1,Sromowce,1801-06-07,Chełmno,1856-03-14,Influenza,Cemetery in Chełmno,Cooper
-173,Wiktoria,Kozłowska,F,1,Kazimierz Dolny,1801-08-27,Białystok,1889-09-27,,Cemetery in Białystok,Shepherd
-174,Mirosław,Kozłowski,M,1,Kazimierz Dolny,1801-11-17,Breslau,1874-04-26,Starvation,Cemetery in Breslau,Miller
-175,Bożena,Jabłońska,F,1,Białystok,1801-03-04,Chochołów,1861-08-04,,Cemetery in Chochołów,Butcher
-176,Tadeusz,Zieliński,M,1,Sromowce,1801-10-06,Lanckorona,1864-10-07,Dropsy,Cemetery in Lanckorona,Miller
-177,Marian,Krawczyk,M,1,Kraków,1801-12-04,Biecz,1804-09-04,Fever,Cemetery in Biecz,
-178,Filip,Nowakowski,M,1,Biecz,1801-06-02,Wisła,1882-01-19,,Cemetery in Wisła,Clerk
-179,Halina,Zając,F,1,Chełmno,1801-07-18,Sosnowiec,1867-03-18,Cancer,Cemetery in Sosnowiec,Shoemaker
-180,Grażyna,Kowalczyk,F,1,Danzig,1801-02-05,Częstochowa,1803-09-08,Dropsy,Cemetery in Częstochowa,
-181,Kazimierz,Kamiński,M,1,Zwierzyniec,1802-03-11,Białystok,1872-02-02,,Cemetery in Białystok,Potter
-182,Wanda,Walczak,F,1,Chochołów,1802-06-16,Zalipie,1804-09-10,Smallpox,Cemetery in Zalipie,
-183,Marianna,Dudek,F,1,Breslau,1802-09-13,Sanok,1881-09-01,Dysentery,Cemetery in Sanok,Butcher
-184,Anna,Jabłońska,F,1,Pszczyna,1802-06-27,Lublin,1821-09-05,Consumption,Cemetery in Lublin,Scribe
-185,Joanna,Jabłońska,F,1,Sromowce,1802-04-23,Stettin,1880-06-02,Drowning,Cemetery in Stettin,Miner
-186,Rozalia,Wójcik,F,1,Gliwice,1802-10-21,Sromowce,1839-09-27,,Cemetery in Sromowce,Lawyer
-187,Anna,Król,F,1,Danzig,1802-10-11,Danzig,1874-11-12,Dysentery,Cemetery in Danzig,Hunter
-188,Dariusz,Kamiński,M,1,Zwierzyniec,1802-04-23,Bronowice,1858-12-15,Unknown,Cemetery in Bronowice,Butcher
-189,Wiktoria,Górska,F,1,Thorn,1802-07-20,Sosnowiec,1846-06-09,War casualty,Cemetery in Sosnowiec,Judge
-190,Kazimierz,Stępień,M,1,Lipce,1802-05-07,Zalipie,1886-08-03,Consumption,Cemetery in Zalipie,Hunter
-191,Helena,Szymańska,F,1,Krynica,1802-09-11,Supraśl,1807-07-16,Apoplexy,Cemetery in Supraśl,
-192,Jerzy,Wieczorek,M,1,Wisła,1802-03-16,Reszel,1844-11-22,,Cemetery in Reszel,Priest
-193,Adam,Wojciechowski,M,1,Wisła,1802-01-24,Kraków,1875-05-10,Fire,Cemetery in Kraków,Wheelwright
-194,Elżbieta,Baran,F,1,Złoty Potok,1802-05-27,Chochołów,1872-02-21,Starvation,Cemetery in Chochołów,Judge
-195,Kamil,Kaczmarek,M,1,Reszel,1802-02-28,Sandomierz,1892-04-22,Fire,Cemetery in Sandomierz,Teacher
-196,Marcin,Wróbel,M,1,Stettin,1802-04-21,Danzig,1882-05-07,Apoplexy,Cemetery in Danzig,Mason
-197,Wiktoria,Wróbel,F,1,Cieszyn,1802-02-20,Tykocin,1869-02-28,,Cemetery in Tykocin,Cooper
-198,Leon,Kamiński,M,1,Biecz,1802-02-26,Zwierzyniec,1876-12-06,Influenza,Cemetery in Zwierzyniec,Mason
-199,Zuzanna,Kowalska,F,1,Radom,1802-04-22,Zalipie,1869-12-18,,Cemetery in Zalipie,Tailor
-200,Natalia,Wiśniewska,F,1,Posen,1802-12-07,Posen,1866-09-04,Dropsy,Cemetery in Posen,Tanner
-201,Stefania,Szymańska,F,1,Wisła,1802-02-18,Biecz,1806-10-12,Cholera,Cemetery in Biecz,
-202,Barbara,Wiśniewska,F,1,Chochołów,1802-05-21,Zalipie,1851-06-01,Drowning,Cemetery in Zalipie,Fisherman
-203,Stanisław,Nowakowski,M,1,Kazimierz Dolny,1802-03-01,Zalipie,1871-11-03,Plague,Cemetery in Zalipie,Scribe
-204,Łukasz,Pawlak,M,1,Sanok,1802-08-19,Supraśl,1872-05-28,Influenza,Cemetery in Supraśl,Hunter
-205,Grzegorz,Stępień,M,1,Białystok,1802-05-07,Kielce,1842-06-21,Drowning,Cemetery in Kielce,Hunter
-206,Grzegorz,Baran,M,1,Sromowce,1802-04-20,Lipce,1860-11-18,Infectious disease,Cemetery in Lipce,Blacksmith
-207,Regina,Stępień,F,1,Sosnowiec,1802-04-19,Chochołów,1860-11-09,Heart failure,Cemetery in Chochołów,Wheelwright
-208,Alicja,Kozłowska,F,1,Lipce,1802-07-11,Lublin,1807-03-28,Consumption,Cemetery in Lublin,
-209,Wiktoria,Michalska,F,1,Lanckorona,1802-03-24,Bronowice,1874-02-08,Cholera,Cemetery in Bronowice,Mason
-210,Katarzyna,Nowakowska,F,1,Kraków,1802-09-26,Katowice,1862-09-26,Infectious disease,Cemetery in Katowice,Merchant
-211,Mateusz,Zieliński,M,1,Sosnowiec,1802-05-02,Gdynia,1873-04-16,Influenza,Cemetery in Gdynia,Innkeeper
-212,Marek,Pawłowski,M,1,Rzeszów,1802-01-19,Łódź,1857-02-12,Murder,Cemetery in Łódź,Farmer
-213,Mateusz,Wojciechowski,M,1,Krynica,1802-05-10,Cieszyn,1854-02-20,Dropsy,Cemetery in Cieszyn,Potter
-214,Urszula,Pawlak,F,1,Sromowce,1802-10-25,Supraśl,1839-12-09,Influenza,Cemetery in Supraśl,Clerk
-215,Irena,Jaworska,F,1,Krynica,1802-05-20,Gliwice,1869-12-20,Cancer,Cemetery in Gliwice,Weaver
-216,Łukasz,Pawłowski,M,1,Pszczyna,1802-04-25,Złoty Potok,1860-07-09,,Cemetery in Złoty Potok,Potter
-217,Antoni,Baran,M,1,Kazimierz Dolny,1802-02-17,Gliwice,1855-02-23,Unknown,Cemetery in Gliwice,Wheelwright
-218,Tadeusz,Lewandowski,M,1,Bronowice,1802-09-28,Białystok,1883-02-22,Infectious disease,Cemetery in Białystok,Potter
-219,Filip,Szymański,M,1,Rzeszów,1802-12-04,Rzeszów,1870-10-01,Unknown,Cemetery in Rzeszów,Fisherman
-220,Tadeusz,Kozłowski,M,1,Częstochowa,1802-11-15,Kielce,1867-11-23,,Cemetery in Kielce,Teacher
-221,Czesława,Lewandowska,F,1,Breslau,1802-02-12,Tykocin,1845-08-16,Smallpox,Cemetery in Tykocin,Soldier
-222,Marcin,Jankowski,M,1,Łódź,1803-07-13,Rzeszów,1805-04-02,Unknown,Cemetery in Rzeszów,
-223,Ryszard,Zieliński,M,1,Zalipie,1803-12-02,Sosnowiec,1851-07-08,,Cemetery in Sosnowiec,Baker
-224,Wanda,Stępień,F,1,Danzig,1803-12-14,Kielce,1852-10-13,Infectious disease,Cemetery in Kielce,Doctor
-225,Jerzy,Walczak,M,1,Warszawa,1803-12-23,Katowice,1867-05-01,,Cemetery in Katowice,Wheelwright
-226,Elżbieta,Jabłońska,F,1,Kazimierz Dolny,1803-04-02,Zwierzyniec,1887-11-18,,Cemetery in Zwierzyniec,Shepherd
-227,Ignacy,Stępień,M,1,Cieszyn,1803-10-05,Breslau,1881-09-07,Dropsy,Cemetery in Breslau,Merchant
-228,Stefania,Malinowska,F,1,Rzeszów,1803-01-01,Rzeszów,1805-09-27,Cholera,Cemetery in Rzeszów,
-229,Marian,Wójcik,M,1,Kazimierz Dolny,1803-05-03,Zwierzyniec,1871-03-22,Dropsy,Cemetery in Zwierzyniec,Miner
-230,Wanda,Kozłowska,F,1,Biecz,1803-02-13,Breslau,1848-02-21,Cholera,Cemetery in Breslau,Wheelwright
-231,Genowefa,Szymańska,F,1,Sandomierz,1803-09-17,Bromberg,1873-06-27,Consumption,Cemetery in Bromberg,Tailor
-232,Jadwiga,Wieczorek,F,1,Olsztyn,1803-04-03,Posen,1831-09-09,Starvation,Cemetery in Posen,Butcher
-233,Bartosz,Wójcik,M,1,Chełmno,1803-02-11,Wisła,1866-07-11,War casualty,Cemetery in Wisła,Baker
-234,Tomasz,Krawczyk,M,1,Białystok,1803-04-01,Stettin,1878-02-28,Cholera,Cemetery in Stettin,Weaver
-235,Józefa,Walczak,F,1,Sandomierz,1803-12-21,Krynica,1890-11-28,,Cemetery in Krynica,Teacher
-236,Irena,Dudek,F,1,Częstochowa,1803-03-15,Lanckorona,1899-12-01,Fire,Cemetery in Lanckorona,Miller
-237,Wiesław,Adamczyk,M,1,Olsztyn,1803-02-11,Sandomierz,1859-02-22,Unknown,Cemetery in Sandomierz,Scribe
-238,Kamil,Szymański,M,1,Bronowice,1803-05-14,Lanckorona,1880-10-03,,Cemetery in Lanckorona,Miner
-239,Anna,Pawlak,F,1,Bromberg,1803-06-19,Lanckorona,1857-12-16,Apoplexy,Cemetery in Lanckorona,Innkeeper
-240,Kamil,Nowak,M,1,Gdynia,1803-06-28,Warszawa,1806-07-26,Heart failure,Cemetery in Warszawa,
-241,Urszula,Kowalska,F,1,Breslau,1803-04-10,Tykocin,1858-12-07,Drowning,Cemetery in Tykocin,Teacher
-242,Marian,Woźniak,M,1,Sromowce,1803-09-19,Breslau,1846-11-28,,Cemetery in Breslau,Priest
-243,Kazimierz,Wiśniewski,M,1,Sanok,1803-11-27,Białystok,1880-08-09,,Cemetery in Białystok,Clerk
-244,Maciej,Szymański,M,1,Lublin,1803-02-26,Sosnowiec,1879-06-04,Consumption,Cemetery in Sosnowiec,Miller
-245,Grzegorz,Wiśniewski,M,1,Rzeszów,1803-11-17,Zalipie,1864-09-09,Consumption,Cemetery in Zalipie,
-246,Stanisław,Nowakowski,M,1,Złoty Potok,1803-08-05,Supraśl,1851-10-24,Accident,Cemetery in Supraśl,Miller
-247,Irena,Baran,F,1,Gliwice,1803-04-14,Radom,1857-08-28,Murder,Cemetery in Radom,Miner
-248,Piotr,Kozłowski,M,1,Lipce,1803-08-06,Zalipie,1854-02-06,War casualty,Cemetery in Zalipie,Priest
-249,Krzysztof,Lewandowski,M,1,Biecz,1803-05-12,Breslau,1872-06-12,Accident,Cemetery in Breslau,Weaver
-250,Maciej,Jabłoński,M,1,Lanckorona,1803-07-01,Wisła,1843-03-08,Starvation,Cemetery in Wisła,Judge
-251,Zofia,Michalska,F,1,Krynica,1803-08-03,Rzeszów,1872-10-27,Infectious disease,Cemetery in Rzeszów,Weaver
-252,Józef,Jaworski,M,1,Posen,1803-07-19,Bromberg,1868-10-17,Typhus,Cemetery in Bromberg,Doctor
-253,Joanna,Wróbel,F,1,Katowice,1803-12-20,Łódź,1866-08-14,Typhus,Cemetery in Łódź,Wheelwright
-254,Michał,Jabłoński,M,1,Gdynia,1803-04-12,Lipce,1877-05-07,Fire,Cemetery in Lipce,Doctor
-255,Marian,Kamiński,M,1,Lublin,1803-11-07,Reszel,1804-03-13,Infectious disease,Cemetery in Reszel,
-256,Jadwiga,Baran,F,1,Sromowce,1803-08-13,Olsztyn,1866-05-15,,Cemetery in Olsztyn,Innkeeper
-257,Jerzy,Krawczyk,M,1,Krynica,1803-09-26,Supraśl,1876-12-16,Dropsy,Cemetery in Supraśl,Tanner
-258,Stefania,Stępień,F,1,Częstochowa,1803-06-08,Chochołów,1882-11-25,Heart failure,Cemetery in Chochołów,Soldier
-259,Wiktoria,Pawlak,F,1,Częstochowa,1803-10-17,Sromowce,1873-10-24,Cancer,Cemetery in Sromowce,Shoemaker
-260,Julia,Zając,F,1,Rzeszów,1803-03-06,Kraków,1843-04-19,,Cemetery in Kraków,
-261,Filip,Sikora,M,1,Sromowce,1803-01-07,Breslau,1864-11-04,,Cemetery in Breslau,Judge
-262,Filip,Kowalczyk,M,1,Częstochowa,1803-12-09,Pszczyna,1854-11-06,Pneumonia,Cemetery in Pszczyna,Tailor
-263,Zygmunt,Kaczmarek,M,1,Zwierzyniec,1803-01-18,Posen,1854-05-09,Cholera,Cemetery in Posen,Blacksmith
-264,Piotr,Kowalczyk,M,1,Sanok,1803-01-11,Stettin,1833-04-04,Fever,Cemetery in Stettin,Carpenter
-265,Maciej,Walczak,M,1,Cieszyn,1803-08-12,Posen,1872-07-23,Typhus,Cemetery in Posen,Mason
-266,Marcin,Król,M,1,Bronowice,1803-10-14,Sosnowiec,1806-03-17,Apoplexy,Cemetery in Sosnowiec,
-267,Wiktoria,Pawłowska,F,1,Danzig,1803-03-18,Lanckorona,1871-02-25,Fire,Cemetery in Lanckorona,Cooper
-268,Szymon,Baran,M,1,Lipce,1803-05-09,Cieszyn,1871-04-02,Dysentery,Cemetery in Cieszyn,Shoemaker
-269,Maria,Baran,F,1,Stettin,1803-05-01,Sromowce,1869-05-22,,Cemetery in Sromowce,Merchant
-270,Joanna,Kozłowska,F,1,Gdynia,1803-06-27,Krynica,1871-07-22,Plague,Cemetery in Krynica,Merchant
-271,Czesław,Wróbel,M,1,Sandomierz,1803-07-28,Thorn,1880-05-03,Murder,Cemetery in Thorn,Scribe
-272,Oliwia,Jabłońska,F,1,Olsztyn,1804-07-26,Kielce,1805-10-12,Murder,Cemetery in Kielce,
-273,Stefan,Wójcik,M,1,Sromowce,1804-04-11,Łódź,1857-02-03,Influenza,Cemetery in Łódź,Potter
-274,Czesław,Król,M,1,Lublin,1804-01-27,Chochołów,1869-10-10,Fire,Cemetery in Chochołów,Fisherman
-275,Julia,Kozłowska,F,1,Rzeszów,1804-04-08,Chochołów,1870-01-19,Drowning,Cemetery in Chochołów,
-276,Elżbieta,Kamińska,F,1,Zwierzyniec,1804-12-01,Białystok,1887-02-19,Accident,Cemetery in Białystok,Tanner
-277,Marian,Wieczorek,M,1,Posen,1804-10-09,Posen,1864-05-22,Typhus,Cemetery in Posen,Hunter
-278,Ludwika,Górska,F,1,Danzig,1804-10-21,Wisła,1882-02-09,Dropsy,Cemetery in Wisła,Hunter
-279,Aleksandra,Stępień,F,1,Kielce,1804-10-28,Rzeszów,1866-11-10,Accident,Cemetery in Rzeszów,Artist
-280,Wojciech,Wieczorek,M,1,Kazimierz Dolny,1804-02-17,Zalipie,1860-05-28,Murder,Cemetery in Zalipie,Doctor
-281,Ryszard,Jaworski,M,1,Krynica,1804-01-24,Kraków,1806-06-28,Drowning,Cemetery in Kraków,
-282,Henryk,Wojciechowski,M,1,Gdynia,1804-02-28,Zalipie,1861-07-17,Cancer,Cemetery in Zalipie,Soldier
-283,Mateusz,Kaczmarek,M,1,Złoty Potok,1804-01-11,Sosnowiec,1861-03-06,Dysentery,Cemetery in Sosnowiec,Miner
-284,Wojciech,Wróbel,M,1,Lipce,1804-10-01,Cieszyn,1862-09-17,Dysentery,Cemetery in Cieszyn,Mason
-285,Grażyna,Adamczyk,F,1,Chełmno,1804-02-13,Posen,1808-08-27,Typhus,Cemetery in Posen,
-286,Łukasz,Pawlak,M,1,Kielce,1804-08-07,Białystok,1864-10-22,Murder,Cemetery in Białystok,Merchant
-287,Tomasz,Wróbel,M,1,Gdynia,1804-02-01,Pszczyna,1898-02-27,Smallpox,Cemetery in Pszczyna,Clerk
-288,Dariusz,Kamiński,M,1,Chełmno,1804-12-14,Bronowice,1896-03-27,Consumption,Cemetery in Bronowice,Innkeeper
-289,Alicja,Jankowska,F,1,Chochołów,1804-06-05,Kazimierz Dolny,1806-08-22,Murder,Cemetery in Kazimierz Dolny,
-290,Wanda,Kozłowska,F,1,Pszczyna,1804-11-23,Chełmno,1808-11-12,Dropsy,Cemetery in Chełmno,
-291,Tadeusz,Szymański,M,1,Krynica,1804-12-20,Radom,1885-03-17,Stroke,Cemetery in Radom,Innkeeper
-292,Andrzej,Pawlak,M,1,Bronowice,1804-11-08,Gliwice,1868-03-21,Smallpox,Cemetery in Gliwice,Blacksmith
-293,Kamil,Stępień,M,1,Posen,1804-06-13,Kraków,1808-01-19,Fever,Cemetery in Kraków,
-294,Dariusz,Kozłowski,M,1,Lublin,1804-07-22,Cieszyn,1865-11-17,Dropsy,Cemetery in Cieszyn,Clerk
-295,Filip,Jabłoński,M,1,Wisła,1804-11-28,Gliwice,1805-03-08,Influenza,Cemetery in Gliwice,
-296,Leokadia,Jaworska,F,1,Reszel,1804-11-09,Zalipie,1891-11-08,Fever,Cemetery in Zalipie,Cooper
-297,Małgorzata,Wojciechowska,F,1,Supraśl,1804-04-13,Złoty Potok,1897-01-27,War casualty,Cemetery in Złoty Potok,Cooper
-298,Ignacy,Kamiński,M,1,Częstochowa,1804-10-21,Sanok,1862-04-27,Plague,Cemetery in Sanok,Judge
-299,Monika,Nowakowska,F,1,Tykocin,1804-11-05,Złoty Potok,1866-06-09,Murder,Cemetery in Złoty Potok,Tailor
-300,Zofia,Zając,F,1,Gdynia,1804-04-15,Lanckorona,1862-04-26,Stroke,Cemetery in Lanckorona,Blacksmith
-301,Franciszek,Sikora,M,1,Gdynia,1804-07-07,Bronowice,1842-12-24,Consumption,Cemetery in Bronowice,Potter
-302,Aleksandra,Jaworska,F,1,Pszczyna,1804-03-27,Częstochowa,1891-02-24,,Cemetery in Częstochowa,Soldier
-303,Krystyna,Kaczmarek,F,1,Chełmno,1804-02-19,Posen,1869-03-21,Influenza,Cemetery in Posen,Miner
-304,Elżbieta,Walczak,F,1,Tykocin,1804-04-07,Stettin,1894-12-16,,Cemetery in Stettin,Innkeeper
-305,Maciej,Król,M,1,Posen,1804-01-02,Radom,1868-11-20,Fire,Cemetery in Radom,Blacksmith
-306,Jan,Lewandowski,M,1,Olsztyn,1804-03-12,Sanok,1809-04-18,Influenza,Cemetery in Sanok,
-307,Jakub,Szymański,M,1,Sosnowiec,1804-06-27,Bronowice,1873-10-25,Unknown,Cemetery in Bronowice,Blacksmith
-308,Ryszard,Lewandowski,M,1,Cieszyn,1804-09-06,Radom,1883-07-19,Fever,Cemetery in Radom,Doctor
-309,Jadwiga,Kozłowska,F,1,Lipce,1804-05-09,Chochołów,1863-04-09,Influenza,Cemetery in Chochołów,Innkeeper
-310,Alicja,Szymańska,F,1,Radom,1804-07-08,Reszel,1879-02-26,Murder,Cemetery in Reszel,Soldier
-311,Jan,Jankowski,M,1,Wisła,1805-01-13,Gliwice,1858-04-28,,Cemetery in Gliwice,Hunter
-312,Teresa,Kamińska,F,1,Gliwice,1805-10-23,Pszczyna,1883-08-04,Fever,Cemetery in Pszczyna,Mason
-313,Leokadia,Stępień,F,1,Sandomierz,1805-12-09,Zalipie,1859-12-15,Influenza,Cemetery in Zalipie,Scribe
-314,Ludwika,Walczak,F,1,Cieszyn,1805-06-21,Warszawa,1884-08-16,Cancer,Cemetery in Warszawa,Cooper
-315,Wiktoria,Dudek,F,1,Łódź,1805-06-24,Zalipie,1881-03-23,Pneumonia,Cemetery in Zalipie,Priest
-316,Łukasz,Stępień,M,1,Kraków,1805-10-12,Białystok,1810-07-24,Fever,Cemetery in Białystok,
-317,Leokadia,Kamińska,F,1,Sanok,1805-09-15,Pszczyna,1810-04-10,Stroke,Cemetery in Pszczyna,
-318,Jadwiga,Szymańska,F,1,Bromberg,1805-11-27,Cieszyn,1880-09-11,Dropsy,Cemetery in Cieszyn,Miner
-319,Wiesław,Wójcik,M,1,Sanok,1805-12-09,Gliwice,1889-03-11,Unknown,Cemetery in Gliwice,Soldier
-320,Władysław,Wojciechowski,M,1,Biecz,1805-11-12,Lublin,1865-09-25,Stroke,Cemetery in Lublin,Wheelwright
-321,Ryszard,Krawczyk,M,1,Bronowice,1805-04-18,Złoty Potok,1904-05-27,Starvation,Cemetery in Złoty Potok,Teacher
-322,Wiesław,Baran,M,1,Sandomierz,1805-10-25,Radom,1854-06-13,,Cemetery in Radom,Fisherman
-323,Danuta,Walczak,F,1,Thorn,1805-05-11,Olsztyn,1889-03-27,War casualty,Cemetery in Olsztyn,Teacher
-324,Anna,Dudek,F,1,Lipce,1805-12-08,Pszczyna,1866-04-26,,Cemetery in Pszczyna,Blacksmith
-325,Krystyna,Szymańska,F,1,Gdynia,1805-10-16,Kraków,1846-09-08,Unknown,Cemetery in Kraków,Miner
-326,Maciej,Pawlak,M,1,Sandomierz,1805-02-14,Zwierzyniec,1856-02-19,Murder,Cemetery in Zwierzyniec,Carpenter
-327,Krystyna,Wróbel,F,1,Reszel,1805-02-01,Kielce,1872-02-20,,Cemetery in Kielce,Scribe
-328,Michał,Nowak,M,1,Tykocin,1805-09-27,Cieszyn,1895-05-27,,Cemetery in Cieszyn,Merchant
-329,Ludwika,Kowalska,F,1,Zwierzyniec,1805-07-22,Breslau,1868-10-04,Accident,Cemetery in Breslau,Tailor
-330,Ludwika,Kozłowska,F,1,Krynica,1805-08-26,Lanckorona,1808-08-10,Apoplexy,Cemetery in Lanckorona,
-331,Jan,Woźniak,M,1,Biecz,1805-08-19,Chełmno,1867-04-09,,Cemetery in Chełmno,Blacksmith
-332,Franciszek,Wiśniewski,M,1,Katowice,1805-12-17,Krynica,1850-10-06,,Cemetery in Krynica,Soldier
-333,Helena,Wiśniewska,F,1,Gliwice,1805-07-19,Stettin,1866-09-28,Plague,Cemetery in Stettin,Carpenter
-334,Czesław,Nowakowski,M,1,Częstochowa,1805-02-06,Cieszyn,1879-10-26,Fire,Cemetery in Cieszyn,Potter
-335,Ewa,Pawlak,F,1,Biecz,1805-05-11,Sandomierz,1850-06-05,Smallpox,Cemetery in Sandomierz,Soldier
-336,Marianna,Stępień,F,1,Zalipie,1805-02-10,Biecz,1901-05-19,Fire,Cemetery in Biecz,Miner
-337,Oliwia,Stępień,F,1,Kraków,1805-03-20,Bromberg,1807-03-21,Unknown,Cemetery in Bromberg,
-338,Leokadia,Lewandowska,F,1,Lanckorona,1805-04-14,Wisła,1886-09-06,Accident,Cemetery in Wisła,Tailor
-339,Zuzanna,Jaworska,F,1,Stettin,1805-12-26,Cieszyn,1870-09-23,Apoplexy,Cemetery in Cieszyn,Miller
-340,Dariusz,Nowakowski,M,1,Olsztyn,1805-08-12,Gliwice,1870-08-18,Dropsy,Cemetery in Gliwice,Doctor
-341,Julian,Zieliński,M,1,Warszawa,1805-10-20,Reszel,1850-04-15,Plague,Cemetery in Reszel,Fisherman
-342,Małgorzata,Pawłowska,F,1,Zwierzyniec,1805-03-22,Zwierzyniec,1855-09-25,Cancer,Cemetery in Zwierzyniec,Doctor
-343,Stefan,Wróbel,M,1,Lipce,1805-10-14,Stettin,1873-01-20,Typhus,Cemetery in Stettin,Shepherd
-344,Ryszard,Jabłoński,M,1,Częstochowa,1805-09-14,Chochołów,1885-09-11,Fire,Cemetery in Chochołów,Priest
-345,Ewa,Baran,F,1,Gliwice,1805-08-19,Katowice,1847-09-15,Pneumonia,Cemetery in Katowice,Shoemaker
-346,Danuta,Stępień,F,1,Złoty Potok,1805-04-01,Chochołów,1853-08-15,Influenza,Cemetery in Chochołów,Soldier
-347,Helena,Kowalczyk,F,1,Warszawa,1805-04-05,Zwierzyniec,1837-04-18,Infectious disease,Cemetery in Zwierzyniec,Artist
-348,Ryszard,Wróbel,M,1,Tykocin,1805-03-02,Kraków,1821-11-18,War casualty,Cemetery in Kraków,
-349,Danuta,Zielińska,F,1,Wisła,1806-07-16,Posen,1872-04-01,Smallpox,Cemetery in Posen,Shoemaker
-350,Wiesław,Walczak,M,1,Lipce,1806-03-23,Sromowce,1879-03-28,Infectious disease,Cemetery in Sromowce,Fisherman
-351,Kazimierz,Dudek,M,1,Posen,1806-08-06,Złoty Potok,1867-08-01,Plague,Cemetery in Złoty Potok,Doctor
-352,Natalia,Jabłońska,F,1,Białystok,1806-03-25,Cieszyn,1807-09-18,Dropsy,Cemetery in Cieszyn,
-353,Stefan,Jabłoński,M,1,Gliwice,1806-01-04,Biecz,1869-01-06,Consumption,Cemetery in Biecz,Butcher
-354,Marek,Stępień,M,1,Zalipie,1806-09-11,Gliwice,1876-03-21,Smallpox,Cemetery in Gliwice,Shoemaker
-355,Leon,Malinowski,M,1,Pszczyna,1806-02-20,Lublin,1849-05-16,Starvation,Cemetery in Lublin,Cooper
-356,Agnieszka,Wójcik,F,1,Sromowce,1806-06-08,Kraków,1872-06-14,Drowning,Cemetery in Kraków,Soldier
-357,Zofia,Król,F,1,Cieszyn,1806-11-16,Danzig,1889-08-18,Fire,Cemetery in Danzig,Priest
-358,Grażyna,Kozłowska,F,1,Lublin,1806-03-17,Wisła,1901-12-08,Starvation,Cemetery in Wisła,Hunter
-359,Adam,Wieczorek,M,1,Kraków,1806-06-28,Złoty Potok,1811-07-12,Pneumonia,Cemetery in Złoty Potok,
-360,Marcin,Górski,M,1,Warszawa,1806-11-18,Tykocin,1808-02-16,Accident,Cemetery in Tykocin,
-361,Czesława,Stępień,F,1,Katowice,1806-05-09,Kazimierz Dolny,1875-05-23,Unknown,Cemetery in Kazimierz Dolny,Farmer
-362,Tadeusz,Wieczorek,M,1,Lipce,1806-02-08,Bromberg,1873-12-10,Dropsy,Cemetery in Bromberg,Merchant
-363,Andrzej,Jaworski,M,1,Reszel,1806-04-06,Sanok,1881-02-13,Pneumonia,Cemetery in Sanok,Hunter
-364,Grażyna,Baran,F,1,Kazimierz Dolny,1806-01-28,Krynica,1855-02-05,Apoplexy,Cemetery in Krynica,Wheelwright
-365,Teresa,Wróbel,F,1,Sromowce,1806-03-25,Olsztyn,1849-04-27,Consumption,Cemetery in Olsztyn,Butcher
-366,Irena,Adamczyk,F,1,Krynica,1806-01-08,Częstochowa,1844-10-22,Murder,Cemetery in Częstochowa,Artist
-367,Oliwia,Szymańska,F,1,Krynica,1806-10-23,Kazimierz Dolny,1862-12-22,Infectious disease,Cemetery in Kazimierz Dolny,Soldier
-368,Tadeusz,Wróbel,M,1,Bromberg,1806-10-05,Gliwice,1809-10-18,Drowning,Cemetery in Gliwice,
-369,Łukasz,Kamiński,M,1,Tykocin,1806-11-18,Sromowce,1881-11-17,Cholera,Cemetery in Sromowce,Tailor
-370,Antoni,Kowalski,M,1,Łódź,1806-10-22,Kazimierz Dolny,1883-04-12,Pneumonia,Cemetery in Kazimierz Dolny,Miner
-371,Helena,Szymańska,F,1,Sosnowiec,1806-02-23,Rzeszów,1894-09-06,Accident,Cemetery in Rzeszów,Priest
-372,Aleksandra,Wiśniewska,F,1,Warszawa,1806-05-11,Tykocin,1871-10-21,Plague,Cemetery in Tykocin,Baker
-373,Aleksandra,Pawlak,F,1,Breslau,1806-04-24,Rzeszów,1872-10-25,Fire,Cemetery in Rzeszów,Blacksmith
-374,Władysław,Stępień,M,1,Sandomierz,1806-11-18,Thorn,1867-09-17,Murder,Cemetery in Thorn,Judge
-375,Mateusz,Baran,M,1,Bromberg,1806-11-16,Lublin,1882-02-15,Consumption,Cemetery in Lublin,Mason
-376,Czesław,Kozłowski,M,1,Bronowice,1806-04-13,Chełmno,1842-01-06,Smallpox,Cemetery in Chełmno,Baker
-377,Teresa,Lewandowska,F,1,Łódź,1806-10-05,Radom,1884-09-24,Starvation,Cemetery in Radom,Doctor
-378,Kazimierz,Michalski,M,1,Kielce,1806-04-26,Sanok,1892-06-14,,Cemetery in Sanok,Tanner
-379,Paweł,Jaworski,M,1,Bronowice,1806-11-28,Złoty Potok,1875-12-06,Typhus,Cemetery in Złoty Potok,Lawyer
-380,Halina,Pawłowska,F,1,Chochołów,1806-01-13,Sandomierz,1838-12-18,Influenza,Cemetery in Sandomierz,Soldier
-381,Agnieszka,Baran,F,1,Biecz,1806-08-25,Sandomierz,1828-07-07,Drowning,Cemetery in Sandomierz,Lawyer
-382,Piotr,Nowakowski,M,1,Supraśl,1806-12-12,Łódź,1874-05-09,,Cemetery in Łódź,Tanner
-383,Stefania,Pawlak,F,1,Rzeszów,1806-05-08,Supraśl,1890-04-27,Drowning,Cemetery in Supraśl,Innkeeper
-384,Filip,Zając,M,1,Reszel,1806-02-17,Wisła,1809-05-05,,Cemetery in Wisła,
-385,Dariusz,Kaczmarek,M,1,Biecz,1806-04-09,Katowice,1856-06-18,,Cemetery in Katowice,Farmer
-386,Tadeusz,Kowalczyk,M,1,Złoty Potok,1806-05-19,Rzeszów,1864-08-09,Drowning,Cemetery in Rzeszów,Artist
-387,Filip,Walczak,M,1,Częstochowa,1806-07-20,Wisła,1859-01-28,Starvation,Cemetery in Wisła,Fisherman
-388,Aleksandra,Król,F,1,Rzeszów,1806-06-18,Thorn,1895-08-21,Cancer,Cemetery in Thorn,Blacksmith
-389,Adam,Pawłowski,M,1,Sandomierz,1806-10-19,Lipce,1862-02-22,Fire,Cemetery in Lipce,Shepherd
-390,Stanisław,Baran,M,1,Złoty Potok,1806-06-17,Supraśl,1895-09-09,Fever,Cemetery in Supraśl,Fisherman
-391,Piotr,Lewandowski,M,1,Bronowice,1806-02-01,Danzig,1887-12-02,Pneumonia,Cemetery in Danzig,Doctor
-392,Anna,Szymańska,F,1,Lipce,1806-12-17,Zalipie,1848-07-06,Heart failure,Cemetery in Zalipie,Doctor
-393,Tomasz,Wróbel,M,1,Łódź,1806-04-23,Chełmno,1867-02-13,Unknown,Cemetery in Chełmno,Lawyer
-394,Maja,Lewandowska,F,1,Kazimierz Dolny,1806-04-14,Łódź,1810-07-02,Accident,Cemetery in Łódź,
-395,Czesława,Szymańska,F,1,Warszawa,1806-12-06,Kraków,1876-04-12,Dropsy,Cemetery in Kraków,Butcher
-396,Andrzej,Kaczmarek,M,1,Złoty Potok,1806-12-23,Posen,1860-02-12,Influenza,Cemetery in Posen,Priest
-397,Wojciech,Stępień,M,1,Złoty Potok,1807-08-07,Posen,1841-04-15,Apoplexy,Cemetery in Posen,
-398,Stefania,Malinowska,F,1,Radom,1807-08-08,Kielce,1874-06-22,,Cemetery in Kielce,Clerk
-399,Ewa,Wójcik,F,1,Supraśl,1807-02-16,Lanckorona,1868-07-06,Murder,Cemetery in Lanckorona,Doctor
-400,Monika,Kamińska,F,1,Sosnowiec,1807-05-07,Katowice,1879-04-22,Accident,Cemetery in Katowice,Innkeeper
-401,Aleksandra,Wieczorek,F,1,Supraśl,1807-08-20,Tykocin,1871-08-17,Cholera,Cemetery in Tykocin,Shoemaker
-402,Jadwiga,Jaworska,F,1,Tykocin,1807-05-16,Bromberg,1878-02-11,Apoplexy,Cemetery in Bromberg,Butcher
-403,Zygmunt,Wojciechowski,M,1,Pszczyna,1807-06-13,Zwierzyniec,1857-09-23,Murder,Cemetery in Zwierzyniec,Teacher
-404,Marian,Kaczmarek,M,1,Kielce,1807-04-28,Częstochowa,1879-05-16,Dysentery,Cemetery in Częstochowa,Artist
-405,Bartosz,Walczak,M,1,Katowice,1807-07-05,Chełmno,1862-12-06,Starvation,Cemetery in Chełmno,Hunter
-406,Mateusz,Dudek,M,1,Złoty Potok,1807-11-01,Białystok,1885-02-07,Unknown,Cemetery in Białystok,Lawyer
-407,Leokadia,Adamczyk,F,1,Pszczyna,1807-06-22,Łódź,1811-04-26,Unknown,Cemetery in Łódź,
-408,Elżbieta,Pawlak,F,1,Złoty Potok,1807-07-07,Sandomierz,1864-06-28,,Cemetery in Sandomierz,Butcher
-409,Marian,Kamiński,M,1,Częstochowa,1807-01-14,Sanok,1845-04-25,,Cemetery in Sanok,Scribe
-410,Zofia,Jankowska,F,1,Lublin,1807-07-03,Kraków,1866-09-08,Infectious disease,Cemetery in Kraków,Artist
-411,Stefan,Woźniak,M,1,Olsztyn,1807-10-27,Częstochowa,1873-07-18,Drowning,Cemetery in Częstochowa,Shoemaker
-412,Andrzej,Wiśniewski,M,1,Bromberg,1807-01-03,Łódź,1868-08-24,Smallpox,Cemetery in Łódź,Judge
-413,Filip,Stępień,M,1,Kielce,1807-05-13,Reszel,1851-11-14,Dropsy,Cemetery in Reszel,Mason
-414,Ewa,Kozłowska,F,1,Sromowce,1807-08-22,Zwierzyniec,1876-03-11,,Cemetery in Zwierzyniec,Potter
-415,Adam,Jabłoński,M,1,Pszczyna,1807-06-25,Lanckorona,1884-11-20,,Cemetery in Lanckorona,Merchant
-416,Irena,Nowakowska,F,1,Rzeszów,1807-01-11,Gliwice,1859-04-14,Starvation,Cemetery in Gliwice,Wheelwright
-417,Kamil,Wróbel,M,1,Sandomierz,1807-03-07,Tykocin,1862-06-20,Drowning,Cemetery in Tykocin,Miller
-418,Krzysztof,Jabłoński,M,1,Łódź,1807-08-16,Posen,1856-10-14,Cholera,Cemetery in Posen,Lawyer
-419,Czesława,Kamińska,F,1,Zalipie,1807-06-13,Biecz,1904-08-09,Drowning,Cemetery in Biecz,Soldier
-420,Mirosław,Stępień,M,1,Kraków,1807-03-13,Wisła,1861-11-17,Unknown,Cemetery in Wisła,Priest
-421,Marek,Sikora,M,1,Pszczyna,1807-10-27,Rzeszów,1855-04-02,Fire,Cemetery in Rzeszów,Soldier
-422,Jakub,Jaworski,M,1,Supraśl,1807-05-27,Bromberg,1813-05-19,Dropsy,Cemetery in Bromberg,
-423,Stefan,Pawłowski,M,1,Thorn,1807-09-18,Biecz,1865-02-01,Plague,Cemetery in Biecz,Shoemaker
-424,Grażyna,Lewandowska,F,1,Chochołów,1807-03-25,Sandomierz,1857-11-25,Stroke,Cemetery in Sandomierz,Wheelwright
-425,Irena,Szymańska,F,1,Sanok,1807-06-17,Zalipie,1879-04-01,Influenza,Cemetery in Zalipie,Doctor
-426,Marek,Jankowski,M,1,Thorn,1808-12-11,Sandomierz,1893-03-14,Dropsy,Cemetery in Sandomierz,Blacksmith
-427,Józef,Kamiński,M,1,Krynica,1808-09-23,Olsztyn,1861-11-07,Cholera,Cemetery in Olsztyn,Merchant
-428,Kazimiera,Stępień,F,1,Katowice,1808-06-27,Lublin,1809-09-27,Murder,Cemetery in Lublin,
-429,Bożena,Walczak,F,1,Danzig,1808-08-22,Zalipie,1870-08-19,Accident,Cemetery in Zalipie,Teacher
-430,Jakub,Jabłoński,M,1,Sromowce,1808-09-13,Pszczyna,1859-11-06,Heart failure,Cemetery in Pszczyna,Blacksmith
-431,Ewa,Jabłońska,F,1,Sanok,1808-06-08,Olsztyn,1862-12-23,,Cemetery in Olsztyn,Doctor
-432,Helena,Stępień,F,1,Sosnowiec,1808-04-12,Sromowce,1856-03-10,,Cemetery in Sromowce,Priest
-433,Agnieszka,Malinowska,F,1,Chełmno,1808-04-05,Biecz,1895-08-03,Dropsy,Cemetery in Biecz,Soldier
-434,Julia,Król,F,1,Katowice,1808-11-21,Supraśl,1847-09-02,Cancer,Cemetery in Supraśl,Shoemaker
-435,Ignacy,Kozłowski,M,1,Gliwice,1808-12-15,Zalipie,1870-04-06,Starvation,Cemetery in Zalipie,Weaver
-436,Bożena,Górska,F,1,Rzeszów,1808-03-28,Sanok,1862-09-01,Infectious disease,Cemetery in Sanok,Blacksmith
-437,Natalia,Stępień,F,1,Tykocin,1808-09-06,Krynica,1869-05-22,Smallpox,Cemetery in Krynica,Lawyer
-438,Monika,Szymańska,F,1,Stettin,1808-03-12,Biecz,1882-04-20,Accident,Cemetery in Biecz,Clerk
-439,Henryk,Wójcik,M,1,Kraków,1808-03-24,Kazimierz Dolny,1884-11-26,,Cemetery in Kazimierz Dolny,Artist
-440,Ryszard,Jaworski,M,1,Kraków,1808-04-12,Pszczyna,1884-12-01,,Cemetery in Pszczyna,Blacksmith
-441,Czesława,Krawczyk,F,1,Kazimierz Dolny,1808-08-13,Breslau,1847-02-27,Dysentery,Cemetery in Breslau,Judge
-442,Marcin,Nowak,M,1,Lipce,1808-02-20,Pszczyna,1877-02-10,Starvation,Cemetery in Pszczyna,Priest
-443,Ludwika,Kowalska,F,1,Lipce,1808-01-13,Sandomierz,1813-11-26,Starvation,Cemetery in Sandomierz,
-444,Irena,Szymańska,F,1,Reszel,1808-10-15,Lublin,1812-12-25,,Cemetery in Lublin,
-445,Wiesław,Wiśniewski,M,1,Danzig,1808-07-22,Cieszyn,1890-01-24,Starvation,Cemetery in Cieszyn,Miner
-446,Katarzyna,Pawlak,F,1,Złoty Potok,1808-04-25,Pszczyna,1873-07-25,Cancer,Cemetery in Pszczyna,Mason
-447,Maciej,Stępień,M,1,Katowice,1808-12-16,Złoty Potok,1872-09-18,,Cemetery in Złoty Potok,Shoemaker
-448,Tadeusz,Stępień,M,1,Chochołów,1808-08-22,Kielce,1840-04-16,Dropsy,Cemetery in Kielce,Cooper
-449,Jan,Lewandowski,M,1,Gdynia,1808-08-23,Łódź,1813-03-28,Influenza,Cemetery in Łódź,
-450,Henryk,Jaworski,M,1,Posen,1808-10-13,Krynica,1907-06-11,Heart failure,Cemetery in Krynica,Tailor
-451,Kamil,Kamiński,M,1,Chełmno,1808-10-14,Tykocin,1850-03-24,Unknown,Cemetery in Tykocin,Teacher
-452,Szymon,Zając,M,1,Częstochowa,1808-03-10,Lipce,1888-03-20,Starvation,Cemetery in Lipce,Potter
-453,Jadwiga,Kaczmarek,F,1,Stettin,1808-02-20,Pszczyna,1810-02-15,Unknown,Cemetery in Pszczyna,
-454,Adam,Wróbel,M,1,Białystok,1808-03-25,Biecz,1810-01-22,Dysentery,Cemetery in Biecz,
-455,Natalia,Szymańska,F,1,Cieszyn,1808-08-03,Bromberg,1874-08-22,Stroke,Cemetery in Bromberg,Clerk
-456,Maja,Jankowska,F,1,Katowice,1809-12-16,Katowice,1848-11-17,Pneumonia,Cemetery in Katowice,Weaver
-457,Michał,Dudek,M,1,Biecz,1809-05-09,Biecz,1867-11-15,Infectious disease,Cemetery in Biecz,Soldier
-458,Helena,Jabłońska,F,1,Białystok,1809-07-08,Białystok,1837-10-17,Stroke,Cemetery in Białystok,Mason
-459,Czesław,Wójcik,M,1,Supraśl,1809-04-08,Biecz,1868-11-26,War casualty,Cemetery in Biecz,Shoemaker
-460,Barbara,Kamińska,F,1,Krynica,1809-07-28,Chochołów,1825-09-14,Stroke,Cemetery in Chochołów,
-461,Monika,Wieczorek,F,1,Tykocin,1809-10-18,Radom,1898-09-22,,Cemetery in Radom,Priest
-462,Irena,Górska,F,1,Radom,1809-04-23,Kazimierz Dolny,1812-05-15,Murder,Cemetery in Kazimierz Dolny,
-463,Zuzanna,Stępień,F,1,Posen,1809-02-25,Posen,1868-08-03,Dropsy,Cemetery in Posen,Merchant
-464,Michał,Baran,M,1,Warszawa,1809-08-26,Złoty Potok,1872-07-27,War casualty,Cemetery in Złoty Potok,Fisherman
-465,Leokadia,Kaczmarek,F,1,Reszel,1809-12-01,Olsztyn,1880-12-22,Influenza,Cemetery in Olsztyn,Innkeeper
-466,Kazimiera,Adamczyk,F,1,Supraśl,1809-02-25,Radom,1814-09-04,Infectious disease,Cemetery in Radom,
-467,Marian,Szymański,M,1,Warszawa,1809-09-07,Lanckorona,1890-12-25,Stroke,Cemetery in Lanckorona,Shoemaker
-468,Józefa,Nowak,F,1,Katowice,1809-09-17,Sromowce,1837-03-09,Heart failure,Cemetery in Sromowce,Shepherd
-469,Kamil,Wiśniewski,M,1,Sromowce,1809-06-19,Chełmno,1875-03-06,,Cemetery in Chełmno,Soldier
-470,Michał,Lewandowski,M,1,Danzig,1809-09-23,Supraśl,1851-10-22,Fever,Cemetery in Supraśl,
-471,Henryk,Pawłowski,M,1,Częstochowa,1809-08-15,Chochołów,1887-06-26,,Cemetery in Chochołów,Weaver
-472,Henryk,Wróbel,M,1,Kazimierz Dolny,1809-04-02,Thorn,1859-08-28,Dropsy,Cemetery in Thorn,Tailor
-473,Jan,Baran,M,1,Posen,1809-10-16,Lublin,1810-03-05,,Cemetery in Lublin,
-474,Elżbieta,Nowakowska,F,1,Gdynia,1809-08-11,Zwierzyniec,1874-09-04,Fever,Cemetery in Zwierzyniec,Mason
-475,Natalia,Stępień,F,1,Sandomierz,1809-01-28,Sanok,1874-02-16,Heart failure,Cemetery in Sanok,Carpenter
-476,Wiesław,Pawlak,M,1,Thorn,1809-09-23,Chochołów,1869-07-03,Consumption,Cemetery in Chochołów,Priest
-477,Wiktoria,Jaworska,F,1,Białystok,1809-11-23,Bronowice,1813-03-15,Accident,Cemetery in Bronowice,
-478,Franciszek,Kozłowski,M,1,Wisła,1810-01-07,Gdynia,1872-03-12,Unknown,Cemetery in Gdynia,Miner
-479,Józef,Górski,M,1,Biecz,1810-02-26,Lublin,1865-01-21,Influenza,Cemetery in Lublin,Weaver
-480,Ignacy,Wieczorek,M,1,Olsztyn,1810-04-15,Biecz,1811-01-28,Pneumonia,Cemetery in Biecz,
-481,Julian,Jaworski,M,1,Chełmno,1810-11-10,Biecz,1814-10-22,Pneumonia,Cemetery in Biecz,
-482,Czesław,Baran,M,1,Gliwice,1810-09-02,Zalipie,1900-06-05,Typhus,Cemetery in Zalipie,Farmer
-483,Mirosław,Dudek,M,1,Reszel,1810-04-25,Rzeszów,1858-09-19,,Cemetery in Rzeszów,Scribe
-484,Rozalia,Jankowska,F,1,Złoty Potok,1810-10-01,Bromberg,1847-07-14,Cancer,Cemetery in Bromberg,Cooper
-485,Józef,Nowak,M,1,Radom,1810-09-06,Bromberg,1893-02-02,Plague,Cemetery in Bromberg,Blacksmith
-486,Ewa,Kowalska,F,1,Katowice,1810-07-17,Białystok,1812-02-14,Pneumonia,Cemetery in Białystok,
-487,Katarzyna,Woźniak,F,1,Posen,1810-04-04,Chochołów,1854-07-02,Starvation,Cemetery in Chochołów,Potter
-488,Wiesław,Wiśniewski,M,1,Rzeszów,1810-03-01,Zwierzyniec,1860-10-22,Apoplexy,Cemetery in Zwierzyniec,Merchant
-489,Ewa,Stępień,F,1,Reszel,1810-09-13,Radom,1870-10-25,Fever,Cemetery in Radom,Tanner
-490,Jadwiga,Kozłowska,F,1,Biecz,1810-10-17,Lublin,1872-03-20,Cholera,Cemetery in Lublin,Cooper
-491,Ludwika,Jabłońska,F,1,Złoty Potok,1810-08-24,Lublin,1883-06-05,Pneumonia,Cemetery in Lublin,Farmer
-492,Irena,Jabłońska,F,1,Danzig,1810-09-08,Gdynia,1872-12-06,Infectious disease,Cemetery in Gdynia,Artist
-493,Agnieszka,Kamińska,F,1,Chochołów,1810-12-06,Sanok,1869-03-04,Influenza,Cemetery in Sanok,Wheelwright
-494,Jerzy,Jaworski,M,1,Kraków,1810-04-17,Chochołów,1869-07-07,Cholera,Cemetery in Chochołów,Shepherd
-495,Anna,Król,F,1,Katowice,1811-07-14,Złoty Potok,1814-07-13,War casualty,Cemetery in Złoty Potok,
-496,Maciej,Wieczorek,M,1,Stettin,1811-08-21,Łódź,1853-03-27,Murder,Cemetery in Łódź,Miner
-497,Ignacy,Szymański,M,1,Pszczyna,1811-06-16,Tykocin,1881-09-19,Starvation,Cemetery in Tykocin,Carpenter
-498,Wanda,Krawczyk,F,1,Posen,1811-06-22,Pszczyna,1876-10-22,Dropsy,Cemetery in Pszczyna,
-499,Józef,Kaczmarek,M,1,Krynica,1811-08-23,Złoty Potok,1859-02-15,Plague,Cemetery in Złoty Potok,Shoemaker
-500,Bartosz,Szymański,M,1,Pszczyna,1811-02-12,Stettin,1877-11-19,Cancer,Cemetery in Stettin,Tailor
-501,Kamil,Nowak,M,1,Zwierzyniec,1811-08-09,Bromberg,1864-08-17,Cholera,Cemetery in Bromberg,Potter
-502,Czesław,Wiśniewski,M,1,Gdynia,1811-02-02,Łódź,1882-05-27,Unknown,Cemetery in Łódź,Merchant
-503,Marek,Lewandowski,M,1,Lublin,1811-09-02,Sanok,1839-01-16,Apoplexy,Cemetery in Sanok,Miner
-504,Genowefa,Jabłońska,F,1,Reszel,1811-12-25,Reszel,1878-07-08,Dysentery,Cemetery in Reszel,Mason
-505,Aleksandra,Stępień,F,1,Lanckorona,1811-06-15,Lipce,1876-08-20,Heart failure,Cemetery in Lipce,Miner
-506,Mirosław,Jankowski,M,1,Zalipie,1812-09-17,Kazimierz Dolny,1886-09-08,Cancer,Cemetery in Kazimierz Dolny,Merchant
-507,Leon,Dudek,M,1,Zwierzyniec,1812-08-01,Białystok,1905-10-16,Unknown,Cemetery in Białystok,Potter
-508,Leokadia,Kozłowska,F,1,Radom,1812-08-08,Olsztyn,1813-04-23,Drowning,Cemetery in Olsztyn,
-509,Wiesław,Stępień,M,1,Sandomierz,1812-12-25,Sromowce,1816-12-24,Fire,Cemetery in Sromowce,
-510,Jan,Wieczorek,M,1,Gliwice,1812-12-19,Łódź,1875-03-07,Fire,Cemetery in Łódź,Shepherd
-511,Henryk,Jaworski,M,1,Breslau,1812-11-18,Pszczyna,1837-03-13,Consumption,Cemetery in Pszczyna,
-512,Julian,Baran,M,1,Reszel,1812-02-18,Chochołów,1866-10-27,Murder,Cemetery in Chochołów,Scribe
-513,Leokadia,Szymańska,F,1,Katowice,1812-12-03,Biecz,1851-02-23,Fever,Cemetery in Biecz,Lawyer
-514,Władysław,Woźniak,M,1,Kraków,1812-03-02,Rzeszów,1859-03-02,War casualty,Cemetery in Rzeszów,Judge
-515,Grażyna,Wróbel,F,1,Kraków,1812-01-23,Bromberg,1815-12-18,Heart failure,Cemetery in Bromberg,
-516,Antoni,Nowakowski,M,1,Danzig,1812-04-15,Lipce,1886-11-12,Drowning,Cemetery in Lipce,Tanner
-517,Tomasz,Pawlak,M,1,Bromberg,1812-09-01,Lublin,1854-04-27,Murder,Cemetery in Lublin,Soldier
-518,Filip,Jaworski,M,1,Supraśl,1812-11-26,Pszczyna,1815-09-06,Fire,Cemetery in Pszczyna,
-519,Stefan,Krawczyk,M,1,Tykocin,1812-05-12,Rzeszów,1876-11-15,,Cemetery in Rzeszów,Cooper
-520,Danuta,Jankowska,F,1,Lanckorona,1813-04-08,Łódź,1860-12-19,Dropsy,Cemetery in Łódź,Hunter
-521,Wiktoria,Król,F,1,Katowice,1813-07-19,Stettin,1884-08-15,Pneumonia,Cemetery in Stettin,Tailor
-522,Stefania,Kozłowska,F,1,Gliwice,1813-02-28,Lipce,1880-08-09,,Cemetery in Lipce,Cooper
-523,Krzysztof,Wieczorek,M,1,Warszawa,1813-01-02,Cieszyn,1865-12-24,Dropsy,Cemetery in Cieszyn,Potter
-524,Katarzyna,Górska,F,1,Sosnowiec,1813-03-25,Cieszyn,1884-01-19,Heart failure,Cemetery in Cieszyn,Lawyer
-525,Szymon,Szymański,M,1,Krynica,1813-02-06,Częstochowa,1880-09-01,Fever,Cemetery in Częstochowa,Cooper
-526,Stefan,Krawczyk,M,1,Wisła,1813-01-28,Sandomierz,1878-10-17,Typhus,Cemetery in Sandomierz,Lawyer
-527,Wanda,Baran,F,1,Pszczyna,1813-04-21,Katowice,1874-02-14,Pneumonia,Cemetery in Katowice,Weaver
-528,Ryszard,Kaczmarek,M,1,Zalipie,1813-06-19,Cieszyn,1886-08-03,Plague,Cemetery in Cieszyn,Hunter
-529,Marcin,Wiśniewski,M,1,Sanok,1813-08-10,Krynica,1903-08-18,Accident,Cemetery in Krynica,Mason
-530,Jakub,Stępień,M,1,Złoty Potok,1813-10-25,Częstochowa,1852-12-08,,Cemetery in Częstochowa,Weaver
-531,Krystyna,Jabłońska,F,1,Warszawa,1813-09-20,Bromberg,1903-11-12,War casualty,Cemetery in Bromberg,Tailor
-532,Andrzej,Jaworski,M,1,Kazimierz Dolny,1813-03-24,Katowice,1907-06-28,Murder,Cemetery in Katowice,Potter
-533,Oliwia,Wieczorek,F,1,Białystok,1813-03-26,Chochołów,1866-12-11,,Cemetery in Chochołów,Wheelwright
-534,Ignacy,Wieczorek,M,1,Łódź,1814-03-21,Gliwice,1815-03-21,Cancer,Cemetery in Gliwice,
-535,Kazimierz,Jankowski,M,1,Kazimierz Dolny,1815-04-23,Pszczyna,1869-01-21,Fire,Cemetery in Pszczyna,Weaver
-536,Józefa,Król,F,1,Reszel,1815-12-18,Reszel,1899-02-04,Typhus,Cemetery in Reszel,Potter
-537,Joanna,Wieczorek,F,1,Bronowice,1815-09-14,Radom,1857-01-16,War casualty,Cemetery in Radom,Soldier
-538,Elżbieta,Stępień,F,1,Supraśl,1815-05-04,Sanok,1855-10-23,Plague,Cemetery in Sanok,Teacher
-539,Tomasz,Szymański,M,1,Chełmno,1815-01-03,Zalipie,1818-09-10,Infectious disease,Cemetery in Zalipie,
-540,Jerzy,Stępień,M,1,Sromowce,1815-01-09,Sosnowiec,1877-12-03,Typhus,Cemetery in Sosnowiec,Potter
-541,Katarzyna,Jabłońska,F,1,Bronowice,1815-11-08,Danzig,1868-10-09,Pneumonia,Cemetery in Danzig,Doctor
-542,Władysław,Kaczmarek,M,1,Częstochowa,1815-09-05,Breslau,1891-12-22,,Cemetery in Breslau,Carpenter
-543,Krzysztof,Dudek,M,1,Radom,1815-12-08,Lublin,1877-04-20,Murder,Cemetery in Lublin,Blacksmith
-544,Grażyna,Kozłowska,F,1,Posen,1816-02-22,Bronowice,1881-06-25,Cancer,Cemetery in Bronowice,Butcher
-545,Mateusz,Górski,M,1,Cieszyn,1816-11-27,Posen,1873-02-06,Fever,Cemetery in Posen,Doctor
-546,Kazimierz,Szymański,M,1,Krynica,1816-07-12,Lublin,1906-08-20,Apoplexy,Cemetery in Lublin,Shepherd
-547,Joanna,Stępień,F,1,Gdynia,1817-07-19,Supraśl,1848-05-19,Dysentery,Cemetery in Supraśl,Teacher
-548,Maria,Kaczmarek,F,1,Sromowce,1817-12-25,Olsztyn,1887-02-22,,Cemetery in Olsztyn,Hunter
-549,Grzegorz,Król,M,1,Thorn,1818-04-22,Tykocin,1915-03-07,,Cemetery in Tykocin,Carpenter
-550,Paweł,Stępień,M,1,Warszawa,1818-06-11,Olsztyn,1878-09-20,Heart failure,Cemetery in Olsztyn,Fisherman
-551,Marcin,Pawlak,M,1,Kielce,1818-05-16,Rzeszów,1885-12-26,Pneumonia,Cemetery in Rzeszów,Doctor
-552,Monika,Nowakowska,F,1,Cieszyn,1819-05-03,Supraśl,1854-03-07,Influenza,Cemetery in Supraśl,Doctor
-553,Katarzyna,Pawlak,F,1,Zwierzyniec,1821-02-04,Supraśl,1874-09-18,,Cemetery in Supraśl,Potter
-554,Czesława,Stępień,F,1,Pszczyna,1821-10-05,Łódź,1883-01-10,Fire,Cemetery in Łódź,Doctor
-555,Piotr,Nowakowski,M,1,Rzeszów,1822-03-05,Biecz,1877-02-24,Typhus,Cemetery in Biecz,Soldier
-556,Jan,Nowakowski,M,1,Olsztyn,1823-02-13,Stettin,1871-10-21,Stroke,Cemetery in Stettin,Shepherd
-557,Ryszard,Jaworski,M,1,Częstochowa,1824-12-09,Białystok,1827-04-21,,Cemetery in Białystok,
-558,Czesław,Kowalski,M,1,Sromowce,1824-08-06,Posen,1873-09-15,Dropsy,Cemetery in Posen,Tailor
-559,Paweł,Jankowski,M,1,Chełmno,1825-12-12,Złoty Potok,1890-11-14,Plague,Cemetery in Złoty Potok,Hunter
-560,Jerzy,Kozłowski,M,1,Stettin,1827-03-19,Kraków,1884-10-21,,Cemetery in Kraków,Clerk
-561,Barbara,Kamińska,F,1,Warszawa,1827-02-21,Zalipie,1892-12-16,Plague,Cemetery in Zalipie,Judge
-562,Grzegorz,Zieliński,M,1,Sromowce,1828-09-20,Breslau,1894-02-07,Infectious disease,Cemetery in Breslau,Merchant
-563,Aleksandra,Kozłowska,F,1,Lipce,1828-12-14,Zalipie,1872-06-17,Apoplexy,Cemetery in Zalipie,Miner
-564,Agnieszka,Pawlak,F,1,Kazimierz Dolny,1828-05-24,Złoty Potok,1883-02-22,Unknown,Cemetery in Złoty Potok,Farmer
-565,Jerzy,Szymański,M,1,Kazimierz Dolny,1828-02-15,Sromowce,1863-07-18,Infectious disease,Cemetery in Sromowce,Doctor
-566,Grzegorz,Stępień,M,1,Danzig,1828-04-01,Radom,1830-04-04,Fire,Cemetery in Radom,
-567,Maciej,Stępień,M,1,Lublin,1828-05-11,Breslau,1896-02-23,Accident,Cemetery in Breslau,Judge
-568,Danuta,Kaczmarek,F,1,Gliwice,1828-08-02,Gliwice,1907-06-15,Influenza,Cemetery in Gliwice,Farmer
-569,Leokadia,Jabłońska,F,1,Sandomierz,1829-12-08,Rzeszów,1900-06-02,Dysentery,Cemetery in Rzeszów,Doctor
-570,Józefa,Wróbel,F,1,Pszczyna,1829-05-01,Thorn,1880-08-28,,Cemetery in Thorn,Weaver
-571,Katarzyna,Baran,F,1,Breslau,1829-05-07,Breslau,1881-12-09,Typhus,Cemetery in Breslau,Priest
-572,Barbara,Wojciechowska,F,1,Biecz,1829-04-11,Reszel,1902-08-27,Heart failure,Cemetery in Reszel,Butcher
-573,Danuta,Adamczyk,F,1,Wisła,1829-08-17,Rzeszów,1917-04-16,Dropsy,Cemetery in Rzeszów,Weaver
-574,Anna,Stępień,F,1,Zalipie,1830-05-20,Krynica,1904-12-14,Murder,Cemetery in Krynica,Cooper
-575,Danuta,Stępień,F,1,Krynica,1830-08-23,Gliwice,1896-06-27,Smallpox,Cemetery in Gliwice,Shepherd
-576,Marek,Jabłoński,M,1,Breslau,1830-07-20,Chełmno,1897-07-25,Fire,Cemetery in Chełmno,Merchant
-577,Mateusz,Baran,M,1,Danzig,1830-08-10,Olsztyn,1904-08-28,,Cemetery in Olsztyn,Lawyer
-578,Marian,Jaworski,M,1,Łódź,1830-12-10,Cieszyn,1888-03-05,,Cemetery in Cieszyn,Fisherman
-579,Zuzanna,Kowalczyk,F,1,Zalipie,1830-08-28,Posen,1904-01-17,,Cemetery in Posen,Butcher
-580,Kazimiera,Kamińska,F,1,Breslau,1830-09-22,Zalipie,1908-06-16,Drowning,Cemetery in Zalipie,Wheelwright
-581,Rozalia,Krawczyk,F,1,Supraśl,1830-03-05,Sromowce,1835-02-21,Infectious disease,Cemetery in Sromowce,
-582,Teresa,Zielińska,F,1,Katowice,1831-11-15,Lipce,1920-06-22,Plague,Cemetery in Lipce,Fisherman
-583,Rozalia,Baran,F,1,Kraków,1831-02-01,Sanok,1904-04-06,Unknown,Cemetery in Sanok,Priest
-584,Wojciech,Kowalczyk,M,1,Warszawa,1831-06-14,Bronowice,1894-10-22,Consumption,Cemetery in Bronowice,Butcher
-585,Elżbieta,Adamczyk,F,1,Posen,1831-10-06,Bronowice,1888-06-26,Dysentery,Cemetery in Bronowice,Wheelwright
-586,Joanna,Lewandowska,F,1,Częstochowa,1831-10-25,Częstochowa,1909-11-01,Heart failure,Cemetery in Częstochowa,Judge
-587,Marianna,Zielińska,F,1,Gliwice,1831-09-20,Lublin,1862-05-27,Dropsy,Cemetery in Lublin,Tailor
-588,Tomasz,Baran,M,1,Chochołów,1831-12-09,Częstochowa,1873-10-12,Dysentery,Cemetery in Częstochowa,Baker
-589,Grzegorz,Baran,M,1,Thorn,1831-04-02,Biecz,1858-02-25,,Cemetery in Biecz,Cooper
-590,Jadwiga,Nowak,F,1,Katowice,1831-07-18,Lipce,1911-01-13,Fire,Cemetery in Lipce,Mason
-591,Marcin,Kaczmarek,M,1,Chełmno,1831-06-25,Gliwice,1897-01-20,Pneumonia,Cemetery in Gliwice,Hunter
-592,Tadeusz,Krawczyk,M,1,Stettin,1831-01-27,Kielce,1836-06-10,Cancer,Cemetery in Kielce,
-593,Urszula,Baran,F,1,Thorn,1832-03-02,Katowice,1888-07-13,Cancer,Cemetery in Katowice,Miner
-594,Tomasz,Jaworski,M,1,Olsztyn,1832-11-26,Radom,1906-04-11,,Cemetery in Radom,Weaver
-595,Jan,Kowalczyk,M,1,Zwierzyniec,1832-01-08,Thorn,1920-03-02,Drowning,Cemetery in Thorn,Hunter
-596,Ewa,Zielińska,F,1,Sandomierz,1832-06-12,Biecz,1868-07-24,,Cemetery in Biecz,Teacher
-597,Maja,Wiśniewska,F,1,Cieszyn,1832-01-21,Stettin,1851-01-09,Murder,Cemetery in Stettin,
-598,Maja,Adamczyk,F,1,Kielce,1832-01-17,Sanok,1904-11-12,,Cemetery in Sanok,Mason
-599,Krzysztof,Sikora,M,1,Łódź,1832-09-03,Pszczyna,1905-12-17,War casualty,Cemetery in Pszczyna,Baker
-600,Franciszek,Wróbel,M,1,Supraśl,1832-04-19,Tykocin,1908-07-28,Unknown,Cemetery in Tykocin,Blacksmith
-601,Adam,Dudek,M,1,Bromberg,1832-08-08,Wisła,1835-10-22,,Cemetery in Wisła,
-602,Elżbieta,Wiśniewska,F,1,Wisła,1832-12-25,Rzeszów,1888-08-27,Dropsy,Cemetery in Rzeszów,Fisherman
-603,Danuta,Stępień,F,1,Posen,1832-09-25,Lanckorona,1899-05-19,Consumption,Cemetery in Lanckorona,
-604,Ewa,Pawłowska,F,1,Sandomierz,1832-09-09,Krynica,1892-08-22,,Cemetery in Krynica,Shoemaker
-605,Aleksandra,Baran,F,1,Gliwice,1833-08-25,Posen,1912-06-24,Infectious disease,Cemetery in Posen,Scribe
-606,Józefa,Baran,F,1,Katowice,1833-08-06,Pszczyna,1873-01-25,,Cemetery in Pszczyna,Butcher
-607,Regina,Wróbel,F,1,Kielce,1833-04-06,Supraśl,1838-04-28,Accident,Cemetery in Supraśl,
-608,Czesław,Wieczorek,M,1,Reszel,1833-01-25,Sandomierz,1835-03-06,Fire,Cemetery in Sandomierz,
-609,Stefania,Wróbel,F,1,Sosnowiec,1833-05-11,Złoty Potok,1916-07-09,,Cemetery in Złoty Potok,Clerk
-610,Ignacy,Woźniak,M,1,Chełmno,1833-07-28,Katowice,1836-05-27,Unknown,Cemetery in Katowice,
-611,Krzysztof,Stępień,M,1,Olsztyn,1833-05-28,Lipce,1912-07-27,War casualty,Cemetery in Lipce,Hunter
-612,Szymon,Jankowski,M,1,Złoty Potok,1833-12-18,Chochołów,1888-09-05,Murder,Cemetery in Chochołów,Doctor
-613,Katarzyna,Wójcik,F,1,Cieszyn,1833-06-03,Sanok,1887-01-15,Stroke,Cemetery in Sanok,Lawyer
-614,Julian,Jabłoński,M,1,Kazimierz Dolny,1833-08-21,Złoty Potok,1890-10-20,Heart failure,Cemetery in Złoty Potok,Shoemaker
-615,Maria,Wójcik,F,1,Radom,1833-11-09,Częstochowa,1880-01-15,Apoplexy,Cemetery in Częstochowa,Baker
-616,Franciszek,Krawczyk,M,1,Stettin,1833-03-02,Lublin,1884-12-04,Dysentery,Cemetery in Lublin,Clerk
-617,Barbara,Adamczyk,F,1,Wisła,1834-11-08,Zwierzyniec,1874-01-21,Stroke,Cemetery in Zwierzyniec,Wheelwright
-618,Kazimierz,Baran,M,1,Danzig,1834-09-07,Gliwice,1837-12-27,Stroke,Cemetery in Gliwice,
-619,Stefania,Wróbel,F,1,Cieszyn,1834-10-22,Stettin,1883-11-05,Consumption,Cemetery in Stettin,Merchant
-620,Maciej,Baran,M,1,Sromowce,1834-01-05,Wisła,1902-06-01,Infectious disease,Cemetery in Wisła,Fisherman
-621,Leon,Stępień,M,1,Sosnowiec,1834-03-22,Cieszyn,1895-06-09,,Cemetery in Cieszyn,Shepherd
-622,Henryk,Wiśniewski,M,1,Thorn,1834-12-13,Gdynia,1898-11-15,Pneumonia,Cemetery in Gdynia,Merchant
-623,Teresa,Stępień,F,1,Białystok,1834-11-22,Sromowce,1901-04-01,,Cemetery in Sromowce,Mason
-624,Mirosław,Pawłowski,M,1,Stettin,1834-10-19,Częstochowa,1897-01-15,Starvation,Cemetery in Częstochowa,Teacher
-625,Maria,Malinowska,F,1,Zalipie,1834-03-15,Kielce,1912-12-14,Starvation,Cemetery in Kielce,Miner
-626,Grażyna,Dudek,F,1,Lublin,1834-01-05,Lanckorona,1918-01-23,Fever,Cemetery in Lanckorona,Miner
-627,Tomasz,Wojciechowski,M,1,Reszel,1834-04-24,Pszczyna,1836-05-20,Murder,Cemetery in Pszczyna,
-628,Tomasz,Pawłowski,M,1,Zwierzyniec,1834-02-17,Sosnowiec,1892-08-17,Heart failure,Cemetery in Sosnowiec,Shepherd
-629,Barbara,Lewandowska,F,1,Łódź,1834-01-11,Danzig,1897-02-01,,Cemetery in Danzig,Weaver
-630,Wiktoria,Jabłońska,F,1,Sromowce,1834-11-14,Katowice,1914-01-01,Smallpox,Cemetery in Katowice,Soldier
-631,Ignacy,Stępień,M,1,Wisła,1834-12-18,Białystok,1893-04-11,Typhus,Cemetery in Białystok,Shepherd
-632,Agnieszka,Nowak,F,1,Rzeszów,1834-02-17,Reszel,1926-06-26,Drowning,Cemetery in Reszel,Cooper
-633,Marianna,Wójcik,F,1,Breslau,1834-01-09,Łódź,1886-06-03,Stroke,Cemetery in Łódź,Tailor
-634,Mateusz,Wójcik,M,1,Bromberg,1834-02-14,Reszel,1883-04-15,Murder,Cemetery in Reszel,Artist
-635,Julia,Kowalczyk,F,1,Lublin,1834-12-22,Thorn,1899-08-20,,Cemetery in Thorn,Tanner
-636,Ludwika,Lewandowska,F,1,Wisła,1834-09-17,Sosnowiec,1897-12-28,Pneumonia,Cemetery in Sosnowiec,Fisherman
-637,Agnieszka,Nowakowska,F,1,Kazimierz Dolny,1834-05-19,Warszawa,1926-09-22,Pneumonia,Cemetery in Warszawa,Tanner
-638,Małgorzata,Zielińska,F,1,Kazimierz Dolny,1834-05-06,Supraśl,1916-04-18,,Cemetery in Supraśl,Artist
-639,Oliwia,Walczak,F,1,Gliwice,1834-04-01,Reszel,1885-08-28,Stroke,Cemetery in Reszel,Blacksmith
-640,Wiesław,Zieliński,M,1,Częstochowa,1835-09-28,Sromowce,1902-03-15,Infectious disease,Cemetery in Sromowce,Clerk
-641,Anna,Wróbel,F,1,Radom,1835-10-01,Katowice,1894-04-25,,Cemetery in Katowice,Farmer
-642,Władysław,Wiśniewski,M,1,Radom,1835-04-07,Sanok,1899-09-03,Fire,Cemetery in Sanok,Doctor
-643,Genowefa,Wiśniewska,F,1,Rzeszów,1835-02-19,Sanok,1907-10-12,Fever,Cemetery in Sanok,Tanner
-644,Krystyna,Dudek,F,1,Warszawa,1835-09-03,Łódź,1909-03-23,Fire,Cemetery in Łódź,Weaver
-645,Marek,Jankowski,M,1,Lanckorona,1835-02-19,Zalipie,1894-11-23,Consumption,Cemetery in Zalipie,Clerk
-646,Józef,Wiśniewski,M,1,Lublin,1836-12-05,Zalipie,1890-03-18,Starvation,Cemetery in Zalipie,Blacksmith
-647,Józef,Lewandowski,M,1,Thorn,1836-08-26,Posen,1914-08-13,Pneumonia,Cemetery in Posen,Blacksmith
-648,Teresa,Krawczyk,F,1,Warszawa,1836-03-17,Chochołów,1899-05-18,Dysentery,Cemetery in Chochołów,Fisherman
-649,Marcin,Pawłowski,M,1,Sanok,1836-11-27,Sanok,1890-03-01,Apoplexy,Cemetery in Sanok,Doctor
-650,Wiktoria,Jabłońska,F,1,Posen,1836-11-18,Stettin,1928-06-21,Pneumonia,Cemetery in Stettin,Priest
-651,Jadwiga,Jabłońska,F,1,Katowice,1836-02-05,Chełmno,1892-05-23,,Cemetery in Chełmno,Blacksmith
-652,Michał,Walczak,M,1,Cieszyn,1836-08-22,Chochołów,1840-02-15,Infectious disease,Cemetery in Chochołów,
-653,Zofia,Walczak,F,1,Cieszyn,1836-11-26,Supraśl,1899-05-12,Apoplexy,Cemetery in Supraśl,Wheelwright
-654,Jan,Kozłowski,M,1,Zwierzyniec,1836-11-02,Kazimierz Dolny,1864-10-24,Cholera,Cemetery in Kazimierz Dolny,Doctor
-655,Stanisław,Kozłowski,M,1,Lipce,1836-10-17,Łódź,1886-07-25,Consumption,Cemetery in Łódź,Hunter
-656,Agnieszka,Szymańska,F,1,Sosnowiec,1836-10-10,Biecz,1918-11-22,,Cemetery in Biecz,Priest
-657,Bartosz,Wiśniewski,M,1,Częstochowa,1836-07-01,Krynica,1919-11-28,Pneumonia,Cemetery in Krynica,Artist
-658,Stefan,Wieczorek,M,1,Breslau,1836-10-10,Zwierzyniec,1895-10-19,Murder,Cemetery in Zwierzyniec,Butcher
-659,Maja,Wróbel,F,1,Pszczyna,1837-08-02,Wisła,1876-07-24,Starvation,Cemetery in Wisła,Wheelwright
-660,Marcin,Pawłowski,M,1,Zalipie,1837-04-20,Tykocin,1894-09-27,,Cemetery in Tykocin,Blacksmith
-661,Tomasz,Zieliński,M,1,Breslau,1837-04-23,Radom,1918-10-12,Accident,Cemetery in Radom,Fisherman
-662,Jadwiga,Kozłowska,F,1,Katowice,1837-05-11,Warszawa,1840-08-05,,Cemetery in Warszawa,
-663,Wiktoria,Kamińska,F,1,Lipce,1837-08-15,Danzig,1907-06-11,Stroke,Cemetery in Danzig,Wheelwright
-664,Rozalia,Kozłowska,F,1,Kraków,1837-12-01,Złoty Potok,1914-09-18,Unknown,Cemetery in Złoty Potok,Hunter
-665,Julia,Wieczorek,F,1,Radom,1837-10-01,Chełmno,1935-07-02,Dysentery,Cemetery in Chełmno,Wheelwright
-666,Władysław,Wiśniewski,M,1,Chochołów,1837-10-01,Białystok,1909-09-22,Typhus,Cemetery in Białystok,Cooper
-667,Maciej,Jaworski,M,1,Gliwice,1837-09-24,Rzeszów,1925-12-07,Pneumonia,Cemetery in Rzeszów,Clerk
-668,Stanisław,Pawłowski,M,1,Danzig,1838-01-19,Wisła,1904-10-14,Infectious disease,Cemetery in Wisła,Potter
-669,Władysław,Jabłoński,M,1,Tykocin,1838-10-07,Sanok,1841-08-27,Dropsy,Cemetery in Sanok,
-670,Jakub,Walczak,M,1,Chełmno,1838-10-13,Kielce,1910-12-21,War casualty,Cemetery in Kielce,Potter
-671,Filip,Kozłowski,M,1,Gdynia,1838-11-10,Rzeszów,1909-07-12,Murder,Cemetery in Rzeszów,Potter
-672,Wiktoria,Kozłowska,F,1,Sanok,1838-08-07,Białystok,1839-05-26,,Cemetery in Białystok,
-673,Czesław,Kozłowski,M,1,Chełmno,1838-08-23,Bronowice,1842-01-01,Smallpox,Cemetery in Bronowice,
-674,Wanda,Jaworska,F,1,Wisła,1838-10-06,Katowice,1902-08-18,Dysentery,Cemetery in Katowice,Merchant
-675,Marcin,Kozłowski,M,1,Zwierzyniec,1839-10-03,Kraków,1908-03-21,Accident,Cemetery in Kraków,Cooper
-676,Anna,Wróbel,F,1,Radom,1839-06-19,Białystok,1915-12-08,Heart failure,Cemetery in Białystok,Butcher
-677,Mateusz,Kozłowski,M,1,Posen,1840-03-12,Chochołów,1904-01-15,Drowning,Cemetery in Chochołów,Doctor
-678,Szymon,Walczak,M,1,Thorn,1840-04-02,Pszczyna,1932-05-10,War casualty,Cemetery in Pszczyna,Innkeeper
-679,Bartosz,Stępień,M,1,Wisła,1840-02-26,Sanok,1903-09-08,Fever,Cemetery in Sanok,
-680,Katarzyna,Wróbel,F,1,Katowice,1842-03-16,Lipce,1915-08-27,Dysentery,Cemetery in Lipce,Priest
-681,Wanda,Stępień,F,1,Stettin,1842-07-24,Warszawa,1847-10-17,Plague,Cemetery in Warszawa,
-682,Joanna,Jankowska,F,1,Rzeszów,1842-06-01,Częstochowa,1879-08-16,Dysentery,Cemetery in Częstochowa,Tailor
-683,Zuzanna,Wojciechowska,F,1,Thorn,1842-05-08,Pszczyna,1917-08-23,Stroke,Cemetery in Pszczyna,Hunter
-684,Piotr,Nowakowski,M,1,Kielce,1842-12-07,Krynica,1904-10-13,Starvation,Cemetery in Krynica,Fisherman
-685,Dariusz,Szymański,M,1,Sosnowiec,1842-03-05,Kielce,1937-06-16,Fever,Cemetery in Kielce,Priest
-686,Marcin,Wojciechowski,M,1,Lanckorona,1843-02-01,Chochołów,1883-06-13,Pneumonia,Cemetery in Chochołów,Miller
-687,Krzysztof,Jankowski,M,1,Reszel,1843-06-08,Lanckorona,1899-06-07,Murder,Cemetery in Lanckorona,Miner
-688,Julia,Kozłowska,F,1,Rzeszów,1843-10-18,Wisła,1846-03-13,,Cemetery in Wisła,
-689,Szymon,Stępień,M,1,Łódź,1844-09-07,Chełmno,1902-09-12,Fever,Cemetery in Chełmno,Lawyer
-690,Danuta,Kozłowska,F,1,Tykocin,1844-08-07,Zwierzyniec,1891-03-12,Accident,Cemetery in Zwierzyniec,Weaver
-691,Bartosz,Król,M,1,Cieszyn,1844-02-20,Reszel,1907-08-24,Consumption,Cemetery in Reszel,Teacher
-692,Katarzyna,Król,F,1,Sosnowiec,1844-11-03,Posen,1907-11-16,,Cemetery in Posen,Miner
-693,Dariusz,Jankowski,M,1,Katowice,1845-11-19,Biecz,1919-09-21,Apoplexy,Cemetery in Biecz,Artist
-694,Julia,Kozłowska,F,1,Złoty Potok,1845-10-09,Warszawa,1917-08-15,Apoplexy,Cemetery in Warszawa,Tanner
-695,Maria,Górska,F,1,Sandomierz,1845-03-25,Częstochowa,1906-03-06,Smallpox,Cemetery in Częstochowa,Tailor
-696,Monika,Król,F,1,Kraków,1846-12-01,Gliwice,1850-06-24,Fever,Cemetery in Gliwice,
-697,Urszula,Jabłońska,F,1,Kraków,1846-11-17,Posen,1920-04-15,Infectious disease,Cemetery in Posen,Carpenter
-698,Marek,Dudek,M,1,Wisła,1846-03-03,Sandomierz,1916-01-23,Fire,Cemetery in Sandomierz,Artist
-699,Kazimierz,Stępień,M,1,Katowice,1846-09-24,Chełmno,1886-03-08,War casualty,Cemetery in Chełmno,Shepherd
-700,Marian,Wojciechowski,M,1,Bromberg,1847-09-27,Sanok,1931-04-23,Starvation,Cemetery in Sanok,Mason
-701,Wiktoria,Kaczmarek,F,1,Sandomierz,1847-12-16,Częstochowa,1906-04-28,Consumption,Cemetery in Częstochowa,Cooper
-702,Maja,Dudek,F,1,Tykocin,1848-08-19,Olsztyn,1920-03-16,Smallpox,Cemetery in Olsztyn,Baker
-703,Wojciech,Król,M,1,Breslau,1848-08-25,Danzig,1917-04-14,Influenza,Cemetery in Danzig,Shepherd
-704,Andrzej,Walczak,M,1,Krynica,1849-03-10,Kraków,1920-04-11,Murder,Cemetery in Kraków,Fisherman
-705,Marcin,Jaworski,M,1,Zwierzyniec,1849-02-09,Gdynia,1915-01-05,Typhus,Cemetery in Gdynia,Hunter
-706,Teresa,Pawlak,F,1,Lipce,1850-10-03,Pszczyna,1880-10-07,Heart failure,Cemetery in Pszczyna,Judge
-707,Franciszek,Pawlak,M,1,Lanckorona,1850-10-27,Reszel,1900-04-26,Typhus,Cemetery in Reszel,Clerk
-708,Tadeusz,Dudek,M,1,Cieszyn,1850-09-01,Sromowce,1851-10-10,Cancer,Cemetery in Sromowce,
-709,Dariusz,Jaworski,M,1,Sromowce,1851-11-19,Zalipie,1906-11-11,Smallpox,Cemetery in Zalipie,Doctor
-710,Stefania,Jankowska,F,1,Chełmno,1851-11-02,Bromberg,1935-08-24,Heart failure,Cemetery in Bromberg,Shepherd
-711,Łukasz,Jaworski,M,1,Cieszyn,1851-06-17,Stettin,1852-12-21,Dysentery,Cemetery in Stettin,
-712,Maciej,Kozłowski,M,1,Sosnowiec,1852-11-09,Thorn,1922-02-06,,Cemetery in Thorn,Teacher
-713,Zuzanna,Kozłowska,F,1,Kazimierz Dolny,1852-05-24,Biecz,1924-01-22,Cholera,Cemetery in Biecz,Potter
-714,Łukasz,Wróbel,M,1,Białystok,1853-11-09,Zwierzyniec,1863-01-03,Pneumonia,Cemetery in Zwierzyniec,
-715,Maja,Kamińska,F,1,Lipce,1853-07-28,Zalipie,1919-04-11,Infectious disease,Cemetery in Zalipie,Shoemaker
-716,Michał,Kaczmarek,M,1,Złoty Potok,1853-03-17,Lipce,1949-10-14,Accident,Cemetery in Lipce,Judge
-717,Alicja,Kozłowska,F,1,Złoty Potok,1854-11-23,Zalipie,1913-02-12,Fever,Cemetery in Zalipie,Soldier
-718,Oliwia,Kaczmarek,F,1,Zwierzyniec,1854-04-15,Złoty Potok,1859-01-02,Unknown,Cemetery in Złoty Potok,
-719,Teresa,Jaworska,F,1,Lanckorona,1854-04-27,Łódź,1909-03-28,Cancer,Cemetery in Łódź,Merchant
-720,Wiesław,Stępień,M,1,Krynica,1854-03-20,Katowice,1927-10-01,Cholera,Cemetery in Katowice,Artist
-721,Józef,Stępień,M,1,Pszczyna,1854-11-17,Biecz,1943-10-05,Starvation,Cemetery in Biecz,Blacksmith
-722,Elżbieta,Nowakowska,F,1,Breslau,1855-12-27,Kielce,1887-05-17,Cancer,Cemetery in Kielce,Doctor
-723,Agnieszka,Szymańska,F,1,Pszczyna,1855-04-13,Złoty Potok,1858-11-14,Influenza,Cemetery in Złoty Potok,
-724,Agnieszka,Stępień,F,1,Lanckorona,1856-01-21,Sromowce,1860-09-17,Typhus,Cemetery in Sromowce,
-725,Julian,Szymański,M,1,Posen,1857-02-14,Kazimierz Dolny,1931-04-09,Murder,Cemetery in Kazimierz Dolny,Potter
-726,Urszula,Jankowska,F,1,Stettin,1857-01-08,Sanok,1915-11-22,Fire,Cemetery in Sanok,Mason
-727,Józef,Nowakowski,M,1,Tykocin,1858-07-14,Sandomierz,1929-06-27,Cancer,Cemetery in Sandomierz,Miller
-728,Tomasz,Szymański,M,1,Sromowce,1858-08-18,Biecz,1924-01-04,Cancer,Cemetery in Biecz,Carpenter
-729,Joanna,Zielińska,F,1,Łódź,1858-09-18,Katowice,1954-07-21,Fire,Cemetery in Katowice,Carpenter
-730,Helena,Pawlak,F,1,Danzig,1858-06-02,Gliwice,1943-09-02,Fire,Cemetery in Gliwice,Shepherd
-731,Jan,Pawłowski,M,1,Chochołów,1858-12-17,Bromberg,1931-06-15,Accident,Cemetery in Bromberg,Scribe
-732,Józefa,Kamińska,F,1,Łódź,1858-08-17,Gdynia,1952-11-14,War casualty,Cemetery in Gdynia,Teacher
-733,Zofia,Wróbel,F,1,Posen,1858-02-09,Złoty Potok,1861-12-01,Apoplexy,Cemetery in Złoty Potok,
-734,Leon,Jankowski,M,1,Pszczyna,1858-09-03,Kielce,1900-11-13,Cancer,Cemetery in Kielce,Farmer
-735,Mirosław,Jankowski,M,1,Sromowce,1859-07-05,Radom,1891-03-11,Cholera,Cemetery in Radom,Judge
-736,Maciej,Król,M,1,Chochołów,1859-10-13,Sanok,1905-06-28,Cholera,Cemetery in Sanok,Fisherman
-737,Piotr,Wieczorek,M,1,Częstochowa,1859-09-03,Stettin,1892-07-22,,Cemetery in Stettin,Doctor
-738,Regina,Wiśniewska,F,1,Pszczyna,1859-03-17,Supraśl,1919-11-18,Unknown,Cemetery in Supraśl,Clerk
-739,Marian,Szymański,M,1,Cieszyn,1859-09-26,Kielce,1860-05-04,Smallpox,Cemetery in Kielce,
-740,Wanda,Pawłowska,F,1,Pszczyna,1859-04-20,Breslau,1928-08-03,Stroke,Cemetery in Breslau,Soldier
-741,Wanda,Jabłońska,F,1,Kraków,1859-04-03,Olsztyn,1912-08-02,Murder,Cemetery in Olsztyn,Potter
-742,Wiktoria,Baran,F,1,Kielce,1859-06-08,Bromberg,1922-06-20,,Cemetery in Bromberg,Innkeeper
-743,Katarzyna,Pawłowska,F,1,Kielce,1860-04-08,Sromowce,1937-02-27,War casualty,Cemetery in Sromowce,Hunter
-744,Natalia,Wiśniewska,F,1,Cieszyn,1860-01-21,Rzeszów,1926-02-08,Dysentery,Cemetery in Rzeszów,Carpenter
-745,Jan,Nowakowski,M,1,Cieszyn,1860-10-23,Stettin,1922-05-24,Plague,Cemetery in Stettin,Artist
-746,Wojciech,Kozłowski,M,1,Chełmno,1860-09-26,Chełmno,1917-12-10,Cancer,Cemetery in Chełmno,Cooper
-747,Ewa,Stępień,F,1,Złoty Potok,1860-11-16,Chełmno,1916-05-28,Infectious disease,Cemetery in Chełmno,Soldier
-748,Czesława,Wieczorek,F,1,Kielce,1860-05-23,Bromberg,1902-09-07,War casualty,Cemetery in Bromberg,Farmer
-749,Bożena,Nowakowska,F,1,Sromowce,1861-01-24,Rzeszów,1923-04-15,Pneumonia,Cemetery in Rzeszów,Miller
-750,Kamil,Król,M,1,Posen,1861-02-05,Rzeszów,1864-01-05,Influenza,Cemetery in Rzeszów,
-751,Franciszek,Wróbel,M,1,Thorn,1861-08-04,Bromberg,1937-04-24,Cancer,Cemetery in Bromberg,Scribe
-752,Józefa,Wieczorek,F,1,Chełmno,1861-06-24,Lanckorona,1878-07-11,Accident,Cemetery in Lanckorona,
-753,Teresa,Stępień,F,1,Sosnowiec,1861-10-02,Bronowice,1946-05-10,,Cemetery in Bronowice,Teacher
-754,Rozalia,Kozłowska,F,1,Kielce,1862-10-05,Danzig,1937-02-01,,Cemetery in Danzig,Farmer
-755,Regina,Stępień,F,1,Sromowce,1862-09-08,Stettin,1920-05-19,Accident,Cemetery in Stettin,Cooper
-756,Wanda,Dudek,F,1,Tykocin,1862-03-27,Zalipie,1917-06-23,,Cemetery in Zalipie,Miner
-757,Anna,Kozłowska,F,1,Rzeszów,1863-03-17,Zalipie,1867-02-19,Unknown,Cemetery in Zalipie,
-758,Maciej,Wieczorek,M,1,Zwierzyniec,1863-07-12,Częstochowa,1909-03-09,,Cemetery in Częstochowa,Butcher
-759,Józefa,Zielińska,F,1,Rzeszów,1863-02-27,Rzeszów,1936-06-18,Heart failure,Cemetery in Rzeszów,Tailor
-760,Bożena,Baran,F,1,Biecz,1863-10-09,Katowice,1932-11-04,,Cemetery in Katowice,Lawyer
-761,Dariusz,Kowalski,M,1,Łódź,1864-06-15,Zalipie,1941-08-18,,Cemetery in Zalipie,Teacher
-762,Leokadia,Kowalczyk,F,1,Sandomierz,1864-03-02,Rzeszów,1869-12-04,Consumption,Cemetery in Rzeszów,
-763,Henryk,Jaworski,M,1,Zalipie,1865-09-12,Częstochowa,1927-07-09,,Cemetery in Częstochowa,Blacksmith
-764,Ignacy,Wiśniewski,M,1,Rzeszów,1865-03-24,Stettin,1898-01-23,War casualty,Cemetery in Stettin,Baker
-765,Franciszek,Wiśniewski,M,1,Zalipie,1867-08-12,Białystok,1870-04-15,Cholera,Cemetery in Białystok,
-766,Jadwiga,Kozłowska,F,1,Sandomierz,1867-11-16,Białystok,1904-05-15,Unknown,Cemetery in Białystok,Mason
-767,Franciszek,Walczak,M,1,Lipce,1867-01-24,Thorn,1930-11-24,Pneumonia,Cemetery in Thorn,Hunter
-768,Wiktoria,Jankowska,F,1,Krynica,1868-09-26,Krynica,1953-06-27,Murder,Cemetery in Krynica,Clerk
-769,Natalia,Walczak,F,1,Zalipie,1869-06-23,Gdynia,1917-10-13,Fire,Cemetery in Gdynia,Miller
-770,Grażyna,Walczak,F,1,Sosnowiec,1869-12-23,Gliwice,1926-08-24,Cholera,Cemetery in Gliwice,Miner
-771,Agnieszka,Król,F,1,Thorn,1869-03-04,Bromberg,1923-03-28,Infectious disease,Cemetery in Bromberg,Wheelwright
-772,Adam,Kozłowski,M,1,Złoty Potok,1870-07-17,Gliwice,1934-06-14,Fever,Cemetery in Gliwice,Blacksmith
-773,Katarzyna,Jankowska,F,1,Białystok,1870-07-08,Breslau,1924-07-19,Fever,Cemetery in Breslau,Potter
-774,Teresa,Jankowska,F,1,Breslau,1870-11-12,Bronowice,1963-08-25,,Cemetery in Bronowice,Potter
-775,Leokadia,Jaworska,F,1,Lanckorona,1870-05-19,Częstochowa,1935-10-08,,Cemetery in Częstochowa,Carpenter
-776,Katarzyna,Kozłowska,F,1,Chochołów,1870-12-10,Gdynia,1915-12-25,Infectious disease,Cemetery in Gdynia,Carpenter
-777,Józefa,Wiśniewska,F,1,Gdynia,1871-11-10,Lublin,1933-02-07,Infectious disease,Cemetery in Lublin,Soldier
-778,Zygmunt,Kozłowski,M,1,Sanok,1872-02-13,Lublin,1918-12-12,Infectious disease,Cemetery in Lublin,Butcher
-779,Szymon,Jankowski,M,1,Wisła,1872-12-13,Sosnowiec,1909-07-16,Consumption,Cemetery in Sosnowiec,Mason
-780,Katarzyna,Wiśniewska,F,1,Gdynia,1872-02-05,Bronowice,1958-07-19,Unknown,Cemetery in Bronowice,Shepherd
-781,Wojciech,Nowakowski,M,1,Breslau,1872-12-07,Rzeszów,1955-03-09,Plague,Cemetery in Rzeszów,Cooper
-782,Czesława,Nowakowska,F,1,Łódź,1872-06-02,Sromowce,1970-01-20,Accident,Cemetery in Sromowce,Teacher
-783,Halina,Dudek,F,1,Stettin,1872-06-15,Częstochowa,1950-06-01,Cholera,Cemetery in Częstochowa,Miner
-784,Paweł,Wiśniewski,M,1,Złoty Potok,1873-07-03,Danzig,1943-05-18,Murder,Cemetery in Danzig,Blacksmith
-785,Grzegorz,Pawłowski,M,1,Thorn,1873-12-28,Supraśl,1945-09-10,Influenza,Cemetery in Supraśl,Cooper
-786,Anna,Szymańska,F,1,Lublin,1873-05-10,Reszel,1948-10-01,Unknown,Cemetery in Reszel,Teacher
-787,Grzegorz,Pawłowski,M,1,Sanok,1873-02-25,Sandomierz,1876-12-07,Typhus,Cemetery in Sandomierz,
-788,Bartosz,Wiśniewski,M,1,Tykocin,1874-01-16,Złoty Potok,1945-01-14,War casualty,Cemetery in Złoty Potok,Carpenter
-789,Andrzej,Pawłowski,M,1,Bronowice,1874-10-13,Posen,1921-08-22,,Cemetery in Posen,Carpenter
-790,Andrzej,Wiśniewski,M,1,Kraków,1874-08-15,Breslau,1954-06-11,Unknown,Cemetery in Breslau,Tanner
-791,Marianna,Lewandowska,F,1,Sosnowiec,1874-12-17,Chełmno,1951-08-13,Starvation,Cemetery in Chełmno,Farmer
-792,Barbara,Lewandowska,F,1,Sandomierz,1875-04-14,Breslau,1922-08-01,Starvation,Cemetery in Breslau,Baker
-793,Czesław,Stępień,M,1,Supraśl,1875-03-25,Kielce,1932-04-03,,Cemetery in Kielce,Priest
-794,Kamil,Krawczyk,M,1,Zwierzyniec,1875-01-26,Posen,1902-12-11,Pneumonia,Cemetery in Posen,Tailor
-795,Agnieszka,Szymańska,F,1,Zwierzyniec,1876-11-19,Chełmno,1960-05-27,Fever,Cemetery in Chełmno,Teacher
-796,Małgorzata,Stępień,F,1,Cieszyn,1876-11-24,Krynica,1877-07-03,Smallpox,Cemetery in Krynica,
-797,Wiesław,Krawczyk,M,1,Białystok,1876-04-03,Zalipie,1878-06-06,Cholera,Cemetery in Zalipie,
-798,Jakub,Jaworski,M,1,Krynica,1877-09-27,Reszel,1880-01-02,Unknown,Cemetery in Reszel,
-799,Paweł,Kozłowski,M,1,Kazimierz Dolny,1877-08-25,Reszel,1932-09-05,Accident,Cemetery in Reszel,Mason
-800,Henryk,Pawlak,M,1,Sosnowiec,1877-04-03,Chochołów,1881-05-14,Starvation,Cemetery in Chochołów,
-801,Joanna,Stępień,F,1,Warszawa,1878-11-27,Cieszyn,1942-01-26,Stroke,Cemetery in Cieszyn,Carpenter
-802,Mateusz,Król,M,1,Zalipie,1878-08-09,Bromberg,1955-04-10,Apoplexy,Cemetery in Bromberg,Tailor
-803,Leokadia,Kaczmarek,F,1,Kielce,1878-03-12,Tykocin,1936-04-04,Dysentery,Cemetery in Tykocin,Miller
-804,Wojciech,Wiśniewski,M,1,Biecz,1879-04-12,Wisła,1937-10-17,Accident,Cemetery in Wisła,Fisherman
-805,Stefan,Pawłowski,M,1,Warszawa,1879-08-11,Złoty Potok,1944-09-24,Consumption,Cemetery in Złoty Potok,Weaver
-806,Andrzej,Stępień,M,1,Łódź,1880-10-08,Sosnowiec,1949-09-21,Plague,Cemetery in Sosnowiec,Soldier
-807,Szymon,Walczak,M,1,Złoty Potok,1880-07-27,Sosnowiec,1946-06-21,Stroke,Cemetery in Sosnowiec,Butcher
-808,Katarzyna,Wiśniewska,F,1,Lanckorona,1882-02-18,Thorn,1956-07-02,Fire,Cemetery in Thorn,Soldier
-809,Małgorzata,Walczak,F,1,Bronowice,1882-02-28,Zalipie,1954-03-14,Heart failure,Cemetery in Zalipie,Judge
-810,Natalia,Kozłowska,F,1,Sanok,1882-12-10,Częstochowa,1967-10-09,Unknown,Cemetery in Częstochowa,Carpenter
-811,Kazimiera,Jaworska,F,1,Częstochowa,1885-03-28,Sandomierz,1974-05-25,Accident,Cemetery in Sandomierz,Lawyer
-812,Krystyna,Król,F,1,Cieszyn,1885-09-10,Łódź,1945-10-07,,Cemetery in Łódź,Potter
-813,Adam,Walczak,M,1,Danzig,1886-12-12,Bromberg,1946-04-24,Stroke,Cemetery in Bromberg,Farmer
-814,Władysław,Kozłowski,M,1,Warszawa,1886-01-16,Biecz,1973-02-17,,Cemetery in Biecz,Baker
-815,Szymon,Kozłowski,M,1,Warszawa,1886-09-09,Lipce,1964-05-14,,Cemetery in Lipce,Tanner
-816,Małgorzata,Jaworska,F,1,Warszawa,1887-10-05,Kraków,1892-08-06,Murder,Cemetery in Kraków,
-817,Julia,Jankowska,F,1,Pszczyna,1887-07-04,Bromberg,1960-02-06,,Cemetery in Bromberg,Lawyer
-818,Jadwiga,Jaworska,F,1,Katowice,1888-05-16,Złoty Potok,1962-06-09,Cholera,Cemetery in Złoty Potok,Tailor
-819,Krzysztof,Kozłowski,M,1,Biecz,1888-07-05,Reszel,1972-10-03,Influenza,Cemetery in Reszel,Artist
-820,Regina,Wiśniewska,F,1,Chochołów,1888-09-09,Cieszyn,1955-06-04,Cancer,Cemetery in Cieszyn,Farmer
-821,Mirosław,Jankowski,M,1,Złoty Potok,1889-09-07,Wisła,1942-05-06,Smallpox,Cemetery in Wisła,Tanner
-822,Bartosz,Kowalski,M,1,Radom,1889-06-28,Zalipie,1931-01-16,Typhus,Cemetery in Zalipie,Miller
-823,Kazimiera,Wiśniewska,F,1,Danzig,1890-08-06,Supraśl,1948-09-22,Accident,Cemetery in Supraśl,Doctor
-824,Urszula,Pawłowska,F,1,Kielce,1890-06-13,Lipce,1895-04-27,Influenza,Cemetery in Lipce,
-825,Rozalia,Nowakowska,F,1,Gdynia,1891-09-10,Bromberg,1961-07-14,Consumption,Cemetery in Bromberg,Merchant
-826,Maciej,Zieliński,M,1,Kraków,1891-07-20,Breslau,1895-09-04,Starvation,Cemetery in Breslau,
-827,Irena,Nowakowska,F,1,Reszel,1892-07-06,Sosnowiec,1953-11-28,Dysentery,Cemetery in Sosnowiec,Carpenter
-828,Natalia,Pawłowska,F,1,Chochołów,1892-12-25,Lublin,1953-12-17,Starvation,Cemetery in Lublin,Soldier
-829,Kazimiera,Wieczorek,F,1,Kielce,1893-06-21,Katowice,1949-02-23,Starvation,Cemetery in Katowice,Butcher
-830,Zygmunt,Jankowski,M,1,Lanckorona,1893-08-14,Kielce,1954-02-14,Dropsy,Cemetery in Kielce,Hunter
-831,Małgorzata,Pawłowska,F,1,Biecz,1894-08-10,Białystok,1899-11-13,Accident,Cemetery in Białystok,
-832,Danuta,Szymańska,F,1,Lanckorona,1894-10-24,Radom,1968-01-27,,Cemetery in Radom,Priest
-833,Zofia,Zielińska,F,1,Zwierzyniec,1895-10-25,Zalipie,1955-03-12,,Cemetery in Zalipie,Shepherd
-834,Bożena,Wiśniewska,F,1,Cieszyn,1895-04-27,Gliwice,1961-09-17,War casualty,Cemetery in Gliwice,Scribe
-835,Paweł,Szymański,M,1,Gdynia,1895-01-22,Thorn,1979-07-05,Drowning,Cemetery in Thorn,
-836,Zygmunt,Jankowski,M,1,Zwierzyniec,1896-03-10,Chełmno,1951-07-15,Typhus,Cemetery in Chełmno,Potter
-837,Halina,Wiśniewska,F,1,Zwierzyniec,1896-01-26,Sromowce,1983-03-11,,Cemetery in Sromowce,Fisherman
-838,Maria,Wiśniewska,F,1,Zwierzyniec,1896-12-07,Pszczyna,1948-04-23,Heart failure,Cemetery in Pszczyna,Priest
-839,Katarzyna,Wiśniewska,F,1,Warszawa,1897-09-21,Krynica,1953-10-28,Unknown,Cemetery in Krynica,Teacher
-840,Ewa,Sikora,F,1,Łódź,1897-01-04,Bronowice,1940-11-10,,Cemetery in Bronowice,Hunter
-841,Irena,Nowakowska,F,1,Bromberg,1898-09-20,Złoty Potok,1974-01-26,Apoplexy,Cemetery in Złoty Potok,Miller
-842,Bartosz,Jaworski,M,1,Chełmno,1898-01-18,Gdynia,1948-03-17,Starvation,Cemetery in Gdynia,Blacksmith
-843,Kazimiera,Wiśniewska,F,1,Sromowce,1899-06-24,Breslau,1974-01-14,,Cemetery in Breslau,Baker
-844,Marianna,Nowakowska,F,1,Breslau,1900-08-15,Supraśl,1905-05-13,Consumption,Cemetery in Supraśl,
-845,Katarzyna,Jaworska,F,1,Chełmno,1900-03-09,Białystok,1975-02-03,,Cemetery in Białystok,
-846,Szymon,Wiśniewski,M,1,Stettin,1901-12-06,Kraków,1971-08-18,War casualty,Cemetery in Kraków,Mason
-847,Antoni,Nowakowski,M,1,Kazimierz Dolny,1903-11-13,Chełmno,1951-10-12,Smallpox,Cemetery in Chełmno,Shepherd
-848,Bartosz,Walczak,M,1,Tykocin,1903-08-14,Wisła,1977-03-16,Starvation,Cemetery in Wisła,Tailor
-849,Katarzyna,Walczak,F,1,Krynica,1904-06-17,Bronowice,1965-10-26,Accident,Cemetery in Bronowice,Tanner
-850,Paweł,Kozłowski,M,1,Wisła,1904-02-19,Kazimierz Dolny,1963-01-04,,Cemetery in Kazimierz Dolny,Doctor
-851,Marian,Walczak,M,1,Zwierzyniec,1906-12-04,Lublin,1966-10-28,,Cemetery in Lublin,Artist
-852,Genowefa,Pawłowska,F,1,Zwierzyniec,1908-09-26,Częstochowa,1964-07-21,War casualty,Cemetery in Częstochowa,Judge
-853,Dariusz,Stępień,M,1,Biecz,1909-09-16,Reszel,1946-05-08,Cancer,Cemetery in Reszel,Priest
-854,Wiesław,Pawłowski,M,1,Bromberg,1910-08-27,Lanckorona,1993-01-09,Accident,Cemetery in Lanckorona,Miner
-855,Grażyna,Szymańska,F,1,Supraśl,1913-08-27,Reszel,1951-12-25,Dysentery,Cemetery in Reszel,Priest
-856,Antoni,Kozłowski,M,1,Częstochowa,1914-11-25,Chełmno,1998-10-28,Starvation,Cemetery in Chełmno,Baker
-857,Kazimierz,Walczak,M,1,Tykocin,1916-07-07,Gliwice,1994-01-17,Heart failure,Cemetery in Gliwice,Tanner
-858,Józefa,Walczak,F,1,Złoty Potok,1917-11-14,Chełmno,1978-04-21,,Cemetery in Chełmno,Tailor
-859,Szymon,Szymański,M,1,Łódź,1917-01-22,Warszawa,1971-08-24,Pneumonia,Cemetery in Warszawa,Potter
-860,Stanisław,Jankowski,M,1,Sanok,1917-02-01,Krynica,1986-08-28,Drowning,Cemetery in Krynica,Scribe
-861,Stefania,Szymańska,F,1,Lanckorona,1919-07-17,Reszel,1991-12-18,Apoplexy,Cemetery in Reszel,Fisherman
-862,Władysław,Walczak,M,1,Krynica,1920-02-27,Krynica,1990-06-23,,Cemetery in Krynica,Doctor
-863,Barbara,Jankowska,F,1,Częstochowa,1920-10-21,Zwierzyniec,1922-02-07,Infectious disease,Cemetery in Zwierzyniec,
-864,Marianna,Kozłowska,F,1,Radom,1920-03-27,Bronowice,1989-06-01,Fever,Cemetery in Bronowice,Tailor
-865,Elżbieta,Jankowska,F,1,Krynica,1921-02-09,Sosnowiec,1976-02-19,Drowning,Cemetery in Sosnowiec,Shepherd
-866,Kazimiera,Wiśniewska,F,1,Posen,1921-04-12,Chełmno,1996-12-26,Typhus,Cemetery in Chełmno,Innkeeper
-867,Julia,Kozłowska,F,1,Kraków,1922-11-09,Zwierzyniec,2013-03-15,Infectious disease,Cemetery in Zwierzyniec,Hunter
-868,Aleksandra,Kowalska,F,1,Gdynia,1922-12-25,Stettin,1955-03-16,Murder,Cemetery in Stettin,
-869,Bartosz,Wiśniewski,M,1,Reszel,1922-04-21,Gdynia,2005-07-04,War casualty,Cemetery in Gdynia,Potter
-870,Ewa,Jankowska,F,1,Łódź,1923-04-13,Częstochowa,1927-03-11,Drowning,Cemetery in Częstochowa,
-871,Marianna,Jaworska,F,1,Złoty Potok,1924-04-07,Sromowce,1975-09-07,,Cemetery in Sromowce,Fisherman
-872,Jan,Jankowski,M,1,Danzig,1925-02-16,Gliwice,1994-09-20,Drowning,Cemetery in Gliwice,Tailor
-873,Krzysztof,Wróbel,M,1,Chochołów,1925-09-24,Częstochowa,1990-08-25,Apoplexy,Cemetery in Częstochowa,Doctor
-874,Kazimiera,Wiśniewska,F,1,Kielce,1925-04-03,Warszawa,2010-05-08,Smallpox,Cemetery in Warszawa,Carpenter
-875,Aleksandra,Wróbel,F,1,Sanok,1926-03-04,Łódź,1997-01-17,Consumption,Cemetery in Łódź,Soldier
-876,Jerzy,Wiśniewski,M,1,Tykocin,1927-06-23,Częstochowa,1997-08-08,Smallpox,Cemetery in Częstochowa,Miller
-877,Rozalia,Jaworska,F,1,Pszczyna,1928-07-22,Stettin,2021-09-10,Apoplexy,Cemetery in Stettin,Judge
-878,Ignacy,Kozłowski,M,1,Sandomierz,1930-11-09,Tykocin,2008-03-19,Plague,Cemetery in Tykocin,Scribe
-879,Bartosz,Stępień,M,1,Zalipie,1930-06-14,Bronowice,2001-01-26,Plague,Cemetery in Bronowice,Hunter
-880,Filip,Szymański,M,1,Kielce,1931-11-10,Katowice,1982-08-23,Dropsy,Cemetery in Katowice,Innkeeper
-881,Wiktoria,Stępień,F,1,Sandomierz,1933-10-07,Katowice,2011-08-13,Cancer,Cemetery in Katowice,Fisherman
-882,Teresa,Szymańska,F,1,Radom,1933-10-14,Biecz,2004-04-12,Fever,Cemetery in Biecz,Weaver
-883,Zygmunt,Nowakowski,M,1,Warszawa,1933-07-08,Biecz,2006-11-16,Cancer,Cemetery in Biecz,Butcher
-884,Joanna,Nowakowska,F,1,Rzeszów,1934-03-01,Danzig,1936-06-24,Dysentery,Cemetery in Danzig,
-885,Jakub,Stępień,M,1,Chochołów,1935-02-24,Sromowce,2020-08-13,,Cemetery in Sromowce,Tanner
-886,Kazimierz,Jankowski,M,1,Chochołów,1935-09-17,Radom,2012-04-05,Influenza,Cemetery in Radom,Clerk
-887,Bartosz,Jankowski,M,1,Kraków,1937-04-01,Tykocin,2017-10-01,Consumption,Cemetery in Tykocin,Tailor
-888,Julia,Szymańska,F,1,Cieszyn,1938-08-25,Złoty Potok,1988-05-19,Dysentery,Cemetery in Złoty Potok,
-889,Franciszek,Walczak,M,1,Kielce,1939-02-21,Gliwice,1992-04-17,Stroke,Cemetery in Gliwice,Judge
-890,Jakub,Szymański,M,1,Krynica,1940-09-27,Białystok,1992-06-18,Starvation,Cemetery in Białystok,Butcher
-891,Krzysztof,Pawłowski,M,1,Tykocin,1941-06-16,Radom,1996-09-13,Accident,Cemetery in Radom,Cooper
-892,Józef,Pawłowski,M,1,Danzig,1943-03-27,Breslau,1946-01-16,Drowning,Cemetery in Breslau,
-893,Piotr,Wiśniewski,M,1,Thorn,1943-12-03,Katowice,2024-10-12,Murder,Cemetery in Katowice,Shoemaker
-894,Grażyna,Pawłowska,F,1,Stettin,1945-12-04,Gliwice,1946-12-05,Unknown,Cemetery in Gliwice,
-895,Piotr,Wiśniewski,M,1,Katowice,1945-06-22,Kraków,2011-12-02,Plague,Cemetery in Kraków,Shoemaker
-896,Tomasz,Pawłowski,M,1,Białystok,1947-04-28,Warszawa,1948-05-15,,Cemetery in Warszawa,
-897,Stefan,Kozłowski,M,1,Rzeszów,1947-10-05,Gdynia,1950-03-11,Consumption,Cemetery in Gdynia,
-898,Ludwika,Wiśniewska,F,1,Reszel,1948-07-07,Wisła,2013-05-18,Pneumonia,Cemetery in Wisła,Soldier
-899,Filip,Walczak,M,1,Lublin,1949-12-11,Sandomierz,1984-12-14,Fire,Cemetery in Sandomierz,Mason
-900,Leon,Walczak,M,1,Lanckorona,1952-02-28,Posen,2019-06-01,Drowning,Cemetery in Posen,Butcher
-901,Paweł,Walczak,M,0,Pszczyna,1952-05-24,,,,,Shepherd
-902,Helena,Wiśniewska,F,1,Sosnowiec,1953-03-12,Złoty Potok,2011-12-03,Pneumonia,Cemetery in Złoty Potok,Soldier
-903,Mirosław,Wiśniewski,M,1,Gdynia,1955-12-18,Wisła,2025-02-11,Drowning,Cemetery in Wisła,Judge
-904,Marian,Wiśniewski,M,1,Kraków,1955-06-28,Częstochowa,2011-05-26,Cholera,Cemetery in Częstochowa,Artist
-905,Henryk,Wróbel,M,1,Bromberg,1956-11-04,Stettin,1963-03-08,Dropsy,Cemetery in Stettin,
-906,Tomasz,Kozłowski,M,1,Cieszyn,1956-12-05,Stettin,2004-10-04,Starvation,Cemetery in Stettin,Weaver
-907,Kazimierz,Wiśniewski,M,1,Gliwice,1957-03-19,Łódź,2014-11-13,,Cemetery in Łódź,Carpenter
-908,Józef,Wróbel,M,1,Lublin,1957-11-08,Łódź,1961-11-15,Stroke,Cemetery in Łódź,
-909,Jakub,Kozłowski,M,0,Katowice,1957-12-11,,,,,Farmer
-910,Wanda,Nowakowska,F,0,Olsztyn,1958-08-14,,,,,
-911,Władysław,Kozłowski,M,0,Sandomierz,1959-04-03,,,,,Shepherd
-912,Halina,Wiśniewska,F,1,Rzeszów,1960-11-23,Stettin,1965-11-16,Accident,Cemetery in Stettin,
-913,Agnieszka,Nowakowska,F,1,Bromberg,1960-04-04,Złoty Potok,2027-12-20,Dysentery,Cemetery in Złoty Potok,Judge
-914,Helena,Wróbel,F,0,Gliwice,1960-08-01,,,,,Teacher
-915,Irena,Jankowska,F,0,Bromberg,1960-11-24,,,,,Weaver
-916,Krzysztof,Wróbel,M,1,Krynica,1961-07-12,Zalipie,1997-04-08,Cholera,Cemetery in Zalipie,Baker
-917,Jan,Jankowski,M,0,Bromberg,1963-07-25,,,,,Miner
-918,Kazimiera,Jankowska,F,0,Lipce,1963-10-06,,,,,Judge
-919,Alicja,Jankowska,F,1,Stettin,1965-02-16,Rzeszów,2016-12-25,Unknown,Cemetery in Rzeszów,Hunter
-920,Marian,Szymański,M,1,Kielce,1965-12-08,Lipce,2017-09-26,,Cemetery in Lipce,Miller
-921,Stefania,Jankowska,F,1,Tykocin,1966-08-20,Kielce,2009-02-02,Apoplexy,Cemetery in Kielce,Wheelwright
-922,Kazimierz,Jankowski,M,0,Kazimierz Dolny,1968-11-23,,,,,Fisherman
-923,Joanna,Jankowska,F,1,Bronowice,1968-10-01,Bromberg,2023-02-25,Pneumonia,Cemetery in Bromberg,Weaver
-924,Elżbieta,Jankowska,F,0,Kraków,1969-04-09,,,,,Blacksmith
-925,Teresa,Jankowska,F,1,Supraśl,1971-04-28,Białystok,1974-12-23,Typhus,Cemetery in Białystok,
-926,Danuta,Jankowska,F,1,Wisła,1972-07-01,Thorn,1973-04-21,Fire,Cemetery in Thorn,
-927,Oliwia,Jankowska,F,0,Sanok,1973-12-13,,,,,Fisherman
-928,Leokadia,Jankowska,F,1,Breslau,1974-02-28,Lublin,2015-11-10,Starvation,Cemetery in Lublin,Cooper
-929,Alicja,Jankowska,F,1,Kraków,1977-11-01,Cieszyn,2005-12-14,Smallpox,Cemetery in Cieszyn,Butcher
-930,Natalia,Pawłowska,F,0,Breslau,1982-11-15,,,,,
-931,Kazimiera,Pawłowska,F,0,Złoty Potok,1984-01-13,,,,,Clerk
-932,Andrzej,Walczak,M,0,Posen,1984-02-03,,,,,Merchant
-933,Agnieszka,Pawłowska,F,0,Lanckorona,1986-02-08,,,,,Clerk
-934,Mirosław,Walczak,M,1,Sosnowiec,1987-05-09,Supraśl,1991-10-19,Cancer,Cemetery in Supraśl,
-935,Maria,Walczak,F,0,Kraków,1988-07-08,,,,,Judge
-936,Kazimiera,Wiśniewska,F,1,Posen,1988-05-10,Zwierzyniec,2023-04-26,Dropsy,Cemetery in Zwierzyniec,Soldier
-937,Franciszek,Walczak,M,0,Warszawa,1990-06-09,,,,,Baker
-938,Zuzanna,Wiśniewska,F,0,Lipce,1990-08-21,,,,,
-939,Tomasz,Walczak,M,0,Sromowce,1991-07-25,,,,,Teacher
-940,Halina,Walczak,F,0,Chełmno,1991-06-09,,,,,Judge
-941,Mirosław,Walczak,M,0,Reszel,1992-09-20,,,,,Teacher
-942,Łukasz,Wiśniewski,M,0,Supraśl,1993-12-12,,,,,Miner
-943,Kazimiera,Wiśniewska,F,0,Białystok,1993-09-23,,,,,Scribe
-944,Marek,Wróbel,M,1,Katowice,1993-02-26,Bromberg,2014-03-05,Plague,Cemetery in Bromberg,Potter
-945,Kazimiera,Walczak,F,1,Gliwice,1994-11-09,Pszczyna,1998-12-17,Typhus,Cemetery in Pszczyna,
-946,Kamil,Wiśniewski,M,1,Chełmno,1994-10-09,Olsztyn,1998-10-06,,Cemetery in Olsztyn,
-947,Natalia,Szymańska,F,0,Białystok,1994-08-22,,,,,
-948,Mateusz,Wiśniewski,M,0,Radom,1995-09-09,,,,,
-949,Władysław,Wróbel,M,0,Wisła,1995-08-09,,,,,
-950,Filip,Wiśniewski,M,1,Sandomierz,1996-09-25,Kraków,1997-06-25,Dropsy,Cemetery in Kraków,
-951,Jan,Wiśniewski,M,1,Stettin,1996-11-17,Rzeszów,1998-05-19,Fire,Cemetery in Rzeszów,
-952,Marianna,Walczak,F,0,Kazimierz Dolny,1996-03-22,,,,,Clerk
-953,Adam,Wiśniewski,M,0,Rzeszów,1996-09-01,,,,,Doctor
-954,Anna,Szymańska,F,0,Danzig,1996-06-01,,,,,Judge
-955,Monika,Wróbel,F,1,Cieszyn,1997-07-05,Krynica,2001-01-14,Influenza,Cemetery in Krynica,
-956,Michał,Wiśniewski,M,0,Olsztyn,1998-09-27,,,,,
-957,Paweł,Wiśniewski,M,0,Breslau,1998-01-22,,,,,
-958,Tomasz,Kozłowski,M,0,Sandomierz,1998-07-05,,,,,Tanner
-959,Stefan,Wiśniewski,M,0,Sandomierz,1999-01-25,,,,,
-960,Jakub,Wiśniewski,M,0,Kielce,1999-08-22,,,,,
-961,Wanda,Wróbel,F,0,Bronowice,2000-04-07,,,,,
-962,Ryszard,Kozłowski,M,0,Łódź,2000-07-26,,,,,
-963,Paweł,Wiśniewski,M,1,Lanckorona,2000-03-20,Kazimierz Dolny,2002-01-14,,Cemetery in Kazimierz Dolny,
-964,Leon,Kozłowski,M,0,Lanckorona,2000-08-14,,,,,
-965,Irena,Wróbel,F,0,Danzig,2002-09-22,,,,,Fisherman
-966,Michał,Kozłowski,M,0,Kielce,2003-12-25,,,,,
-967,Dariusz,Kozłowski,M,0,Bronowice,2003-07-24,,,,,
-968,Łukasz,Kozłowski,M,1,Złoty Potok,2004-10-20,Tykocin,2009-02-04,Plague,Cemetery in Tykocin,
-969,Anna,Kozłowska,F,0,Danzig,2005-11-13,,,,,
-970,Marek,Jankowski,M,1,Warszawa,2005-08-06,Sanok,2006-01-13,Dropsy,Cemetery in Sanok,
-971,Irena,Jankowska,F,0,Bronowice,2007-06-22,,,,,
-972,Kazimierz,Kozłowski,M,0,Sanok,2007-06-11,,,,,Farmer
-973,Adam,Kozłowski,M,0,Gdynia,2008-05-07,,,,,
-974,Paweł,Jankowski,M,0,Tykocin,2009-01-16,,,,,
-975,Henryk,Jankowski,M,1,Białystok,2010-02-10,Złoty Potok,2012-07-19,Murder,Cemetery in Złoty Potok,
-976,Katarzyna,Kozłowska,F,0,Bronowice,2010-02-03,,,,,
-977,Michał,Jankowski,M,0,Olsztyn,2012-04-19,,,,,
-978,Julian,Jankowski,M,0,Bronowice,2015-06-15,,,,,
-979,Franciszek,Walczak,M,0,Lublin,2016-01-08,,,,,
-980,Marian,Jankowski,M,1,Chełmno,2017-02-22,Thorn,2018-04-23,Fever,Cemetery in Thorn,
-981,Wiesław,Walczak,M,0,Lublin,2018-09-23,,,,,
-982,Kamil,Wiśniewski,M,0,Sosnowiec,2018-05-11,,,,,
-983,Marcin,Jankowski,M,0,Zwierzyniec,2018-01-01,,,,,
-984,Marcin,Jankowski,M,0,Kraków,2019-07-13,,,,,
-985,Maciej,Walczak,M,0,Chochołów,2019-02-15,,,,,
-986,Piotr,Wiśniewski,M,1,Olsztyn,2019-04-03,Stettin,2021-03-21,,Cemetery in Stettin,
-987,Tomasz,Wiśniewski,M,0,Biecz,2020-01-08,,,,,
-988,Małgorzata,Walczak,F,0,Katowice,2020-02-06,,,,,
-989,Rozalia,Walczak,F,0,Danzig,2021-07-02,,,,,
-990,Krystyna,Walczak,F,0,Breslau,2021-03-14,,,,,
-991,Szymon,Wiśniewski,M,1,Sromowce,2022-06-28,Sandomierz,2024-10-11,Influenza,Cemetery in Sandomierz,
-992,Zofia,Wiśniewska,F,0,Reszel,2023-10-27,,,,,
-993,Maja,Walczak,F,0,Sanok,2023-06-10,,,,,
-994,Marcin,Walczak,M,0,Złoty Potok,2024-07-11,,,,,
-995,Tomasz,Wiśniewski,M,0,Sosnowiec,2025-03-17,,,,,
-996,Oliwia,Wiśniewska,F,0,Chełmno,2025-11-20,,,,,
-997,Wanda,Walczak,F,0,Olsztyn,2026-05-22,,,,,
-998,Elżbieta,Wiśniewska,F,0,Pszczyna,2027-01-28,,,,,
-999,Szymon,Walczak,M,0,Gdynia,2027-04-26,,,,,
-1000,Julian,Kozłowski,M,0,Bronowice,2027-04-27,,,,,
+1,Adam,Kowalski,M,1,Radom,1723-07-11,Sromowce,1806-12-24,Drowning,Cemetery in Sromowce,Doctor
+2,Stefania,Zając,F,1,Lipce,1706-11-01,Supraśl,1775-03-12,,Cemetery in Supraśl,Judge
+3,Andrzej,Stępień,M,1,Reszel,1701-06-27,Pszczyna,1758-05-14,Cholera,Cemetery in Pszczyna,Wheelwright
+4,Maria,Wojciechowska,F,1,Łódź,1708-07-27,Tykocin,1788-10-16,Accident,Cemetery in Tykocin,Teacher
+5,Marek,Kozłowski,M,1,Posen,1716-11-13,Supraśl,1784-08-09,Apoplexy,Cemetery in Supraśl,Miller
+6,Ewa,Szymańska,F,1,Pszczyna,1719-01-25,Chełmno,1805-11-24,War casualty,Cemetery in Chełmno,Priest
+7,Szymon,Wiśniewski,M,1,Pszczyna,1722-09-17,Sanok,1780-01-15,Apoplexy,Cemetery in Sanok,Hunter
+8,Grażyna,Grabowska,F,1,Cieszyn,1722-10-14,Warszawa,1806-11-15,Dropsy,Cemetery in Warszawa,Butcher
+9,Marcin,Szymański,M,1,Gliwice,1709-09-25,Krynica,1759-09-21,Apoplexy,Cemetery in Krynica,Blacksmith
+10,Zofia,Jankowska,F,1,Zwierzyniec,1711-02-24,Białystok,1779-04-19,Accident,Cemetery in Białystok,Innkeeper
+11,Marcin,Nowakowski,M,1,Gdynia,1718-03-27,Rzeszów,1780-09-04,Infectious disease,Cemetery in Rzeszów,Potter
+12,Elżbieta,Kamińska,F,1,Bronowice,1719-07-22,Sosnowiec,1806-08-10,War casualty,Cemetery in Sosnowiec,
+13,Grzegorz,Jaworski,M,1,Thorn,1703-05-14,Lipce,1761-04-16,Drowning,Cemetery in Lipce,Mason
+14,Irena,Stępień,F,1,Chełmno,1722-01-09,Biecz,1790-12-26,Fever,Cemetery in Biecz,Farmer
+15,Leon,Zieliński,M,1,Supraśl,1701-03-13,Chochołów,1780-12-15,Plague,Cemetery in Chochołów,Shepherd
+16,Danuta,Wójcik,F,1,Krynica,1728-07-06,Kraków,1806-12-09,Dysentery,Cemetery in Kraków,Butcher
+17,Ryszard,Kamiński,M,1,Katowice,1727-05-02,Bronowice,1806-01-16,Fever,Cemetery in Bronowice,Clerk
+18,Elżbieta,Wójcik,F,1,Sandomierz,1728-01-28,Białystok,1783-09-25,Murder,Cemetery in Białystok,Weaver
+19,Wojciech,Piotrowski,M,1,Posen,1701-09-02,Danzig,1759-11-13,Fever,Cemetery in Danzig,Farmer
+20,Teresa,Jabłońska,F,1,Supraśl,1707-01-22,Zwierzyniec,1775-12-19,Drowning,Cemetery in Zwierzyniec,Teacher
+21,Stanisław,Wróbel,M,1,Łódź,1717-03-14,Sanok,1810-06-19,Pneumonia,Cemetery in Sanok,Priest
+22,Ewa,Kozłowska,F,1,Sanok,1711-07-21,Warszawa,1784-12-07,Accident,Cemetery in Warszawa,Butcher
+23,Józef,Zając,M,1,Chełmno,1717-05-14,Supraśl,1808-05-22,,Cemetery in Supraśl,Soldier
+24,Natalia,Baran,F,1,Kraków,1712-08-10,Zwierzyniec,1779-03-07,,Cemetery in Zwierzyniec,Weaver
+25,Henryk,Pawlak,M,1,Białystok,1722-12-05,Breslau,1792-06-03,Starvation,Cemetery in Breslau,Cooper
+26,Małgorzata,Grabowska,F,1,Złoty Potok,1706-12-12,Bronowice,1774-04-02,Typhus,Cemetery in Bronowice,Miner
+27,Dariusz,Pawłowski,M,1,Olsztyn,1707-03-23,Sosnowiec,1785-01-28,Pneumonia,Cemetery in Sosnowiec,Farmer
+28,Anna,Adamczyk,F,1,Kielce,1728-08-25,Kraków,1781-09-17,Cancer,Cemetery in Kraków,Baker
+29,Stanisław,Lewandowski,M,1,Biecz,1720-11-20,Chochołów,1817-05-15,Fire,Cemetery in Chochołów,Wheelwright
+30,Jadwiga,Król,F,1,Sromowce,1710-03-26,Olsztyn,1777-10-26,Dysentery,Cemetery in Olsztyn,Potter
+31,Kazimierz,Kamiński,M,1,Reszel,1707-10-04,Gdynia,1776-12-06,War casualty,Cemetery in Gdynia,Scribe
+32,Danuta,Wiśniewska,F,1,Warszawa,1729-10-05,Częstochowa,1807-07-23,Influenza,Cemetery in Częstochowa,Scribe
+33,Tomasz,Jankowski,M,1,Stettin,1701-03-01,Sosnowiec,1784-10-08,Starvation,Cemetery in Sosnowiec,Farmer
+34,Zofia,Jabłońska,F,1,Chochołów,1721-08-17,Krynica,1780-02-16,Pneumonia,Cemetery in Krynica,Tailor
+35,Czesław,Wieczorek,M,1,Chochołów,1718-12-24,Sandomierz,1795-07-24,Murder,Cemetery in Sandomierz,Farmer
+36,Teresa,Jaworska,F,1,Lanckorona,1708-01-22,Bromberg,1777-03-20,,Cemetery in Bromberg,Artist
+37,Adam,Wójcik,M,1,Katowice,1720-04-12,Bromberg,1785-05-23,Murder,Cemetery in Bromberg,Merchant
+38,Józefa,Baran,F,1,Breslau,1709-05-15,Gliwice,1777-05-08,Accident,Cemetery in Gliwice,Lawyer
+39,Michał,Kamiński,M,1,Biecz,1704-08-05,Lublin,1778-06-20,Stroke,Cemetery in Lublin,Tailor
+40,Elżbieta,Walczak,F,1,Bromberg,1709-01-27,Posen,1777-10-12,War casualty,Cemetery in Posen,Clerk
+41,Stanisław,Adamczyk,M,1,Chełmno,1723-07-08,Supraśl,1780-11-27,Fever,Cemetery in Supraśl,Miller
+42,Czesława,Kowalska,F,1,Radom,1716-08-13,Cieszyn,1760-03-15,Unknown,Cemetery in Cieszyn,Clerk
+43,Henryk,Woźniak,M,1,Złoty Potok,1705-12-27,Posen,1780-10-25,Plague,Cemetery in Posen,Clerk
+44,Stefania,Szymańska,F,1,Lipce,1720-11-02,Thorn,1810-12-22,War casualty,Cemetery in Thorn,Potter
+45,Adam,Pawłowski,M,1,Katowice,1707-06-28,Thorn,1790-11-02,,Cemetery in Thorn,Teacher
+46,Czesława,Piotrowska,F,1,Sosnowiec,1727-03-01,Stettin,1821-12-22,Typhus,Cemetery in Stettin,Tailor
+47,Michał,Majewski,M,1,Rzeszów,1724-11-03,Łódź,1781-06-17,Influenza,Cemetery in Łódź,
+48,Ewa,Dąbrowska,F,1,Katowice,1731-11-23,Lanckorona,1808-12-09,,Cemetery in Lanckorona,Tailor
+49,Tadeusz,Mazur,M,1,Sandomierz,1729-06-25,Krynica,1807-02-09,Cancer,Cemetery in Krynica,Tailor
+50,Czesława,Wieczorek,F,1,Breslau,1728-05-03,Łódź,1781-06-21,Typhus,Cemetery in Łódź,Wheelwright
+51,Grzegorz,Wojciechowski,M,1,Bromberg,1721-12-18,Posen,1806-03-03,Drowning,Cemetery in Posen,Baker
+52,Irena,Michalska,F,1,Złoty Potok,1731-01-09,Olsztyn,1808-02-14,Cancer,Cemetery in Olsztyn,Carpenter
+53,Józef,Jankowski,M,1,Zwierzyniec,1710-06-17,Thorn,1777-12-03,Consumption,Cemetery in Thorn,Shoemaker
+54,Danuta,Kwiatkowska,F,1,Kraków,1730-12-13,Lublin,1807-08-06,Influenza,Cemetery in Lublin,Farmer
+55,Tomasz,Zając,M,1,Lublin,1718-12-26,Lanckorona,1792-07-25,Dysentery,Cemetery in Lanckorona,Merchant
+56,Stefania,Majewska,F,1,Łódź,1731-04-07,Gliwice,1783-10-28,,Cemetery in Gliwice,Miner
+57,Adam,Walczak,M,1,Thorn,1709-10-08,Lipce,1757-05-08,Fever,Cemetery in Lipce,Blacksmith
+58,Zuzanna,Wieczorek,F,1,Lublin,1712-12-01,Stettin,1763-02-22,Influenza,Cemetery in Stettin,Cooper
+59,Paweł,Dudek,M,1,Sandomierz,1718-12-05,Cieszyn,1760-08-21,War casualty,Cemetery in Cieszyn,Wheelwright
+60,Helena,Wiśniewska,F,1,Zalipie,1716-10-19,Kazimierz Dolny,1787-09-02,Dysentery,Cemetery in Kazimierz Dolny,Teacher
+61,Bartosz,Wieczorek,M,1,Warszawa,1723-06-08,Supraśl,1781-10-02,Typhus,Cemetery in Supraśl,Priest
+62,Regina,Zielińska,F,1,Supraśl,1705-06-07,Thorn,1803-03-13,Heart failure,Cemetery in Thorn,Priest
+63,Michał,Adamczyk,M,1,Kazimierz Dolny,1709-02-01,Posen,1751-10-03,Heart failure,Cemetery in Posen,Hunter
+64,Bożena,Adamczyk,F,1,Gdynia,1731-05-27,Sromowce,1817-07-16,Murder,Cemetery in Sromowce,Teacher
+65,Stanisław,Kozłowski,M,1,Łódź,1716-08-11,Sosnowiec,1788-11-04,Cancer,Cemetery in Sosnowiec,Innkeeper
+66,Barbara,Jaworska,F,1,Cieszyn,1715-05-24,Bromberg,1779-03-13,Apoplexy,Cemetery in Bromberg,Innkeeper
+67,Tadeusz,Górski,M,1,Chełmno,1724-04-26,Bromberg,1806-09-23,Dysentery,Cemetery in Bromberg,Miller
+68,Katarzyna,Zielińska,F,1,Pszczyna,1710-03-19,Cieszyn,1778-01-08,Dropsy,Cemetery in Cieszyn,Mason
+69,Adam,Dudek,M,1,Sandomierz,1711-09-20,Kazimierz Dolny,1804-09-02,Infectious disease,Cemetery in Kazimierz Dolny,
+70,Józefa,Wojciechowska,F,1,Krynica,1716-01-12,Kraków,1791-03-09,Fever,Cemetery in Kraków,Soldier
+71,Szymon,Mazur,M,1,Lipce,1716-04-01,Kraków,1805-04-28,,Cemetery in Kraków,Soldier
+72,Wanda,Dudek,F,1,Kraków,1714-05-15,Zalipie,1783-11-25,Dysentery,Cemetery in Zalipie,Scribe
+73,Ryszard,Stępień,M,1,Sosnowiec,1710-04-27,Thorn,1797-02-04,Dysentery,Cemetery in Thorn,Wheelwright
+74,Małgorzata,Szymańska,F,1,Lanckorona,1731-02-23,Warszawa,1761-07-26,Accident,Cemetery in Warszawa,Weaver
+75,Adam,Górski,M,1,Tykocin,1722-03-15,Zwierzyniec,1780-01-06,Dropsy,Cemetery in Zwierzyniec,Tailor
+76,Urszula,Baran,F,1,Thorn,1731-05-24,Radom,1808-06-15,Pneumonia,Cemetery in Radom,Shoemaker
+77,Kamil,Pawłowski,M,1,Lanckorona,1710-07-14,Katowice,1779-11-06,,Cemetery in Katowice,Miller
+78,Katarzyna,Wieczorek,F,1,Gliwice,1713-03-22,Pszczyna,1779-06-26,Fever,Cemetery in Pszczyna,Artist
+79,Adam,Michalski,M,1,Katowice,1729-04-23,Gliwice,1811-01-08,Fire,Cemetery in Gliwice,Cooper
+80,Rozalia,Grabowska,F,1,Bronowice,1728-11-14,Wisła,1783-01-25,,Cemetery in Wisła,Butcher
+81,Marek,Malinowski,M,1,Gliwice,1705-12-15,Sromowce,1798-11-20,,Cemetery in Sromowce,Miller
+82,Helena,Jabłońska,F,1,Wisła,1726-02-01,Wisła,1794-07-16,Cholera,Cemetery in Wisła,Potter
+83,Jan,Adamczyk,M,1,Pszczyna,1728-07-02,Katowice,1825-03-19,War casualty,Cemetery in Katowice,Priest
+84,Małgorzata,Michalska,F,1,Gliwice,1705-03-02,Zalipie,1774-06-28,Cancer,Cemetery in Zalipie,Baker
+85,Andrzej,Majewski,M,1,Cieszyn,1726-02-25,Rzeszów,1781-10-26,Typhus,Cemetery in Rzeszów,
+86,Halina,Zielińska,F,1,Krynica,1712-10-18,Sromowce,1804-08-20,Smallpox,Cemetery in Sromowce,Potter
+87,Mateusz,Wójcik,M,1,Radom,1717-03-23,Stettin,1787-06-20,,Cemetery in Stettin,Baker
+88,Aleksandra,Górska,F,1,Zwierzyniec,1709-03-23,Krynica,1796-12-09,,Cemetery in Krynica,Carpenter
+89,Ryszard,Kozłowski,M,1,Chełmno,1705-09-17,Lipce,1755-08-10,Stroke,Cemetery in Lipce,Priest
+90,Zofia,Górska,F,1,Rzeszów,1719-08-20,Złoty Potok,1761-10-16,Stroke,Cemetery in Złoty Potok,Butcher
+91,Marianna,Stępień,F,1,Radom,1751-11-07,Zalipie,1754-08-26,Fire,Cemetery in Zalipie,
+92,Mirosław,Jaworski,M,1,Kraków,1751-09-20,Łódź,1826-08-22,Dropsy,Cemetery in Łódź,Soldier
+93,Ryszard,Pawłowski,M,1,Łódź,1751-02-02,Lipce,1831-04-07,War casualty,Cemetery in Lipce,Cooper
+94,Marian,Jankowski,M,1,Kraków,1751-11-12,Gdynia,1756-01-09,Starvation,Cemetery in Gdynia,
+95,Wojciech,Wieczorek,M,1,Chełmno,1751-02-06,Posen,1808-11-08,,Cemetery in Posen,Wheelwright
+96,Wiktoria,Kamińska,F,1,Reszel,1751-05-13,Krynica,1812-12-02,,Cemetery in Krynica,Cooper
+97,Marianna,Woźniak,F,1,Biecz,1751-12-03,Lipce,1808-11-13,Fire,Cemetery in Lipce,Wheelwright
+98,Bartosz,Walczak,M,1,Krynica,1751-06-26,Chochołów,1753-01-22,Typhus,Cemetery in Chochołów,
+99,Antoni,Dudek,M,1,Olsztyn,1751-10-01,Chełmno,1808-08-18,Consumption,Cemetery in Chełmno,Clerk
+100,Leon,Górski,M,1,Radom,1751-03-22,Thorn,1808-06-14,,Cemetery in Thorn,Clerk
+101,Leon,Dudek,M,1,Cieszyn,1751-01-10,Rzeszów,1815-10-17,Dysentery,Cemetery in Rzeszów,Scribe
+102,Stefania,Górska,F,1,Cieszyn,1751-08-17,Zalipie,1823-11-26,War casualty,Cemetery in Zalipie,Innkeeper
+103,Aleksandra,Malinowska,F,1,Warszawa,1751-07-26,Lanckorona,1808-10-22,Heart failure,Cemetery in Lanckorona,Baker
+104,Teresa,Kozłowska,F,1,Stettin,1751-09-17,Lublin,1828-01-13,Cholera,Cemetery in Lublin,Scribe
+105,Teresa,Kozłowska,F,1,Częstochowa,1752-09-22,Katowice,1832-10-07,Infectious disease,Cemetery in Katowice,Shepherd
+106,Leon,Wiśniewski,M,1,Sanok,1752-06-12,Warszawa,1785-11-18,Plague,Cemetery in Warszawa,
+107,Ewa,Szymańska,F,1,Kazimierz Dolny,1752-10-28,Sanok,1753-05-05,Drowning,Cemetery in Sanok,
+108,Anna,Zielińska,F,1,Chochołów,1752-02-16,Sanok,1838-07-09,War casualty,Cemetery in Sanok,Farmer
+109,Elżbieta,Kamińska,F,1,Rzeszów,1752-04-12,Lipce,1756-05-02,,Cemetery in Lipce,
+110,Rozalia,Piotrowska,F,1,Danzig,1752-07-28,Lanckorona,1826-02-22,Apoplexy,Cemetery in Lanckorona,Potter
+111,Zofia,Pawłowska,F,1,Reszel,1752-09-11,Gdynia,1757-06-06,Typhus,Cemetery in Gdynia,
+112,Leokadia,Lewandowska,F,1,Danzig,1752-08-04,Biecz,1809-09-03,Influenza,Cemetery in Biecz,Shepherd
+113,Helena,Kamińska,F,1,Radom,1752-03-16,Łódź,1829-07-04,,Cemetery in Łódź,Tailor
+114,Rozalia,Kamińska,F,1,Breslau,1752-03-26,Warszawa,1809-07-16,Cancer,Cemetery in Warszawa,Hunter
+115,Dariusz,Adamczyk,M,1,Biecz,1752-05-17,Sosnowiec,1829-10-22,Infectious disease,Cemetery in Sosnowiec,Fisherman
+116,Dariusz,Jankowski,M,1,Częstochowa,1752-03-18,Warszawa,1809-02-05,Fire,Cemetery in Warszawa,
+117,Dariusz,Zając,M,1,Radom,1752-03-12,Chochołów,1812-01-14,Plague,Cemetery in Chochołów,Innkeeper
+118,Monika,Adamczyk,F,1,Tykocin,1752-09-12,Zalipie,1781-11-23,Plague,Cemetery in Zalipie,Wheelwright
+119,Teresa,Kozłowska,F,1,Kraków,1752-02-17,Białystok,1833-10-04,Dysentery,Cemetery in Białystok,Merchant
+120,Oliwia,Mazur,F,1,Chochołów,1752-10-23,Kraków,1809-09-20,Murder,Cemetery in Kraków,Doctor
+121,Natalia,Michalska,F,1,Krynica,1752-02-23,Warszawa,1809-08-24,Cancer,Cemetery in Warszawa,Lawyer
+122,Oliwia,Malinowska,F,1,Stettin,1752-05-10,Kielce,1833-01-05,Murder,Cemetery in Kielce,Tailor
+123,Marek,Majewski,M,1,Warszawa,1752-07-04,Kazimierz Dolny,1822-10-03,Plague,Cemetery in Kazimierz Dolny,Farmer
+124,Zuzanna,Stępień,F,1,Pszczyna,1753-03-04,Kielce,1831-11-22,Infectious disease,Cemetery in Kielce,Artist
+125,Wojciech,Wiśniewski,M,1,Supraśl,1753-01-26,Rzeszów,1847-07-14,Plague,Cemetery in Rzeszów,Miner
+126,Jerzy,Nowakowski,M,1,Radom,1753-11-11,Złoty Potok,1816-03-23,Typhus,Cemetery in Złoty Potok,Potter
+127,Grzegorz,Jaworski,M,1,Supraśl,1753-03-14,Thorn,1755-07-16,Unknown,Cemetery in Thorn,
+128,Bartosz,Zieliński,M,1,Gdynia,1753-07-10,Olsztyn,1812-08-17,Starvation,Cemetery in Olsztyn,Teacher
+129,Stefan,Kamiński,M,1,Kraków,1753-09-22,Gdynia,1818-10-21,Drowning,Cemetery in Gdynia,
+130,Mateusz,Zając,M,1,Lanckorona,1753-08-01,Kraków,1810-01-05,Fever,Cemetery in Kraków,Lawyer
+131,Stanisław,Pawłowski,M,1,Lublin,1753-04-26,Thorn,1810-11-15,Starvation,Cemetery in Thorn,Priest
+132,Stefania,Mazur,F,1,Chochołów,1753-04-14,Stettin,1836-10-23,War casualty,Cemetery in Stettin,Shoemaker
+133,Teresa,Wojciechowska,F,1,Gliwice,1753-09-12,Katowice,1810-05-25,Typhus,Cemetery in Katowice,Fisherman
+134,Barbara,Zając,F,1,Posen,1753-10-25,Częstochowa,1824-12-09,Drowning,Cemetery in Częstochowa,Potter
+135,Katarzyna,Kozłowska,F,1,Warszawa,1753-01-15,Chochołów,1755-05-26,Typhus,Cemetery in Chochołów,
+136,Wiktoria,Górska,F,1,Radom,1753-01-03,Thorn,1814-04-08,Infectious disease,Cemetery in Thorn,Mason
+137,Tomasz,Dudek,M,1,Cieszyn,1753-01-05,Chełmno,1813-03-21,Stroke,Cemetery in Chełmno,Teacher
+138,Maria,Stępień,F,1,Tykocin,1753-01-25,Rzeszów,1755-08-02,Plague,Cemetery in Rzeszów,
+139,Wanda,Górska,F,1,Sosnowiec,1753-10-02,Sandomierz,1812-10-26,Typhus,Cemetery in Sandomierz,Weaver
+140,Paweł,Kozłowski,M,1,Olsztyn,1754-02-22,Zalipie,1757-11-07,,Cemetery in Zalipie,
+141,Zuzanna,Szymańska,F,1,Złoty Potok,1754-07-14,Lipce,1820-03-06,Drowning,Cemetery in Lipce,Artist
+142,Ignacy,Jaworski,M,1,Stettin,1754-06-14,Białystok,1834-02-18,Stroke,Cemetery in Białystok,Fisherman
+143,Mateusz,Kamiński,M,1,Gdynia,1754-12-08,Tykocin,1838-11-19,Infectious disease,Cemetery in Tykocin,Teacher
+144,Halina,Kamińska,F,1,Chełmno,1754-10-19,Wisła,1810-08-24,,Cemetery in Wisła,Artist
+145,Dariusz,Adamczyk,M,1,Rzeszów,1754-05-24,Zalipie,1830-02-21,,Cemetery in Zalipie,Wheelwright
+146,Wanda,Mazur,F,1,Sosnowiec,1754-10-21,Chełmno,1839-07-15,Accident,Cemetery in Chełmno,Mason
+147,Anna,Górska,F,1,Zalipie,1754-04-09,Tykocin,1810-11-22,Fire,Cemetery in Tykocin,Hunter
+148,Aleksandra,Mazur,F,1,Kielce,1754-10-02,Krynica,1822-12-26,Dropsy,Cemetery in Krynica,Scribe
+149,Dariusz,Stępień,M,1,Warszawa,1754-02-16,Złoty Potok,1787-03-16,Heart failure,Cemetery in Złoty Potok,Cooper
+150,Joanna,Michalska,F,1,Bronowice,1754-01-03,Kazimierz Dolny,1834-04-06,Apoplexy,Cemetery in Kazimierz Dolny,Hunter
+151,Wiesław,Majewski,M,1,Złoty Potok,1754-04-19,Chełmno,1838-06-11,Consumption,Cemetery in Chełmno,Artist
+152,Grażyna,Kozłowska,F,1,Wisła,1755-01-09,Breslau,1810-04-25,Plague,Cemetery in Breslau,Butcher
+153,Alicja,Szymańska,F,1,Sandomierz,1755-07-10,Breslau,1823-01-21,Influenza,Cemetery in Breslau,Wheelwright
+154,Oliwia,Zielińska,F,1,Kazimierz Dolny,1755-12-09,Złoty Potok,1810-08-04,Murder,Cemetery in Złoty Potok,Innkeeper
+155,Joanna,Zając,F,1,Lublin,1755-06-07,Warszawa,1761-05-13,Dysentery,Cemetery in Warszawa,
+156,Władysław,Pawłowski,M,1,Posen,1755-09-28,Zwierzyniec,1810-01-11,Murder,Cemetery in Zwierzyniec,Scribe
+157,Zofia,Lewandowska,F,1,Sosnowiec,1755-06-18,Złoty Potok,1837-09-10,Apoplexy,Cemetery in Złoty Potok,Cooper
+158,Mateusz,Pawłowski,M,1,Rzeszów,1755-01-22,Kraków,1815-04-21,,Cemetery in Kraków,Lawyer
+159,Rozalia,Wojciechowska,F,1,Złoty Potok,1755-01-04,Radom,1830-04-09,Consumption,Cemetery in Radom,Lawyer
+160,Wanda,Jankowska,F,1,Zalipie,1755-10-12,Białystok,1830-09-22,War casualty,Cemetery in Białystok,Carpenter
+161,Tadeusz,Kozłowski,M,1,Złoty Potok,1755-01-07,Pszczyna,1757-09-19,Pneumonia,Cemetery in Pszczyna,
+162,Zygmunt,Stępień,M,1,Sromowce,1755-09-18,Zwierzyniec,1831-09-19,Plague,Cemetery in Zwierzyniec,Mason
+163,Szymon,Kozłowski,M,1,Cieszyn,1756-11-22,Lipce,1811-09-23,Cancer,Cemetery in Lipce,Soldier
+164,Dariusz,Zieliński,M,1,Posen,1756-11-05,Chochołów,1833-09-14,Dropsy,Cemetery in Chochołów,Farmer
+165,Bożena,Zając,F,1,Złoty Potok,1756-10-18,Lipce,1823-06-21,Cancer,Cemetery in Lipce,Clerk
+166,Władysław,Kozłowski,M,1,Warszawa,1756-03-23,Łódź,1813-06-03,,Cemetery in Łódź,Mason
+167,Czesław,Kamiński,M,1,Katowice,1757-05-02,Kielce,1831-11-16,Plague,Cemetery in Kielce,Teacher
+168,Julian,Zając,M,1,Lanckorona,1757-05-27,Katowice,1833-07-13,War casualty,Cemetery in Katowice,Miner
+169,Wiesław,Adamczyk,M,1,Krynica,1757-05-01,Kazimierz Dolny,1811-07-26,,Cemetery in Kazimierz Dolny,Butcher
+170,Jan,Wojciechowski,M,1,Danzig,1757-10-16,Wisła,1831-02-24,,Cemetery in Wisła,Shepherd
+171,Natalia,Pawłowska,F,1,Krynica,1758-02-11,Biecz,1811-11-26,Typhus,Cemetery in Biecz,Potter
+172,Piotr,Adamczyk,M,1,Rzeszów,1758-10-16,Reszel,1840-11-14,War casualty,Cemetery in Reszel,Innkeeper
+173,Marian,Pawłowski,M,1,Bronowice,1758-12-03,Breslau,1845-01-08,Consumption,Cemetery in Breslau,Butcher
+174,Stefan,Jankowski,M,1,Sosnowiec,1758-08-06,Katowice,1833-05-22,Murder,Cemetery in Katowice,
+175,Krystyna,Kozłowska,F,1,Sandomierz,1758-12-21,Sanok,1835-08-01,Dropsy,Cemetery in Sanok,Priest
+176,Maria,Kozłowska,F,1,Gliwice,1759-07-14,Kraków,1834-03-09,Pneumonia,Cemetery in Kraków,Baker
+177,Kazimiera,Zając,F,1,Gdynia,1759-11-02,Złoty Potok,1811-03-10,Influenza,Cemetery in Złoty Potok,Scribe
+178,Czesława,Adamczyk,F,1,Kraków,1760-11-16,Gdynia,1838-11-18,Cholera,Cemetery in Gdynia,Weaver
+179,Kazimierz,Jankowski,M,1,Sromowce,1760-01-20,Kraków,1834-04-14,Cholera,Cemetery in Kraków,Fisherman
+180,Julian,Kozłowski,M,1,Warszawa,1761-04-15,Radom,1818-09-24,Cholera,Cemetery in Radom,Lawyer
+181,Paweł,Pawłowski,M,1,Thorn,1761-07-27,Kraków,1781-11-07,Plague,Cemetery in Kraków,Blacksmith
+182,Katarzyna,Jankowska,F,1,Wisła,1761-04-22,Lanckorona,1785-06-14,Dropsy,Cemetery in Lanckorona,Cooper
+183,Dariusz,Zając,M,1,Kraków,1761-03-25,Złoty Potok,1823-07-19,Heart failure,Cemetery in Złoty Potok,Tanner
+184,Marianna,Zając,F,1,Biecz,1763-08-07,Sanok,1812-12-03,Apoplexy,Cemetery in Sanok,Wheelwright
+185,Elżbieta,Stępień,F,1,Posen,1763-05-23,Wisła,1781-04-04,Dysentery,Cemetery in Wisła,Carpenter
+186,Józef,Pawłowski,M,1,Supraśl,1774-09-06,Częstochowa,1834-07-25,Consumption,Cemetery in Częstochowa,Soldier
+187,Filip,Wiśniewski,M,1,Kraków,1774-12-13,Warszawa,1782-10-14,,Cemetery in Warszawa,
+188,Grażyna,Dudek,F,1,Bromberg,1775-04-09,Pszczyna,1834-04-27,,Cemetery in Pszczyna,Wheelwright
+189,Marek,Zając,M,1,Stettin,1775-12-17,Warszawa,1812-09-20,Fever,Cemetery in Warszawa,Innkeeper
+190,Natalia,Wiśniewska,F,1,Lipce,1776-06-26,Tykocin,1859-02-11,,Cemetery in Tykocin,Potter
+191,Tadeusz,Dudek,M,1,Tykocin,1777-04-23,Białystok,1782-02-06,Murder,Cemetery in Białystok,
+192,Anna,Zając,F,1,Bronowice,1777-03-09,Cieszyn,1782-10-15,Fire,Cemetery in Cieszyn,
+193,Rozalia,Stępień,F,1,Tykocin,1777-06-23,Biecz,1851-04-18,Cholera,Cemetery in Biecz,
+194,Maciej,Pawlak,M,1,Kielce,1777-02-08,Katowice,1867-08-13,Pneumonia,Cemetery in Katowice,Weaver
+195,Stefania,Adamczyk,F,1,Katowice,1777-10-24,Chełmno,1853-12-11,Starvation,Cemetery in Chełmno,Priest
+196,Małgorzata,Zając,F,1,Kraków,1778-06-12,Kielce,1782-12-06,Cancer,Cemetery in Kielce,
+197,Wiktoria,Kowalska,F,1,Sandomierz,1778-12-15,Cieszyn,1782-04-04,Murder,Cemetery in Cieszyn,
+198,Bartosz,Dudek,M,1,Katowice,1779-03-20,Złoty Potok,1836-01-02,Starvation,Cemetery in Złoty Potok,Butcher
+199,Władysław,Stępień,M,1,Gdynia,1779-06-05,Gliwice,1847-09-05,Unknown,Cemetery in Gliwice,Carpenter
+200,Alicja,Pawlak,F,1,Danzig,1779-10-25,Pszczyna,1850-12-14,Infectious disease,Cemetery in Pszczyna,Wheelwright
+201,Irena,Adamczyk,F,1,Częstochowa,1779-03-19,Breslau,1855-07-09,War casualty,Cemetery in Breslau,Baker
+202,Leon,Pawłowski,M,1,Chełmno,1779-07-09,Reszel,1840-10-07,Heart failure,Cemetery in Reszel,Innkeeper
+203,Stefan,Zając,M,1,Kielce,1780-12-10,Kielce,1865-01-28,Fire,Cemetery in Kielce,Shoemaker
+204,Henryk,Kowalski,M,1,Kielce,1780-08-04,Sandomierz,1863-06-21,Fever,Cemetery in Sandomierz,Scribe
+205,Joanna,Zielińska,F,1,Złoty Potok,1780-08-20,Posen,1845-03-23,Dysentery,Cemetery in Posen,Shoemaker
+206,Regina,Pawłowska,F,1,Warszawa,1780-02-03,Zwierzyniec,1834-08-08,Cancer,Cemetery in Zwierzyniec,Lawyer
+207,Kamil,Jankowski,M,1,Gliwice,1780-04-02,Częstochowa,1836-12-12,Infectious disease,Cemetery in Częstochowa,Lawyer
+208,Mateusz,Wójcik,M,1,Zwierzyniec,1780-06-20,Krynica,1866-05-10,Fire,Cemetery in Krynica,Baker
+209,Katarzyna,Górska,F,1,Białystok,1780-10-28,Thorn,1836-05-19,Heart failure,Cemetery in Thorn,Clerk
+210,Józefa,Dudek,F,1,Biecz,1781-04-01,Kazimierz Dolny,1878-01-23,Dysentery,Cemetery in Kazimierz Dolny,Judge
+211,Kamil,Pawłowski,M,1,Sanok,1781-02-10,Kazimierz Dolny,1843-01-28,Stroke,Cemetery in Kazimierz Dolny,Mason
+212,Piotr,Dudek,M,1,Danzig,1781-07-07,Stettin,1868-07-13,,Cemetery in Stettin,Mason
+213,Zygmunt,Zając,M,1,Radom,1781-02-27,Lipce,1834-12-14,Infectious disease,Cemetery in Lipce,Baker
+214,Julian,Wojciechowski,M,1,Złoty Potok,1781-05-23,Wisła,1856-02-18,Pneumonia,Cemetery in Wisła,Weaver
+215,Michał,Górski,M,1,Reszel,1781-09-09,Sandomierz,1845-03-26,,Cemetery in Sandomierz,Fisherman
+216,Zofia,Jaworska,F,1,Lublin,1781-04-09,Kraków,1869-01-24,Cholera,Cemetery in Kraków,Cooper
+217,Wiktoria,Górska,F,1,Bromberg,1781-02-16,Sosnowiec,1855-07-08,Fever,Cemetery in Sosnowiec,Hunter
+218,Jan,Zając,M,1,Łódź,1782-01-19,Pszczyna,1844-02-25,Heart failure,Cemetery in Pszczyna,
+219,Anna,Pawlak,F,1,Kazimierz Dolny,1782-08-27,Krynica,1835-09-25,Dropsy,Cemetery in Krynica,Butcher
+220,Wiktoria,Pawłowska,F,1,Sandomierz,1782-05-21,Wisła,1843-06-03,Cancer,Cemetery in Wisła,Mason
+221,Stefan,Pawłowski,M,1,Biecz,1782-06-03,Warszawa,1866-04-10,Dropsy,Cemetery in Warszawa,Scribe
+222,Teresa,Wójcik,F,1,Biecz,1782-07-28,Thorn,1835-07-09,Fever,Cemetery in Thorn,Judge
+223,Genowefa,Wieczorek,F,1,Łódź,1782-12-11,Chełmno,1844-12-25,Fever,Cemetery in Chełmno,Mason
+224,Paweł,Majewski,M,1,Lipce,1782-01-08,Lanckorona,1856-05-18,Dysentery,Cemetery in Lanckorona,Teacher
+225,Łukasz,Pawłowski,M,1,Danzig,1782-04-27,Wisła,1847-06-23,Apoplexy,Cemetery in Wisła,Hunter
+226,Tadeusz,Pawłowski,M,1,Kielce,1783-07-14,Kazimierz Dolny,1861-10-14,,Cemetery in Kazimierz Dolny,Tailor
+227,Teresa,Jankowska,F,1,Lanckorona,1783-06-16,Lublin,1835-03-14,Influenza,Cemetery in Lublin,Mason
+228,Stanisław,Wojciechowski,M,1,Sanok,1783-04-13,Kazimierz Dolny,1848-02-11,Dropsy,Cemetery in Kazimierz Dolny,Miner
+229,Halina,Jaworska,F,1,Zwierzyniec,1783-03-10,Lanckorona,1869-07-23,Fever,Cemetery in Lanckorona,Tanner
+230,Natalia,Kozłowska,F,1,Lublin,1783-06-04,Chełmno,1836-10-03,Fever,Cemetery in Chełmno,Wheelwright
+231,Stanisław,Pawłowski,M,1,Bromberg,1783-04-10,Białystok,1854-02-19,Fire,Cemetery in Białystok,Scribe
+232,Jan,Pawłowski,M,1,Bronowice,1783-12-10,Danzig,1837-09-13,Typhus,Cemetery in Danzig,Scribe
+233,Joanna,Kamińska,F,1,Bromberg,1783-09-23,Kraków,1854-03-28,,Cemetery in Kraków,Tanner
+234,Marek,Kozłowski,M,1,Supraśl,1783-03-22,Posen,1836-09-06,Cancer,Cemetery in Posen,Potter
+235,Dariusz,Nowakowski,M,1,Wisła,1783-04-21,Wisła,1882-08-09,Influenza,Cemetery in Wisła,
+236,Urszula,Mazur,F,1,Sromowce,1783-04-09,Bronowice,1787-09-14,Heart failure,Cemetery in Bronowice,
+237,Joanna,Kamińska,F,1,Zwierzyniec,1783-03-12,Krynica,1836-01-07,Apoplexy,Cemetery in Krynica,Fisherman
+238,Maja,Jaworska,F,1,Cieszyn,1784-03-08,Sandomierz,1788-12-03,Starvation,Cemetery in Sandomierz,
+239,Tomasz,Górski,M,1,Chochołów,1784-07-18,Thorn,1852-05-06,,Cemetery in Thorn,Shoemaker
+240,Franciszek,Pawłowski,M,1,Sandomierz,1784-09-16,Warszawa,1858-09-02,Pneumonia,Cemetery in Warszawa,Artist
+241,Jan,Majewski,M,1,Złoty Potok,1784-07-15,Katowice,1852-08-25,Unknown,Cemetery in Katowice,Soldier
+242,Jan,Dudek,M,1,Tykocin,1784-01-20,Sosnowiec,1867-07-13,Typhus,Cemetery in Sosnowiec,Baker
+243,Katarzyna,Pawłowska,F,1,Posen,1785-08-03,Breslau,1841-07-11,Murder,Cemetery in Breslau,Tanner
+244,Zuzanna,Wieczorek,F,1,Danzig,1785-08-22,Złoty Potok,1844-03-11,Dropsy,Cemetery in Złoty Potok,Tailor
+245,Genowefa,Majewska,F,1,Sromowce,1785-02-22,Lanckorona,1852-01-03,Consumption,Cemetery in Lanckorona,
+246,Grzegorz,Pawłowski,M,1,Radom,1785-04-26,Bronowice,1872-09-01,Drowning,Cemetery in Bronowice,Carpenter
+247,Stanisław,Kamiński,M,1,Lanckorona,1785-02-05,Wisła,1860-07-08,Plague,Cemetery in Wisła,Priest
+248,Leokadia,Nowakowska,F,1,Lublin,1785-04-16,Pszczyna,1844-10-24,Apoplexy,Cemetery in Pszczyna,Teacher
+249,Alicja,Zając,F,1,Danzig,1785-04-27,Danzig,1841-11-03,Murder,Cemetery in Danzig,Innkeeper
+250,Wanda,Zielińska,F,1,Biecz,1785-08-15,Wisła,1859-05-21,Dropsy,Cemetery in Wisła,Clerk
+251,Wiesław,Górski,M,1,Gdynia,1786-01-13,Thorn,1788-11-17,,Cemetery in Thorn,
+252,Filip,Majewski,M,1,Lublin,1786-09-13,Zwierzyniec,1838-11-27,Heart failure,Cemetery in Zwierzyniec,Doctor
+253,Józef,Dudek,M,1,Stettin,1786-05-08,Lublin,1864-09-13,Typhus,Cemetery in Lublin,Clerk
+254,Małgorzata,Zając,F,1,Sanok,1786-05-02,Bromberg,1812-04-07,Consumption,Cemetery in Bromberg,Mason
+255,Leon,Michalski,M,1,Chełmno,1786-08-27,Thorn,1880-06-05,Cholera,Cemetery in Thorn,Potter
+256,Ryszard,Wieczorek,M,1,Thorn,1787-04-25,Posen,1862-08-09,Consumption,Cemetery in Posen,Carpenter
+257,Krzysztof,Jaworski,M,1,Zwierzyniec,1787-04-28,Chełmno,1861-03-05,Heart failure,Cemetery in Chełmno,Judge
+258,Danuta,Kamińska,F,1,Białystok,1787-12-27,Olsztyn,1813-02-05,Apoplexy,Cemetery in Olsztyn,Mason
+259,Czesława,Zielińska,F,1,Olsztyn,1787-03-25,Zalipie,1850-12-19,Stroke,Cemetery in Zalipie,Lawyer
+260,Józef,Pawłowski,M,1,Lanckorona,1788-05-02,Chochołów,1836-06-20,Fire,Cemetery in Chochołów,Hunter
+261,Jakub,Nowakowski,M,1,Częstochowa,1788-09-18,Bromberg,1869-01-15,Drowning,Cemetery in Bromberg,Carpenter
+262,Jan,Zając,M,1,Lipce,1788-12-07,Radom,1820-10-15,,Cemetery in Radom,Wheelwright
+263,Wiktoria,Michalska,F,1,Pszczyna,1788-11-01,Kraków,1850-03-03,Plague,Cemetery in Kraków,Weaver
+264,Leon,Kamiński,M,1,Olsztyn,1788-06-03,Breslau,1860-02-04,Drowning,Cemetery in Breslau,Hunter
+265,Jan,Wieczorek,M,1,Łódź,1790-06-19,Posen,1852-02-26,Influenza,Cemetery in Posen,Artist
+266,Jerzy,Nowakowski,M,1,Wisła,1790-03-13,Kraków,1871-06-24,War casualty,Cemetery in Kraków,
+267,Marian,Michalski,M,1,Posen,1791-10-11,Lanckorona,1854-04-03,Starvation,Cemetery in Lanckorona,Tanner
+268,Tomasz,Wieczorek,M,1,Pszczyna,1792-04-24,Lanckorona,1855-06-22,Smallpox,Cemetery in Lanckorona,Scribe
+269,Jerzy,Nowakowski,M,1,Zwierzyniec,1792-03-19,Danzig,1870-02-23,,Cemetery in Danzig,Hunter
+270,Joanna,Nowakowska,F,1,Lublin,1794-03-06,Sanok,1881-10-15,Unknown,Cemetery in Sanok,Judge
+271,Krzysztof,Kozłowski,M,1,Złoty Potok,1795-01-09,Olsztyn,1849-02-13,Drowning,Cemetery in Olsztyn,
+272,Zofia,Jankowska,F,1,Wisła,1796-10-02,Białystok,1836-08-20,,Cemetery in Białystok,Miner
+273,Krystyna,Jankowska,F,1,Lipce,1797-09-21,Pszczyna,1814-12-12,,Cemetery in Pszczyna,
+274,Teresa,Jankowska,F,1,Lanckorona,1798-06-05,Bronowice,1886-03-17,,Cemetery in Bronowice,Baker
+275,Oliwia,Nowakowska,F,1,Złoty Potok,1803-02-03,Częstochowa,1874-08-28,Drowning,Cemetery in Częstochowa,Farmer
+276,Ewa,Pawłowska,F,1,Kraków,1804-09-12,Reszel,1837-08-17,Infectious disease,Cemetery in Reszel,Mason
+277,Joanna,Pawłowska,F,1,Zwierzyniec,1804-11-15,Wisła,1814-07-26,Stroke,Cemetery in Wisła,
+278,Julian,Nowakowski,M,1,Radom,1805-07-22,Rzeszów,1814-10-09,Consumption,Cemetery in Rzeszów,
+279,Jadwiga,Zając,F,1,Thorn,1805-07-01,Kielce,1876-09-25,Consumption,Cemetery in Kielce,Wheelwright
+280,Stefan,Pawłowski,M,1,Chełmno,1806-08-21,Katowice,1837-03-14,Fever,Cemetery in Katowice,Farmer
+281,Jan,Górski,M,1,Reszel,1806-09-03,Breslau,1866-06-01,,Cemetery in Breslau,Fisherman
+282,Ignacy,Pawłowski,M,1,Rzeszów,1806-03-25,Kazimierz Dolny,1863-09-28,Apoplexy,Cemetery in Kazimierz Dolny,Blacksmith
+283,Józefa,Pawłowska,F,1,Stettin,1806-08-11,Kazimierz Dolny,1864-02-19,,Cemetery in Kazimierz Dolny,Butcher
+284,Wiesław,Zając,M,1,Lublin,1806-11-07,Sandomierz,1893-10-01,Accident,Cemetery in Sandomierz,Miner
+285,Kamil,Pawłowski,M,1,Katowice,1806-08-21,Lublin,1890-04-04,Murder,Cemetery in Lublin,Cooper
+286,Andrzej,Wójcik,M,1,Radom,1806-08-22,Posen,1888-05-23,Plague,Cemetery in Posen,Scribe
+287,Dariusz,Pawłowski,M,1,Breslau,1807-12-14,Chełmno,1892-02-08,Heart failure,Cemetery in Chełmno,Weaver
+288,Marian,Zając,M,1,Olsztyn,1807-11-13,Sandomierz,1873-03-01,Dysentery,Cemetery in Sandomierz,Soldier
+289,Irena,Wieczorek,F,1,Danzig,1807-09-28,Kazimierz Dolny,1896-07-07,Consumption,Cemetery in Kazimierz Dolny,Baker
+290,Józef,Nowakowski,M,1,Złoty Potok,1808-04-14,Warszawa,1892-07-14,Cholera,Cemetery in Warszawa,Soldier
+291,Kazimiera,Zając,F,1,Sosnowiec,1808-05-18,Radom,1900-12-07,Dropsy,Cemetery in Radom,Artist
+292,Ignacy,Pawłowski,M,1,Łódź,1808-03-22,Łódź,1873-08-24,War casualty,Cemetery in Łódź,Farmer
+293,Wanda,Pawłowska,F,1,Stettin,1808-09-02,Posen,1861-12-21,,Cemetery in Posen,Judge
+294,Mateusz,Pawłowski,M,1,Sromowce,1808-11-23,Katowice,1869-10-17,,Cemetery in Katowice,Tailor
+295,Teresa,Stępień,F,1,Kielce,1808-12-01,Biecz,1865-09-08,Fever,Cemetery in Biecz,Priest
+296,Halina,Kowalska,F,1,Sosnowiec,1808-05-07,Gdynia,1862-10-01,Fire,Cemetery in Gdynia,Hunter
+297,Julian,Pawłowski,M,1,Radom,1808-01-17,Tykocin,1864-08-24,Dropsy,Cemetery in Tykocin,Blacksmith
+298,Irena,Jaworska,F,1,Sromowce,1808-01-08,Bromberg,1871-04-28,Drowning,Cemetery in Bromberg,Doctor
+299,Kazimiera,Nowakowska,F,1,Gdynia,1809-02-09,Częstochowa,1838-01-18,Cancer,Cemetery in Częstochowa,Doctor
+300,Michał,Pawłowski,M,1,Radom,1809-02-11,Bromberg,1871-01-24,Drowning,Cemetery in Bromberg,Judge
+301,Jadwiga,Wieczorek,F,1,Supraśl,1809-03-24,Posen,1892-09-10,Unknown,Cemetery in Posen,Miller
+302,Mateusz,Zając,M,1,Breslau,1809-02-25,Kazimierz Dolny,1871-01-18,,Cemetery in Kazimierz Dolny,Baker
+303,Zofia,Pawłowska,F,1,Pszczyna,1809-07-24,Radom,1882-12-12,Infectious disease,Cemetery in Radom,Innkeeper
+304,Filip,Zając,M,1,Krynica,1810-11-01,Lipce,1910-05-05,Consumption,Cemetery in Lipce,Shepherd
+305,Jadwiga,Pawłowska,F,1,Cieszyn,1810-04-26,Sromowce,1849-05-22,Heart failure,Cemetery in Sromowce,Doctor
+306,Paweł,Stępień,M,1,Supraśl,1810-01-05,Tykocin,1874-07-21,Cancer,Cemetery in Tykocin,Wheelwright
+307,Helena,Kowalska,F,1,Częstochowa,1810-04-16,Pszczyna,1882-07-16,Smallpox,Cemetery in Pszczyna,Mason
+308,Leon,Zając,M,1,Reszel,1810-07-26,Kielce,1894-10-27,Fire,Cemetery in Kielce,Shoemaker
+309,Elżbieta,Pawłowska,F,1,Stettin,1810-04-06,Biecz,1861-02-02,Accident,Cemetery in Biecz,Tanner
+310,Maja,Jaworska,F,1,Bromberg,1810-08-02,Cieszyn,1911-10-11,Infectious disease,Cemetery in Cieszyn,Tailor
+311,Grażyna,Górska,F,1,Lanckorona,1810-08-15,Sromowce,1906-01-20,,Cemetery in Sromowce,Carpenter
+312,Marian,Michalski,M,1,Sanok,1810-04-11,Warszawa,1891-05-17,Influenza,Cemetery in Warszawa,Blacksmith
+313,Monika,Zając,F,1,Reszel,1810-12-23,Gliwice,1889-02-24,Cancer,Cemetery in Gliwice,Judge
+314,Paweł,Pawłowski,M,1,Tykocin,1811-03-08,Sandomierz,1860-02-10,,Cemetery in Sandomierz,Soldier
+315,Grażyna,Pawłowska,F,1,Gdynia,1811-06-25,Tykocin,1874-06-09,,Cemetery in Tykocin,Weaver
+316,Maria,Stępień,F,1,Pszczyna,1811-06-05,Tykocin,1875-03-09,Cancer,Cemetery in Tykocin,Weaver
+317,Wojciech,Pawłowski,M,1,Częstochowa,1811-02-26,Supraśl,1893-07-15,Cholera,Cemetery in Supraśl,Doctor
+318,Helena,Pawlak,F,1,Katowice,1811-05-08,Reszel,1877-01-19,,Cemetery in Reszel,Potter
+319,Maciej,Nowakowski,M,1,Rzeszów,1812-06-17,Bromberg,1886-09-20,Fire,Cemetery in Bromberg,Scribe
+320,Grzegorz,Kowalski,M,1,Pszczyna,1812-06-02,Bromberg,1850-08-11,Murder,Cemetery in Bromberg,Wheelwright
+321,Kazimiera,Zając,F,1,Katowice,1812-10-18,Sromowce,1852-07-18,,Cemetery in Sromowce,Hunter
+322,Marianna,Pawłowska,F,1,Thorn,1812-10-15,Sandomierz,1860-02-20,Stroke,Cemetery in Sandomierz,Carpenter
+323,Irena,Górska,F,1,Stettin,1812-03-12,Chełmno,1873-09-11,Dropsy,Cemetery in Chełmno,Carpenter
+324,Tadeusz,Michalski,M,1,Breslau,1812-05-26,Chełmno,1871-03-01,Smallpox,Cemetery in Chełmno,Shepherd
+325,Anna,Pawłowska,F,1,Kraków,1812-02-02,Białystok,1876-07-21,,Cemetery in Białystok,Scribe
+326,Jan,Pawłowski,M,1,Sanok,1813-08-13,Rzeszów,1870-06-01,Murder,Cemetery in Rzeszów,Judge
+327,Leon,Pawłowski,M,1,Breslau,1813-03-25,Lublin,1814-02-15,Apoplexy,Cemetery in Lublin,
+328,Małgorzata,Zając,F,1,Zwierzyniec,1813-09-23,Gliwice,1895-05-10,Plague,Cemetery in Gliwice,Butcher
+329,Jerzy,Nowakowski,M,1,Częstochowa,1814-10-25,Sosnowiec,1893-01-17,Infectious disease,Cemetery in Sosnowiec,Hunter
+330,Wanda,Pawłowska,F,1,Wisła,1814-07-12,Katowice,1898-08-18,,Cemetery in Katowice,Farmer
+331,Ignacy,Górski,M,1,Kielce,1814-01-07,Danzig,1857-05-05,War casualty,Cemetery in Danzig,Tailor
+332,Grzegorz,Michalski,M,1,Warszawa,1814-11-19,Katowice,1874-04-01,,Cemetery in Katowice,Carpenter
+333,Krystyna,Kozłowska,F,1,Chełmno,1814-05-03,Lanckorona,1886-12-22,Plague,Cemetery in Lanckorona,Innkeeper
+334,Józef,Adamczyk,M,1,Warszawa,1814-03-14,Bronowice,1879-12-22,Stroke,Cemetery in Bronowice,Clerk
+335,Urszula,Kamińska,F,1,Sanok,1814-12-12,Thorn,1870-01-08,Plague,Cemetery in Thorn,Fisherman
+336,Krzysztof,Pawłowski,M,1,Chełmno,1815-02-04,Częstochowa,1883-05-18,Plague,Cemetery in Częstochowa,Butcher
+337,Filip,Zając,M,1,Lanckorona,1815-09-15,Gdynia,1872-06-11,,Cemetery in Gdynia,Innkeeper
+338,Mirosław,Dudek,M,1,Lanckorona,1815-08-02,Cieszyn,1885-04-28,Unknown,Cemetery in Cieszyn,Baker
+339,Julian,Górski,M,1,Olsztyn,1816-10-06,Stettin,1865-02-20,Smallpox,Cemetery in Stettin,Miner
+340,Tadeusz,Michalski,M,1,Wisła,1816-10-21,Lipce,1875-12-27,Influenza,Cemetery in Lipce,Carpenter
+341,Jan,Kozłowski,M,1,Zalipie,1816-02-13,Krynica,1819-02-25,Drowning,Cemetery in Krynica,
+342,Anna,Adamczyk,F,1,Sandomierz,1816-09-25,Breslau,1889-10-09,Plague,Cemetery in Breslau,Wheelwright
+343,Urszula,Michalska,F,1,Cieszyn,1817-02-20,Danzig,1900-06-02,Smallpox,Cemetery in Danzig,Weaver
+344,Marek,Jaworski,M,1,Radom,1817-08-22,Sandomierz,1901-09-27,Pneumonia,Cemetery in Sandomierz,
+345,Bożena,Zając,F,1,Łódź,1818-03-05,Reszel,1914-05-12,Pneumonia,Cemetery in Reszel,Cooper
+346,Aleksandra,Adamczyk,F,1,Bronowice,1818-06-11,Złoty Potok,1837-08-21,Typhus,Cemetery in Złoty Potok,
+347,Aleksandra,Jaworska,F,1,Gdynia,1818-09-16,Łódź,1867-11-15,Cancer,Cemetery in Łódź,Tailor
+348,Halina,Michalska,F,1,Posen,1819-09-03,Radom,1869-04-15,War casualty,Cemetery in Radom,Miner
+349,Maja,Zając,F,1,Gdynia,1820-01-26,Katowice,1898-12-27,Fever,Cemetery in Katowice,Priest
+350,Mateusz,Jaworski,M,1,Bromberg,1820-08-24,Zwierzyniec,1878-09-21,Smallpox,Cemetery in Zwierzyniec,Miner
+351,Krystyna,Majewska,F,1,Sromowce,1820-01-20,Thorn,1901-03-17,Consumption,Cemetery in Thorn,Doctor
+352,Bożena,Pawłowska,F,1,Biecz,1820-02-09,Sosnowiec,1882-08-03,,Cemetery in Sosnowiec,Tailor
+353,Alicja,Michalska,F,1,Olsztyn,1821-03-27,Radom,1876-12-23,Smallpox,Cemetery in Radom,Shepherd
+354,Marian,Pawłowski,M,1,Radom,1822-05-19,Stettin,1902-08-04,Drowning,Cemetery in Stettin,Hunter
+355,Wiktoria,Michalska,F,1,Pszczyna,1822-10-26,Krynica,1895-06-09,Plague,Cemetery in Krynica,Tanner
+356,Irena,Michalska,F,1,Lanckorona,1823-08-20,Łódź,1837-11-17,Infectious disease,Cemetery in Łódź,
+357,Ludwika,Jaworska,F,1,Warszawa,1823-06-05,Zwierzyniec,1867-11-14,Typhus,Cemetery in Zwierzyniec,Lawyer
+358,Alicja,Majewska,F,1,Częstochowa,1823-04-19,Chochołów,1876-07-02,Fire,Cemetery in Chochołów,Hunter
+359,Stanisław,Michalski,M,1,Tykocin,1823-10-20,Radom,1897-06-20,Consumption,Cemetery in Radom,Mason
+360,Krystyna,Majewska,F,1,Kazimierz Dolny,1824-04-16,Wisła,1919-01-09,Dysentery,Cemetery in Wisła,Cooper
+361,Zuzanna,Wojciechowska,F,1,Chełmno,1825-12-09,Częstochowa,1882-05-26,Pneumonia,Cemetery in Częstochowa,Potter
+362,Wiesław,Majewski,M,1,Kazimierz Dolny,1826-09-21,Rzeszów,1891-05-20,Typhus,Cemetery in Rzeszów,Shepherd
+363,Stanisław,Wojciechowski,M,1,Gliwice,1826-06-03,Kraków,1876-01-11,Plague,Cemetery in Kraków,Priest
+364,Wojciech,Majewski,M,1,Chełmno,1828-08-05,Złoty Potok,1924-04-06,Fever,Cemetery in Złoty Potok,Priest
+365,Wiesław,Wieczorek,M,1,Sosnowiec,1829-06-11,Radom,1915-08-23,Fire,Cemetery in Radom,Priest
+366,Piotr,Kamiński,M,1,Częstochowa,1829-07-17,Rzeszów,1880-07-23,Cancer,Cemetery in Rzeszów,Merchant
+367,Szymon,Majewski,M,1,Białystok,1830-07-28,Złoty Potok,1898-09-08,,Cemetery in Złoty Potok,Teacher
+368,Marcin,Wieczorek,M,1,Radom,1830-12-19,Radom,1899-03-15,,Cemetery in Radom,Innkeeper
+369,Zofia,Wieczorek,F,1,Bromberg,1830-06-18,Radom,1852-02-22,Influenza,Cemetery in Radom,Baker
+370,Katarzyna,Wieczorek,F,1,Thorn,1831-04-07,Gliwice,1864-08-12,Dropsy,Cemetery in Gliwice,Merchant
+371,Bartosz,Wieczorek,M,1,Danzig,1831-01-02,Gliwice,1906-12-13,Consumption,Cemetery in Gliwice,Judge
+372,Marian,Kozłowski,M,1,Warszawa,1831-01-05,Breslau,1881-03-22,Influenza,Cemetery in Breslau,Shepherd
+373,Julia,Majewska,F,1,Sandomierz,1831-06-02,Chełmno,1852-02-05,Typhus,Cemetery in Chełmno,Farmer
+374,Natalia,Pawłowska,F,1,Gliwice,1831-10-04,Bromberg,1925-08-28,Stroke,Cemetery in Bromberg,Blacksmith
+375,Kamil,Kozłowski,M,1,Złoty Potok,1832-07-14,Rzeszów,1872-07-16,Cholera,Cemetery in Rzeszów,Innkeeper
+376,Jadwiga,Wieczorek,F,1,Chełmno,1833-05-18,Katowice,1881-06-13,Fire,Cemetery in Katowice,Innkeeper
+377,Marianna,Pawłowska,F,1,Thorn,1833-06-23,Złoty Potok,1887-03-03,Apoplexy,Cemetery in Złoty Potok,Artist
+378,Czesława,Pawłowska,F,1,Bromberg,1833-06-04,Katowice,1911-06-24,Smallpox,Cemetery in Katowice,Weaver
+379,Władysław,Dudek,M,1,Zalipie,1833-09-26,Bromberg,1897-03-06,Heart failure,Cemetery in Bromberg,Farmer
+380,Joanna,Wójcik,F,1,Posen,1833-04-02,Gdynia,1911-10-14,Consumption,Cemetery in Gdynia,Wheelwright
+381,Grażyna,Wieczorek,F,1,Krynica,1834-09-20,Tykocin,1887-08-01,Heart failure,Cemetery in Tykocin,Weaver
+382,Joanna,Kozłowska,F,1,Krynica,1834-12-26,Supraśl,1889-03-01,Plague,Cemetery in Supraśl,Butcher
+383,Stefania,Dudek,F,1,Gdynia,1834-12-24,Tykocin,1879-04-07,Accident,Cemetery in Tykocin,Lawyer
+384,Leon,Nowakowski,M,1,Stettin,1834-02-05,Tykocin,1933-04-25,Apoplexy,Cemetery in Tykocin,Weaver
+385,Łukasz,Pawłowski,M,1,Gliwice,1834-05-27,Białystok,1896-10-28,Apoplexy,Cemetery in Białystok,Carpenter
+386,Michał,Kamiński,M,1,Katowice,1834-09-19,Lublin,1899-12-08,Cholera,Cemetery in Lublin,Wheelwright
+387,Antoni,Wójcik,M,1,Bromberg,1834-03-07,Warszawa,1879-09-08,Infectious disease,Cemetery in Warszawa,Scribe
+388,Genowefa,Pawłowska,F,1,Breslau,1834-04-13,Chochołów,1885-03-06,Unknown,Cemetery in Chochołów,Fisherman
+389,Jadwiga,Wieczorek,F,1,Kraków,1835-10-10,Wisła,1907-11-02,,Cemetery in Wisła,Butcher
+390,Wojciech,Pawłowski,M,1,Olsztyn,1835-01-19,Biecz,1895-06-01,Unknown,Cemetery in Biecz,Butcher
+391,Wanda,Zając,F,1,Sandomierz,1835-02-21,Bromberg,1872-10-21,Fire,Cemetery in Bromberg,Clerk
+392,Kazimiera,Nowakowska,F,1,Kielce,1835-09-28,Gliwice,1922-11-04,Heart failure,Cemetery in Gliwice,Lawyer
+393,Bożena,Pawłowska,F,1,Radom,1836-06-07,Biecz,1906-11-01,,Cemetery in Biecz,Farmer
+394,Bartosz,Dudek,M,1,Sromowce,1836-10-06,Sandomierz,1876-03-26,Murder,Cemetery in Sandomierz,Priest
+395,Leokadia,Kamińska,F,1,Złoty Potok,1836-01-24,Lublin,1886-02-25,Consumption,Cemetery in Lublin,Blacksmith
+396,Kazimierz,Wójcik,M,1,Lipce,1836-05-27,Zalipie,1914-03-20,Smallpox,Cemetery in Zalipie,Priest
+397,Paweł,Zając,M,1,Lipce,1836-11-14,Chochołów,1893-10-04,Murder,Cemetery in Chochołów,Soldier
+398,Zuzanna,Zając,F,1,Breslau,1836-11-06,Sosnowiec,1918-01-14,Heart failure,Cemetery in Sosnowiec,Cooper
+399,Halina,Nowakowska,F,1,Białystok,1836-11-21,Gliwice,1877-12-24,Smallpox,Cemetery in Gliwice,
+400,Irena,Zając,F,1,Danzig,1836-03-18,Krynica,1838-10-25,Apoplexy,Cemetery in Krynica,
+401,Jan,Pawłowski,M,1,Lipce,1836-08-05,Tykocin,1890-12-21,Murder,Cemetery in Tykocin,Cooper
+402,Agnieszka,Wieczorek,F,1,Zalipie,1837-06-07,Sandomierz,1914-09-19,Apoplexy,Cemetery in Sandomierz,Innkeeper
+403,Urszula,Pawłowska,F,1,Białystok,1837-09-03,Rzeszów,1912-04-13,Plague,Cemetery in Rzeszów,Shoemaker
+404,Irena,Nowakowska,F,1,Rzeszów,1837-12-20,Częstochowa,1886-05-08,Fever,Cemetery in Częstochowa,Judge
+405,Regina,Pawłowska,F,1,Chochołów,1837-07-14,Tykocin,1909-09-21,Influenza,Cemetery in Tykocin,Butcher
+406,Ewa,Kamińska,F,1,Gdynia,1837-11-20,Krynica,1896-01-15,,Cemetery in Krynica,Priest
+407,Halina,Pawłowska,F,1,Cieszyn,1837-06-25,Biecz,1900-11-08,Unknown,Cemetery in Biecz,Clerk
+408,Monika,Zając,F,1,Olsztyn,1837-02-01,Pszczyna,1916-03-08,Apoplexy,Cemetery in Pszczyna,Doctor
+409,Paweł,Pawłowski,M,1,Sosnowiec,1837-03-14,Chełmno,1905-07-06,,Cemetery in Chełmno,Miller
+410,Zuzanna,Pawłowska,F,1,Lublin,1837-03-13,Radom,1901-05-14,Smallpox,Cemetery in Radom,Teacher
+411,Ignacy,Pawłowski,M,1,Łódź,1838-01-25,Złoty Potok,1920-02-13,Unknown,Cemetery in Złoty Potok,Shoemaker
+412,Barbara,Pawłowska,F,1,Łódź,1838-08-27,Lublin,1901-04-25,Fire,Cemetery in Lublin,Miller
+413,Bożena,Dudek,F,1,Posen,1838-05-26,Zalipie,1933-02-27,Infectious disease,Cemetery in Zalipie,Lawyer
+414,Agnieszka,Wójcik,F,1,Kraków,1838-09-26,Pszczyna,1912-02-09,Dropsy,Cemetery in Pszczyna,Blacksmith
+415,Grzegorz,Nowakowski,M,1,Danzig,1838-10-12,Bronowice,1916-07-02,War casualty,Cemetery in Bronowice,Baker
+416,Maria,Dudek,F,1,Olsztyn,1838-03-23,Lanckorona,1894-02-15,Fever,Cemetery in Lanckorona,Carpenter
+417,Ryszard,Pawłowski,M,1,Białystok,1838-08-11,Bronowice,1930-08-15,Heart failure,Cemetery in Bronowice,Weaver
+418,Zygmunt,Pawłowski,M,1,Sosnowiec,1839-03-22,Chochołów,1899-05-25,Influenza,Cemetery in Chochołów,Butcher
+419,Teresa,Zając,F,1,Danzig,1839-01-02,Kielce,1840-03-25,Infectious disease,Cemetery in Kielce,
+420,Małgorzata,Nowakowska,F,1,Tykocin,1839-08-21,Pszczyna,1887-06-07,Fire,Cemetery in Pszczyna,Shepherd
+421,Jan,Pawłowski,M,1,Lublin,1839-03-12,Kazimierz Dolny,1903-12-17,,Cemetery in Kazimierz Dolny,Carpenter
+422,Zofia,Pawłowska,F,1,Danzig,1839-11-21,Białystok,1911-11-01,Starvation,Cemetery in Białystok,Potter
+423,Marian,Pawłowski,M,1,Radom,1839-09-05,Częstochowa,1923-11-09,War casualty,Cemetery in Częstochowa,Teacher
+424,Bartosz,Pawłowski,M,1,Pszczyna,1840-02-02,Złoty Potok,1907-08-23,Typhus,Cemetery in Złoty Potok,Potter
+425,Franciszek,Wójcik,M,1,Biecz,1840-06-12,Złoty Potok,1900-01-15,Influenza,Cemetery in Złoty Potok,Miller
+426,Julia,Zając,F,1,Sromowce,1840-02-20,Sanok,1855-11-07,,Cemetery in Sanok,
+427,Jan,Dudek,M,1,Stettin,1840-05-20,Sanok,1900-05-21,Fire,Cemetery in Sanok,Teacher
+428,Kamil,Pawłowski,M,1,Gdynia,1840-10-24,Warszawa,1922-09-27,Consumption,Cemetery in Warszawa,Soldier
+429,Wiesław,Górski,M,1,Wisła,1840-07-05,Lublin,1902-02-22,Cancer,Cemetery in Lublin,Teacher
+430,Tadeusz,Pawłowski,M,1,Bronowice,1840-05-12,Lanckorona,1907-06-02,Stroke,Cemetery in Lanckorona,Doctor
+431,Wiktoria,Kowalska,F,1,Danzig,1840-05-20,Lublin,1852-08-03,Fever,Cemetery in Lublin,
+432,Kazimiera,Wieczorek,F,1,Katowice,1840-10-22,Radom,1890-12-23,Plague,Cemetery in Radom,Butcher
+433,Grażyna,Pawłowska,F,1,Radom,1841-12-27,Supraśl,1919-08-05,Fire,Cemetery in Supraśl,Lawyer
+434,Grzegorz,Dudek,M,1,Bromberg,1841-05-10,Pszczyna,1853-02-20,Fever,Cemetery in Pszczyna,
+435,Marianna,Pawłowska,F,1,Olsztyn,1841-05-21,Biecz,1887-09-24,Cholera,Cemetery in Biecz,Merchant
+436,Agnieszka,Zając,F,1,Warszawa,1841-05-06,Sromowce,1913-12-16,Dysentery,Cemetery in Sromowce,Cooper
+437,Jerzy,Pawłowski,M,1,Białystok,1841-11-11,Pszczyna,1902-12-08,Influenza,Cemetery in Pszczyna,Clerk
+438,Piotr,Pawłowski,M,1,Bromberg,1841-07-15,Chochołów,1918-12-12,Cancer,Cemetery in Chochołów,Doctor
+439,Łukasz,Pawłowski,M,1,Katowice,1841-10-23,Tykocin,1896-03-05,Starvation,Cemetery in Tykocin,Blacksmith
+440,Józef,Majewski,M,1,Thorn,1841-12-27,Reszel,1888-09-12,Unknown,Cemetery in Reszel,Hunter
+441,Jan,Pawłowski,M,1,Thorn,1841-12-01,Zwierzyniec,1913-06-24,,Cemetery in Zwierzyniec,Farmer
+442,Maja,Pawłowska,F,1,Częstochowa,1842-05-01,Lublin,1913-05-18,Accident,Cemetery in Lublin,Wheelwright
+443,Kamil,Pawłowski,M,1,Tykocin,1842-03-02,Posen,1914-11-25,Murder,Cemetery in Posen,Doctor
+444,Marian,Pawłowski,M,1,Sanok,1842-04-28,Tykocin,1905-05-16,Drowning,Cemetery in Tykocin,Merchant
+445,Michał,Pawłowski,M,1,Lipce,1842-04-24,Katowice,1914-01-25,Apoplexy,Cemetery in Katowice,Doctor
+446,Łukasz,Pawłowski,M,1,Wisła,1842-08-10,Sanok,1908-08-03,Smallpox,Cemetery in Sanok,Tanner
+447,Halina,Kowalska,F,1,Wisła,1843-12-13,Katowice,1931-02-20,,Cemetery in Katowice,Wheelwright
+448,Anna,Zając,F,1,Posen,1843-08-24,Łódź,1891-12-26,,Cemetery in Łódź,Teacher
+449,Marcin,Zając,M,1,Radom,1844-07-10,Sosnowiec,1854-11-25,,Cemetery in Sosnowiec,
+450,Czesław,Pawłowski,M,1,Biecz,1844-11-10,Kazimierz Dolny,1909-12-04,Infectious disease,Cemetery in Kazimierz Dolny,Wheelwright
+451,Genowefa,Pawłowska,F,1,Bromberg,1844-04-03,Bronowice,1854-09-13,Plague,Cemetery in Bronowice,
+452,Mateusz,Pawłowski,M,1,Gliwice,1844-10-25,Rzeszów,1916-01-05,War casualty,Cemetery in Rzeszów,Fisherman
+453,Marcin,Kowalski,M,1,Radom,1845-12-16,Lipce,1888-11-27,Murder,Cemetery in Lipce,Shepherd
+454,Marek,Pawłowski,M,1,Chochołów,1845-08-27,Breslau,1915-09-06,Infectious disease,Cemetery in Breslau,Innkeeper
+455,Jakub,Zając,M,1,Pszczyna,1845-09-04,Biecz,1911-10-07,,Cemetery in Biecz,Blacksmith
+456,Zuzanna,Pawłowska,F,1,Olsztyn,1847-07-23,Częstochowa,1924-12-04,Plague,Cemetery in Częstochowa,Judge
+457,Marek,Pawłowski,M,1,Olsztyn,1847-09-07,Rzeszów,1926-11-01,Smallpox,Cemetery in Rzeszów,Miner
+458,Stefan,Górski,M,1,Stettin,1847-11-02,Olsztyn,1902-03-24,Pneumonia,Cemetery in Olsztyn,
+459,Ignacy,Zając,M,1,Katowice,1848-05-05,Biecz,1920-02-04,Fire,Cemetery in Biecz,Mason
+460,Joanna,Górska,F,1,Sanok,1849-07-02,Chełmno,1854-05-17,Infectious disease,Cemetery in Chełmno,
+461,Bartosz,Dudek,M,1,Chełmno,1849-09-05,Gliwice,1918-09-17,Cancer,Cemetery in Gliwice,Baker
+462,Genowefa,Zając,F,1,Olsztyn,1850-12-22,Posen,1857-12-16,,Cemetery in Posen,
+463,Krzysztof,Dudek,M,1,Sanok,1850-07-03,Sromowce,1946-02-20,Smallpox,Cemetery in Sromowce,Scribe
+464,Józefa,Adamczyk,F,1,Biecz,1850-01-25,Sandomierz,1908-06-14,,Cemetery in Sandomierz,Baker
+465,Władysław,Kamiński,M,1,Thorn,1850-02-01,Białystok,1915-02-05,Drowning,Cemetery in Białystok,Shepherd
+466,Danuta,Pawłowska,F,1,Sosnowiec,1851-06-11,Pszczyna,1902-04-10,Unknown,Cemetery in Pszczyna,Teacher
+467,Józef,Zając,M,1,Radom,1852-05-25,Supraśl,1904-03-17,Murder,Cemetery in Supraśl,
+468,Józef,Dudek,M,1,Sanok,1852-05-27,Sandomierz,1903-02-01,,Cemetery in Sandomierz,Miner
+469,Tomasz,Kamiński,M,1,Łódź,1852-04-28,Bronowice,1934-07-25,Unknown,Cemetery in Bronowice,Cooper
+470,Szymon,Michalski,M,1,Danzig,1852-10-18,Reszel,1903-01-27,Dropsy,Cemetery in Reszel,Potter
+471,Marek,Michalski,M,1,Tykocin,1852-03-10,Kazimierz Dolny,1915-11-08,Murder,Cemetery in Kazimierz Dolny,Hunter
+472,Urszula,Pawłowska,F,1,Chochołów,1852-02-04,Wisła,1909-04-01,Fire,Cemetery in Wisła,Tailor
+473,Józefa,Zając,F,1,Lanckorona,1852-04-02,Bromberg,1854-05-01,Cancer,Cemetery in Bromberg,
+474,Tadeusz,Majewski,M,1,Katowice,1852-06-08,Lipce,1924-10-27,,Cemetery in Lipce,Shepherd
+475,Grzegorz,Zając,M,1,Supraśl,1853-05-07,Białystok,1921-01-11,Typhus,Cemetery in Białystok,Baker
+476,Adam,Górski,M,1,Cieszyn,1853-03-05,Sanok,1909-08-02,Fever,Cemetery in Sanok,Cooper
+477,Leokadia,Zając,F,1,Rzeszów,1854-08-27,Chochołów,1903-06-28,Cancer,Cemetery in Chochołów,Hunter
+478,Władysław,Kamiński,M,1,Posen,1854-02-14,Wisła,1915-04-14,,Cemetery in Wisła,Miller
+479,Marcin,Michalski,M,1,Lanckorona,1854-01-13,Sanok,1936-12-25,,Cemetery in Sanok,Merchant
+480,Piotr,Pawłowski,M,1,Gliwice,1854-06-13,Cieszyn,1903-09-20,War casualty,Cemetery in Cieszyn,Mason
+481,Ryszard,Majewski,M,1,Radom,1854-02-10,Białystok,1915-03-10,Plague,Cemetery in Białystok,Innkeeper
+482,Michał,Majewski,M,1,Bromberg,1854-06-23,Gdynia,1916-12-27,Infectious disease,Cemetery in Gdynia,Carpenter
+483,Grzegorz,Górski,M,1,Sanok,1854-12-28,Sosnowiec,1935-12-11,Pneumonia,Cemetery in Sosnowiec,Farmer
+484,Joanna,Pawłowska,F,1,Posen,1854-12-07,Sromowce,1917-10-07,Murder,Cemetery in Sromowce,Farmer
+485,Tadeusz,Jaworski,M,1,Gliwice,1854-02-20,Rzeszów,1858-08-02,Influenza,Cemetery in Rzeszów,
+486,Agnieszka,Kozłowska,F,1,Lipce,1854-08-24,Posen,1920-12-17,,Cemetery in Posen,Wheelwright
+487,Anna,Kamińska,F,1,Katowice,1855-07-14,Częstochowa,1877-08-13,Typhus,Cemetery in Częstochowa,Tailor
+488,Józefa,Majewska,F,1,Białystok,1855-06-08,Sosnowiec,1919-09-12,,Cemetery in Sosnowiec,Mason
+489,Michał,Majewski,M,1,Kazimierz Dolny,1855-06-04,Bromberg,1860-01-04,Dropsy,Cemetery in Bromberg,
+490,Marek,Kozłowski,M,1,Biecz,1855-03-09,Zwierzyniec,1923-02-10,,Cemetery in Zwierzyniec,Innkeeper
+491,Jan,Pawłowski,M,1,Wisła,1856-02-07,Olsztyn,1903-03-03,Typhus,Cemetery in Olsztyn,Soldier
+492,Maja,Zając,F,1,Pszczyna,1856-01-19,Bronowice,1924-09-01,Cancer,Cemetery in Bronowice,Lawyer
+493,Wiktoria,Kamińska,F,1,Tykocin,1857-11-04,Thorn,1921-07-07,Dysentery,Cemetery in Thorn,Wheelwright
+494,Kamil,Pawłowski,M,1,Chochołów,1857-11-19,Złoty Potok,1943-04-12,Cholera,Cemetery in Złoty Potok,Tanner
+495,Kamil,Majewski,M,1,Częstochowa,1858-12-28,Częstochowa,1916-05-28,Pneumonia,Cemetery in Częstochowa,Innkeeper
+496,Adam,Jaworski,M,1,Warszawa,1858-07-27,Rzeszów,1861-05-12,,Cemetery in Rzeszów,
+497,Henryk,Wójcik,M,1,Gliwice,1858-12-15,Reszel,1929-01-05,Typhus,Cemetery in Reszel,Weaver
+498,Piotr,Nowakowski,M,1,Kazimierz Dolny,1858-02-01,Białystok,1919-09-03,Heart failure,Cemetery in Białystok,Merchant
+499,Czesława,Nowakowska,F,1,Łódź,1858-12-21,Breslau,1917-07-16,Accident,Cemetery in Breslau,Wheelwright
+500,Wojciech,Pawłowski,M,1,Pszczyna,1859-06-01,Biecz,1941-05-26,Dropsy,Cemetery in Biecz,Merchant
+501,Stanisław,Kamiński,M,1,Krynica,1859-03-11,Sromowce,1887-08-20,Unknown,Cemetery in Sromowce,Teacher
+502,Kamil,Majewski,M,1,Bromberg,1860-02-17,Krynica,1949-10-19,War casualty,Cemetery in Krynica,Mason
+503,Tadeusz,Jaworski,M,1,Stettin,1860-04-21,Lublin,1922-11-14,Unknown,Cemetery in Lublin,Weaver
+504,Barbara,Wójcik,F,1,Cieszyn,1860-09-18,Olsztyn,1917-12-14,War casualty,Cemetery in Olsztyn,Shepherd
+505,Oliwia,Nowakowska,F,1,Stettin,1860-08-08,Lipce,1942-08-12,Plague,Cemetery in Lipce,Cooper
+506,Józef,Dudek,M,1,Gdynia,1860-10-23,Lipce,1903-03-20,Accident,Cemetery in Lipce,Blacksmith
+507,Kamil,Wójcik,M,1,Olsztyn,1861-03-13,Bronowice,1932-03-03,Dropsy,Cemetery in Bronowice,Baker
+508,Helena,Pawłowska,F,1,Reszel,1861-08-19,Zwierzyniec,1932-03-25,Cancer,Cemetery in Zwierzyniec,Tailor
+509,Marian,Nowakowski,M,1,Katowice,1861-03-14,Tykocin,1926-05-13,Fire,Cemetery in Tykocin,Butcher
+510,Jan,Kamiński,M,1,Reszel,1861-05-15,Breslau,1920-09-26,,Cemetery in Breslau,Miner
+511,Mateusz,Zając,M,1,Sandomierz,1861-03-27,Chełmno,1934-02-25,Typhus,Cemetery in Chełmno,Potter
+512,Mateusz,Nowakowski,M,1,Złoty Potok,1862-01-18,Olsztyn,1954-11-28,Drowning,Cemetery in Olsztyn,Lawyer
+513,Oliwia,Kamińska,F,1,Bronowice,1862-03-21,Zalipie,1945-01-16,Fever,Cemetery in Zalipie,Tailor
+514,Stefania,Wieczorek,F,1,Wisła,1862-12-07,Wisła,1921-04-11,Murder,Cemetery in Wisła,Doctor
+515,Ludwika,Wieczorek,F,1,Zwierzyniec,1862-04-27,Gdynia,1867-02-25,,Cemetery in Gdynia,
+516,Marianna,Pawłowska,F,1,Lipce,1862-01-05,Radom,1929-09-23,Cancer,Cemetery in Radom,Fisherman
+517,Joanna,Pawłowska,F,1,Stettin,1862-06-20,Lublin,1867-02-08,Starvation,Cemetery in Lublin,
+518,Stefania,Dudek,F,1,Bromberg,1862-10-22,Lanckorona,1917-03-27,Drowning,Cemetery in Lanckorona,Soldier
+519,Stefan,Wojciechowski,M,1,Gliwice,1862-01-23,Bronowice,1922-03-01,,Cemetery in Bronowice,Blacksmith
+520,Paweł,Wójcik,M,1,Bronowice,1863-03-07,Gdynia,1950-06-23,Influenza,Cemetery in Gdynia,Farmer
+521,Marek,Nowakowski,M,1,Tykocin,1863-03-27,Krynica,1867-02-16,Dropsy,Cemetery in Krynica,
+522,Teresa,Wieczorek,F,1,Sosnowiec,1863-11-24,Biecz,1904-04-08,,Cemetery in Biecz,Potter
+523,Bożena,Wieczorek,F,1,Reszel,1863-01-21,Białystok,1929-11-24,Unknown,Cemetery in Białystok,Fisherman
+524,Władysław,Pawłowski,M,1,Bromberg,1863-03-15,Warszawa,1872-03-01,,Cemetery in Warszawa,
+525,Danuta,Pawłowska,F,1,Breslau,1863-12-11,Olsztyn,1917-02-23,,Cemetery in Olsztyn,Cooper
+526,Grzegorz,Dudek,M,1,Thorn,1863-12-06,Reszel,1939-06-14,Apoplexy,Cemetery in Reszel,Tailor
+527,Franciszek,Wójcik,M,1,Lublin,1864-11-21,Bronowice,1888-09-23,Drowning,Cemetery in Bronowice,Lawyer
+528,Andrzej,Kamiński,M,1,Warszawa,1864-06-25,Krynica,1935-10-20,Typhus,Cemetery in Krynica,Soldier
+529,Ignacy,Zając,M,1,Łódź,1864-01-08,Biecz,1920-05-09,Stroke,Cemetery in Biecz,Merchant
+530,Łukasz,Wieczorek,M,1,Katowice,1864-07-17,Katowice,1920-07-18,Pneumonia,Cemetery in Katowice,Clerk
+531,Halina,Pawłowska,F,1,Stettin,1864-01-22,Bromberg,1919-09-14,Cancer,Cemetery in Bromberg,Potter
+532,Władysław,Pawłowski,M,1,Bronowice,1864-03-27,Sandomierz,1918-02-07,Consumption,Cemetery in Sandomierz,Clerk
+533,Aleksandra,Dudek,F,1,Sromowce,1864-05-14,Reszel,1930-06-15,Infectious disease,Cemetery in Reszel,Hunter
+534,Michał,Dudek,M,1,Zwierzyniec,1864-08-28,Biecz,1928-12-28,Infectious disease,Cemetery in Biecz,Teacher
+535,Tomasz,Pawłowski,M,1,Krynica,1864-03-03,Kraków,1918-11-04,Stroke,Cemetery in Kraków,Merchant
+536,Elżbieta,Nowakowska,F,0,Łódź,1865-07-05,,,,,
+537,Jerzy,Kamiński,M,1,Breslau,1865-03-16,Sanok,1923-03-27,Cancer,Cemetery in Sanok,Artist
+538,Zofia,Pawłowska,F,1,Cieszyn,1865-04-04,Thorn,1878-04-16,Drowning,Cemetery in Thorn,
+539,Kazimierz,Zając,M,1,Krynica,1866-09-09,Sanok,1934-08-25,Consumption,Cemetery in Sanok,Shoemaker
+540,Piotr,Górski,M,1,Gdynia,1866-12-23,Radom,1940-04-16,Starvation,Cemetery in Radom,Potter
+541,Jerzy,Pawłowski,M,1,Gdynia,1866-01-05,Sanok,1939-02-07,Consumption,Cemetery in Sanok,Farmer
+542,Jadwiga,Nowakowska,F,1,Pszczyna,1867-02-14,Danzig,1932-11-28,War casualty,Cemetery in Danzig,Scribe
+543,Joanna,Wieczorek,F,1,Zwierzyniec,1867-01-03,Chełmno,1878-11-05,Starvation,Cemetery in Chełmno,
+544,Bożena,Pawłowska,F,1,Gliwice,1867-10-10,Bromberg,1942-12-16,Plague,Cemetery in Bromberg,Blacksmith
+545,Marian,Pawłowski,M,1,Lipce,1867-07-19,Rzeszów,1921-07-14,War casualty,Cemetery in Rzeszów,Merchant
+546,Jadwiga,Dudek,F,1,Gliwice,1867-07-21,Stettin,1938-01-27,Dropsy,Cemetery in Stettin,Farmer
+547,Czesława,Górska,F,1,Zalipie,1867-07-06,Częstochowa,1918-06-27,Heart failure,Cemetery in Częstochowa,Innkeeper
+548,Łukasz,Wójcik,M,1,Chochołów,1867-04-19,Radom,1918-11-10,,Cemetery in Radom,Merchant
+549,Ewa,Kamińska,F,1,Supraśl,1868-06-14,Lublin,1937-06-10,Dysentery,Cemetery in Lublin,Doctor
+550,Wiktoria,Pawłowska,F,1,Radom,1869-12-21,Zwierzyniec,1919-06-17,Plague,Cemetery in Zwierzyniec,Scribe
+551,Agnieszka,Kamińska,F,1,Danzig,1869-06-12,Kraków,1958-10-06,Fire,Cemetery in Kraków,Tailor
+552,Piotr,Pawłowski,M,1,Tykocin,1869-12-16,Sromowce,1945-04-10,Apoplexy,Cemetery in Sromowce,Doctor
+553,Agnieszka,Pawłowska,F,1,Supraśl,1869-01-02,Bromberg,1920-11-22,,Cemetery in Bromberg,Judge
+554,Władysław,Nowakowski,M,1,Chełmno,1869-05-04,Bromberg,1927-07-07,Infectious disease,Cemetery in Bromberg,Butcher
+555,Halina,Wójcik,F,1,Breslau,1870-07-09,Katowice,1942-03-13,Dropsy,Cemetery in Katowice,Weaver
+556,Marian,Dudek,M,1,Bromberg,1870-05-08,Lipce,1905-12-24,Influenza,Cemetery in Lipce,Butcher
+557,Marek,Zając,M,1,Złoty Potok,1870-01-21,Lanckorona,1882-12-20,Cholera,Cemetery in Lanckorona,
+558,Natalia,Pawłowska,F,1,Chełmno,1871-07-09,Thorn,1882-03-03,War casualty,Cemetery in Thorn,
+559,Szymon,Pawłowski,M,1,Biecz,1871-04-20,Lipce,1944-05-14,Infectious disease,Cemetery in Lipce,Tailor
+560,Krzysztof,Nowakowski,M,1,Rzeszów,1871-11-04,Breslau,1951-02-26,Pneumonia,Cemetery in Breslau,Wheelwright
+561,Marian,Zając,M,1,Sanok,1871-06-28,Warszawa,1931-03-27,Unknown,Cemetery in Warszawa,Blacksmith
+562,Maria,Wójcik,F,1,Danzig,1871-03-17,Chochołów,1932-12-05,,Cemetery in Chochołów,Teacher
+563,Jadwiga,Wójcik,F,1,Zalipie,1872-03-28,Chełmno,1934-11-07,Infectious disease,Cemetery in Chełmno,Blacksmith
+564,Wiesław,Dudek,M,1,Bronowice,1872-09-06,Rzeszów,1927-12-19,Plague,Cemetery in Rzeszów,Miner
+565,Franciszek,Zając,M,1,Sosnowiec,1872-10-06,Supraśl,1926-09-11,Cancer,Cemetery in Supraśl,Priest
+566,Teresa,Kowalska,F,1,Kielce,1872-05-06,Warszawa,1920-05-01,Accident,Cemetery in Warszawa,Mason
+567,Mateusz,Wójcik,M,1,Supraśl,1872-01-16,Bronowice,1942-12-11,Cancer,Cemetery in Bronowice,Miner
+568,Anna,Pawłowska,F,1,Warszawa,1873-02-03,Biecz,1920-04-24,,Cemetery in Biecz,Miller
+569,Michał,Nowakowski,M,1,Zalipie,1873-04-09,Breslau,1948-05-16,Starvation,Cemetery in Breslau,Shepherd
+570,Czesława,Pawłowska,F,1,Sromowce,1873-05-11,Cieszyn,1931-05-17,Dropsy,Cemetery in Cieszyn,Soldier
+571,Paweł,Pawłowski,M,1,Radom,1874-05-10,Zalipie,1882-07-24,Fire,Cemetery in Zalipie,
+572,Józef,Dudek,M,1,Wisła,1874-10-22,Sosnowiec,1941-03-06,,Cemetery in Sosnowiec,Butcher
+573,Monika,Zając,F,1,Chełmno,1874-08-24,Cieszyn,1939-09-03,Pneumonia,Cemetery in Cieszyn,Scribe
+574,Maria,Kowalska,F,1,Łódź,1874-01-07,Kazimierz Dolny,1937-01-21,,Cemetery in Kazimierz Dolny,Shoemaker
+575,Ryszard,Kowalski,M,1,Zalipie,1875-07-23,Warszawa,1947-12-04,Pneumonia,Cemetery in Warszawa,Teacher
+576,Jan,Pawłowski,M,1,Lipce,1875-12-27,Białystok,1946-01-02,Typhus,Cemetery in Białystok,Innkeeper
+577,Halina,Dudek,F,1,Thorn,1876-03-08,Tykocin,1943-03-16,Cholera,Cemetery in Tykocin,Priest
+578,Monika,Zając,F,1,Sandomierz,1876-03-19,Rzeszów,1931-07-01,Fever,Cemetery in Rzeszów,Scribe
+579,Czesław,Kowalski,M,1,Częstochowa,1876-02-14,Sromowce,1921-08-10,Cancer,Cemetery in Sromowce,Soldier
+580,Jan,Pawłowski,M,1,Złoty Potok,1876-03-27,Bronowice,1884-02-26,,Cemetery in Bronowice,
+581,Wojciech,Majewski,M,0,Chełmno,1876-03-15,,,,,
+582,Krystyna,Pawłowska,F,1,Złoty Potok,1876-09-26,Sromowce,1942-04-18,Consumption,Cemetery in Sromowce,Priest
+583,Ludwika,Zając,F,1,Krynica,1877-11-02,Lublin,1884-12-01,War casualty,Cemetery in Lublin,
+584,Kazimierz,Pawłowski,M,1,Lanckorona,1877-03-22,Sosnowiec,1931-07-08,Infectious disease,Cemetery in Sosnowiec,Potter
+585,Wiesław,Majewski,M,1,Białystok,1877-05-22,Krynica,1925-01-06,Infectious disease,Cemetery in Krynica,Lawyer
+586,Zuzanna,Dudek,F,1,Radom,1878-10-11,Lanckorona,1884-08-19,Infectious disease,Cemetery in Lanckorona,
+587,Grażyna,Kowalska,F,1,Białystok,1878-12-20,Częstochowa,1936-09-26,Heart failure,Cemetery in Częstochowa,Artist
+588,Wiesław,Majewski,M,1,Breslau,1878-05-01,Białystok,1950-10-13,Pneumonia,Cemetery in Białystok,Baker
+589,Kazimierz,Pawłowski,M,1,Posen,1878-09-06,Lipce,1949-12-04,Smallpox,Cemetery in Lipce,Weaver
+590,Helena,Pawłowska,F,1,Bronowice,1879-08-15,Łódź,1924-05-08,Dropsy,Cemetery in Łódź,Soldier
+591,Maja,Majewska,F,1,Bronowice,1879-01-09,Gdynia,1884-01-24,Smallpox,Cemetery in Gdynia,
+592,Dariusz,Majewski,M,1,Chochołów,1879-10-08,Lanckorona,1950-06-25,Murder,Cemetery in Lanckorona,Miller
+593,Barbara,Pawłowska,F,1,Olsztyn,1880-02-02,Krynica,1954-05-04,Starvation,Cemetery in Krynica,Priest
+594,Krzysztof,Górski,M,1,Sosnowiec,1880-11-07,Białystok,1947-04-09,Apoplexy,Cemetery in Białystok,Fisherman
+595,Czesława,Pawłowska,F,1,Tykocin,1881-09-25,Biecz,1941-04-18,Stroke,Cemetery in Biecz,Artist
+596,Maja,Pawłowska,F,1,Danzig,1881-06-05,Lipce,1946-02-28,Smallpox,Cemetery in Lipce,Shoemaker
+597,Regina,Michalska,F,1,Reszel,1881-04-06,Lanckorona,1932-06-02,,Cemetery in Lanckorona,Miner
+598,Michał,Górski,M,1,Thorn,1882-12-23,Chełmno,1934-03-23,Accident,Cemetery in Chełmno,Doctor
+599,Stefan,Pawłowski,M,1,Thorn,1882-07-09,Pszczyna,1931-01-04,Fire,Cemetery in Pszczyna,
+600,Dariusz,Michalski,M,1,Sosnowiec,1882-03-01,Zalipie,1949-07-26,Fire,Cemetery in Zalipie,Clerk
+601,Józef,Zając,M,1,Lanckorona,1882-09-02,Gdynia,1931-05-01,Plague,Cemetery in Gdynia,Tanner
+602,Władysław,Nowakowski,M,1,Breslau,1882-11-04,Lipce,1944-05-22,,Cemetery in Lipce,Miner
+603,Leokadia,Majewska,F,1,Sanok,1882-06-13,Sosnowiec,1940-03-25,Typhus,Cemetery in Sosnowiec,Blacksmith
+604,Grzegorz,Dudek,M,1,Katowice,1882-12-09,Cieszyn,1945-03-04,Apoplexy,Cemetery in Cieszyn,Tanner
+605,Elżbieta,Dudek,F,1,Thorn,1882-02-12,Kazimierz Dolny,1955-10-03,Infectious disease,Cemetery in Kazimierz Dolny,Hunter
+606,Tomasz,Pawłowski,M,1,Bronowice,1883-06-05,Sanok,1935-08-21,Cancer,Cemetery in Sanok,Lawyer
+607,Czesław,Pawłowski,M,0,Posen,1884-04-06,,,,,Scribe
+608,Franciszek,Górski,M,1,Breslau,1884-10-08,Sromowce,1949-05-09,Fever,Cemetery in Sromowce,Soldier
+609,Antoni,Pawłowski,M,1,Biecz,1884-12-23,Kraków,1955-11-19,Fever,Cemetery in Kraków,Tanner
+610,Bartosz,Michalski,M,1,Częstochowa,1884-08-13,Gliwice,1905-03-09,,Cemetery in Gliwice,Lawyer
+611,Rozalia,Majewska,F,1,Kielce,1884-11-17,Rzeszów,1934-03-08,Cancer,Cemetery in Rzeszów,Doctor
+612,Jakub,Dudek,M,1,Bronowice,1884-07-24,Olsztyn,1943-06-18,Smallpox,Cemetery in Olsztyn,Lawyer
+613,Mirosław,Dudek,M,1,Katowice,1884-10-02,Kielce,1957-08-05,,Cemetery in Kielce,Tanner
+614,Kazimierz,Pawłowski,M,1,Zalipie,1885-04-10,Stettin,1889-09-08,,Cemetery in Stettin,
+615,Monika,Pawłowska,F,1,Biecz,1885-10-28,Sanok,1889-10-24,Fire,Cemetery in Sanok,
+616,Zofia,Pawłowska,F,1,Breslau,1886-07-22,Cieszyn,1947-04-28,Typhus,Cemetery in Cieszyn,Wheelwright
+617,Mirosław,Dudek,M,0,Wisła,1886-03-10,,,,,Farmer
+618,Kazimierz,Dudek,M,1,Gliwice,1886-11-10,Olsztyn,1889-04-25,Starvation,Cemetery in Olsztyn,
+619,Ewa,Majewska,F,0,Łódź,1886-05-18,,,,,Farmer
+620,Oliwia,Pawłowska,F,0,Częstochowa,1886-05-02,,,,,Mason
+621,Oliwia,Michalska,F,1,Reszel,1887-05-15,Warszawa,1929-08-03,Fever,Cemetery in Warszawa,Scribe
+622,Wiktoria,Majewska,F,1,Lanckorona,1887-10-16,Tykocin,1938-03-19,,Cemetery in Tykocin,Baker
+623,Mateusz,Pawłowski,M,1,Częstochowa,1887-06-01,Gdynia,1958-10-21,Heart failure,Cemetery in Gdynia,Butcher
+624,Natalia,Dudek,F,1,Biecz,1887-01-20,Krynica,1890-09-14,Heart failure,Cemetery in Krynica,
+625,Dariusz,Górski,M,1,Lublin,1887-11-15,Wisła,1949-01-09,Murder,Cemetery in Wisła,Shoemaker
+626,Jakub,Majewski,M,0,Sanok,1888-05-28,,,,,Wheelwright
+627,Marcin,Majewski,M,1,Lublin,1888-04-18,Lipce,1935-07-28,Dysentery,Cemetery in Lipce,Doctor
+628,Czesław,Dudek,M,1,Biecz,1888-11-02,Krynica,1893-01-01,Accident,Cemetery in Krynica,
+629,Czesława,Kozłowska,F,1,Gdynia,1888-01-20,Częstochowa,1958-06-04,Drowning,Cemetery in Częstochowa,Tailor
+630,Julian,Michalski,M,1,Thorn,1889-03-23,Posen,1944-12-16,Infectious disease,Cemetery in Posen,Tanner
+631,Ludwika,Pawłowska,F,1,Stettin,1889-07-12,Posen,1949-03-01,Heart failure,Cemetery in Posen,Blacksmith
+632,Alicja,Dudek,F,1,Tykocin,1889-09-12,Łódź,1935-08-10,Typhus,Cemetery in Łódź,Doctor
+633,Zofia,Majewska,F,1,Danzig,1889-06-20,Chełmno,1948-06-27,Typhus,Cemetery in Chełmno,Blacksmith
+634,Rozalia,Pawłowska,F,1,Łódź,1889-12-25,Łódź,1922-05-13,Heart failure,Cemetery in Łódź,
+635,Wojciech,Kozłowski,M,1,Reszel,1889-02-08,Bromberg,1955-03-24,,Cemetery in Bromberg,Potter
+636,Joanna,Kozłowska,F,1,Kielce,1890-09-14,Bronowice,1947-07-08,,Cemetery in Bronowice,Teacher
+637,Adam,Zając,M,1,Lipce,1890-05-06,Lublin,1949-07-18,Typhus,Cemetery in Lublin,Baker
+638,Franciszek,Kamiński,M,1,Danzig,1890-11-26,Bronowice,1894-04-10,Consumption,Cemetery in Bronowice,
+639,Jakub,Górski,M,0,Białystok,1890-10-17,,,,,Miner
+640,Józefa,Michalska,F,0,Sandomierz,1891-07-02,,,,,Innkeeper
+641,Barbara,Majewska,F,1,Danzig,1891-11-18,Łódź,1953-08-11,War casualty,Cemetery in Łódź,Cooper
+642,Czesław,Dudek,M,1,Złoty Potok,1891-08-02,Sanok,1948-05-01,Dropsy,Cemetery in Sanok,Hunter
+643,Ignacy,Majewski,M,1,Lipce,1891-10-15,Supraśl,1939-05-15,Consumption,Cemetery in Supraśl,Fisherman
+644,Filip,Pawłowski,M,1,Lublin,1891-02-27,Pszczyna,1940-06-24,Stroke,Cemetery in Pszczyna,Cooper
+645,Filip,Kamiński,M,0,Sromowce,1891-03-13,,,,,Lawyer
+646,Józef,Pawłowski,M,1,Breslau,1891-10-06,Białystok,1948-08-18,Cancer,Cemetery in Białystok,Farmer
+647,Zygmunt,Nowakowski,M,0,Zwierzyniec,1891-02-14,,,,,Merchant
+648,Małgorzata,Wójcik,F,1,Olsztyn,1891-05-04,Tykocin,1936-10-28,Fire,Cemetery in Tykocin,Tailor
+649,Dariusz,Pawłowski,M,1,Bronowice,1891-09-15,Bromberg,1956-07-18,Stroke,Cemetery in Bromberg,Tailor
+650,Zygmunt,Kozłowski,M,1,Katowice,1892-09-20,Katowice,1922-01-03,Dropsy,Cemetery in Katowice,Shepherd
+651,Wojciech,Pawłowski,M,0,Thorn,1892-08-10,,,,,Doctor
+652,Krzysztof,Kamiński,M,1,Posen,1892-06-13,Posen,1944-02-25,Influenza,Cemetery in Posen,Priest
+653,Oliwia,Dudek,F,1,Sandomierz,1892-01-01,Biecz,1947-06-23,Stroke,Cemetery in Biecz,Scribe
+654,Urszula,Zając,F,1,Biecz,1892-06-24,Danzig,1893-10-02,,Cemetery in Danzig,
+655,Halina,Kamińska,F,0,Sanok,1892-07-24,,,,,Merchant
+656,Leon,Górski,M,1,Breslau,1892-11-17,Sanok,1949-04-23,Consumption,Cemetery in Sanok,Artist
+657,Czesława,Pawłowska,F,0,Sosnowiec,1892-04-08,,,,,Wheelwright
+658,Natalia,Majewska,F,1,Łódź,1893-08-15,Bronowice,1922-06-21,,Cemetery in Bronowice,Weaver
+659,Marian,Kozłowski,M,0,Lipce,1893-05-28,,,,,Shoemaker
+660,Alicja,Pawłowska,F,1,Warszawa,1893-10-16,Cieszyn,1957-10-28,Apoplexy,Cemetery in Cieszyn,Potter
+661,Władysław,Wójcik,M,1,Katowice,1893-03-21,Lipce,1894-07-21,Consumption,Cemetery in Lipce,
+662,Andrzej,Pawłowski,M,1,Sromowce,1893-11-19,Reszel,1923-11-09,Apoplexy,Cemetery in Reszel,Weaver
+663,Ryszard,Kamiński,M,0,Sosnowiec,1893-11-13,,,,,Wheelwright
+664,Paweł,Kamiński,M,1,Gdynia,1894-12-05,Tykocin,1958-02-02,Accident,Cemetery in Tykocin,Tanner
+665,Alicja,Górska,F,0,Tykocin,1894-02-19,,,,,Teacher
+666,Ignacy,Pawłowski,M,1,Lublin,1894-12-04,Warszawa,1956-06-27,Drowning,Cemetery in Warszawa,Miner
+667,Aleksandra,Pawłowska,F,1,Pszczyna,1894-07-05,Gdynia,1923-08-10,Typhus,Cemetery in Gdynia,Shepherd
+668,Małgorzata,Kozłowska,F,1,Cieszyn,1895-06-21,Sandomierz,1950-07-23,Heart failure,Cemetery in Sandomierz,Fisherman
+669,Bożena,Pawłowska,F,0,Lanckorona,1895-01-19,,,,,Clerk
+670,Kamil,Kamiński,M,1,Sromowce,1895-04-15,Chełmno,1925-03-08,Fire,Cemetery in Chełmno,Baker
+671,Filip,Pawłowski,M,0,Łódź,1896-03-19,,,,,Judge
+672,Jakub,Kamiński,M,0,Stettin,1896-03-03,,,,,Shepherd
+673,Teresa,Pawłowska,F,1,Lipce,1896-01-13,Pszczyna,1957-05-27,Dropsy,Cemetery in Pszczyna,Mason
+674,Jakub,Pawłowski,M,0,Złoty Potok,1896-12-19,,,,,Doctor
+675,Genowefa,Kamińska,F,1,Zwierzyniec,1897-11-19,Cieszyn,1925-09-13,Pneumonia,Cemetery in Cieszyn,Soldier
+676,Danuta,Pawłowska,F,1,Białystok,1897-10-08,Lipce,1926-01-08,Infectious disease,Cemetery in Lipce,Merchant
+677,Danuta,Pawłowska,F,0,Sanok,1898-03-16,,,,,Soldier
+678,Bożena,Pawłowska,F,0,Posen,1898-03-24,,,,,Shoemaker
+679,Józef,Pawłowski,M,1,Sandomierz,1898-03-08,Zwierzyniec,1943-11-04,Stroke,Cemetery in Zwierzyniec,Priest
+680,Józef,Pawłowski,M,0,Tykocin,1899-07-02,,,,,Priest
+681,Franciszek,Pawłowski,M,1,Supraśl,1899-10-17,Kraków,1950-12-25,Starvation,Cemetery in Kraków,Tailor
+682,Barbara,Nowakowska,F,0,Danzig,1899-07-06,,,,,Priest
+683,Leokadia,Pawłowska,F,1,Cieszyn,1900-11-11,Złoty Potok,1956-07-10,Cholera,Cemetery in Złoty Potok,Innkeeper
+684,Ryszard,Kamiński,M,0,Warszawa,1900-04-01,,,,,Tanner
+685,Leon,Pawłowski,M,0,Lublin,1900-04-02,,,,,Doctor
+686,Grażyna,Nowakowska,F,1,Krynica,1900-01-12,Sromowce,1926-07-25,Plague,Cemetery in Sromowce,Miller
+687,Łukasz,Pawłowski,M,1,Sromowce,1900-12-22,Bronowice,1956-10-08,,Cemetery in Bronowice,Fisherman
+688,Katarzyna,Pawłowska,F,1,Lublin,1901-05-20,Katowice,1952-10-10,Infectious disease,Cemetery in Katowice,Potter
+689,Czesława,Zając,F,0,Sromowce,1901-10-16,,,,,Baker
+690,Antoni,Jaworski,M,1,Sromowce,1901-11-08,Gdynia,1941-02-02,Dysentery,Cemetery in Gdynia,Butcher
+691,Kazimierz,Pawłowski,M,1,Danzig,1901-11-23,Biecz,1953-07-22,Infectious disease,Cemetery in Biecz,Tailor
+692,Ludwika,Kamińska,F,1,Warszawa,1902-10-15,Kazimierz Dolny,1927-12-17,Fever,Cemetery in Kazimierz Dolny,Soldier
+693,Oliwia,Pawłowska,F,1,Danzig,1902-06-02,Lublin,1955-07-20,Accident,Cemetery in Lublin,Potter
+694,Szymon,Nowakowski,M,0,Lanckorona,1902-11-23,,,,,Weaver
+695,Tadeusz,Pawłowski,M,1,Rzeszów,1902-10-26,Zalipie,1957-09-12,Cholera,Cemetery in Zalipie,Carpenter
+696,Leon,Kamiński,M,0,Lipce,1902-02-24,,,,,
+697,Michał,Zając,M,0,Bronowice,1903-05-22,,,,,Miller
+698,Natalia,Jaworska,F,1,Gliwice,1903-03-02,Chochołów,1956-05-15,Dysentery,Cemetery in Chochołów,Potter
+699,Czesław,Nowakowski,M,0,Cieszyn,1903-07-27,,,,,Shepherd
+700,Czesława,Pawłowska,F,1,Krynica,1903-09-16,Białystok,1938-06-26,Unknown,Cemetery in Białystok,Hunter
+701,Wiesław,Kamiński,M,0,Gliwice,1903-07-20,,,,,Mason
+702,Szymon,Dudek,M,0,Warszawa,1903-09-04,,,,,Cooper
+703,Ignacy,Nowakowski,M,1,Posen,1903-07-24,Lipce,1927-12-03,Starvation,Cemetery in Lipce,Innkeeper
+704,Zofia,Pawłowska,F,1,Pszczyna,1904-04-19,Radom,1929-04-14,Plague,Cemetery in Radom,Clerk
+705,Bożena,Majewska,F,1,Gdynia,1904-01-03,Sanok,1931-11-24,Starvation,Cemetery in Sanok,
+706,Jan,Nowakowski,M,0,Krynica,1905-05-26,,,,,Merchant
+707,Elżbieta,Dudek,F,1,Zwierzyniec,1905-02-08,Zwierzyniec,1957-10-08,Smallpox,Cemetery in Zwierzyniec,Teacher
+708,Stanisław,Pawłowski,M,1,Białystok,1905-10-21,Lipce,1947-08-12,Fever,Cemetery in Lipce,Fisherman
+709,Natalia,Zając,F,1,Gliwice,1905-12-10,Łódź,1955-07-10,Infectious disease,Cemetery in Łódź,Potter
+710,Krystyna,Pawłowska,F,1,Biecz,1906-05-23,Sosnowiec,1931-02-21,Murder,Cemetery in Sosnowiec,Lawyer
+711,Ewa,Jaworska,F,1,Kazimierz Dolny,1906-06-21,Bronowice,1933-12-26,Accident,Cemetery in Bronowice,Blacksmith
+712,Agnieszka,Kamińska,F,0,Białystok,1906-07-16,,,,,Priest
+713,Józef,Dudek,M,0,Lanckorona,1907-11-19,,,,,Fisherman
+714,Łukasz,Zając,M,0,Kazimierz Dolny,1907-08-07,,,,,Wheelwright
+715,Krystyna,Dudek,F,0,Sanok,1907-06-10,,,,,Cooper
+716,Danuta,Kamińska,F,0,Bronowice,1908-09-26,,,,,Baker
+717,Julian,Kowalski,M,1,Rzeszów,1908-09-21,Stettin,1933-03-13,Stroke,Cemetery in Stettin,Weaver
+718,Maria,Zając,F,0,Katowice,1909-01-17,,,,,Soldier
+719,Paweł,Kamiński,M,1,Zwierzyniec,1909-03-22,Gliwice,1933-05-24,,Cemetery in Gliwice,Doctor
+720,Józefa,Dudek,F,0,Rzeszów,1909-06-16,,,,,Scribe
+721,Piotr,Kowalski,M,0,Stettin,1909-01-26,,,,,Shepherd
+722,Kazimiera,Majewska,F,0,Thorn,1910-03-18,,,,,Tanner
+723,Małgorzata,Kamińska,F,0,Cieszyn,1911-04-23,,,,,
+724,Henryk,Dudek,M,0,Lanckorona,1911-03-23,,,,,Scribe
+725,Jadwiga,Kowalska,F,0,Kraków,1911-12-20,,,,,Fisherman
+726,Wanda,Pawłowska,F,0,Zalipie,1911-10-13,,,,,
+727,Henryk,Zając,M,0,Thorn,1911-01-02,,,,,Teacher
+728,Wanda,Majewska,F,0,Zwierzyniec,1912-08-08,,,,,Innkeeper
+729,Wiktoria,Wójcik,F,1,Krynica,1912-04-22,Radom,1935-07-19,,Cemetery in Radom,
+730,Leon,Majewski,M,0,Kazimierz Dolny,1913-04-26,,,,,Potter
+731,Irena,Zając,F,0,Bromberg,1913-01-13,,,,,Tanner
+732,Joanna,Górska,F,0,Pszczyna,1913-06-13,,,,,Priest
+733,Genowefa,Dudek,F,0,Sosnowiec,1914-05-04,,,,,Cooper
+734,Anna,Kowalska,F,0,Złoty Potok,1914-12-03,,,,,Innkeeper
+735,Alicja,Górska,F,0,Bronowice,1914-10-14,,,,,Blacksmith
+736,Krystyna,Górska,F,0,Białystok,1914-06-06,,,,,Miner
+737,Tomasz,Dudek,M,1,Zwierzyniec,1914-11-15,Częstochowa,1935-08-01,Plague,Cemetery in Częstochowa,Innkeeper
+738,Andrzej,Majewski,M,0,Warszawa,1915-05-19,,,,,Potter
+739,Elżbieta,Wójcik,F,1,Thorn,1915-02-21,Kraków,1936-03-17,Unknown,Cemetery in Kraków,Cooper
+740,Mateusz,Zając,M,0,Radom,1915-03-08,,,,,Tailor
+741,Władysław,Wójcik,M,0,Chełmno,1915-06-18,,,,,Miller
+742,Krystyna,Wójcik,F,0,Stettin,1915-04-17,,,,,Mason
+743,Marian,Dudek,M,0,Thorn,1915-11-02,,,,,Carpenter
+744,Julian,Dudek,M,0,Bromberg,1916-11-26,,,,,Blacksmith
+745,Józefa,Majewska,F,0,Zwierzyniec,1916-08-18,,,,,Tailor
+746,Ewa,Górska,F,0,Olsztyn,1916-05-26,,,,,Mason
+747,Tadeusz,Pawłowski,M,0,Lublin,1916-01-15,,,,,Wheelwright
+748,Bożena,Górska,F,1,Pszczyna,1916-11-25,Złoty Potok,1936-10-19,Fever,Cemetery in Złoty Potok,Blacksmith
+749,Maria,Zając,F,0,Sromowce,1917-08-22,,,,,Doctor
+750,Małgorzata,Wójcik,F,0,Rzeszów,1917-04-18,,,,,Doctor
+751,Anna,Dudek,F,0,Cieszyn,1917-09-09,,,,,Tailor
+752,Tomasz,Majewski,M,0,Gliwice,1917-10-10,,,,,Scribe
+753,Ludwika,Dudek,F,0,Sanok,1917-04-06,,,,,Priest
+754,Alicja,Wójcik,F,1,Tykocin,1918-11-20,Gliwice,1955-08-24,Fire,Cemetery in Gliwice,Wheelwright
+755,Maria,Dudek,F,0,Cieszyn,1918-11-17,,,,,Farmer
+756,Genowefa,Pawłowska,F,0,Kraków,1918-08-12,,,,,Scribe
+757,Danuta,Górska,F,1,Kazimierz Dolny,1918-04-20,Częstochowa,1952-03-09,Stroke,Cemetery in Częstochowa,Artist
+758,Oliwia,Majewska,F,0,Radom,1918-08-24,,,,,Soldier
+759,Michał,Pawłowski,M,0,Bronowice,1918-02-10,,,,,Clerk
+760,Halina,Zając,F,1,Sosnowiec,1918-03-22,Chełmno,1941-06-04,Cholera,Cemetery in Chełmno,Teacher
+761,Antoni,Zając,M,0,Stettin,1919-03-01,,,,,Shepherd
+762,Wanda,Wójcik,F,0,Thorn,1919-04-10,,,,,Judge
+763,Jakub,Pawłowski,M,1,Chochołów,1919-04-01,Zalipie,1937-03-14,War casualty,Cemetery in Zalipie,Cooper
+764,Wojciech,Majewski,M,0,Reszel,1919-12-10,,,,,Farmer
+765,Regina,Dudek,F,0,Sosnowiec,1919-05-06,,,,,Fisherman
+766,Szymon,Majewski,M,1,Olsztyn,1919-11-08,Rzeszów,1937-04-17,Apoplexy,Cemetery in Rzeszów,Miller
+767,Czesława,Dudek,F,0,Lanckorona,1920-06-13,,,,,Miller
+768,Krzysztof,Pawłowski,M,0,Reszel,1920-01-17,,,,,
+769,Dariusz,Pawłowski,M,0,Supraśl,1920-10-22,,,,,Shepherd
+770,Władysław,Majewski,M,0,Zwierzyniec,1920-07-25,,,,,Cooper
+771,Alicja,Nowakowska,F,0,Bronowice,1920-02-15,,,,,
+772,Joanna,Kozłowska,F,1,Kazimierz Dolny,1920-07-28,Lanckorona,1937-04-13,Smallpox,Cemetery in Lanckorona,
+773,Jerzy,Michalski,M,1,Radom,1920-05-13,Stettin,1951-08-16,Drowning,Cemetery in Stettin,Carpenter
+774,Mateusz,Pawłowski,M,0,Bromberg,1920-10-12,,,,,Merchant
+775,Marianna,Pawłowska,F,0,Reszel,1920-10-09,,,,,Innkeeper
+776,Ludwika,Pawłowska,F,1,Chochołów,1921-07-11,Reszel,1943-11-20,Cholera,Cemetery in Reszel,Baker
+777,Irena,Górska,F,0,Radom,1921-01-06,,,,,Teacher
+778,Kazimierz,Majewski,M,0,Zwierzyniec,1921-03-07,,,,,Shepherd
+779,Marianna,Zając,F,0,Danzig,1921-09-04,,,,,Baker
+780,Władysław,Górski,M,1,Wisła,1921-08-21,Sromowce,1943-11-24,Smallpox,Cemetery in Sromowce,
+781,Wiktoria,Zając,F,0,Katowice,1922-11-28,,,,,Carpenter
+782,Adam,Kozłowski,M,1,Zalipie,1922-02-18,Lipce,1957-05-18,Apoplexy,Cemetery in Lipce,Fisherman
+783,Szymon,Pawłowski,M,0,Stettin,1922-11-05,,,,,Clerk
+784,Bartosz,Pawłowski,M,1,Złoty Potok,1922-06-01,Wisła,1943-02-17,Unknown,Cemetery in Wisła,Tanner
+785,Genowefa,Pawłowska,F,0,Kielce,1922-06-16,,,,,Soldier
+786,Danuta,Dudek,F,0,Olsztyn,1922-07-17,,,,,Lawyer
+787,Adam,Kamiński,M,1,Bromberg,1922-08-05,Kielce,1943-03-24,,Cemetery in Kielce,
+788,Jadwiga,Górska,F,1,Bromberg,1923-12-15,Tykocin,1946-12-23,Starvation,Cemetery in Tykocin,Butcher
+789,Czesław,Nowakowski,M,0,Sanok,1923-03-15,,,,,
+790,Jadwiga,Pawłowska,F,0,Kazimierz Dolny,1923-09-28,,,,,Baker
+791,Danuta,Majewska,F,0,Katowice,1923-01-25,,,,,
+792,Genowefa,Kamińska,F,0,Sanok,1923-05-03,,,,,
+793,Władysław,Pawłowski,M,0,Warszawa,1924-02-18,,,,,Tanner
+794,Ignacy,Pawłowski,M,0,Gliwice,1924-11-19,,,,,Teacher
+795,Paweł,Górski,M,0,Lanckorona,1924-11-03,,,,,
+796,Bartosz,Wójcik,M,0,Sosnowiec,1924-11-11,,,,,
+797,Łukasz,Nowakowski,M,0,Zalipie,1924-04-05,,,,,Soldier
+798,Anna,Zając,F,0,Danzig,1925-03-01,,,,,Soldier
+799,Joanna,Górska,F,0,Białystok,1925-06-16,,,,,Hunter
+800,Władysław,Pawłowski,M,0,Katowice,1925-09-21,,,,,Carpenter
+801,Genowefa,Górska,F,0,Krynica,1925-11-01,,,,,Shoemaker
+802,Oliwia,Pawłowska,F,0,Złoty Potok,1926-05-01,,,,,Tailor
+803,Andrzej,Górski,M,1,Reszel,1926-04-08,Wisła,1944-12-16,War casualty,Cemetery in Wisła,Tailor
+804,Mateusz,Nowakowski,M,0,Breslau,1926-11-16,,,,,Miller
+805,Ignacy,Dudek,M,0,Pszczyna,1926-01-17,,,,,
+806,Rozalia,Pawłowska,F,0,Lipce,1926-12-03,,,,,Merchant
+807,Maja,Nowakowska,F,0,Pszczyna,1927-03-04,,,,,Carpenter
+808,Jerzy,Dudek,M,1,Sosnowiec,1927-02-27,Rzeszów,1944-11-21,Influenza,Cemetery in Rzeszów,
+809,Filip,Michalski,M,0,Łódź,1927-07-26,,,,,
+810,Tomasz,Górski,M,0,Kielce,1927-01-23,,,,,Artist
+811,Monika,Górska,F,0,Reszel,1928-08-09,,,,,Soldier
+812,Łukasz,Dudek,M,0,Warszawa,1929-05-13,,,,,
+813,Marianna,Pawłowska,F,0,Olsztyn,1929-04-18,,,,,Miner
+814,Kazimierz,Majewski,M,0,Sromowce,1929-11-21,,,,,Hunter
+815,Natalia,Pawłowska,F,0,Rzeszów,1929-05-04,,,,,
+816,Tadeusz,Pawłowski,M,0,Reszel,1929-11-16,,,,,Tanner
+817,Marcin,Pawłowski,M,0,Danzig,1930-11-14,,,,,Tailor
+818,Mirosław,Pawłowski,M,0,Zwierzyniec,1930-07-04,,,,,
+819,Rozalia,Majewska,F,0,Kazimierz Dolny,1931-03-28,,,,,Shepherd
+820,Helena,Pawłowska,F,1,Sanok,1931-01-16,Bronowice,1945-03-23,War casualty,Cemetery in Bronowice,
+821,Teresa,Pawłowska,F,0,Częstochowa,1931-10-20,,,,,
+822,Wiktoria,Kamińska,F,0,Chochołów,1931-09-19,,,,,Miner
+823,Michał,Zając,M,0,Kraków,1931-08-01,,,,,Shoemaker
+824,Paweł,Górski,M,0,Kielce,1931-01-27,,,,,Tailor
+825,Helena,Dudek,F,0,Thorn,1931-06-18,,,,,
+826,Natalia,Pawłowska,F,1,Białystok,1931-12-01,Bronowice,1945-02-14,Heart failure,Cemetery in Bronowice,
+827,Szymon,Górski,M,0,Warszawa,1931-02-19,,,,,
+828,Krzysztof,Pawłowski,M,0,Warszawa,1932-08-09,,,,,Clerk
+829,Józef,Pawłowski,M,0,Bromberg,1932-09-01,,,,,Innkeeper
+830,Danuta,Górska,F,0,Stettin,1932-05-21,,,,,Farmer
+831,Helena,Pawłowska,F,1,Sandomierz,1932-12-26,Stettin,1945-11-19,Stroke,Cemetery in Stettin,
+832,Tomasz,Kamiński,M,0,Wisła,1932-03-16,,,,,
+833,Tomasz,Pawłowski,M,0,Sosnowiec,1933-11-02,,,,,Shoemaker
+834,Małgorzata,Kamińska,F,1,Danzig,1933-07-21,Sanok,1945-10-23,Fire,Cemetery in Sanok,
+835,Alicja,Górska,F,0,Olsztyn,1933-01-16,,,,,Teacher
+836,Monika,Górska,F,0,Sandomierz,1933-08-19,,,,,Tanner
+837,Alicja,Zając,F,0,Złoty Potok,1933-12-04,,,,,Artist
+838,Jadwiga,Pawłowska,F,0,Sromowce,1934-11-28,,,,,
+839,Czesława,Pawłowska,F,0,Reszel,1934-10-03,,,,,Mason
+840,Marianna,Kamińska,F,1,Radom,1934-01-13,Biecz,1945-03-14,Influenza,Cemetery in Biecz,
+841,Danuta,Dudek,F,0,Stettin,1934-01-15,,,,,
+842,Łukasz,Kamiński,M,0,Sandomierz,1934-06-28,,,,,Innkeeper
+843,Urszula,Nowakowska,F,0,Tykocin,1934-03-14,,,,,
+844,Ludwika,Pawłowska,F,1,Danzig,1935-08-26,Częstochowa,1946-02-09,Drowning,Cemetery in Częstochowa,
+845,Teresa,Pawłowska,F,0,Częstochowa,1935-01-02,,,,,Butcher
+846,Julian,Pawłowski,M,0,Wisła,1935-07-13,,,,,
+847,Julia,Kamińska,F,0,Gliwice,1935-12-23,,,,,
+848,Kazimiera,Górska,F,0,Częstochowa,1935-05-06,,,,,
+849,Łukasz,Górski,M,0,Thorn,1935-09-26,,,,,
+850,Filip,Zając,M,0,Breslau,1935-07-16,,,,,
+851,Czesław,Dudek,M,0,Breslau,1936-09-11,,,,,
+852,Kazimierz,Zając,M,0,Chochołów,1936-10-04,,,,,Fisherman
+853,Wiesław,Zając,M,0,Sandomierz,1936-11-15,,,,,
+854,Małgorzata,Majewska,F,0,Biecz,1936-02-18,,,,,
+855,Helena,Pawłowska,F,0,Białystok,1936-07-21,,,,,
+856,Joanna,Pawłowska,F,0,Częstochowa,1937-11-05,,,,,
+857,Stanisław,Górski,M,0,Lublin,1937-05-14,,,,,
+858,Bartosz,Górski,M,0,Tykocin,1937-09-05,,,,,
+859,Władysław,Kamiński,M,1,Tykocin,1937-12-17,Stettin,1957-07-17,Accident,Cemetery in Stettin,Innkeeper
+860,Alicja,Pawłowska,F,0,Cieszyn,1937-04-22,,,,,
+861,Tomasz,Kamiński,M,1,Wisła,1938-10-26,Warszawa,1946-01-25,War casualty,Cemetery in Warszawa,
+862,Henryk,Pawłowski,M,0,Olsztyn,1938-01-27,,,,,
+863,Katarzyna,Kozłowska,F,0,Zwierzyniec,1938-08-02,,,,,
+864,Henryk,Zając,M,1,Bromberg,1939-05-18,Wisła,1946-11-22,Plague,Cemetery in Wisła,
+865,Stefan,Kamiński,M,0,Danzig,1939-01-25,,,,,
+866,Elżbieta,Pawłowska,F,0,Gliwice,1939-07-19,,,,,
+867,Zofia,Kozłowska,F,0,Lanckorona,1939-03-20,,,,,
+868,Maciej,Pawłowski,M,1,Posen,1940-06-13,Reszel,1946-07-02,Plague,Cemetery in Reszel,
+869,Wanda,Pawłowska,F,0,Posen,1940-04-12,,,,,
+870,Krystyna,Kamińska,F,0,Rzeszów,1940-07-18,,,,,
+871,Wiktoria,Pawłowska,F,0,Lanckorona,1941-04-10,,,,,
+872,Monika,Kozłowska,F,1,Posen,1941-05-19,Posen,1947-05-17,Fever,Cemetery in Posen,
+873,Julia,Kamińska,F,1,Lipce,1941-09-27,Tykocin,1947-05-21,Fever,Cemetery in Tykocin,
+874,Joanna,Pawłowska,F,0,Tykocin,1941-07-08,,,,,
+875,Mirosław,Dudek,M,1,Zalipie,1941-08-12,Sosnowiec,1947-08-03,,Cemetery in Sosnowiec,
+876,Bartosz,Pawłowski,M,0,Kazimierz Dolny,1942-11-27,,,,,
+877,Elżbieta,Kamińska,F,0,Łódź,1942-05-14,,,,,
+878,Małgorzata,Nowakowska,F,0,Reszel,1942-10-01,,,,,
+879,Maria,Pawłowska,F,0,Stettin,1942-02-26,,,,,
+880,Julian,Pawłowski,M,0,Biecz,1942-05-07,,,,,
+881,Dariusz,Pawłowski,M,0,Krynica,1943-11-03,,,,,
+882,Grażyna,Kamińska,F,0,Chochołów,1943-03-20,,,,,
+883,Kazimiera,Pawłowska,F,0,Gliwice,1943-11-17,,,,,
+884,Leon,Pawłowski,M,0,Lanckorona,1943-05-18,,,,,
+885,Julia,Dudek,F,0,Wisła,1943-05-15,,,,,
+886,Urszula,Pawłowska,F,0,Warszawa,1943-06-03,,,,,
+887,Marek,Pawłowski,M,0,Danzig,1943-11-25,,,,,
+888,Czesława,Kowalska,F,0,Krynica,1943-06-11,,,,,
+889,Alicja,Kamińska,F,0,Gdynia,1944-12-17,,,,,
+890,Stanisław,Pawłowski,M,0,Posen,1944-12-23,,,,,
+891,Władysław,Kamiński,M,0,Supraśl,1944-05-05,,,,,
+892,Grzegorz,Dudek,M,0,Chełmno,1944-07-14,,,,,
+893,Wiesław,Kowalski,M,0,Reszel,1944-11-10,,,,,
+894,Ludwika,Dudek,F,1,Tykocin,1944-09-20,Bronowice,1948-09-25,Accident,Cemetery in Bronowice,
+895,Jakub,Pawłowski,M,1,Sanok,1945-02-05,Gdynia,1949-10-18,,Cemetery in Gdynia,
+896,Zygmunt,Pawłowski,M,0,Pszczyna,1945-10-24,,,,,
+897,Tadeusz,Dudek,M,0,Chochołów,1945-10-15,,,,,
+898,Michał,Pawłowski,M,0,Biecz,1945-06-13,,,,,
+899,Teresa,Pawłowska,F,0,Krynica,1945-04-12,,,,,
+900,Monika,Dudek,F,0,Sosnowiec,1945-11-07,,,,,
+901,Marian,Zając,M,0,Tykocin,1945-02-27,,,,,
+902,Czesława,Majewska,F,0,Posen,1945-12-13,,,,,
+903,Maja,Pawłowska,F,0,Łódź,1946-07-04,,,,,
+904,Julian,Kamiński,M,0,Sandomierz,1946-11-01,,,,,
+905,Czesława,Zając,F,0,Zalipie,1946-06-07,,,,,
+906,Czesława,Zając,F,1,Bromberg,1946-05-08,Zwierzyniec,1951-06-25,,Cemetery in Zwierzyniec,
+907,Wanda,Dudek,F,0,Kazimierz Dolny,1946-12-16,,,,,
+908,Mirosław,Górski,M,0,Olsztyn,1946-05-02,,,,,
+909,Kamil,Majewski,M,0,Radom,1946-02-17,,,,,
+910,Tomasz,Pawłowski,M,0,Stettin,1946-11-28,,,,,
+911,Ludwika,Pawłowska,F,0,Złoty Potok,1947-09-23,,,,,
+912,Natalia,Kamińska,F,0,Krynica,1947-10-01,,,,,
+913,Julia,Pawłowska,F,0,Lipce,1947-01-28,,,,,
+914,Rozalia,Dudek,F,0,Warszawa,1947-12-27,,,,,
+915,Leon,Zając,M,0,Chochołów,1947-06-12,,,,,
+916,Maciej,Zając,M,0,Lublin,1947-03-18,,,,,
+917,Józefa,Górska,F,0,Krynica,1947-09-18,,,,,
+918,Wanda,Zając,F,1,Chełmno,1947-10-04,Białystok,1948-08-21,Cancer,Cemetery in Białystok,
+919,Maciej,Pawłowski,M,0,Supraśl,1947-09-18,,,,,
+920,Stefan,Dudek,M,0,Lipce,1948-10-02,,,,,
+921,Oliwia,Pawłowska,F,1,Częstochowa,1948-01-09,Białystok,1955-08-20,Infectious disease,Cemetery in Białystok,
+922,Teresa,Kamińska,F,0,Złoty Potok,1948-02-21,,,,,
+923,Antoni,Dudek,M,0,Lipce,1948-03-25,,,,,
+924,Andrzej,Pawłowski,M,1,Sromowce,1948-04-28,Bronowice,1950-04-02,Consumption,Cemetery in Bronowice,
+925,Stefan,Majewski,M,0,Częstochowa,1948-10-02,,,,,
+926,Maria,Pawłowska,F,0,Lipce,1948-07-03,,,,,
+927,Grażyna,Kamińska,F,1,Radom,1948-03-16,Bronowice,1952-08-27,Murder,Cemetery in Bronowice,
+928,Bartosz,Pawłowski,M,0,Gdynia,1949-01-25,,,,,
+929,Ignacy,Zając,M,0,Sanok,1949-09-04,,,,,
+930,Julian,Górski,M,0,Chochołów,1949-02-19,,,,,
+931,Danuta,Zając,F,1,Olsztyn,1949-07-25,Złoty Potok,1951-08-03,Typhus,Cemetery in Złoty Potok,
+932,Stanisław,Pawłowski,M,0,Posen,1949-10-08,,,,,
+933,Alicja,Pawłowska,F,0,Danzig,1949-09-02,,,,,
+934,Mateusz,Nowakowski,M,0,Rzeszów,1949-05-15,,,,,
+935,Jakub,Dudek,M,0,Sandomierz,1949-05-16,,,,,
+936,Marianna,Majewska,F,1,Krynica,1949-04-07,Danzig,1951-10-27,Dysentery,Cemetery in Danzig,
+937,Szymon,Dudek,M,0,Bromberg,1950-05-01,,,,,
+938,Monika,Dudek,F,0,Wisła,1950-10-28,,,,,
+939,Dariusz,Pawłowski,M,0,Sosnowiec,1950-05-24,,,,,
+940,Marianna,Majewska,F,0,Łódź,1950-05-19,,,,,
+941,Władysław,Kamiński,M,0,Pszczyna,1950-09-25,,,,,
+942,Mateusz,Pawłowski,M,0,Wisła,1950-01-09,,,,,
+943,Łukasz,Kamiński,M,0,Lipce,1951-05-22,,,,,
+944,Wiesław,Zając,M,0,Chełmno,1951-02-10,,,,,
+945,Zygmunt,Górski,M,0,Wisła,1951-04-09,,,,,
+946,Marianna,Zając,F,0,Złoty Potok,1951-08-06,,,,,
+947,Kazimiera,Pawłowska,F,0,Bronowice,1951-05-25,,,,,
+948,Maja,Pawłowska,F,0,Częstochowa,1951-08-16,,,,,
+949,Aleksandra,Nowakowska,F,0,Sanok,1951-11-09,,,,,
+950,Kazimiera,Pawłowska,F,0,Łódź,1951-05-03,,,,,
+951,Marian,Majewski,M,0,Biecz,1951-05-10,,,,,
+952,Józef,Pawłowski,M,0,Thorn,1951-02-02,,,,,
+953,Irena,Dudek,F,0,Stettin,1952-01-13,,,,,
+954,Ludwika,Pawłowska,F,1,Katowice,1952-04-17,Częstochowa,1955-08-09,,Cemetery in Częstochowa,
+955,Rozalia,Pawłowska,F,0,Olsztyn,1952-10-03,,,,,
+956,Alicja,Kamińska,F,0,Bronowice,1952-11-10,,,,,
+957,Marian,Pawłowski,M,0,Stettin,1952-09-05,,,,,
+958,Zygmunt,Pawłowski,M,0,Tykocin,1952-12-04,,,,,
+959,Anna,Majewska,F,0,Kazimierz Dolny,1952-10-10,,,,,
+960,Dariusz,Dudek,M,1,Reszel,1953-04-21,Krynica,1957-05-08,Drowning,Cemetery in Krynica,
+961,Marek,Zając,M,0,Łódź,1953-02-03,,,,,
+962,Jan,Pawłowski,M,0,Sromowce,1953-09-19,,,,,
+963,Teresa,Pawłowska,F,0,Chełmno,1953-04-14,,,,,
+964,Wojciech,Majewski,M,0,Łódź,1953-08-25,,,,,
+965,Kazimiera,Dudek,F,0,Krynica,1953-11-13,,,,,
+966,Joanna,Pawłowska,F,0,Kraków,1953-02-20,,,,,
+967,Tadeusz,Pawłowski,M,0,Thorn,1953-11-16,,,,,
+968,Elżbieta,Górska,F,0,Sandomierz,1953-07-12,,,,,
+969,Krzysztof,Majewski,M,0,Sandomierz,1954-02-21,,,,,
+970,Czesława,Dudek,F,0,Gdynia,1954-01-14,,,,,
+971,Irena,Pawłowska,F,0,Katowice,1955-10-19,,,,,
+972,Marcin,Kamiński,M,0,Posen,1955-10-11,,,,,
+973,Krzysztof,Majewski,M,0,Warszawa,1955-05-04,,,,,
+974,Marianna,Pawłowska,F,0,Zwierzyniec,1955-01-05,,,,,
+975,Urszula,Kamińska,F,0,Breslau,1955-10-12,,,,,
+976,Małgorzata,Górska,F,0,Sandomierz,1955-08-23,,,,,
+977,Bożena,Nowakowska,F,0,Gdynia,1955-11-26,,,,,
+978,Jadwiga,Nowakowska,F,0,Lublin,1955-11-26,,,,,
+979,Jerzy,Zając,M,0,Lipce,1955-07-15,,,,,
+980,Ewa,Majewska,F,0,Thorn,1956-08-24,,,,,
+981,Ryszard,Dudek,M,0,Złoty Potok,1956-07-20,,,,,
+982,Maria,Pawłowska,F,0,Danzig,1956-12-02,,,,,
+983,Czesław,Pawłowski,M,0,Tykocin,1956-08-14,,,,,
+984,Maria,Zając,F,0,Radom,1956-07-12,,,,,
+985,Stefan,Dudek,M,0,Sanok,1957-09-16,,,,,
+986,Agnieszka,Kamińska,F,0,Tykocin,1957-09-27,,,,,
+987,Filip,Górski,M,0,Lipce,1957-08-15,,,,,
+988,Władysław,Nowakowski,M,0,Sosnowiec,1957-09-01,,,,,
+989,Helena,Nowakowska,F,0,Sanok,1957-05-24,,,,,
+990,Jan,Pawłowski,M,0,Kraków,1957-08-26,,,,,
+991,Tomasz,Pawłowski,M,0,Tykocin,1957-09-13,,,,,
+992,Szymon,Wójcik,M,0,Kielce,1957-02-06,,,,,
+993,Grzegorz,Majewski,M,0,Łódź,1958-05-20,,,,,
+994,Szymon,Górski,M,0,Supraśl,1958-05-10,,,,,
+995,Julian,Pawłowski,M,0,Sosnowiec,1958-04-08,,,,,
+996,Stefania,Wójcik,F,0,Katowice,1958-05-09,,,,,
+997,Marek,Kamiński,M,0,Biecz,1959-06-21,,,,,
+998,Wiesław,Nowakowski,M,0,Supraśl,1959-11-19,,,,,
+999,Natalia,Pawłowska,F,0,Łódź,1959-08-15,,,,,
+1000,Adam,Zając,M,0,Katowice,1959-08-14,,,,,

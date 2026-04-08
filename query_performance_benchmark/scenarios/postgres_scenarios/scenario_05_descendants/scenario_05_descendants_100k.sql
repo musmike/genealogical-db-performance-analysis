@@ -1,14 +1,17 @@
 -- Scenario 05: Descendant Retrieval
 -- Retrieves all distinct biological descendants of a selected individual
 -- up to a configured depth (10 generations for 100k).
--- Uses the individual identified in summary.txt as having the most descendants.
+-- Uses the individual identified in expected_results/scenario_05_descendants_100k.txt as having the most descendants.
 -- Should return the columns in the following order and with the following names:
 -- descendant_id, generation (the shortest path length from the starting individual), given_name, surname,
 -- sex, birth_date, birth_place, death_date, death_place, burial_place, cause_of_death, father_id, mother_id.
 -- Orders the results first by generation ascending, then by descendant_id ascending within each generation.
 
+
+-- RECOMMENDED PARAMETERS: Person ID = 21660
+
 WITH RECURSIVE descendants(person_id, depth, via_family_id, visited) AS (
-    SELECT 59218, 0, NULL::int, ARRAY[59218]
+    SELECT 21660, 0, NULL::int, ARRAY[21660]
 
     UNION ALL
 
@@ -28,7 +31,7 @@ WITH RECURSIVE descendants(person_id, depth, via_family_id, visited) AS (
 deduped AS (
     SELECT DISTINCT ON (person_id) person_id, depth, via_family_id
     FROM descendants
-    WHERE person_id <> 59218
+    WHERE person_id <> 21660
     ORDER BY person_id, depth
 )
 

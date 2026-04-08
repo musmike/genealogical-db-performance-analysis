@@ -1,0 +1,911 @@
+--- SCENARIO 05: DESCENDANT RETRIEVAL ---
+Biological relationships only.
+Objective: Find person with most distinct biological descendants up to 6 generations forward.
+Distinct biological descendants found: 899
+
+Recommended Person ID: 3346
+
+
+Expected rows: 899
+
+descendant_id | generation | given_name | surname       | sex | birth_date | birth_place     | death_date | death_place     | burial_place                | cause_of_death     | father_id | mother_id
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3809          | 1          | Czesław    | Malinowski    | M   | 1764-12-02 | Bromberg        | 1832-05-10 | Reszel          | Cemetery in Reszel          | Accident           | 3277      | 3346     
+3824          | 1          | Maciej     | Malinowski    | M   | 1765-03-19 | Breslau         | 1816-05-22 | Thorn           | Cemetery in Thorn           | Pneumonia          | 3277      | 3346     
+3851          | 1          | Mirosław   | Malinowski    | M   | 1767-10-04 | Sanok           | 1840-01-16 | Danzig          | Cemetery in Danzig          | Apoplexy           | 3277      | 3346     
+3886          | 1          | Ludwika    | Malinowska    | F   | 1769-02-13 | Chochołów       | 1857-07-26 | Chochołów       | Cemetery in Chochołów       | Drowning           | 3277      | 3346     
+3952          | 1          | Kazimierz  | Malinowski    | M   | 1772-09-11 | Warszawa        | 1834-12-07 | Lanckorona      | Cemetery in Lanckorona      | NULL               | 3277      | 3346     
+3971          | 1          | Jakub      | Malinowski    | M   | 1773-07-12 | Breslau         | 1841-11-25 | Sromowce        | Cemetery in Sromowce        | Murder             | 3277      | 3346     
+4369          | 2          | Helena     | Malinowska    | F   | 1790-04-01 | Łódź            | 1822-02-22 | Warszawa        | Cemetery in Warszawa        | Stroke             | 3824      | 3699     
+4388          | 2          | Genowefa   | Malinowska    | F   | 1791-08-07 | Cieszyn         | 1868-11-12 | Thorn           | Cemetery in Thorn           | Stroke             | 3824      | 3699     
+4411          | 2          | Mateusz    | Malinowski    | M   | 1792-02-12 | Sromowce        | 1870-05-10 | Danzig          | Cemetery in Danzig          | Drowning           | 3824      | 3699     
+4444          | 2          | Marek      | Nowakowski    | M   | 1793-03-04 | Sanok           | 1885-09-15 | Radom           | Cemetery in Radom           | Pneumonia          | 3847      | 3886     
+4451          | 2          | Stanisław  | Malinowski    | M   | 1794-03-27 | Katowice        | 1877-09-15 | Złoty Potok     | Cemetery in Złoty Potok     | Starvation         | 3824      | 3699     
+4467          | 2          | Anna       | Malinowska    | F   | 1794-01-26 | Reszel          | 1823-09-28 | Cieszyn         | Cemetery in Cieszyn         | NULL               | 3851      | 3962     
+4475          | 2          | Jakub      | Nowakowski    | M   | 1795-11-12 | Sanok           | 1866-11-22 | Lanckorona      | Cemetery in Lanckorona      | Dropsy             | 3847      | 3886     
+4482          | 2          | Marek      | Malinowski    | M   | 1795-09-23 | Pszczyna        | 1863-10-22 | Danzig          | Cemetery in Danzig          | Unknown            | 3971      | 3969     
+4485          | 2          | Mateusz    | Malinowski    | M   | 1795-03-06 | Gliwice         | 1839-02-01 | Supraśl         | Cemetery in Supraśl         | Cancer             | 3809      | 3907     
+4495          | 2          | Wiktoria   | Malinowska    | F   | 1796-06-09 | Posen           | 1872-08-03 | Bromberg        | Cemetery in Bromberg        | Pneumonia          | 3824      | 3699     
+4501          | 2          | Władysław  | Nowakowski    | M   | 1796-04-28 | Sanok           | 1877-01-17 | Posen           | Cemetery in Posen           | Murder             | 3847      | 3886     
+4505          | 2          | Leokadia   | Malinowska    | F   | 1796-09-02 | Bronowice       | 1875-07-08 | Kielce          | Cemetery in Kielce          | Smallpox           | 3971      | 3969     
+4507          | 2          | Julian     | Malinowski    | M   | 1796-07-11 | Łódź            | 1875-01-21 | Chełmno         | Cemetery in Chełmno         | NULL               | 3851      | 3962     
+4556          | 2          | Bożena     | Nowakowska    | F   | 1799-02-27 | Pszczyna        | 1869-10-26 | Złoty Potok     | Cemetery in Złoty Potok     | Starvation         | 3847      | 3886     
+4633          | 2          | Piotr      | Malinowski    | M   | 1802-07-08 | Sandomierz      | 1850-03-02 | Stettin         | Cemetery in Stettin         | Cholera            | 3952      | 3914     
+4671          | 2          | Władysław  | Malinowski    | M   | 1804-04-08 | Olsztyn         | 1868-09-04 | Tykocin         | Cemetery in Tykocin         | Smallpox           | 3952      | 3914     
+4710          | 2          | Wiesław    | Malinowski    | M   | 1806-03-14 | Supraśl         | 1807-07-11 | Bromberg        | Cemetery in Bromberg        | Heart failure      | 3952      | 3914     
+4732          | 2          | Zofia      | Malinowska    | F   | 1807-03-23 | Rzeszów         | 1846-09-25 | Stettin         | Cemetery in Stettin         | Drowning           | 3952      | 3914     
+4767          | 2          | Wanda      | Malinowska    | F   | 1809-10-17 | Katowice        | 1866-05-22 | Łódź            | Cemetery in Łódź            | NULL               | 3952      | 3914     
+4804          | 2          | Czesława   | Malinowska    | F   | 1811-10-26 | Bronowice       | 1815-02-03 | Thorn           | Cemetery in Thorn           | Pneumonia          | 3952      | 3914     
+4911          | 2          | Danuta     | Malinowska    | F   | 1815-12-18 | Sosnowiec       | 1876-08-06 | Łódź            | Cemetery in Łódź            | NULL               | 3809      | 4447     
+4937          | 2          | Urszula    | Malinowska    | F   | 1816-11-25 | Zwierzyniec     | 1858-07-12 | Lanckorona      | Cemetery in Lanckorona      | Murder             | 3824      | 4415     
+4956          | 2          | Leon       | Malinowski    | M   | 1817-09-01 | Złoty Potok     | 1850-10-16 | Lipce           | Cemetery in Lipce           | Unknown            | 3809      | 4447     
+4984          | 2          | Stanisław  | Malinowski    | M   | 1818-07-16 | Chochołów       | 1878-08-25 | Thorn           | Cemetery in Thorn           | Smallpox           | 3824      | 4415     
+4861          | 3          | Mirosław   | Jaworski      | M   | 1813-08-09 | Lipce           | 1884-05-13 | Sanok           | Cemetery in Sanok           | Cholera            | 4248      | 4369     
+4895          | 3          | Wiktoria   | Jaworska      | F   | 1815-04-19 | Częstochowa     | 1877-11-09 | Thorn           | Cemetery in Thorn           | Smallpox           | 4248      | 4369     
+4933          | 3          | Leon       | Malinowski    | M   | 1816-11-24 | Sromowce        | 1848-08-20 | Lanckorona      | Cemetery in Lanckorona      | NULL               | 4451      | 4325     
+4945          | 3          | Franciszek | Jaworski      | M   | 1817-03-10 | Chełmno         | 1873-05-02 | Łódź            | Cemetery in Łódź            | Influenza          | 4248      | 4369     
+4966          | 3          | Natalia    | Malinowska    | F   | 1817-11-27 | Reszel          | 1884-02-21 | Olsztyn         | Cemetery in Olsztyn         | War casualty       | 4485      | 4123     
+4969          | 3          | Mirosław   | Olszewski     | M   | 1817-02-20 | Katowice        | 1886-08-10 | Łódź            | Cemetery in Łódź            | Drowning           | 4361      | 4467     
+4978          | 3          | Krzysztof  | Malinowski    | M   | 1818-08-09 | Pszczyna        | 1880-12-21 | Olsztyn         | Cemetery in Olsztyn         | Fever              | 4451      | 4325     
+4987          | 3          | Leokadia   | Malinowska    | F   | 1818-11-21 | Chełmno         | 1846-05-10 | Pszczyna        | Cemetery in Pszczyna        | Fire               | 4485      | 4123     
+4992          | 3          | Małgorzata | Malinowska    | F   | 1818-03-18 | Krynica         | 1852-08-08 | Pszczyna        | Cemetery in Pszczyna        | Cholera            | 4482      | 4409     
+5003          | 3          | Alicja     | Jaworska      | F   | 1819-07-24 | Kraków          | 1871-12-05 | Pszczyna        | Cemetery in Pszczyna        | Fever              | 4248      | 4369     
+5014          | 3          | Michał     | Malinowski    | M   | 1819-01-12 | Cieszyn         | 1892-05-26 | Supraśl         | Cemetery in Supraśl         | NULL               | 4482      | 4409     
+5035          | 3          | Franciszek | Malinowski    | M   | 1820-05-06 | Cieszyn         | 1885-09-04 | Lanckorona      | Cemetery in Lanckorona      | Dropsy             | 4485      | 4123     
+5039          | 3          | Wojciech   | Malinowski    | M   | 1820-08-01 | Łódź            | 1869-02-17 | Warszawa        | Cemetery in Warszawa        | Apoplexy           | 4482      | 4409     
+5055          | 3          | Jerzy      | Jaworski      | M   | 1821-12-20 | Thorn           | 1884-01-01 | Wisła           | Cemetery in Wisła           | Starvation         | 4248      | 4369     
+5068          | 3          | Jakub      | Malinowski    | M   | 1821-05-14 | Częstochowa     | 1826-12-10 | Danzig          | Cemetery in Danzig          | Dysentery          | 4411      | 4474     
+5073          | 3          | Marek      | Nowakowski    | M   | 1821-11-07 | Reszel          | 1867-08-28 | Reszel          | Cemetery in Reszel          | Heart failure      | 4501      | 4532     
+5076          | 3          | Andrzej    | Malinowski    | M   | 1822-04-13 | Tykocin         | 1882-06-28 | Krynica         | Cemetery in Krynica         | Starvation         | 4482      | 4409     
+5085          | 3          | Łukasz     | Malinowski    | M   | 1822-05-22 | Breslau         | 1873-06-27 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Heart failure      | 4411      | 4474     
+5102          | 3          | Aleksandra | Malinowska    | F   | 1823-08-01 | Kazimierz Dolny | 1887-03-24 | Chełmno         | Cemetery in Chełmno         | Dysentery          | 4411      | 4474     
+5110          | 3          | Zuzanna    | Nowakowska    | F   | 1823-09-26 | Kazimierz Dolny | 1896-12-20 | Lanckorona      | Cemetery in Lanckorona      | Apoplexy           | 4475      | 4481     
+5113          | 3          | Monika     | Wojciechowska | F   | 1823-08-17 | Złoty Potok     | 1888-05-17 | Bronowice       | Cemetery in Bronowice       | Murder             | 4242      | 4556     
+5145          | 3          | Irena      | Adamczyk      | F   | 1825-12-04 | Thorn           | 1909-10-28 | Posen           | Cemetery in Posen           | Apoplexy           | 4477      | 4495     
+5160          | 3          | Ryszard    | Nowakowski    | M   | 1826-03-23 | Danzig          | 1876-06-15 | Thorn           | Cemetery in Thorn           | NULL               | 4475      | 4481     
+5163          | 3          | Natalia    | Wojciechowska | F   | 1826-01-17 | Zwierzyniec     | 1913-12-07 | Sromowce        | Cemetery in Sromowce        | Consumption        | 4242      | 4556     
+5167          | 3          | Henryk     | Malinowski    | M   | 1826-03-24 | Thorn           | 1914-07-25 | Katowice        | Cemetery in Katowice        | Accident           | 4633      | 4399     
+5172          | 3          | Kazimierz  | Kowalski      | M   | 1826-09-15 | Thorn           | 1882-03-18 | Pszczyna        | Cemetery in Pszczyna        | Smallpox           | 3761      | 4388     
+5186          | 3          | Jakub      | Wojciechowski | M   | 1827-12-12 | Breslau         | 1873-10-20 | Cieszyn         | Cemetery in Cieszyn         | War casualty       | 4242      | 4556     
+5220          | 3          | Łukasz     | Kowalski      | M   | 1828-09-13 | Biecz           | 1892-12-11 | Sandomierz      | Cemetery in Sandomierz      | Stroke             | 3761      | 4388     
+5233          | 3          | Józef      | Wojciechowski | M   | 1829-03-26 | Biecz           | 1897-12-09 | Radom           | Cemetery in Radom           | NULL               | 4242      | 4556     
+5279          | 3          | Oliwia     | Malinowska    | F   | 1830-03-24 | Kazimierz Dolny | 1895-10-12 | Wisła           | Cemetery in Wisła           | Apoplexy           | 4507      | 4700     
+5285          | 3          | Ryszard    | Malinowski    | M   | 1830-11-11 | Bromberg        | 1902-11-24 | Częstochowa     | Cemetery in Częstochowa     | NULL               | 4485      | 4656     
+5453          | 3          | Władysław  | Malinowski    | M   | 1837-04-28 | Bronowice       | 1917-07-04 | Pszczyna        | Cemetery in Pszczyna        | Cancer             | 4671      | 4883     
+5481          | 3          | Agnieszka  | Malinowska    | F   | 1839-01-21 | Krynica         | 1844-01-02 | Kraków          | Cemetery in Kraków          | Consumption        | 4671      | 4883     
+5488          | 3          | Leokadia   | Wojciechowska | F   | 1839-11-01 | Thorn           | 1844-11-17 | Wisła           | Cemetery in Wisła           | Dropsy             | 4768      | 4767     
+5505          | 3          | Józefa     | Wojciechowska | F   | 1840-08-04 | Cieszyn         | 1900-05-19 | Cieszyn         | Cemetery in Cieszyn         | Fire               | 4768      | 4767     
+5508          | 3          | Regina     | Malinowska    | F   | 1840-08-06 | Sanok           | 1926-11-16 | Breslau         | Cemetery in Breslau         | Consumption        | 4485      | 4874     
+5543          | 3          | Natalia    | Górska        | F   | 1841-12-26 | Cieszyn         | 1896-07-09 | Złoty Potok     | Cemetery in Złoty Potok     | Fever              | 4929      | 4911     
+5592          | 3          | Stefan     | Górski        | M   | 1843-11-10 | Reszel          | 1901-07-01 | Zwierzyniec     | Cemetery in Zwierzyniec     | Plague             | 4929      | 4911     
+5619          | 3          | Teresa     | Malinowska    | F   | 1844-02-03 | Bronowice       | 1892-08-18 | Rzeszów         | Cemetery in Rzeszów         | Cholera            | 4671      | 5019     
+5620          | 3          | Czesław    | Nowakowski    | M   | 1844-09-24 | Pszczyna        | 1916-12-14 | Warszawa        | Cemetery in Warszawa        | Dropsy             | 4475      | 5072     
+5625          | 3          | Genowefa   | Malinowska    | F   | 1844-08-11 | Częstochowa     | 1897-11-27 | Wisła           | Cemetery in Wisła           | Consumption        | 4956      | 4553     
+5630          | 3          | Urszula    | Malinowska    | F   | 1844-01-09 | Zwierzyniec     | 1893-05-16 | Posen           | Cemetery in Posen           | Plague             | 4984      | 4557     
+5646          | 3          | Stefania   | Górska        | F   | 1845-03-13 | Posen           | 1903-02-08 | Supraśl         | Cemetery in Supraśl         | NULL               | 4929      | 4911     
+5654          | 3          | Filip      | Górski        | M   | 1845-12-18 | Lanckorona      | 1902-03-06 | Częstochowa     | Cemetery in Częstochowa     | Typhus             | 5058      | 4937     
+5673          | 3          | Krzysztof  | Nowakowski    | M   | 1846-03-04 | Lublin          | 1906-02-19 | Gdynia          | Cemetery in Gdynia          | Cancer             | 4475      | 5072     
+5698          | 3          | Agnieszka  | Górska        | F   | 1847-05-18 | Kielce          | 1906-03-15 | Kraków          | Cemetery in Kraków          | Accident           | 5058      | 4937     
+5703          | 3          | Katarzyna  | Malinowska    | F   | 1847-04-18 | Sromowce        | 1885-03-02 | Krynica         | Cemetery in Krynica         | Cholera            | 4633      | 5087     
+5723          | 3          | Ewa        | Górska        | F   | 1848-06-16 | Bromberg        | 1914-10-14 | Kielce          | Cemetery in Kielce          | Unknown            | 5058      | 4937     
+5750          | 3          | Paweł      | Nowakowski    | M   | 1849-10-06 | Białystok       | 1909-08-20 | Kielce          | Cemetery in Kielce          | NULL               | 4475      | 5072     
+5781          | 3          | Mirosław   | Malinowski    | M   | 1850-03-12 | Kielce          | 1910-04-11 | Radom           | Cemetery in Radom           | Pneumonia          | 4633      | 5087     
+5947          | 3          | Maria      | Malinowska    | F   | 1855-08-08 | Chełmno         | 1941-01-15 | Złoty Potok     | Cemetery in Złoty Potok     | Influenza          | 4451      | 5313     
+5972          | 3          | Katarzyna  | Malinowska    | F   | 1856-12-10 | Danzig          | 1925-10-18 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Infectious disease | 4451      | 5313     
+6145          | 3          | Maria      | Malinowska    | F   | 1863-05-14 | Radom           | 1867-12-13 | Kielce          | Cemetery in Kielce          | Dropsy             | 4984      | 5344     
+6216          | 3          | Dariusz    | Malinowski    | M   | 1866-12-27 | Lipce           | 1869-02-28 | Posen           | Cemetery in Posen           | Starvation         | 4984      | 5344     
+6241          | 3          | Ludwika    | Malinowska    | F   | 1867-11-01 | Sandomierz      | 1959-06-04 | Lipce           | Cemetery in Lipce           | Fire               | 4984      | 5344     
+5429          | 4          | Danuta     | Olszewska     | F   | 1836-05-11 | Bromberg        | 1841-03-10 | Posen           | Cemetery in Posen           | NULL               | 4833      | 4895     
+5456          | 4          | Alicja     | Wojciechowska | F   | 1837-02-21 | Zalipie         | 1842-04-19 | Gliwice         | Cemetery in Gliwice         | Typhus             | 4786      | 4966     
+5458          | 4          | Bożena     | Malinowska    | F   | 1837-03-22 | Zwierzyniec     | 1918-10-25 | Sandomierz      | Cemetery in Sandomierz      | Unknown            | 4729      | 4992     
+5484          | 4          | Kamil      | Wojciechowski | M   | 1839-02-05 | Kielce          | 1904-05-02 | Danzig          | Cemetery in Danzig          | Dysentery          | 4786      | 4966     
+5499          | 4          | Tomasz     | Malinowski    | M   | 1840-03-10 | Sosnowiec       | 1873-07-17 | Olsztyn         | Cemetery in Olsztyn         | Unknown            | 4729      | 4992     
+5523          | 4          | Antoni     | Wojciechowski | M   | 1841-03-17 | Breslau         | 1842-04-08 | Sanok           | Cemetery in Sanok           | Murder             | 4786      | 4966     
+5524          | 4          | Wojciech   | Malinowski    | M   | 1841-07-13 | Krynica         | 1941-01-14 | Zalipie         | Cemetery in Zalipie         | NULL               | 4729      | 4992     
+5539          | 4          | Wiktoria   | Olszewska     | F   | 1841-06-14 | Pszczyna        | 1925-02-06 | Częstochowa     | Cemetery in Częstochowa     | Smallpox           | 4969      | 4949     
+5550          | 4          | Monika     | Malinowska    | F   | 1842-09-07 | Sosnowiec       | 1911-02-02 | Zalipie         | Cemetery in Zalipie         | Accident           | 4729      | 4992     
+5590          | 4          | Julian     | Olszewski     | M   | 1843-10-14 | Częstochowa     | 1906-03-04 | Lanckorona      | Cemetery in Lanckorona      | Consumption        | 4969      | 4949     
+5594          | 4          | Grażyna    | Jaworska      | F   | 1843-11-12 | Chochołów       | 1905-06-27 | Warszawa        | Cemetery in Warszawa        | Accident           | 4861      | 4979     
+5602          | 4          | Mirosław   | Wojciechowski | M   | 1844-09-14 | Bronowice       | 1911-10-06 | Supraśl         | Cemetery in Supraśl         | Accident           | 4786      | 4966     
+5618          | 4          | Kazimiera  | Malinowska    | F   | 1844-10-14 | Gliwice         | 1880-05-19 | Lipce           | Cemetery in Lipce           | Stroke             | 5014      | 5057     
+5621          | 4          | Leon       | Wojciechowski | M   | 1844-08-11 | Posen           | 1925-08-07 | Chochołów       | Cemetery in Chochołów       | Infectious disease | 4837      | 4987     
+5629          | 4          | Kazimierz  | Malinowski    | M   | 1844-09-13 | Bromberg        | 1922-03-22 | Stettin         | Cemetery in Stettin         | Cholera            | 4978      | 5051     
+5647          | 4          | Katarzyna  | Wojciechowska | F   | 1845-05-27 | Kazimierz Dolny | 1893-07-27 | Stettin         | Cemetery in Stettin         | Starvation         | 4837      | 4987     
+5652          | 4          | Monika     | Malinowska    | F   | 1845-10-21 | Chełmno         | 1926-09-11 | Zwierzyniec     | Cemetery in Zwierzyniec     | Dysentery          | 4978      | 5051     
+5655          | 4          | Mateusz    | Jaworski      | M   | 1845-11-26 | Rzeszów         | 1901-10-04 | Złoty Potok     | Cemetery in Złoty Potok     | Infectious disease | 4945      | 4614     
+5659          | 4          | Henryk     | Jaworski      | M   | 1845-02-22 | Sandomierz      | 1938-10-20 | Lanckorona      | Cemetery in Lanckorona      | Unknown            | 5055      | 5047     
+5662          | 4          | Tomasz     | Wojciechowski | M   | 1846-05-14 | Sandomierz      | 1931-10-21 | Łódź            | Cemetery in Łódź            | Plague             | 4786      | 4966     
+5671          | 4          | Piotr      | Jaworski      | M   | 1846-05-12 | Chochołów       | 1848-11-08 | Białystok       | Cemetery in Białystok       | Fever              | 4861      | 4979     
+5672          | 4          | Julian     | Malinowski    | M   | 1846-02-02 | Reszel          | 1865-07-05 | Złoty Potok     | Cemetery in Złoty Potok     | Pneumonia          | 5014      | 5057     
+5697          | 4          | Wojciech   | Malinowski    | M   | 1847-08-24 | Biecz           | 1917-09-27 | Bromberg        | Cemetery in Bromberg        | NULL               | 4978      | 5051     
+5699          | 4          | Jerzy      | Jaworski      | M   | 1847-04-08 | Lanckorona      | 1902-08-04 | Łódź            | Cemetery in Łódź            | Unknown            | 4945      | 4614     
+5701          | 4          | Ludwika    | Jaworska      | F   | 1847-05-24 | Zwierzyniec     | 1899-01-24 | Biecz           | Cemetery in Biecz           | Unknown            | 5055      | 5047     
+5705          | 4          | Joanna     | Malinowska    | F   | 1847-08-18 | Reszel          | 1923-10-13 | Posen           | Cemetery in Posen           | Infectious disease | 5085      | 4909     
+5717          | 4          | Tomasz     | Malinowski    | M   | 1848-05-20 | Zalipie         | 1888-06-05 | Lanckorona      | Cemetery in Lanckorona      | Fire               | 5014      | 5057     
+5722          | 4          | Szymon     | Malinowski    | M   | 1848-10-21 | Sromowce        | 1928-09-12 | Bromberg        | Cemetery in Bromberg        | Murder             | 4978      | 5051     
+5731          | 4          | Leon       | Malinowski    | M   | 1848-08-08 | Kazimierz Dolny | 1926-07-01 | Lanckorona      | Cemetery in Lanckorona      | Influenza          | 5085      | 4909     
+5741          | 4          | Józefa     | Adamczyk      | F   | 1848-12-17 | Reszel          | 1936-02-15 | Białystok       | Cemetery in Białystok       | Murder             | 5050      | 5163     
+5753          | 4          | Stefania   | Jaworska      | F   | 1849-03-05 | Białystok       | 1852-03-25 | Częstochowa     | Cemetery in Częstochowa     | NULL               | 5055      | 5047     
+5764          | 4          | Wanda      | Jaworska      | F   | 1849-10-12 | Radom           | 1918-08-25 | Biecz           | Cemetery in Biecz           | Fire               | 5083      | 5145     
+5778          | 4          | Danuta     | Jaworska      | F   | 1850-03-01 | Kraków          | 1914-04-27 | Białystok       | Cemetery in Białystok       | Dysentery          | 5055      | 5047     
+5798          | 4          | Katarzyna  | Malinowska    | F   | 1850-09-24 | Zalipie         | 1930-11-11 | Gdynia          | Cemetery in Gdynia          | Infectious disease | 5039      | 5141     
+5804          | 4          | Dariusz    | Górski        | M   | 1850-09-20 | Breslau         | 1931-10-04 | Krynica         | Cemetery in Krynica         | Starvation         | 5242      | 5102     
+5820          | 4          | Julian     | Malinowski    | M   | 1851-03-22 | Łódź            | 1920-06-14 | Cieszyn         | Cemetery in Cieszyn         | Accident           | 5076      | 5176     
+5826          | 4          | Tadeusz    | Nowakowski    | M   | 1851-01-22 | Katowice        | 1906-11-13 | Sromowce        | Cemetery in Sromowce        | Typhus             | 5073      | 5153     
+5827          | 4          | Małgorzata | Wojciechowska | F   | 1851-04-01 | Lanckorona      | 1929-07-23 | Chochołów       | Cemetery in Chochołów       | Unknown            | 5186      | 4704     
+5839          | 4          | Maciej     | Malinowski    | M   | 1852-12-11 | Reszel          | 1905-12-05 | Kraków          | Cemetery in Kraków          | Apoplexy           | 5285      | 5202     
+5841          | 4          | Leon       | Malinowski    | M   | 1852-01-12 | Warszawa        | 1908-08-16 | Danzig          | Cemetery in Danzig          | Fire               | 5039      | 5141     
+5855          | 4          | Łukasz     | Górski        | M   | 1852-12-09 | Katowice        | 1925-04-02 | Posen           | Cemetery in Posen           | Fire               | 5043      | 5279     
+5858          | 4          | Alicja     | Jaworska      | F   | 1853-03-03 | Breslau         | 1921-08-12 | Lipce           | Cemetery in Lipce           | Murder             | 5055      | 5047     
+5869          | 4          | Małgorzata | Malinowska    | F   | 1853-08-11 | Kazimierz Dolny | 1943-09-28 | Częstochowa     | Cemetery in Częstochowa     | War casualty       | 5076      | 5176     
+5875          | 4          | Anna       | Górska        | F   | 1853-10-16 | Wisła           | 1912-07-10 | Thorn           | Cemetery in Thorn           | NULL               | 5242      | 5102     
+5878          | 4          | Teresa     | Nowakowska    | F   | 1853-11-21 | Lanckorona      | 1922-04-21 | Zwierzyniec     | Cemetery in Zwierzyniec     | NULL               | 5160      | 5157     
+5888          | 4          | Wojciech   | Jaworski      | M   | 1854-11-04 | Supraśl         | 1934-03-17 | Kielce          | Cemetery in Kielce          | Cholera            | 5055      | 5047     
+5893          | 4          | Czesława   | Malinowska    | F   | 1854-01-02 | Zwierzyniec     | 1893-12-01 | Radom           | Cemetery in Radom           | Fever              | 5076      | 5176     
+5921          | 4          | Maria      | Malinowska    | F   | 1855-07-20 | Kazimierz Dolny | 1938-10-25 | Cieszyn         | Cemetery in Cieszyn         | Fire               | 5285      | 5202     
+5925          | 4          | Józefa     | Górska        | F   | 1855-01-24 | Warszawa        | 1918-03-16 | Łódź            | Cemetery in Łódź            | Consumption        | 5242      | 5102     
+5927          | 4          | Czesław    | Nowakowski    | M   | 1855-09-19 | Złoty Potok     | 1904-07-21 | Katowice        | Cemetery in Katowice        | Cancer             | 5160      | 5157     
+5948          | 4          | Bartosz    | Jaworski      | M   | 1856-09-27 | Kielce          | 1926-04-04 | Zwierzyniec     | Cemetery in Zwierzyniec     | Heart failure      | 5055      | 5047     
+5952          | 4          | Agnieszka  | Nowakowska    | F   | 1856-07-01 | Kraków          | 1920-12-11 | Chełmno         | Cemetery in Chełmno         | NULL               | 5160      | 5157     
+5991          | 4          | Ryszard    | Malinowski    | M   | 1857-12-16 | Sandomierz      | 1909-05-11 | Olsztyn         | Cemetery in Olsztyn         | Drowning           | 5453      | 5139     
+6009          | 4          | Wiktoria   | Malinowska    | F   | 1858-03-11 | Stettin         | 1924-10-21 | Bromberg        | Cemetery in Bromberg        | NULL               | 5167      | 5309     
+6015          | 4          | Władysław  | Górski        | M   | 1859-07-03 | Bronowice       | 1864-09-07 | Sanok           | Cemetery in Sanok           | NULL               | 5242      | 5102     
+6028          | 4          | Wiktoria   | Malinowska    | F   | 1859-07-03 | Sandomierz      | 1865-10-01 | Białystok       | Cemetery in Białystok       | Dropsy             | 5453      | 5139     
+6029          | 4          | Kazimierz  | Kowalski      | M   | 1859-11-08 | Cieszyn         | 1894-05-26 | Biecz           | Cemetery in Biecz           | NULL               | 5172      | 5326     
+6030          | 4          | Filip      | Kowalski      | M   | 1859-04-28 | Pszczyna        | 1934-04-09 | Reszel          | Cemetery in Reszel          | Fire               | 5220      | 4973     
+6033          | 4          | Małgorzata | Jaworska      | F   | 1859-07-20 | Pszczyna        | 1912-05-24 | Wisła           | Cemetery in Wisła           | War casualty       | 4945      | 5281     
+6042          | 4          | Natalia    | Górska        | F   | 1860-01-08 | Łódź            | 1892-03-11 | Bromberg        | Cemetery in Bromberg        | Murder             | 5242      | 5102     
+6043          | 4          | Małgorzata | Nowakowska    | F   | 1860-06-09 | Bronowice       | 1926-07-08 | Krynica         | Cemetery in Krynica         | Typhus             | 5160      | 5157     
+6071          | 4          | Filip      | Malinowski    | M   | 1861-08-09 | Katowice        | 1923-10-06 | Bronowice       | Cemetery in Bronowice       | Typhus             | 5167      | 5309     
+6074          | 4          | Zuzanna    | Kowalska      | F   | 1861-08-07 | Sandomierz      | 1862-08-16 | Posen           | Cemetery in Posen           | NULL               | 5220      | 4973     
+6076          | 4          | Szymon     | Jaworski      | M   | 1861-04-03 | Warszawa        | 1935-01-20 | Złoty Potok     | Cemetery in Złoty Potok     | Stroke             | 4945      | 5281     
+6095          | 4          | Jan        | Malinowski    | M   | 1862-04-03 | Sromowce        | 1955-06-16 | Breslau         | Cemetery in Breslau         | NULL               | 5167      | 5309     
+6096          | 4          | Helena     | Kowalska      | F   | 1862-12-05 | Kraków          | 1938-10-23 | Sromowce        | Cemetery in Sromowce        | Starvation         | 5172      | 5326     
+6099          | 4          | Filip      | Jaworski      | M   | 1862-04-06 | Sanok           | 1931-02-04 | Kraków          | Cemetery in Kraków          | Murder             | 4945      | 5281     
+6123          | 4          | Michał     | Nowakowski    | M   | 1862-01-26 | Rzeszów         | 1942-07-14 | Kraków          | Cemetery in Kraków          | NULL               | 5160      | 5451     
+6144          | 4          | Antoni     | Jankowski     | M   | 1863-12-19 | Zalipie         | 1885-10-01 | Lanckorona      | Cemetery in Lanckorona      | Accident           | 4664      | 5619     
+6193          | 4          | Helena     | Jankowska     | F   | 1865-11-27 | Warszawa        | 1907-07-03 | Sanok           | Cemetery in Sanok           | Influenza          | 4664      | 5619     
+6195          | 4          | Czesława   | Zielińska     | F   | 1865-09-18 | Biecz           | 1931-05-21 | Katowice        | Cemetery in Katowice        | Influenza          | 5555      | 5508     
+6197          | 4          | Zygmunt    | Jaworski      | M   | 1865-06-12 | Bromberg        | 1870-10-16 | Gliwice         | Cemetery in Gliwice         | Fever              | 5055      | 5611     
+6221          | 4          | Wanda      | Zielińska     | F   | 1866-03-28 | Gliwice         | 1914-06-10 | Thorn           | Cemetery in Thorn           | NULL               | 5555      | 5508     
+6222          | 4          | Józefa     | Górska        | F   | 1866-05-17 | Reszel          | 1913-03-16 | Chochołów       | Cemetery in Chochołów       | Starvation         | 5592      | 5487     
+6224          | 4          | Ludwika    | Jaworska      | F   | 1866-08-06 | Zalipie         | 1868-05-23 | Lublin          | Cemetery in Lublin          | Smallpox           | 5055      | 5611     
+6228          | 4          | Marian     | Lewandowski   | M   | 1866-04-03 | Sandomierz      | 1918-09-02 | Biecz           | Cemetery in Biecz           | Typhus             | 4781      | 5505     
+6243          | 4          | Ludwika    | Zielińska     | F   | 1867-04-26 | Wisła           | 1943-01-26 | Wisła           | Cemetery in Wisła           | Stroke             | 5555      | 5508     
+6246          | 4          | Ryszard    | Wojciechowski | M   | 1867-07-15 | Biecz           | 1933-07-17 | Zwierzyniec     | Cemetery in Zwierzyniec     | Drowning           | 5186      | 5687     
+6249          | 4          | Ignacy     | Jaworski      | M   | 1867-05-09 | Biecz           | 1965-01-09 | Kielce          | Cemetery in Kielce          | NULL               | 5493      | 5110     
+6258          | 4          | Wiesław    | Jaworski      | M   | 1867-12-22 | Chochołów       | 1918-01-17 | Supraśl         | Cemetery in Supraśl         | Cholera            | 5365      | 5505     
+6262          | 4          | Danuta     | Wojciechowska | F   | 1867-01-15 | Sromowce        | 1870-11-10 | Radom           | Cemetery in Radom           | Cholera            | 5067      | 5543     
+6273          | 4          | Jadwiga    | Górska        | F   | 1868-02-08 | Chełmno         | 1938-10-27 | Gdynia          | Cemetery in Gdynia          | Cholera            | 5592      | 5487     
+6275          | 4          | Władysław  | Jaworski      | M   | 1868-02-06 | Breslau         | 1889-05-04 | Częstochowa     | Cemetery in Częstochowa     | Typhus             | 5055      | 5611     
+6292          | 4          | Marek      | Górski        | M   | 1868-09-08 | Radom           | 1936-08-16 | Złoty Potok     | Cemetery in Złoty Potok     | Cholera            | 5437      | 5698     
+6302          | 4          | Bożena     | Górska        | F   | 1869-07-24 | Bromberg        | 1872-02-08 | Supraśl         | Cemetery in Supraśl         | Typhus             | 5592      | 5487     
+6313          | 4          | Kazimiera  | Wojciechowska | F   | 1869-02-23 | Bromberg        | 1945-09-17 | Gliwice         | Cemetery in Gliwice         | Accident           | 5067      | 5543     
+6316          | 4          | Leon       | Górski        | M   | 1869-06-01 | Thorn           | 1872-05-14 | Częstochowa     | Cemetery in Częstochowa     | Unknown            | 4646      | 5646     
+6318          | 4          | Barbara    | Jankowska     | F   | 1869-02-24 | Zwierzyniec     | 1926-08-21 | Olsztyn         | Cemetery in Olsztyn         | Pneumonia          | 5494      | 5703     
+6328          | 4          | Julian     | Malinowski    | M   | 1869-07-20 | Kazimierz Dolny | 1949-02-16 | Zwierzyniec     | Cemetery in Zwierzyniec     | Consumption        | 5613      | 5625     
+6340          | 4          | Elżbieta   | Górska        | F   | 1870-05-26 | Reszel          | 1938-04-10 | Kraków          | Cemetery in Kraków          | Cancer             | 5437      | 5698     
+6351          | 4          | Teresa     | Malinowska    | F   | 1870-06-14 | Sosnowiec       | 1920-07-21 | Gliwice         | Cemetery in Gliwice         | Typhus             | 5039      | 5684     
+6357          | 4          | Michał     | Nowakowski    | M   | 1870-01-04 | Reszel          | 1927-09-09 | Sanok           | Cemetery in Sanok           | Fever              | 5620      | 5498     
+6358          | 4          | Łukasz     | Wiśniewski    | M   | 1870-05-13 | Gdynia          | 1888-09-05 | Warszawa        | Cemetery in Warszawa        | NULL               | 5544      | 5630     
+6383          | 4          | Czesław    | Nowakowski    | M   | 1871-11-18 | Kielce          | 1874-04-28 | Kielce          | Cemetery in Kielce          | Accident           | 5620      | 5498     
+6400          | 4          | Henryk     | Wiśniewski    | M   | 1872-11-12 | Bromberg        | 1874-06-17 | Łódź            | Cemetery in Łódź            | Accident           | 5544      | 5630     
+6416          | 4          | Maciej     | Malinowski    | M   | 1872-12-08 | Białystok       | 1933-01-22 | Lublin          | Cemetery in Lublin          | Dropsy             | 5453      | 5795     
+6443          | 4          | Filip      | Malinowski    | M   | 1873-03-02 | Zalipie         | 1935-10-04 | Złoty Potok     | Cemetery in Złoty Potok     | NULL               | 5453      | 5795     
+6455          | 4          | Władysław  | Wiśniewski    | M   | 1874-05-17 | Danzig          | 1875-06-06 | Zalipie         | Cemetery in Zalipie         | NULL               | 5544      | 5630     
+6465          | 4          | Kamil      | Grabowski     | M   | 1874-05-23 | Radom           | 1946-04-13 | Gliwice         | Cemetery in Gliwice         | NULL               | 5744      | 5646     
+6487          | 4          | Kazimierz  | Malinowski    | M   | 1875-02-16 | Kazimierz Dolny | 1878-02-06 | Lanckorona      | Cemetery in Lanckorona      | Consumption        | 5453      | 5795     
+6537          | 4          | Genowefa   | Wiśniewska    | F   | 1877-07-11 | Warszawa        | 1946-03-04 | Biecz           | Cemetery in Biecz           | Cancer             | 5544      | 5630     
+6548          | 4          | Ludwika    | Grabowska     | F   | 1877-12-17 | Posen           | 1943-01-24 | Kraków          | Cemetery in Kraków          | Dropsy             | 5744      | 5646     
+6563          | 4          | Maria      | Malinowska    | F   | 1877-09-14 | Chełmno         | 1899-10-17 | Kielce          | Cemetery in Kielce          | Starvation         | 5167      | 5718     
+6568          | 4          | Agnieszka  | Zielińska     | F   | 1877-06-07 | Bronowice       | 1880-08-01 | Gliwice         | Cemetery in Gliwice         | Dysentery          | 5679      | 5972     
+6576          | 4          | Elżbieta   | Grabowska     | F   | 1878-03-28 | Posen           | 1941-11-07 | Warszawa        | Cemetery in Warszawa        | Dysentery          | 5744      | 5646     
+6597          | 4          | Tomasz     | Zieliński     | M   | 1878-04-10 | Chochołów       | 1957-12-25 | Złoty Potok     | Cemetery in Złoty Potok     | Plague             | 5679      | 5972     
+6606          | 4          | Zofia      | Wiśniewska    | F   | 1878-11-20 | Breslau         | 1948-04-10 | Krynica         | Cemetery in Krynica         | NULL               | 5929      | 5508     
+6607          | 4          | Piotr      | Nowakowski    | M   | 1878-09-08 | Pszczyna        | 1955-01-13 | Breslau         | Cemetery in Breslau         | Influenza          | 5772      | 5619     
+6614          | 4          | Urszula    | Grabowska     | F   | 1879-11-07 | Kielce          | 1953-08-12 | Supraśl         | Cemetery in Supraśl         | Pneumonia          | 5744      | 5646     
+6660          | 4          | Stefan     | Zieliński     | M   | 1880-11-11 | Pszczyna        | 1937-06-13 | Thorn           | Cemetery in Thorn           | Infectious disease | 5679      | 5972     
+6667          | 4          | Ludwika    | Wiśniewska    | F   | 1880-04-08 | Chochołów       | 1965-07-11 | Złoty Potok     | Cemetery in Złoty Potok     | Drowning           | 5929      | 5508     
+6671          | 4          | Rozalia    | Nowakowska    | F   | 1880-11-17 | Lipce           | 1961-02-24 | Rzeszów         | Cemetery in Rzeszów         | Stroke             | 5772      | 5619     
+6686          | 4          | Joanna     | Zielińska     | F   | 1881-01-26 | Radom           | 1952-03-14 | Bromberg        | Cemetery in Bromberg        | Apoplexy           | 5679      | 5972     
+6699          | 4          | Maciej     | Adamczyk      | M   | 1881-11-02 | Thorn           | 1924-09-04 | Sandomierz      | Cemetery in Sandomierz      | Dysentery          | 5817      | 5723     
+6721          | 4          | Ryszard    | Wiśniewski    | M   | 1882-06-13 | Pszczyna        | 1934-07-10 | Warszawa        | Cemetery in Warszawa        | War casualty       | 5929      | 5508     
+6733          | 4          | Paweł      | Adamczyk      | M   | 1882-10-01 | Złoty Potok     | 1952-09-09 | Katowice        | Cemetery in Katowice        | NULL               | 5817      | 5723     
+6734          | 4          | Bartosz    | Nowakowski    | M   | 1882-04-07 | Reszel          | 1964-05-04 | Pszczyna        | Cemetery in Pszczyna        | Fever              | 5673      | 5951     
+6737          | 4          | Ryszard    | Górski        | M   | 1882-11-24 | Posen           | 1921-10-06 | Lipce           | Cemetery in Lipce           | NULL               | 5654      | 5959     
+6751          | 4          | Kazimiera  | Adamczyk      | F   | 1883-03-11 | Zwierzyniec     | 1889-09-24 | Rzeszów         | Cemetery in Rzeszów         | Pneumonia          | 5817      | 5723     
+6752          | 4          | Piotr      | Nowakowski    | M   | 1883-04-09 | Bromberg        | 1967-06-18 | Reszel          | Cemetery in Reszel          | Cancer             | 5673      | 5951     
+6797          | 4          | Henryk     | Nowakowski    | M   | 1885-09-25 | Gdynia          | 1889-12-03 | Chełmno         | Cemetery in Chełmno         | Fire               | 5673      | 5951     
+6831          | 4          | Aleksandra | Malinowska    | F   | 1886-12-20 | Lipce           | 1966-01-18 | Sanok           | Cemetery in Sanok           | Pneumonia          | 5781      | 6035     
+6848          | 4          | Franciszek | Malinowski    | M   | 1887-04-14 | Warszawa        | 1968-01-02 | Olsztyn         | Cemetery in Olsztyn         | Dropsy             | 5781      | 6035     
+6860          | 4          | Władysław  | Nowakowski    | M   | 1888-07-03 | Supraśl         | 1954-01-09 | Breslau         | Cemetery in Breslau         | Pneumonia          | 5673      | 5951     
+7083          | 4          | Jadwiga    | Wojciechowska | F   | 1894-09-28 | Kielce          | 1970-02-20 | Cieszyn         | Cemetery in Cieszyn         | NULL               | 5233      | 6440     
+7170          | 4          | Zygmunt    | Wojciechowski | M   | 1897-03-20 | Tykocin         | 1943-05-02 | Sromowce        | Cemetery in Sromowce        | Influenza          | 5233      | 6440     
+7181          | 4          | Anna       | Nowakowska    | F   | 1897-11-03 | Lanckorona      | NULL       | NULL            | NULL                        | NULL               | 5750      | 6274     
+7240          | 4          | Bartosz    | Nowakowski    | M   | 1899-04-06 | Pszczyna        | 1962-06-23 | Zalipie         | Cemetery in Zalipie         | Accident           | 5750      | 6274     
+7294          | 4          | Tomasz     | Nowakowski    | M   | 1901-07-24 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 5750      | 6274     
+7364          | 4          | Zuzanna    | Nowakowska    | F   | 1903-12-09 | Warszawa        | 1943-11-18 | Sosnowiec       | Cemetery in Sosnowiec       | Dropsy             | 5750      | 6274     
+7497          | 4          | Leokadia   | Nowakowska    | F   | 1906-06-01 | Olsztyn         | NULL       | NULL            | NULL                        | NULL               | 5673      | 6818     
+6089          | 5          | Leokadia   | Zielińska     | F   | 1861-08-06 | Breslau         | 1917-11-15 | Thorn           | Cemetery in Thorn           | Heart failure      | 5410      | 5539     
+6146          | 5          | Wiesław    | Górski        | M   | 1863-01-20 | Lublin          | 1890-07-07 | Łódź            | Cemetery in Łódź            | Influenza          | 5390      | 5458     
+6203          | 5          | Natalia    | Olszewska     | F   | 1865-05-01 | Reszel          | 1932-09-18 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | NULL               | 5590      | 5567     
+6255          | 5          | Mirosław   | Malinowski    | M   | 1867-05-24 | Supraśl         | 1927-02-28 | Katowice        | Cemetery in Katowice        | Influenza          | 5499      | 5572     
+6308          | 5          | Mateusz    | Malinowski    | M   | 1869-03-16 | Rzeszów         | 1940-04-04 | Pszczyna        | Cemetery in Pszczyna        | Unknown            | 5499      | 5572     
+6312          | 5          | Teresa     | Wojciechowska | F   | 1869-11-05 | Lublin          | 1939-03-11 | Olsztyn         | Cemetery in Olsztyn         | Fire               | 5621      | 5577     
+6323          | 5          | Zygmunt    | Jankowski     | M   | 1869-04-26 | Złoty Potok     | 1872-12-25 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Stroke             | 5333      | 5652     
+6324          | 5          | Wiesław    | Malinowski    | M   | 1869-10-25 | Kielce          | 1949-04-03 | Zalipie         | Cemetery in Zalipie         | Apoplexy           | 5629      | 5622     
+6337          | 5          | Urszula    | Malinowska    | F   | 1870-11-17 | Rzeszów         | 1948-10-03 | Posen           | Cemetery in Posen           | Cholera            | 5499      | 5572     
+6339          | 5          | Urszula    | Wojciechowska | F   | 1870-01-07 | Supraśl         | 1944-04-20 | Krynica         | Cemetery in Krynica         | Infectious disease | 5621      | 5577     
+6345          | 5          | Paweł      | Jaworski      | M   | 1870-05-16 | Bronowice       | 1914-06-28 | Białystok       | Cemetery in Białystok       | Dropsy             | 5659      | 5509     
+6350          | 5          | Marian     | Wojciechowski | M   | 1870-09-16 | Posen           | 1922-05-13 | Thorn           | Cemetery in Thorn           | NULL               | 5484      | 5845     
+6352          | 5          | Piotr      | Wojciechowski | M   | 1870-07-09 | Stettin         | 1925-11-23 | Chochołów       | Cemetery in Chochołów       | Fever              | 5602      | 5200     
+6360          | 5          | Wanda      | Adamczyk      | F   | 1870-08-26 | Sanok           | 1949-08-24 | Breslau         | Cemetery in Breslau         | NULL               | 4702      | 5618     
+6379          | 5          | Jerzy      | Jankowski     | M   | 1871-09-19 | Gdynia          | 1938-01-20 | Wisła           | Cemetery in Wisła           | NULL               | 5333      | 5652     
+6380          | 5          | Ignacy     | Malinowski    | M   | 1871-04-07 | Pszczyna        | 1959-02-26 | Biecz           | Cemetery in Biecz           | Stroke             | 5629      | 5622     
+6386          | 5          | Piotr      | Adamczyk      | M   | 1871-04-23 | Posen           | 1957-03-23 | Bronowice       | Cemetery in Bronowice       | Fire               | 4702      | 5618     
+6398          | 5          | Alicja     | Wojciechowska | F   | 1872-02-02 | Lipce           | 1935-09-24 | Chochołów       | Cemetery in Chochołów       | Unknown            | 5484      | 5845     
+6405          | 5          | Jadwiga    | Jaworska      | F   | 1872-01-17 | Gdynia          | 1935-07-19 | Kraków          | Cemetery in Kraków          | NULL               | 5545      | 5741     
+6423          | 5          | Anna       | Malinowska    | F   | 1873-04-20 | Bromberg        | 1957-02-10 | Częstochowa     | Cemetery in Częstochowa     | Smallpox           | 5629      | 5622     
+6428          | 5          | Ludwika    | Jaworska      | F   | 1873-08-28 | Sandomierz      | 1936-06-07 | Pszczyna        | Cemetery in Pszczyna        | NULL               | 5545      | 5741     
+6438          | 5          | Bożena     | Jaworska      | F   | 1873-04-17 | Olsztyn         | 1916-09-18 | Chełmno         | Cemetery in Chełmno         | Fire               | 5655      | 5702     
+6445          | 5          | Jan        | Nowakowski    | M   | 1873-10-06 | Thorn           | 1955-11-08 | Thorn           | Cemetery in Thorn           | Starvation         | 5522      | 5798     
+6453          | 5          | Marian     | Malinowski    | M   | 1874-03-20 | Lanckorona      | 1963-10-27 | Zwierzyniec     | Cemetery in Zwierzyniec     | Influenza          | 5629      | 5622     
+6468          | 5          | Halina     | Olszewska     | F   | 1874-04-09 | Białystok       | 1921-09-13 | Supraśl         | Cemetery in Supraśl         | NULL               | 5658      | 5893     
+6469          | 5          | Helena     | Nowakowska    | F   | 1874-05-01 | Lublin          | 1935-08-16 | Posen           | Cemetery in Posen           | NULL               | 5522      | 5798     
+6495          | 5          | Julia      | Jaworska      | F   | 1875-04-11 | Kraków          | 1932-08-18 | Częstochowa     | Cemetery in Częstochowa     | NULL               | 4825      | 5869     
+6501          | 5          | Marian     | Adamczyk      | M   | 1875-09-28 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 5436      | 5778     
+6512          | 5          | Wiktoria   | Malinowska    | F   | 1876-01-28 | Lanckorona      | 1951-12-14 | Sromowce        | Cemetery in Sromowce        | Dropsy             | 5629      | 5622     
+6518          | 5          | Józef      | Olszewski     | M   | 1876-08-05 | Katowice        | 1917-01-05 | Lublin          | Cemetery in Lublin          | Starvation         | 5658      | 5893     
+6519          | 5          | Leokadia   | Nowakowska    | F   | 1876-07-04 | Danzig          | 1946-12-13 | Tykocin         | Cemetery in Tykocin         | Fire               | 5522      | 5798     
+6526          | 5          | Władysław  | Grabowski     | M   | 1876-04-24 | Lanckorona      | 1928-09-16 | Łódź            | Cemetery in Łódź            | Heart failure      | 5788      | 5647     
+6528          | 5          | Leokadia   | Wojciechowska | F   | 1876-09-02 | Cieszyn         | 1917-05-06 | Lipce           | Cemetery in Lipce           | Consumption        | 5570      | 5921     
+6533          | 5          | Adam       | Olszewski     | M   | 1876-03-06 | Złoty Potok     | 1926-03-18 | Sanok           | Cemetery in Sanok           | Smallpox           | 5726      | 5875     
+6559          | 5          | Julian     | Grabowski     | M   | 1877-11-02 | Kielce          | 1948-10-25 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Influenza          | 5788      | 5647     
+6566          | 5          | Wiktoria   | Jaworska      | F   | 1877-02-26 | Kielce          | 1967-11-21 | Zalipie         | Cemetery in Zalipie         | Fire               | 5699      | 5827     
+6567          | 5          | Stefania   | Górska        | F   | 1877-04-24 | Wisła           | 1951-08-21 | Stettin         | Cemetery in Stettin         | Plague             | 5804      | 5448     
+6578          | 5          | Paweł      | Jaworski      | M   | 1878-11-20 | Biecz           | 1938-08-07 | Cieszyn         | Cemetery in Cieszyn         | Pneumonia          | 4825      | 5869     
+6596          | 5          | Irena      | Górska        | F   | 1878-03-13 | Gliwice         | 1924-04-02 | Wisła           | Cemetery in Wisła           | Heart failure      | 5804      | 5448     
+6598          | 5          | Ryszard    | Malinowski    | M   | 1878-06-12 | Łódź            | 1930-04-24 | Olsztyn         | Cemetery in Olsztyn         | NULL               | 5722      | 5760     
+6599          | 5          | Helena     | Wojciechowska | F   | 1878-05-06 | Sanok           | 1883-10-15 | Bronowice       | Cemetery in Bronowice       | Accident           | 5662      | 5889     
+6620          | 5          | Franciszek | Grabowski     | M   | 1879-01-19 | Rzeszów         | 1927-04-08 | Breslau         | Cemetery in Breslau         | Murder             | 5788      | 5647     
+6622          | 5          | Julia      | Wojciechowska | F   | 1879-01-27 | Radom           | 1909-11-16 | Kielce          | Cemetery in Kielce          | Consumption        | 5570      | 5921     
+6627          | 5          | Czesław    | Górski        | M   | 1879-06-19 | Katowice        | 1946-01-02 | Warszawa        | Cemetery in Warszawa        | Dropsy             | 5804      | 5448     
+6640          | 5          | Paweł      | Górski        | M   | 1879-08-23 | Lipce           | 1885-03-14 | Chochołów       | Cemetery in Chochołów       | NULL               | 5954      | 5952     
+6654          | 5          | Jadwiga    | Grabowska     | F   | 1880-07-07 | Częstochowa     | 1939-09-14 | Kielce          | Cemetery in Kielce          | War casualty       | 5788      | 5647     
+6669          | 5          | Piotr      | Malinowski    | M   | 1880-07-19 | Supraśl         | 1926-11-04 | Stettin         | Cemetery in Stettin         | Dropsy             | 5841      | 6056     
+6681          | 5          | Jan        | Jaworski      | M   | 1881-04-12 | Kazimierz Dolny | 1948-10-27 | Gliwice         | Cemetery in Gliwice         | Apoplexy           | 4825      | 5869     
+6687          | 5          | Maria      | Malinowska    | F   | 1881-04-13 | Chełmno         | 1964-07-27 | Zalipie         | Cemetery in Zalipie         | Plague             | 5722      | 5760     
+6695          | 5          | Kazimiera  | Górska        | F   | 1881-02-10 | Białystok       | 1914-07-20 | Posen           | Cemetery in Posen           | Murder             | 5954      | 5952     
+6701          | 5          | Piotr      | Adamczyk      | M   | 1881-09-27 | Sromowce        | 1920-10-14 | Reszel          | Cemetery in Reszel          | Infectious disease | 5784      | 6033     
+6703          | 5          | Marcin     | Lewandowski   | M   | 1881-03-18 | Lanckorona      | 1943-03-13 | Kielce          | Cemetery in Kielce          | Pneumonia          | 5360      | 5858     
+6714          | 5          | Kamil      | Wojciechowski | M   | 1882-03-10 | Krynica         | 1951-08-18 | Reszel          | Cemetery in Reszel          | Cancer             | 5570      | 5921     
+6718          | 5          | Wojciech   | Malinowski    | M   | 1882-11-10 | Stettin         | 1936-06-15 | Gliwice         | Cemetery in Gliwice         | Drowning           | 5722      | 5760     
+6723          | 5          | Filip      | Malinowski    | M   | 1882-09-12 | Katowice        | 1883-01-08 | Olsztyn         | Cemetery in Olsztyn         | NULL               | 5841      | 6056     
+6731          | 5          | Krzysztof  | Jaworski      | M   | 1882-06-05 | Kraków          | 1934-06-28 | Pszczyna        | Cemetery in Pszczyna        | Drowning           | 5948      | 6003     
+6735          | 5          | Marian     | Nowakowski    | M   | 1882-07-04 | Złoty Potok     | 1953-01-15 | Sosnowiec       | Cemetery in Sosnowiec       | NULL               | 5216      | 5925     
+6736          | 5          | Ryszard    | Lewandowski   | M   | 1882-02-25 | Olsztyn         | 1939-09-17 | Wisła           | Cemetery in Wisła           | Fever              | 5360      | 5858     
+6739          | 5          | Stanisław  | Nowakowski    | M   | 1882-10-22 | Lanckorona      | 1944-02-02 | Katowice        | Cemetery in Katowice        | Smallpox           | 5826      | 5915     
+6748          | 5          | Czesława   | Malinowska    | F   | 1883-11-07 | Sanok           | 1889-08-07 | Thorn           | Cemetery in Thorn           | Fever              | 5841      | 6056     
+6753          | 5          | Monika     | Adamczyk      | F   | 1883-02-06 | Lanckorona      | 1959-11-05 | Radom           | Cemetery in Radom           | Fever              | 5784      | 6033     
+6756          | 5          | Jadwiga    | Lewandowska   | F   | 1883-04-28 | Bromberg        | 1889-03-10 | Sromowce        | Cemetery in Sromowce        | Smallpox           | 5360      | 5858     
+6760          | 5          | Joanna     | Nowakowska    | F   | 1883-01-22 | Łódź            | 1889-12-28 | Thorn           | Cemetery in Thorn           | Accident           | 6123      | 5867     
+6771          | 5          | Piotr      | Malinowski    | M   | 1884-06-17 | Tykocin         | 1929-01-25 | Radom           | Cemetery in Radom           | NULL               | 5841      | 6056     
+6774          | 5          | Krystyna   | Górska        | F   | 1884-09-05 | Lanckorona      | 1940-08-15 | Zalipie         | Cemetery in Zalipie         | Heart failure      | 5954      | 5952     
+6776          | 5          | Maria      | Jaworska      | F   | 1884-09-21 | Częstochowa     | 1947-01-16 | Krynica         | Cemetery in Krynica         | Smallpox           | 5948      | 6003     
+6778          | 5          | Julian     | Adamczyk      | M   | 1884-09-28 | Złoty Potok     | 1950-01-16 | Gliwice         | Cemetery in Gliwice         | Apoplexy           | 5784      | 6033     
+6782          | 5          | Oliwia     | Kowalska      | F   | 1884-02-08 | Krynica         | 1938-12-15 | Złoty Potok     | Cemetery in Złoty Potok     | Heart failure      | 6029      | 5992     
+6799          | 5          | Kamil      | Nowakowski    | M   | 1885-01-02 | Olsztyn         | 1936-07-14 | Sandomierz      | Cemetery in Sandomierz      | Consumption        | 5826      | 5915     
+6800          | 5          | Danuta     | Nowakowska    | F   | 1885-05-14 | Cieszyn         | 1962-11-07 | Lanckorona      | Cemetery in Lanckorona      | Unknown            | 6123      | 5867     
+6802          | 5          | Regina     | Jaworska      | F   | 1885-09-10 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 6099      | 6129     
+6805          | 5          | Józefa     | Malinowska    | F   | 1885-09-22 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 5991      | 6188     
+6807          | 5          | Paweł      | Jaworski      | M   | 1885-07-07 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 6076      | 6031     
+6808          | 5          | Monika     | Nowakowska    | F   | 1885-05-09 | Sromowce        | 1947-07-02 | Bronowice       | Cemetery in Bronowice       | Plague             | 5362      | 5858     
+6817          | 5          | Antoni     | Jaworski      | M   | 1886-10-18 | Stettin         | 1954-04-18 | Radom           | Cemetery in Radom           | Apoplexy           | 5948      | 6003     
+6821          | 5          | Genowefa   | Nowakowska    | F   | 1886-12-18 | Lanckorona      | 1891-02-28 | Supraśl         | Cemetery in Supraśl         | Dysentery          | 6123      | 5867     
+6826          | 5          | Piotr      | Malinowski    | M   | 1886-03-04 | Lipce           | 1943-07-23 | Zwierzyniec     | Cemetery in Zwierzyniec     | Pneumonia          | 5991      | 6188     
+6833          | 5          | Aleksandra | Nowakowska    | F   | 1886-12-11 | Gdynia          | 1935-07-26 | Łódź            | Cemetery in Łódź            | Murder             | 5927      | 6219     
+6837          | 5          | Marian     | Adamczyk      | M   | 1887-10-11 | Olsztyn         | 1964-09-22 | Częstochowa     | Cemetery in Częstochowa     | Infectious disease | 5784      | 6033     
+6839          | 5          | Czesław    | Nowakowski    | M   | 1887-10-26 | Rzeszów         | 1963-06-05 | Białystok       | Cemetery in Białystok       | Heart failure      | 5826      | 5915     
+6840          | 5          | Jerzy      | Nowakowski    | M   | 1887-07-23 | Łódź            | 1965-11-25 | Sanok           | Cemetery in Sanok           | Cancer             | 6123      | 5867     
+6843          | 5          | Zofia      | Jaworska      | F   | 1887-09-19 | Tykocin         | NULL       | NULL            | NULL                        | NULL               | 6076      | 6031     
+6849          | 5          | Krzysztof  | Malinowski    | M   | 1887-05-21 | Katowice        | 1891-08-01 | Bromberg        | Cemetery in Bromberg        | Heart failure      | 5922      | 6009     
+6855          | 5          | Halina     | Wojciechowska | F   | 1887-10-15 | Thorn           | 1890-05-26 | Wisła           | Cemetery in Wisła           | Drowning           | 6048      | 6193     
+6861          | 5          | Małgorzata | Nowakowska    | F   | 1888-02-05 | Wisła           | 1949-01-11 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Apoplexy           | 5826      | 5915     
+6869          | 5          | Marianna   | Nowakowska    | F   | 1888-12-04 | Częstochowa     | 1948-05-14 | Cieszyn         | Cemetery in Cieszyn         | Heart failure      | 5362      | 5858     
+6879          | 5          | Marian     | Nowakowski    | M   | 1888-04-14 | Rzeszów         | 1891-02-16 | Stettin         | Cemetery in Stettin         | Drowning           | 5927      | 6219     
+6887          | 5          | Barbara    | Górska        | F   | 1888-10-24 | Pszczyna        | 1956-08-27 | Pszczyna        | Cemetery in Pszczyna        | Stroke             | 5998      | 6318     
+6893          | 5          | Stefania   | Jaworska      | F   | 1889-10-02 | Łódź            | 1953-05-10 | Chochołów       | Cemetery in Chochołów       | NULL               | 5948      | 6003     
+6897          | 5          | Piotr      | Nowakowski    | M   | 1889-08-26 | Lipce           | 1959-04-27 | Reszel          | Cemetery in Reszel          | Drowning           | 5362      | 5858     
+6902          | 5          | Bożena     | Malinowska    | F   | 1889-10-27 | Sanok           | 1951-07-11 | Krynica         | Cemetery in Krynica         | NULL               | 5922      | 6009     
+6907          | 5          | Tadeusz    | Malinowski    | M   | 1889-05-23 | Stettin         | 1915-03-25 | Zwierzyniec     | Cemetery in Zwierzyniec     | NULL               | 5839      | 5791     
+6909          | 5          | Krzysztof  | Malinowski    | M   | 1889-07-25 | Rzeszów         | 1968-10-19 | Breslau         | Cemetery in Breslau         | Cancer             | 5820      | 6138     
+6923          | 5          | Alicja     | Nowakowska    | F   | 1890-01-16 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 5826      | 5915     
+6925          | 5          | Filip      | Jaworski      | M   | 1890-11-19 | Rzeszów         | 1936-12-12 | Sosnowiec       | Cemetery in Sosnowiec       | Heart failure      | 6076      | 6031     
+6927          | 5          | Ludwika    | Malinowska    | F   | 1890-03-08 | Wisła           | 1968-03-11 | Białystok       | Cemetery in Białystok       | Consumption        | 5922      | 6009     
+6933          | 5          | Natalia    | Górska        | F   | 1890-05-02 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 5998      | 6318     
+6940          | 5          | Rozalia    | Jaworska      | F   | 1890-12-04 | Warszawa        | 1961-04-27 | Biecz           | Cemetery in Biecz           | NULL               | 5888      | 6166     
+6963          | 5          | Stanisław  | Lewandowski   | M   | 1891-01-11 | Sosnowiec       | 1949-08-07 | Sanok           | Cemetery in Sanok           | NULL               | 5612      | 6221     
+6964          | 5          | Stefania   | Górska        | F   | 1891-08-14 | Chochołów       | 1951-09-09 | Posen           | Cemetery in Posen           | Consumption        | 6146      | 6042     
+6966          | 5          | Joanna     | Malinowska    | F   | 1891-01-22 | Bromberg        | 1950-05-07 | Częstochowa     | Cemetery in Częstochowa     | Smallpox           | 5731      | 6156     
+6971          | 5          | Antoni     | Malinowski    | M   | 1891-11-23 | Supraśl         | NULL       | NULL            | NULL                        | NULL               | 6071      | 6096     
+6981          | 5          | Jadwiga    | Jaworska      | F   | 1892-04-06 | Lipce           | 1934-05-21 | Sanok           | Cemetery in Sanok           | Drowning           | 6076      | 6031     
+6990          | 5          | Julian     | Jaworski      | M   | 1892-08-23 | Gdynia          | 1954-10-01 | Częstochowa     | Cemetery in Częstochowa     | Dysentery          | 5888      | 6166     
+6995          | 5          | Kamil      | Górski        | M   | 1892-07-05 | Olsztyn         | 1953-10-22 | Katowice        | Cemetery in Katowice        | Cholera            | 6146      | 6042     
+7002          | 5          | Krystyna   | Lewandowska   | F   | 1892-02-21 | Chełmno         | 1937-05-16 | Chochołów       | Cemetery in Chochołów       | NULL               | 6040      | 6195     
+7007          | 5          | Leokadia   | Lewandowska   | F   | 1892-07-07 | Pszczyna        | NULL       | NULL            | NULL                        | NULL               | 6228      | 6170     
+7015          | 5          | Dariusz    | Jaworski      | M   | 1892-09-03 | Zwierzyniec     | 1925-09-04 | Wisła           | Cemetery in Wisła           | Typhus             | 6210      | 6042     
+7022          | 5          | Ludwika    | Górska        | F   | 1893-04-17 | Lipce           | 1953-07-13 | Thorn           | Cemetery in Thorn           | Apoplexy           | 5998      | 6318     
+7028          | 5          | Teresa     | Lewandowska   | F   | 1893-12-03 | Sanok           | 1958-10-22 | Krynica         | Cemetery in Krynica         | Cholera            | 5612      | 6221     
+7036          | 5          | Stefania   | Lewandowska   | F   | 1893-04-27 | Częstochowa     | 1968-06-10 | Stettin         | Cemetery in Stettin         | Heart failure      | 6040      | 6195     
+7038          | 5          | Barbara    | Lewandowska   | F   | 1893-11-18 | Wisła           | 1969-07-17 | Rzeszów         | Cemetery in Rzeszów         | NULL               | 6228      | 6170     
+7040          | 5          | Mirosław   | Malinowski    | M   | 1893-08-07 | Posen           | NULL       | NULL            | NULL                        | NULL               | 5524      | 6240     
+7054          | 5          | Marek      | Woźniak       | M   | 1893-05-19 | Biecz           | 1894-01-16 | Sandomierz      | Cemetery in Sandomierz      | NULL               | 5735      | 6243     
+7067          | 5          | Wiesław    | Malinowski    | M   | 1894-02-26 | Gliwice         | 1944-08-17 | Kielce          | Cemetery in Kielce          | War casualty       | 6071      | 6096     
+7089          | 5          | Irena      | Jaworska      | F   | 1894-03-14 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 6258      | 6256     
+7092          | 5          | Kazimierz  | Zieliński     | M   | 1894-09-08 | Lipce           | 1895-05-18 | Reszel          | Cemetery in Reszel          | Unknown            | 6248      | 6313     
+7096          | 5          | Grażyna    | Jaworska      | F   | 1895-06-20 | Sanok           | 1918-06-22 | Tykocin         | Cemetery in Tykocin         | Dropsy             | 5888      | 6166     
+7097          | 5          | Marianna   | Lewandowska   | F   | 1895-04-07 | Gliwice         | NULL       | NULL            | NULL                        | NULL               | 5612      | 6221     
+7107          | 5          | Piotr      | Nowakowski    | M   | 1895-08-11 | Sandomierz      | 1938-06-20 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Dysentery          | 6191      | 6222     
+7125          | 5          | Adam       | Jaworski      | M   | 1895-02-25 | Łódź            | 1934-03-24 | Zalipie         | Cemetery in Zalipie         | Dropsy             | 6249      | 6273     
+7135          | 5          | Czesława   | Malinowska    | F   | 1896-12-19 | Danzig          | 1900-08-21 | Katowice        | Cemetery in Katowice        | Starvation         | 6071      | 6096     
+7137          | 5          | Zygmunt    | Lewandowski   | M   | 1896-05-09 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 6040      | 6195     
+7150          | 5          | Mirosław   | Jaworski      | M   | 1896-02-10 | Sromowce        | NULL       | NULL            | NULL                        | NULL               | 6099      | 6282     
+7152          | 5          | Józefa     | Jaworska      | F   | 1896-12-11 | Reszel          | 1956-06-12 | Chochołów       | Cemetery in Chochołów       | Cholera            | 6258      | 6256     
+7157          | 5          | Teresa     | Zielińska     | F   | 1896-03-26 | Częstochowa     | NULL       | NULL            | NULL                        | NULL               | 6294      | 6537     
+7159          | 5          | Maciej     | Wojciechowski | M   | 1896-02-09 | Bromberg        | 1969-01-11 | Posen           | Cemetery in Posen           | Cancer             | 6466      | 6340     
+7161          | 5          | Czesława   | Malinowska    | F   | 1896-08-18 | Sandomierz      | 1933-02-16 | Lipce           | Cemetery in Lipce           | NULL               | 6328      | 5983     
+7166          | 5          | Maja       | Malinowska    | F   | 1897-02-17 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 5524      | 6240     
+7179          | 5          | Jadwiga    | Jaworska      | F   | 1897-07-20 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 6249      | 6273     
+7185          | 5          | Stanisław  | Malinowski    | M   | 1897-07-12 | Supraśl         | 1968-08-05 | Gliwice         | Cemetery in Gliwice         | Influenza          | 6380      | 6351     
+7193          | 5          | Jadwiga    | Wiśniewska    | F   | 1897-08-04 | Biecz           | 1948-09-16 | Pszczyna        | Cemetery in Pszczyna        | NULL               | 6295      | 5925     
+7197          | 5          | Katarzyna  | Lewandowska   | F   | 1898-02-02 | Pszczyna        | 1903-05-24 | Breslau         | Cemetery in Breslau         | Cholera            | 6040      | 6195     
+7219          | 5          | Stefan     | Malinowski    | M   | 1898-02-21 | Rzeszów         | 1955-08-17 | Lanckorona      | Cemetery in Lanckorona      | Apoplexy           | 6095      | 6399     
+7233          | 5          | Julia      | Jaworska      | F   | 1899-03-23 | Thorn           | NULL       | NULL            | NULL                        | NULL               | 6099      | 6282     
+7236          | 5          | Krzysztof  | Zieliński     | M   | 1899-05-24 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 6248      | 6313     
+7239          | 5          | Czesława   | Jaworska      | F   | 1899-09-24 | Sromowce        | 1956-05-02 | Tykocin         | Cemetery in Tykocin         | War casualty       | 6249      | 6273     
+7244          | 5          | Grzegorz   | Wojciechowski | M   | 1899-07-16 | Sandomierz      | 1902-07-03 | Bronowice       | Cemetery in Bronowice       | Apoplexy           | 6466      | 6340     
+7245          | 5          | Kazimierz  | Malinowski    | M   | 1899-08-18 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 6380      | 6351     
+7251          | 5          | Leokadia   | Malinowska    | F   | 1899-01-13 | Lanckorona      | 1957-07-23 | Wisła           | Cemetery in Wisła           | Unknown            | 6443      | 6239     
+7262          | 5          | Maciej     | Wojciechowski | M   | 1899-07-11 | Lipce           | 1953-01-12 | Lublin          | Cemetery in Lublin          | Fever              | 6246      | 6223     
+7268          | 5          | Marianna   | Jaworska      | F   | 1900-05-21 | Danzig          | 1905-10-04 | Łódź            | Cemetery in Łódź            | Consumption        | 6099      | 6282     
+7276          | 5          | Alicja     | Wiśniewska    | F   | 1900-04-24 | Posen           | 1959-11-24 | Białystok       | Cemetery in Białystok       | Dysentery          | 6295      | 5925     
+7304          | 5          | Oliwia     | Malinowska    | F   | 1901-01-21 | Zalipie         | 1961-02-23 | Złoty Potok     | Cemetery in Złoty Potok     | Consumption        | 6443      | 6239     
+7316          | 5          | Krzysztof  | Nowakowski    | M   | 1901-06-28 | Krynica         | 1960-10-01 | Olsztyn         | Cemetery in Olsztyn         | Murder             | 6357      | 6330     
+7318          | 5          | Mirosław   | Malinowski    | M   | 1901-05-08 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 6416      | 6411     
+7320          | 5          | Maciej     | Olszewski     | M   | 1901-03-05 | Zwierzyniec     | 1959-03-09 | Kielce          | Cemetery in Kielce          | NULL               | 5590      | 6418     
+7331          | 5          | Wiktoria   | Zielińska     | F   | 1902-08-28 | Thorn           | 1904-04-18 | Reszel          | Cemetery in Reszel          | Consumption        | 6248      | 6313     
+7341          | 5          | Krzysztof  | Wojciechowski | M   | 1902-12-09 | Częstochowa     | NULL       | NULL            | NULL                        | NULL               | 6246      | 6223     
+7345          | 5          | Ewa        | Zielińska     | F   | 1902-06-11 | Danzig          | 1956-08-25 | Lanckorona      | Cemetery in Lanckorona      | Typhus             | 6597      | 6704     
+7351          | 5          | Ludwika    | Olszewska     | F   | 1902-02-26 | Katowice        | 1956-12-04 | Kielce          | Cemetery in Kielce          | Fire               | 6638      | 6606     
+7360          | 5          | Ludwika    | Nowakowska    | F   | 1902-11-05 | Reszel          | 1966-06-04 | Krynica         | Cemetery in Krynica         | Smallpox           | 6123      | 6571     
+7367          | 5          | Monika     | Malinowska    | F   | 1903-02-21 | Gliwice         | 1906-03-24 | Reszel          | Cemetery in Reszel          | Fever              | 6443      | 6239     
+7377          | 5          | Wiktoria   | Malinowska    | F   | 1903-03-17 | Breslau         | 1968-12-22 | Breslau         | Cemetery in Breslau         | Drowning           | 6416      | 6411     
+7387          | 5          | Kazimierz  | Grabowski     | M   | 1903-11-04 | Radom           | 1969-01-14 | Gliwice         | Cemetery in Gliwice         | Influenza          | 6483      | 6671     
+7407          | 5          | Wiesław    | Nowakowski    | M   | 1904-02-13 | Lanckorona      | 1905-03-08 | Gdynia          | Cemetery in Gdynia          | Unknown            | 6357      | 6330     
+7410          | 5          | Bartosz    | Olszewski     | M   | 1904-02-23 | Wisła           | 1957-02-08 | Katowice        | Cemetery in Katowice        | Starvation         | 5590      | 6418     
+7429          | 5          | Jerzy      | Nowakowski    | M   | 1904-04-27 | Olsztyn         | 1934-11-17 | Chełmno         | Cemetery in Chełmno         | Dysentery          | 6123      | 6571     
+7430          | 5          | Marianna   | Górska        | F   | 1904-09-02 | Wisła           | 1955-12-09 | Łódź            | Cemetery in Łódź            | Cancer             | 6737      | 6428     
+7434          | 5          | Oliwia     | Nowakowska    | F   | 1904-07-13 | Złoty Potok     | 1907-12-14 | Posen           | Cemetery in Posen           | Infectious disease | 6489      | 6686     
+7436          | 5          | Szymon     | Jaworski      | M   | 1904-02-19 | Cieszyn         | 1929-06-21 | Tykocin         | Cemetery in Tykocin         | Infectious disease | 5493      | 6614     
+7439          | 5          | Oliwia     | Adamczyk      | F   | 1904-03-17 | Stettin         | 1952-05-04 | Sandomierz      | Cemetery in Sandomierz      | Cholera            | 6699      | 6545     
+7446          | 5          | Urszula    | Malinowska    | F   | 1905-05-03 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 6416      | 6411     
+7449          | 5          | Zofia      | Olszewska     | F   | 1905-08-08 | Gliwice         | 1953-03-08 | Bromberg        | Cemetery in Bromberg        | Cholera            | 6638      | 6606     
+7452          | 5          | Aleksandra | Grabowska     | F   | 1905-03-02 | Cieszyn         | NULL       | NULL            | NULL                        | NULL               | 6483      | 6671     
+7462          | 5          | Jakub      | Jaworski      | M   | 1905-01-12 | Białystok       | NULL       | NULL            | NULL                        | NULL               | 5493      | 6614     
+7463          | 5          | Wiesław    | Zieliński     | M   | 1905-02-04 | Bromberg        | 1958-07-09 | Lublin          | Cemetery in Lublin          | NULL               | 6660      | 6562     
+7470          | 5          | Maria      | Nowakowska    | F   | 1905-10-20 | Gdynia          | 1965-12-21 | Lanckorona      | Cemetery in Lanckorona      | Dysentery          | 6560      | 6548     
+7485          | 5          | Ewa        | Grabowska     | F   | 1906-08-13 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 6483      | 6671     
+7489          | 5          | Tomasz     | Nowakowski    | M   | 1906-06-25 | Sandomierz      | NULL       | NULL            | NULL                        | NULL               | 6123      | 6571     
+7493          | 5          | Anna       | Nowakowska    | F   | 1906-04-02 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 6560      | 6548     
+7524          | 5          | Katarzyna  | Zielińska     | F   | 1907-07-01 | Zalipie         | 1961-08-02 | Łódź            | Cemetery in Łódź            | Unknown            | 6660      | 6562     
+7530          | 5          | Katarzyna  | Adamczyk      | F   | 1907-05-10 | Reszel          | 1953-04-24 | Tykocin         | Cemetery in Tykocin         | Infectious disease | 6699      | 6545     
+7532          | 5          | Marian     | Olszewski     | M   | 1907-09-16 | Radom           | 1956-09-23 | Danzig          | Cemetery in Danzig          | Pneumonia          | 6420      | 6667     
+7545          | 5          | Marcin     | Malinowski    | M   | 1907-11-15 | Krynica         | 1912-07-08 | Kielce          | Cemetery in Kielce          | Apoplexy           | 5697      | 6625     
+7549          | 5          | Zuzanna    | Olszewska     | F   | 1908-09-09 | Chełmno         | 1949-04-21 | Reszel          | Cemetery in Reszel          | Dropsy             | 6638      | 6606     
+7550          | 5          | Kazimiera  | Grabowska     | F   | 1908-03-15 | Lipce           | NULL       | NULL            | NULL                        | NULL               | 6483      | 6671     
+7557          | 5          | Anna       | Olszewska     | F   | 1908-06-24 | Posen           | NULL       | NULL            | NULL                        | NULL               | 6420      | 6667     
+7575          | 5          | Joanna     | Nowakowska    | F   | 1908-11-11 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 6752      | 6664     
+7599          | 5          | Dariusz    | Nowakowski    | M   | 1909-04-11 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 6752      | 6664     
+7619          | 5          | Zuzanna    | Nowakowska    | F   | 1910-05-09 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 6752      | 6664     
+7632          | 5          | Natalia    | Malinowska    | F   | 1910-10-13 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 6848      | 6214     
+7639          | 5          | Tomasz     | Adamczyk      | M   | 1910-04-23 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 6065      | 6243     
+7657          | 5          | Natalia    | Wiśniewska    | F   | 1911-04-06 | Stettin         | 1916-06-28 | Reszel          | Cemetery in Reszel          | Dropsy             | 6721      | 6764     
+7660          | 5          | Stanisław  | Adamczyk      | M   | 1911-04-22 | Sosnowiec       | 1968-01-24 | Reszel          | Cemetery in Reszel          | Infectious disease | 6733      | 6970     
+7662          | 5          | Józefa     | Nowakowska    | F   | 1911-08-25 | Złoty Potok     | NULL       | NULL            | NULL                        | NULL               | 6607      | 6719     
+7665          | 5          | Anna       | Adamczyk      | F   | 1911-07-27 | Kielce          | 1967-01-16 | Zwierzyniec     | Cemetery in Zwierzyniec     | Cancer             | 6065      | 6243     
+7672          | 5          | Oliwia     | Jaworska      | F   | 1911-06-03 | Kazimierz Dolny | 1915-09-25 | Bronowice       | Cemetery in Bronowice       | NULL               | 5948      | 6388     
+7674          | 5          | Monika     | Zielińska     | F   | 1912-11-25 | Supraśl         | 1917-12-04 | Kielce          | Cemetery in Kielce          | Unknown            | 6660      | 6562     
+7680          | 5          | Adam       | Nowakowski    | M   | 1912-10-16 | Breslau         | NULL       | NULL            | NULL                        | NULL               | 6752      | 6664     
+7717          | 5          | Danuta     | Wiśniewska    | F   | 1913-02-07 | Lipce           | NULL       | NULL            | NULL                        | NULL               | 6721      | 6764     
+7719          | 5          | Julia      | Nowakowska    | F   | 1913-06-20 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 6607      | 6719     
+7742          | 5          | Marian     | Adamczyk      | M   | 1914-03-21 | Radom           | NULL       | NULL            | NULL                        | NULL               | 6733      | 6970     
+7758          | 5          | Stanisław  | Adamczyk      | M   | 1914-04-07 | Bronowice       | 1963-10-12 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | NULL               | 6904      | 7083     
+7768          | 5          | Maria      | Adamczyk      | F   | 1915-11-08 | Rzeszów         | 1963-09-06 | Cieszyn         | Cemetery in Cieszyn         | Fire               | 6733      | 6970     
+7806          | 5          | Ewa        | Adamczyk      | F   | 1916-05-09 | Białystok       | NULL       | NULL            | NULL                        | NULL               | 6904      | 7083     
+7810          | 5          | Monika     | Malinowska    | F   | 1916-07-19 | Gliwice         | NULL       | NULL            | NULL                        | NULL               | 6328      | 6964     
+7827          | 5          | Antoni     | Malinowski    | M   | 1917-12-24 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 6328      | 6964     
+7842          | 5          | Antoni     | Nowakowski    | M   | 1917-11-06 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 6860      | 6936     
+7856          | 5          | Teresa     | Adamczyk      | F   | 1918-08-20 | Bromberg        | NULL       | NULL            | NULL                        | NULL               | 6904      | 7083     
+7876          | 5          | Jadwiga    | Jaworska      | F   | 1918-06-07 | Tykocin         | NULL       | NULL            | NULL                        | NULL               | 6941      | 6831     
+7907          | 5          | Regina     | Jaworska      | F   | 1919-10-09 | Lipce           | NULL       | NULL            | NULL                        | NULL               | 6941      | 6831     
+7967          | 5          | Zofia      | Zielińska     | F   | 1921-01-10 | Chochołów       | 1962-03-04 | Bronowice       | Cemetery in Bronowice       | NULL               | 6597      | 7131     
+8008          | 5          | Leokadia   | Wojciechowska | F   | 1922-04-07 | Posen           | 1969-07-15 | Gdynia          | Cemetery in Gdynia          | Plague             | 6816      | 7181     
+8021          | 5          | Adam       | Nowakowski    | M   | 1922-02-03 | Kraków          | NULL       | NULL            | NULL                        | NULL               | 7240      | 7101     
+8039          | 5          | Julia      | Wojciechowska | F   | 1923-03-13 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 6816      | 7181     
+8059          | 5          | Aleksandra | Zielińska     | F   | 1924-12-10 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 6597      | 7131     
+8113          | 5          | Maciej     | Nowakowski    | M   | 1925-04-07 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 7294      | 7397     
+8124          | 5          | Ewa        | Wojciechowska | F   | 1926-04-11 | Gliwice         | NULL       | NULL            | NULL                        | NULL               | 6816      | 7181     
+8138          | 5          | Wanda      | Nowakowska    | F   | 1926-08-22 | Kraków          | NULL       | NULL            | NULL                        | NULL               | 7294      | 7397     
+8200          | 5          | Tadeusz    | Wojciechowski | M   | 1928-05-05 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 6816      | 7181     
+8213          | 5          | Adam       | Nowakowski    | M   | 1928-06-22 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 7294      | 7397     
+8361          | 5          | Tadeusz    | Lewandowski   | M   | 1931-07-28 | Bronowice       | NULL       | NULL            | NULL                        | NULL               | 7343      | 7364     
+8464          | 5          | Leon       | Lewandowski   | M   | 1934-03-24 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 7343      | 7364     
+8572          | 5          | Zuzanna    | Zielińska     | F   | 1936-11-22 | Katowice        | 1938-04-23 | Sanok           | Cemetery in Sanok           | Cholera            | 6660      | 7558     
+8642          | 5          | Ewa        | Zielińska     | F   | 1938-12-08 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 6660      | 7558     
+8737          | 5          | Marian     | Nowakowski    | M   | 1940-06-20 | Białystok       | 1942-02-05 | Gdynia          | Cemetery in Gdynia          | Influenza          | 6752      | 7733     
+8751          | 5          | Krystyna   | Nowakowska    | F   | 1940-11-01 | Tykocin         | NULL       | NULL            | NULL                        | NULL               | 6607      | 7785     
+8816          | 5          | Piotr      | Wojciechowski | M   | 1942-07-04 | Supraśl         | NULL       | NULL            | NULL                        | NULL               | 7170      | 7870     
+8849          | 5          | Ryszard    | Wojciechowski | M   | 1943-06-06 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 7170      | 7870     
+8857          | 5          | Szymon     | Adamczyk      | M   | 1943-11-16 | Radom           | NULL       | NULL            | NULL                        | NULL               | 7742      | 7497     
+8882          | 5          | Andrzej    | Adamczyk      | M   | 1944-02-09 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 7742      | 7497     
+8970          | 5          | Agnieszka  | Adamczyk      | F   | 1947-06-04 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 7742      | 7497     
+9021          | 5          | Genowefa   | Adamczyk      | F   | 1948-10-08 | Częstochowa     | 1953-03-18 | Breslau         | Cemetery in Breslau         | Infectious disease | 6733      | 7504     
+9053          | 5          | Bartosz    | Nowakowski    | M   | 1949-08-06 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 7294      | 7978     
+9081          | 5          | Anna       | Adamczyk      | F   | 1950-01-11 | Olsztyn         | NULL       | NULL            | NULL                        | NULL               | 6733      | 7504     
+6858          | 6          | Dariusz    | Nowakowski    | M   | 1887-06-23 | Białystok       | 1952-06-26 | Thorn           | Cemetery in Thorn           | Unknown            | 5442      | 6312     
+6912          | 6          | Genowefa   | Malinowska    | F   | 1889-10-15 | Sosnowiec       | 1945-07-22 | Tykocin         | Cemetery in Tykocin         | War casualty       | 6068      | 6089     
+6974          | 6          | Monika     | Adamczyk      | F   | 1891-07-17 | Stettin         | 1895-11-16 | Sandomierz      | Cemetery in Sandomierz      | Dropsy             | 5911      | 6339     
+7032          | 6          | Aleksandra | Adamczyk      | F   | 1893-07-05 | Sromowce        | 1898-08-01 | Sosnowiec       | Cemetery in Sosnowiec       | Pneumonia          | 5911      | 6339     
+7034          | 6          | Antoni     | Malinowski    | M   | 1893-06-24 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 6311      | 6203     
+7087          | 6          | Józef      | Król          | M   | 1894-01-24 | Biecz           | 1968-04-19 | Lanckorona      | Cemetery in Lanckorona      | Starvation         | 6153      | 6337     
+7090          | 6          | Maria      | Adamczyk      | F   | 1894-11-17 | Lipce           | 1912-02-27 | Złoty Potok     | Cemetery in Złoty Potok     | Fever              | 6386      | 6542     
+7122          | 6          | Julia      | Wojciechowska | F   | 1895-03-21 | Warszawa        | 1957-04-28 | Warszawa        | Cemetery in Warszawa        | NULL               | 6350      | 5899     
+7136          | 6          | Franciszek | Malinowski    | M   | 1896-05-16 | Biecz           | 1898-01-10 | Supraśl         | Cemetery in Supraśl         | Heart failure      | 6311      | 6203     
+7148          | 6          | Elżbieta   | Malinowska    | F   | 1896-07-02 | Bromberg        | 1970-08-16 | Reszel          | Cemetery in Reszel          | Dropsy             | 6255      | 6283     
+7151          | 6          | Joanna     | Wojciechowska | F   | 1896-05-04 | Breslau         | 1962-11-23 | Zwierzyniec     | Cemetery in Zwierzyniec     | Infectious disease | 6350      | 5899     
+7153          | 6          | Kazimiera  | Adamczyk      | F   | 1896-10-14 | Wisła           | 1937-12-23 | Bronowice       | Cemetery in Bronowice       | Typhus             | 6386      | 6542     
+7155          | 6          | Zuzanna    | Wiśniewska    | F   | 1896-06-12 | Krynica         | 1955-11-10 | Sosnowiec       | Cemetery in Sosnowiec       | Consumption        | 6069      | 6405     
+7165          | 6          | Danuta     | Nowakowska    | F   | 1896-09-17 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 6425      | 6469     
+7171          | 6          | Oliwia     | Malinowska    | F   | 1897-01-04 | Katowice        | 1970-01-11 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Cholera            | 6255      | 6283     
+7174          | 6          | Monika     | Król          | F   | 1897-10-15 | Wisła           | 1901-02-28 | Krynica         | Cemetery in Krynica         | Unknown            | 6153      | 6337     
+7178          | 6          | Tomasz     | Malinowski    | M   | 1897-02-04 | Złoty Potok     | 1969-05-03 | Chełmno         | Cemetery in Chełmno         | Accident           | 6324      | 6343     
+7189          | 6          | Irena      | Jankowska     | F   | 1897-05-01 | Breslau         | 1950-04-21 | Warszawa        | Cemetery in Warszawa        | Accident           | 6353      | 6528     
+7204          | 6          | Czesław    | Malinowski    | M   | 1898-03-27 | Bronowice       | 1962-10-21 | Rzeszów         | Cemetery in Rzeszów         | Infectious disease | 6255      | 6283     
+7207          | 6          | Wanda      | Adamczyk      | F   | 1898-03-23 | Thorn           | NULL       | NULL            | NULL                        | NULL               | 6386      | 6542     
+7208          | 6          | Franciszek | Wiśniewski    | M   | 1898-02-24 | Biecz           | 1903-07-17 | Reszel          | Cemetery in Reszel          | War casualty       | 6069      | 6405     
+7215          | 6          | Katarzyna  | Lewandowska   | F   | 1898-05-09 | Warszawa        | 1959-06-28 | Chełmno         | Cemetery in Chełmno         | NULL               | 6271      | 6438     
+7216          | 6          | Piotr      | Nowakowski    | M   | 1898-11-13 | Złoty Potok     | 1957-12-12 | Sandomierz      | Cemetery in Sandomierz      | Stroke             | 6425      | 6469     
+7218          | 6          | Krzysztof  | Nowakowski    | M   | 1898-01-15 | Stettin         | NULL       | NULL            | NULL                        | NULL               | 6270      | 6567     
+7221          | 6          | Maja       | Jankowska     | F   | 1898-12-24 | Thorn           | 1954-08-28 | Sromowce        | Cemetery in Sromowce        | Murder             | 6353      | 6528     
+7229          | 6          | Zuzanna    | Malinowska    | F   | 1899-04-10 | Cieszyn         | 1953-06-28 | Bronowice       | Cemetery in Bronowice       | Pneumonia          | 6311      | 6203     
+7234          | 6          | Mirosław   | Wojciechowski | M   | 1899-04-21 | Sosnowiec       | 1959-09-05 | Chełmno         | Cemetery in Chełmno         | Accident           | 6350      | 5899     
+7235          | 6          | Monika     | Adamczyk      | F   | 1899-12-25 | Gliwice         | 1962-12-11 | Złoty Potok     | Cemetery in Złoty Potok     | NULL               | 6386      | 6542     
+7238          | 6          | Mateusz    | Wiśniewski    | M   | 1899-11-13 | Sanok           | 1960-05-20 | Złoty Potok     | Cemetery in Złoty Potok     | Smallpox           | 6069      | 6405     
+7249          | 6          | Halina     | Jaworska      | F   | 1899-10-24 | Danzig          | 1957-04-10 | Biecz           | Cemetery in Biecz           | Consumption        | 6297      | 6398     
+7253          | 6          | Marek      | Zieliński     | M   | 1899-12-15 | Sosnowiec       | 1952-10-08 | Kielce          | Cemetery in Kielce          | NULL               | 5956      | 6468     
+7254          | 6          | Ewa        | Jankowska     | F   | 1899-08-12 | Lanckorona      | 1900-12-25 | Częstochowa     | Cemetery in Częstochowa     | Accident           | 6362      | 6528     
+7259          | 6          | Władysław  | Nowakowski    | M   | 1899-07-09 | Wisła           | 1958-06-24 | Supraśl         | Cemetery in Supraśl         | Fire               | 6445      | 6512     
+7264          | 6          | Jerzy      | Malinowski    | M   | 1900-11-15 | Częstochowa     | 1939-11-13 | Sosnowiec       | Cemetery in Sosnowiec       | Fever              | 6311      | 6203     
+7269          | 6          | Tomasz     | Malinowski    | M   | 1900-04-14 | Łódź            | 1964-09-22 | Olsztyn         | Cemetery in Olsztyn         | Pneumonia          | 6324      | 6343     
+7274          | 6          | Helena     | Nowakowska    | F   | 1900-02-19 | Breslau         | 1955-02-19 | Lanckorona      | Cemetery in Lanckorona      | Influenza          | 6425      | 6469     
+7275          | 6          | Kamil      | Nowakowski    | M   | 1900-05-13 | Sandomierz      | 1951-04-10 | Wisła           | Cemetery in Wisła           | Smallpox           | 6270      | 6567     
+7281          | 6          | Paweł      | Olszewski     | M   | 1900-11-01 | Stettin         | 1948-11-21 | Krynica         | Cemetery in Krynica         | Fire               | 6456      | 6566     
+7293          | 6          | Jerzy      | Adamczyk      | M   | 1901-02-19 | Reszel          | 1955-05-25 | Zalipie         | Cemetery in Zalipie         | NULL               | 6386      | 6542     
+7298          | 6          | Regina     | Lewandowska   | F   | 1901-08-11 | Krynica         | 1966-06-05 | Krynica         | Cemetery in Krynica         | Starvation         | 6271      | 6438     
+7299          | 6          | Grażyna    | Nowakowska    | F   | 1901-09-16 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 6270      | 6567     
+7301          | 6          | Krzysztof  | Jaworski      | M   | 1901-07-01 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 6297      | 6398     
+7305          | 6          | Regina     | Zielińska     | F   | 1901-01-03 | Breslau         | 1970-03-22 | Thorn           | Cemetery in Thorn           | Influenza          | 5956      | 6468     
+7311          | 6          | Mateusz    | Grabowski     | M   | 1901-01-07 | Chełmno         | 1903-12-09 | Radom           | Cemetery in Radom           | Cholera            | 6559      | 6317     
+7312          | 6          | Grzegorz   | Adamczyk      | M   | 1901-11-28 | Radom           | 1951-10-01 | Krynica         | Cemetery in Krynica         | Cholera            | 6501      | 6507     
+7319          | 6          | Jan        | Jaworski      | M   | 1901-09-27 | Olsztyn         | 1902-01-17 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Influenza          | 6345      | 6303     
+7332          | 6          | Genowefa   | Wiśniewska    | F   | 1902-10-21 | Krynica         | 1962-11-19 | Lublin          | Cemetery in Lublin          | Infectious disease | 6069      | 6405     
+7333          | 6          | Jan        | Malinowski    | M   | 1902-04-04 | Sosnowiec       | 1957-12-23 | Lanckorona      | Cemetery in Lanckorona      | Accident           | 6324      | 6343     
+7335          | 6          | Ewa        | Nowakowska    | F   | 1902-09-22 | Supraśl         | NULL       | NULL            | NULL                        | NULL               | 6425      | 6469     
+7350          | 6          | Urszula    | Jaworska      | F   | 1902-04-17 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 6485      | 6519     
+7353          | 6          | Zofia      | Jaworska      | F   | 1902-01-13 | Gdynia          | 1964-06-08 | Kraków          | Cemetery in Kraków          | Unknown            | 6731      | 6312     
+7362          | 6          | Mirosław   | Zieliński     | M   | 1902-10-16 | Sromowce        | 1944-10-01 | Reszel          | Cemetery in Reszel          | Influenza          | 6458      | 6596     
+7366          | 6          | Marcin     | Nowakowski    | M   | 1903-11-21 | Sanok           | 1961-01-07 | Krynica         | Cemetery in Krynica         | War casualty       | 6425      | 6469     
+7371          | 6          | Tadeusz    | Grabowski     | M   | 1903-12-02 | Breslau         | 1970-06-03 | Lublin          | Cemetery in Lublin          | Murder             | 6559      | 6317     
+7372          | 6          | Henryk     | Adamczyk      | M   | 1903-09-04 | Krynica         | 1904-11-03 | Chochołów       | Cemetery in Chochołów       | NULL               | 6501      | 6507     
+7378          | 6          | Julia      | Jaworska      | F   | 1903-07-08 | Złoty Potok     | 1964-08-25 | Biecz           | Cemetery in Biecz           | Influenza          | 6345      | 6303     
+7384          | 6          | Leokadia   | Jaworska      | F   | 1903-07-05 | Radom           | 1946-12-14 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Apoplexy           | 6731      | 6312     
+7388          | 6          | Andrzej    | Zieliński     | M   | 1903-11-10 | Wisła           | NULL       | NULL            | NULL                        | NULL               | 6369      | 6622     
+7393          | 6          | Grzegorz   | Nowakowski    | M   | 1903-08-17 | Sosnowiec       | 1970-04-04 | Breslau         | Cemetery in Breslau         | Unknown            | 6739      | 6595     
+7396          | 6          | Grzegorz   | Jankowski     | M   | 1903-04-02 | Danzig          | 1959-04-10 | Breslau         | Cemetery in Breslau         | Unknown            | 6379      | 6603     
+7397          | 6          | Agnieszka  | Malinowska    | F   | 1904-05-16 | Kraków          | 1945-05-15 | Breslau         | Cemetery in Breslau         | Dysentery          | 6324      | 6343     
+7401          | 6          | Zygmunt    | Zieliński     | M   | 1904-12-27 | Wisła           | 1906-07-25 | Thorn           | Cemetery in Thorn           | Fever              | 5956      | 6468     
+7403          | 6          | Krystyna   | Grabowska     | F   | 1904-09-01 | Lublin          | 1960-12-09 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Dropsy             | 6559      | 6317     
+7409          | 6          | Łukasz     | Jaworski      | M   | 1904-12-28 | Olsztyn         | 1965-02-01 | Sosnowiec       | Cemetery in Sosnowiec       | Unknown            | 6345      | 6303     
+7415          | 6          | Jadwiga    | Jaworska      | F   | 1904-05-19 | Gliwice         | NULL       | NULL            | NULL                        | NULL               | 6485      | 6519     
+7428          | 6          | Anna       | Wojciechowska | F   | 1904-04-06 | Bromberg        | 1905-08-08 | Tykocin         | Cemetery in Tykocin         | Accident           | 6352      | 6452     
+7437          | 6          | Tadeusz    | Olszewski     | M   | 1904-07-08 | Bronowice       | 1964-09-22 | Posen           | Cemetery in Posen           | NULL               | 6039      | 6495     
+7448          | 6          | Leokadia   | Jaworska      | F   | 1905-12-18 | Chełmno         | 1967-05-17 | Sromowce        | Cemetery in Sromowce        | Fever              | 6485      | 6519     
+7453          | 6          | Wiktoria   | Zielińska     | F   | 1905-01-22 | Cieszyn         | 1969-04-20 | Wisła           | Cemetery in Wisła           | Influenza          | 6369      | 6622     
+7457          | 6          | Franciszek | Nowakowski    | M   | 1905-02-08 | Lanckorona      | 1947-04-25 | Biecz           | Cemetery in Biecz           | Starvation         | 6739      | 6595     
+7458          | 6          | Jadwiga    | Zielińska     | F   | 1905-12-15 | Wisła           | NULL       | NULL            | NULL                        | NULL               | 6458      | 6596     
+7471          | 6          | Kazimiera  | Grabowska     | F   | 1905-12-07 | Cieszyn         | 1958-03-09 | Chochołów       | Cemetery in Chochołów       | Consumption        | 6620      | 6573     
+7473          | 6          | Regina     | Malinowska    | F   | 1905-03-09 | Thorn           | 1964-10-05 | Sanok           | Cemetery in Sanok           | Drowning           | 6771      | 6650     
+7476          | 6          | Leokadia   | Zielińska     | F   | 1905-02-12 | Łódź            | 1961-06-17 | Stettin         | Cemetery in Stettin         | Smallpox           | 6631      | 6654     
+7480          | 6          | Agnieszka  | Jaworska      | F   | 1906-01-06 | Posen           | NULL       | NULL            | NULL                        | NULL               | 6345      | 6303     
+7500          | 6          | Władysław  | Zieliński     | M   | 1906-12-02 | Białystok       | NULL       | NULL            | NULL                        | NULL               | 6631      | 6654     
+7515          | 6          | Kazimiera  | Zielińska     | F   | 1907-04-14 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 6369      | 6622     
+7516          | 6          | Jakub      | Wojciechowski | M   | 1907-12-27 | Thorn           | 1908-04-13 | Reszel          | Cemetery in Reszel          | Dysentery          | 6352      | 6452     
+7519          | 6          | Grzegorz   | Nowakowski    | M   | 1907-09-24 | Lipce           | NULL       | NULL            | NULL                        | NULL               | 6739      | 6595     
+7531          | 6          | Regina     | Malinowska    | F   | 1907-09-01 | Złoty Potok     | NULL       | NULL            | NULL                        | NULL               | 6771      | 6650     
+7537          | 6          | Józef      | Piotrowski    | M   | 1907-04-28 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 6619      | 6800     
+7548          | 6          | Andrzej    | Jaworski      | M   | 1908-05-01 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 6345      | 6303     
+7552          | 6          | Dariusz    | Zieliński     | M   | 1908-08-17 | Bromberg        | 1961-07-13 | Sosnowiec       | Cemetery in Sosnowiec       | Influenza          | 6458      | 6596     
+7571          | 6          | Mirosław   | Jankowski     | M   | 1908-10-27 | Kraków          | 1911-12-27 | Biecz           | Cemetery in Biecz           | Pneumonia          | 6673      | 6687     
+7577          | 6          | Marianna   | Wojciechowska | F   | 1908-08-26 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 6670      | 6776     
+7579          | 6          | Ignacy     | Zieliński     | M   | 1909-12-06 | Danzig          | 1968-07-02 | Olsztyn         | Cemetery in Olsztyn         | NULL               | 6369      | 6622     
+7598          | 6          | Henryk     | Jankowski     | M   | 1909-02-23 | Złoty Potok     | NULL       | NULL            | NULL                        | NULL               | 6673      | 6687     
+7602          | 6          | Monika     | Jaworska      | F   | 1909-08-05 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 6681      | 6418     
+7604          | 6          | Henryk     | Kowalski      | M   | 1909-04-07 | Zwierzyniec     | 1911-03-21 | Lanckorona      | Cemetery in Lanckorona      | Drowning           | 6917      | 6802     
+7605          | 6          | Zygmunt    | Grabowski     | M   | 1909-12-04 | Sanok           | 1915-04-21 | Krynica         | Cemetery in Krynica         | Influenza          | 6526      | 6184     
+7608          | 6          | Urszula    | Wojciechowska | F   | 1910-09-27 | Thorn           | NULL       | NULL            | NULL                        | NULL               | 6352      | 6452     
+7611          | 6          | Joanna     | Piotrowska    | F   | 1910-12-23 | Radom           | 1954-10-06 | Radom           | Cemetery in Radom           | War casualty       | 6619      | 6800     
+7622          | 6          | Tomasz     | Kowalski      | M   | 1910-03-02 | Pszczyna        | NULL       | NULL            | NULL                        | NULL               | 6917      | 6802     
+7623          | 6          | Julia      | Wiśniewska    | F   | 1910-09-16 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 6602      | 6528     
+7624          | 6          | Jan        | Adamczyk      | M   | 1910-10-20 | Tykocin         | NULL       | NULL            | NULL                        | NULL               | 6778      | 6794     
+7626          | 6          | Marek      | Wojciechowski | M   | 1910-09-20 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 6670      | 6776     
+7631          | 6          | Marek      | Olszewski     | M   | 1910-06-21 | Kielce          | NULL       | NULL            | NULL                        | NULL               | 6866      | 6833     
+7636          | 6          | Tadeusz    | Malinowski    | M   | 1910-02-12 | Sandomierz      | 1915-12-07 | Sromowce        | Cemetery in Sromowce        | Fever              | 6826      | 6694     
+7638          | 6          | Krystyna   | Wojciechowska | F   | 1910-11-28 | Lanckorona      | 1957-09-04 | Złoty Potok     | Cemetery in Złoty Potok     | Smallpox           | 6714      | 6583     
+7640          | 6          | Grzegorz   | Wojciechowski | M   | 1911-05-28 | Kielce          | NULL       | NULL            | NULL                        | NULL               | 6352      | 6452     
+7642          | 6          | Jan        | Nowakowski    | M   | 1911-11-25 | Chochołów       | 1915-09-12 | Chełmno         | Cemetery in Chełmno         | Starvation         | 6739      | 6595     
+7649          | 6          | Adam       | Jankowski     | M   | 1911-04-01 | Danzig          | 1961-10-10 | Lublin          | Cemetery in Lublin          | Plague             | 6673      | 6687     
+7654          | 6          | Grzegorz   | Malinowski    | M   | 1911-12-10 | Sromowce        | NULL       | NULL            | NULL                        | NULL               | 6826      | 6694     
+7670          | 6          | Teresa     | Malinowska    | F   | 1911-07-03 | Częstochowa     | 1915-04-28 | Lanckorona      | Cemetery in Lanckorona      | Typhus             | 6718      | 6887     
+7682          | 6          | Tadeusz    | Kowalski      | M   | 1912-08-12 | Zalipie         | 1965-06-11 | Pszczyna        | Cemetery in Pszczyna        | NULL               | 6917      | 6802     
+7683          | 6          | Alicja     | Adamczyk      | F   | 1912-04-13 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 6778      | 6794     
+7687          | 6          | Jan        | Olszewski     | M   | 1912-09-11 | Stettin         | NULL       | NULL            | NULL                        | NULL               | 6866      | 6833     
+7692          | 6          | Maja       | Wojciechowska | F   | 1912-03-02 | Thorn           | NULL       | NULL            | NULL                        | NULL               | 6714      | 6583     
+7705          | 6          | Urszula    | Nowakowska    | F   | 1912-11-02 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 6865      | 6774     
+7709          | 6          | Rozalia    | Wiśniewska    | F   | 1913-12-19 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 6602      | 6528     
+7713          | 6          | Ignacy     | Olszewski     | M   | 1913-11-21 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 6866      | 6833     
+7715          | 6          | Jerzy      | Malinowski    | M   | 1913-11-20 | Radom           | NULL       | NULL            | NULL                        | NULL               | 6826      | 6694     
+7726          | 6          | Ignacy     | Jaworski      | M   | 1913-08-27 | Gliwice         | NULL       | NULL            | NULL                        | NULL               | 6817      | 6873     
+7728          | 6          | Anna       | Nowakowska    | F   | 1913-08-26 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 6865      | 6774     
+7740          | 6          | Kazimierz  | Wiśniewski    | M   | 1914-08-11 | Gliwice         | 1966-09-08 | Rzeszów         | Cemetery in Rzeszów         | Plague             | 6602      | 6528     
+7752          | 6          | Katarzyna  | Lewandowska   | F   | 1914-04-02 | Olsztyn         | NULL       | NULL            | NULL                        | NULL               | 6703      | 7068     
+7754          | 6          | Józefa     | Malinowska    | F   | 1914-10-17 | Sanok           | 1965-11-09 | Warszawa        | Cemetery in Warszawa        | Influenza          | 6909      | 6810     
+7755          | 6          | Kazimierz  | Jankowski     | M   | 1914-03-04 | Stettin         | 1956-09-15 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | NULL               | 6842      | 6843     
+7759          | 6          | Wojciech   | Piotrowski    | M   | 1914-08-13 | Gdynia          | 1967-09-19 | Cieszyn         | Cemetery in Cieszyn         | Influenza          | 6938      | 6933     
+7765          | 6          | Józefa     | Malinowska    | F   | 1915-06-14 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 6826      | 6694     
+7773          | 6          | Bartosz    | Jaworski      | M   | 1915-05-21 | Cieszyn         | NULL       | NULL            | NULL                        | NULL               | 6817      | 6873     
+7775          | 6          | Grażyna    | Nowakowska    | F   | 1915-11-14 | Lipce           | 1962-03-11 | Pszczyna        | Cemetery in Pszczyna        | Unknown            | 6865      | 6774     
+7778          | 6          | Marek      | Nowakowski    | M   | 1915-08-10 | Kielce          | NULL       | NULL            | NULL                        | NULL               | 6707      | 6861     
+7779          | 6          | Jerzy      | Jankowski     | M   | 1915-02-27 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 6842      | 6843     
+7782          | 6          | Marek      | Adamczyk      | M   | 1915-08-20 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 6837      | 6928     
+7783          | 6          | Regina     | Lewandowska   | F   | 1915-10-12 | Olsztyn         | 1918-09-09 | Sosnowiec       | Cemetery in Sosnowiec       | Murder             | 6736      | 7049     
+7784          | 6          | Jadwiga    | Jankowska     | F   | 1915-11-20 | Białystok       | 1919-05-20 | Wisła           | Cemetery in Wisła           | Drowning           | 6962      | 6805     
+7786          | 6          | Michał     | Nowakowski    | M   | 1915-05-17 | Kraków          | 1955-08-27 | Posen           | Cemetery in Posen           | Murder             | 6799      | 6891     
+7791          | 6          | Jakub      | Wiśniewski    | M   | 1916-08-04 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 6602      | 6528     
+7797          | 6          | Ewa        | Jaworska      | F   | 1916-06-10 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 6817      | 6873     
+7801          | 6          | Adam       | Nowakowski    | M   | 1916-07-11 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 6707      | 6861     
+7802          | 6          | Danuta     | Jaworska      | F   | 1916-07-13 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 7015      | 6652     
+7807          | 6          | Genowefa   | Adamczyk      | F   | 1916-02-10 | Złoty Potok     | NULL       | NULL            | NULL                        | NULL               | 6837      | 6928     
+7813          | 6          | Rozalia    | Górska        | F   | 1916-02-08 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 6946      | 7036     
+7814          | 6          | Katarzyna  | Olszewska     | F   | 1916-05-25 | Lanckorona      | 1968-07-19 | Danzig          | Cemetery in Danzig          | Apoplexy           | 6885      | 7022     
+7816          | 6          | Andrzej    | Malinowski    | M   | 1916-02-27 | Breslau         | NULL       | NULL            | NULL                        | NULL               | 7067      | 6999     
+7819          | 6          | Wanda      | Lewandowska   | F   | 1917-08-06 | Lanckorona      | 1941-06-04 | Białystok       | Cemetery in Białystok       | Unknown            | 6703      | 7068     
+7820          | 6          | Marian     | Nowakowski    | M   | 1917-09-27 | Tykocin         | NULL       | NULL            | NULL                        | NULL               | 6707      | 6861     
+7821          | 6          | Grażyna    | Malinowska    | F   | 1917-06-18 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 6909      | 6810     
+7822          | 6          | Barbara    | Jankowska     | F   | 1917-09-05 | Breslau         | NULL       | NULL            | NULL                        | NULL               | 6842      | 6843     
+7823          | 6          | Adam       | Lewandowski   | M   | 1917-09-14 | Sromowce        | 1947-03-10 | Gdynia          | Cemetery in Gdynia          | Fire               | 6736      | 7049     
+7833          | 6          | Kazimierz  | Górski        | M   | 1917-09-14 | Wisła           | NULL       | NULL            | NULL                        | NULL               | 5840      | 7038     
+7836          | 6          | Jan        | Adamczyk      | M   | 1917-04-16 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 6725      | 6940     
+7837          | 6          | Alicja     | Górska        | F   | 1917-01-09 | Breslau         | NULL       | NULL            | NULL                        | NULL               | 6995      | 6812     
+7838          | 6          | Ignacy     | Adamczyk      | M   | 1917-06-23 | Złoty Potok     | 1922-02-26 | Sanok           | Cemetery in Sanok           | Smallpox           | 6701      | 7105     
+7843          | 6          | Filip      | Malinowski    | M   | 1917-10-13 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 6669      | 7050     
+7846          | 6          | Wanda      | Jaworska      | F   | 1917-07-05 | Danzig          | 1953-04-27 | Bromberg        | Cemetery in Bromberg        | War casualty       | 7125      | 7060     
+7849          | 6          | Czesław    | Malinowski    | M   | 1918-10-20 | Cieszyn         | NULL       | NULL            | NULL                        | NULL               | 6826      | 6694     
+7852          | 6          | Alicja     | Nowakowska    | F   | 1918-11-04 | Sandomierz      | NULL       | NULL            | NULL                        | NULL               | 6865      | 6774     
+7857          | 6          | Paweł      | Adamczyk      | M   | 1918-02-20 | Sanok           | 1970-02-16 | Bromberg        | Cemetery in Bromberg        | Dysentery          | 6837      | 6928     
+7863          | 6          | Tomasz     | Górski        | M   | 1918-12-21 | Gliwice         | NULL       | NULL            | NULL                        | NULL               | 5840      | 7038     
+7865          | 6          | Genowefa   | Malinowska    | F   | 1918-05-23 | Łódź            | 1923-12-19 | Danzig          | Cemetery in Danzig          | Cholera            | 7067      | 6999     
+7868          | 6          | Zygmunt    | Malinowski    | M   | 1918-02-05 | Sandomierz      | NULL       | NULL            | NULL                        | NULL               | 6669      | 7050     
+7872          | 6          | Małgorzata | Malinowska    | F   | 1918-09-24 | Thorn           | NULL       | NULL            | NULL                        | NULL               | 7040      | 6942     
+7883          | 6          | Natalia    | Jaworska      | F   | 1919-12-06 | Sandomierz      | NULL       | NULL            | NULL                        | NULL               | 6817      | 6873     
+7887          | 6          | Jerzy      | Nowakowski    | M   | 1919-12-09 | Posen           | NULL       | NULL            | NULL                        | NULL               | 6707      | 6861     
+7888          | 6          | Ryszard    | Malinowski    | M   | 1919-10-26 | Kielce          | 1967-08-24 | Posen           | Cemetery in Posen           | Dysentery          | 6909      | 6810     
+7898          | 6          | Andrzej    | Adamczyk      | M   | 1919-11-02 | Breslau         | NULL       | NULL            | NULL                        | NULL               | 6701      | 7105     
+7902          | 6          | Marcin     | Malinowski    | M   | 1919-01-16 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 7040      | 6942     
+7909          | 6          | Joanna     | Wiśniewska    | F   | 1919-12-12 | Bromberg        | 1920-02-13 | Danzig          | Cemetery in Danzig          | Dysentery          | 6835      | 6782     
+7914          | 6          | Filip      | Nowakowski    | M   | 1919-04-22 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 6735      | 6717     
+7917          | 6          | Barbara    | Malinowska    | F   | 1919-07-05 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 6971      | 6700     
+7920          | 6          | Paweł      | Wiśniewski    | M   | 1919-12-07 | Chochołów       | 1970-01-18 | Białystok       | Cemetery in Białystok       | Heart failure      | 6602      | 7179     
+7921          | 6          | Marian     | Nowakowski    | M   | 1920-06-19 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 6865      | 6774     
+7923          | 6          | Julian     | Lewandowski   | M   | 1920-02-03 | Cieszyn         | NULL       | NULL            | NULL                        | NULL               | 6703      | 7068     
+7928          | 6          | Józef      | Górski        | M   | 1920-07-19 | Kraków          | NULL       | NULL            | NULL                        | NULL               | 6946      | 7036     
+7932          | 6          | Władysław  | Adamczyk      | M   | 1920-03-20 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 6701      | 7105     
+7940          | 6          | Ryszard    | Nowakowski    | M   | 1920-01-13 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 6735      | 6717     
+7944          | 6          | Maria      | Grabowska     | F   | 1920-05-27 | Bronowice       | NULL       | NULL            | NULL                        | NULL               | 6958      | 6902     
+7946          | 6          | Julian     | Malinowski    | M   | 1920-03-10 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 6453      | 6869     
+7951          | 6          | Dariusz    | Malinowski    | M   | 1921-07-24 | Częstochowa     | NULL       | NULL            | NULL                        | NULL               | 6909      | 6810     
+7952          | 6          | Adam       | Jaworski      | M   | 1921-09-25 | Cieszyn         | 1955-04-05 | Sosnowiec       | Cemetery in Sosnowiec       | Unknown            | 7015      | 6652     
+7954          | 6          | Marcin     | Malinowski    | M   | 1921-07-08 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 7067      | 6999     
+7956          | 6          | Filip      | Malinowski    | M   | 1921-04-08 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 7040      | 6942     
+7958          | 6          | Marianna   | Jankowska     | F   | 1921-08-16 | Breslau         | 1968-10-16 | Bromberg        | Cemetery in Bromberg        | NULL               | 6896      | 7007     
+7968          | 6          | Marianna   | Wiśniewska    | F   | 1921-12-25 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 6602      | 7179     
+7969          | 6          | Alicja     | Górska        | F   | 1921-02-20 | Wisła           | 1923-12-28 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | Influenza          | 7278      | 7193     
+7977          | 6          | Andrzej    | Nowakowski    | M   | 1921-12-16 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 6041      | 7377     
+7979          | 6          | Irena      | Nowakowska    | F   | 1921-02-17 | Reszel          | 1924-01-25 | Breslau         | Cemetery in Breslau         | Starvation         | 6839      | 7097     
+7981          | 6          | Urszula    | Lewandowska   | F   | 1922-01-08 | Breslau         | NULL       | NULL            | NULL                        | NULL               | 6703      | 7068     
+7983          | 6          | Krzysztof  | Górski        | M   | 1922-09-06 | Wisła           | NULL       | NULL            | NULL                        | NULL               | 5840      | 7038     
+7985          | 6          | Tomasz     | Adamczyk      | M   | 1922-04-08 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 6701      | 7105     
+7996          | 6          | Helena     | Grabowska     | F   | 1922-06-20 | Kielce          | 1956-05-13 | Gdynia          | Cemetery in Gdynia          | Accident           | 6958      | 6902     
+7998          | 6          | Mateusz    | Malinowski    | M   | 1922-06-16 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 6453      | 6869     
+7999          | 6          | Antoni     | Górski        | M   | 1922-03-14 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 7278      | 7193     
+8026          | 6          | Kazimierz  | Malinowski    | M   | 1923-11-04 | Lipce           | NULL       | NULL            | NULL                        | NULL               | 7040      | 6942     
+8029          | 6          | Ignacy     | Jankowski     | M   | 1923-03-21 | Wisła           | NULL       | NULL            | NULL                        | NULL               | 6896      | 7007     
+8030          | 6          | Barbara    | Nowakowska    | F   | 1923-07-23 | Warszawa        | NULL       | NULL            | NULL                        | NULL               | 6735      | 6717     
+8034          | 6          | Henryk     | Malinowski    | M   | 1923-06-19 | Sandomierz      | NULL       | NULL            | NULL                        | NULL               | 6453      | 6869     
+8040          | 6          | Grzegorz   | Nowakowski    | M   | 1923-03-24 | Krynica         | 1938-05-06 | Zalipie         | Cemetery in Zalipie         | Fever              | 6041      | 7377     
+8043          | 6          | Czesława   | Nowakowska    | F   | 1923-11-17 | Kraków          | NULL       | NULL            | NULL                        | NULL               | 6839      | 7097     
+8048          | 6          | Elżbieta   | Górska        | F   | 1923-12-09 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 6998      | 7233     
+8050          | 6          | Grażyna    | Górska        | F   | 1923-07-03 | Biecz           | NULL       | NULL            | NULL                        | NULL               | 7203      | 7157     
+8051          | 6          | Franciszek | Malinowski    | M   | 1923-04-19 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 6380      | 7221     
+8058          | 6          | Czesław    | Grabowski     | M   | 1924-10-25 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 6958      | 6902     
+8067          | 6          | Czesława   | Górska        | F   | 1924-03-23 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 6998      | 7233     
+8069          | 6          | Jerzy      | Górski        | M   | 1924-09-27 | Białystok       | NULL       | NULL            | NULL                        | NULL               | 7203      | 7157     
+8070          | 6          | Monika     | Piotrowska    | F   | 1924-02-16 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 7267      | 7028     
+8077          | 6          | Agnieszka  | Jaworska      | F   | 1924-09-10 | Warszawa        | 1927-09-27 | Tykocin         | Cemetery in Tykocin         | Dropsy             | 6990      | 7304     
+8079          | 6          | Teresa     | Zielińska     | F   | 1924-05-08 | Chełmno         | 1925-02-25 | Kielce          | Cemetery in Kielce          | Pneumonia          | 7236      | 6926     
+8085          | 6          | Mirosław   | Malinowski    | M   | 1925-09-14 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 7040      | 6942     
+8086          | 6          | Alicja     | Jankowska     | F   | 1925-11-16 | Radom           | NULL       | NULL            | NULL                        | NULL               | 6896      | 7007     
+8092          | 6          | Filip      | Nowakowski    | M   | 1925-08-14 | Sosnowiec       | 1930-05-01 | Bronowice       | Cemetery in Bronowice       | Stroke             | 6839      | 7097     
+8093          | 6          | Maria      | Górska        | F   | 1925-06-16 | Lanckorona      | 1970-10-18 | Tykocin         | Cemetery in Tykocin         | NULL               | 6998      | 7233     
+8099          | 6          | Helena     | Lewandowska   | F   | 1925-03-15 | Bromberg        | NULL       | NULL            | NULL                        | NULL               | 6877      | 6966     
+8108          | 6          | Ludwika    | Malinowska    | F   | 1925-09-15 | Lanckorona      | NULL       | NULL            | NULL                        | NULL               | 7178      | 7345     
+8109          | 6          | Leokadia   | Malinowska    | F   | 1925-04-11 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 7245      | 6648     
+8110          | 6          | Jan        | Olszewski     | M   | 1925-11-23 | Sandomierz      | 1969-07-11 | Białystok       | Cemetery in Białystok       | Stroke             | 7106      | 7038     
+8111          | 6          | Ryszard    | Nowakowski    | M   | 1925-06-19 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 7077      | 7239     
+8115          | 6          | Franciszek | Nowakowski    | M   | 1925-11-28 | Kraków          | 1930-11-26 | Sosnowiec       | Cemetery in Sosnowiec       | Cholera            | 7084      | 6893     
+8117          | 6          | Adam       | Górski        | M   | 1925-03-06 | Sromowce        | NULL       | NULL            | NULL                        | NULL               | 7355      | 6923     
+8118          | 6          | Oliwia     | Adamczyk      | F   | 1925-05-11 | Posen           | NULL       | NULL            | NULL                        | NULL               | 7200      | 7166     
+8119          | 6          | Julia      | Górska        | F   | 1925-02-08 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 7011      | 7152     
+8120          | 6          | Halina     | Nowakowska    | F   | 1925-05-02 | Lanckorona      | 1969-03-09 | Zalipie         | Cemetery in Zalipie         | Fever              | 7429      | 7119     
+8122          | 6          | Józef      | Malinowski    | M   | 1926-06-10 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 7040      | 6942     
+8129          | 6          | Marek      | Piotrowski    | M   | 1926-09-14 | Złoty Potok     | 1970-10-04 | Białystok       | Cemetery in Białystok       | NULL               | 7267      | 7028     
+8133          | 6          | Zygmunt    | Jaworski      | M   | 1926-09-23 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 6990      | 7304     
+8146          | 6          | Aleksandra | Nowakowska    | F   | 1926-10-22 | Lipce           | NULL       | NULL            | NULL                        | NULL               | 7199      | 7161     
+8150          | 6          | Aleksandra | Jaworska      | F   | 1926-01-01 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 7301      | 7446     
+8152          | 6          | Krzysztof  | Olszewski     | M   | 1926-02-18 | Sromowce        | NULL       | NULL            | NULL                        | NULL               | 7230      | 7439     
+8157          | 6          | Irena      | Górska        | F   | 1927-02-06 | Thorn           | NULL       | NULL            | NULL                        | NULL               | 6998      | 7233     
+8160          | 6          | Leon       | Piotrowski    | M   | 1927-11-02 | Zalipie         | 1932-11-03 | Breslau         | Cemetery in Breslau         | Unknown            | 7267      | 7028     
+8168          | 6          | Monika     | Zielińska     | F   | 1927-11-03 | Radom           | NULL       | NULL            | NULL                        | NULL               | 7236      | 6926     
+8172          | 6          | Natalia    | Górska        | F   | 1927-09-24 | Supraśl         | NULL       | NULL            | NULL                        | NULL               | 7355      | 6923     
+8175          | 6          | Aleksandra | Górska        | F   | 1927-06-26 | Sandomierz      | 1930-07-26 | Rzeszów         | Cemetery in Rzeszów         | Dropsy             | 7011      | 7152     
+8176          | 6          | Ryszard    | Nowakowski    | M   | 1927-05-07 | Złoty Potok     | NULL       | NULL            | NULL                        | NULL               | 7429      | 7119     
+8182          | 6          | Stefan     | Wojciechowski | M   | 1927-09-03 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 7341      | 7063     
+8184          | 6          | Małgorzata | Wiśniewska    | F   | 1927-10-18 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 7180      | 7345     
+8185          | 6          | Halina     | Malinowska    | F   | 1927-10-17 | Reszel          | 1962-04-05 | Złoty Potok     | Cemetery in Złoty Potok     | Plague             | 7185      | 7456     
+8186          | 6          | Stefania   | Malinowska    | F   | 1927-08-07 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 7219      | 7112     
+8190          | 6          | Marcin     | Olszewski     | M   | 1927-04-09 | Lanckorona      | NULL       | NULL            | NULL                        | NULL               | 7230      | 7439     
+8193          | 6          | Elżbieta   | Górska        | F   | 1927-11-09 | Tykocin         | NULL       | NULL            | NULL                        | NULL               | 7227      | 7251     
+8196          | 6          | Kazimierz  | Nowakowski    | M   | 1927-05-12 | Bronowice       | NULL       | NULL            | NULL                        | NULL               | 7107      | 7151     
+8205          | 6          | Julia      | Lewandowska   | F   | 1928-12-03 | Pszczyna        | 1960-01-05 | Reszel          | Cemetery in Reszel          | Typhus             | 6877      | 6966     
+8207          | 6          | Katarzyna  | Jaworska      | F   | 1928-03-24 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 6990      | 7304     
+8209          | 6          | Henryk     | Malinowski    | M   | 1928-06-10 | Bronowice       | NULL       | NULL            | NULL                        | NULL               | 7178      | 7345     
+8210          | 6          | Aleksandra | Nowakowska    | F   | 1928-02-12 | Sanok           | 1959-10-22 | Lanckorona      | Cemetery in Lanckorona      | Cholera            | 7077      | 7239     
+8216          | 6          | Tadeusz    | Adamczyk      | M   | 1928-10-20 | Pszczyna        | NULL       | NULL            | NULL                        | NULL               | 7200      | 7166     
+8217          | 6          | Mirosław   | Nowakowski    | M   | 1928-09-27 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 7429      | 7119     
+8236          | 6          | Jerzy      | Wojciechowski | M   | 1928-11-19 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 6714      | 7305     
+8238          | 6          | Łukasz     | Malinowski    | M   | 1929-08-06 | Kielce          | NULL       | NULL            | NULL                        | NULL               | 7040      | 6942     
+8247          | 6          | Ewa        | Zielińska     | F   | 1929-04-17 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 7236      | 6926     
+8258          | 6          | Tomasz     | Górski        | M   | 1929-06-10 | Krynica         | 1933-01-03 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | NULL               | 7227      | 7251     
+8267          | 6          | Andrzej    | Malinowski    | M   | 1929-05-14 | Cieszyn         | NULL       | NULL            | NULL                        | NULL               | 6771      | 7105     
+8272          | 6          | Czesława   | Adamczyk      | F   | 1929-10-16 | Sanok           | 1930-10-12 | Olsztyn         | Cemetery in Olsztyn         | NULL               | 7295      | 7360     
+8275          | 6          | Krystyna   | Lewandowska   | F   | 1929-10-22 | Olsztyn         | NULL       | NULL            | NULL                        | NULL               | 6963      | 7325     
+8276          | 6          | Marcin     | Nowakowski    | M   | 1929-12-26 | Sanok           | 1962-04-16 | Breslau         | Cemetery in Breslau         | Heart failure      | 6874      | 6861     
+8277          | 6          | Mateusz    | Adamczyk      | M   | 1929-12-10 | Częstochowa     | NULL       | NULL            | NULL                        | NULL               | 6501      | 7310     
+8278          | 6          | Józef      | Piotrowski    | M   | 1930-02-27 | Cieszyn         | NULL       | NULL            | NULL                        | NULL               | 7267      | 7028     
+8280          | 6          | Teresa     | Lewandowska   | F   | 1930-11-15 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 6877      | 6966     
+8282          | 6          | Józef      | Jaworski      | M   | 1930-01-18 | Kielce          | NULL       | NULL            | NULL                        | NULL               | 6990      | 7304     
+8287          | 6          | Maciej     | Górski        | M   | 1930-02-22 | Bromberg        | NULL       | NULL            | NULL                        | NULL               | 7355      | 6923     
+8288          | 6          | Dariusz    | Nowakowski    | M   | 1930-10-22 | Pszczyna        | NULL       | NULL            | NULL                        | NULL               | 7429      | 7119     
+8295          | 6          | Ludwika    | Olszewska     | F   | 1930-04-21 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 7230      | 7439     
+8306          | 6          | Dariusz    | Nowakowski    | M   | 1930-12-19 | Biecz           | NULL       | NULL            | NULL                        | NULL               | 7107      | 7151     
+8310          | 6          | Genowefa   | Malinowska    | F   | 1930-08-23 | Częstochowa     | NULL       | NULL            | NULL                        | NULL               | 7385      | 7276     
+8315          | 6          | Elżbieta   | Wojciechowska | F   | 1930-08-15 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 7159      | 7283     
+8319          | 6          | Czesław    | Król          | M   | 1930-03-23 | Lanckorona      | NULL       | NULL            | NULL                        | NULL               | 7026      | 7662     
+8320          | 6          | Michał     | Lewandowski   | M   | 1930-01-28 | Tykocin         | NULL       | NULL            | NULL                        | NULL               | 7137      | 7573     
+8324          | 6          | Tadeusz    | Nowakowski    | M   | 1930-08-05 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 7489      | 7399     
+8329          | 6          | Jerzy      | Jaworski      | M   | 1931-06-07 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 6990      | 7304     
+8331          | 6          | Leokadia   | Malinowska    | F   | 1931-01-18 | Białystok       | NULL       | NULL            | NULL                        | NULL               | 7178      | 7345     
+8332          | 6          | Łukasz     | Nowakowski    | M   | 1931-12-23 | Lanckorona      | NULL       | NULL            | NULL                        | NULL               | 7077      | 7239     
+8336          | 6          | Tadeusz    | Adamczyk      | M   | 1931-01-18 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 7200      | 7166     
+8337          | 6          | Stefania   | Nowakowska    | F   | 1931-04-07 | Kazimierz Dolny | 1932-03-10 | Chochołów       | Cemetery in Chochołów       | Pneumonia          | 7429      | 7119     
+8342          | 6          | Rozalia    | Malinowska    | F   | 1931-05-03 | Gliwice         | NULL       | NULL            | NULL                        | NULL               | 7185      | 7456     
+8353          | 6          | Anna       | Adamczyk      | F   | 1931-02-19 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 7295      | 7360     
+8356          | 6          | Franciszek | Lewandowski   | M   | 1931-06-19 | Białystok       | NULL       | NULL            | NULL                        | NULL               | 6963      | 7325     
+8357          | 6          | Ryszard    | Nowakowski    | M   | 1931-02-17 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 6874      | 6861     
+8358          | 6          | Czesława   | Nowakowska    | F   | 1931-03-22 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 6415      | 7470     
+8360          | 6          | Dariusz    | Malinowski    | M   | 1931-06-02 | Stettin         | NULL       | NULL            | NULL                        | NULL               | 7318      | 7365     
+8371          | 6          | Jakub      | Piotrowski    | M   | 1932-01-25 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 7267      | 7028     
+8384          | 6          | Michał     | Nowakowski    | M   | 1932-01-25 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 7107      | 7151     
+8386          | 6          | Ludwika    | Malinowska    | F   | 1932-04-07 | Cieszyn         | NULL       | NULL            | NULL                        | NULL               | 6771      | 7105     
+8390          | 6          | Henryk     | Lewandowski   | M   | 1932-12-06 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 6963      | 7325     
+8392          | 6          | Maja       | Król          | F   | 1932-12-22 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 7026      | 7662     
+8400          | 6          | Antoni     | Nowakowski    | M   | 1932-10-25 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 7489      | 7399     
+8402          | 6          | Wanda      | Jaworska      | F   | 1932-06-15 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 7150      | 7689     
+8407          | 6          | Krzysztof  | Jaworski      | M   | 1932-08-15 | Radom           | NULL       | NULL            | NULL                        | NULL               | 7409      | 7485     
+8409          | 6          | Irena      | Kowalska      | F   | 1932-09-06 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 7682      | 7351     
+8410          | 6          | Zuzanna    | Zielińska     | F   | 1932-11-17 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 7463      | 7677     
+8411          | 6          | Marian     | Malinowski    | M   | 1932-05-28 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 7589      | 7493     
+8414          | 6          | Maciej     | Lewandowski   | M   | 1933-05-11 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 6877      | 6966     
+8426          | 6          | Stefania   | Nowakowska    | F   | 1933-03-20 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 6874      | 6861     
+8439          | 6          | Regina     | Nowakowska    | F   | 1933-01-20 | Tykocin         | NULL       | NULL            | NULL                        | NULL               | 7316      | 7029     
+8441          | 6          | Krzysztof  | Zieliński     | M   | 1933-04-16 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 7463      | 7677     
+8442          | 6          | Genowefa   | Jaworska      | F   | 1933-11-12 | Częstochowa     | NULL       | NULL            | NULL                        | NULL               | 6925      | 7536     
+8454          | 6          | Maria      | Malinowska    | F   | 1934-06-02 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 7185      | 7456     
+8460          | 6          | Bożena     | Nowakowska    | F   | 1934-07-15 | Bromberg        | 1963-01-13 | Sromowce        | Cemetery in Sromowce        | Consumption        | 7107      | 7151     
+8461          | 6          | Czesław    | Lewandowski   | M   | 1934-06-02 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 6963      | 7325     
+8462          | 6          | Elżbieta   | Król          | F   | 1934-12-03 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 7026      | 7662     
+8471          | 6          | Alicja     | Nowakowska    | F   | 1934-11-19 | Lipce           | NULL       | NULL            | NULL                        | NULL               | 7489      | 7399     
+8477          | 6          | Danuta     | Jaworska      | F   | 1934-11-16 | Sromowce        | 1949-06-22 | Zwierzyniec     | Cemetery in Zwierzyniec     | NULL               | 7409      | 7485     
+8479          | 6          | Ryszard    | Kowalski      | M   | 1934-05-28 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 7682      | 7351     
+8480          | 6          | Tadeusz    | Nowakowski    | M   | 1934-10-04 | Biecz           | NULL       | NULL            | NULL                        | NULL               | 7316      | 7029     
+8481          | 6          | Stefan     | Zieliński     | M   | 1934-04-06 | Biecz           | NULL       | NULL            | NULL                        | NULL               | 7463      | 7677     
+8482          | 6          | Barbara    | Malinowska    | F   | 1934-01-15 | Supraśl         | 1938-11-12 | Pszczyna        | Cemetery in Pszczyna        | Starvation         | 7589      | 7493     
+8489          | 6          | Julia      | Grabowska     | F   | 1934-02-16 | Lanckorona      | 1936-03-01 | Zwierzyniec     | Cemetery in Zwierzyniec     | Plague             | 6929      | 7430     
+8493          | 6          | Aleksandra | Król          | F   | 1934-09-10 | Bromberg        | 1937-09-13 | Kraków          | Cemetery in Kraków          | Dysentery          | 7723      | 7449     
+8496          | 6          | Monika     | Górska        | F   | 1934-09-27 | Wisła           | NULL       | NULL            | NULL                        | NULL               | 6995      | 7608     
+8497          | 6          | Kamil      | Jaworski      | M   | 1934-10-02 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 7523      | 7550     
+8498          | 6          | Adam       | Olszewski     | M   | 1934-03-13 | Thorn           | NULL       | NULL            | NULL                        | NULL               | 7410      | 7588     
+8511          | 6          | Kazimiera  | Jaworska      | F   | 1935-07-23 | Wisła           | NULL       | NULL            | NULL                        | NULL               | 7150      | 7689     
+8515          | 6          | Zuzanna    | Zielińska     | F   | 1935-02-28 | Thorn           | 1937-02-11 | Gliwice         | Cemetery in Gliwice         | Typhus             | 7463      | 7677     
+8516          | 6          | Maria      | Malinowska    | F   | 1935-09-19 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 7589      | 7493     
+8519          | 6          | Ludwika    | Adamczyk      | F   | 1935-05-01 | Warszawa        | NULL       | NULL            | NULL                        | NULL               | 6484      | 7452     
+8522          | 6          | Leokadia   | Zielińska     | F   | 1935-11-10 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 7419      | 7524     
+8524          | 6          | Natalia    | Górska        | F   | 1935-09-09 | Olsztyn         | NULL       | NULL            | NULL                        | NULL               | 7671      | 7276     
+8527          | 6          | Zuzanna    | Jaworska      | F   | 1935-10-23 | Biecz           | NULL       | NULL            | NULL                        | NULL               | 7523      | 7550     
+8530          | 6          | Grzegorz   | Olszewski     | M   | 1935-01-20 | Olsztyn         | NULL       | NULL            | NULL                        | NULL               | 7410      | 7588     
+8532          | 6          | Aleksandra | Nowakowska    | F   | 1935-11-17 | Kielce          | 1949-11-14 | Reszel          | Cemetery in Reszel          | Murder             | 7457      | 7530     
+8535          | 6          | Jadwiga    | Jankowska     | F   | 1935-04-25 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 7649      | 7575     
+8542          | 6          | Dariusz    | Lewandowski   | M   | 1936-12-23 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 6963      | 7325     
+8545          | 6          | Marek      | Nowakowski    | M   | 1936-08-24 | Sandomierz      | 1940-06-20 | Rzeszów         | Cemetery in Rzeszów         | NULL               | 7489      | 7399     
+8548          | 6          | Jan        | Jaworski      | M   | 1936-05-07 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 7409      | 7485     
+8554          | 6          | Mateusz    | Grabowski     | M   | 1936-01-15 | Supraśl         | NULL       | NULL            | NULL                        | NULL               | 6929      | 7430     
+8558          | 6          | Józef      | Król          | M   | 1936-08-17 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 7723      | 7449     
+8562          | 6          | Ewa        | Górska        | F   | 1936-01-07 | Biecz           | NULL       | NULL            | NULL                        | NULL               | 6995      | 7608     
+8564          | 6          | Maciej     | Nowakowski    | M   | 1936-06-20 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 7457      | 7530     
+8568          | 6          | Krzysztof  | Jankowski     | M   | 1936-03-23 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 7649      | 7575     
+8574          | 6          | Zygmunt    | Nowakowski    | M   | 1936-05-05 | Biecz           | NULL       | NULL            | NULL                        | NULL               | 7680      | 7103     
+8584          | 6          | Jadwiga    | Wiśniewska    | F   | 1936-04-16 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 6872      | 7377     
+8591          | 6          | Wanda      | Jaworska      | F   | 1937-12-16 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 7150      | 7689     
+8593          | 6          | Joanna     | Jaworska      | F   | 1937-10-27 | Biecz           | 1955-12-11 | Białystok       | Cemetery in Białystok       | Fever              | 7409      | 7485     
+8595          | 6          | Joanna     | Malinowska    | F   | 1937-04-16 | Bromberg        | NULL       | NULL            | NULL                        | NULL               | 7589      | 7493     
+8600          | 6          | Marek      | Górski        | M   | 1937-01-12 | Wisła           | NULL       | NULL            | NULL                        | NULL               | 6995      | 7608     
+8601          | 6          | Józefa     | Jaworska      | F   | 1937-10-07 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 7523      | 7550     
+8608          | 6          | Stefania   | Kowalska      | F   | 1937-03-13 | Biecz           | NULL       | NULL            | NULL                        | NULL               | 7622      | 7632     
+8620          | 6          | Anna       | Zielińska     | F   | 1937-12-09 | Kraków          | NULL       | NULL            | NULL                        | NULL               | 7669      | 7665     
+8625          | 6          | Jerzy      | Nowakowski    | M   | 1938-06-11 | Chełmno         | 1942-09-28 | Katowice        | Cemetery in Katowice        | NULL               | 7489      | 7399     
+8632          | 6          | Kamil      | Król          | M   | 1938-01-16 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 7723      | 7449     
+8635          | 6          | Jadwiga    | Jaworska      | F   | 1938-04-08 | Olsztyn         | NULL       | NULL            | NULL                        | NULL               | 7523      | 7550     
+8637          | 6          | Stefan     | Nowakowski    | M   | 1938-09-07 | Lanckorona      | NULL       | NULL            | NULL                        | NULL               | 7457      | 7530     
+8641          | 6          | Elżbieta   | Kowalska      | F   | 1938-10-13 | Thorn           | NULL       | NULL            | NULL                        | NULL               | 7622      | 7632     
+8652          | 6          | Maria      | Jaworska      | F   | 1938-09-21 | Złoty Potok     | NULL       | NULL            | NULL                        | NULL               | 6550      | 7549     
+8653          | 6          | Jan        | Wiśniewski    | M   | 1938-05-17 | Bromberg        | 1950-09-05 | Częstochowa     | Cemetery in Częstochowa     | Consumption        | 6872      | 7377     
+8655          | 6          | Ignacy     | Zieliński     | M   | 1938-02-09 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 7669      | 7665     
+8658          | 6          | Anna       | Adamczyk      | F   | 1938-02-27 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 7660      | 7727     
+8664          | 6          | Mateusz    | Adamczyk      | M   | 1938-12-04 | Breslau         | 1941-08-09 | Chełmno         | Cemetery in Chełmno         | Consumption        | 7639      | 7585     
+8666          | 6          | Anna       | Wojciechowska | F   | 1938-12-13 | Pszczyna        | 1939-09-13 | Radom           | Cemetery in Radom           | Accident           | 6680      | 7575     
+8670          | 6          | Monika     | Jaworska      | F   | 1939-12-24 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 7150      | 7689     
+8673          | 6          | Ryszard    | Górski        | M   | 1939-04-20 | Radom           | NULL       | NULL            | NULL                        | NULL               | 6995      | 7608     
+8675          | 6          | Genowefa   | Nowakowska    | F   | 1939-12-09 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 7457      | 7530     
+8698          | 6          | Piotr      | Jaworski      | M   | 1939-05-12 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 7664      | 7768     
+8700          | 6          | Genowefa   | Olszewska     | F   | 1939-05-21 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 7532      | 7641     
+8715          | 6          | Mateusz    | Nowakowski    | M   | 1940-08-26 | Stettin         | NULL       | NULL            | NULL                        | NULL               | 7489      | 7399     
+8718          | 6          | Mateusz    | Zieliński     | M   | 1940-07-07 | Gliwice         | NULL       | NULL            | NULL                        | NULL               | 7419      | 7524     
+8720          | 6          | Wiesław    | Jaworski      | M   | 1940-08-26 | Częstochowa     | NULL       | NULL            | NULL                        | NULL               | 7523      | 7550     
+8726          | 6          | Jan        | Wiśniewski    | M   | 1940-04-08 | Krynica         | 1943-03-09 | Gdynia          | Cemetery in Gdynia          | Fire               | 6872      | 7377     
+8727          | 6          | Katarzyna  | Adamczyk      | F   | 1940-07-05 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 7660      | 7727     
+8733          | 6          | Władysław  | Wojciechowski | M   | 1940-04-11 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 6680      | 7575     
+8743          | 6          | Kazimierz  | Nowakowski    | M   | 1940-08-06 | Biecz           | 1942-10-26 | Krynica         | Cemetery in Krynica         | Pneumonia          | 7599      | 7707     
+8752          | 6          | Monika     | Jaworska      | F   | 1941-11-16 | Breslau         | NULL       | NULL            | NULL                        | NULL               | 7150      | 7689     
+8753          | 6          | Stanisław  | Król          | M   | 1941-10-15 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 7723      | 7449     
+8762          | 6          | Maciej     | Jaworski      | M   | 1941-07-06 | Białystok       | NULL       | NULL            | NULL                        | NULL               | 7664      | 7768     
+8769          | 6          | Wiktoria   | Nowakowska    | F   | 1941-11-27 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 7628      | 7719     
+8781          | 6          | Kazimierz  | Nowakowski    | M   | 1941-11-24 | Sandomierz      | NULL       | NULL            | NULL                        | NULL               | 7869      | 7717     
+8782          | 6          | Jakub      | Jaworski      | M   | 1942-03-13 | Lanckorona      | NULL       | NULL            | NULL                        | NULL               | 7150      | 7689     
+8789          | 6          | Julian     | Zieliński     | M   | 1942-07-19 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 7669      | 7665     
+8790          | 6          | Genowefa   | Adamczyk      | F   | 1942-11-08 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 7660      | 7727     
+8792          | 6          | Tadeusz    | Jaworski      | M   | 1942-02-18 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 7664      | 7768     
+8800          | 6          | Teresa     | Nowakowska    | F   | 1942-09-15 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 7628      | 7719     
+8802          | 6          | Antoni     | Nowakowski    | M   | 1942-04-18 | Pszczyna        | 1946-03-28 | Krynica         | Cemetery in Krynica         | Fever              | 7599      | 7707     
+8813          | 6          | Zuzanna    | Nowakowska    | F   | 1942-11-22 | Warszawa        | NULL       | NULL            | NULL                        | NULL               | 7869      | 7717     
+8821          | 6          | Marcin     | Nowakowski    | M   | 1943-04-17 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 7489      | 7399     
+8823          | 6          | Mateusz    | Zieliński     | M   | 1943-11-10 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 7419      | 7524     
+8824          | 6          | Agnieszka  | Król          | F   | 1943-08-09 | Sromowce        | NULL       | NULL            | NULL                        | NULL               | 7723      | 7449     
+8825          | 6          | Jakub      | Jaworski      | M   | 1943-01-16 | Sandomierz      | NULL       | NULL            | NULL                        | NULL               | 7523      | 7550     
+8828          | 6          | Agnieszka  | Wiśniewska    | F   | 1943-09-21 | Bronowice       | NULL       | NULL            | NULL                        | NULL               | 6872      | 7377     
+8837          | 6          | Władysław  | Nowakowski    | M   | 1943-07-15 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 7599      | 7707     
+8851          | 6          | Józef      | Wojciechowski | M   | 1943-12-11 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 7640      | 7439     
+8852          | 6          | Genowefa   | Grabowska     | F   | 1943-06-01 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 7787      | 7876     
+8858          | 6          | Małgorzata | Jaworska      | F   | 1943-03-23 | Reszel          | 1945-03-20 | Posen           | Cemetery in Posen           | Pneumonia          | 7892      | 7806     
+8866          | 6          | Krzysztof  | Nowakowski    | M   | 1944-12-24 | Radom           | NULL       | NULL            | NULL                        | NULL               | 7628      | 7719     
+8874          | 6          | Rozalia    | Nowakowska    | F   | 1944-04-17 | Biecz           | NULL       | NULL            | NULL                        | NULL               | 6702      | 7619     
+8894          | 6          | Ryszard    | Wiśniewski    | M   | 1944-11-18 | Breslau         | 1946-05-26 | Cieszyn         | Cemetery in Cieszyn         | Dropsy             | 7920      | 7810     
+8902          | 6          | Mateusz    | Nowakowski    | M   | 1945-12-22 | Stettin         | 1947-03-13 | Lanckorona      | Cemetery in Lanckorona      | Cancer             | 7628      | 7719     
+8903          | 6          | Anna       | Nowakowska    | F   | 1945-03-11 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 7599      | 7707     
+8908          | 6          | Ignacy     | Grabowski     | M   | 1945-11-24 | Białystok       | NULL       | NULL            | NULL                        | NULL               | 7787      | 7876     
+8909          | 6          | Zuzanna    | Jaworska      | F   | 1945-10-08 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 7892      | 7806     
+8917          | 6          | Małgorzata | Malinowska    | F   | 1945-12-10 | Chełmno         | 1950-03-18 | Sosnowiec       | Cemetery in Sosnowiec       | NULL               | 7902      | 8059     
+8923          | 6          | Mateusz    | Grabowski     | M   | 1945-09-23 | Tykocin         | NULL       | NULL            | NULL                        | NULL               | 7387      | 7807     
+8925          | 6          | Maciej     | Malinowski    | M   | 1945-03-11 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 7936      | 8039     
+8929          | 6          | Kazimiera  | Zielińska     | F   | 1946-10-08 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 7419      | 7524     
+8930          | 6          | Adam       | Jaworski      | M   | 1946-08-22 | Białystok       | NULL       | NULL            | NULL                        | NULL               | 7523      | 7550     
+8946          | 6          | Czesława   | Wiśniewska    | F   | 1946-12-28 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 7920      | 7810     
+8947          | 6          | Alicja     | Malinowska    | F   | 1946-10-15 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 7902      | 8059     
+8951          | 6          | Stefania   | Górska        | F   | 1946-02-15 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 7901      | 7665     
+8960          | 6          | Tomasz     | Nowakowski    | M   | 1946-01-17 | Bronowice       | NULL       | NULL            | NULL                        | NULL               | 8113      | 7780     
+8962          | 6          | Zuzanna    | Zielińska     | F   | 1947-11-14 | Bronowice       | NULL       | NULL            | NULL                        | NULL               | 7419      | 7524     
+8968          | 6          | Łukasz     | Grabowski     | M   | 1947-06-05 | Białystok       | 1950-04-09 | Pszczyna        | Cemetery in Pszczyna        | NULL               | 7787      | 7876     
+8983          | 6          | Leokadia   | Adamczyk      | F   | 1947-08-25 | Posen           | NULL       | NULL            | NULL                        | NULL               | 6837      | 7708     
+8984          | 6          | Ryszard    | Adamczyk      | M   | 1947-08-04 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 7758      | 7851     
+8988          | 6          | Bożena     | Malinowska    | F   | 1947-08-25 | Breslau         | NULL       | NULL            | NULL                        | NULL               | 7827      | 7907     
+8992          | 6          | Leon       | Nowakowski    | M   | 1947-03-12 | Kielce          | NULL       | NULL            | NULL                        | NULL               | 7842      | 8042     
+9001          | 6          | Ewa        | Lewandowska   | F   | 1947-04-24 | Pszczyna        | NULL       | NULL            | NULL                        | NULL               | 8060      | 7967     
+9005          | 6          | Danuta     | Jaworska      | F   | 1948-01-04 | Bronowice       | NULL       | NULL            | NULL                        | NULL               | 7892      | 7806     
+9009          | 6          | Stefan     | Malinowski    | M   | 1948-09-18 | Posen           | 1953-01-15 | Thorn           | Cemetery in Thorn           | Accident           | 7936      | 8039     
+9017          | 6          | Zygmunt    | Nowakowski    | M   | 1948-11-11 | Kielce          | NULL       | NULL            | NULL                        | NULL               | 8113      | 7780     
+9019          | 6          | Genowefa   | Olszewska     | F   | 1948-11-06 | Breslau         | 1953-11-21 | Danzig          | Cemetery in Danzig          | Infectious disease | 7320      | 8012     
+9022          | 6          | Andrzej    | Adamczyk      | M   | 1948-05-14 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 7985      | 7470     
+9025          | 6          | Elżbieta   | Nowakowska    | F   | 1948-05-21 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 7680      | 7871     
+9035          | 6          | Franciszek | Wiśniewski    | M   | 1949-07-04 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 7920      | 7810     
+9039          | 6          | Stefan     | Adamczyk      | M   | 1949-08-09 | Chochołów       | NULL       | NULL            | NULL                        | NULL               | 6837      | 7708     
+9040          | 6          | Henryk     | Adamczyk      | M   | 1949-09-03 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 7758      | 7851     
+9044          | 6          | Danuta     | Malinowska    | F   | 1949-11-22 | Cieszyn         | NULL       | NULL            | NULL                        | NULL               | 7827      | 7907     
+9046          | 6          | Tadeusz    | Nowakowski    | M   | 1949-09-17 | Supraśl         | NULL       | NULL            | NULL                        | NULL               | 7842      | 8042     
+9049          | 6          | Mateusz    | Nowakowski    | M   | 1949-11-06 | Thorn           | 1953-01-05 | Stettin         | Cemetery in Stettin         | NULL               | 8113      | 7780     
+9056          | 6          | Jan        | Lewandowski   | M   | 1949-06-10 | Stettin         | NULL       | NULL            | NULL                        | NULL               | 8060      | 7967     
+9071          | 6          | Helena     | Grabowska     | F   | 1950-12-12 | Złoty Potok     | NULL       | NULL            | NULL                        | NULL               | 7787      | 7876     
+9072          | 6          | Bartosz    | Wiśniewski    | M   | 1950-04-26 | Posen           | NULL       | NULL            | NULL                        | NULL               | 7920      | 7810     
+9075          | 6          | Adam       | Malinowski    | M   | 1950-06-17 | Supraśl         | 1954-02-22 | Bromberg        | Cemetery in Bromberg        | Fever              | 7827      | 7907     
+9084          | 6          | Małgorzata | Lewandowska   | F   | 1950-03-08 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 8060      | 7967     
+9098          | 6          | Danuta     | Olszewska     | F   | 1950-12-25 | Posen           | NULL       | NULL            | NULL                        | NULL               | 7971      | 7856     
+9109          | 6          | Grażyna    | Jaworska      | F   | 1951-02-23 | Reszel          | NULL       | NULL            | NULL                        | NULL               | 7892      | 7806     
+9116          | 6          | Kazimierz  | Olszewski     | M   | 1951-12-06 | Lanckorona      | NULL       | NULL            | NULL                        | NULL               | 7320      | 8012     
+9126          | 6          | Stefan     | Grabowski     | M   | 1951-12-22 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 7824      | 7806     
+9128          | 6          | Jerzy      | Malinowski    | M   | 1951-07-11 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 7951      | 7530     
+9142          | 6          | Barbara    | Adamczyk      | F   | 1952-11-09 | Łódź            | NULL       | NULL            | NULL                        | NULL               | 6837      | 7708     
+9144          | 6          | Zygmunt    | Nowakowski    | M   | 1952-01-05 | Bronowice       | 1954-10-17 | Wisła           | Cemetery in Wisła           | NULL               | 7842      | 8042     
+9146          | 6          | Marcin     | Lewandowski   | M   | 1952-09-15 | Breslau         | 1957-10-10 | Zalipie         | Cemetery in Zalipie         | Dropsy             | 8060      | 7967     
+9182          | 6          | Małgorzata | Lewandowska   | F   | 1953-12-11 | Olsztyn         | 1956-04-16 | Gliwice         | Cemetery in Gliwice         | Fire               | 8060      | 7967     
+9184          | 6          | Ignacy     | Olszewski     | M   | 1953-07-11 | Sosnowiec       | NULL       | NULL            | NULL                        | NULL               | 7971      | 7856     
+9216          | 6          | Agnieszka  | Nowakowska    | F   | 1953-09-23 | Danzig          | NULL       | NULL            | NULL                        | NULL               | 8021      | 8126     
+9219          | 6          | Maria      | Nowakowska    | F   | 1954-10-04 | Breslau         | NULL       | NULL            | NULL                        | NULL               | 7842      | 8042     
+9225          | 6          | Krzysztof  | Grabowski     | M   | 1954-06-13 | Biecz           | NULL       | NULL            | NULL                        | NULL               | 7824      | 7806     
+9257          | 6          | Adam       | Nowakowski    | M   | 1954-07-15 | Sanok           | NULL       | NULL            | NULL                        | NULL               | 8213      | 8136     
+9262          | 6          | Antoni     | Nowakowski    | M   | 1955-05-23 | Biecz           | 1960-05-08 | Krynica         | Cemetery in Krynica         | Pneumonia          | 7842      | 8042     
+9290          | 6          | Dariusz    | Olszewski     | M   | 1955-03-22 | Wisła           | 1956-05-18 | Danzig          | Cemetery in Danzig          | NULL               | 8132      | 7662     
+9305          | 6          | Henryk     | Malinowski    | M   | 1955-04-19 | Tykocin         | NULL       | NULL            | NULL                        | NULL               | 7830      | 8124     
+9327          | 6          | Piotr      | Nowakowski    | M   | 1956-05-22 | Sromowce        | NULL       | NULL            | NULL                        | NULL               | 8213      | 8136     
+9340          | 6          | Jakub      | Nowakowski    | M   | 1956-06-23 | Tykocin         | 1959-05-08 | Kielce          | Cemetery in Kielce          | Dropsy             | 7489      | 8331     
+9373          | 6          | Grażyna    | Nowakowska    | F   | 1957-10-07 | Warszawa        | 1960-03-11 | Kielce          | Cemetery in Kielce          | Typhus             | 7489      | 8331     
+9405          | 6          | Halina     | Nowakowska    | F   | 1958-11-13 | Supraśl         | NULL       | NULL            | NULL                        | NULL               | 8213      | 8136     
+9515          | 6          | Władysław  | Wojciechowski | M   | 1960-03-02 | Wisła           | NULL       | NULL            | NULL                        | NULL               | 7159      | 8374     
+9525          | 6          | Michał     | Malinowski    | M   | 1960-10-21 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 7318      | 8644     
+9559          | 6          | Zygmunt    | Adamczyk      | M   | 1961-06-11 | Warszawa        | 1965-05-08 | Złoty Potok     | Cemetery in Złoty Potok     | NULL               | 8434      | 8138     
+9561          | 6          | Maria      | Lewandowska   | F   | 1961-12-04 | Bronowice       | NULL       | NULL            | NULL                        | NULL               | 8361      | 8559     
+9596          | 6          | Leokadia   | Jaworska      | F   | 1962-01-28 | Supraśl         | NULL       | NULL            | NULL                        | NULL               | 7462      | 8389     
+9643          | 6          | Szymon     | Adamczyk      | M   | 1963-04-15 | Częstochowa     | NULL       | NULL            | NULL                        | NULL               | 8434      | 8138     
+9644          | 6          | Grzegorz   | Lewandowski   | M   | 1963-10-08 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 8361      | 8559     
+9656          | 6          | Dariusz    | Wojciechowski | M   | 1963-01-14 | Lublin          | NULL       | NULL            | NULL                        | NULL               | 8200      | 8457     
+9661          | 6          | Tomasz     | Malinowski    | M   | 1963-06-26 | Stettin         | NULL       | NULL            | NULL                        | NULL               | 7185      | 8565     
+9673          | 6          | Jakub      | Adamczyk      | M   | 1963-08-27 | Pszczyna        | NULL       | NULL            | NULL                        | NULL               | 8882      | 8220     
+9692          | 6          | Antoni     | Wojciechowski | M   | 1964-05-08 | Sromowce        | NULL       | NULL            | NULL                        | NULL               | 8816      | 8388     
+9698          | 6          | Kamil      | Adamczyk      | M   | 1964-11-10 | Kielce          | NULL       | NULL            | NULL                        | NULL               | 8882      | 8220     
+9731          | 6          | Elżbieta   | Wojciechowska | F   | 1965-09-20 | Sosnowiec       | 1966-04-12 | Reszel          | Cemetery in Reszel          | Smallpox           | 8200      | 8457     
+9789          | 6          | Maciej     | Adamczyk      | M   | 1966-06-28 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 8882      | 8220     
+9809          | 6          | Jakub      | Wojciechowski | M   | 1966-02-21 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 8849      | 8865     
+9824          | 6          | Halina     | Wojciechowska | F   | 1967-02-23 | Złoty Potok     | NULL       | NULL            | NULL                        | NULL               | 8200      | 8457     
+9847          | 6          | Paweł      | Wojciechowski | M   | 1967-08-12 | Posen           | NULL       | NULL            | NULL                        | NULL               | 8849      | 8865     
+9854          | 6          | Oliwia     | Lewandowska   | F   | 1967-04-02 | Zwierzyniec     | NULL       | NULL            | NULL                        | NULL               | 8464      | 8533     
+9893          | 6          | Aleksandra | Wojciechowska | F   | 1968-06-27 | Krynica         | NULL       | NULL            | NULL                        | NULL               | 8626      | 8642     
+9933          | 6          | Aleksandra | Wojciechowska | F   | 1969-09-03 | Kazimierz Dolny | NULL       | NULL            | NULL                        | NULL               | 8626      | 8642     
+9950          | 6          | Kamil      | Wojciechowski | M   | 1970-10-12 | Gdynia          | NULL       | NULL            | NULL                        | NULL               | 8200      | 8457     
+9971          | 6          | Regina     | Wojciechowska | F   | 1970-12-25 | Zalipie         | NULL       | NULL            | NULL                        | NULL               | 8626      | 8642     
+9989          | 6          | Filip      | Nowakowski    | M   | 1970-07-27 | Gliwice         | NULL       | NULL            | NULL                        | NULL               | 8213      | 8800     

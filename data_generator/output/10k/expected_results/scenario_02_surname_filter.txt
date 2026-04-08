@@ -1,0 +1,79 @@
+--- SCENARIO 02: SURNAME FILTER ---
+Recommended surname: Adamczyk
+Recommended birth year range: 1701-1750
+
+
+Expected rows: 70
+
+person_id | given_name | surname  | sex | birth_date | birth_place     | death_date | death_place
+-------------------------------------------------------------------------------------------------
+2628      | Marianna   | Adamczyk | F   | 1701-09-06 | Rzeszów         | 1797-07-13 | Krynica    
+2630      | Agnieszka  | Adamczyk | F   | 1701-09-09 | Bromberg        | 1773-09-04 | Białystok  
+2660      | Leon       | Adamczyk | M   | 1702-06-01 | Tykocin         | 1776-11-16 | Katowice   
+2653      | Alicja     | Adamczyk | F   | 1702-10-19 | Kraków          | 1764-11-02 | Zalipie    
+2671      | Urszula    | Adamczyk | F   | 1703-03-19 | Kraków          | 1755-04-28 | Biecz      
+2736      | Andrzej    | Adamczyk | M   | 1706-06-22 | Chochołów       | 1776-04-24 | Rzeszów    
+2768      | Regina     | Adamczyk | F   | 1707-11-13 | Łódź            | 1781-02-14 | Cieszyn    
+2803      | Grzegorz   | Adamczyk | M   | 1709-07-27 | Reszel          | 1777-08-19 | Białystok  
+2811      | Alicja     | Adamczyk | F   | 1710-10-22 | Sromowce        | 1768-11-25 | Supraśl    
+2827      | Leon       | Adamczyk | M   | 1711-04-06 | Chełmno         | 1768-04-12 | Bronowice  
+2852      | Stefania   | Adamczyk | F   | 1713-05-22 | Kraków          | 1765-12-11 | Gdynia     
+2849      | Maciej     | Adamczyk | M   | 1713-10-19 | Tykocin         | 1792-10-23 | Krynica    
+2864      | Teresa     | Adamczyk | F   | 1714-04-10 | Cieszyn         | 1785-02-21 | Tykocin    
+2930      | Irena      | Adamczyk | F   | 1718-11-15 | Biecz           | 1775-07-20 | Breslau    
+2945      | Ryszard    | Adamczyk | M   | 1719-05-22 | Kraków          | 1770-05-01 | Gdynia     
+2960      | Natalia    | Adamczyk | F   | 1720-06-15 | Sromowce        | 1792-05-19 | Sanok      
+2956      | Grzegorz   | Adamczyk | M   | 1720-09-13 | Reszel          | 1747-01-21 | Lublin     
+2977      | Zofia      | Adamczyk | F   | 1721-06-15 | Sanok           | 1726-05-07 | Cieszyn    
+2972      | Maciej     | Adamczyk | M   | 1721-10-02 | Złoty Potok     | 1784-07-20 | Lipce      
+2992      | Maja       | Adamczyk | F   | 1722-04-02 | Warszawa        | 1776-09-05 | Wisła      
+3004      | Wiesław    | Adamczyk | M   | 1722-10-18 | Posen           | 1764-04-11 | Sromowce   
+3018      | Mirosław   | Adamczyk | M   | 1723-07-26 | Zwierzyniec     | 1775-10-14 | Lipce      
+3030      | Leokadia   | Adamczyk | F   | 1723-11-16 | Katowice        | 1789-04-25 | Chełmno    
+3034      | Urszula    | Adamczyk | F   | 1724-03-10 | Biecz           | 1781-11-09 | Cieszyn    
+3037      | Zofia      | Adamczyk | F   | 1724-03-10 | Breslau         | 1729-11-26 | Chochołów  
+3040      | Marian     | Adamczyk | M   | 1724-12-14 | Posen           | 1796-01-19 | Bronowice  
+3070      | Paweł      | Adamczyk | M   | 1725-01-07 | Warszawa        | 1726-05-06 | Łódź       
+3073      | Władysław  | Adamczyk | M   | 1726-05-05 | Pszczyna        | 1776-04-26 | Thorn      
+3076      | Henryk     | Adamczyk | M   | 1726-07-03 | Częstochowa     | 1728-06-06 | Biecz      
+3090      | Wiktoria   | Adamczyk | F   | 1727-12-04 | Kazimierz Dolny | 1729-04-11 | Stettin    
+3101      | Grzegorz   | Adamczyk | M   | 1728-05-03 | Warszawa        | 1781-07-01 | Tykocin    
+3125      | Michał     | Adamczyk | M   | 1729-01-18 | Stettin         | 1779-02-11 | Krynica    
+3130      | Krzysztof  | Adamczyk | M   | 1729-05-02 | Kraków          | 1788-09-02 | Chełmno    
+3120      | Andrzej    | Adamczyk | M   | 1729-09-27 | Chełmno         | 1802-01-19 | Olsztyn    
+3148      | Genowefa   | Adamczyk | F   | 1730-05-13 | Rzeszów         | 1809-09-19 | Częstochowa
+3152      | Grażyna    | Adamczyk | F   | 1730-06-09 | Stettin         | 1774-05-05 | Sanok      
+3151      | Filip      | Adamczyk | M   | 1730-09-07 | Pszczyna        | 1808-02-12 | Bromberg   
+3165      | Urszula    | Adamczyk | F   | 1731-02-23 | Supraśl         | 1799-10-13 | Gdynia     
+3166      | Alicja     | Adamczyk | F   | 1731-07-11 | Biecz           | 1778-07-15 | Zwierzyniec
+3155      | Ewa        | Adamczyk | F   | 1731-07-16 | Breslau         | 1796-10-05 | Stettin    
+3171      | Władysław  | Adamczyk | M   | 1732-04-19 | Olsztyn         | 1811-05-19 | Lipce      
+3185      | Mateusz    | Adamczyk | M   | 1732-04-21 | Sanok           | 1789-11-11 | Radom      
+3172      | Irena      | Adamczyk | F   | 1732-04-26 | Gliwice         | 1814-08-24 | Danzig     
+3208      | Zygmunt    | Adamczyk | M   | 1733-04-11 | Radom           | 1738-02-02 | Lublin     
+3216      | Helena     | Adamczyk | F   | 1734-01-10 | Danzig          | 1809-12-24 | Wisła      
+3213      | Barbara    | Adamczyk | F   | 1734-02-15 | Warszawa        | 1790-09-17 | Rzeszów    
+3239      | Halina     | Adamczyk | F   | 1736-12-17 | Kielce          | 1777-05-04 | Zalipie    
+3270      | Katarzyna  | Adamczyk | F   | 1737-09-04 | Lipce           | 1792-08-06 | Cieszyn    
+3267      | Rozalia    | Adamczyk | F   | 1737-11-20 | Sromowce        | 1824-11-02 | Katowice   
+3290      | Irena      | Adamczyk | F   | 1738-08-15 | Kraków          | 1816-11-16 | Białystok  
+3314      | Genowefa   | Adamczyk | F   | 1740-01-02 | Wisła           | 1744-07-05 | Sosnowiec  
+3330      | Michał     | Adamczyk | M   | 1741-10-12 | Thorn           | 1790-01-01 | Rzeszów    
+3332      | Czesław    | Adamczyk | M   | 1741-12-01 | Thorn           | 1815-03-18 | Cieszyn    
+3351      | Julian     | Adamczyk | M   | 1742-03-10 | Chochołów       | 1814-04-27 | Zalipie    
+3366      | Maria      | Adamczyk | F   | 1743-02-13 | Gdynia          | 1748-04-24 | Reszel     
+3396      | Katarzyna  | Adamczyk | F   | 1745-04-18 | Gdynia          | 1803-04-22 | Sandomierz 
+3398      | Szymon     | Adamczyk | M   | 1745-05-08 | Gdynia          | 1798-05-02 | Tykocin    
+3399      | Aleksandra | Adamczyk | F   | 1745-06-05 | Białystok       | 1818-06-09 | Thorn      
+3412      | Dariusz    | Adamczyk | M   | 1746-10-12 | Biecz           | 1799-04-15 | Bronowice  
+3430      | Józefa     | Adamczyk | F   | 1747-04-22 | Zwierzyniec     | 1830-07-01 | Radom      
+3449      | Oliwia     | Adamczyk | F   | 1748-05-27 | Łódź            | 1793-05-13 | Gliwice    
+3459      | Łukasz     | Adamczyk | M   | 1748-06-26 | Biecz           | 1804-08-18 | Kraków     
+3451      | Kamil      | Adamczyk | M   | 1748-10-28 | Lanckorona      | 1776-07-21 | Gdynia     
+3466      | Tadeusz    | Adamczyk | M   | 1748-12-10 | Łódź            | 1811-10-07 | Lipce      
+3478      | Ignacy     | Adamczyk | M   | 1749-09-11 | Wisła           | 1808-08-19 | Bromberg   
+3485      | Anna       | Adamczyk | F   | 1749-11-16 | Tykocin         | 1804-09-25 | Kielce     
+3479      | Urszula    | Adamczyk | F   | 1749-11-19 | Pszczyna        | 1798-09-10 | Radom      
+3506      | Maja       | Adamczyk | F   | 1750-01-09 | Stettin         | 1781-11-10 | Cieszyn    
+3494      | Ludwika    | Adamczyk | F   | 1750-06-20 | Sandomierz      | 1785-03-01 | Złoty Potok
+3512      | Julian     | Adamczyk | M   | 1750-07-08 | Katowice        | 1752-03-16 | Łódź       
