@@ -7,42 +7,39 @@
 
 update people
 set
-	birth_place = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(birth_place,
-        'Posen','Poznań'),
-        'Danzig','Gdańsk'),
-        'Breslau','Wrocław'),
-        'Stettin','Szczecin'),
-        'Bromberg','Bydgoszcz'),
-        'Thorn','Toruń'),
+	birth_place = CASE birth_place
+    WHEN 'Posen' THEN 'Poznań'
+    WHEN 'Danzig' THEN 'Gdańsk'
+    WHEN 'Breslau' THEN 'Wrocław'
+    WHEN 'Stettin' THEN 'Szczecin'
+    WHEN 'Bromberg' THEN 'Bydgoszcz'
+    WHEN 'Thorn' THEN 'Toruń'
+    ELSE birth_place
+  END,
+
+  death_place = CASE death_place
+    WHEN 'Posen' THEN 'Poznań'
+    WHEN 'Danzig' THEN 'Gdańsk'
+    WHEN 'Breslau' THEN 'Wrocław'
+    WHEN 'Stettin' THEN 'Szczecin'
+    WHEN 'Bromberg' THEN 'Bydgoszcz'
+    WHEN 'Thorn' THEN 'Toruń'
+    ELSE death_place
+  END
         
-    death_place = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(death_place,
-        'Posen','Poznań'),
-        'Danzig','Gdańsk'),
-        'Breslau','Wrocław'),
-        'Stettin','Szczecin'),
-        'Bromberg','Bydgoszcz'),
-        'Thorn','Toruń'),
-    burial_place = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(burial_place,
-        'Posen','Poznań'),
-        'Danzig','Gdańsk'),
-        'Breslau','Wrocław'),
-        'Stettin','Szczecin'),
-        'Bromberg','Bydgoszcz'),
-        'Thorn','Toruń')
-        
-where
-	birth_place ~ '(Posen|Danzig|Breslau|Stettin|Bromberg|Thorn)' OR
-	death_place ~ '(Posen|Danzig|Breslau|Stettin|Bromberg|Thorn)' OR
-	burial_place ~ '(Posen|Danzig|Breslau|Stettin|Bromberg|Thorn)';
+WHERE
+  birth_place IN ('Posen','Danzig','Breslau','Stettin','Bromberg','Thorn') OR
+  death_place IN ('Posen','Danzig','Breslau','Stettin','Bromberg','Thorn');
 
 
-UPDATE families
-SET marriage_place = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(marriage_place,
-        'Posen','Poznań'),
-        'Danzig','Gdańsk'),
-        'Breslau','Wrocław'),
-        'Stettin','Szczecin'),
-        'Bromberg','Bydgoszcz'),
-        'Thorn','Toruń')
-WHERE 
-    marriage_place ~ '(Posen|Danzig|Breslau|Stettin|Bromberg|Thorn)';
+update families
+SET marriage_place = CASE marriage_place
+  WHEN 'Posen' THEN 'Poznań'
+  WHEN 'Danzig' THEN 'Gdańsk'
+  WHEN 'Breslau' THEN 'Wrocław'
+  WHEN 'Stettin' THEN 'Szczecin'
+  WHEN 'Bromberg' THEN 'Bydgoszcz'
+  WHEN 'Thorn' THEN 'Toruń'
+  ELSE marriage_place
+END
+WHERE marriage_place IN ('Posen','Danzig','Breslau','Stettin','Bromberg','Thorn');

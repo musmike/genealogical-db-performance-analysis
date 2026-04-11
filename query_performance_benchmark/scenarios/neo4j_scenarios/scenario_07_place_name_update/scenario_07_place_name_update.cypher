@@ -15,24 +15,15 @@ WITH [
 ] AS replacements
 
 MATCH (n:Person)
-WHERE any(pair IN replacements WHERE
-  n.birthPlace CONTAINS pair[0] OR
-  n.deathPlace CONTAINS pair[0] OR
-  n.burialPlace CONTAINS pair[0]
-)
+UNWIND replacements AS pair
+WITH n, pair
+WHERE n.birthPlace = pair[0]
+   OR n.deathPlace = pair[0]
+   OR n.burialPlace = pair[0]
 
 SET
-  n.birthPlace =
-    reduce(val = n.birthPlace, pair IN replacements |
-      replace(val, pair[0], pair[1])),
-
-  n.deathPlace =
-    reduce(val = n.deathPlace, pair IN replacements |
-      replace(val, pair[0], pair[1])),
-
-  n.burialPlace =
-    reduce(val = n.burialPlace, pair IN replacements |
-      replace(val, pair[0], pair[1]))
+  n.birthPlace = CASE WHEN n.birthPlace = pair[0] THEN pair[1] ELSE n.birthPlace END,
+  n.deathPlace = CASE WHEN n.deathPlace = pair[0] THEN pair[1] ELSE n.deathPlace END
 
 RETURN n;
 
@@ -46,13 +37,11 @@ WITH [
 ] AS replacements
 
 MATCH (n:Family)
-WHERE any(pair IN replacements WHERE
-  n.marriagePlace CONTAINS pair[0]
-)
+UNWIND replacements AS pair
+WITH n, pair
+WHERE n.marriagePlace = pair[0]
 
 SET
-  n.marriagePlace =
-    reduce(val = n.marriagePlace, pair IN replacements |
-      replace(val, pair[0], pair[1]))
+  n.marriagePlace = pair[1]
 
 RETURN n;

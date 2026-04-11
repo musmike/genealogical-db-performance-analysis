@@ -9,7 +9,7 @@
 // More than one individual may be returned if multiple parents had their first child
 // at the same youngest age or if there are multiple children born to the same parent at the same age (e.g., twins).
 
-MATCH (f:Family)-[:HAS_CHILD]->(c:Person)
+MATCH (f:Family)-[r:HAS_CHILD WHERE r.relationshipType = 'BIOLOGICAL']->(c:Person)
 MATCH (p:Person)-[:HUSBAND_OF|WIFE_OF]->(f)
 
 WITH c, p,
@@ -22,15 +22,23 @@ MATCH (p:Person)-[:HUSBAND_OF|WIFE_OF]->(f)
 
 WITH c, p,
      duration.inDays(p.birthDate, c.birthDate).days AS ageDiff,
+     duration.between(p.birthDate, c.birthDate).years AS ageYears,
      minDiff
 
 WHERE ageDiff = minDiff
 
-RETURN c.givenName AS child_name,
-      c.surname as child_surname,
-      c.birthDate as child_birth,
-       p.givenName AS parent_name,
-      p.surname as parent_surname,
-      p.birthDate as parent_birth,
-       ageDiff AS ageDifferenceInDays
-LIMIT 1;
+RETURN p.id AS parent_id,
+      p.givenName as given_name,
+      p.surname as surname,
+      p.sex as sex,
+      p.birthDate as birth_date,
+      p.birthPlace as birth_place,
+      ageYears as age_at_first_child,
+      ageDiff AS age_difference_in_days,
+      c.id as child_id,
+      c.birthDate as child_birth_date,
+      c.birthPlace as child_birth_place
+ORDER BY
+p.id ASC,
+c.id ASC
+;

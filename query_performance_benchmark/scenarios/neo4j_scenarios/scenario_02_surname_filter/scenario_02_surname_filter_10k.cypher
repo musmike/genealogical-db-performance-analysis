@@ -13,9 +13,12 @@ MATCH (n:Person)
 WHERE n.birthDate.year >= 1755 and n.birthDate.year <= 1804
 AND n.surname = 'Zając'
 RETURN 
-n.id as id,
-n.givenName as name,
+n.id as person_id,
+n.givenName as given_name,
 n.surname as surname,
+n.sex as sex,
 n.birthDate as birth_date,
-n.sex as sex
+n.deathDate as death_date,
+n.deathPlace as death_place
+ORDER BY n.birthDate ASC
 ;

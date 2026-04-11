@@ -20,6 +20,12 @@ WITH anc, length(path)/2 AS generation
 
 WITH anc, min(generation) AS gen
 
+WITH DISTINCT anc, gen
+
+OPTIONAL MATCH (anc)<-[pc:HAS_CHILD WHERE pc.relationshipType = 'BIOLOGICAL']-(pf:Family)
+OPTIONAL MATCH (father:Person)-[:HUSBAND_OF]->(pf)
+OPTIONAL MATCH (mother:Person)-[:WIFE_OF]->(pf)
+
 RETURN
     anc.id             AS ancestor_id,
     gen                AS generation,
@@ -31,5 +37,8 @@ RETURN
     anc.deathDate      AS death_date,
     anc.deathPlace     AS death_place,
     anc.burialPlace    AS burial_place,
-    anc.causeOfDeath   AS cause_of_death
+    anc.causeOfDeath   AS cause_of_death,
+    father.id          AS father_id,
+    mother.id          AS mother_id
+
 ORDER BY generation, ancestor_id;

@@ -39,15 +39,14 @@ SELECT
     p.id AS descendant_id,
     d.depth AS generation,
     p.given_name, p.surname, p.sex, p.birth_date, p.birth_place,
-    fm.marriage_date, fm.marriage_place,
     p.death_date, p.death_place, p.burial_place, p.cause_of_death,
-    pf.husband_id AS father_id, 
-    pf.wife_id AS mother_id
+    f.father_id,
+    m.mother_id
+
 FROM deduped d
 JOIN people p ON p.id = d.person_id
-LEFT JOIN families fm ON fm.id = d.via_family_id
-LEFT JOIN family_children pfc 
-    ON pfc.child_id = p.id 
-   AND pfc.relationship_type = 'BIOLOGICAL'
-LEFT JOIN families pf ON pf.id = pfc.family_id
+
+LEFT JOIN father_lookup f ON f.child_id = p.id
+LEFT JOIN mother_lookup m ON m.child_id = p.id
+
 ORDER BY generation, p.id;

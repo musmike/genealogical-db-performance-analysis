@@ -6,14 +6,14 @@
 
 SELECT
     p.birth_place AS city,
-    ((EXTRACT(YEAR FROM p.birth_date)::int / 25) * 25) AS quarter_century,
+    ((EXTRACT(YEAR FROM p.birth_date)::int / 25) * 25) AS quarter_century_start,
     COUNT(*) AS birth_count
 FROM people p
 WHERE p.birth_date IS NOT NULL
   AND p.birth_place IS NOT NULL
 GROUP BY
     p.birth_place,
-    (EXTRACT(YEAR FROM p.birth_date)::int / 25)
+    ((EXTRACT(YEAR FROM p.birth_date)::int / 25) * 25)
 ORDER BY
     city,
-    quarter_century;
+    quarter_century_start;

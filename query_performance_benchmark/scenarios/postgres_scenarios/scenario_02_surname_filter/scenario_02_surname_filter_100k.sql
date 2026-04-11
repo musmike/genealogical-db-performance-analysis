@@ -10,15 +10,14 @@
 -- RECOMMENDED PARAMETERS: Surname = 'Wróbel', Birth Year Range = 1646-1695
 
 SELECT
-    p.id,
+    p.id AS person_id,
     p.given_name,
     p.surname,
-    p.birth_date,
-    p.birth_place,
     p.sex,
-    p.death_date
+    p.birth_date,
+    p.death_date,
+    p.birth_place
 FROM people p
 WHERE p.surname = 'Wróbel'
-  AND p.birth_date IS NOT NULL
   AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1646 AND 1695
-ORDER BY p.birth_date;
+ORDER BY p.birth_date ASC;

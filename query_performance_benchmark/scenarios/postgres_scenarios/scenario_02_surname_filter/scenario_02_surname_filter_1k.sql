@@ -10,15 +10,14 @@
 -- RECOMMENDED PARAMETERS: Surname = 'Michalski', Birth Year Range = 1814-1863
 
 SELECT
-    p.id,
+    p.id AS person_id,
     p.given_name,
     p.surname,
-    p.birth_date,
-    p.birth_place,
     p.sex,
-    p.death_date
+    p.birth_date,
+    p.death_date,
+    p.birth_place
 FROM people p
 WHERE p.surname = 'Michalski'
-  AND p.birth_date IS NOT NULL
   AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1814 AND 1863
-ORDER BY p.birth_date;
+ORDER BY p.birth_date ASC;
