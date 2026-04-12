@@ -2,74 +2,72 @@
 Biological relationships only.
 Objective: Find person with most distinct biological ancestors up to 5 generations back.
 Theoretical max (Perfect Tree): 62
-Distinct biological ancestors found: 62
+Distinct biological ancestors found: 60
 
-Recommended Person ID: 998
+Recommended Person ID: 987
 
 
-Expected rows: 62
+Expected rows: 60
 
-ancestor_id | generation | given_name | surname     | sex | birth_date | birth_place     | death_date | death_place | burial_place            | cause_of_death     | father_id | mother_id
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-799         | 1          | Tomasz     | Michalski   | M   | 1921-03-09 | Bronowice       | NULL       | NULL        | NULL                    | NULL               | 565       | 663      
-863         | 1          | Alicja     | Lewandowska | F   | 1938-01-26 | Stettin         | NULL       | NULL        | NULL                    | NULL               | 686       | 774      
-565         | 2          | Krzysztof  | Michalski   | M   | 1869-09-08 | Sandomierz      | 1944-05-20 | Warszawa    | Cemetery in Warszawa    | Starvation         | 402       | 436      
-663         | 2          | Maja       | Pawlak      | F   | 1892-06-14 | Warszawa        | NULL       | NULL        | NULL                    | NULL               | 525       | 538      
-686         | 2          | Grzegorz   | Lewandowski | M   | 1897-08-16 | Gliwice         | NULL       | NULL        | NULL                    | NULL               | 447       | 550      
-774         | 2          | Maja       | Krawczyk    | F   | 1915-02-28 | Danzig          | NULL       | NULL        | NULL                    | NULL               | 614       | 626      
-402         | 3          | Andrzej    | Michalski   | M   | 1821-10-01 | Tykocin         | 1873-07-18 | Cieszyn     | Cemetery in Cieszyn     | Pneumonia          | 275       | 317      
-436         | 3          | Urszula    | Mazur       | F   | 1835-04-01 | Bromberg        | 1897-09-14 | Sanok       | Cemetery in Sanok       | Apoplexy           | 233       | 369      
-447         | 3          | Józef      | Lewandowski | M   | 1837-04-12 | Sandomierz      | 1929-04-23 | Radom       | Cemetery in Radom       | Fire               | 334       | 378      
-525         | 3          | Julian     | Pawlak      | M   | 1860-10-18 | Chochołów       | 1919-07-18 | Breslau     | Cemetery in Breslau     | Dropsy             | 380       | 384      
-538         | 3          | Anna       | Michalska   | F   | 1862-05-12 | Pszczyna        | 1944-08-02 | Lublin      | Cemetery in Lublin      | Unknown            | 431       | 441      
-550         | 3          | Regina     | Michalska   | F   | 1866-07-22 | Lublin          | 1905-02-13 | Częstochowa | Cemetery in Częstochowa | NULL               | 438       | 461      
-614         | 3          | Marcin     | Krawczyk    | M   | 1878-05-12 | Sosnowiec       | 1948-04-11 | Posen       | Cemetery in Posen       | Typhus             | 425       | 508      
-626         | 3          | Teresa     | Grabowska   | F   | 1881-06-01 | Wisła           | 1918-11-06 | Tykocin     | Cemetery in Tykocin     | Fever              | 486       | 513      
-233         | 4          | Szymon     | Mazur       | M   | 1782-12-10 | Danzig          | 1855-11-20 | Olsztyn     | Cemetery in Olsztyn     | Typhus             | 148       | 166      
-275         | 4          | Marian     | Michalski   | M   | 1787-12-15 | Danzig          | 1865-05-18 | Gliwice     | Cemetery in Gliwice     | Fire               | 116       | 163      
-317         | 4          | Danuta     | Kozłowska   | F   | 1801-07-16 | Sandomierz      | 1865-11-16 | Rzeszów     | Cemetery in Rzeszów     | Fever              | 194       | 231      
-334         | 4          | Jan        | Lewandowski | M   | 1807-03-06 | Sromowce        | 1887-11-28 | Kielce      | Cemetery in Kielce      | Heart failure      | 239       | 226      
-369         | 4          | Teresa     | Kwiatkowska | F   | 1814-01-06 | Gdynia          | 1889-08-22 | Częstochowa | Cemetery in Częstochowa | Pneumonia          | 240       | 305      
-378         | 4          | Elżbieta   | Michalska   | F   | 1815-01-12 | Danzig          | 1876-07-06 | Wisła       | Cemetery in Wisła       | Fever              | 252       | 256      
-380         | 4          | Antoni     | Pawlak      | M   | 1815-01-15 | Lanckorona      | 1892-01-04 | Katowice    | Cemetery in Katowice    | Consumption        | 307       | 237      
-384         | 4          | Czesława   | Michalska   | F   | 1816-04-03 | Rzeszów         | 1898-10-07 | Breslau     | Cemetery in Breslau     | Infectious disease | 205       | 247      
-425         | 4          | Wojciech   | Krawczyk    | M   | 1833-07-07 | Łódź            | 1908-02-21 | Białystok   | Cemetery in Białystok   | Heart failure      | 292       | 344      
-431         | 4          | Antoni     | Michalski   | M   | 1834-10-09 | Łódź            | 1876-09-21 | Stettin     | Cemetery in Stettin     | Starvation         | 300       | 341      
-438         | 4          | Julian     | Michalski   | M   | 1835-10-20 | Sromowce        | 1904-02-15 | Reszel      | Cemetery in Reszel      | Infectious disease | 352       | 343      
-441         | 4          | Barbara    | Nowakowska  | F   | 1836-03-28 | Bromberg        | 1876-09-21 | Chochołów   | Cemetery in Chochołów   | Plague             | 294       | 335      
-461         | 4          | Zofia      | Kowalczyk   | F   | 1839-11-13 | Radom           | 1921-04-26 | Pszczyna    | Cemetery in Pszczyna    | NULL               | 221       | 355      
-486         | 4          | Czesław    | Grabowski   | M   | 1845-08-23 | Lublin          | 1905-03-03 | Warszawa    | Cemetery in Warszawa    | Dropsy             | 325       | 347      
-508         | 4          | Rozalia    | Michalska   | F   | 1853-05-20 | Reszel          | 1916-05-16 | Złoty Potok | Cemetery in Złoty Potok | Consumption        | 356       | 418      
-513         | 4          | Genowefa   | Wieczorek   | F   | 1855-06-25 | Chełmno         | 1881-09-13 | Sandomierz  | Cemetery in Sandomierz  | Heart failure      | 398       | 433      
-116         | 5          | Jerzy      | Michalski   | M   | 1752-01-05 | Chełmno         | 1830-02-25 | Olsztyn     | Cemetery in Olsztyn     | Drowning           | NULL      | NULL     
-148         | 5          | Mateusz    | Mazur       | M   | 1753-02-07 | Sanok           | 1811-05-24 | Cieszyn     | Cemetery in Cieszyn     | NULL               | 81        | 82       
-163         | 5          | Bożena     | Król        | F   | 1755-02-02 | Posen           | 1832-08-20 | Wisła       | Cemetery in Wisła       | Cholera            | 5         | 6        
-166         | 5          | Anna       | Pawłowska   | F   | 1755-10-23 | Reszel          | 1822-11-06 | Bromberg    | Cemetery in Bromberg    | Stroke             | 23        | 24       
-194         | 5          | Tadeusz    | Kozłowski   | M   | 1760-12-05 | Danzig          | 1814-09-13 | Chełmno     | Cemetery in Chełmno     | Fever              | 79        | 46       
-205         | 5          | Marek      | Michalski   | M   | 1778-05-16 | Biecz           | 1853-04-18 | Lublin      | Cemetery in Lublin      | Starvation         | 101       | 121      
-221         | 5          | Mirosław   | Kowalczyk   | M   | 1781-02-24 | Radom           | 1875-08-15 | Biecz       | Cemetery in Biecz       | Typhus             | 128       | 108      
-226         | 5          | Monika     | Michalska   | F   | 1782-08-07 | Chełmno         | 1860-05-02 | Sosnowiec   | Cemetery in Sosnowiec   | Plague             | 135       | 111      
-231         | 5          | Zofia      | Nowakowska  | F   | 1782-08-03 | Radom           | 1858-12-04 | Kielce      | Cemetery in Kielce      | NULL               | 169       | 104      
-237         | 5          | Krystyna   | Kowalczyk   | F   | 1783-10-04 | Lanckorona      | 1840-11-15 | Zalipie     | Cemetery in Zalipie     | Murder             | 128       | 108      
-239         | 5          | Maciej     | Lewandowski | M   | 1783-03-11 | Wisła           | 1834-11-24 | Rzeszów     | Cemetery in Rzeszów     | Plague             | 122       | 149      
-240         | 5          | Grzegorz   | Kwiatkowski | M   | 1783-04-17 | Gliwice         | 1859-10-11 | Rzeszów     | Cemetery in Rzeszów     | Smallpox           | 159       | 155      
-247         | 5          | Ludwika    | Szymańska   | F   | 1783-07-18 | Warszawa        | 1847-04-12 | Chochołów   | Cemetery in Chochołów   | Infectious disease | 123       | 125      
-252         | 5          | Jerzy      | Michalski   | M   | 1784-10-11 | Bronowice       | 1859-02-24 | Wisła       | Cemetery in Wisła       | NULL               | 116       | 163      
-256         | 5          | Danuta     | Grabowska   | F   | 1785-04-03 | Kazimierz Dolny | 1875-01-10 | Białystok   | Cemetery in Białystok   | Fever              | 129       | 145      
-292         | 5          | Piotr      | Krawczyk    | M   | 1788-04-19 | Białystok       | 1872-12-22 | Katowice    | Cemetery in Katowice    | Fire               | 87        | 189      
-294         | 5          | Marian     | Nowakowski  | M   | 1789-02-17 | Bronowice       | 1862-11-08 | Olsztyn     | Cemetery in Olsztyn     | Plague             | 130       | 105      
-300         | 5          | Mirosław   | Michalski   | M   | 1790-06-18 | Złoty Potok     | 1872-03-20 | Rzeszów     | Cemetery in Rzeszów     | NULL               | 165       | 112      
-305         | 5          | Joanna     | Jankowska   | F   | 1791-10-28 | Kazimierz Dolny | 1871-10-24 | Kielce      | Cemetery in Kielce      | Infectious disease | 164       | 175      
-307         | 5          | Mateusz    | Pawlak      | M   | 1792-09-22 | Supraśl         | 1838-10-10 | Lublin      | Cemetery in Lublin      | Stroke             | 174       | 192      
-325         | 5          | Dariusz    | Grabowski   | M   | 1805-02-12 | Zwierzyniec     | 1867-10-03 | Lublin      | Cemetery in Lublin      | Accident           | 206       | 230      
-335         | 5          | Katarzyna  | Grabowska   | F   | 1807-02-08 | Sandomierz      | 1868-05-11 | Reszel      | Cemetery in Reszel      | Heart failure      | 236       | 224      
-341         | 5          | Oliwia     | Mazur       | F   | 1809-07-16 | Rzeszów         | 1880-04-26 | Chełmno     | Cemetery in Chełmno     | Accident           | NULL      | NULL     
-343         | 5          | Krystyna   | Michalska   | F   | 1809-03-15 | Rzeszów         | 1901-01-14 | Tykocin     | Cemetery in Tykocin     | Heart failure      | 248       | 244      
-344         | 5          | Zofia      | Pawlak      | F   | 1809-11-14 | Lanckorona      | 1869-09-01 | Warszawa    | Cemetery in Warszawa    | Accident           | 302       | 277      
-347         | 5          | Anna       | Mazur       | F   | 1810-04-12 | Lublin          | 1869-04-14 | Chochołów   | Cemetery in Chochołów   | NULL               | 233       | 229      
-352         | 5          | Czesław    | Michalski   | M   | 1810-07-27 | Pszczyna        | 1891-10-14 | Bronowice   | Cemetery in Bronowice   | Influenza          | 216       | 280      
-355         | 5          | Alicja     | Pawlak      | F   | 1811-08-03 | Zwierzyniec     | 1884-09-05 | Lublin      | Cemetery in Lublin      | Consumption        | 302       | 277      
-356         | 5          | Kamil      | Michalski   | M   | 1811-08-27 | Zwierzyniec     | 1882-04-26 | Chełmno     | Cemetery in Chełmno     | Starvation         | 272       | 219      
-398         | 5          | Wiesław    | Wieczorek   | M   | 1820-05-13 | Bromberg        | 1881-12-25 | Sanok       | Cemetery in Sanok       | Heart failure      | 296       | 207      
-418         | 5          | Stefania   | Kozłowska   | F   | 1830-09-28 | Kazimierz Dolny | 1887-12-17 | Olsztyn     | Cemetery in Olsztyn     | Accident           | 330       | 338      
-433         | 5          | Ludwika    | Nowakowska  | F   | 1834-12-08 | Sanok           | 1895-09-06 | Warszawa    | Cemetery in Warszawa    | Dysentery          | 294       | 335      
+ancestor_id | generation | given_name | surname       | sex | birth_date | birth_place     | death_date | death_place     | burial_place                | cause_of_death     | father_id | mother_id
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+547         | 1          | Mirosław   | Nowak         | M   | 1971-07-20 | Katowice        | NULL       | NULL            | NULL                        | NULL               | 313       | 420      
+690         | 1          | Grażyna    | Zielińska     | F   | 1992-06-02 | Chełmno         | NULL       | NULL            | NULL                        | NULL               | 470       | 443      
+313         | 2          | Michał     | Nowak         | M   | 1911-10-23 | Rzeszów         | 1990-04-24 | Lublin          | Cemetery in Lublin          | Infectious disease | 196       | 210      
+420         | 2          | Regina     | Baran         | F   | 1944-02-04 | Rzeszów         | NULL       | NULL            | NULL                        | NULL               | 294       | 327      
+443         | 2          | Monika     | Lewandowska   | F   | 1948-07-17 | Zwierzyniec     | 2007-06-15 | Bromberg        | Cemetery in Bromberg        | Cancer             | 279       | 353      
+470         | 2          | Marcin     | Zieliński     | M   | 1956-09-02 | Złoty Potok     | 2014-01-28 | Zwierzyniec     | Cemetery in Zwierzyniec     | Fire               | 325       | 339      
+196         | 3          | Michał     | Nowak         | M   | 1869-07-23 | Posen           | 1937-10-11 | Sosnowiec       | Cemetery in Sosnowiec       | Dropsy             | 117       | 120      
+210         | 3          | Zofia      | Zielińska     | F   | 1875-02-04 | Katowice        | 1965-08-08 | Chełmno         | Cemetery in Chełmno         | Accident           | 139       | 116      
+279         | 3          | Kazimierz  | Lewandowski   | M   | 1901-09-19 | Białystok       | 1983-04-22 | Biecz           | Cemetery in Biecz           | Cholera            | 192       | 171      
+294         | 3          | Łukasz     | Baran         | M   | 1905-08-09 | Pszczyna        | 1959-01-19 | Olsztyn         | Cemetery in Olsztyn         | NULL               | 182       | 230      
+325         | 3          | Krzysztof  | Zieliński     | M   | 1915-08-20 | Olsztyn         | 1955-05-13 | Łódź            | Cemetery in Łódź            | Pneumonia          | 227       | 211      
+327         | 3          | Agnieszka  | Wiśniewska    | F   | 1916-11-22 | Białystok       | 1984-05-28 | Sandomierz      | Cemetery in Sandomierz      | Accident           | 236       | 243      
+339         | 3          | Stefania   | Mazur         | F   | 1920-03-02 | Zalipie         | 1995-02-08 | Częstochowa     | Cemetery in Częstochowa     | Typhus             | 222       | 244      
+353         | 3          | Julia      | Lewandowska   | F   | 1923-07-23 | Sosnowiec       | 1953-03-16 | Warszawa        | Cemetery in Warszawa        | Cancer             | 168       | 240      
+116         | 4          | Ludwika    | Baran         | F   | 1834-12-09 | Bronowice       | 1907-11-03 | Danzig          | Cemetery in Danzig          | Dysentery          | 75        | 76       
+117         | 4          | Bartosz    | Nowak         | M   | 1835-04-12 | Olsztyn         | 1919-06-27 | Radom           | Cemetery in Radom           | NULL               | 78        | 54       
+120         | 4          | Irena      | Szymańska     | F   | 1837-07-17 | Łódź            | 1903-05-27 | Bronowice       | Cemetery in Bronowice       | Influenza          | 50        | 69       
+139         | 4          | Mateusz    | Zieliński     | M   | 1847-10-12 | Gdynia          | 1912-08-12 | Zalipie         | Cemetery in Zalipie         | NULL               | 63        | 64       
+168         | 4          | Wojciech   | Lewandowski   | M   | 1858-09-25 | Gliwice         | 1928-02-08 | Kielce          | Cemetery in Kielce          | Influenza          | 97        | 65       
+171         | 4          | Leokadia   | Zając         | F   | 1860-02-05 | Reszel          | 1948-10-07 | Chochołów       | Cemetery in Chochołów       | Dropsy             | 73        | 89       
+182         | 4          | Henryk     | Baran         | M   | 1864-09-27 | Kazimierz Dolny | 1936-02-11 | Zalipie         | Cemetery in Zalipie         | Smallpox           | 114       | 115      
+192         | 4          | Jan        | Lewandowski   | M   | 1867-04-10 | Sromowce        | 1915-06-16 | Kielce          | Cemetery in Kielce          | Dysentery          | 66        | 127      
+211         | 4          | Halina     | Król          | F   | 1875-08-02 | Bronowice       | 1917-07-14 | Zwierzyniec     | Cemetery in Zwierzyniec     | Pneumonia          | 104       | 133      
+222         | 4          | Jan        | Mazur         | M   | 1880-05-14 | Lublin          | 1953-01-26 | Chełmno         | Cemetery in Chełmno         | Stroke             | 161       | 154      
+227         | 4          | Mirosław   | Zieliński     | M   | 1882-01-27 | Lipce           | 1944-09-18 | Tykocin         | Cemetery in Tykocin         | Fever              | 152       | 124      
+230         | 4          | Barbara    | Nowak         | F   | 1882-09-10 | Chełmno         | 1930-03-15 | Sandomierz      | Cemetery in Sandomierz      | Unknown            | 158       | 142      
+236         | 4          | Maciej     | Wiśniewski    | M   | 1884-06-22 | Pszczyna        | 1934-11-18 | Biecz           | Cemetery in Biecz           | Infectious disease | 145       | 141      
+240         | 4          | Helena     | Wiśniewska    | F   | 1887-08-08 | Warszawa        | 1955-03-10 | Sromowce        | Cemetery in Sromowce        | Infectious disease | 145       | 141      
+243         | 4          | Aleksandra | Kaczmarek     | F   | 1888-01-28 | Lipce           | 1938-11-19 | Lipce           | Cemetery in Lipce           | Accident           | 153       | 185      
+244         | 4          | Teresa     | Zając         | F   | 1889-02-13 | Radom           | 1932-07-16 | Bronowice       | Cemetery in Bronowice       | Plague             | 160       | 149      
+50          | 5          | Krzysztof  | Szymański     | M   | 1803-03-20 | Kielce          | 1888-02-23 | Posen           | Cemetery in Posen           | Fever              | 39        | 40       
+54          | 5          | Elżbieta   | Wiśniewska    | F   | 1806-08-19 | Cieszyn         | 1870-08-24 | Zwierzyniec     | Cemetery in Zwierzyniec     | Smallpox           | 25        | 26       
+63          | 5          | Antoni     | Zieliński     | M   | 1813-07-22 | Reszel          | 1883-07-07 | Thorn           | Cemetery in Thorn           | NULL               | 3         | 4        
+64          | 5          | Krystyna   | Nowakowska    | F   | 1814-06-24 | Reszel          | 1876-05-12 | Tykocin         | Cemetery in Tykocin         | Unknown            | 35        | 36       
+65          | 5          | Marianna   | Kowalczyk     | F   | 1814-04-24 | Sromowce        | 1909-01-01 | Pszczyna        | Cemetery in Pszczyna        | NULL               | 37        | 38       
+66          | 5          | Julian     | Lewandowski   | M   | 1815-06-06 | Krynica         | 1894-03-12 | Olsztyn         | Cemetery in Olsztyn         | Fever              | 1         | 2        
+69          | 5          | Kazimiera  | Zając         | F   | 1816-01-18 | Breslau         | 1875-08-12 | Częstochowa     | Cemetery in Częstochowa     | Apoplexy           | 13        | 14       
+73          | 5          | Dariusz    | Zając         | M   | 1818-06-25 | Łódź            | 1899-07-09 | Wisła           | Cemetery in Wisła           | Cancer             | 13        | 14       
+75          | 5          | Czesław    | Baran         | M   | 1792-05-18 | Zwierzyniec     | 1849-12-25 | Chełmno         | Cemetery in Chełmno         | Smallpox           | NULL      | NULL     
+76          | 5          | Teresa     | Kowalczyk     | F   | 1792-12-02 | Częstochowa     | 1859-01-13 | Olsztyn         | Cemetery in Olsztyn         | Accident           | NULL      | NULL     
+78          | 5          | Kazimierz  | Nowak         | M   | 1799-12-13 | Chochołów       | 1852-12-11 | Breslau         | Cemetery in Breslau         | Fire               | NULL      | NULL     
+89          | 5          | Wanda      | Baran         | F   | 1824-08-10 | Lanckorona      | 1891-04-11 | Kazimierz Dolny | Cemetery in Kazimierz Dolny | War casualty       | 75        | 76       
+97          | 5          | Jakub      | Lewandowski   | M   | 1826-11-12 | Tykocin         | 1900-01-13 | Olsztyn         | Cemetery in Olsztyn         | Plague             | 80        | 81       
+104         | 5          | Franciszek | Król          | M   | 1828-09-16 | Krynica         | 1905-03-08 | Katowice        | Cemetery in Katowice        | Cholera            | 83        | 84       
+114         | 5          | Adam       | Baran         | M   | 1833-12-28 | Warszawa        | 1877-08-15 | Białystok       | Cemetery in Białystok       | NULL               | 75        | 76       
+115         | 5          | Barbara    | Wiśniewska    | F   | 1833-06-09 | Lipce           | 1885-05-28 | Sandomierz      | Cemetery in Sandomierz      | Cholera            | 51        | 56       
+124         | 5          | Ewa        | Nowak         | F   | 1841-11-09 | Biecz           | 1914-02-25 | Bromberg        | Cemetery in Bromberg        | NULL               | NULL      | NULL     
+127         | 5          | Aleksandra | Nowak         | F   | 1842-03-17 | Kielce          | 1895-04-25 | Sanok           | Cemetery in Sanok           | Consumption        | 78        | 54       
+133         | 5          | Danuta     | Baran         | F   | 1843-10-14 | Lipce           | 1886-10-08 | Katowice        | Cemetery in Katowice        | Drowning           | 75        | 70       
+141         | 5          | Danuta     | Wojciechowska | F   | 1848-07-05 | Posen           | 1911-12-10 | Złoty Potok     | Cemetery in Złoty Potok     | Typhus             | 52        | 58       
+142         | 5          | Halina     | Zielińska     | F   | 1848-02-25 | Pszczyna        | 1938-08-03 | Biecz           | Cemetery in Biecz           | War casualty       | 68        | 71       
+145         | 5          | Tomasz     | Wiśniewski    | M   | 1849-03-02 | Wisła           | 1931-05-27 | Częstochowa     | Cemetery in Częstochowa     | Cholera            | 105       | 72       
+149         | 5          | Maja       | Wiśniewska    | F   | 1851-04-11 | Częstochowa     | 1895-05-08 | Chochołów       | Cemetery in Chochołów       | Consumption        | 105       | 72       
+152         | 5          | Kamil      | Zieliński     | M   | 1852-10-02 | Rzeszów         | 1904-11-19 | Tykocin         | Cemetery in Tykocin         | Apoplexy           | 63        | 64       
+153         | 5          | Kamil      | Kaczmarek     | M   | 1852-12-19 | Wisła           | 1909-11-15 | Kraków          | Cemetery in Kraków          | Heart failure      | 102       | 99       
+154         | 5          | Krystyna   | Kaczmarek     | F   | 1853-09-17 | Cieszyn         | 1919-02-05 | Sromowce        | Cemetery in Sromowce        | Infectious disease | 102       | 99       
+158         | 5          | Grzegorz   | Nowak         | M   | 1853-03-27 | Biecz           | 1904-07-12 | Kraków          | Cemetery in Kraków          | Plague             | 96        | 70       
+160         | 5          | Piotr      | Zając         | M   | 1854-08-14 | Warszawa        | 1890-03-20 | Gdynia          | Cemetery in Gdynia          | Apoplexy           | 73        | 89       
+161         | 5          | Mirosław   | Mazur         | M   | 1855-08-27 | Radom           | 1908-07-22 | Częstochowa     | Cemetery in Częstochowa     | Drowning           | 67        | 94       
+185         | 5          | Józefa     | Szymańska     | F   | 1864-09-23 | Biecz           | 1921-04-20 | Chochołów       | Cemetery in Chochołów       | Unknown            | 118       | 109      

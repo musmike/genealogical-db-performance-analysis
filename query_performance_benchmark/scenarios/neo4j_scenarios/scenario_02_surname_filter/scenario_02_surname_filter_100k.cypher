@@ -7,11 +7,11 @@
 // Orders the results by birth_date ascending.
 
 
-// RECOMMENDED PARAMETERS: Surname = 'Wróbel', Birth Year Range = 1646-1695
+// RECOMMENDED PARAMETERS: Surname = 'Mazur', Birth Year Range = 1661-1710
 
 MATCH (n:Person)
-WHERE n.birthDate.year >= 1646 and n.birthDate.year <= 1695
-AND n.surname = 'Wróbel'
+WHERE n.birthDate.year >= 1661 and n.birthDate.year <= 1710
+AND n.surname = 'Mazur'
 RETURN 
 n.id as person_id,
 n.givenName as given_name,

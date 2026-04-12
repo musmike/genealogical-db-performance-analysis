@@ -4,17 +4,19 @@ import random
 import re
 from collections import Counter, defaultdict
 from typing import Dict, List, Optional
+import matplotlib.pyplot as plt
 from models import Person, Family
 from config import SCENARIOS
 from demographics import is_too_closely_related
 
 class AnalyticsEngine:
     """
-    Executes post-simulation analysis, graph topology verification, 
+    Executes post-simulation analysis, graph topology verification,
     and automatically updates SQL/Cypher test scenarios with valid IDs derived from the dataset.
     """
-    def __init__(self, people: Dict[int, Person], families: Dict[int, Family], target_population: int, 
-                 start_year: int, current_year: int, history_log: List[str], output_dir: str):
+
+    def __init__(self, people: Dict[int, Person], families: Dict[int, Family], target_population: int,
+                 start_year: int, current_year: int, history_log: List[str], output_dir: str, yearly_data: List[tuple]):
         self.people = people
         self.families = families
         self.target_population = target_population
@@ -22,6 +24,7 @@ class AnalyticsEngine:
         self.current_year = current_year
         self.history_log = history_log
         self.output_dir = output_dir
+        self.yearly_data = yearly_data
 
     def run(self):
         config = SCENARIOS.get(self.target_population, {'min_lca_path': 8, 'max_lca_path': 99, 'ancestors_depth': 5})
@@ -30,7 +33,7 @@ class AnalyticsEngine:
         target_ancestors_depth = config['ancestors_depth']
 
         target_descendants_depth = config.get('descendants_depth', 3 if self.target_population <= 1000
-            else (6 if self.target_population <= 10000 else 10))
+        else (6 if self.target_population <= 10000 else 10))
 
         target_label = str(target_lca_min) if target_lca_min == target_lca_max else f"{target_lca_min}-{target_lca_max}"
 
@@ -71,7 +74,7 @@ class AnalyticsEngine:
             if is_biological_child(p_id):
                 fam = self.families[p.parents_family_id]
                 d_husband = depths.get(fam.husband_id, 0) if fam.husband_id else 0
-                d_wife    = depths.get(fam.wife_id, 0)    if fam.wife_id    else 0
+                d_wife = depths.get(fam.wife_id, 0) if fam.wife_id else 0
                 d = max(d_husband, d_wife) + 1
             else:
                 d = 1
@@ -626,15 +629,51 @@ class AnalyticsEngine:
             candidate=candidate
         )
 
+        self._plot_population_growth()
+
+    def _plot_population_growth(self):
+        """Generates a population growth line chart inside the dataset's output directory."""
+        if not self.yearly_data:
+            return
+
+        years = [row[0] for row in self.yearly_data]
+        alive_counts = [row[1] for row in self.yearly_data]
+
+        colors = {
+            1000: "tab:blue",
+            10000: "tab:orange",
+            100000: "tab:green"
+        }
+
+        if self.target_population == 1000:
+            dataset_label = "1k"
+        elif self.target_population == 10000:
+            dataset_label = "10k"
+        else:
+            dataset_label = "100k"
+
+        plt.figure(figsize=(10, 6))
+        plt.plot(years, alive_counts, color=colors.get(self.target_population, "tab:grey"), linewidth=3)
+        plt.title(f"Population Growth: {dataset_label.upper()} Target", fontsize=16, fontweight='bold')
+        plt.xlabel("Simulation Year", fontsize=12)
+        plt.ylabel("Living Population", fontsize=12)
+        plt.grid(True, which="both", linestyle='--', alpha=0.7)
+        plt.tight_layout()
+
+        output_image = os.path.join(self.output_dir, f"population_growth.png")
+        plt.savefig(output_image, dpi=300)
+        print(f"[{self.target_population}] Graph saved to: {output_image}")
+        plt.close()
+
     def _update_scenario_files(
-        self,
-        lca_p1_id: Optional[int],
-        lca_p2_id: Optional[int],
-        ancestor_id: Optional[int],
-        descendant_id: Optional[int],
-        surname: Optional[str],
-        year_start: Optional[int],
-        candidate           # Person | None
+            self,
+            lca_p1_id: Optional[int],
+            lca_p2_id: Optional[int],
+            ancestor_id: Optional[int],
+            descendant_id: Optional[int],
+            surname: Optional[str],
+            year_start: Optional[int],
+            candidate  # Person | None
     ):
         """
         Dynamically modifies the SQL and Cypher query files in the benchmark suite

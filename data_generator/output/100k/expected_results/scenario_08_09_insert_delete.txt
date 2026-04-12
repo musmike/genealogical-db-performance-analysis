@@ -2,24 +2,24 @@
 Benchmark: Insert two biological parents and one sibling for an existing adopted person, then delete them.
 
 Target Person (Adopted child anchor):
-  - ID: 244
-  - Name: Marek Walczak
-  - Birth year: 802
-  - Adopting Family ID: 88
+  - ID: 368
+  - Name: Czesława Majewska
+  - Birth year: 811
+  - Adopting Family ID: 128
 This person has no biological parents in the dataset, making it safe to INSERT new ones.
 
 [RECORDS TO BE INSERTED / DELETED]
 Person entities to insert (Columns: id, given_name, surname, sex, is_deceased, birth_date, birth_place, death_date, death_place, cause_of_death, burial_place, occupation):
-  1. Father (ID 200001): 'Jan', 'Kowalski', 'M', true, '0772-06-15', 'Kraków', '0837-11-02', 'Kraków', 'Old age', 'Cemetery in Kraków', 'Farmer'
-  2. Mother (ID 200002): 'Anna', 'Kowalska', 'F', true, '0775-03-22', 'Kraków', '0845-01-10', 'Kraków', 'Fever', 'Cemetery in Kraków', 'Weaver'
-  3. Sibling (ID 200003): 'Piotr', 'Kowalski', 'M', true, '0805-09-01', 'Kraków', '0835-04-12', 'Kraków', 'Accident', 'Cemetery in Kraków', 'Blacksmith'
+  1. Father (ID 200001): 'Jan', 'Kowalski', 'M', true, '0781-06-15', 'Kraków', '0846-11-02', 'Kraków', 'Old age', 'Cemetery in Kraków', 'Farmer'
+  2. Mother (ID 200002): 'Anna', 'Kowalska', 'F', true, '0784-03-22', 'Kraków', '0854-01-10', 'Kraków', 'Fever', 'Cemetery in Kraków', 'Weaver'
+  3. Sibling (ID 200003): 'Piotr', 'Kowalski', 'M', true, '0814-09-01', 'Kraków', '0844-04-12', 'Kraków', 'Accident', 'Cemetery in Kraków', 'Blacksmith'
 
 Family entity to insert (Columns: id, status, marriage_date, marriage_place, husband_id, wife_id):
-  1. Marriage (ID 200001): 'MARRIED', '0794-05-10', 'Kraków', 200001, 200002
+  1. Marriage (ID 200001): 'MARRIED', '0803-05-10', 'Kraków', 200001, 200002
 
 Relationships to establish:
   - Father (ID 200001) is husband of Family (ID 200001)
   - Mother (ID 200002) is wife of Family (ID 200001)
-  - Biological parent-child link between Family (ID 200001) and the anchor child (ID 244)
+  - Biological parent-child link between Family (ID 200001) and the anchor child (ID 368)
   - Biological parent-child link between Family (ID 200001) and the new sibling (ID 200003)
 

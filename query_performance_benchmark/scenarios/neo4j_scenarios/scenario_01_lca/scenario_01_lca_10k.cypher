@@ -9,17 +9,17 @@
 // Orders the results by lca_id ascending.
 
 
-// RECOMMENDED PARAMETERS: Person A = 6523, Person B = 9944
+// RECOMMENDED PARAMETERS: Person A = 8544, Person B = 6371
 
 MATCH (startNode:Person) 
-WHERE startNode.id IN [6523, 9944]
+WHERE startNode.id IN [8544, 6371]
 MATCH p = SHORTEST 1 PATHS (startNode)
     ((:Person)<-[:HAS_CHILD {relationshipType: 'BIOLOGICAL'}]-(:Family)
     <-[:HUSBAND_OF|WIFE_OF]-()){0,11}(anc:Person)
 WITH anc, startNode.id AS sId, length(p)/2 AS dist
 WITH anc,
-     min(CASE WHEN sId=6523 THEN dist END) AS distA,
-     min(CASE WHEN sId=9944 THEN dist END) AS distB
+     min(CASE WHEN sId=8544 THEN dist END) AS distA,
+     min(CASE WHEN sId=6371 THEN dist END) AS distB
 WHERE distA IS NOT NULL AND distB IS NOT NULL
 WITH anc, distA, distB, distA+distB AS total_dist
 WITH min(total_dist) AS minTotal, 

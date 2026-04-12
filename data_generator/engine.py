@@ -24,7 +24,8 @@ class SimulationEngine:
     auxiliary indices for living individuals and active families to optimize event processing.
     Upon completion, triggers export and analysis routines.
     """
-    def __init__(self, target_population: int, output_dir: str):
+
+    def __init__(self, target_population: int, output_dir: Optional[str]):
         random.seed(SEED)
         self.target_population = target_population
         self.output_dir = output_dir
@@ -41,13 +42,18 @@ class SimulationEngine:
 
         self.living_people_ids: Set[int] = set()
         self.active_families: Set[int] = set()
-        
-        self.max_living_history = 0 
+
         # Pre-scheduled births indexed by year: year → list of birth descriptor dicts
         self.planned_births: Dict[int, List[dict]] = {}
+
+        # Logs population statistics at regular intervals for later analysis and visualization
         self.history_log = []
 
-        os.makedirs(self.output_dir, exist_ok=True)
+        # Store yearly population data in memory for analytics
+        self.yearly_data: List[tuple] = []
+
+        if self.output_dir:
+            os.makedirs(self.output_dir, exist_ok=True)
 
     def _create_person(self, sex: str, raw_surname: str, birth_year: int,
                        parents_fam_id: Optional[int] = None, region_id: int = 0) -> Person:
@@ -65,7 +71,7 @@ class SimulationEngine:
         # Correction for founding population members who may already be of age at start year —
         # without this, some founders would die before they even enter the simulation loop
         age_now = self.current_year - birth_year
-        if lifespan <= age_now:
+        if lifespan <= age_now and age_now > 0:
             lifespan = age_now + random.randint(5, 35)
 
         # 3% of the population remains celibate and is excluded from the matchmaking process
@@ -89,15 +95,39 @@ class SimulationEngine:
         """
         for i in range(initial_pairs):
             reg = i % 5
-            
+
             age_husband = random.randint(20, 50)
             age_wife = max(18, min(45, age_husband + random.randint(-10, 5)))
-            
+
+            # age_husband = random.randint(20, 28)
+            # age_wife = max(18, min(25, age_husband + random.randint(-3, 2)))
+
             husband = self._create_person('M', random.choice(SURNAMES),
                                           self.start_year - age_husband, region_id=reg)
             wife = self._create_person('F', random.choice(SURNAMES),
                                        self.start_year - age_wife, region_id=reg)
-            self._create_marriage(husband, wife, self.start_year)
+
+            # self._create_marriage(husband, wife, self.start_year)
+            marriage_year = self.start_year + random.randint(0, 15)
+            self._create_marriage(husband, wife, marriage_year)
+
+    def _generate_immigrant_pair(self):
+        """
+        Injects a new fertile couple into the simulation to bridge the generation gap
+        and prevent birth rates from crashing to 0.
+        """
+        reg = random.randint(0, 4)
+
+        # Give them realistic young adult ages (e.g., 20-28) to maximize their fertile window
+        age_husband = random.randint(20, 28)
+        age_wife = max(18, min(30, age_husband + random.randint(-5, 2)))
+
+        husband = self._create_person('M', random.choice(SURNAMES),
+                                      self.current_year - age_husband, region_id=reg)
+        wife = self._create_person('F', random.choice(SURNAMES),
+                                   self.current_year - age_wife, region_id=reg)
+
+        self._create_marriage(husband, wife, self.current_year)
 
     def _create_marriage(self, husband: Person, wife: Person, year: int):
         f_id = self.next_family_id
@@ -147,72 +177,59 @@ class SimulationEngine:
             })
 
     def _process_deaths(self):
-        HARD_LIFESPAN_CAP = 105  # Absolute ceiling — no one can exceed this age
+        """
+        Identify and process all individuals whose lifespan has been exhausted this year.
 
-        critical_candidates = []
-        normal_candidates = []
-        
-        for p_id in self.living_people_ids:
-            p = self.people[p_id]
-            age = self.current_year - p.birth_year
-            if age > HARD_LIFESPAN_CAP:
-                critical_candidates.append(p)
-            elif age >= p.lifespan:
-                normal_candidates.append(p)
-       
-        # Sort descending by age — oldest individuals die first
-        critical_candidates.sort(key=lambda p: (self.current_year - p.birth_year), reverse=True)
-        normal_candidates.sort(key=lambda p: (self.current_year - p.birth_year), reverse=True)
-        
+        Each deceased individual is assigned death metadata (date, place, cause, burial).
+        Individuals who die without a recorded occupation and are at least 18 years old
+        receive one at this point. If the deceased had a living spouse, the spouse's
+        link is cleared and the shared family record is transitioned to WIDOWED status.
+        """
         dead_this_year = set()
 
-        # Individuals exceeding the hard cap die unconditionally
-        for p in critical_candidates:
-            self._process_single_death(p)
-            dead_this_year.add(p.id)
+        for p_id in self.living_people_ids:
+            p = self.people[p_id]
 
-        # Normal deaths are throttled to prevent population from shrinking faster than it grows.
-        # If births in a given year are insufficient, some deaths are deferred to the next cycle.
-        current_living = len(self.living_people_ids) - len(dead_this_year)
-        allowed_deaths = max(0, current_living - self.max_living_history)
-
-        for p in normal_candidates:
-            if p.id in dead_this_year: continue
-            
-            if allowed_deaths > 0:
-                allowed_deaths -= 1
+            if (self.current_year - p.birth_year) >= p.lifespan:
                 self._process_single_death(p)
-                dead_this_year.add(p.id)
-            else:
-                p.lifespan += 1  # Defer death by one year to allow the population to keep growing
-        
+                dead_this_year.add(p_id)
+
         self.living_people_ids.difference_update(dead_this_year)
-            
-        if len(self.living_people_ids) > self.max_living_history:
-            self.max_living_history = len(self.living_people_ids)
 
     def _process_single_death(self, p: Person):
+        """
+        Handles the death of a single individual, including metadata assignment and family status updates.
+        """
         p.is_deceased = True
         p.death_date = random_date(self.current_year)
         p.death_place = random.choice(PLACES)
         p.cause_of_death = random.choice(CAUSES_OF_DEATH)
         p.burial_place = f"Cemetery in {p.death_place}"
 
+        if not p.occupation and (self.current_year - p.birth_year) >= 18:
+            p.occupation = random.choice(OCCUPATIONS)
 
         if p.spouse_id:
             spouse = self.people.get(p.spouse_id)
             if spouse and not spouse.is_deceased:
                 spouse.spouse_id = None
                 spouse.widowed_year = self.current_year
-                
+
                 for f_id in list(self.active_families):
                     fam = self.families[f_id]
                     if (fam.husband_id == p.id and fam.wife_id == spouse.id) or \
                             (fam.wife_id == p.id and fam.husband_id == spouse.id):
                         fam.status = 'WIDOWED'
                         self.active_families.remove(f_id)
+                        break
 
     def _process_divorces(self):
+        """
+        A small percentage of marriages end in divorce each year. Divorces are processed after deaths to avoid
+        complications with widowing. When a divorce occurs, the family status is updated, spouses are marked as ex-spouses of each other, 
+        and the family is removed from the active pool to prevent further births. Divorced individuals can remarry, 
+        but they will not be matched with their ex-spouse or any previous spouses.
+        """
         divorced_this_year = []
         for f_id in self.active_families:
             if random.random() < 0.0005:  # Very low probability
@@ -262,49 +279,70 @@ class SimulationEngine:
 
     def _process_marriages(self):
         """
-        Matches marriage candidates with geographic and biological constraints applied.
-        Candidate pools are first filtered by region to simulate geographic proximity,
-        then checked for kinship before a union is created.
+        Matches eligible singles to form new families using a two-phase approach:
+        first attempting to find a partner within their local region, and if
+        unsuccessful, searching across other regions (triggering migration).
         """
+
+        def _is_valid_partner(male, female):
+            return (
+                    female.spouse_id is None and
+                    female.id not in male.ex_spouses and
+                    not is_too_closely_related(male.id, female.id, self.people, self.families)
+            )
+
         # Split singles by region — simulates geographic constraints on partner selection
         singles_m = {r: [] for r in range(5)}
         singles_f = {r: [] for r in range(5)}
 
+        # Gather eligible singles
         for p_id in self.living_people_ids:
             p = self.people[p_id]
-            if p.spouse_id is None and not p.is_celibate:
-                
-                if p.widowed_year >= self.current_year - 1:
-                    continue
-
+            if p.spouse_id is None and not p.is_celibate and p.widowed_year < self.current_year - 1:
                 age = self.current_year - p.birth_year
                 if p.sex == 'M' and p.target_marriage_age <= age < 65:
                     singles_m[p.region_id].append(p)
                 elif p.sex == 'F' and p.target_marriage_age <= age < 50:
                     singles_f[p.region_id].append(p)
 
+        # Shuffle regional pools to ensure fairness
         for r in range(5):
             random.shuffle(singles_m[r])
             random.shuffle(singles_f[r])
 
-        males_to_marry = [p for region_list in singles_m.values() for p in region_list]
+        # Combine all eligible men into a master list and shuffle
+        males_to_marry = []
+        for r in range(5):
+            males_to_marry.extend(singles_m[r])
         random.shuffle(males_to_marry)
 
+        # Matchmaking Loop
         for male in males_to_marry:
-            if male.spouse_id is not None:
-                continue
+            married = False
 
-            all_available_females = [p for region_list in singles_f.values()
-                                     for p in region_list if p.spouse_id is None]
-            random.shuffle(all_available_females)
-            
-            for female in all_available_females:
-                if female.id in male.ex_spouses:
-                    continue
-
-                if not is_too_closely_related(male.id, female.id, self.people, self.families):
+            # First attempt: find a partner within the same region
+            for female in singles_f[male.region_id]:
+                if _is_valid_partner(male, female):
                     self._create_marriage(male, female, self.current_year)
-                    break 
+                    married = True
+                    break
+
+            # If no local match is found, search across other regions (simulating migration for marriage)
+            if not married:
+                other_females = []
+                for r in range(5):
+                    if r != male.region_id:
+                        other_females.extend(singles_f[r])
+
+                random.shuffle(other_females)
+
+                for female in other_females:
+                    if _is_valid_partner(male, female):
+                        self._create_marriage(male, female, self.current_year)
+
+                        # The wife migrates to the husband's region
+                        female.region_id = male.region_id
+                        break
 
     def run(self):
         """Main chronological event loop — advances year by year until the target population is reached."""
@@ -315,24 +353,33 @@ class SimulationEngine:
         init_pairs = config['initial_pairs']
 
         self._initialize_population(initial_pairs=init_pairs)
-        self.max_living_history = len(self.living_people_ids)
 
         log_start = (f"Year {self.start_year}: Alive {len(self.living_people_ids)} people. "
                      f"Total generated: {len(self.people)}")
         self.history_log.append(log_start)
         print(log_start)
 
+        self.yearly_data.append((self.start_year, len(self.living_people_ids)))
+
         try:
             while len(self.people) < self.target_population:
                 self.current_year += 1
-                
+
+                config_scen = SCENARIOS.get(self.target_population, SCENARIOS[1000])
+                immigrants_per_year = config_scen.get('immigrants', 1)
+
+                offset = self.current_year - self.start_year
+
+                if 20 <= offset <= 25:
+                    for _ in range(immigrants_per_year):
+                        self._generate_immigrant_pair()
+
                 self._process_births()
                 self._process_marriages()
                 self._process_divorces()
                 self._process_deaths()
-                
-                if len(self.living_people_ids) > self.max_living_history:
-                    self.max_living_history = len(self.living_people_ids)
+
+                self.yearly_data.append((self.current_year, len(self.living_people_ids)))
 
                 if (self.current_year - self.start_year) % 25 == 0:
                     log = (f"Year {self.current_year}: Alive {len(self.living_people_ids)} people. "
@@ -359,19 +406,21 @@ class SimulationEngine:
             print(log_end)
             print(f"Success! Target of {len(self.people)} people reached exactly in year {self.current_year}.")
 
-        # Export and analysis run automatically upon simulation completion
-        exporter = DataExporter(self.people, self.families, self.target_population, self.output_dir)
-        exporter.export_to_postgres_csv()
-        exporter.export_to_neo4j_csv()
+        # Export and analysis run automatically, but only if an output directory is provided.
+        if self.output_dir:
+            exporter = DataExporter(self.people, self.families, self.target_population, self.output_dir)
+            exporter.export_to_postgres_csv()
+            exporter.export_to_neo4j_csv()
 
-        print(f"[{self.target_population}] Starting post-simulation analysis...")
-        analytics_engine = AnalyticsEngine(
-            people=self.people,
-            families=self.families,
-            target_population=self.target_population,
-            start_year=self.start_year,
-            current_year=self.current_year,
-            history_log=self.history_log,
-            output_dir=self.output_dir
-        )
-        analytics_engine.run()
+            print(f"[{self.target_population}] Starting post-simulation analysis...")
+            analytics_engine = AnalyticsEngine(
+                people=self.people,
+                families=self.families,
+                target_population=self.target_population,
+                start_year=self.start_year,
+                current_year=self.current_year,
+                history_log=self.history_log,
+                output_dir=self.output_dir,
+                yearly_data=self.yearly_data
+            )
+            analytics_engine.run()

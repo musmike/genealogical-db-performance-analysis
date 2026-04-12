@@ -1,52 +1,54 @@
 === POPULATION AND GRAPH TOPOLOGY REPORT ===
 Target population: 10000
 Total people generated: 10000
-People alive at end of simulation (1995): 1926
-Total families: 4894
+People alive at end of simulation (1999): 2461
+Total families: 4322
 
 --- POPULATION GROWTH OVER TIME ---
-Year 1500: Alive 200 people. Total generated: 200
-Year 1525: Alive 356 people. Total generated: 419
-Year 1550: Alive 382 people. Total generated: 623
-Year 1575: Alive 412 people. Total generated: 812
-Year 1600: Alive 461 people. Total generated: 1033
-Year 1625: Alive 507 people. Total generated: 1291
-Year 1650: Alive 589 people. Total generated: 1592
-Year 1675: Alive 686 people. Total generated: 1947
-Year 1700: Alive 761 people. Total generated: 2309
-Year 1725: Alive 883 people. Total generated: 2753
-Year 1750: Alive 982 people. Total generated: 3231
-Year 1775: Alive 1028 people. Total generated: 3705
-Year 1800: Alive 1169 people. Total generated: 4303
-Year 1825: Alive 1263 people. Total generated: 4879
-Year 1850: Alive 1318 people. Total generated: 5487
-Year 1875: Alive 1397 people. Total generated: 6207
-Year 1900: Alive 1498 people. Total generated: 6918
-Year 1925: Alive 1598 people. Total generated: 7645
-Year 1950: Alive 1641 people. Total generated: 8383
-Year 1975: Alive 1722 people. Total generated: 9187
-Year 1995 (END): Alive 1926 people. Total generated: 10000
+Year 1500: Alive 188 people. Total generated: 188
+Year 1525: Alive 258 people. Total generated: 365
+Year 1550: Alive 294 people. Total generated: 544
+Year 1575: Alive 335 people. Total generated: 724
+Year 1600: Alive 375 people. Total generated: 923
+Year 1625: Alive 380 people. Total generated: 1099
+Year 1650: Alive 414 people. Total generated: 1326
+Year 1675: Alive 462 people. Total generated: 1578
+Year 1700: Alive 521 people. Total generated: 1861
+Year 1725: Alive 571 people. Total generated: 2162
+Year 1750: Alive 635 people. Total generated: 2490
+Year 1775: Alive 725 people. Total generated: 2894
+Year 1800: Alive 840 people. Total generated: 3341
+Year 1825: Alive 933 people. Total generated: 3808
+Year 1850: Alive 1083 people. Total generated: 4399
+Year 1875: Alive 1187 people. Total generated: 5005
+Year 1900: Alive 1325 people. Total generated: 5706
+Year 1925: Alive 1555 people. Total generated: 6578
+Year 1950: Alive 1819 people. Total generated: 7581
+Year 1975: Alive 2062 people. Total generated: 8696
+Year 1999 (END): Alive 2461 people. Total generated: 10000
 
 --- GRAPH TOPOLOGY & DEMOGRAPHICS ---
 Max graph depth (oldest root to youngest descendant): 21 generations
-Average depth of leaf nodes (endpoints): 14.65 generations
-Sex ratio: 5000 Males / 5000 Females
-Average lifespan (deceased individuals): 53.3 years
-Marriage rate: 75.0% of total population
-Total divorces: 59
-Families with children: 3922
-Average children per fertile family: 2.50
-Largest family generated: 10 children
+Average depth of leaf nodes (endpoints): 14.88 generations
+Sex ratio: 4887 Males / 5113 Females
+Average lifespan (deceased individuals): 47.2 years
+Marriage rate: 66.2% of total population
+Total divorces: 66
+Families with children: 3591
+Average children per fertile family: 2.73
+Largest family generated: 12 children
 Family distribution (children per family):
-  1 child(ren): 1148 families
-  2 child(ren): 1151 families
-  3 child(ren): 746 families
-  4 child(ren): 493 families
-  5 child(ren): 233 families
-  6 child(ren): 99 families
-  7 child(ren): 40 families
-  8 child(ren): 8 families
-  9 child(ren): 3 families
-  10 child(ren): 1 families
-Orphans (adopted/foster without biological links): 364 individuals
+  1 child(ren): 931 families
+  2 child(ren): 908 families
+  3 child(ren): 813 families
+  4 child(ren): 451 families
+  5 child(ren): 266 families
+  6 child(ren): 126 families
+  7 child(ren): 63 families
+  8 child(ren): 19 families
+  9 child(ren): 11 families
+  10 child(ren): 2 families
+  11 child(ren): 0 families
+  12 child(ren): 1 families
+Orphans (adopted/foster without biological links): 398 individuals
 

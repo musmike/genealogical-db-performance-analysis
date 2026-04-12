@@ -32,9 +32,9 @@ def get_marriage_age(sex: str) -> int:
 def get_lifespan() -> int:
     """
     Draws a lifespan, accounting for historical infant and child mortality.
-    15% of individuals die before age 5. The remaining population follows a Gaussian distribution.
+    20% of individuals die before age 5. The remaining population follows a Gaussian distribution.
     """
-    if random.random() < 0.15:
+    if random.random() < 0.20:
         return random.randint(0, 5)
     while True:
         lifespan = int(random.gauss(65, 15))
@@ -128,9 +128,9 @@ def adjust_surname(surname: str, sex: str) -> str:
 
 def get_family_status() -> str:
     """Draws a family status for a married couple, with dominant 'MARRIED' status 
-    and smaller probabilities for 'PARTNERS', 'OTHER', and 'ANNULLED'."""
-    return random.choices(['MARRIED', 'PARTNERS', 'OTHER', 'ANNULLED'],
-                          weights=[0.90, 0.06, 0.03, 0.01], k=1)[0]
+    and smaller probabilities for 'PARTNERS', and 'OTHER'."""
+    return random.choices(['MARRIED', 'PARTNERS', 'OTHER'],
+                          weights=[0.90, 0.06, 0.04], k=1)[0]
 
 def get_child_relationship_type() -> str:
     """Draws a child's relationship type to the family (biological, adopted, or foster)."""

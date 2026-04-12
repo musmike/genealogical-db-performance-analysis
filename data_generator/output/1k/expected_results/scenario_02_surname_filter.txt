@@ -1,32 +1,60 @@
 --- SCENARIO 02: SURNAME FILTER ---
-Recommended surname: Michalski
-Recommended birth year range: 1814-1863
+Recommended surname: Zieliński
+Recommended birth year range: 1933-1982
 
 
-Expected rows: 23
+Expected rows: 51
 
-person_id | given_name | surname   | sex | birth_date | birth_place | death_date | death_place
-----------------------------------------------------------------------------------------------
-370       | Ryszard    | Michalski | M   | 1814-01-23 | Zalipie     | 1904-05-28 | Rzeszów    
-371       | Grzegorz   | Michalski | M   | 1814-09-16 | Danzig      | 1878-10-21 | Częstochowa
-376       | Franciszek | Michalski | M   | 1814-12-23 | Łódź        | 1872-12-17 | Zalipie    
-388       | Julian     | Michalski | M   | 1817-09-22 | Stettin     | 1892-01-19 | Posen      
-389       | Tomasz     | Michalski | M   | 1818-09-27 | Olsztyn     | 1873-11-12 | Biecz      
-392       | Paweł      | Michalski | M   | 1819-02-12 | Tykocin     | 1888-02-04 | Sandomierz 
-397       | Ryszard    | Michalski | M   | 1820-12-12 | Danzig      | 1883-10-23 | Posen      
-401       | Jan        | Michalski | M   | 1821-01-01 | Pszczyna    | 1874-01-24 | Chochołów  
-402       | Andrzej    | Michalski | M   | 1821-10-01 | Tykocin     | 1873-07-18 | Cieszyn    
-431       | Antoni     | Michalski | M   | 1834-10-09 | Łódź        | 1876-09-21 | Stettin    
-438       | Julian     | Michalski | M   | 1835-10-20 | Sromowce    | 1904-02-15 | Reszel     
-448       | Bartosz    | Michalski | M   | 1837-04-09 | Częstochowa | 1883-09-13 | Sandomierz 
-454       | Jan        | Michalski | M   | 1838-01-16 | Pszczyna    | 1841-11-08 | Sandomierz 
-463       | Władysław  | Michalski | M   | 1840-04-02 | Łódź        | 1881-09-08 | Sandomierz 
-469       | Czesław    | Michalski | M   | 1840-08-05 | Wisła       | 1929-10-08 | Krynica    
-479       | Piotr      | Michalski | M   | 1842-10-05 | Breslau     | 1927-11-03 | Chełmno    
-487       | Szymon     | Michalski | M   | 1845-09-13 | Kraków      | 1914-10-18 | Krynica    
-502       | Mateusz    | Michalski | M   | 1850-02-09 | Cieszyn     | 1916-05-01 | Lanckorona 
-505       | Jakub      | Michalski | M   | 1851-01-28 | Gliwice     | 1879-05-05 | Posen      
-504       | Filip      | Michalski | M   | 1851-06-09 | Kraków      | 1939-12-22 | Sanok      
-512       | Wiesław    | Michalski | M   | 1855-07-05 | Chochołów   | 1924-03-01 | Krynica    
-537       | Grzegorz   | Michalski | M   | 1862-03-27 | Zwierzyniec | 1934-10-04 | Łódź       
-540       | Antoni     | Michalski | M   | 1863-02-09 | Lanckorona  | 1950-11-28 | Białystok  
+person_id | given_name | surname   | sex | birth_date | birth_place     | death_date | death_place
+--------------------------------------------------------------------------------------------------
+383       | Henryk     | Zieliński | M   | 1938-05-03 | Chochołów       | 2010-01-11 | Breslau    
+399       | Leon       | Zieliński | M   | 1941-12-16 | Gliwice         | 2013-02-05 | Sosnowiec  
+409       | Franciszek | Zieliński | M   | 1942-01-05 | Reszel          | NULL       | NULL       
+406       | Adam       | Zieliński | M   | 1942-01-22 | Częstochowa     | NULL       | NULL       
+419       | Jan        | Zieliński | M   | 1943-03-13 | Breslau         | NULL       | NULL       
+415       | Henryk     | Zieliński | M   | 1943-08-12 | Tykocin         | 2015-02-18 | Radom      
+425       | Julian     | Zieliński | M   | 1945-05-03 | Danzig          | 2007-11-07 | Bronowice  
+427       | Adam       | Zieliński | M   | 1945-05-08 | Cieszyn         | 1996-01-04 | Thorn      
+429       | Kamil      | Zieliński | M   | 1945-12-20 | Cieszyn         | NULL       | NULL       
+436       | Marcin     | Zieliński | M   | 1947-02-26 | Lublin          | 2009-07-09 | Breslau    
+442       | Jerzy      | Zieliński | M   | 1948-10-22 | Kielce          | 2004-04-24 | Bronowice  
+451       | Marcin     | Zieliński | M   | 1950-10-05 | Sandomierz      | 2004-10-06 | Zwierzyniec
+446       | Henryk     | Zieliński | M   | 1950-12-23 | Białystok       | 2017-12-18 | Pszczyna   
+454       | Henryk     | Zieliński | M   | 1951-03-03 | Gliwice         | 2004-09-02 | Sandomierz 
+452       | Filip      | Zieliński | M   | 1951-06-24 | Sanok           | 1951-07-23 | Zalipie    
+462       | Paweł      | Zieliński | M   | 1953-10-13 | Kraków          | 1999-07-17 | Kraków     
+465       | Michał     | Zieliński | M   | 1954-07-17 | Kielce          | 2004-11-04 | Bromberg   
+464       | Jakub      | Zieliński | M   | 1954-10-12 | Tykocin         | 1956-11-04 | Reszel     
+472       | Kazimierz  | Zieliński | M   | 1956-07-27 | Reszel          | 2011-05-18 | Warszawa   
+473       | Leon       | Zieliński | M   | 1956-08-07 | Pszczyna        | 2006-08-09 | Pszczyna   
+470       | Marcin     | Zieliński | M   | 1956-09-02 | Złoty Potok     | 2014-01-28 | Zwierzyniec
+487       | Łukasz     | Zieliński | M   | 1960-10-02 | Reszel          | NULL       | NULL       
+488       | Krzysztof  | Zieliński | M   | 1960-10-04 | Reszel          | NULL       | NULL       
+492       | Tomasz     | Zieliński | M   | 1961-06-28 | Lipce           | NULL       | NULL       
+496       | Grzegorz   | Zieliński | M   | 1962-01-07 | Sandomierz      | 2019-06-13 | Sandomierz 
+504       | Paweł      | Zieliński | M   | 1964-06-13 | Łódź            | 2020-03-06 | Bronowice  
+515       | Leon       | Zieliński | M   | 1966-04-26 | Kielce          | NULL       | NULL       
+512       | Ignacy     | Zieliński | M   | 1966-05-19 | Sosnowiec       | 2015-09-18 | Tykocin    
+528       | Krzysztof  | Zieliński | M   | 1969-04-21 | Lipce           | NULL       | NULL       
+532       | Leon       | Zieliński | M   | 1969-06-27 | Lanckorona      | NULL       | NULL       
+538       | Franciszek | Zieliński | M   | 1970-02-14 | Zwierzyniec     | 1970-07-18 | Zwierzyniec
+545       | Józef      | Zieliński | M   | 1971-01-17 | Reszel          | 2009-11-17 | Gdynia     
+550       | Marcin     | Zieliński | M   | 1972-11-03 | Sromowce        | 2018-03-06 | Cieszyn    
+554       | Józef      | Zieliński | M   | 1973-05-05 | Sosnowiec       | 2019-04-26 | Zwierzyniec
+558       | Mateusz    | Zieliński | M   | 1973-10-10 | Danzig          | 1978-07-02 | Lipce      
+555       | Szymon     | Zieliński | M   | 1973-10-25 | Tykocin         | NULL       | NULL       
+560       | Grzegorz   | Zieliński | M   | 1974-01-13 | Zwierzyniec     | NULL       | NULL       
+563       | Bartosz    | Zieliński | M   | 1974-04-27 | Kazimierz Dolny | NULL       | NULL       
+574       | Marian     | Zieliński | M   | 1975-09-11 | Biecz           | NULL       | NULL       
+584       | Kazimierz  | Zieliński | M   | 1976-06-19 | Krynica         | 1978-01-28 | Reszel     
+585       | Antoni     | Zieliński | M   | 1977-07-13 | Kazimierz Dolny | NULL       | NULL       
+593       | Paweł      | Zieliński | M   | 1978-01-14 | Częstochowa     | 1979-05-19 | Kraków     
+600       | Łukasz     | Zieliński | M   | 1979-06-13 | Krynica         | NULL       | NULL       
+602       | Czesław    | Zieliński | M   | 1979-11-22 | Olsztyn         | NULL       | NULL       
+607       | Krzysztof  | Zieliński | M   | 1980-03-03 | Cieszyn         | NULL       | NULL       
+610       | Antoni     | Zieliński | M   | 1980-10-10 | Lipce           | NULL       | NULL       
+618       | Stefan     | Zieliński | M   | 1981-05-08 | Posen           | NULL       | NULL       
+626       | Michał     | Zieliński | M   | 1982-01-17 | Gdynia          | 1986-10-16 | Biecz      
+623       | Stanisław  | Zieliński | M   | 1982-02-03 | Wisła           | NULL       | NULL       
+625       | Antoni     | Zieliński | M   | 1982-02-14 | Olsztyn         | NULL       | NULL       
+628       | Stefan     | Zieliński | M   | 1982-03-27 | Chochołów       | NULL       | NULL       

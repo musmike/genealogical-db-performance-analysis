@@ -4,28 +4,12 @@ Target LCA path length required: 16
 Constraint: Person A and Person B are not closely related AND
             biological distance to LCA > 3 for both sides.
 
-Recommended Person A (ID: 92308)
-Recommended Person B (ID: 96653)
+Recommended Person A (ID: 98335)
+Recommended Person B (ID: 96714)
 
 
-Expected rows: 17
+Expected rows: 1
 
-lca_id | given_name | surname       | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
-------------------------------------------------------------------------------------------------------------------------------------------------------
-32578  | Czesława   | Pawłowska     | F   | 1725-06-27 | Zwierzyniec | 1770-06-26 | Biecz       | 9                  | 7                  | 16        
-33399  | Ryszard    | Kowalski      | M   | 1732-03-23 | Zwierzyniec | 1815-05-06 | Złoty Potok | 8                  | 8                  | 16        
-34306  | Paweł      | Kwiatkowski   | M   | 1739-08-25 | Kielce      | 1795-09-05 | Sanok       | 8                  | 8                  | 16        
-35300  | Jadwiga    | Zielińska     | F   | 1747-06-06 | Sandomierz  | 1806-01-20 | Sanok       | 8                  | 8                  | 16        
-36151  | Mirosław   | Wójcik        | M   | 1753-08-12 | Wisła       | 1820-09-15 | Katowice    | 8                  | 8                  | 16        
-36393  | Stefania   | Kowalska      | F   | 1755-11-12 | Sromowce    | 1805-09-11 | Biecz       | 8                  | 8                  | 16        
-36740  | Józefa     | Jaworska      | F   | 1758-07-16 | Warszawa    | 1828-06-01 | Danzig      | 8                  | 8                  | 16        
-36801  | Grażyna    | Kowalska      | F   | 1758-07-17 | Sromowce    | 1806-07-23 | Katowice    | 8                  | 8                  | 16        
-37600  | Wanda      | Wróbel        | F   | 1765-02-15 | Supraśl     | 1860-08-15 | Złoty Potok | 7                  | 9                  | 16        
-37646  | Marek      | Kwiatkowski   | M   | 1765-12-17 | Gliwice     | 1843-08-19 | Lublin      | 8                  | 8                  | 16        
-37666  | Stefan     | Pawłowski     | M   | 1765-05-05 | Thorn       | 1839-01-18 | Sanok       | 9                  | 7                  | 16        
-38214  | Kamil      | Pawłowski     | M   | 1769-05-10 | Danzig      | 1842-11-06 | Chełmno     | 7                  | 9                  | 16        
-38597  | Małgorzata | Kowalska      | F   | 1772-03-05 | Rzeszów     | 1807-01-14 | Złoty Potok | 9                  | 7                  | 16        
-39043  | Tomasz     | Kowalski      | M   | 1775-12-04 | Wisła       | 1827-02-13 | Bromberg    | 7                  | 9                  | 16        
-39077  | Leon       | Stępień       | M   | 1775-08-28 | Lipce       | 1836-12-06 | Złoty Potok | 8                  | 8                  | 16        
-39736  | Marianna   | Jaworska      | F   | 1780-06-17 | Gdynia      | 1832-09-03 | Supraśl     | 8                  | 8                  | 16        
-40067  | Tomasz     | Wojciechowski | M   | 1782-07-21 | Sanok       | 1846-07-17 | Zalipie     | 8                  | 8                  | 16        
+lca_id | given_name | surname | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
+------------------------------------------------------------------------------------------------------------------------------------------------
+42246  | Zygmunt    | Pawlak  | M   | 1796-08-12 | Olsztyn     | 1868-08-10 | Reszel      | 9                  | 7                  | 16        

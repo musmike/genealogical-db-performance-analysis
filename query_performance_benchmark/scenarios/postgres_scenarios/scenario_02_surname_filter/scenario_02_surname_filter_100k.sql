@@ -7,7 +7,7 @@
 -- Orders the results by birth_date ascending.
 
 
--- RECOMMENDED PARAMETERS: Surname = 'Wróbel', Birth Year Range = 1646-1695
+-- RECOMMENDED PARAMETERS: Surname = 'Mazur', Birth Year Range = 1661-1710
 
 SELECT
     p.id AS person_id,
@@ -18,6 +18,6 @@ SELECT
     p.death_date,
     p.birth_place
 FROM people p
-WHERE p.surname = 'Wróbel'
-  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1646 AND 1695
+WHERE p.surname = 'Mazur'
+  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1661 AND 1710
 ORDER BY p.birth_date ASC;

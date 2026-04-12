@@ -1,40 +1,40 @@
 === POPULATION AND GRAPH TOPOLOGY REPORT ===
 Target population: 1000
 Total people generated: 1000
-People alive at end of simulation (1966): 250
-Total families: 446
+People alive at end of simulation (2021): 435
+Total families: 374
 
 --- POPULATION GROWTH OVER TIME ---
-Year 1750: Alive 100 people. Total generated: 100
-Year 1775: Alive 174 people. Total generated: 202
-Year 1800: Alive 210 people. Total generated: 315
-Year 1825: Alive 212 people. Total generated: 411
-Year 1850: Alive 223 people. Total generated: 502
-Year 1875: Alive 223 people. Total generated: 600
-Year 1900: Alive 226 people. Total generated: 707
-Year 1925: Alive 244 people. Total generated: 815
-Year 1950: Alive 244 people. Total generated: 915
-Year 1966 (END): Alive 250 people. Total generated: 1000
+Year 1800: Alive 48 people. Total generated: 48
+Year 1825: Alive 69 people. Total generated: 95
+Year 1850: Alive 79 people. Total generated: 148
+Year 1875: Alive 109 people. Total generated: 211
+Year 1900: Alive 118 people. Total generated: 275
+Year 1925: Alive 154 people. Total generated: 359
+Year 1950: Alive 181 people. Total generated: 451
+Year 1975: Alive 226 people. Total generated: 574
+Year 2000: Alive 324 people. Total generated: 776
+Year 2021 (END): Alive 435 people. Total generated: 1000
 
 --- GRAPH TOPOLOGY & DEMOGRAPHICS ---
 Max graph depth (oldest root to youngest descendant): 10 generations
-Average depth of leaf nodes (endpoints): 6.34 generations
-Sex ratio: 528 Males / 472 Females
-Average lifespan (deceased individuals): 56.3 years
-Marriage rate: 73.3% of total population
-Total divorces: 2
-Families with children: 359
-Average children per fertile family: 2.51
+Average depth of leaf nodes (endpoints): 7.22 generations
+Sex ratio: 490 Males / 510 Females
+Average lifespan (deceased individuals): 44.3 years
+Marriage rate: 58.7% of total population
+Total divorces: 6
+Families with children: 305
+Average children per fertile family: 3.08
 Largest family generated: 9 children
 Family distribution (children per family):
-  1 child(ren): 108 families
-  2 child(ren): 89 families
-  3 child(ren): 92 families
-  4 child(ren): 33 families
-  5 child(ren): 22 families
-  6 child(ren): 12 families
-  7 child(ren): 1 families
-  8 child(ren): 1 families
+  1 child(ren): 61 families
+  2 child(ren): 67 families
+  3 child(ren): 72 families
+  4 child(ren): 47 families
+  5 child(ren): 25 families
+  6 child(ren): 20 families
+  7 child(ren): 9 families
+  8 child(ren): 3 families
   9 child(ren): 1 families
-Orphans (adopted/foster without biological links): 30 individuals
+Orphans (adopted/foster without biological links): 53 individuals
 
