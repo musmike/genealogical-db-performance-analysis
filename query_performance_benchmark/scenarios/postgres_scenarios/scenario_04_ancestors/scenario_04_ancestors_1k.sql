@@ -8,10 +8,10 @@
 -- Orders the results first by generation ascending, then by ancestor_id ascending within each generation.
 
 
--- RECOMMENDED PARAMETERS: Person ID = 987
+-- RECOMMENDED PARAMETERS: Person ID = 980
 
 WITH RECURSIVE ancestors AS (
-    SELECT 987 AS person_id, 0 AS depth
+    SELECT 980 AS person_id, 0 AS depth
     UNION ALL
     SELECT parent_id, a.depth + 1
     FROM ancestors a
@@ -23,7 +23,7 @@ WITH RECURSIVE ancestors AS (
 deduped AS (
     SELECT DISTINCT ON (person_id) person_id, depth
     FROM ancestors
-    WHERE person_id <> 987
+    WHERE person_id <> 980
     ORDER BY person_id, depth
 )
 SELECT p.id AS ancestor_id, d.depth AS generation, p.given_name, p.surname, p.sex, 

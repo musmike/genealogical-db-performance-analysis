@@ -9,6 +9,7 @@ from demographics import (get_planned_children_count, get_marriage_age,
 from exporter import DataExporter
 from analytics import AnalyticsEngine
 
+
 class TargetReachedException(Exception):
     """
     Raised to cleanly halt the simulation loop the moment the number of generated
@@ -16,6 +17,7 @@ class TargetReachedException(Exception):
     inside every call to _create_person separately.
     """
     pass
+
 
 class SimulationEngine:
     """
@@ -29,7 +31,7 @@ class SimulationEngine:
         random.seed(SEED)
         self.target_population = target_population
         self.output_dir = output_dir
-        
+
         config = SCENARIOS.get(target_population, SCENARIOS[1000])
         self.start_year = config['start_year']
         self.current_year = self.start_year
@@ -68,6 +70,13 @@ class SimulationEngine:
         lifespan = get_lifespan()
         target_marriage_age = get_marriage_age(sex)
 
+        if sex == 'M':
+            fertility_end = int(random.normalvariate(52, 6))
+            fertility_end = max(45, min(fertility_end, 65))
+        else:
+            fertility_end = int(random.normalvariate(41, 4))
+            fertility_end = max(30, min(fertility_end, 47))
+
         # Correction for founding population members who may already be of age at start year —
         # without this, some founders would die before they even enter the simulation loop
         age_now = self.current_year - birth_year
@@ -79,9 +88,10 @@ class SimulationEngine:
 
         p = Person(
             id=p_id, given_name=name, surname=surname, sex=sex, is_deceased=False,
-            birth_date=random_date(birth_year), birth_place=random.choice(PLACES),
+            birth_date=random_date(birth_year), birth_place=random.choice(PLACES[region_id]),
             parents_family_id=parents_fam_id, birth_year=birth_year, lifespan=lifespan,
-            is_celibate=is_celibate, region_id=region_id, target_marriage_age=target_marriage_age
+            is_celibate=is_celibate, region_id=region_id, target_marriage_age=target_marriage_age,
+            fertility_end=fertility_end
         )
         self.people[p_id] = p
         self.living_people_ids.add(p_id)
@@ -90,44 +100,39 @@ class SimulationEngine:
     def _initialize_population(self, initial_pairs: int):
         """
         Bootstraps the graph with an unrelated founding population of married pairs.
-        Pairs are distributed evenly across 5 geographic regions, which establishes
+        Pairs are distributed evenly across geographic regions, which establishes
         the spatial structure used later during matchmaking.
         """
+        num_regions = len(PLACES)
         for i in range(initial_pairs):
-            reg = i % 5
+            reg = i % num_regions
 
             age_husband = random.randint(20, 50)
             age_wife = max(18, min(45, age_husband + random.randint(-10, 5)))
-
-            # age_husband = random.randint(20, 28)
-            # age_wife = max(18, min(25, age_husband + random.randint(-3, 2)))
 
             husband = self._create_person('M', random.choice(SURNAMES),
                                           self.start_year - age_husband, region_id=reg)
             wife = self._create_person('F', random.choice(SURNAMES),
                                        self.start_year - age_wife, region_id=reg)
 
-            # self._create_marriage(husband, wife, self.start_year)
             marriage_year = self.start_year + random.randint(0, 15)
             self._create_marriage(husband, wife, marriage_year)
 
-    def _generate_immigrant_pair(self):
+    def _generate_immigrant(self):
         """
-        Injects a new fertile couple into the simulation to bridge the generation gap
+        Injects a new fertile individual into the simulation to bridge the generation gap
         and prevent birth rates from crashing to 0.
         """
-        reg = random.randint(0, 4)
+        reg = random.choice(list(PLACES.keys()))
+        sex = random.choice(['M', 'F'])
 
-        # Give them realistic young adult ages (e.g., 20-28) to maximize their fertile window
-        age_husband = random.randint(20, 28)
-        age_wife = max(18, min(30, age_husband + random.randint(-5, 2)))
+        if sex == 'M':
+            age = random.randint(20, 28)
+        else:
+            age = random.randint(18, 30)
 
-        husband = self._create_person('M', random.choice(SURNAMES),
-                                      self.current_year - age_husband, region_id=reg)
-        wife = self._create_person('F', random.choice(SURNAMES),
-                                   self.current_year - age_wife, region_id=reg)
-
-        self._create_marriage(husband, wife, self.current_year)
+        self._create_person(sex, random.choice(SURNAMES),
+                            self.current_year - age, region_id=reg)
 
     def _create_marriage(self, husband: Person, wife: Person, year: int):
         f_id = self.next_family_id
@@ -136,7 +141,7 @@ class SimulationEngine:
         status = get_family_status()
         family = Family(
             id=f_id, status=status, marriage_date=random_date(year),
-            marriage_place=random.choice(PLACES), husband_id=husband.id, wife_id=wife.id
+            marriage_place=random.choice(PLACES[wife.region_id]), husband_id=husband.id, wife_id=wife.id
         )
         self.families[f_id] = family
         self.active_families.add(f_id)
@@ -145,10 +150,6 @@ class SimulationEngine:
         wife.spouse_id = husband.id
         husband.marriages_count += 1
         wife.marriages_count += 1
-
-        # Occupation is assigned at marriage if not already set
-        if not husband.occupation: husband.occupation = random.choice(OCCUPATIONS)
-        if not wife.occupation: wife.occupation = random.choice(OCCUPATIONS)
 
         config = SCENARIOS.get(self.target_population, SCENARIOS[1000])
         avg_children = config['avg_children']
@@ -163,12 +164,20 @@ class SimulationEngine:
         # Births are scheduled upfront at the time of marriage rather than drawn each year —
         # this decouples fertility logic from the chronological iteration loop
         current_y = year
-        for _ in range(planned_count):
-            gap = random.choices([1, 2, 3], weights=[0.3, 0.5, 0.2], k=1)[0]
+
+        for i in range(planned_count):
+
+            if i == 0:
+                # The first birth is more likely to occur within 1-2 years after marriage, 
+                # while subsequent births have a more spread-out distribution.
+                gap = random.choices([0, 1, 2], weights=[0.25, 0.5, 0.25],k=1)[0]
+            else:
+                gap = random.choices([1, 2, 3], weights=[0.3, 0.5, 0.2], k=1)[0]
+
             current_y += gap
-            
-            # Female fertility ends after age 45
-            if (current_y - wife.birth_year) > 45: break
+
+            if (current_y - wife.birth_year) > wife.fertility_end: break
+            if (current_y - husband.birth_year) > husband.fertility_end: break
 
             if current_y not in self.planned_births:
                 self.planned_births[current_y] = []
@@ -187,7 +196,7 @@ class SimulationEngine:
         """
         dead_this_year = set()
 
-        for p_id in self.living_people_ids:
+        for p_id in sorted(self.living_people_ids):
             p = self.people[p_id]
 
             if (self.current_year - p.birth_year) >= p.lifespan:
@@ -202,7 +211,7 @@ class SimulationEngine:
         """
         p.is_deceased = True
         p.death_date = random_date(self.current_year)
-        p.death_place = random.choice(PLACES)
+        p.death_place = random.choice(PLACES[p.region_id])
         p.cause_of_death = random.choice(CAUSES_OF_DEATH)
         p.burial_place = f"Cemetery in {p.death_place}"
 
@@ -226,15 +235,15 @@ class SimulationEngine:
     def _process_divorces(self):
         """
         A small percentage of marriages end in divorce each year. Divorces are processed after deaths to avoid
-        complications with widowing. When a divorce occurs, the family status is updated, spouses are marked as ex-spouses of each other, 
-        and the family is removed from the active pool to prevent further births. Divorced individuals can remarry, 
+        complications with widowing. When a divorce occurs, the family status is updated, spouses are marked as ex-spouses of each other,
+        and the family is removed from the active pool to prevent further births. Divorced individuals can remarry,
         but they will not be matched with their ex-spouse or any previous spouses.
         """
         divorced_this_year = []
-        for f_id in self.active_families:
+        for f_id in sorted(self.active_families):
             if random.random() < 0.0005:  # Very low probability
                 fam = self.families[f_id]
-                fam.status = 'DIVORCED'
+                fam.status = random.choice(['DIVORCED', 'ANNULLED'])
                 husband = self.people.get(fam.husband_id)
                 wife = self.people.get(fam.wife_id)
                 if husband and wife:
@@ -248,34 +257,42 @@ class SimulationEngine:
             self.active_families.remove(f_id)
 
     def _process_births(self):
-        """
-        Executes births scheduled for the current year.
-        Includes a biological reality check: a birth is skipped if the mother is deceased,
-        too old, or if the father died more than a year before the planned birth year.
-        """
-        births_today = self.planned_births.get(self.current_year, [])
-        for b in births_today:
-            mother = self.people[b['mother_id']]
-            father = self.people[b['father_id']]
+            """
+            Executes births scheduled for the current year.
+            Includes a biological reality check: a birth is skipped if the mother is deceased,
+            too old, if the father died more than a year before the planned birth year,
+            or if the parents are divorced.
+            """
+            births_today = self.planned_births.get(self.current_year, [])
+            for b in births_today:
+                mother = self.people[b['mother_id']]
+                father = self.people[b['father_id']]
+                family = self.families[b['family_id']]
 
-            age_at_birth = self.current_year - mother.birth_year
-            
-            if not mother.is_deceased and age_at_birth <= 50:
-                
-                is_biologically_possible = True
-                if father.is_deceased and father.death_date:
-                    if father.death_date.year < self.current_year - 1:
+                age_at_birth = self.current_year - mother.birth_year
+
+                if not mother.is_deceased and age_at_birth <= 50:
+
+                    is_biologically_possible = True
+                    
+                    # Check if father died too early (posthumous birth allowed up to ~1 year)
+                    if father.is_deceased and father.death_date:
+                        if father.death_date.year < self.current_year - 1:
+                            is_biologically_possible = False
+                            
+                    # Check for divorce - prevents planned births after separation
+                    if family.status in ('DIVORCED', 'ANNULLED'):
                         is_biologically_possible = False
 
-                if is_biologically_possible:
-                    child_sex = random.choice(['M', 'F'])
-                    child = self._create_person(
-                        child_sex, father.surname, self.current_year,
-                        parents_fam_id=b['family_id'],
-                        region_id=b['region_id']
-                    )
-                    rel_type = get_child_relationship_type()
-                    self.families[b['family_id']].children.append({'id': child.id, 'type': rel_type})
+                    if is_biologically_possible:
+                        child_sex = random.choice(['M', 'F'])
+                        child = self._create_person(
+                            child_sex, father.surname, self.current_year,
+                            parents_fam_id=b['family_id'],
+                            region_id=b['region_id']
+                        )
+                        rel_type = get_child_relationship_type()
+                        family.children.append({'id': child.id, 'type': rel_type})
 
     def _process_marriages(self):
         """
@@ -291,12 +308,14 @@ class SimulationEngine:
                     not is_too_closely_related(male.id, female.id, self.people, self.families)
             )
 
+        regions_keys = list(PLACES.keys())
+
         # Split singles by region — simulates geographic constraints on partner selection
-        singles_m = {r: [] for r in range(5)}
-        singles_f = {r: [] for r in range(5)}
+        singles_m = {r: [] for r in regions_keys}
+        singles_f = {r: [] for r in regions_keys}
 
         # Gather eligible singles
-        for p_id in self.living_people_ids:
+        for p_id in sorted(self.living_people_ids):
             p = self.people[p_id]
             if p.spouse_id is None and not p.is_celibate and p.widowed_year < self.current_year - 1:
                 age = self.current_year - p.birth_year
@@ -306,13 +325,13 @@ class SimulationEngine:
                     singles_f[p.region_id].append(p)
 
         # Shuffle regional pools to ensure fairness
-        for r in range(5):
+        for r in regions_keys:
             random.shuffle(singles_m[r])
             random.shuffle(singles_f[r])
 
         # Combine all eligible men into a master list and shuffle
         males_to_marry = []
-        for r in range(5):
+        for r in regions_keys:
             males_to_marry.extend(singles_m[r])
         random.shuffle(males_to_marry)
 
@@ -324,13 +343,14 @@ class SimulationEngine:
             for female in singles_f[male.region_id]:
                 if _is_valid_partner(male, female):
                     self._create_marriage(male, female, self.current_year)
+                    female.region_id = male.region_id
                     married = True
                     break
 
             # If no local match is found, search across other regions (simulating migration for marriage)
             if not married:
                 other_females = []
-                for r in range(5):
+                for r in regions_keys:
                     if r != male.region_id:
                         other_females.extend(singles_f[r])
 
@@ -349,8 +369,8 @@ class SimulationEngine:
         print(f"\nSimulation started from year {self.start_year}. "
               f"Target population: {self.target_population}.")
 
-        config = SCENARIOS.get(self.target_population, SCENARIOS[1000])
-        init_pairs = config['initial_pairs']
+        config_setup = SCENARIOS.get(self.target_population, SCENARIOS[1000])
+        init_pairs = config_setup['initial_pairs']
 
         self._initialize_population(initial_pairs=init_pairs)
 
@@ -365,14 +385,12 @@ class SimulationEngine:
             while len(self.people) < self.target_population:
                 self.current_year += 1
 
-                config_scen = SCENARIOS.get(self.target_population, SCENARIOS[1000])
-                immigrants_per_year = config_scen.get('immigrants', 1)
-
+                immigrants_per_year = config_setup.get('immigrants_per_year', 1)
                 offset = self.current_year - self.start_year
 
-                if 20 <= offset <= 25:
+                if 20 <= offset <= 30:
                     for _ in range(immigrants_per_year):
-                        self._generate_immigrant_pair()
+                        self._generate_immigrant()
 
                 self._process_births()
                 self._process_marriages()

@@ -1,60 +1,59 @@
 --- SCENARIO 02: SURNAME FILTER ---
-Recommended surname: Zieliński
-Recommended birth year range: 1933-1982
+Recommended surname: Wieczorek
+Recommended birth year range: 1724-1773
 
 
-Expected rows: 51
+Expected rows: 50
 
-person_id | given_name | surname   | sex | birth_date | birth_place     | death_date | death_place
---------------------------------------------------------------------------------------------------
-383       | Henryk     | Zieliński | M   | 1938-05-03 | Chochołów       | 2010-01-11 | Breslau    
-399       | Leon       | Zieliński | M   | 1941-12-16 | Gliwice         | 2013-02-05 | Sosnowiec  
-409       | Franciszek | Zieliński | M   | 1942-01-05 | Reszel          | NULL       | NULL       
-406       | Adam       | Zieliński | M   | 1942-01-22 | Częstochowa     | NULL       | NULL       
-419       | Jan        | Zieliński | M   | 1943-03-13 | Breslau         | NULL       | NULL       
-415       | Henryk     | Zieliński | M   | 1943-08-12 | Tykocin         | 2015-02-18 | Radom      
-425       | Julian     | Zieliński | M   | 1945-05-03 | Danzig          | 2007-11-07 | Bronowice  
-427       | Adam       | Zieliński | M   | 1945-05-08 | Cieszyn         | 1996-01-04 | Thorn      
-429       | Kamil      | Zieliński | M   | 1945-12-20 | Cieszyn         | NULL       | NULL       
-436       | Marcin     | Zieliński | M   | 1947-02-26 | Lublin          | 2009-07-09 | Breslau    
-442       | Jerzy      | Zieliński | M   | 1948-10-22 | Kielce          | 2004-04-24 | Bronowice  
-451       | Marcin     | Zieliński | M   | 1950-10-05 | Sandomierz      | 2004-10-06 | Zwierzyniec
-446       | Henryk     | Zieliński | M   | 1950-12-23 | Białystok       | 2017-12-18 | Pszczyna   
-454       | Henryk     | Zieliński | M   | 1951-03-03 | Gliwice         | 2004-09-02 | Sandomierz 
-452       | Filip      | Zieliński | M   | 1951-06-24 | Sanok           | 1951-07-23 | Zalipie    
-462       | Paweł      | Zieliński | M   | 1953-10-13 | Kraków          | 1999-07-17 | Kraków     
-465       | Michał     | Zieliński | M   | 1954-07-17 | Kielce          | 2004-11-04 | Bromberg   
-464       | Jakub      | Zieliński | M   | 1954-10-12 | Tykocin         | 1956-11-04 | Reszel     
-472       | Kazimierz  | Zieliński | M   | 1956-07-27 | Reszel          | 2011-05-18 | Warszawa   
-473       | Leon       | Zieliński | M   | 1956-08-07 | Pszczyna        | 2006-08-09 | Pszczyna   
-470       | Marcin     | Zieliński | M   | 1956-09-02 | Złoty Potok     | 2014-01-28 | Zwierzyniec
-487       | Łukasz     | Zieliński | M   | 1960-10-02 | Reszel          | NULL       | NULL       
-488       | Krzysztof  | Zieliński | M   | 1960-10-04 | Reszel          | NULL       | NULL       
-492       | Tomasz     | Zieliński | M   | 1961-06-28 | Lipce           | NULL       | NULL       
-496       | Grzegorz   | Zieliński | M   | 1962-01-07 | Sandomierz      | 2019-06-13 | Sandomierz 
-504       | Paweł      | Zieliński | M   | 1964-06-13 | Łódź            | 2020-03-06 | Bronowice  
-515       | Leon       | Zieliński | M   | 1966-04-26 | Kielce          | NULL       | NULL       
-512       | Ignacy     | Zieliński | M   | 1966-05-19 | Sosnowiec       | 2015-09-18 | Tykocin    
-528       | Krzysztof  | Zieliński | M   | 1969-04-21 | Lipce           | NULL       | NULL       
-532       | Leon       | Zieliński | M   | 1969-06-27 | Lanckorona      | NULL       | NULL       
-538       | Franciszek | Zieliński | M   | 1970-02-14 | Zwierzyniec     | 1970-07-18 | Zwierzyniec
-545       | Józef      | Zieliński | M   | 1971-01-17 | Reszel          | 2009-11-17 | Gdynia     
-550       | Marcin     | Zieliński | M   | 1972-11-03 | Sromowce        | 2018-03-06 | Cieszyn    
-554       | Józef      | Zieliński | M   | 1973-05-05 | Sosnowiec       | 2019-04-26 | Zwierzyniec
-558       | Mateusz    | Zieliński | M   | 1973-10-10 | Danzig          | 1978-07-02 | Lipce      
-555       | Szymon     | Zieliński | M   | 1973-10-25 | Tykocin         | NULL       | NULL       
-560       | Grzegorz   | Zieliński | M   | 1974-01-13 | Zwierzyniec     | NULL       | NULL       
-563       | Bartosz    | Zieliński | M   | 1974-04-27 | Kazimierz Dolny | NULL       | NULL       
-574       | Marian     | Zieliński | M   | 1975-09-11 | Biecz           | NULL       | NULL       
-584       | Kazimierz  | Zieliński | M   | 1976-06-19 | Krynica         | 1978-01-28 | Reszel     
-585       | Antoni     | Zieliński | M   | 1977-07-13 | Kazimierz Dolny | NULL       | NULL       
-593       | Paweł      | Zieliński | M   | 1978-01-14 | Częstochowa     | 1979-05-19 | Kraków     
-600       | Łukasz     | Zieliński | M   | 1979-06-13 | Krynica         | NULL       | NULL       
-602       | Czesław    | Zieliński | M   | 1979-11-22 | Olsztyn         | NULL       | NULL       
-607       | Krzysztof  | Zieliński | M   | 1980-03-03 | Cieszyn         | NULL       | NULL       
-610       | Antoni     | Zieliński | M   | 1980-10-10 | Lipce           | NULL       | NULL       
-618       | Stefan     | Zieliński | M   | 1981-05-08 | Posen           | NULL       | NULL       
-626       | Michał     | Zieliński | M   | 1982-01-17 | Gdynia          | 1986-10-16 | Biecz      
-623       | Stanisław  | Zieliński | M   | 1982-02-03 | Wisła           | NULL       | NULL       
-625       | Antoni     | Zieliński | M   | 1982-02-14 | Olsztyn         | NULL       | NULL       
-628       | Stefan     | Zieliński | M   | 1982-03-27 | Chochołów       | NULL       | NULL       
+person_id | given_name | surname   | sex | birth_date | birth_place         | death_date | death_place        
+--------------------------------------------------------------------------------------------------------------
+184       | Monika     | Wieczorek | F   | 1724-01-23 | Jelenia Góra        | 1725-08-27 | Legnica            
+189       | Jerzy      | Wieczorek | M   | 1725-07-28 | Zielona Góra        | 1775-06-23 | Opole              
+211       | Marcin     | Wieczorek | M   | 1733-04-09 | Jelenia Góra        | 1736-09-27 | Zielona Góra       
+217       | Stanisław  | Wieczorek | M   | 1735-05-11 | Opole               | 1810-05-06 | Legnica            
+224       | Teresa     | Wieczorek | F   | 1737-08-01 | Legnica             | 1783-10-17 | Konin              
+237       | Regina     | Wieczorek | F   | 1740-04-27 | Świdnica            | 1810-11-06 | Piła               
+238       | Maja       | Wieczorek | F   | 1740-10-26 | Gorzów Wielkopolski | 1796-01-05 | Kościan            
+246       | Filip      | Wieczorek | M   | 1742-06-02 | Opole               | 1742-10-21 | Legnica            
+245       | Agnieszka  | Wieczorek | F   | 1742-09-08 | Legnica             | 1743-03-17 | Legnica            
+247       | Irena      | Wieczorek | F   | 1743-03-15 | Opole               | 1746-05-28 | Zielona Góra       
+250       | Leokadia   | Wieczorek | F   | 1744-06-12 | Świdnica            | 1745-08-04 | Legnica            
+254       | Wiesław    | Wieczorek | M   | 1745-04-13 | Breslau             | 1753-01-22 | Świdnica           
+257       | Irena      | Wieczorek | F   | 1746-01-27 | Świdnica            | 1786-05-26 | Stargard           
+258       | Marcin     | Wieczorek | M   | 1746-03-22 | Jelenia Góra        | 1809-08-04 | Gorzów Wielkopolski
+264       | Zygmunt    | Wieczorek | M   | 1748-01-13 | Świdnica            | 1749-04-15 | Wałbrzych          
+268       | Czesława   | Wieczorek | F   | 1748-06-21 | Jelenia Góra        | 1831-11-08 | Jasło              
+274       | Zofia      | Wieczorek | F   | 1750-10-09 | Gorzów Wielkopolski | 1817-03-27 | Zakopane           
+275       | Stefan     | Wieczorek | M   | 1751-01-20 | Opole               | 1752-01-12 | Breslau            
+281       | Franciszek | Wieczorek | M   | 1752-02-10 | Gorzów Wielkopolski | 1802-05-05 | Wałbrzych          
+285       | Józef      | Wieczorek | M   | 1753-11-21 | Wałbrzych           | 1799-08-15 | Jelenia Góra       
+284       | Jadwiga    | Wieczorek | F   | 1753-12-22 | Gorzów Wielkopolski | 1758-04-08 | Świdnica           
+288       | Wanda      | Wieczorek | F   | 1754-07-18 | Jelenia Góra        | 1808-04-07 | Posen              
+290       | Józefa     | Wieczorek | F   | 1754-08-23 | Jelenia Góra        | 1754-01-18 | Wałbrzych          
+294       | Leon       | Wieczorek | M   | 1755-02-27 | Zielona Góra        | 1756-03-18 | Jelenia Góra       
+301       | Alicja     | Wieczorek | F   | 1756-08-26 | Opole               | 1805-10-24 | Przemyśl           
+299       | Jadwiga    | Wieczorek | F   | 1756-11-11 | Opole               | 1819-12-05 | Thorn              
+310       | Grażyna    | Wieczorek | F   | 1758-06-09 | Wałbrzych           | 1818-04-02 | Olsztyn            
+313       | Julia      | Wieczorek | F   | 1759-06-12 | Świdnica            | 1759-03-22 | Wałbrzych          
+321       | Katarzyna  | Wieczorek | F   | 1760-06-12 | Jelenia Góra        | 1781-08-10 | Zielona Góra       
+325       | Kazimiera  | Wieczorek | F   | 1761-07-05 | Gorzów Wielkopolski | 1766-09-21 | Legnica            
+326       | Wiktoria   | Wieczorek | F   | 1761-11-27 | Legnica             | 1827-08-20 | Inowrocław         
+335       | Marcin     | Wieczorek | M   | 1763-09-07 | Wałbrzych           | 1811-04-14 | Breslau            
+338       | Helena     | Wieczorek | F   | 1763-12-13 | Zielona Góra        | 1824-06-20 | Zielona Góra       
+342       | Łukasz     | Wieczorek | M   | 1765-05-01 | Świdnica            | 1803-03-11 | Breslau            
+345       | Zygmunt    | Wieczorek | M   | 1765-09-28 | Świdnica            | 1767-09-25 | Jelenia Góra       
+350       | Maja       | Wieczorek | F   | 1766-06-08 | Świdnica            | 1766-04-09 | Jelenia Góra       
+353       | Oliwia     | Wieczorek | F   | 1767-04-23 | Wałbrzych           | 1768-02-01 | Świdnica           
+354       | Henryk     | Wieczorek | M   | 1767-06-21 | Gorzów Wielkopolski | 1825-05-28 | Legnica            
+359       | Andrzej    | Wieczorek | M   | 1768-03-05 | Gorzów Wielkopolski | 1839-03-17 | Jelenia Góra       
+361       | Teresa     | Wieczorek | F   | 1768-04-07 | Gorzów Wielkopolski | 1835-01-10 | Włocławek          
+362       | Marian     | Wieczorek | M   | 1768-05-03 | Wałbrzych           | 1768-08-20 | Gorzów Wielkopolski
+363       | Zofia      | Wieczorek | F   | 1769-06-14 | Breslau             | 1826-12-18 | Rzeszów            
+368       | Kazimierz  | Wieczorek | M   | 1770-01-22 | Breslau             | 1771-04-28 | Wałbrzych          
+370       | Monika     | Wieczorek | F   | 1770-02-06 | Wałbrzych           | 1831-05-20 | Inowrocław         
+373       | Ignacy     | Wieczorek | M   | 1771-01-26 | Jelenia Góra        | 1771-03-01 | Jelenia Góra       
+372       | Oliwia     | Wieczorek | F   | 1771-03-15 | Świdnica            | 1771-11-12 | Breslau            
+371       | Józef      | Wieczorek | M   | 1771-04-01 | Świdnica            | NULL       | NULL               
+377       | Teresa     | Wieczorek | F   | 1771-12-23 | Jelenia Góra        | 1823-03-21 | Ostrów Wielkopolski
+380       | Ignacy     | Wieczorek | M   | 1772-01-19 | Opole               | 1836-08-05 | Zielona Góra       
+384       | Urszula    | Wieczorek | F   | 1773-04-11 | Świdnica            | 1811-02-24 | Posen              

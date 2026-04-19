@@ -4,13 +4,15 @@ Target LCA path length required: 12
 Constraint: Person A and Person B are not closely related AND
             biological distance to LCA > 3 for both sides.
 
-Recommended Person A (ID: 8544)
-Recommended Person B (ID: 6371)
+Recommended Person A (ID: 6657)
+Recommended Person B (ID: 7127)
 
 
-Expected rows: 2
+Expected rows: 4
 
-lca_id | given_name | surname   | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
---------------------------------------------------------------------------------------------------------------------------------------------------
-2341   | Urszula    | Jankowska | F   | 1738-09-02 | Olsztyn     | 1823-01-18 | Sosnowiec   | 6                  | 6                  | 12        
-2515   | Wiesław    | Krawczyk  | M   | 1752-01-17 | Reszel      | 1843-02-05 | Posen       | 6                  | 6                  | 12        
+lca_id | given_name | surname       | sex | birth_date | birth_place         | death_date | death_place         | path_length_from_a | path_length_from_b | total_dist
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1832   | Piotr      | Wojciechowski | M   | 1600-06-14 | Zielona Góra        | 1666-12-26 | Opole               | 6                  | 6                  | 12        
+1947   | Joanna     | Szymańska     | F   | 1610-03-05 | Świdnica            | 1666-06-09 | Opole               | 6                  | 6                  | 12        
+1955   | Filip      | Szymański     | M   | 1610-03-26 | Gorzów Wielkopolski | 1647-11-23 | Gorzów Wielkopolski | 6                  | 6                  | 12        
+1983   | Jadwiga    | Wojciechowska | F   | 1612-09-20 | Świdnica            | 1679-05-17 | Opole               | 6                  | 6                  | 12        

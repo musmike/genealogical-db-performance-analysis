@@ -5,24 +5,24 @@ and dictionaries of historical data: names, surnames, places, and occupations.
 """
 
 # A fixed seed guarantees full reproducibility of simulation results
-SEED = 185242
+SEED = 275228
 
 # Scenario parameters for each population scale.
-# Define genealogical tree depth (ancestors/descendants),
-# simulation start year, number of founding pairs, and fertility rate.
+# Define scenario-specific genealogical tree depth (LCA/ancestors/descendants),
+# simulation start year, number of founding pairs, immigrants, and fertility rate.
 SCENARIOS = {
-   1000: {
-       'min_lca_path': 8, 'max_lca_path': 8, 'ancestors_depth': 5, 'descendants_depth': 3,
-       'start_year': 1800, 'initial_pairs': 24, 'avg_children': 3.88, 'immigrants': 1
-   },
-   10000: {
-       'min_lca_path': 12, 'max_lca_path': 12, 'ancestors_depth': 10, 'descendants_depth': 6,
-       'start_year': 1500, 'initial_pairs': 94, 'avg_children': 3.08, 'immigrants': 1
-   },
-   100000: {
-       'min_lca_path': 16, 'max_lca_path': 16, 'ancestors_depth': 15, 'descendants_depth': 10,
-       'start_year': 800, 'initial_pairs': 125, 'avg_children': 2.85, 'immigrants': 1
-   }
+    1000: {
+        'lca_path': 8, 'ancestors_depth': 5, 'descendants_depth': 3,
+        'start_year': 1650, 'initial_pairs': 14, 'avg_children': 6.81, 'immigrants_per_year': 1
+    },
+    10000: {
+        'lca_path': 12, 'ancestors_depth': 10, 'descendants_depth': 6,
+        'start_year': 1400, 'initial_pairs': 75, 'avg_children': 5.2, 'immigrants_per_year': 2
+    },
+    100000: {
+        'lca_path': 16, 'ancestors_depth': 15, 'descendants_depth': 10,
+        'start_year': 700, 'initial_pairs': 100, 'avg_children': 4.53, 'immigrants_per_year': 4
+    }
 }
 
 MALE_NAMES = [
@@ -50,14 +50,39 @@ SURNAMES = [
     "Pawlak", "Sikora", "Walczak", "Baran"
 ]
 
-# Includes historical German variations of Polish cities for scenario testing (e.g., Posen -> Poznań)
-PLACES = [
-    "Warszawa", "Kraków", "Posen", "Danzig", "Breslau", "Łódź", "Lublin", "Stettin", "Bromberg",
-    "Katowice", "Białystok", "Gdynia", "Częstochowa", "Radom", "Sosnowiec", "Thorn", "Kielce",
-    "Rzeszów", "Gliwice", "Olsztyn", "Lipce", "Bronowice", "Zalipie", "Chochołów", "Sromowce",
-    "Lanckorona", "Złoty Potok", "Supraśl", "Tykocin", "Biecz", "Kazimierz Dolny", "Sandomierz",
-    "Zwierzyniec", "Reszel", "Chełmno", "Pszczyna", "Cieszyn", "Sanok", "Krynica", "Wisła"
-]
+# Historical places categorized by region (West, North, Greater Poland + Kuyavian-Pomeranian, Central + East, South).
+# Includes 6 historical German variations of Polish cities for scenario testing (e.g., Posen -> Poznań)
+PLACES = {
+    0: [  # West (Lower Silesia + Lubusz + Opole)
+        "Breslau", "Legnica", "Wałbrzych", "Jelenia Góra", "Świdnica",
+        "Zielona Góra", "Gorzów Wielkopolski", "Opole"
+    ],
+
+    1: [  # North (Pomeranian + West Pomeranian + Warmian-Masurian)
+        "Danzig", "Gdynia", "Sopot", "Słupsk", "Wejherowo", "Olsztyn", "Malbork", "Chojnice",
+        "Stettin", "Koszalin", "Kołobrzeg", "Świnoujście", "Stargard",
+        "Elbląg"
+    ],
+
+    2: [  # Greater Poland + Kuyavian-Pomeranian
+        "Posen", "Gniezno", "Kalisz", "Leszno", "Piła", "Konin", "Śrem",
+        "Ostrów Wielkopolski", "Gostyń", "Kościan", "Rawicz", "Września",
+        "Bromberg", "Inowrocław", "Włocławek", "Grudziądz", "Thorn"
+    ],
+
+    3: [  # Central + East (Masovian + Podlaskie + Lublin + Łódź)
+        "Warszawa", "Radom", "Płock", "Ostrołęka", "Siedlce", "Ciechanów",
+        "Białystok", "Suwałki", "Łomża",
+        "Lublin", "Zamość", "Biała Podlaska", "Chełm",
+        "Łódź", "Skierniewice"
+    ],
+
+    4: [  # South (Lesser Poland + Subcarpathian + Świętokrzyskie)
+        "Kraków", "Tarnów", "Nowy Sącz", "Zakopane", "Bochnia", "Oświęcim",
+        "Rzeszów", "Przemyśl", "Krosno", "Tarnobrzeg", "Jasło", "Sanok",
+        "Kielce", "Sandomierz", "Ostrowiec Świętokrzyski"
+    ]
+}
 
 # Nones are intentionally injected to simulate missing data (approx. 20% sparsity)
 OCCUPATIONS = [

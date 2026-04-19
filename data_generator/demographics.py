@@ -22,23 +22,36 @@ def get_marriage_age(sex: str) -> int:
     """
     if sex == 'F':
         while True:
-            age = int(random.gauss(24, 3.5))
+            age = int(random.gauss(22, 3.5))
             if 16 <= age <= 50: return age
     else:
         while True:
-            age = int(random.gauss(26, 4))
+            age = int(random.gauss(25, 4))
             if 18 <= age <= 65: return age
 
 def get_lifespan() -> int:
-    """
-    Draws a lifespan, accounting for historical infant and child mortality.
-    20% of individuals die before age 5. The remaining population follows a Gaussian distribution.
-    """
-    if random.random() < 0.20:
-        return random.randint(0, 5)
+    r = random.random()
+
+    # 1. Infants (0–1) — 18%
+    if r < 0.18:
+        return random.randint(0, 1)
+
+    # 2. Young children (1–5) — 12%
+    elif r < 0.30:
+        return random.randint(1, 5)
+
+    # 3. Young adult mortality (6–35) — 8%
+    elif r < 0.38:
+        return int(random.triangular(6, 35, 22))
+
+    # 4. Remaining population (36–99) — 62%
     while True:
-        lifespan = int(random.gauss(65, 15))
-        if 6 <= lifespan <= 100: return lifespan
+        lifespan = int(random.weibullvariate(56, 3.8)) + 6
+        if 36 <= lifespan <= 99:
+            if lifespan > 80:
+                if random.random() < (lifespan - 80) * 0.04:
+                    lifespan = random.randint(80, lifespan)
+            return min(lifespan, 99)
 
 def get_ancestors_with_depth(person_id: int, max_depth: int, people: dict, families: dict) -> dict:
     """

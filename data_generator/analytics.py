@@ -6,8 +6,10 @@ from collections import Counter, defaultdict
 from typing import Dict, List, Optional
 import matplotlib.pyplot as plt
 from models import Person, Family
-from config import SCENARIOS
+from config import SCENARIOS, PLACES
 from demographics import is_too_closely_related
+from matplotlib.ticker import FuncFormatter
+from matplotlib.collections import LineCollection
 
 class AnalyticsEngine:
     """
@@ -27,15 +29,14 @@ class AnalyticsEngine:
         self.yearly_data = yearly_data
 
     def run(self):
-        config = SCENARIOS.get(self.target_population, {'min_lca_path': 8, 'max_lca_path': 99, 'ancestors_depth': 5})
-        target_lca_min = config['min_lca_path']
-        target_lca_max = config.get('max_lca_path', 999)
+        config = SCENARIOS.get(self.target_population, {'lca_path': 8, 'ancestors_depth': 5})
+        target_lca = config['lca_path']
         target_ancestors_depth = config['ancestors_depth']
 
         target_descendants_depth = config.get('descendants_depth', 3 if self.target_population <= 1000
         else (6 if self.target_population <= 10000 else 10))
 
-        target_label = str(target_lca_min) if target_lca_min == target_lca_max else f"{target_lca_min}-{target_lca_max}"
+        target_label = str(target_lca)
 
         def is_biological_child(p_id):
             """Ensures we only traverse genetic linkages, preventing false cycles from adoptions."""
@@ -60,7 +61,7 @@ class AnalyticsEngine:
         max_depth = 0
         total_depth_leafs = 0
         leaf_count = 0
-        
+
         bio_children_map = defaultdict(list)
         for fam in self.families.values():
             for child_dict in fam.children:
@@ -79,10 +80,10 @@ class AnalyticsEngine:
             else:
                 d = 1
             depths[p_id] = d
-            
+
             if d > max_depth:
                 max_depth = d
-            
+
             # Leaf nodes represent current end-of-lineage individuals
             if len(bio_children_map[p_id]) == 0:
                 leaf_count += 1
@@ -92,30 +93,87 @@ class AnalyticsEngine:
         total_people = len(self.people)
         males = sum(1 for p in self.people.values() if p.sex == 'M')
         females = total_people - males
-        
+
+        eligible_for_marriage = sum(1 for p in self.people.values() if
+                                    (p.lifespan if p.is_deceased else (self.current_year - p.birth_year)) >= 16)
         married_people = sum(1 for p in self.people.values() if p.marriages_count > 0)
-        marriage_rate = (married_people / total_people) * 100
-        
+        marriage_rate = (married_people / max(1, eligible_for_marriage)) * 100
+
+        max_age_person = max((p.lifespan if p.is_deceased else (self.current_year - p.birth_year)) for p in self.people.values())
+
         dead_people = [p for p in self.people.values() if p.is_deceased]
         avg_lifespan = sum(p.lifespan for p in dead_people) / max(1, len(dead_people))
-        
+
+        dead_over_5 = [p.lifespan for p in self.people.values() if p.is_deceased and p.lifespan >= 6]
+        avg_lifespan_adults = sum(dead_over_5) / max(1, len(dead_over_5))
+
         families_with_children = [fam for fam in self.families.values() if fam.children]
         max_children = max((len(f.children) for f in families_with_children), default=0)
         avg_children_per_family = sum(len(f.children)
                                       for f in families_with_children) / max(1, len(families_with_children))
-        divorces_count = sum(1 for fam in self.families.values() if fam.status == 'DIVORCED')
-        
+        divorces_count = sum(1 for fam in self.families.values() if fam.status in ('DIVORCED', 'ANNULLED'))
+
         children_count_distribution = Counter(len(f.children) for f in families_with_children)
-        
+
+        mother_age_counts = Counter()
+        father_age_counts = Counter()
         biological_children = set()
         for fam in self.families.values():
+            husband = self.people.get(fam.husband_id)
+            wife = self.people.get(fam.wife_id)
             for c in fam.children:
                 if c['type'] == 'BIOLOGICAL':
                     biological_children.add(c['id'])
-                    
-        config_setup = SCENARIOS.get(self.target_population, SCENARIOS[1000])            
+                    child_person = self.people.get(c['id'])
+                    if child_person and child_person.birth_date:
+                        if husband and husband.birth_date:
+                            f_age = (child_person.birth_date - husband.birth_date).days / 365.25
+                            father_age_counts[int(f_age)] += 1
+                        if wife and wife.birth_date:
+                            m_age = (child_person.birth_date - wife.birth_date).days / 365.25
+                            mother_age_counts[int(m_age)] += 1
+
+        config_setup = SCENARIOS.get(self.target_population, SCENARIOS[1000])
         founders = config_setup['initial_pairs'] * 2
         orphans = total_people - len(biological_children) - founders
+
+        age_distribution_living = Counter()
+        age_distribution_deceased = Counter()
+        for p in self.people.values():
+            age = p.lifespan if p.is_deceased else (self.current_year - p.birth_year)
+            bin_start = (age // 10) * 10
+            if p.is_deceased:
+                age_distribution_deceased[bin_start] += 1
+            else:
+                age_distribution_living[bin_start] += 1
+
+        mother_age_at_birth = defaultdict(list)
+        father_age_at_birth = defaultdict(list)
+
+        for fam in self.families.values():
+            husband = self.people.get(fam.husband_id)
+            wife = self.people.get(fam.wife_id)
+            if not husband or not wife or husband.marriages_count > 1 or wife.marriages_count > 1:
+                continue
+
+            bio_children = [c for c in fam.children if c['type'] == 'BIOLOGICAL']
+            if not bio_children: continue
+
+            children_objects = []
+            for c in bio_children:
+                child_person = self.people.get(c['id'])
+                if child_person and child_person.birth_date:
+                    children_objects.append(child_person)
+
+            children_objects.sort(key=lambda x: x.birth_date)
+
+            for order, child in enumerate(children_objects, start=1):
+                if husband.birth_date:
+                    age = (child.birth_date - husband.birth_date).days / 365.25
+                    father_age_at_birth[order].append(age)
+                if wife.birth_date:
+                    age = (child.birth_date - wife.birth_date).days / 365.25
+                    mother_age_at_birth[order].append(age)
 
         # ---- 1. SUMMARY.TXT (Population Growth & Enhanced Topology) ----
         summary_filepath = os.path.join(self.output_dir, 'summary.txt')
@@ -137,16 +195,52 @@ class AnalyticsEngine:
             f.write(f"Average depth of leaf nodes (endpoints): "
                     f"{total_depth_leafs / max(1, leaf_count):.2f} generations\n")
             f.write(f"Sex ratio: {males} Males / {females} Females\n")
+            f.write(f"Oldest person age reached: {max_age_person} years\n")
             f.write(f"Average lifespan (deceased individuals): {avg_lifespan:.1f} years\n")
-            f.write(f"Marriage rate: {marriage_rate:.1f}% of total population\n")
-            f.write(f"Total divorces: {divorces_count}\n")
+            f.write(f"Average lifespan (excluding deaths under 6 years): {avg_lifespan_adults:.1f} years\n")
+            f.write(f"Marriage rate: {marriage_rate:.1f}% of eligible population (>= 16 years)\n")
+            f.write(f"Total divorces / annulments: {divorces_count}\n")
             f.write(f"Families with children: {len(families_with_children)}\n")
             f.write(f"Average children per fertile family: {avg_children_per_family:.2f}\n")
             f.write(f"Largest family generated: {max_children} children\n")
             f.write("Family distribution (children per family):\n")
             for i in range(1, max_children + 1):
                 f.write(f"  {i} child(ren): {children_count_distribution.get(i, 0)} families\n")
-            f.write(f"Orphans (adopted/foster without biological links): {orphans} individuals\n\n")
+            f.write(f"Adopted/Foster individuals: {orphans}\n\n")
+
+            f.write("--- PARENT AGE AT SUBSEQUENT BIRTHS (Only from first marriages) ---\n")
+            max_order_m = max(mother_age_at_birth.keys(), default=0)
+            max_order_f = max(father_age_at_birth.keys(), default=0)
+            max_order = max(max_order_m, max_order_f)
+
+            for i in range(1, max_order + 1):
+                m_list = mother_age_at_birth.get(i, [])
+                f_list = father_age_at_birth.get(i, [])
+
+                m_str = f"{sum(m_list) / len(m_list):.1f} yrs" if m_list else "N/A"
+                f_str = f"{sum(f_list) / len(f_list):.1f} yrs" if f_list else "N/A"
+
+                f.write(f"  Child {i}: Mother: {m_str} | Father: {f_str}\n")
+            f.write("\n")
+
+            f.write("--- PARENT AGE AT BIRTH DISTRIBUTION ---\n")
+            f.write("Mother age distribution:\n")
+            for age in sorted(mother_age_counts.keys()):
+                f.write(f"  {age} years: {mother_age_counts[age]} mothers\n")
+            f.write("Father age distribution:\n")
+            for age in sorted(father_age_counts.keys()):
+                f.write(f"  {age} years: {father_age_counts[age]} fathers\n")
+            f.write("\n")
+
+            f.write("--- AGE DISTRIBUTION (Living) ---\n")
+            for bin_start in sorted(age_distribution_living.keys()):
+                f.write(f"  {bin_start}-{bin_start + 9} years: {age_distribution_living[bin_start]} people\n")
+            f.write("\n")
+
+            f.write("--- AGE DISTRIBUTION (Deceased) ---\n")
+            for bin_start in sorted(age_distribution_deceased.keys()):
+                f.write(f"  {bin_start}-{bin_start + 9} years: {age_distribution_deceased[bin_start]} people\n")
+            f.write("\n")
 
         # ---- Scenario Directory Setup ----
         scenarios_dir = os.path.join(self.output_dir, 'expected_results')
@@ -163,7 +257,7 @@ class AnalyticsEngine:
                     for row in rows:
                         for i, val in enumerate(row):
                             col_widths[i] = max(col_widths[i], len(str(val)))
-                    
+
                     header_str = " | ".join(str(h).ljust(w) for h, w in zip(headers, col_widths))
                     f.write(header_str + "\n")
                     f.write("-" * len(header_str) + "\n")
@@ -186,11 +280,11 @@ class AnalyticsEngine:
 
         # ---------------- SCENARIO 01: LCA ----------------
         # Optimize search space by grouping candidates geographically
-        regions = {0: [], 1: [], 2: [], 3: [], 4: []}
+        regions = {r: [] for r in PLACES.keys()}
         for p_id in youngest_ids:
             regions[self.people[p_id].region_id].append(p_id)
 
-        bfs_limit = (target_lca_max // 2) + 10
+        bfs_limit = (target_lca // 2) + 10
 
         def get_ancestors_biological(p_id, limit):
             """Performs bounded BFS to map ancestors. Essential for evaluating LCA depth."""
@@ -200,7 +294,7 @@ class AnalyticsEngine:
                 curr_id, dist = queue.pop(0)
                 if dist >= limit: continue
                 if not is_biological_child(curr_id): continue
-                
+
                 fam = self.families[self.people[curr_id].parents_family_id]
                 for parent_id in (fam.husband_id, fam.wife_id):
                     if parent_id and parent_id not in ancestors_paths:
@@ -208,9 +302,9 @@ class AnalyticsEngine:
                         queue.append((parent_id, dist + 1))
             return ancestors_paths
 
-        max_distance  = 0
+        max_distance = 0
         best_pair_info = None
-        iterations    = 1500
+        iterations = 1500
 
         # Monte Carlo approach to find a pair satisfying the LCA depth requirement
         for i in range(iterations):
@@ -223,8 +317,8 @@ class AnalyticsEngine:
             if len(available_regions) < 2: break
 
             r1, r2 = random.sample(available_regions, 2)
-            p1_id  = random.choice(regions[r1])
-            p2_id  = random.choice(regions[r2])
+            p1_id = random.choice(regions[r1])
+            p2_id = random.choice(regions[r2])
 
             if not is_too_closely_related(p1_id, p2_id, self.people, self.families):
                 anc1 = get_ancestors_biological(p1_id, bfs_limit)
@@ -236,10 +330,10 @@ class AnalyticsEngine:
                 if valid_lcas:
                     min_total_dist = min(anc1[x] + anc2[x] for x in valid_lcas)
 
-                    if min_total_dist > max_distance and min_total_dist <= target_lca_max:
+                    if min_total_dist > max_distance and min_total_dist <= target_lca:
                         max_distance = min_total_dist
-                        lcas_at_min  = [x for x in valid_lcas if anc1[x] + anc2[x] == min_total_dist]
-                        lca_details  = [(x, anc1[x], anc2[x]) for x in lcas_at_min]
+                        lcas_at_min = [x for x in valid_lcas if anc1[x] + anc2[x] == min_total_dist]
+                        lca_details = [(x, anc1[x], anc2[x]) for x in lcas_at_min]
 
                         best_pair_info = {
                             'p1': p1_id, 'p2': p2_id,
@@ -247,9 +341,9 @@ class AnalyticsEngine:
                             'total_dist': max_distance
                         }
 
-                        if target_lca_min <= max_distance <= target_lca_max:
+                        if max_distance == target_lca:
                             sys.stdout.write(f"\r[{self.target_population}] LCA search: "
-                                             f"found target {max_distance} at iteration {i + 1}!{' '*20}\n")
+                                             f"found target {max_distance} at iteration {i + 1}!{' ' * 20}\n")
                             sys.stdout.flush()
                             break
         else:
@@ -267,10 +361,10 @@ class AnalyticsEngine:
         info_01 += "Constraint: Person A and Person B are not closely related AND\n"
         info_01 += "            biological distance to LCA > 3 for both sides.\n"
 
-        if best_pair_info and (target_lca_min <= best_pair_info['total_dist'] <= target_lca_max):
+        if best_pair_info and best_pair_info['total_dist'] == target_lca:
             info_01 += f"\nRecommended Person A (ID: {best_pair_info['p1']})\n"
             info_01 += f"Recommended Person B (ID: {best_pair_info['p2']})\n"
-            
+
             headers_01 = ['lca_id', 'given_name', 'surname', 'sex', 'birth_date', 'birth_place', 'death_date',
                           'death_place', 'path_length_from_a', 'path_length_from_b', 'total_dist']
             rows_01 = []
@@ -279,7 +373,7 @@ class AnalyticsEngine:
                 rows_01.append((lca_id, p.given_name, p.surname, p.sex, p.birth_date.isoformat(), p.birth_place,
                                 p.death_date.isoformat() if p.death_date else 'NULL', p.death_place
                                 or 'NULL', d_a, d_b, d_a + d_b))
-            
+
             write_scenario_file('scenario_01_lca.txt', info_01, headers_01, rows_01)
         else:
             print(f"[WARNING] LCA target {target_label} NOT MET for {self.target_population} dataset. "
@@ -295,19 +389,19 @@ class AnalyticsEngine:
         for p_id in sample_for_ancestors:
             distinct_ancestors = set()
             visited = {p_id}
-            queue   = [(p_id, 0)]
+            queue = [(p_id, 0)]
             while queue:
                 curr, d = queue.pop(0)
                 if d >= target_ancestors_depth: continue
                 if not is_biological_child(curr): continue
-                
+
                 fam = self.families[self.people[curr].parents_family_id]
                 for parent_id in (fam.husband_id, fam.wife_id):
                     if parent_id and parent_id not in visited:
                         visited.add(parent_id)
                         distinct_ancestors.add(parent_id)
                         queue.append((parent_id, d + 1))
-            
+
             count = len(distinct_ancestors)
             if count > best_ancestor_count:
                 best_ancestor_count = count
@@ -315,7 +409,7 @@ class AnalyticsEngine:
 
         # Pedigree collapse means theoretical_max is rarely reached in deep trees
         theoretical_max = sum(2 ** i for i in range(1, target_ancestors_depth + 1))
-        
+
         info_04 = "--- SCENARIO 04: ANCESTOR RETRIEVAL ---\n"
         info_04 += "Biological relationships only.\n"
         info_04 += (f"Objective: Find person with most distinct biological ancestors up to"
@@ -324,7 +418,7 @@ class AnalyticsEngine:
         info_04 += f"Distinct biological ancestors found: {best_ancestor_count}\n"
         if target_ancestors_depth > 10:
             info_04 += "(Note: High pedigree collapse is biologically expected here.)\n"
-        
+
         if best_ancestor_person_id:
             info_04 += f"\nRecommended Person ID: {best_ancestor_person_id}\n"
             generation_map = {}
@@ -337,10 +431,10 @@ class AnalyticsEngine:
                         fam = self.families[self.people[curr].parents_family_id]
                         if fam.husband_id: queue.append((fam.husband_id, gen + 1))
                         if fam.wife_id: queue.append((fam.wife_id, gen + 1))
-            
+
             if best_ancestor_person_id in generation_map:
                 del generation_map[best_ancestor_person_id]
-            
+
             headers_04 = ['ancestor_id', 'generation', 'given_name', 'surname', 'sex', 'birth_date',
                           'birth_place', 'death_date', 'death_place',
                           'burial_place', 'cause_of_death', 'father_id', 'mother_id']
@@ -352,7 +446,7 @@ class AnalyticsEngine:
                                 p.birth_place, p.death_date.isoformat() if p.death_date else 'NULL',
                                 p.death_place or 'NULL', p.burial_place or 'NULL', p.cause_of_death
                                 or 'NULL', f_id, m_id))
-            
+
             rows_04.sort(key=lambda x: (x[1], x[0]))
             write_scenario_file('scenario_04_ancestors.txt', info_04, headers_04, rows_04)
         else:
@@ -387,7 +481,7 @@ class AnalyticsEngine:
         info_05 += (f"Objective: Find person with most distinct biological descendants up to "
                     f"{target_descendants_depth} generations forward.\n")
         info_05 += f"Distinct biological descendants found: {best_descendant_count}\n"
-        
+
         if best_descendant_person_id:
             info_05 += f"\nRecommended Person ID: {best_descendant_person_id}\n"
             generation_map = {}
@@ -399,10 +493,10 @@ class AnalyticsEngine:
                     if gen < target_descendants_depth:
                         for child_id in bio_children_map.get(curr, []):
                             queue.append((child_id, gen + 1))
-            
+
             if best_descendant_person_id in generation_map:
                 del generation_map[best_descendant_person_id]
-                
+
             headers_05 = ['descendant_id', 'generation', 'given_name', 'surname', 'sex', 'birth_date',
                           'birth_place', 'death_date', 'death_place', 'burial_place',
                           'cause_of_death', 'father_id', 'mother_id']
@@ -414,7 +508,7 @@ class AnalyticsEngine:
                                 p.birth_place, p.death_date.isoformat() if p.death_date else 'NULL',
                                 p.death_place or 'NULL', p.burial_place or 'NULL',
                                 p.cause_of_death or 'NULL', f_id, m_id))
-            
+
             rows_05.sort(key=lambda x: (x[1], x[0]))
             write_scenario_file('scenario_05_descendants.txt', info_05, headers_05, rows_05)
         else:
@@ -423,11 +517,11 @@ class AnalyticsEngine:
 
         # ---------------- SCENARIO 02: SURNAME FILTER ----------------
         surname_counts = Counter(p.surname for p in self.people.values())
-        top_surnames   = [s for s, _ in surname_counts.most_common(5)]
-        best_surname   = None
+        top_surnames = [s for s, _ in surname_counts.most_common(5)]
+        best_surname = None
         best_year_start = None
-        best_count      = 0
-        
+        best_count = 0
+
         # Determine expected distribution range for query benchmarking
         target_min = max(5, len(self.people) // 20)
         target_max = max(20, len(self.people) // 8)
@@ -458,9 +552,8 @@ class AnalyticsEngine:
                 rows_02.append((p.id, p.given_name, p.surname, p.sex, p.birth_date.isoformat(),
                                 p.birth_place, p.death_date.isoformat()
                                 if p.death_date else 'NULL', p.death_place or 'NULL'))
-        rows_02.sort(key=lambda x: x[4]) # order by birth_date
+        rows_02.sort(key=lambda x: x[4])  # order by birth_date
         write_scenario_file('scenario_02_surname_filter.txt', info_02, headers_02, rows_02)
-
 
         # ---------------- SCENARIO 03: BIRTHS BY CITY ----------------
         births_by_city_quarter = defaultdict(lambda: defaultdict(int))
@@ -515,17 +608,17 @@ class AnalyticsEngine:
         # ---------------- SCENARIO 07: PLACE NAME UPDATE ----------------
         # german_cities set is used to identify records that should be updated in the benchmark scenario.
         german_cities = {"Posen", "Danzig", "Breslau", "Stettin", "Bromberg", "Thorn"}
-        
-        # Count unique people affected (a person might have both birth and death in a German city, 
+
+        # Count unique people affected (a person might have both birth and death in a German city,
         # but in SQL it counts as one row updated)
         people_updates = sum(
-            1 for p in self.people.values() 
+            1 for p in self.people.values()
             if p.birth_place in german_cities or p.death_place in german_cities
         )
-        
+
         # Count unique families affected
         family_updates = sum(
-            1 for fam in self.families.values() 
+            1 for fam in self.families.values()
             if fam.marriage_place in german_cities
         )
 
@@ -565,7 +658,7 @@ class AnalyticsEngine:
         info_08_09 = "--- SCENARIO 08 & 09: INSERT / DELETE TEST CANDIDATE ---\n"
         info_08_09 += ("Benchmark: Insert two biological parents and one sibling for an existing "
                        "adopted person, then delete them.\n")
-        
+
         if candidate:
             # Assigning specific ID ranges to prevent primary key collisions during benchmark
             if self.target_population == 1000:
@@ -576,11 +669,11 @@ class AnalyticsEngine:
                 f_id, m_id, sib_id, fam_id = 200001, 200002, 200003, 200001
 
             cy = candidate.birth_year
-            f_bdate   = f"{cy - 30:04d}-06-15"
-            f_ddate   = f"{cy - 30 + 65:04d}-11-02"
-            m_bdate   = f"{cy - 27:04d}-03-22"
-            m_ddate   = f"{cy - 27 + 70:04d}-01-10"
-            mar_date  = f"{cy - 8:04d}-05-10"
+            f_bdate = f"{cy - 30:04d}-06-15"
+            f_ddate = f"{cy - 30 + 65:04d}-11-02"
+            m_bdate = f"{cy - 27:04d}-03-22"
+            m_ddate = f"{cy - 27 + 70:04d}-01-10"
+            mar_date = f"{cy - 8:04d}-05-10"
             sib_bdate = f"{cy + 3:04d}-09-01"
             sib_ddate = f"{cy + 3 + 30:04d}-04-12"
 
@@ -591,7 +684,7 @@ class AnalyticsEngine:
             info_08_09 += f"  - Adopting Family ID: {candidate.parents_family_id}\n"
             info_08_09 += ("This person has no biological parents in the dataset, making "
                            "it safe to INSERT new ones.\n\n")
-            
+
             info_08_09 += "[RECORDS TO BE INSERTED / DELETED]\n"
             info_08_09 += ("Person entities to insert (Columns: id, given_name, surname, sex, "
                            "is_deceased, birth_date, birth_place, death_date, death_place, cause_of_death, burial_place, occupation):\n")
@@ -601,10 +694,10 @@ class AnalyticsEngine:
                            f"'Kraków', '{m_ddate}', 'Kraków', 'Fever', 'Cemetery in Kraków', 'Weaver'\n")
             info_08_09 += (f"  3. Sibling (ID {sib_id}): 'Piotr', 'Kowalski', 'M', true, '{sib_bdate}', "
                            f"'Kraków', '{sib_ddate}', 'Kraków', 'Accident', 'Cemetery in Kraków', 'Blacksmith'\n\n")
-            
+
             info_08_09 += "Family entity to insert (Columns: id, status, marriage_date, marriage_place, husband_id, wife_id):\n"
             info_08_09 += f"  1. Marriage (ID {fam_id}): 'MARRIED', '{mar_date}', 'Kraków', {f_id}, {m_id}\n\n"
-            
+
             info_08_09 += "Relationships to establish:\n"
             info_08_09 += f"  - Father (ID {f_id}) is husband of Family (ID {fam_id})\n"
             info_08_09 += f"  - Mother (ID {m_id}) is wife of Family (ID {fam_id})\n"
@@ -614,7 +707,7 @@ class AnalyticsEngine:
                            f"and the new sibling (ID {sib_id})\n")
         else:
             info_08_09 += "\nNo suitable adopted person without biological parents found in dataset.\n"
-        
+
         write_scenario_file('scenario_08_09_insert_delete.txt', info_08_09)
 
         print(f"[{self.target_population}] Summary and scenario reports saved to '{self.output_dir}'.")
@@ -630,6 +723,9 @@ class AnalyticsEngine:
         )
 
         self._plot_population_growth()
+        self._plot_age_distribution_living()
+        self._plot_generated_per_quarter()
+        self._plot_network_topology(max_depth, depths, bio_children_map)
 
     def _plot_population_growth(self):
         """Generates a population growth line chart inside the dataset's output directory."""
@@ -665,6 +761,241 @@ class AnalyticsEngine:
         print(f"[{self.target_population}] Graph saved to: {output_image}")
         plt.close()
 
+    def _plot_age_distribution_living(self):
+        """Generates a Population Pyramid chart split by sex."""
+
+        def format_pct(x):
+            if x < 1e-9:
+                return "0%"
+            elif x < 0.1:
+                return "<0.1%"
+            else:
+                return f"{x:.1f}%"
+
+        males = Counter()
+        females = Counter()
+        total_living = 0
+
+        for p in self.people.values():
+            if not p.is_deceased:
+                age = self.current_year - p.birth_year
+                bin_start = min((age // 5) * 5, 100)
+                if p.sex == 'M':
+                    males[bin_start] += 1
+                else:
+                    females[bin_start] += 1
+                total_living += 1
+
+        if total_living == 0:
+            return
+
+        max_m_bin = max(males.keys(), default=0)
+        max_f_bin = max(females.keys(), default=0)
+        max_active_bin = max(max_m_bin, max_f_bin)
+
+        bins = list(range(0, max_active_bin + 5, 5))
+
+        m_pct = [males.get(b, 0) / total_living * 100 for b in bins]
+        f_pct = [females.get(b, 0) / total_living * 100 for b in bins]
+
+        y_pos = range(len(bins))
+        labels = [f"{b}-{b + 4}" if b < 100 else "100+" for b in bins]
+
+        plt.figure(figsize=(10, 8))
+
+        plt.barh(y_pos, [-m for m in m_pct], height=0.95, color='steelblue')
+        plt.barh(y_pos, f_pct, height=0.95, color='lightcoral')
+
+        dataset_label = f"{self.target_population // 1000}k" if self.target_population >= 1000 else str(
+            self.target_population)
+        plt.title(f"Population Pyramid (Living): {dataset_label.upper()}", fontsize=16, fontweight='bold', pad=30)
+
+        max_pct = max(max(m_pct) if m_pct else 0, max(f_pct) if f_pct else 0)
+        limit = max_pct + (max_pct * 0.25) + 0.1
+        plt.xlim(-limit, limit)
+
+        ax = plt.gca()
+        ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{abs(x):.0f}%"))
+
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.spines['left'].set_visible(True)
+        ax.tick_params(axis='y', length=0)
+
+        plt.yticks(y_pos, labels, fontsize=10)
+        plt.xlabel("Population Percentage (%)", fontsize=12)
+
+        plt.text(-limit / 2, len(bins), 'Male', ha='center', va='bottom', fontsize=14)
+        plt.text(limit / 2, len(bins), 'Female', ha='center', va='bottom', fontsize=14)
+
+        for i, (m, f) in enumerate(zip(m_pct, f_pct)):
+            if m > 0:
+                label = format_pct(m)
+                if label:
+                    plt.text(-m - (limit * 0.02), i, label, va='center', ha='right', fontsize=9)
+
+            if f > 0:
+                label = format_pct(f)
+                if label:
+                    plt.text(f + (limit * 0.02), i, label, va='center', ha='left', fontsize=9)
+
+        plt.tight_layout()
+
+        output_image = os.path.join(self.output_dir, "population_pyramid.png")
+        plt.savefig(output_image, dpi=300)
+        print(f"[{self.target_population}] Graph saved to: {output_image}")
+        plt.close()
+
+    def _plot_generated_per_quarter(self):
+        """Generates a Spindle Diagram to visualize the width of the genealogical tree."""
+        quarter_counts = Counter()
+        for p in self.people.values():
+            q_start = (p.birth_year // 25) * 25
+            quarter_counts[q_start] += 1
+
+        if not quarter_counts:
+            return
+
+        quarters = sorted(quarter_counts.keys())
+        counts = [quarter_counts[q] for q in quarters]
+        lefts = [-c / 2 for c in counts]
+
+        dataset_label = f"{self.target_population // 1000}k" if self.target_population >= 1000 else str(
+            self.target_population)
+
+        plt.figure(figsize=(10, 10))
+        plt.barh(y=quarters, width=counts, height=25, left=lefts, color='darkseagreen', edgecolor='black', alpha=0.8)
+
+        plt.title(f"Genealogical Tree Width per Generation: {dataset_label.upper()}", fontsize=16, fontweight='bold')
+        plt.ylabel("Generation (Simulation Year)", fontsize=12)
+        plt.xlabel("New Individuals Generated", fontsize=12)
+
+        max_c = max(counts)
+        padding = (max_c / 2) * 1.08
+        plt.xlim(-padding, padding)
+
+        step = 25 if len(quarters) <= 20 else (100 if len(quarters) > 40 else 50)
+        plt.yticks(range(quarters[0], quarters[-1] + 25, step))
+
+        ax = plt.gca()
+        ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{abs(int(x))}"))
+        ax.invert_yaxis()
+
+        plt.axvline(0, color='black', linewidth=1, linestyle='--')
+        plt.grid(axis='x', linestyle='--', alpha=0.5)
+        plt.tight_layout()
+
+        output_image = os.path.join(self.output_dir, "tree_width_generations.png")
+        plt.savefig(output_image, dpi=300)
+        print(f"[{self.target_population}] Graph saved to: {output_image}")
+        plt.close()
+
+    def _plot_network_topology(self, max_depth: int, depths: dict, bio_children_map: dict):
+        """Generates a full network topology graph (nodes and edges per generation)."""
+
+        # ROZWIĄZANIE PROBLEMU DŁUGICH LINII:
+        # Obliczamy "Głębokość Wizualną", która w przeciwieństwie do biologicznej,
+        # traktuje adopcje jako zwykłe przejście pokolenia. Dzięki temu adoptowane
+        # dzieci nie utkną w Pokoleniu 1, tylko wylądują tam, gdzie ich przybrani rodzice.
+        visual_depths = {}
+        for p_id in sorted(self.people.keys()):
+            p = self.people[p_id]
+            if p.parents_family_id:
+                fam = self.families[p.parents_family_id]
+                d_h = visual_depths.get(fam.husband_id, 0) if fam.husband_id else 0
+                d_w = visual_depths.get(fam.wife_id, 0) if fam.wife_id else 0
+                visual_depths[p_id] = max(d_h, d_w) + 1
+            else:
+                visual_depths[p_id] = 1
+
+        vis_max_depth = max(visual_depths.values()) if visual_depths else 1
+
+        gen_nodes = defaultdict(list)
+        for p_id, d in visual_depths.items():
+            gen_nodes[d].append(p_id)
+
+        # Sortowanie wewnątrz generacji by rodzeństwa były obok siebie
+        for d in gen_nodes:
+            gen_nodes[d].sort(key=lambda pid: self.people[pid].parents_family_id or 0)
+
+        # Znalezienie najliczniejszego pokolenia by ustalić stały odstęp dla wszystkich
+        max_n = max(len(p_ids) for p_ids in gen_nodes.values()) if gen_nodes else 1
+
+        coords = {}
+        for d, p_ids in gen_nodes.items():
+            n = len(p_ids)
+            # Stały odstęp między węzłami
+            dx = 0.9 / (max_n - 1) if max_n > 1 else 0
+            # Całkowita szerokość obecnego pokolenia
+            total_width = (n - 1) * dx
+            # Wyśrodkowanie pokolenia (0.5 to środek wykresu)
+            start_x = 0.5 - (total_width / 2)
+
+            for i, p_id in enumerate(p_ids):
+                x = start_x + (i * dx)
+                coords[p_id] = (x, d)
+
+        lines = []
+        line_colors = []
+
+        # Tworzenie krawędzi - niebieskie dla ojców, czerwone dla matek
+        for p_id, children in bio_children_map.items():
+            if p_id in coords:
+                p_coord = coords[p_id]
+                parent_sex = self.people[p_id].sex
+                color = 'royalblue' if parent_sex == 'M' else 'crimson'
+
+                for child_id in children:
+                    if child_id in coords:
+                        lines.append([p_coord, coords[child_id]])
+                        line_colors.append(color)
+
+        plt.figure(figsize=(12, 10))
+        ax = plt.gca()
+
+        if self.target_population <= 1000:
+            line_alpha, line_width, node_size = 0.5, 0.5, 5
+        elif self.target_population <= 10000:
+            line_alpha, line_width, node_size = 0.15, 0.2, 1.0
+        else:
+            line_alpha, line_width, node_size = 0.02, 0.05, 0.05
+
+        # Rysowanie krawędzi i węzłów
+        lc = LineCollection(lines, colors=line_colors, linewidths=line_width, alpha=line_alpha, zorder=1)
+        ax.add_collection(lc)
+
+        x_vals = [coords[pid][0] for pid in coords]
+        y_vals = [coords[pid][1] for pid in coords]
+        ax.scatter(x_vals, y_vals, color='black', s=node_size, zorder=2)
+
+        # Etykiety zliczeń po prawej stronie
+        for d in range(1, vis_max_depth + 1):
+            count = len(gen_nodes.get(d, []))
+            if count > 0:
+                ax.text(0.96, d, f"n={count}", va='center', ha='left', fontsize=9, color='black')
+
+        ax.invert_yaxis()  # Założyciele na górze
+
+        step = 5 if vis_max_depth > 25 else 1
+        ax.set_yticks(range(1, vis_max_depth + 1, step))
+        ax.set_ylabel("Generation", fontsize=12)
+        ax.set_xticks([])
+
+        # Ukrycie ramki
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+        ax.tick_params(axis='y', length=0)
+
+        dataset_label = f"{self.target_population // 1000}k" if self.target_population >= 1000 else str(
+            self.target_population)
+        plt.title(f"Full Pedigree Network Topology: {dataset_label.upper()}", fontsize=16, fontweight='bold')
+
+        plt.tight_layout()
+        output_image = os.path.join(self.output_dir, "network_topology.png")
+        plt.savefig(output_image, dpi=300)
+        print(f"[{self.target_population}] Graph saved to: {output_image}")
+        plt.close()
+
     def _update_scenario_files(
             self,
             lca_p1_id: Optional[int],
@@ -691,7 +1022,12 @@ class AnalyticsEngine:
             size = "100k"
             new_f_id, new_m_id, new_sib_id, new_fam_id = 200001, 200002, 200003, 200001
 
-        pg_base  = os.path.join(project_root, "query_performance_benchmark", "scenarios", "postgres_scenarios")
+        config_scen = SCENARIOS.get(self.target_population, SCENARIOS[1000])
+        lca_path = config_scen.get('lca_path', 8)
+        anc_depth = config_scen.get('ancestors_depth', 5)
+        desc_depth = config_scen.get('descendants_depth', 3)
+
+        pg_base = os.path.join(project_root, "query_performance_benchmark", "scenarios", "postgres_scenarios")
         n4j_base = os.path.join(project_root, "query_performance_benchmark", "scenarios", "neo4j_scenarios")
 
         def rw(path, transform):
@@ -708,7 +1044,9 @@ class AnalyticsEngine:
             prefix = "//" if is_cypher else "--"
             marker = f"{prefix} RECOMMENDED PARAMETERS:"
             txt = re.sub(r'\n*' + re.escape(marker) + r'[^\n]*\n+', '\n\n', txt)
+
             def repl(m): return f"\n\n{marker} {text}\n\n{m.group(1)}"
+
             txt = re.sub(r'\n(WITH\s|SELECT\s|MATCH\s|UPDATE\s|DELETE\s|INSERT\s|CREATE\s)', repl, txt, count=1)
             return txt
 
@@ -719,15 +1057,20 @@ class AnalyticsEngine:
                              rf'\g<1>{lca_p1_id}\g<2>{lca_p1_id}\g<3>', txt)
                 txt = re.sub(r'(anc_b\s*\([^)]+\)\s*AS\s*\(\s*\n\s*SELECT\s+)\d+(\s*,\s*0\s*,\s*ARRAY\s*\[)\d+(\])',
                              rf'\g<1>{lca_p2_id}\g<2>{lca_p2_id}\g<3>', txt)
+                txt = re.sub(r'(WHERE\s+[ab]\.depth\s*<\s*)\d+', rf'\g<1>{lca_path}', txt)
+                txt = re.sub(r'(\(\d+\s+hops\s+for)', f'({lca_path} hops for', txt)
                 return inject_rec(txt, f"Person A = {lca_p1_id}, Person B = {lca_p2_id}", False)
 
             def upd_lca_cypher(txt):
-                txt = re.sub(r'(WHERE\s+startNode\.id\s+IN\s+\[)\d+\s*,\s*\d+(\])', rf'\g<1>{lca_p1_id}, {lca_p2_id}\g<2>', txt)
+                txt = re.sub(r'(WHERE\s+startNode\.id\s+IN\s+\[)\d+\s*,\s*\d+(\])',
+                             rf'\g<1>{lca_p1_id}, {lca_p2_id}\g<2>', txt)
                 txt = re.sub(r'(sId\s*=\s*)\d+(.*?AS\s+distA)', rf'\g<1>{lca_p1_id}\g<2>', txt)
                 txt = re.sub(r'(sId\s*=\s*)\d+(.*?AS\s+distB)', rf'\g<1>{lca_p2_id}\g<2>', txt)
+                txt = re.sub(r'(<-\[:HUSBAND_OF\|WIFE_OF\]-\(\)\)\{0,)\d+(\})', rf'\g<1>{lca_path - 1}\g<2>', txt)
+                txt = re.sub(r'(\(\d+\s+hops\s+for)', f'({lca_path} hops for', txt)
                 return inject_rec(txt, f"Person A = {lca_p1_id}, Person B = {lca_p2_id}", True)
 
-            rw(os.path.join(pg_base,  "scenario_01_lca", f"scenario_01_lca_{size}.sql"),    upd_lca_sql)
+            rw(os.path.join(pg_base, "scenario_01_lca", f"scenario_01_lca_{size}.sql"), upd_lca_sql)
             rw(os.path.join(n4j_base, "scenario_01_lca", f"scenario_01_lca_{size}.cypher"), upd_lca_cypher)
 
         # ── SCENARIO 02: SURNAME FILTER
@@ -735,29 +1078,42 @@ class AnalyticsEngine:
             def upd_s02_sql(txt):
                 txt = re.sub(r"(WHERE\s+p\.surname\s*=\s*')[^']+(')", rf"\g<1>{surname}\g<2>", txt)
                 txt = re.sub(r'(BETWEEN\s+)\d+(\s+AND\s+)\d+', rf'\g<1>{year_start}\g<2>{year_start + 49}', txt)
-                return inject_rec(txt, f"Surname = '{surname}', Birth Year Range = {year_start}-{year_start + 49}", False)
+                return inject_rec(txt, f"Surname = '{surname}', Birth Year Range = {year_start}-{year_start + 49}",
+                                  False)
 
             def upd_s02_cypher(txt):
                 txt = re.sub(r'(WHERE\s+n\.birthDate\.year\s*>=\s*)\d+(\s+and\s+n\.birthDate\.year\s*<=\s*)\d+',
                              rf'\g<1>{year_start}\g<2>{year_start + 49}', txt, flags=re.IGNORECASE)
                 txt = re.sub(r"(AND\s+n\.surname\s*=\s*')[^']+(')", rf"\g<1>{surname}\g<2>", txt)
-                return inject_rec(txt, f"Surname = '{surname}', Birth Year Range = {year_start}-{year_start + 49}", True)
+                return inject_rec(txt, f"Surname = '{surname}', Birth Year Range = {year_start}-{year_start + 49}",
+                                  True)
 
-            rw(os.path.join(pg_base,  "scenario_02_surname_filter", f"scenario_02_surname_filter_{size}.sql"),    upd_s02_sql)
-            rw(os.path.join(n4j_base, "scenario_02_surname_filter", f"scenario_02_surname_filter_{size}.cypher"), upd_s02_cypher)
+            rw(os.path.join(pg_base, "scenario_02_surname_filter", f"scenario_02_surname_filter_{size}.sql"),
+               upd_s02_sql)
+            rw(os.path.join(n4j_base, "scenario_02_surname_filter", f"scenario_02_surname_filter_{size}.cypher"),
+               upd_s02_cypher)
 
         # ── SCENARIO 04: ANCESTORS
         if ancestor_id is not None:
             def upd_s04_sql(txt):
-                txt = re.sub(r'(SELECT\s+)\d+(\s+AS\s+person_id\s*,\s*0\s+AS\s+depth)', rf'\g<1>{ancestor_id}\g<2>', txt)
+                txt = re.sub(r'(SELECT\s+)\d+(\s+AS\s+person_id\s*,\s*0\s+AS\s+depth)', rf'\g<1>{ancestor_id}\g<2>',
+                             txt)
                 txt = re.sub(r'(WHERE\s+person_id\s*<>\s*)\d+', rf'\g<1>{ancestor_id}', txt)
+                txt = re.sub(r'(WHERE\s+parent_id\s+IS\s+NOT\s+NULL\s+AND\s+a\.depth\s*<\s*)\d+', rf'\g<1>{anc_depth}',
+                             txt)
+                txt = re.sub(r'\(\d+\s+generations\s+in\s+this\s+case\)', f'({anc_depth} generations in this case)',
+                             txt)
                 return inject_rec(txt, f"Person ID = {ancestor_id}", False)
 
             def upd_s04_cypher(txt):
                 txt = re.sub(r'(MATCH\s+\(start:Person\s+\{id:\s*)\d+(\})', rf'\g<1>{ancestor_id}\g<2>', txt)
+                txt = re.sub(r'(<-\[:HUSBAND_OF\|WIFE_OF\]-\(:Person\)\)\{1,)\d+(\})', rf'\g<1>{anc_depth}\g<2>',
+                             txt)
+                txt = re.sub(r'\(\d+\s+generations\s+in\s+this\s+case\)', f'({anc_depth} generations in this case)',
+                             txt)
                 return inject_rec(txt, f"Person ID = {ancestor_id}", True)
 
-            rw(os.path.join(pg_base,  "scenario_04_ancestors", f"scenario_04_ancestors_{size}.sql"),    upd_s04_sql)
+            rw(os.path.join(pg_base, "scenario_04_ancestors", f"scenario_04_ancestors_{size}.sql"), upd_s04_sql)
             rw(os.path.join(n4j_base, "scenario_04_ancestors", f"scenario_04_ancestors_{size}.cypher"), upd_s04_cypher)
 
         # ── SCENARIO 05: DESCENDANTS
@@ -766,25 +1122,30 @@ class AnalyticsEngine:
                 txt = re.sub(r'(SELECT\s+)\d+(\s*,\s*0\s*,\s*NULL::int\s*,\s*ARRAY\s*\[)\d+(\])',
                              rf'\g<1>{descendant_id}\g<2>{descendant_id}\g<3>', txt)
                 txt = re.sub(r'(WHERE\s+person_id\s*<>\s*)\d+', rf'\g<1>{descendant_id}', txt)
+                txt = re.sub(r'(WHERE\s+d\.depth\s*<\s*)\d+', rf'\g<1>{desc_depth}', txt)
+                txt = re.sub(r'\(\d+\s+generations\s+for', f'({desc_depth} generations for', txt)
                 return inject_rec(txt, f"Person ID = {descendant_id}", False)
 
             def upd_s05_cypher(txt):
                 txt = re.sub(r'(MATCH\s+\(start:Person\s+\{id:\s*)\d+(\})', rf'\g<1>{descendant_id}\g<2>', txt)
+                txt = re.sub(r'(\[r:HAS_CHILD[^\]]+\]->\(\)\)\{1,\s*)\d+(\})', rf'\g<1>{desc_depth}\g<2>', txt)
+                txt = re.sub(r'\(\d+\s+generations\s+for', f'({desc_depth} generations for', txt)
                 return inject_rec(txt, f"Person ID = {descendant_id}", True)
 
-            rw(os.path.join(pg_base,  "scenario_05_descendants", f"scenario_05_descendants_{size}.sql"),    upd_s05_sql)
-            rw(os.path.join(n4j_base, "scenario_05_descendants", f"scenario_05_descendants_{size}.cypher"), upd_s05_cypher)
+            rw(os.path.join(pg_base, "scenario_05_descendants", f"scenario_05_descendants_{size}.sql"), upd_s05_sql)
+            rw(os.path.join(n4j_base, "scenario_05_descendants", f"scenario_05_descendants_{size}.cypher"),
+               upd_s05_cypher)
 
         # ── SCENARIO 08 & 09: INSERT/DELETE
         if candidate is not None:
             cy = candidate.birth_year
-            f_by      = cy - 30
-            m_by      = cy - 27
-            mar_y     = cy - 8
-            sib_by    = cy + 3
-            f_dy      = f_by + 65
-            m_dy      = m_by + 70
-            sib_dy    = sib_by + 30
+            f_by = cy - 30
+            m_by = cy - 27
+            mar_y = cy - 8
+            sib_by = cy + 3
+            f_dy = f_by + 65
+            m_dy = m_by + 70
+            sib_dy = sib_by + 30
 
             def fy(y: int) -> str:
                 return f"{y:04d}"
@@ -805,7 +1166,7 @@ class AnalyticsEngine:
                 txt = re.sub(
                     rf"(\({new_sib_id}\s*,\s*'Piotr'\s*,\s*'Kowalski'\s*,\s*'M'\s*,\s*true\s*,\s*')\d{{4}}-09-01('\s*,\s*'Kraków'\s*,\s*')\d{{4}}-04-12(')",
                     rf"\g<1>{fy(sib_by)}-09-01\g<2>{fy(sib_dy)}-04-12\g<3>", txt)
-                
+
                 return inject_rec(txt, f"Adopted Anchor Person ID = {candidate.id}", False)
 
             def upd_s08_cypher(txt):
@@ -824,10 +1185,10 @@ class AnalyticsEngine:
                 txt = re.sub(
                     rf"(id:\s*{new_sib_id}\s*,\s*givenName:\s*'Piotr'.*?birthDate:\s*date\(')\d{{4}}-09-01('.*?deathDate:\s*date\(')\d{{4}}-04-12(')",
                     rf"\g<1>{fy(sib_by)}-09-01\g<2>{fy(sib_dy)}-04-12\g<3>", txt)
-                
+
                 return inject_rec(txt, f"Adopted Anchor Person ID = {candidate.id}", True)
 
-            rw(os.path.join(pg_base,  "scenario_08_insert", f"scenario_08_insert_{size}.sql"),    upd_s08_sql)
+            rw(os.path.join(pg_base, "scenario_08_insert", f"scenario_08_insert_{size}.sql"), upd_s08_sql)
             rw(os.path.join(n4j_base, "scenario_08_insert", f"scenario_08_insert_{size}.cypher"), upd_s08_cypher)
 
         print(f"[{self.target_population}] Scenario query files updated automatically.")

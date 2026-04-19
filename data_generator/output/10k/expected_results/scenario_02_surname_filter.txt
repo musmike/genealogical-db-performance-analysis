@@ -1,156 +1,510 @@
 --- SCENARIO 02: SURNAME FILTER ---
-Recommended surname: Adamczyk
-Recommended birth year range: 1796-1845
+Recommended surname: Zając
+Recommended birth year range: 1744-1793
 
 
-Expected rows: 147
+Expected rows: 501
 
-person_id | given_name | surname  | sex | birth_date | birth_place     | death_date | death_place    
------------------------------------------------------------------------------------------------------
-3264      | Marcin     | Adamczyk | M   | 1796-09-28 | Zwierzyniec     | 1799-09-26 | Kielce         
-3293      | Monika     | Adamczyk | F   | 1797-01-15 | Reszel          | 1862-10-23 | Radom          
-3294      | Alicja     | Adamczyk | F   | 1797-04-07 | Katowice        | 1836-10-05 | Gliwice        
-3284      | Marian     | Adamczyk | M   | 1797-11-05 | Lipce           | 1797-07-07 | Zwierzyniec    
-3291      | Mateusz    | Adamczyk | M   | 1797-12-12 | Sanok           | 1882-04-20 | Zalipie        
-3313      | Henryk     | Adamczyk | M   | 1798-07-05 | Reszel          | 1870-10-11 | Biecz          
-3303      | Danuta     | Adamczyk | F   | 1798-07-09 | Katowice        | 1866-01-21 | Posen          
-3311      | Rozalia    | Adamczyk | F   | 1798-10-15 | Zalipie         | 1877-05-18 | Sromowce       
-3319      | Bożena     | Adamczyk | F   | 1799-09-08 | Zalipie         | 1871-06-11 | Warszawa       
-3324      | Monika     | Adamczyk | F   | 1799-12-05 | Sandomierz      | 1844-01-18 | Biecz          
-3341      | Jan        | Adamczyk | M   | 1800-01-25 | Złoty Potok     | 1846-02-18 | Tykocin        
-3335      | Bartosz    | Adamczyk | M   | 1800-06-03 | Katowice        | 1852-05-04 | Bronowice      
-3333      | Genowefa   | Adamczyk | F   | 1800-12-12 | Posen           | 1869-07-24 | Danzig         
-3349      | Jan        | Adamczyk | M   | 1801-07-16 | Bromberg        | 1883-08-11 | Sromowce       
-3356      | Dariusz    | Adamczyk | M   | 1801-10-04 | Częstochowa     | 1892-03-15 | Pszczyna       
-3369      | Paweł      | Adamczyk | M   | 1802-05-02 | Zalipie         | 1864-08-14 | Łódź           
-3361      | Bożena     | Adamczyk | F   | 1802-06-06 | Cieszyn         | 1872-08-23 | Częstochowa    
-3367      | Józefa     | Adamczyk | F   | 1802-07-17 | Gdynia          | 1864-05-11 | Zalipie        
-3372      | Katarzyna  | Adamczyk | F   | 1802-12-16 | Lipce           | 1871-05-22 | Sosnowiec      
-3376      | Czesława   | Adamczyk | F   | 1803-02-11 | Kazimierz Dolny | 1900-12-04 | Breslau        
-3389      | Józef      | Adamczyk | M   | 1804-08-03 | Lanckorona      | 1825-01-14 | Rzeszów        
-3384      | Oliwia     | Adamczyk | F   | 1804-11-02 | Stettin         | 1849-07-28 | Gdynia         
-3390      | Alicja     | Adamczyk | F   | 1804-11-05 | Stettin         | 1846-11-17 | Złoty Potok    
-3403      | Maria      | Adamczyk | F   | 1805-02-07 | Reszel          | 1876-03-09 | Cieszyn        
-3402      | Paweł      | Adamczyk | M   | 1805-04-12 | Krynica         | 1875-01-13 | Breslau        
-3399      | Anna       | Adamczyk | F   | 1805-06-09 | Chochołów       | 1867-10-26 | Sanok          
-3421      | Irena      | Adamczyk | F   | 1806-02-20 | Danzig          | 1864-07-05 | Bronowice      
-3426      | Henryk     | Adamczyk | M   | 1807-03-14 | Kraków          | 1848-10-20 | Rzeszów        
-3436      | Marianna   | Adamczyk | F   | 1807-07-01 | Lipce           | 1899-11-18 | Pszczyna       
-3424      | Marcin     | Adamczyk | M   | 1807-07-12 | Częstochowa     | 1874-04-11 | Krynica        
-3423      | Antoni     | Adamczyk | M   | 1807-08-25 | Tykocin         | 1876-12-28 | Thorn          
-3443      | Leokadia   | Adamczyk | F   | 1808-07-05 | Danzig          | 1808-08-01 | Danzig         
-3444      | Aleksandra | Adamczyk | F   | 1808-08-02 | Zalipie         | 1869-12-19 | Warszawa       
-3455      | Marian     | Adamczyk | M   | 1808-09-12 | Zalipie         | 1813-10-21 | Biecz          
-3451      | Zuzanna    | Adamczyk | F   | 1808-11-21 | Cieszyn         | 1886-11-06 | Stettin        
-3452      | Genowefa   | Adamczyk | F   | 1808-12-28 | Radom           | 1858-12-10 | Łódź           
-3462      | Ignacy     | Adamczyk | M   | 1809-02-01 | Katowice        | 1885-06-13 | Pszczyna       
-3463      | Monika     | Adamczyk | F   | 1809-12-04 | Złoty Potok     | 1868-05-01 | Katowice       
-3478      | Natalia    | Adamczyk | F   | 1810-04-16 | Tykocin         | 1879-06-08 | Supraśl        
-3489      | Danuta     | Adamczyk | F   | 1810-06-08 | Stettin         | 1812-06-05 | Kazimierz Dolny
-3483      | Kamil      | Adamczyk | M   | 1810-06-20 | Biecz           | 1864-02-13 | Zwierzyniec    
-3503      | Anna       | Adamczyk | F   | 1811-04-20 | Wisła           | 1864-08-08 | Bronowice      
-3492      | Szymon     | Adamczyk | M   | 1811-05-08 | Reszel          | 1816-02-22 | Sromowce       
-3500      | Zuzanna    | Adamczyk | F   | 1811-05-24 | Łódź            | 1816-01-05 | Zalipie        
-3513      | Stefan     | Adamczyk | M   | 1812-02-20 | Chełmno         | 1859-08-26 | Białystok      
-3512      | Aleksandra | Adamczyk | F   | 1812-06-16 | Gliwice         | 1882-03-19 | Sromowce       
-3520      | Wiktoria   | Adamczyk | F   | 1812-11-03 | Częstochowa     | 1879-01-21 | Kazimierz Dolny
-3535      | Stefania   | Adamczyk | F   | 1813-01-23 | Reszel          | 1889-04-28 | Sosnowiec      
-3545      | Kazimiera  | Adamczyk | F   | 1813-06-27 | Gliwice         | 1881-09-12 | Danzig         
-3538      | Michał     | Adamczyk | M   | 1813-08-14 | Kazimierz Dolny | 1852-03-24 | Chełmno        
-3561      | Kamil      | Adamczyk | M   | 1813-10-17 | Warszawa        | 1889-06-04 | Lanckorona     
-3542      | Zygmunt    | Adamczyk | M   | 1813-11-14 | Breslau         | 1888-04-24 | Kielce         
-3567      | Filip      | Adamczyk | M   | 1814-01-25 | Zwierzyniec     | 1852-05-01 | Posen          
-3565      | Łukasz     | Adamczyk | M   | 1814-06-15 | Gliwice         | 1859-10-19 | Stettin        
-3566      | Czesław    | Adamczyk | M   | 1814-07-19 | Sandomierz      | 1896-06-06 | Kielce         
-3569      | Maciej     | Adamczyk | M   | 1814-08-02 | Lublin          | 1836-10-05 | Sandomierz     
-3599      | Paweł      | Adamczyk | M   | 1815-04-22 | Chochołów       | 1816-04-16 | Supraśl        
-3604      | Teresa     | Adamczyk | F   | 1815-10-08 | Gdynia          | 1892-04-09 | Lipce          
-3585      | Marek      | Adamczyk | M   | 1815-10-25 | Tykocin         | 1882-10-23 | Lublin         
-3584      | Regina     | Adamczyk | F   | 1815-11-11 | Lipce           | 1819-10-02 | Thorn          
-3628      | Franciszek | Adamczyk | M   | 1816-03-14 | Białystok       | 1858-02-10 | Gdynia         
-3609      | Małgorzata | Adamczyk | F   | 1816-05-27 | Stettin         | 1910-06-01 | Katowice       
-3612      | Jadwiga    | Adamczyk | F   | 1816-11-10 | Lanckorona      | 1821-10-15 | Złoty Potok    
-3646      | Franciszek | Adamczyk | M   | 1817-01-07 | Krynica         | 1889-06-17 | Rzeszów        
-3644      | Szymon     | Adamczyk | M   | 1817-01-24 | Sosnowiec       | 1855-05-02 | Kraków         
-3648      | Elżbieta   | Adamczyk | F   | 1817-06-21 | Zwierzyniec     | 1853-08-24 | Sanok          
-3638      | Joanna     | Adamczyk | F   | 1817-10-03 | Cieszyn         | 1890-04-03 | Sandomierz     
-3665      | Zuzanna    | Adamczyk | F   | 1818-04-02 | Złoty Potok     | 1822-01-12 | Kraków         
-3660      | Piotr      | Adamczyk | M   | 1818-11-02 | Bromberg        | 1892-11-23 | Zwierzyniec    
-3670      | Marianna   | Adamczyk | F   | 1819-04-16 | Reszel          | 1872-01-28 | Kielce         
-3684      | Rozalia    | Adamczyk | F   | 1819-06-04 | Danzig          | 1886-12-20 | Posen          
-3696      | Marian     | Adamczyk | M   | 1820-06-24 | Cieszyn         | 1822-11-14 | Krynica        
-3704      | Andrzej    | Adamczyk | M   | 1820-09-16 | Biecz           | 1884-09-09 | Tykocin        
-3707      | Zuzanna    | Adamczyk | F   | 1820-12-26 | Tykocin         | 1884-04-12 | Złoty Potok    
-3708      | Ignacy     | Adamczyk | M   | 1821-03-15 | Kazimierz Dolny | 1881-08-10 | Danzig         
-3719      | Katarzyna  | Adamczyk | F   | 1821-03-18 | Posen           | 1826-02-11 | Łódź           
-3767      | Andrzej    | Adamczyk | M   | 1823-06-06 | Radom           | 1873-11-02 | Sromowce       
-3758      | Alicja     | Adamczyk | F   | 1823-12-13 | Kraków          | 1887-10-16 | Zwierzyniec    
-3775      | Monika     | Adamczyk | F   | 1824-09-09 | Danzig          | 1901-09-22 | Breslau        
-3783      | Zuzanna    | Adamczyk | F   | 1824-11-26 | Reszel          | 1885-01-15 | Biecz          
-3819      | Jerzy      | Adamczyk | M   | 1826-12-01 | Stettin         | 1870-05-10 | Posen          
-3824      | Maja       | Adamczyk | F   | 1827-05-06 | Zalipie         | 1909-04-24 | Rzeszów        
-3835      | Dariusz    | Adamczyk | M   | 1827-08-26 | Sanok           | 1903-08-17 | Radom          
-3839      | Genowefa   | Adamczyk | F   | 1827-11-14 | Sandomierz      | 1885-01-26 | Lublin         
-3840      | Jadwiga    | Adamczyk | F   | 1827-11-18 | Breslau         | 1895-03-19 | Danzig         
-3834      | Leon       | Adamczyk | M   | 1827-12-13 | Lublin          | 1894-11-26 | Olsztyn        
-3847      | Genowefa   | Adamczyk | F   | 1828-01-03 | Sanok           | 1885-01-05 | Sanok          
-3859      | Ludwika    | Adamczyk | F   | 1828-02-26 | Thorn           | 1899-04-11 | Lipce          
-3848      | Mirosław   | Adamczyk | M   | 1828-05-17 | Warszawa        | 1892-04-20 | Kraków         
-3852      | Halina     | Adamczyk | F   | 1828-06-05 | Lublin          | 1908-07-10 | Białystok      
-3849      | Julia      | Adamczyk | F   | 1828-07-17 | Warszawa        | 1900-07-16 | Białystok      
-3854      | Michał     | Adamczyk | M   | 1828-08-14 | Kraków          | 1893-04-19 | Kazimierz Dolny
-3885      | Halina     | Adamczyk | F   | 1829-01-04 | Breslau         | 1898-11-03 | Lublin         
-3872      | Wiktoria   | Adamczyk | F   | 1829-09-11 | Cieszyn         | 1904-09-01 | Kraków         
-3902      | Wiktoria   | Adamczyk | F   | 1830-01-20 | Zalipie         | 1834-04-22 | Kazimierz Dolny
-3893      | Szymon     | Adamczyk | M   | 1830-05-24 | Chochołów       | 1867-05-05 | Lublin         
-3895      | Marian     | Adamczyk | M   | 1830-08-09 | Lipce           | 1831-08-21 | Krynica        
-3894      | Wojciech   | Adamczyk | M   | 1830-08-17 | Warszawa        | 1891-02-25 | Białystok      
-3909      | Halina     | Adamczyk | F   | 1831-04-26 | Gliwice         | 1879-03-15 | Łódź           
-3923      | Grzegorz   | Adamczyk | M   | 1831-05-09 | Warszawa        | 1895-04-06 | Gdynia         
-3913      | Grażyna    | Adamczyk | F   | 1831-09-11 | Częstochowa     | 1896-07-03 | Złoty Potok    
-3946      | Wanda      | Adamczyk | F   | 1832-06-02 | Sromowce        | 1833-05-08 | Olsztyn        
-3941      | Zygmunt    | Adamczyk | M   | 1832-07-25 | Złoty Potok     | 1913-02-21 | Bromberg       
-3933      | Maja       | Adamczyk | F   | 1832-10-18 | Posen           | 1895-05-25 | Thorn          
-3931      | Filip      | Adamczyk | M   | 1832-12-04 | Rzeszów         | 1908-07-25 | Sanok          
-3949      | Łukasz     | Adamczyk | M   | 1833-03-20 | Olsztyn         | 1909-05-07 | Chełmno        
-3955      | Filip      | Adamczyk | M   | 1833-09-17 | Tykocin         | 1876-09-10 | Sosnowiec      
-3947      | Henryk     | Adamczyk | M   | 1833-09-26 | Sanok           | 1913-01-11 | Złoty Potok    
-3981      | Ludwika    | Adamczyk | F   | 1834-05-25 | Stettin         | 1889-06-08 | Thorn          
-3968      | Zygmunt    | Adamczyk | M   | 1834-09-21 | Cieszyn         | 1884-07-10 | Chełmno        
-3985      | Małgorzata | Adamczyk | F   | 1835-05-08 | Wisła           | 1890-01-14 | Sromowce       
-3997      | Halina     | Adamczyk | F   | 1835-12-21 | Sandomierz      | 1909-06-01 | Katowice       
-4028      | Filip      | Adamczyk | M   | 1836-05-12 | Kielce          | 1908-07-05 | Stettin        
-4022      | Barbara    | Adamczyk | F   | 1836-08-20 | Wisła           | 1910-06-16 | Lanckorona     
-4012      | Filip      | Adamczyk | M   | 1836-08-25 | Gdynia          | 1905-02-11 | Kielce         
-4027      | Stefan     | Adamczyk | M   | 1836-12-17 | Breslau         | 1837-05-18 | Radom          
-4040      | Wiesław    | Adamczyk | M   | 1837-01-17 | Bromberg        | 1925-05-13 | Bromberg       
-4048      | Zofia      | Adamczyk | F   | 1837-04-03 | Krynica         | 1911-09-15 | Tykocin        
-4041      | Tadeusz    | Adamczyk | M   | 1837-10-14 | Białystok       | 1886-03-08 | Radom          
-4043      | Szymon     | Adamczyk | M   | 1837-11-12 | Pszczyna        | 1902-10-09 | Częstochowa    
-4062      | Antoni     | Adamczyk | M   | 1838-11-17 | Złoty Potok     | 1842-09-01 | Breslau        
-4070      | Maciej     | Adamczyk | M   | 1838-12-22 | Breslau         | 1839-01-11 | Danzig         
-4077      | Teresa     | Adamczyk | F   | 1839-02-24 | Łódź            | 1887-11-23 | Warszawa       
-4080      | Julia      | Adamczyk | F   | 1839-05-10 | Kazimierz Dolny | 1841-07-16 | Wisła          
-4082      | Wiesław    | Adamczyk | M   | 1839-07-03 | Łódź            | 1840-07-21 | Bromberg       
-4085      | Jerzy      | Adamczyk | M   | 1839-07-17 | Lanckorona      | 1933-09-01 | Tykocin        
-4087      | Maciej     | Adamczyk | M   | 1839-09-17 | Łódź            | 1893-07-20 | Częstochowa    
-4126      | Filip      | Adamczyk | M   | 1840-07-04 | Chełmno         | 1911-06-01 | Warszawa       
-4113      | Jan        | Adamczyk | M   | 1840-10-21 | Rzeszów         | 1923-08-11 | Bronowice      
-4134      | Leon       | Adamczyk | M   | 1841-06-26 | Lanckorona      | 1907-03-03 | Kielce         
-4135      | Natalia    | Adamczyk | F   | 1841-07-18 | Bromberg        | 1894-08-22 | Złoty Potok    
-4140      | Małgorzata | Adamczyk | F   | 1841-12-04 | Wisła           | 1843-03-20 | Sosnowiec      
-4179      | Zofia      | Adamczyk | F   | 1842-01-19 | Radom           | 1907-06-24 | Gliwice        
-4162      | Stanisław  | Adamczyk | M   | 1842-02-08 | Sosnowiec       | 1847-05-25 | Zalipie        
-4164      | Elżbieta   | Adamczyk | F   | 1842-08-25 | Stettin         | 1845-08-28 | Pszczyna       
-4201      | Genowefa   | Adamczyk | F   | 1843-03-24 | Biecz           | 1847-12-16 | Kazimierz Dolny
-4192      | Ignacy     | Adamczyk | M   | 1843-05-14 | Sandomierz      | 1911-02-04 | Białystok      
-4212      | Henryk     | Adamczyk | M   | 1843-06-11 | Danzig          | 1910-09-06 | Warszawa       
-4210      | Zygmunt    | Adamczyk | M   | 1843-07-03 | Kazimierz Dolny | 1911-04-06 | Sosnowiec      
-4198      | Leokadia   | Adamczyk | F   | 1843-12-19 | Thorn           | 1903-03-26 | Kazimierz Dolny
-4240      | Katarzyna  | Adamczyk | F   | 1844-02-12 | Sanok           | 1890-07-21 | Pszczyna       
-4218      | Ryszard    | Adamczyk | M   | 1844-04-13 | Kielce          | 1908-07-01 | Katowice       
-4239      | Leon       | Adamczyk | M   | 1844-09-14 | Supraśl         | 1928-03-03 | Tykocin        
-4230      | Julian     | Adamczyk | M   | 1844-10-08 | Białystok       | 1886-02-18 | Posen          
-4216      | Franciszek | Adamczyk | M   | 1844-11-25 | Kraków          | 1900-03-18 | Częstochowa    
-4266      | Stefania   | Adamczyk | F   | 1845-02-16 | Sromowce        | 1900-03-27 | Łódź           
-4263      | Jan        | Adamczyk | M   | 1845-11-26 | Posen           | 1845-06-22 | Wisła          
+person_id | given_name | surname | sex | birth_date | birth_place             | death_date | death_place            
+--------------------------------------------------------------------------------------------------------------------
+5464      | Michał     | Zając   | M   | 1744-02-16 | Ostrowiec Świętokrzyski | 1795-08-12 | Kraków                 
+5458      | Irena      | Zając   | F   | 1744-02-20 | Oświęcim                | 1766-07-05 | Ostrowiec Świętokrzyski
+5457      | Mirosław   | Zając   | M   | 1744-03-20 | Sandomierz              | 1812-11-03 | Przemyśl               
+5472      | Alicja     | Zając   | F   | 1744-04-09 | Rzeszów                 | 1822-10-16 | Przemyśl               
+5463      | Rozalia    | Zając   | F   | 1744-04-13 | Sanok                   | 1809-10-03 | Przemyśl               
+5477      | Anna       | Zając   | F   | 1744-06-02 | Kraków                  | 1797-08-19 | Ostrowiec Świętokrzyski
+5461      | Kazimiera  | Zając   | F   | 1744-10-05 | Tarnów                  | 1801-09-17 | Nowy Sącz              
+5467      | Stefania   | Zając   | F   | 1744-12-28 | Kielce                  | 1816-11-11 | Nowy Sącz              
+5515      | Zofia      | Zając   | F   | 1745-01-18 | Rzeszów                 | 1745-05-10 | Sanok                  
+5507      | Tadeusz    | Zając   | M   | 1745-02-09 | Sandomierz              | 1745-12-12 | Kraków                 
+5518      | Zuzanna    | Zając   | F   | 1745-02-17 | Bochnia                 | 1826-09-27 | Sanok                  
+5523      | Julia      | Zając   | F   | 1745-02-23 | Sandomierz              | 1799-02-08 | Tarnów                 
+5528      | Szymon     | Zając   | M   | 1745-03-08 | Bochnia                 | 1801-04-22 | Krosno                 
+5495      | Ryszard    | Zając   | M   | 1745-03-11 | Bochnia                 | 1817-12-04 | Bochnia                
+5502      | Ewa        | Zając   | F   | 1745-03-16 | Nowy Sącz               | 1817-12-18 | Jelenia Góra           
+5511      | Ludwika    | Zając   | F   | 1745-04-17 | Tarnobrzeg              | 1782-12-11 | Bochnia                
+5508      | Grzegorz   | Zając   | M   | 1745-06-09 | Rzeszów                 | 1818-04-15 | Tarnobrzeg             
+5504      | Stefania   | Zając   | F   | 1745-07-01 | Rzeszów                 | 1746-10-19 | Ostrowiec Świętokrzyski
+5516      | Łukasz     | Zając   | M   | 1745-09-20 | Jasło                   | 1748-04-01 | Krosno                 
+5551      | Stanisław  | Zając   | M   | 1746-01-19 | Jasło                   | 1746-10-17 | Ostrowiec Świętokrzyski
+5545      | Piotr      | Zając   | M   | 1746-02-20 | Zakopane                | 1817-09-06 | Kielce                 
+5564      | Jerzy      | Zając   | M   | 1746-03-03 | Sandomierz              | 1750-09-26 | Kielce                 
+5543      | Małgorzata | Zając   | F   | 1746-04-03 | Bochnia                 | 1746-02-14 | Tarnów                 
+5553      | Andrzej    | Zając   | M   | 1746-04-19 | Oświęcim                | 1785-11-20 | Kraków                 
+5539      | Marian     | Zając   | M   | 1746-05-15 | Rzeszów                 | 1802-02-27 | Zakopane               
+5549      | Marek      | Zając   | M   | 1746-08-21 | Bochnia                 | 1813-03-19 | Ostrowiec Świętokrzyski
+5559      | Józefa     | Zając   | F   | 1746-09-02 | Ostrowiec Świętokrzyski | 1814-07-17 | Legnica                
+5542      | Franciszek | Zając   | M   | 1746-09-23 | Bochnia                 | 1800-06-06 | Bochnia                
+5566      | Dariusz    | Zając   | M   | 1746-10-19 | Przemyśl                | 1791-12-05 | Jasło                  
+5548      | Józefa     | Zając   | F   | 1746-11-17 | Nowy Sącz               | 1796-11-04 | Tarnobrzeg             
+5547      | Marek      | Zając   | M   | 1746-12-04 | Jasło                   | 1821-12-23 | Bochnia                
+5572      | Bożena     | Zając   | F   | 1747-01-22 | Jasło                   | 1795-10-08 | Oświęcim               
+5575      | Helena     | Zając   | F   | 1747-04-02 | Zakopane                | 1794-10-01 | Zakopane               
+5593      | Józef      | Zając   | M   | 1747-04-05 | Bochnia                 | 1796-08-11 | Nowy Sącz              
+5579      | Antoni     | Zając   | M   | 1747-06-10 | Sandomierz              | 1795-03-23 | Zakopane               
+5592      | Halina     | Zając   | F   | 1747-07-06 | Nowy Sącz               | 1821-06-04 | Bochnia                
+5580      | Józef      | Zając   | M   | 1747-07-25 | Kraków                  | 1794-02-10 | Przemyśl               
+5577      | Leon       | Zając   | M   | 1747-11-06 | Rzeszów                 | 1804-10-17 | Sanok                  
+5602      | Irena      | Zając   | F   | 1747-11-17 | Nowy Sącz               | 1812-05-16 | Sanok                  
+5597      | Franciszek | Zając   | M   | 1747-12-01 | Tarnobrzeg              | 1819-12-21 | Krosno                 
+5585      | Tomasz     | Zając   | M   | 1747-12-08 | Krosno                  | 1771-08-16 | Tarnów                 
+5611      | Katarzyna  | Zając   | F   | 1748-02-21 | Oświęcim                | 1818-03-15 | Tarnobrzeg             
+5623      | Bożena     | Zając   | F   | 1748-04-18 | Jasło                   | 1793-04-12 | Krosno                 
+5624      | Dariusz    | Zając   | M   | 1748-06-16 | Sanok                   | 1753-02-14 | Nowy Sącz              
+5616      | Maria      | Zając   | F   | 1748-07-19 | Przemyśl                | 1803-08-18 | Rzeszów                
+5609      | Urszula    | Zając   | F   | 1748-08-08 | Sanok                   | 1794-06-07 | Opole                  
+5615      | Maciej     | Zając   | M   | 1748-10-03 | Przemyśl                | 1816-12-01 | Sandomierz             
+5648      | Maria      | Zając   | F   | 1749-01-10 | Oświęcim                | 1749-03-03 | Nowy Sącz              
+5656      | Kamil      | Zając   | M   | 1749-01-17 | Ostrowiec Świętokrzyski | 1808-01-03 | Tarnobrzeg             
+5646      | Teresa     | Zając   | F   | 1749-01-25 | Przemyśl                | 1750-02-23 | Sandomierz             
+5675      | Ryszard    | Zając   | M   | 1749-04-01 | Ostrowiec Świętokrzyski | 1810-11-13 | Tarnów                 
+5649      | Maciej     | Zając   | M   | 1749-05-04 | Tarnów                  | 1807-06-10 | Kielce                 
+5680      | Alicja     | Zając   | F   | 1749-06-07 | Tarnów                  | 1785-10-23 | Kielce                 
+5655      | Ryszard    | Zając   | M   | 1749-06-10 | Oświęcim                | 1786-11-13 | Krosno                 
+5662      | Agnieszka  | Zając   | F   | 1749-07-12 | Jasło                   | 1809-05-18 | Kraków                 
+5651      | Ludwika    | Zając   | F   | 1749-07-24 | Jasło                   | 1753-08-04 | Ostrowiec Świętokrzyski
+5658      | Barbara    | Zając   | F   | 1749-09-11 | Przemyśl                | 1749-07-09 | Ostrowiec Świętokrzyski
+5671      | Czesława   | Zając   | F   | 1749-10-15 | Ostrowiec Świętokrzyski | 1750-09-08 | Kielce                 
+5674      | Łukasz     | Zając   | M   | 1749-11-04 | Kraków                  | 1789-02-10 | Rzeszów                
+5642      | Małgorzata | Zając   | F   | 1749-11-21 | Ostrowiec Świętokrzyski | 1808-06-22 | Oświęcim               
+5679      | Adam       | Zając   | M   | 1749-12-17 | Sandomierz              | 1816-03-25 | Ostrowiec Świętokrzyski
+5716      | Marek      | Zając   | M   | 1750-02-18 | Kielce                  | 1751-07-02 | Oświęcim               
+5691      | Marek      | Zając   | M   | 1750-02-21 | Nowy Sącz               | 1826-02-05 | Oświęcim               
+5687      | Marianna   | Zając   | F   | 1750-03-04 | Rzeszów                 | 1817-04-05 | Ostrowiec Świętokrzyski
+5710      | Jakub      | Zając   | M   | 1750-03-19 | Sanok                   | 1751-03-05 | Jasło                  
+5699      | Marianna   | Zając   | F   | 1750-04-26 | Kraków                  | 1825-06-21 | Rzeszów                
+5707      | Jerzy      | Zając   | M   | 1750-05-15 | Rzeszów                 | 1799-12-24 | Kielce                 
+5718      | Filip      | Zając   | M   | 1750-06-08 | Tarnów                  | 1818-11-13 | Przemyśl               
+5704      | Leokadia   | Zając   | F   | 1750-06-09 | Kielce                  | 1750-09-21 | Kielce                 
+5698      | Marek      | Zając   | M   | 1750-08-14 | Krosno                  | 1750-11-28 | Nowy Sącz              
+5686      | Bartosz    | Zając   | M   | 1750-10-22 | Tarnów                  | 1751-07-08 | Kielce                 
+5713      | Antoni     | Zając   | M   | 1750-12-11 | Kielce                  | 1815-01-03 | Kielce                 
+5767      | Krystyna   | Zając   | F   | 1751-03-06 | Bochnia                 | 1802-02-15 | Przemyśl               
+5736      | Franciszek | Zając   | M   | 1751-03-22 | Sanok                   | 1751-10-08 | Krosno                 
+5726      | Tomasz     | Zając   | M   | 1751-04-03 | Tarnów                  | NULL       | NULL                   
+5742      | Andrzej    | Zając   | M   | 1751-04-23 | Oświęcim                | 1772-06-26 | Sanok                  
+5747      | Irena      | Zając   | F   | 1751-05-03 | Rzeszów                 | 1789-02-11 | Sandomierz             
+5753      | Józef      | Zając   | M   | 1751-09-15 | Przemyśl                | 1794-03-03 | Krosno                 
+5727      | Helena     | Zając   | F   | 1751-10-09 | Tarnów                  | 1756-01-18 | Kraków                 
+5732      | Teresa     | Zając   | F   | 1751-12-12 | Przemyśl                | 1808-06-27 | Ostrowiec Świętokrzyski
+5774      | Wanda      | Zając   | F   | 1752-02-03 | Kraków                  | 1753-07-02 | Rzeszów                
+5773      | Marcin     | Zając   | M   | 1752-02-25 | Nowy Sącz               | 1799-07-05 | Rzeszów                
+5769      | Andrzej    | Zając   | M   | 1752-02-28 | Przemyśl                | 1752-05-28 | Jasło                  
+5770      | Władysław  | Zając   | M   | 1752-03-01 | Tarnobrzeg              | 1755-06-21 | Kraków                 
+5780      | Mateusz    | Zając   | M   | 1752-04-07 | Bochnia                 | 1753-08-13 | Krosno                 
+5787      | Bartosz    | Zając   | M   | 1752-05-24 | Oświęcim                | 1753-04-20 | Rzeszów                
+5791      | Genowefa   | Zając   | F   | 1752-06-06 | Ostrowiec Świętokrzyski | 1776-07-06 | Rzeszów                
+5792      | Marianna   | Zając   | F   | 1752-07-05 | Zakopane                | 1755-11-11 | Kraków                 
+5782      | Tadeusz    | Zając   | M   | 1752-08-13 | Sandomierz              | 1796-01-26 | Rzeszów                
+5772      | Helena     | Zając   | F   | 1752-10-24 | Kielce                  | 1797-04-06 | Przemyśl               
+5799      | Wiktoria   | Zając   | F   | 1752-11-04 | Sandomierz              | NULL       | NULL                   
+5779      | Rozalia    | Zając   | F   | 1752-12-02 | Tarnów                  | 1817-01-02 | Chełm                  
+5797      | Czesława   | Zając   | F   | 1752-12-26 | Przemyśl                | 1803-09-02 | Bochnia                
+5811      | Wanda      | Zając   | F   | 1753-02-12 | Kraków                  | 1753-07-16 | Krosno                 
+5820      | Łukasz     | Zając   | M   | 1753-02-24 | Tarnów                  | 1755-10-24 | Sanok                  
+5833      | Henryk     | Zając   | M   | 1753-03-14 | Sanok                   | 1758-07-11 | Oświęcim               
+5835      | Helena     | Zając   | F   | 1753-03-25 | Tarnobrzeg              | 1801-08-14 | Bochnia                
+5848      | Wiesław    | Zając   | M   | 1753-05-26 | Tarnów                  | 1769-07-22 | Rzeszów                
+5817      | Agnieszka  | Zając   | F   | 1753-07-02 | Bochnia                 | 1757-12-10 | Sanok                  
+5828      | Piotr      | Zając   | M   | 1753-08-23 | Rzeszów                 | 1753-02-06 | Ostrowiec Świętokrzyski
+5857      | Maria      | Zając   | F   | 1753-09-22 | Tarnobrzeg              | 1754-02-13 | Jasło                  
+5815      | Agnieszka  | Zając   | F   | 1753-10-01 | Krosno                  | 1754-06-15 | Oświęcim               
+5856      | Irena      | Zając   | F   | 1753-12-02 | Przemyśl                | 1825-02-19 | Ostrowiec Świętokrzyski
+5843      | Ewa        | Zając   | F   | 1753-12-06 | Krosno                  | 1754-03-12 | Kielce                 
+5823      | Kazimierz  | Zając   | M   | 1753-12-28 | Sanok                   | 1756-01-20 | Kielce                 
+5887      | Maja       | Zając   | F   | 1754-02-01 | Tarnów                  | 1821-03-07 | Sandomierz             
+5868      | Julia      | Zając   | F   | 1754-03-08 | Kielce                  | 1813-12-26 | Tarnobrzeg             
+5893      | Maria      | Zając   | F   | 1754-05-16 | Nowy Sącz               | 1801-07-16 | Przemyśl               
+5891      | Wiktoria   | Zając   | F   | 1754-05-17 | Sanok                   | 1755-01-06 | Tarnów                 
+5871      | Genowefa   | Zając   | F   | 1754-06-09 | Kielce                  | 1820-01-06 | Nowy Sącz              
+5876      | Marianna   | Zając   | F   | 1754-06-27 | Sandomierz              | 1801-07-07 | Kraków                 
+5860      | Monika     | Zając   | F   | 1754-07-03 | Zakopane                | 1755-08-20 | Nowy Sącz              
+5875      | Monika     | Zając   | F   | 1754-07-13 | Sanok                   | 1809-06-22 | Bochnia                
+5900      | Mateusz    | Zając   | M   | 1754-08-02 | Bochnia                 | 1759-07-24 | Kielce                 
+5901      | Czesław    | Zając   | M   | 1754-08-18 | Sandomierz              | 1770-12-03 | Przemyśl               
+5865      | Grzegorz   | Zając   | M   | 1754-09-01 | Zakopane                | 1758-08-17 | Oświęcim               
+5938      | Genowefa   | Zając   | F   | 1755-02-11 | Kielce                  | 1756-02-10 | Bochnia                
+5930      | Krystyna   | Zając   | F   | 1755-02-14 | Ostrowiec Świętokrzyski | 1817-11-21 | Zakopane               
+5943      | Kamil      | Zając   | M   | 1755-02-23 | Sanok                   | 1823-09-14 | Jasło                  
+5928      | Helena     | Zając   | F   | 1755-05-12 | Tarnobrzeg              | 1792-03-03 | Rzeszów                
+5909      | Paweł      | Zając   | M   | 1755-06-11 | Kielce                  | 1755-08-11 | Sandomierz             
+5911      | Kazimiera  | Zając   | F   | 1755-09-08 | Tarnobrzeg              | NULL       | NULL                   
+5951      | Regina     | Zając   | F   | 1756-01-20 | Rzeszów                 | 1827-09-22 | Bochnia                
+5986      | Grażyna    | Zając   | F   | 1756-03-05 | Sandomierz              | 1827-04-19 | Tarnobrzeg             
+5964      | Irena      | Zając   | F   | 1756-03-10 | Tarnów                  | 1756-05-26 | Tarnów                 
+5979      | Leon       | Zając   | M   | 1756-05-04 | Kraków                  | 1757-02-17 | Krosno                 
+5993      | Czesława   | Zając   | F   | 1756-08-11 | Zakopane                | 1812-02-05 | Oświęcim               
+5998      | Stefan     | Zając   | M   | 1756-11-02 | Nowy Sącz               | 1816-10-10 | Kielce                 
+5961      | Adam       | Zając   | M   | 1756-11-24 | Sandomierz              | 1757-04-16 | Nowy Sącz              
+5958      | Irena      | Zając   | F   | 1756-12-14 | Tarnobrzeg              | 1808-03-13 | Oświęcim               
+5972      | Marian     | Zając   | M   | 1756-12-16 | Krosno                  | 1799-12-18 | Oświęcim               
+6040      | Zygmunt    | Zając   | M   | 1757-02-18 | Ostrowiec Świętokrzyski | 1810-04-08 | Tarnobrzeg             
+6031      | Wojciech   | Zając   | M   | 1757-02-19 | Rzeszów                 | 1758-07-23 | Rzeszów                
+6012      | Marian     | Zając   | M   | 1757-04-02 | Rzeszów                 | 1827-04-22 | Nowy Sącz              
+6042      | Henryk     | Zając   | M   | 1757-08-28 | Nowy Sącz               | 1804-01-13 | Sandomierz             
+6043      | Maciej     | Zając   | M   | 1757-09-22 | Nowy Sącz               | NULL       | NULL                   
+6013      | Urszula    | Zając   | F   | 1757-10-03 | Sanok                   | 1815-01-12 | Tarnów                 
+6077      | Józef      | Zając   | M   | 1758-02-16 | Jasło                   | 1778-11-06 | Kraków                 
+6047      | Ludwika    | Zając   | F   | 1758-04-11 | Jasło                   | 1760-08-19 | Rzeszów                
+6057      | Leon       | Zając   | M   | 1758-05-12 | Zakopane                | NULL       | NULL                   
+6054      | Rozalia    | Zając   | F   | 1758-06-11 | Ostrowiec Świętokrzyski | 1758-11-05 | Sandomierz             
+6068      | Mirosław   | Zając   | M   | 1758-08-24 | Ostrowiec Świętokrzyski | 1813-09-09 | Sandomierz             
+6050      | Leokadia   | Zając   | F   | 1758-09-04 | Tarnów                  | 1813-05-11 | Sandomierz             
+6061      | Marian     | Zając   | M   | 1758-10-13 | Bochnia                 | 1761-09-25 | Nowy Sącz              
+6072      | Adam       | Zając   | M   | 1758-10-26 | Sanok                   | 1810-09-09 | Sandomierz             
+6083      | Tomasz     | Zając   | M   | 1758-11-19 | Rzeszów                 | 1805-07-01 | Jasło                  
+6119      | Kamil      | Zając   | M   | 1759-01-03 | Sandomierz              | 1815-09-05 | Tarnów                 
+6111      | Monika     | Zając   | F   | 1759-01-15 | Sanok                   | 1760-03-06 | Bochnia                
+6121      | Ewa        | Zając   | F   | 1759-08-14 | Oświęcim                | NULL       | NULL                   
+6100      | Rozalia    | Zając   | F   | 1759-10-07 | Tarnów                  | 1762-09-21 | Bochnia                
+6112      | Danuta     | Zając   | F   | 1759-11-06 | Tarnobrzeg              | 1819-08-17 | Sanok                  
+6087      | Jerzy      | Zając   | M   | 1759-11-23 | Przemyśl                | 1824-12-22 | Przemyśl               
+6128      | Rozalia    | Zając   | F   | 1760-01-13 | Sandomierz              | NULL       | NULL                   
+6146      | Wiesław    | Zając   | M   | 1760-02-17 | Tarnobrzeg              | 1810-07-21 | Krosno                 
+6151      | Marcin     | Zając   | M   | 1760-02-19 | Krosno                  | NULL       | NULL                   
+6139      | Marek      | Zając   | M   | 1760-02-24 | Kraków                  | 1764-07-04 | Rzeszów                
+6162      | Małgorzata | Zając   | F   | 1760-04-24 | Ostrowiec Świętokrzyski | 1815-08-10 | Przemyśl               
+6147      | Anna       | Zając   | F   | 1760-06-11 | Bochnia                 | 1798-01-18 | Krosno                 
+6154      | Józefa     | Zając   | F   | 1760-06-24 | Rzeszów                 | NULL       | NULL                   
+6141      | Czesław    | Zając   | M   | 1760-08-24 | Zakopane                | 1826-11-24 | Ostrowiec Świętokrzyski
+6158      | Kazimiera  | Zając   | F   | 1760-09-28 | Zakopane                | 1772-10-01 | Krosno                 
+6168      | Grzegorz   | Zając   | M   | 1761-01-25 | Sanok                   | 1783-09-13 | Sanok                  
+6194      | Ryszard    | Zając   | M   | 1761-02-01 | Sanok                   | 1766-12-16 | Zakopane               
+6182      | Leokadia   | Zając   | F   | 1761-02-21 | Nowy Sącz               | 1818-01-03 | Włocławek              
+6171      | Zuzanna    | Zając   | F   | 1761-04-26 | Kraków                  | 1805-11-21 | Jasło                  
+6188      | Ewa        | Zając   | F   | 1761-05-11 | Zakopane                | 1766-07-16 | Sandomierz             
+6204      | Helena     | Zając   | F   | 1761-05-24 | Rzeszów                 | NULL       | NULL                   
+6203      | Marcin     | Zając   | M   | 1761-06-02 | Zakopane                | 1814-12-28 | Przemyśl               
+6187      | Grzegorz   | Zając   | M   | 1761-06-14 | Jasło                   | 1762-01-21 | Jasło                  
+6172      | Marek      | Zając   | M   | 1761-07-01 | Zakopane                | 1820-03-27 | Ostrowiec Świętokrzyski
+6190      | Stanisław  | Zając   | M   | 1761-08-19 | Jasło                   | 1812-09-05 | Bochnia                
+6237      | Zuzanna    | Zając   | F   | 1762-01-23 | Krosno                  | 1811-10-08 | Przemyśl               
+6218      | Joanna     | Zając   | F   | 1762-02-01 | Oświęcim                | 1763-02-10 | Tarnów                 
+6228      | Michał     | Zając   | M   | 1762-03-23 | Nowy Sącz               | 1812-11-28 | Nowy Sącz              
+6251      | Małgorzata | Zając   | F   | 1762-03-27 | Ostrowiec Świętokrzyski | 1783-06-26 | Kraków                 
+6249      | Kazimiera  | Zając   | F   | 1762-04-13 | Bochnia                 | 1763-03-18 | Zakopane               
+6231      | Wiktoria   | Zając   | F   | 1762-06-03 | Sandomierz              | 1824-07-19 | Bochnia                
+6226      | Barbara    | Zając   | F   | 1762-06-10 | Krosno                  | NULL       | NULL                   
+6242      | Adam       | Zając   | M   | 1762-06-24 | Sanok                   | 1801-07-26 | Sanok                  
+6241      | Agnieszka  | Zając   | F   | 1762-11-23 | Tarnobrzeg              | 1818-01-07 | Zakopane               
+6254      | Piotr      | Zając   | M   | 1762-12-09 | Ostrowiec Świętokrzyski | 1766-01-18 | Sanok                  
+6311      | Elżbieta   | Zając   | F   | 1763-01-23 | Nowy Sącz               | 1808-09-05 | Kraków                 
+6302      | Henryk     | Zając   | M   | 1763-03-01 | Jasło                   | 1767-12-07 | Ostrowiec Świętokrzyski
+6274      | Stefania   | Zając   | F   | 1763-03-09 | Oświęcim                | NULL       | NULL                   
+6310      | Marek      | Zając   | M   | 1763-03-26 | Rzeszów                 | NULL       | NULL                   
+6279      | Barbara    | Zając   | F   | 1763-04-07 | Sandomierz              | 1764-08-01 | Tarnów                 
+6301      | Marcin     | Zając   | M   | 1763-07-07 | Zakopane                | 1808-02-25 | Tarnobrzeg             
+6258      | Helena     | Zając   | F   | 1763-07-17 | Kraków                  | 1764-03-28 | Tarnobrzeg             
+6287      | Leon       | Zając   | M   | 1763-07-23 | Ostrowiec Świętokrzyski | 1764-01-13 | Tarnów                 
+6288      | Julian     | Zając   | M   | 1763-08-05 | Zakopane                | 1789-03-20 | Zakopane               
+6283      | Stanisław  | Zając   | M   | 1763-08-18 | Jasło                   | 1805-11-16 | Tarnów                 
+6259      | Wanda      | Zając   | F   | 1763-09-19 | Tarnobrzeg              | 1765-05-26 | Nowy Sącz              
+6281      | Wojciech   | Zając   | M   | 1763-10-11 | Sandomierz              | 1779-07-12 | Rzeszów                
+6305      | Tadeusz    | Zając   | M   | 1763-12-20 | Ostrowiec Świętokrzyski | 1817-03-11 | Tarnów                 
+6333      | Rozalia    | Zając   | F   | 1764-01-10 | Nowy Sącz               | 1768-08-05 | Kielce                 
+6345      | Jan        | Zając   | M   | 1764-02-20 | Oświęcim                | 1793-08-21 | Tarnobrzeg             
+6322      | Katarzyna  | Zając   | F   | 1764-03-05 | Nowy Sącz               | 1764-04-12 | Ostrowiec Świętokrzyski
+6323      | Marcin     | Zając   | M   | 1764-05-19 | Kraków                  | 1764-01-17 | Zakopane               
+6353      | Agnieszka  | Zając   | F   | 1764-05-27 | Tarnobrzeg              | 1827-02-13 | Oświęcim               
+6320      | Marianna   | Zając   | F   | 1764-07-25 | Oświęcim                | 1803-01-20 | Sanok                  
+6332      | Piotr      | Zając   | M   | 1764-08-02 | Krosno                  | 1783-10-27 | Kielce                 
+6325      | Marek      | Zając   | M   | 1764-08-14 | Kielce                  | NULL       | NULL                   
+6321      | Helena     | Zając   | F   | 1764-09-17 | Sanok                   | 1825-05-13 | Bochnia                
+6336      | Rozalia    | Zając   | F   | 1764-10-06 | Oświęcim                | 1809-03-04 | Nowy Sącz              
+6384      | Małgorzata | Zając   | F   | 1765-01-27 | Sanok                   | 1767-03-03 | Tarnów                 
+6412      | Wojciech   | Zając   | M   | 1765-01-27 | Przemyśl                | NULL       | NULL                   
+6374      | Wojciech   | Zając   | M   | 1765-02-25 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+6368      | Barbara    | Zając   | F   | 1765-03-08 | Rzeszów                 | 1814-06-16 | Bochnia                
+6373      | Urszula    | Zając   | F   | 1765-07-18 | Krosno                  | 1820-03-16 | Bochnia                
+6391      | Zuzanna    | Zając   | F   | 1765-09-26 | Tarnów                  | 1789-09-13 | Świnoujście            
+6400      | Zuzanna    | Zając   | F   | 1765-10-01 | Ostrowiec Świętokrzyski | 1809-02-04 | Kielce                 
+6360      | Ryszard    | Zając   | M   | 1765-10-22 | Kraków                  | 1792-06-08 | Tarnobrzeg             
+6390      | Mirosław   | Zając   | M   | 1765-10-26 | Kraków                  | 1826-03-05 | Jasło                  
+6404      | Teresa     | Zając   | F   | 1765-11-25 | Sandomierz              | 1816-09-04 | Przemyśl               
+6394      | Monika     | Zając   | F   | 1765-11-27 | Przemyśl                | 1766-08-03 | Kielce                 
+6387      | Mateusz    | Zając   | M   | 1765-12-19 | Nowy Sącz               | 1809-11-12 | Kielce                 
+6452      | Rozalia    | Zając   | F   | 1766-01-13 | Jasło                   | 1766-05-17 | Nowy Sącz              
+6455      | Aleksandra | Zając   | F   | 1766-04-06 | Ostrowiec Świętokrzyski | 1823-07-03 | Radom                  
+6430      | Mirosław   | Zając   | M   | 1766-05-24 | Kraków                  | 1767-02-09 | Ostrowiec Świętokrzyski
+6484      | Piotr      | Zając   | M   | 1767-01-15 | Zakopane                | NULL       | NULL                   
+6487      | Leon       | Zając   | M   | 1767-01-16 | Sandomierz              | 1824-08-09 | Zakopane               
+6480      | Józef      | Zając   | M   | 1767-03-09 | Zakopane                | NULL       | NULL                   
+6481      | Zygmunt    | Zając   | M   | 1767-04-28 | Przemyśl                | 1827-02-25 | Krosno                 
+6495      | Krystyna   | Zając   | F   | 1767-06-15 | Kielce                  | NULL       | NULL                   
+6474      | Łukasz     | Zając   | M   | 1767-06-16 | Kraków                  | NULL       | NULL                   
+6469      | Bartosz    | Zając   | M   | 1767-10-10 | Kielce                  | 1794-02-25 | Zakopane               
+6476      | Ignacy     | Zając   | M   | 1767-11-03 | Jasło                   | 1824-04-15 | Krosno                 
+6501      | Mateusz    | Zając   | M   | 1767-12-16 | Kielce                  | 1820-01-14 | Tarnów                 
+6536      | Marek      | Zając   | M   | 1768-01-02 | Jasło                   | NULL       | NULL                   
+6523      | Szymon     | Zając   | M   | 1768-02-04 | Nowy Sącz               | 1825-04-14 | Jasło                  
+6561      | Grzegorz   | Zając   | M   | 1768-06-07 | Sandomierz              | 1772-03-24 | Ostrowiec Świętokrzyski
+6564      | Marcin     | Zając   | M   | 1768-08-02 | Krosno                  | 1770-04-07 | Przemyśl               
+6532      | Adam       | Zając   | M   | 1768-08-15 | Kraków                  | 1768-01-28 | Oświęcim               
+6517      | Michał     | Zając   | M   | 1768-10-18 | Tarnów                  | 1773-10-26 | Ostrowiec Świętokrzyski
+6545      | Michał     | Zając   | M   | 1768-10-27 | Sanok                   | 1804-05-18 | Bochnia                
+6581      | Józefa     | Zając   | F   | 1769-02-06 | Jasło                   | 1788-02-25 | Zakopane               
+6599      | Leon       | Zając   | M   | 1769-02-22 | Oświęcim                | NULL       | NULL                   
+6594      | Teresa     | Zając   | F   | 1769-04-11 | Oświęcim                | 1773-06-07 | Sandomierz             
+6616      | Stanisław  | Zając   | M   | 1769-06-03 | Bochnia                 | 1825-11-23 | Bochnia                
+6597      | Stanisław  | Zając   | M   | 1769-06-24 | Sanok                   | 1773-10-12 | Kielce                 
+6605      | Danuta     | Zając   | F   | 1769-07-18 | Krosno                  | 1818-03-15 | Kraków                 
+6604      | Julia      | Zając   | F   | 1769-07-27 | Zakopane                | 1814-03-21 | Zakopane               
+6614      | Barbara    | Zając   | F   | 1769-08-02 | Tarnów                  | 1820-03-11 | Oświęcim               
+6583      | Stefania   | Zając   | F   | 1769-09-06 | Tarnów                  | NULL       | NULL                   
+6598      | Andrzej    | Zając   | M   | 1769-10-19 | Przemyśl                | 1770-05-05 | Sanok                  
+6606      | Wanda      | Zając   | F   | 1769-12-20 | Nowy Sącz               | 1769-02-11 | Przemyśl               
+6626      | Maria      | Zając   | F   | 1770-01-07 | Nowy Sącz               | 1774-01-07 | Kraków                 
+6656      | Danuta     | Zając   | F   | 1770-02-26 | Tarnobrzeg              | 1773-05-15 | Sanok                  
+6642      | Kazimierz  | Zając   | M   | 1770-05-24 | Sandomierz              | NULL       | NULL                   
+6655      | Filip      | Zając   | M   | 1770-08-17 | Kraków                  | 1812-08-08 | Jasło                  
+6661      | Czesław    | Zając   | M   | 1770-08-22 | Tarnów                  | 1784-11-24 | Tarnobrzeg             
+6659      | Krystyna   | Zając   | F   | 1770-09-11 | Jasło                   | NULL       | NULL                   
+6628      | Krystyna   | Zając   | F   | 1770-09-23 | Sanok                   | 1775-01-20 | Przemyśl               
+6629      | Czesława   | Zając   | F   | 1770-10-16 | Przemyśl                | 1773-04-14 | Przemyśl               
+6621      | Julia      | Zając   | F   | 1770-10-20 | Rzeszów                 | NULL       | NULL                   
+6709      | Kamil      | Zając   | M   | 1771-05-16 | Jasło                   | NULL       | NULL                   
+6678      | Paweł      | Zając   | M   | 1771-05-18 | Sandomierz              | 1824-01-14 | Sandomierz             
+6705      | Kazimiera  | Zając   | F   | 1771-06-05 | Ostrowiec Świętokrzyski | 1813-10-20 | Sanok                  
+6707      | Tadeusz    | Zając   | M   | 1771-07-13 | Bochnia                 | 1775-11-27 | Rzeszów                
+6696      | Marek      | Zając   | M   | 1771-08-03 | Bochnia                 | NULL       | NULL                   
+6708      | Zofia      | Zając   | F   | 1771-11-06 | Krosno                  | 1772-05-14 | Zakopane               
+6723      | Filip      | Zając   | M   | 1771-11-23 | Oświęcim                | NULL       | NULL                   
+6732      | Natalia    | Zając   | F   | 1772-02-16 | Zakopane                | NULL       | NULL                   
+6726      | Dariusz    | Zając   | M   | 1772-02-24 | Oświęcim                | NULL       | NULL                   
+6759      | Szymon     | Zając   | M   | 1772-06-20 | Krosno                  | 1776-08-03 | Bochnia                
+6769      | Stefania   | Zając   | F   | 1772-06-20 | Sanok                   | 1825-12-01 | Kielce                 
+6749      | Natalia    | Zając   | F   | 1772-06-26 | Jasło                   | 1774-06-13 | Tarnów                 
+6729      | Marianna   | Zając   | F   | 1772-07-21 | Sandomierz              | 1775-06-01 | Przemyśl               
+6751      | Agnieszka  | Zając   | F   | 1772-10-10 | Krosno                  | 1826-01-05 | Jasło                  
+6742      | Stefania   | Zając   | F   | 1772-10-24 | Tarnobrzeg              | 1823-09-05 | Przemyśl               
+6731      | Stefan     | Zając   | M   | 1772-11-19 | Bochnia                 | 1808-03-18 | Nowy Sącz              
+6754      | Urszula    | Zając   | F   | 1772-11-22 | Nowy Sącz               | 1826-11-13 | Tarnów                 
+6753      | Marianna   | Zając   | F   | 1772-11-24 | Kraków                  | 1817-11-20 | Ostrowiec Świętokrzyski
+6761      | Maciej     | Zając   | M   | 1772-12-08 | Krosno                  | 1782-04-09 | Bochnia                
+6788      | Stefania   | Zając   | F   | 1773-01-27 | Nowy Sącz               | 1823-06-20 | Nowy Sącz              
+6793      | Grzegorz   | Zając   | M   | 1773-02-20 | Bochnia                 | 1813-08-24 | Tarnobrzeg             
+6786      | Irena      | Zając   | F   | 1773-03-09 | Tarnobrzeg              | 1778-03-28 | Rzeszów                
+6812      | Rozalia    | Zając   | F   | 1773-03-21 | Jasło                   | 1773-03-05 | Kielce                 
+6823      | Dariusz    | Zając   | M   | 1773-04-01 | Rzeszów                 | 1827-01-02 | Kielce                 
+6827      | Józefa     | Zając   | F   | 1773-04-14 | Sandomierz              | 1774-11-23 | Kielce                 
+6822      | Filip      | Zając   | M   | 1773-05-10 | Kraków                  | 1814-02-09 | Kraków                 
+6809      | Ignacy     | Zając   | M   | 1773-05-18 | Rzeszów                 | 1778-04-01 | Oświęcim               
+6803      | Krzysztof  | Zając   | M   | 1773-09-16 | Sanok                   | NULL       | NULL                   
+6785      | Genowefa   | Zając   | F   | 1773-10-04 | Zakopane                | 1775-07-28 | Oświęcim               
+6802      | Wiesław    | Zając   | M   | 1773-11-12 | Oświęcim                | NULL       | NULL                   
+6829      | Tomasz     | Zając   | M   | 1773-11-19 | Kraków                  | 1816-06-07 | Ostrowiec Świętokrzyski
+6889      | Czesław    | Zając   | M   | 1774-01-19 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+6854      | Julian     | Zając   | M   | 1774-02-13 | Krosno                  | 1819-03-23 | Bochnia                
+6868      | Leokadia   | Zając   | F   | 1774-03-08 | Jasło                   | 1815-07-11 | Bochnia                
+6881      | Krzysztof  | Zając   | M   | 1774-05-04 | Nowy Sącz               | 1777-12-03 | Tarnów                 
+6856      | Franciszek | Zając   | M   | 1774-06-08 | Zakopane                | NULL       | NULL                   
+6850      | Aleksandra | Zając   | F   | 1774-06-27 | Kraków                  | 1811-06-16 | Ostrowiec Świętokrzyski
+6888      | Grażyna    | Zając   | F   | 1774-07-04 | Zakopane                | NULL       | NULL                   
+6877      | Marian     | Zając   | M   | 1774-07-19 | Rzeszów                 | NULL       | NULL                   
+6835      | Józefa     | Zając   | F   | 1774-10-21 | Kraków                  | NULL       | NULL                   
+6843      | Julian     | Zając   | M   | 1774-12-07 | Zakopane                | 1819-01-19 | Tarnów                 
+6903      | Joanna     | Zając   | F   | 1775-01-13 | Kraków                  | 1779-01-03 | Ostrowiec Świętokrzyski
+6912      | Władysław  | Zając   | M   | 1775-02-26 | Sanok                   | NULL       | NULL                   
+6923      | Ryszard    | Zając   | M   | 1775-05-12 | Oświęcim                | 1776-04-02 | Sandomierz             
+6917      | Urszula    | Zając   | F   | 1775-07-06 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+6929      | Czesława   | Zając   | F   | 1775-07-08 | Rzeszów                 | 1775-05-07 | Tarnów                 
+6905      | Jakub      | Zając   | M   | 1775-08-07 | Oświęcim                | NULL       | NULL                   
+6933      | Tadeusz    | Zając   | M   | 1775-08-23 | Nowy Sącz               | 1777-06-21 | Rzeszów                
+6918      | Maria      | Zając   | F   | 1775-11-02 | Rzeszów                 | NULL       | NULL                   
+6925      | Marcin     | Zając   | M   | 1775-11-12 | Jasło                   | 1775-01-09 | Sandomierz             
+6979      | Julia      | Zając   | F   | 1776-01-20 | Krosno                  | NULL       | NULL                   
+6957      | Franciszek | Zając   | M   | 1776-03-25 | Nowy Sącz               | NULL       | NULL                   
+6989      | Henryk     | Zając   | M   | 1776-04-27 | Tarnów                  | NULL       | NULL                   
+6984      | Władysław  | Zając   | M   | 1776-07-16 | Oświęcim                | NULL       | NULL                   
+6952      | Grzegorz   | Zając   | M   | 1776-08-10 | Tarnobrzeg              | NULL       | NULL                   
+6943      | Michał     | Zając   | M   | 1776-08-12 | Tarnobrzeg              | 1777-01-05 | Nowy Sącz              
+6977      | Władysław  | Zając   | M   | 1776-08-12 | Krosno                  | NULL       | NULL                   
+6985      | Ludwika    | Zając   | F   | 1776-08-24 | Kielce                  | 1789-07-04 | Jasło                  
+6974      | Teresa     | Zając   | F   | 1776-12-21 | Bochnia                 | 1815-06-13 | Nowy Sącz              
+6953      | Regina     | Zając   | F   | 1776-12-28 | Sanok                   | 1817-08-06 | Krosno                 
+7004      | Joanna     | Zając   | F   | 1777-01-03 | Rzeszów                 | 1777-12-16 | Ostrowiec Świętokrzyski
+7003      | Anna       | Zając   | F   | 1777-01-07 | Przemyśl                | 1806-11-08 | Kraków                 
+7016      | Franciszek | Zając   | M   | 1777-02-15 | Jasło                   | 1824-11-23 | Kraków                 
+7012      | Adam       | Zając   | M   | 1777-02-28 | Bochnia                 | NULL       | NULL                   
+7006      | Henryk     | Zając   | M   | 1777-03-11 | Rzeszów                 | NULL       | NULL                   
+7036      | Antoni     | Zając   | M   | 1777-03-25 | Tarnobrzeg              | 1823-03-22 | Krosno                 
+7030      | Julian     | Zając   | M   | 1777-05-12 | Kielce                  | 1778-03-03 | Sandomierz             
+7019      | Ewa        | Zając   | F   | 1777-06-14 | Kielce                  | 1824-03-14 | Kielce                 
+7042      | Paweł      | Zając   | M   | 1777-08-27 | Zakopane                | 1777-07-07 | Przemyśl               
+7023      | Ewa        | Zając   | F   | 1777-12-05 | Sandomierz              | 1778-05-06 | Jasło                  
+7037      | Marek      | Zając   | M   | 1777-12-09 | Kraków                  | 1795-04-19 | Rzeszów                
+7043      | Andrzej    | Zając   | M   | 1777-12-13 | Tarnów                  | NULL       | NULL                   
+7103      | Tomasz     | Zając   | M   | 1778-04-05 | Jasło                   | NULL       | NULL                   
+7067      | Oliwia     | Zając   | F   | 1778-04-15 | Oświęcim                | 1778-11-07 | Tarnów                 
+7062      | Bartosz    | Zając   | M   | 1778-05-06 | Sanok                   | 1779-12-26 | Oświęcim               
+7051      | Wiesław    | Zając   | M   | 1778-06-14 | Przemyśl                | NULL       | NULL                   
+7088      | Teresa     | Zając   | F   | 1778-06-27 | Tarnów                  | NULL       | NULL                   
+7057      | Genowefa   | Zając   | F   | 1778-07-03 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+7082      | Józefa     | Zając   | F   | 1778-08-18 | Tarnobrzeg              | 1783-09-21 | Oświęcim               
+7074      | Joanna     | Zając   | F   | 1778-08-19 | Oświęcim                | NULL       | NULL                   
+7089      | Zofia      | Zając   | F   | 1778-10-13 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+7097      | Filip      | Zając   | M   | 1778-11-23 | Kraków                  | 1797-02-02 | Jasło                  
+7116      | Grzegorz   | Zając   | M   | 1779-01-20 | Bochnia                 | NULL       | NULL                   
+7145      | Małgorzata | Zając   | F   | 1779-03-11 | Sandomierz              | 1780-02-28 | Rzeszów                
+7124      | Ignacy     | Zając   | M   | 1779-04-24 | Kielce                  | NULL       | NULL                   
+7141      | Józefa     | Zając   | F   | 1779-04-25 | Kielce                  | 1780-05-16 | Sanok                  
+7121      | Marian     | Zając   | M   | 1779-05-09 | Kielce                  | NULL       | NULL                   
+7143      | Zuzanna    | Zając   | F   | 1779-05-25 | Bochnia                 | 1779-09-19 | Oświęcim               
+7130      | Katarzyna  | Zając   | F   | 1779-06-07 | Zakopane                | NULL       | NULL                   
+7113      | Małgorzata | Zając   | F   | 1779-07-20 | Kielce                  | 1827-01-01 | Zakopane               
+7109      | Ignacy     | Zając   | M   | 1779-09-17 | Bochnia                 | 1782-05-03 | Krosno                 
+7131      | Irena      | Zając   | F   | 1779-12-10 | Rzeszów                 | 1780-11-12 | Tarnobrzeg             
+7174      | Leokadia   | Zając   | F   | 1780-01-21 | Tarnobrzeg              | NULL       | NULL                   
+7162      | Urszula    | Zając   | F   | 1780-02-02 | Oświęcim                | 1780-11-07 | Sanok                  
+7201      | Alicja     | Zając   | F   | 1780-02-21 | Przemyśl                | NULL       | NULL                   
+7147      | Julia      | Zając   | F   | 1780-03-18 | Sanok                   | 1780-06-02 | Bochnia                
+7187      | Rozalia    | Zając   | F   | 1780-06-11 | Krosno                  | 1781-09-16 | Oświęcim               
+7180      | Wiktoria   | Zając   | F   | 1780-06-12 | Bochnia                 | NULL       | NULL                   
+7160      | Alicja     | Zając   | F   | 1780-06-25 | Nowy Sącz               | NULL       | NULL                   
+7165      | Rozalia    | Zając   | F   | 1780-06-25 | Oświęcim                | 1822-07-02 | Nowy Sącz              
+7153      | Regina     | Zając   | F   | 1780-06-27 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+7178      | Katarzyna  | Zając   | F   | 1780-07-28 | Kielce                  | NULL       | NULL                   
+7208      | Łukasz     | Zając   | M   | 1781-01-02 | Sanok                   | NULL       | NULL                   
+7242      | Maria      | Zając   | F   | 1781-01-07 | Ostrowiec Świętokrzyski | 1781-02-17 | Przemyśl               
+7211      | Andrzej    | Zając   | M   | 1781-03-09 | Krosno                  | 1782-12-25 | Nowy Sącz              
+7220      | Anna       | Zając   | F   | 1781-03-26 | Nowy Sącz               | 1822-10-23 | Kraków                 
+7240      | Antoni     | Zając   | M   | 1781-04-11 | Sandomierz              | 1822-08-15 | Sanok                  
+7235      | Kazimiera  | Zając   | F   | 1781-06-11 | Zakopane                | 1783-10-06 | Sanok                  
+7204      | Czesława   | Zając   | F   | 1781-07-06 | Bochnia                 | NULL       | NULL                   
+7209      | Franciszek | Zając   | M   | 1781-07-09 | Sanok                   | NULL       | NULL                   
+7219      | Halina     | Zając   | F   | 1781-07-14 | Tarnobrzeg              | NULL       | NULL                   
+7203      | Dariusz    | Zając   | M   | 1781-08-10 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+7236      | Teresa     | Zając   | F   | 1781-08-26 | Tarnobrzeg              | NULL       | NULL                   
+7228      | Filip      | Zając   | M   | 1781-10-27 | Krosno                  | 1824-10-09 | Kraków                 
+7241      | Leon       | Zając   | M   | 1781-11-07 | Sanok                   | NULL       | NULL                   
+7225      | Mateusz    | Zając   | M   | 1781-12-27 | Rzeszów                 | NULL       | NULL                   
+7256      | Helena     | Zając   | F   | 1782-02-04 | Rzeszów                 | NULL       | NULL                   
+7260      | Ignacy     | Zając   | M   | 1782-03-19 | Tarnów                  | NULL       | NULL                   
+7249      | Leon       | Zając   | M   | 1782-05-05 | Rzeszów                 | NULL       | NULL                   
+7269      | Marcin     | Zając   | M   | 1782-05-22 | Sanok                   | 1827-04-25 | Tarnów                 
+7289      | Helena     | Zając   | F   | 1782-06-12 | Rzeszów                 | 1787-08-04 | Tarnobrzeg             
+7265      | Ryszard    | Zając   | M   | 1782-06-17 | Nowy Sącz               | NULL       | NULL                   
+7271      | Ignacy     | Zając   | M   | 1782-09-26 | Zakopane                | 1804-09-06 | Ostrowiec Świętokrzyski
+7250      | Małgorzata | Zając   | F   | 1782-10-10 | Krosno                  | NULL       | NULL                   
+7257      | Helena     | Zając   | F   | 1782-12-13 | Jasło                   | NULL       | NULL                   
+7275      | Joanna     | Zając   | F   | 1782-12-26 | Jasło                   | NULL       | NULL                   
+7303      | Alicja     | Zając   | F   | 1783-04-23 | Kraków                  | NULL       | NULL                   
+7304      | Jerzy      | Zając   | M   | 1783-05-22 | Kraków                  | NULL       | NULL                   
+7323      | Julian     | Zając   | M   | 1783-07-18 | Oświęcim                | 1784-11-13 | Krosno                 
+7312      | Krystyna   | Zając   | F   | 1783-07-21 | Przemyśl                | 1805-04-25 | Ostrowiec Świętokrzyski
+7334      | Julia      | Zając   | F   | 1783-08-26 | Krosno                  | NULL       | NULL                   
+7302      | Zofia      | Zając   | F   | 1783-09-02 | Bochnia                 | NULL       | NULL                   
+7340      | Julian     | Zając   | M   | 1783-12-07 | Zakopane                | 1826-12-07 | Krosno                 
+7325      | Bożena     | Zając   | F   | 1783-12-13 | Kielce                  | NULL       | NULL                   
+7353      | Maja       | Zając   | F   | 1784-01-25 | Nowy Sącz               | 1785-08-16 | Kraków                 
+7390      | Marek      | Zając   | M   | 1784-05-13 | Zakopane                | 1785-02-05 | Kielce                 
+7381      | Danuta     | Zając   | F   | 1784-06-02 | Zakopane                | NULL       | NULL                   
+7344      | Ryszard    | Zając   | M   | 1784-06-24 | Rzeszów                 | NULL       | NULL                   
+7389      | Anna       | Zając   | F   | 1784-06-26 | Rzeszów                 | 1789-10-28 | Kielce                 
+7350      | Rozalia    | Zając   | F   | 1784-08-14 | Nowy Sącz               | NULL       | NULL                   
+7357      | Ignacy     | Zając   | M   | 1784-11-27 | Bochnia                 | 1785-10-18 | Zakopane               
+7351      | Filip      | Zając   | M   | 1784-12-11 | Rzeszów                 | NULL       | NULL                   
+7445      | Julia      | Zając   | F   | 1785-01-03 | Kielce                  | 1786-10-09 | Ostrowiec Świętokrzyski
+7442      | Joanna     | Zając   | F   | 1785-02-09 | Zakopane                | NULL       | NULL                   
+7414      | Agnieszka  | Zając   | F   | 1785-03-02 | Kielce                  | NULL       | NULL                   
+7447      | Czesława   | Zając   | F   | 1785-04-13 | Oświęcim                | NULL       | NULL                   
+7397      | Maja       | Zając   | F   | 1785-06-24 | Rzeszów                 | 1789-06-17 | Kielce                 
+7399      | Józefa     | Zając   | F   | 1785-07-08 | Tarnów                  | NULL       | NULL                   
+7443      | Kazimiera  | Zając   | F   | 1785-08-01 | Sandomierz              | NULL       | NULL                   
+7432      | Adam       | Zając   | M   | 1785-09-28 | Krosno                  | NULL       | NULL                   
+7403      | Franciszek | Zając   | M   | 1785-12-02 | Kielce                  | NULL       | NULL                   
+7395      | Alicja     | Zając   | F   | 1785-12-11 | Oświęcim                | NULL       | NULL                   
+7429      | Halina     | Zając   | F   | 1785-12-21 | Tarnów                  | NULL       | NULL                   
+7450      | Alicja     | Zając   | F   | 1786-01-01 | Bochnia                 | 1824-07-24 | Ostrowiec Świętokrzyski
+7487      | Mateusz    | Zając   | M   | 1786-01-06 | Zakopane                | 1788-01-16 | Ostrowiec Świętokrzyski
+7455      | Zygmunt    | Zając   | M   | 1786-03-12 | Kielce                  | 1791-09-16 | Przemyśl               
+7496      | Ewa        | Zając   | F   | 1786-04-28 | Tarnobrzeg              | 1807-01-25 | Bochnia                
+7488      | Krzysztof  | Zając   | M   | 1786-05-04 | Jasło                   | 1787-01-10 | Ostrowiec Świętokrzyski
+7471      | Józefa     | Zając   | F   | 1786-05-14 | Nowy Sącz               | 1786-02-28 | Zakopane               
+7454      | Stefania   | Zając   | F   | 1786-05-17 | Sanok                   | 1786-01-23 | Tarnobrzeg             
+7449      | Ludwika    | Zając   | F   | 1786-07-11 | Przemyśl                | NULL       | NULL                   
+7478      | Elżbieta   | Zając   | F   | 1786-07-15 | Przemyśl                | 1787-04-28 | Jasło                  
+7490      | Urszula    | Zając   | F   | 1786-08-06 | Bochnia                 | NULL       | NULL                   
+7453      | Zygmunt    | Zając   | M   | 1786-12-19 | Kielce                  | 1790-05-13 | Bochnia                
+7504      | Stefan     | Zając   | M   | 1787-01-06 | Rzeszów                 | NULL       | NULL                   
+7507      | Leokadia   | Zając   | F   | 1787-01-20 | Tarnów                  | NULL       | NULL                   
+7524      | Tomasz     | Zając   | M   | 1787-02-04 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+7521      | Ewa        | Zając   | F   | 1787-02-17 | Bochnia                 | 1787-03-11 | Krosno                 
+7547      | Szymon     | Zając   | M   | 1787-03-02 | Rzeszów                 | 1788-11-15 | Krosno                 
+7538      | Julian     | Zając   | M   | 1787-03-03 | Zakopane                | 1788-07-11 | Tarnobrzeg             
+7526      | Marcin     | Zając   | M   | 1787-04-17 | Kielce                  | NULL       | NULL                   
+7556      | Monika     | Zając   | F   | 1787-04-23 | Kraków                  | 1788-12-02 | Krosno                 
+7540      | Anna       | Zając   | F   | 1787-07-20 | Kraków                  | NULL       | NULL                   
+7543      | Marek      | Zając   | M   | 1787-08-25 | Nowy Sącz               | NULL       | NULL                   
+7558      | Oliwia     | Zając   | F   | 1787-09-24 | Rzeszów                 | NULL       | NULL                   
+7535      | Anna       | Zając   | F   | 1787-10-02 | Kraków                  | 1806-04-10 | Przemyśl               
+7537      | Zofia      | Zając   | F   | 1787-10-28 | Nowy Sącz               | 1790-09-25 | Krosno                 
+7553      | Krzysztof  | Zając   | M   | 1787-12-04 | Sandomierz              | 1788-07-26 | Sanok                  
+7613      | Mateusz    | Zając   | M   | 1788-02-04 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+7603      | Aleksandra | Zając   | F   | 1788-03-13 | Oświęcim                | NULL       | NULL                   
+7583      | Michał     | Zając   | M   | 1788-03-15 | Jasło                   | NULL       | NULL                   
+7605      | Marek      | Zając   | M   | 1788-04-13 | Jasło                   | 1788-01-21 | Kielce                 
+7562      | Irena      | Zając   | F   | 1788-06-03 | Kielce                  | NULL       | NULL                   
+7596      | Leokadia   | Zając   | F   | 1788-06-25 | Krosno                  | NULL       | NULL                   
+7592      | Tadeusz    | Zając   | M   | 1788-08-04 | Rzeszów                 | NULL       | NULL                   
+7610      | Marianna   | Zając   | F   | 1788-10-07 | Bochnia                 | NULL       | NULL                   
+7565      | Marcin     | Zając   | M   | 1788-10-09 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+7567      | Zofia      | Zając   | F   | 1788-11-06 | Jasło                   | NULL       | NULL                   
+7590      | Kamil      | Zając   | M   | 1788-12-13 | Tarnobrzeg              | 1789-04-15 | Tarnobrzeg             
+7640      | Alicja     | Zając   | F   | 1789-01-02 | Bochnia                 | 1790-01-26 | Tarnów                 
+7650      | Irena      | Zając   | F   | 1789-02-02 | Zakopane                | NULL       | NULL                   
+7631      | Wojciech   | Zając   | M   | 1789-03-07 | Nowy Sącz               | NULL       | NULL                   
+7656      | Barbara    | Zając   | F   | 1789-04-05 | Kielce                  | NULL       | NULL                   
+7644      | Monika     | Zając   | F   | 1789-04-21 | Zakopane                | 1789-02-21 | Nowy Sącz              
+7647      | Aleksandra | Zając   | F   | 1789-05-09 | Sanok                   | 1790-03-16 | Tarnobrzeg             
+7659      | Oliwia     | Zając   | F   | 1789-05-15 | Krosno                  | NULL       | NULL                   
+7636      | Helena     | Zając   | F   | 1789-07-01 | Jasło                   | 1789-12-06 | Bochnia                
+7619      | Tomasz     | Zając   | M   | 1789-07-15 | Jasło                   | NULL       | NULL                   
+7638      | Irena      | Zając   | F   | 1789-09-24 | Sanok                   | 1794-11-01 | Sandomierz             
+7655      | Alicja     | Zając   | F   | 1789-11-18 | Kraków                  | 1789-05-19 | Krosno                 
+7633      | Mateusz    | Zając   | M   | 1789-12-09 | Tarnów                  | 1816-09-24 | Zakopane               
+7639      | Tadeusz    | Zając   | M   | 1789-12-20 | Przemyśl                | NULL       | NULL                   
+7702      | Bożena     | Zając   | F   | 1790-03-08 | Zakopane                | NULL       | NULL                   
+7691      | Wiesław    | Zając   | M   | 1790-04-18 | Przemyśl                | NULL       | NULL                   
+7665      | Aleksandra | Zając   | F   | 1790-04-24 | Sandomierz              | NULL       | NULL                   
+7696      | Jerzy      | Zając   | M   | 1790-08-26 | Oświęcim                | 1796-10-14 | Przemyśl               
+7681      | Stefan     | Zając   | M   | 1790-09-15 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+7698      | Jerzy      | Zając   | M   | 1790-10-27 | Rzeszów                 | 1794-04-01 | Nowy Sącz              
+7667      | Tadeusz    | Zając   | M   | 1790-11-11 | Tarnobrzeg              | 1790-09-11 | Kielce                 
+7719      | Mirosław   | Zając   | M   | 1790-11-17 | Kraków                  | NULL       | NULL                   
+7683      | Jakub      | Zając   | M   | 1790-11-19 | Nowy Sącz               | NULL       | NULL                   
+7760      | Bożena     | Zając   | F   | 1791-03-12 | Przemyśl                | NULL       | NULL                   
+7735      | Teresa     | Zając   | F   | 1791-03-21 | Przemyśl                | NULL       | NULL                   
+7756      | Bartosz    | Zając   | M   | 1791-04-03 | Tarnów                  | 1791-05-21 | Krosno                 
+7757      | Alicja     | Zając   | F   | 1791-05-17 | Sanok                   | NULL       | NULL                   
+7740      | Franciszek | Zając   | M   | 1791-08-14 | Tarnobrzeg              | NULL       | NULL                   
+7747      | Wanda      | Zając   | F   | 1791-08-23 | Sanok                   | 1800-09-18 | Rzeszów                
+7772      | Halina     | Zając   | F   | 1791-11-14 | Nowy Sącz               | NULL       | NULL                   
+7738      | Joanna     | Zając   | F   | 1791-12-06 | Rzeszów                 | 1792-09-28 | Rzeszów                
+7726      | Oliwia     | Zając   | F   | 1791-12-21 | Rzeszów                 | NULL       | NULL                   
+7800      | Antoni     | Zając   | M   | 1792-03-16 | Kielce                  | NULL       | NULL                   
+7807      | Szymon     | Zając   | M   | 1792-04-26 | Krosno                  | NULL       | NULL                   
+7787      | Jerzy      | Zając   | M   | 1792-05-16 | Przemyśl                | 1792-11-20 | Ostrowiec Świętokrzyski
+7813      | Kazimiera  | Zając   | F   | 1792-06-19 | Krosno                  | 1796-02-16 | Oświęcim               
+7825      | Danuta     | Zając   | F   | 1792-07-02 | Rzeszów                 | NULL       | NULL                   
+7788      | Julian     | Zając   | M   | 1792-07-15 | Nowy Sącz               | NULL       | NULL                   
+7801      | Wiktoria   | Zając   | F   | 1792-09-24 | Jasło                   | NULL       | NULL                   
+7809      | Grzegorz   | Zając   | M   | 1792-11-04 | Sanok                   | NULL       | NULL                   
+7796      | Joanna     | Zając   | F   | 1792-11-12 | Jasło                   | 1795-06-10 | Oświęcim               
+7819      | Kazimierz  | Zając   | M   | 1792-11-14 | Kielce                  | NULL       | NULL                   
+7818      | Helena     | Zając   | F   | 1792-12-22 | Sandomierz              | NULL       | NULL                   
+7798      | Agnieszka  | Zając   | F   | 1792-12-23 | Oświęcim                | 1821-11-11 | Sanok                  
+7837      | Teresa     | Zając   | F   | 1793-01-16 | Oświęcim                | NULL       | NULL                   
+7833      | Genowefa   | Zając   | F   | 1793-01-20 | Ostrowiec Świętokrzyski | 1794-06-04 | Zakopane               
+7876      | Paweł      | Zając   | M   | 1793-03-04 | Oświęcim                | 1793-03-24 | Tarnów                 
+7841      | Henryk     | Zając   | M   | 1793-04-02 | Przemyśl                | NULL       | NULL                   
+7862      | Władysław  | Zając   | M   | 1793-04-26 | Rzeszów                 | 1794-10-13 | Kielce                 
+7828      | Kazimiera  | Zając   | F   | 1793-06-05 | Bochnia                 | NULL       | NULL                   
+7875      | Ludwika    | Zając   | F   | 1793-06-09 | Ostrowiec Świętokrzyski | NULL       | NULL                   
+7869      | Oliwia     | Zając   | F   | 1793-08-16 | Kraków                  | 1794-02-22 | Zakopane               
+7867      | Maciej     | Zając   | M   | 1793-09-11 | Rzeszów                 | 1794-03-21 | Bochnia                
+7835      | Joanna     | Zając   | F   | 1793-09-16 | Bochnia                 | NULL       | NULL                   
+7854      | Jadwiga    | Zając   | F   | 1793-10-09 | Tarnów                  | NULL       | NULL                   
+7861      | Ignacy     | Zając   | M   | 1793-10-13 | Tarnobrzeg              | NULL       | NULL                   
+7832      | Zygmunt    | Zając   | M   | 1793-11-11 | Ostrowiec Świętokrzyski | 1793-02-15 | Nowy Sącz              
+7859      | Julian     | Zając   | M   | 1793-12-11 | Zakopane                | NULL       | NULL                   

@@ -1,40 +1,156 @@
 === POPULATION AND GRAPH TOPOLOGY REPORT ===
 Target population: 1000
 Total people generated: 1000
-People alive at end of simulation (2021): 435
-Total families: 374
+People alive at end of simulation (1845): 363
+Total families: 318
 
 --- POPULATION GROWTH OVER TIME ---
-Year 1800: Alive 48 people. Total generated: 48
-Year 1825: Alive 69 people. Total generated: 95
-Year 1850: Alive 79 people. Total generated: 148
-Year 1875: Alive 109 people. Total generated: 211
-Year 1900: Alive 118 people. Total generated: 275
-Year 1925: Alive 154 people. Total generated: 359
-Year 1950: Alive 181 people. Total generated: 451
-Year 1975: Alive 226 people. Total generated: 574
-Year 2000: Alive 324 people. Total generated: 776
-Year 2021 (END): Alive 435 people. Total generated: 1000
+Year 1650: Alive 28 people. Total generated: 28
+Year 1675: Alive 41 people. Total generated: 63
+Year 1700: Alive 59 people. Total generated: 123
+Year 1725: Alive 89 people. Total generated: 189
+Year 1750: Alive 119 people. Total generated: 274
+Year 1775: Alive 160 people. Total generated: 393
+Year 1800: Alive 205 people. Total generated: 547
+Year 1825: Alive 275 people. Total generated: 770
+Year 1845 (END): Alive 363 people. Total generated: 1000
 
 --- GRAPH TOPOLOGY & DEMOGRAPHICS ---
 Max graph depth (oldest root to youngest descendant): 10 generations
-Average depth of leaf nodes (endpoints): 7.22 generations
-Sex ratio: 490 Males / 510 Females
-Average lifespan (deceased individuals): 44.3 years
-Marriage rate: 58.7% of total population
-Total divorces: 6
-Families with children: 305
-Average children per fertile family: 3.08
-Largest family generated: 9 children
+Average depth of leaf nodes (endpoints): 6.95 generations
+Sex ratio: 504 Males / 496 Females
+Oldest person age reached: 93 years
+Average lifespan (deceased individuals): 30.0 years
+Average lifespan (excluding deaths under 6 years): 52.0 years
+Marriage rate: 82.2% of eligible population (>= 16 years)
+Total divorces / annulments: 3
+Families with children: 224
+Average children per fertile family: 4.29
+Largest family generated: 11 children
 Family distribution (children per family):
-  1 child(ren): 61 families
-  2 child(ren): 67 families
-  3 child(ren): 72 families
-  4 child(ren): 47 families
-  5 child(ren): 25 families
-  6 child(ren): 20 families
-  7 child(ren): 9 families
-  8 child(ren): 3 families
-  9 child(ren): 1 families
-Orphans (adopted/foster without biological links): 53 individuals
+  1 child(ren): 29 families
+  2 child(ren): 32 families
+  3 child(ren): 36 families
+  4 child(ren): 32 families
+  5 child(ren): 28 families
+  6 child(ren): 21 families
+  7 child(ren): 20 families
+  8 child(ren): 14 families
+  9 child(ren): 7 families
+  10 child(ren): 4 families
+  11 child(ren): 1 families
+Adopted/Foster individuals: 48
+
+--- PARENT AGE AT SUBSEQUENT BIRTHS (Only from first marriages) ---
+  Child 1: Mother: 25.0 yrs | Father: 28.1 yrs
+  Child 2: Mother: 26.8 yrs | Father: 30.1 yrs
+  Child 3: Mother: 28.6 yrs | Father: 32.1 yrs
+  Child 4: Mother: 29.9 yrs | Father: 33.7 yrs
+  Child 5: Mother: 32.2 yrs | Father: 36.0 yrs
+  Child 6: Mother: 33.9 yrs | Father: 37.2 yrs
+  Child 7: Mother: 35.3 yrs | Father: 38.5 yrs
+  Child 8: Mother: 37.0 yrs | Father: 40.8 yrs
+  Child 9: Mother: 36.7 yrs | Father: 39.9 yrs
+  Child 10: Mother: 36.4 yrs | Father: 39.8 yrs
+
+--- PARENT AGE AT BIRTH DISTRIBUTION ---
+Mother age distribution:
+  16 years: 1 mothers
+  17 years: 6 mothers
+  18 years: 9 mothers
+  19 years: 13 mothers
+  20 years: 29 mothers
+  21 years: 32 mothers
+  22 years: 37 mothers
+  23 years: 46 mothers
+  24 years: 56 mothers
+  25 years: 54 mothers
+  26 years: 61 mothers
+  27 years: 63 mothers
+  28 years: 64 mothers
+  29 years: 57 mothers
+  30 years: 52 mothers
+  31 years: 52 mothers
+  32 years: 46 mothers
+  33 years: 33 mothers
+  34 years: 35 mothers
+  35 years: 36 mothers
+  36 years: 28 mothers
+  37 years: 27 mothers
+  38 years: 24 mothers
+  39 years: 20 mothers
+  40 years: 13 mothers
+  41 years: 15 mothers
+  42 years: 7 mothers
+  43 years: 3 mothers
+  44 years: 2 mothers
+  45 years: 2 mothers
+  46 years: 1 mothers
+Father age distribution:
+  18 years: 3 fathers
+  19 years: 4 fathers
+  20 years: 8 fathers
+  21 years: 4 fathers
+  22 years: 17 fathers
+  23 years: 14 fathers
+  24 years: 28 fathers
+  25 years: 32 fathers
+  26 years: 40 fathers
+  27 years: 41 fathers
+  28 years: 51 fathers
+  29 years: 52 fathers
+  30 years: 47 fathers
+  31 years: 53 fathers
+  32 years: 62 fathers
+  33 years: 55 fathers
+  34 years: 50 fathers
+  35 years: 52 fathers
+  36 years: 39 fathers
+  37 years: 51 fathers
+  38 years: 37 fathers
+  39 years: 32 fathers
+  40 years: 33 fathers
+  41 years: 22 fathers
+  42 years: 20 fathers
+  43 years: 15 fathers
+  44 years: 13 fathers
+  45 years: 7 fathers
+  46 years: 10 fathers
+  47 years: 2 fathers
+  48 years: 4 fathers
+  49 years: 4 fathers
+  50 years: 3 fathers
+  51 years: 2 fathers
+  52 years: 3 fathers
+  53 years: 3 fathers
+  54 years: 2 fathers
+  55 years: 1 fathers
+  56 years: 1 fathers
+  57 years: 2 fathers
+  58 years: 1 fathers
+  60 years: 2 fathers
+  61 years: 2 fathers
+
+--- AGE DISTRIBUTION (Living) ---
+  0-9 years: 94 people
+  10-19 years: 72 people
+  20-29 years: 63 people
+  30-39 years: 55 people
+  40-49 years: 45 people
+  50-59 years: 20 people
+  60-69 years: 10 people
+  70-79 years: 3 people
+  80-89 years: 1 people
+
+--- AGE DISTRIBUTION (Deceased) ---
+  0-9 years: 277 people
+  10-19 years: 16 people
+  20-29 years: 31 people
+  30-39 years: 25 people
+  40-49 years: 64 people
+  50-59 years: 99 people
+  60-69 years: 67 people
+  70-79 years: 49 people
+  80-89 years: 7 people
+  90-99 years: 2 people
 

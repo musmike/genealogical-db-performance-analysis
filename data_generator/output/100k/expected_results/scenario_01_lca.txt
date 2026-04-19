@@ -4,12 +4,14 @@ Target LCA path length required: 16
 Constraint: Person A and Person B are not closely related AND
             biological distance to LCA > 3 for both sides.
 
-Recommended Person A (ID: 98335)
-Recommended Person B (ID: 96714)
+Recommended Person A (ID: 94155)
+Recommended Person B (ID: 98333)
 
 
-Expected rows: 1
+Expected rows: 3
 
-lca_id | given_name | surname | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
-------------------------------------------------------------------------------------------------------------------------------------------------
-42246  | Zygmunt    | Pawlak  | M   | 1796-08-12 | Olsztyn     | 1868-08-10 | Reszel      | 9                  | 7                  | 16        
+lca_id | given_name | surname    | sex | birth_date | birth_place  | death_date | death_place         | path_length_from_a | path_length_from_b | total_dist
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+38866  | Dariusz    | Malinowski | M   | 1635-02-24 | Krosno       | 1685-03-09 | Jasło               | 8                  | 8                  | 16        
+39349  | Danuta     | Woźniak    | F   | 1638-03-07 | Przemyśl     | 1690-10-20 | Sanok               | 8                  | 8                  | 16        
+41165  | Teresa     | Piotrowska | F   | 1651-02-14 | Zielona Góra | 1699-11-06 | Gorzów Wielkopolski | 8                  | 8                  | 16        

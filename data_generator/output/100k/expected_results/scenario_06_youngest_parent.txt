@@ -7,4 +7,4 @@ Expected rows: 1
 
 parent_id | given_name | surname    | sex | birth_date | birth_place | age_at_first_child | age_difference_in_days | child_id | child_birth_date | child_birth_place
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-2049      | Rozalia    | Nowakowska | F   | 0989-12-04 | Chełmno     | 16                 | 5896                   | 2219     | 1006-01-26       | Pszczyna         
+43116     | Alicja     | Malinowska | F   | 1664-12-11 | Rzeszów     | 16                 | 5872                   | 46025    | 1681-01-08       | Krosno           

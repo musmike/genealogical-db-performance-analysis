@@ -4,15 +4,13 @@ Target LCA path length required: 8
 Constraint: Person A and Person B are not closely related AND
             biological distance to LCA > 3 for both sides.
 
-Recommended Person A (ID: 501)
-Recommended Person B (ID: 552)
+Recommended Person A (ID: 873)
+Recommended Person B (ID: 766)
 
 
-Expected rows: 4
+Expected rows: 2
 
-lca_id | given_name | surname   | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
---------------------------------------------------------------------------------------------------------------------------------------------------
-67     | Stefan     | Mazur     | M   | 1815-06-03 | Cieszyn     | 1897-09-25 | Białystok   | 4                  | 4                  | 8         
-94     | Stefania   | Nowak     | F   | 1825-09-23 | Łódź        | 1879-01-23 | Sandomierz  | 4                  | 4                  | 8         
-124    | Ewa        | Nowak     | F   | 1841-11-09 | Biecz       | 1914-02-25 | Bromberg    | 4                  | 4                  | 8         
-152    | Kamil      | Zieliński | M   | 1852-10-02 | Rzeszów     | 1904-11-19 | Tykocin     | 4                  | 4                  | 8         
+lca_id | given_name | surname    | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
+---------------------------------------------------------------------------------------------------------------------------------------------------
+179    | Marianna   | Nowakowska | F   | 1722-08-11 | Elbląg      | 1794-05-24 | Tarnobrzeg  | 4                  | 4                  | 8         
+188    | Wiesław    | Grabowski  | M   | 1725-01-10 | Oświęcim    | 1795-12-16 | Krosno      | 4                  | 4                  | 8         

@@ -1,1001 +1,1001 @@
 id:ID(Person),givenName:STRING,surname:STRING,sex:STRING,isDeceased:BOOLEAN,birthPlace:STRING,birthDate:DATE,deathPlace:STRING,deathDate:DATE,causeOfDeath:STRING,burialPlace:STRING,occupation:STRING,:LABEL
-1,Józef,Lewandowski,M,true,Reszel,1762-03-02,Thorn,1826-06-10,,Cemetery in Thorn,Tanner,Person
-2,Elżbieta,Nowak,F,true,Sosnowiec,1772-02-24,Złoty Potok,1855-11-15,Influenza,Cemetery in Złoty Potok,Weaver,Person
-3,Stanisław,Zieliński,M,true,Bronowice,1776-12-28,Łódź,1841-01-17,Murder,Cemetery in Łódź,Weaver,Person
-4,Teresa,Nowakowska,F,true,Kazimierz Dolny,1780-11-17,Rzeszów,1839-03-25,War casualty,Cemetery in Rzeszów,Soldier,Person
-5,Andrzej,Nowakowski,M,true,Zalipie,1761-05-19,Chełmno,1818-09-21,Fever,Cemetery in Chełmno,Weaver,Person
-6,Czesława,Lewandowska,F,true,Sromowce,1758-03-13,Częstochowa,1819-02-18,Cancer,Cemetery in Częstochowa,Miller,Person
-7,Czesław,Szymański,M,true,Sanok,1765-01-03,Thorn,1842-01-13,Plague,Cemetery in Thorn,Miner,Person
-8,Leokadia,Zając,F,true,Sromowce,1763-10-08,Krynica,1846-08-15,,Cemetery in Krynica,Innkeeper,Person
-9,Władysław,Król,M,true,Gdynia,1756-02-27,Kazimierz Dolny,1808-05-19,Starvation,Cemetery in Kazimierz Dolny,Potter,Person
-10,Monika,Kozłowska,F,true,Bronowice,1755-11-08,Kazimierz Dolny,1833-02-07,Unknown,Cemetery in Kazimierz Dolny,Scribe,Person
-11,Henryk,Kowalski,M,true,Pszczyna,1757-04-17,Lublin,1812-11-24,War casualty,Cemetery in Lublin,Soldier,Person
-12,Zofia,Lewandowska,F,true,Częstochowa,1765-09-14,Sromowce,1842-04-18,Cholera,Cemetery in Sromowce,Wheelwright,Person
-13,Jan,Zając,M,true,Krynica,1773-08-05,Chełmno,1846-06-04,Smallpox,Cemetery in Chełmno,Soldier,Person
-14,Genowefa,Pawłowska,F,true,Gdynia,1774-12-14,Supraśl,1826-07-11,,Cemetery in Supraśl,Weaver,Person
-15,Bartosz,Sikora,M,true,Sosnowiec,1750-11-13,Złoty Potok,1810-08-12,Pneumonia,Cemetery in Złoty Potok,Shepherd,Person
-16,Zuzanna,Nowakowska,F,true,Sromowce,1755-06-18,Łódź,1818-09-06,Murder,Cemetery in Łódź,Butcher,Person
-17,Mirosław,Dąbrowski,M,true,Zwierzyniec,1752-12-03,Posen,1818-05-22,Dropsy,Cemetery in Posen,Butcher,Person
-18,Grażyna,Krawczyk,F,true,Biecz,1755-07-28,Częstochowa,1806-04-02,Plague,Cemetery in Częstochowa,Cooper,Person
-19,Józef,Pawlak,M,true,Częstochowa,1768-08-21,Kazimierz Dolny,1811-07-17,Heart failure,Cemetery in Kazimierz Dolny,Innkeeper,Person
-20,Zuzanna,Wieczorek,F,true,Supraśl,1768-06-04,Biecz,1832-06-07,Unknown,Cemetery in Biecz,Scribe,Person
-21,Adam,Adamczyk,M,true,Lublin,1751-06-12,Krynica,1824-10-03,,Cemetery in Krynica,Shepherd,Person
-22,Ludwika,Jankowska,F,true,Biecz,1755-06-11,Chochołów,1821-12-28,Typhus,Cemetery in Chochołów,Tailor,Person
-23,Antoni,Wiśniewski,M,true,Reszel,1760-12-13,Chochołów,1832-04-02,Cancer,Cemetery in Chochołów,Butcher,Person
-24,Genowefa,Woźniak,F,true,Warszawa,1759-09-01,Gdynia,1831-07-19,Starvation,Cemetery in Gdynia,Soldier,Person
-25,Krzysztof,Wiśniewski,M,true,Łódź,1757-01-02,Lublin,1818-09-27,,Cemetery in Lublin,Miller,Person
-26,Zuzanna,Król,F,true,Zalipie,1766-12-09,Pszczyna,1848-05-03,Smallpox,Cemetery in Pszczyna,Cooper,Person
-27,Szymon,Zieliński,M,true,Sandomierz,1754-11-27,Supraśl,1830-06-18,,Cemetery in Supraśl,Farmer,Person
-28,Halina,Sikora,F,true,Zalipie,1755-11-04,Supraśl,1810-12-25,Typhus,Cemetery in Supraśl,Shoemaker,Person
-29,Antoni,Majewski,M,true,Kazimierz Dolny,1751-01-07,Kielce,1821-06-19,Infectious disease,Cemetery in Kielce,Shoemaker,Person
-30,Rozalia,Jabłońska,F,true,Olsztyn,1755-08-09,Stettin,1819-03-13,Smallpox,Cemetery in Stettin,Potter,Person
-31,Ignacy,Mazur,M,true,Warszawa,1775-02-21,Sandomierz,1856-02-24,Heart failure,Cemetery in Sandomierz,,Person
-32,Teresa,Kwiatkowska,F,true,Sosnowiec,1775-04-02,Chochołów,1850-06-06,Unknown,Cemetery in Chochołów,Cooper,Person
-33,Stanisław,Wojciechowski,M,true,Bronowice,1767-12-09,Białystok,1805-01-01,Starvation,Cemetery in Białystok,Butcher,Person
-34,Zofia,Kowalska,F,true,Lipce,1771-12-02,Gliwice,1838-11-17,Dropsy,Cemetery in Gliwice,Miller,Person
-35,Stanisław,Nowakowski,M,true,Gdynia,1776-08-16,Gdynia,1827-11-08,Cancer,Cemetery in Gdynia,Blacksmith,Person
-36,Katarzyna,Olszewska,F,true,Bromberg,1781-06-24,Breslau,1828-02-25,Murder,Cemetery in Breslau,Teacher,Person
-37,Piotr,Kowalczyk,M,true,Biecz,1774-12-15,Tykocin,1830-05-04,Pneumonia,Cemetery in Tykocin,Teacher,Person
-38,Halina,Dąbrowska,F,true,Danzig,1780-03-28,Chełmno,1831-10-12,Fire,Cemetery in Chełmno,Artist,Person
-39,Leon,Szymański,M,true,Kielce,1778-11-14,Lipce,1841-08-03,Typhus,Cemetery in Lipce,Teacher,Person
-40,Helena,Baran,F,true,Posen,1782-01-13,Katowice,1854-03-10,Heart failure,Cemetery in Katowice,Judge,Person
-41,Władysław,Wójcik,M,true,Bronowice,1761-06-02,Chełmno,1823-04-21,Cancer,Cemetery in Chełmno,Tailor,Person
-42,Regina,Pawłowska,F,true,Białystok,1759-05-04,Radom,1829-09-15,Dysentery,Cemetery in Radom,Clerk,Person
-43,Andrzej,Baran,M,true,Kraków,1768-03-26,Breslau,1827-06-16,,Cemetery in Breslau,Farmer,Person
-44,Elżbieta,Kwiatkowska,F,true,Sandomierz,1772-12-06,Wisła,1809-05-25,Cholera,Cemetery in Wisła,Doctor,Person
-45,Tadeusz,Mazur,M,true,Sromowce,1754-07-06,Rzeszów,1822-02-08,Stroke,Cemetery in Rzeszów,,Person
-46,Elżbieta,Walczak,F,true,Rzeszów,1755-06-05,Katowice,1817-09-05,Fever,Cemetery in Katowice,Soldier,Person
-47,Zygmunt,Kamiński,M,true,Złoty Potok,1770-06-04,Lipce,1829-01-10,,Cemetery in Lipce,Cooper,Person
-48,Wanda,Malinowska,F,true,Chochołów,1769-11-08,Posen,1841-05-26,,Cemetery in Posen,Miller,Person
-49,Michał,Wiśniewski,M,true,Reszel,1803-03-28,Rzeszów,1881-02-01,Plague,Cemetery in Rzeszów,Fisherman,Person
-50,Krzysztof,Szymański,M,true,Kielce,1803-03-20,Posen,1888-02-23,Fever,Cemetery in Posen,Clerk,Person
-51,Krzysztof,Wiśniewski,M,true,Supraśl,1804-11-22,Danzig,1863-11-22,Typhus,Cemetery in Danzig,Clerk,Person
-52,Marcin,Wojciechowski,M,true,Stettin,1804-05-22,Złoty Potok,1859-07-27,War casualty,Cemetery in Złoty Potok,Soldier,Person
-53,Rozalia,Szymańska,F,true,Zwierzyniec,1804-03-16,Bronowice,1808-09-13,Heart failure,Cemetery in Bronowice,,Person
-54,Elżbieta,Wiśniewska,F,true,Cieszyn,1806-08-19,Zwierzyniec,1870-08-24,Smallpox,Cemetery in Zwierzyniec,Priest,Person
-55,Irena,Baran,F,true,Gdynia,1806-04-12,Zwierzyniec,1892-09-04,Smallpox,Cemetery in Zwierzyniec,Shepherd,Person
-56,Elżbieta,Baran,F,true,Pszczyna,1807-12-18,Lanckorona,1869-11-06,Unknown,Cemetery in Lanckorona,Teacher,Person
-57,Monika,Pawlak,F,true,Bromberg,1809-12-10,Gdynia,1812-06-15,Stroke,Cemetery in Gdynia,,Person
-58,Zofia,Nowakowska,F,true,Częstochowa,1809-07-01,Sromowce,1874-09-27,Pneumonia,Cemetery in Sromowce,Cooper,Person
-59,Ryszard,Baran,M,true,Złoty Potok,1809-09-18,Lublin,1851-06-24,Unknown,Cemetery in Lublin,Scribe,Person
-60,Bartosz,Pawlak,M,true,Lublin,1811-11-23,Zwierzyniec,1815-07-09,Fire,Cemetery in Zwierzyniec,,Person
-61,Antoni,Kowalczyk,M,true,Chochołów,1811-02-18,Krynica,1815-05-22,Dropsy,Cemetery in Krynica,,Person
-62,Józef,Nowakowski,M,true,Częstochowa,1812-11-18,Lipce,1894-04-12,Pneumonia,Cemetery in Lipce,Merchant,Person
-63,Antoni,Zieliński,M,true,Reszel,1813-07-22,Thorn,1883-07-07,,Cemetery in Thorn,Clerk,Person
-64,Krystyna,Nowakowska,F,true,Reszel,1814-06-24,Tykocin,1876-05-12,Unknown,Cemetery in Tykocin,Soldier,Person
-65,Marianna,Kowalczyk,F,true,Sromowce,1814-04-24,Pszczyna,1909-01-01,,Cemetery in Pszczyna,Shoemaker,Person
-66,Julian,Lewandowski,M,true,Krynica,1815-06-06,Olsztyn,1894-03-12,Fever,Cemetery in Olsztyn,Priest,Person
-67,Stefan,Mazur,M,true,Cieszyn,1815-06-03,Białystok,1897-09-25,Murder,Cemetery in Białystok,Weaver,Person
-68,Jakub,Zieliński,M,true,Danzig,1816-09-26,Pszczyna,1879-05-04,Fire,Cemetery in Pszczyna,Lawyer,Person
-69,Kazimiera,Zając,F,true,Breslau,1816-01-18,Częstochowa,1875-08-12,Apoplexy,Cemetery in Częstochowa,Teacher,Person
-70,Kazimiera,Kowalczyk,F,true,Gliwice,1816-01-17,Łódź,1887-09-27,Plague,Cemetery in Łódź,Potter,Person
-71,Czesława,Mazur,F,true,Stettin,1817-08-04,Pszczyna,1896-08-25,,Cemetery in Pszczyna,Innkeeper,Person
-72,Krystyna,Zielińska,F,true,Sosnowiec,1818-10-06,Kazimierz Dolny,1877-11-22,Fire,Cemetery in Kazimierz Dolny,Miller,Person
-73,Dariusz,Zając,M,true,Łódź,1818-06-25,Wisła,1899-07-09,Cancer,Cemetery in Wisła,Fisherman,Person
-74,Alicja,Mazur,F,true,Kraków,1819-09-08,Wisła,1889-02-11,,Cemetery in Wisła,Tanner,Person
-75,Czesław,Baran,M,true,Zwierzyniec,1792-05-18,Chełmno,1849-12-25,Smallpox,Cemetery in Chełmno,Shepherd,Person
-76,Teresa,Kowalczyk,F,true,Częstochowa,1792-12-02,Olsztyn,1859-01-13,Accident,Cemetery in Olsztyn,Shoemaker,Person
-77,Marianna,Zielińska,F,true,Thorn,1820-03-18,Lipce,1860-10-02,Typhus,Cemetery in Lipce,Priest,Person
-78,Kazimierz,Nowak,M,true,Chochołów,1799-12-13,Breslau,1852-12-11,Fire,Cemetery in Breslau,Mason,Person
-79,Teresa,Pawłowska,F,true,Olsztyn,1802-11-01,Thorn,1827-11-11,Unknown,Cemetery in Thorn,Soldier,Person
-80,Antoni,Lewandowski,M,true,Bromberg,1795-08-20,Sanok,1850-08-23,Cancer,Cemetery in Sanok,Lawyer,Person
-81,Halina,Szymańska,F,true,Chełmno,1796-09-02,Warszawa,1848-11-03,Pneumonia,Cemetery in Warszawa,Judge,Person
-82,Józefa,Baran,F,true,Breslau,1822-01-17,Tykocin,1822-11-18,Influenza,Cemetery in Tykocin,,Person
-83,Michał,Król,M,true,Zwierzyniec,1799-02-11,Sromowce,1833-11-18,Typhus,Cemetery in Sromowce,Mason,Person
-84,Elżbieta,Wojciechowska,F,true,Częstochowa,1798-06-09,Zwierzyniec,1833-12-18,,Cemetery in Zwierzyniec,Tanner,Person
-85,Władysław,Nowak,M,true,Posen,1823-08-05,Posen,1875-05-26,Accident,Cemetery in Posen,Butcher,Person
-86,Irena,Lewandowska,F,true,Rzeszów,1823-07-01,Wisła,1887-08-05,Apoplexy,Cemetery in Wisła,Doctor,Person
-87,Czesław,Mazur,M,true,Tykocin,1803-10-22,Kraków,1877-10-09,Plague,Cemetery in Kraków,Fisherman,Person
-88,Ludwika,Wójcik,F,true,Wisła,1802-03-17,Rzeszów,1864-09-20,Plague,Cemetery in Rzeszów,Merchant,Person
-89,Wanda,Baran,F,true,Lanckorona,1824-08-10,Kazimierz Dolny,1891-04-11,War casualty,Cemetery in Kazimierz Dolny,Shoemaker,Person
-90,Filip,Król,M,true,Lublin,1824-02-14,Biecz,1825-01-10,Apoplexy,Cemetery in Biecz,,Person
-91,Dariusz,Kaczmarek,M,true,Radom,1799-06-07,Białystok,1878-01-26,Cholera,Cemetery in Białystok,Hunter,Person
-92,Ewa,Kowalczyk,F,true,Krynica,1801-05-22,Cieszyn,1855-06-12,Cancer,Cemetery in Cieszyn,Tanner,Person
-93,Antoni,Baran,M,true,Warszawa,1825-12-24,Zwierzyniec,1871-07-17,Accident,Cemetery in Zwierzyniec,Innkeeper,Person
-94,Stefania,Nowak,F,true,Łódź,1825-09-23,Sandomierz,1879-01-23,Typhus,Cemetery in Sandomierz,Hunter,Person
-95,Jerzy,Lewandowski,M,true,Kielce,1825-02-26,Reszel,1826-10-07,Starvation,Cemetery in Reszel,,Person
-96,Henryk,Nowak,M,true,Chełmno,1826-07-24,Gdynia,1871-01-28,Infectious disease,Cemetery in Gdynia,Tanner,Person
-97,Jakub,Lewandowski,M,true,Tykocin,1826-11-12,Olsztyn,1900-01-13,Plague,Cemetery in Olsztyn,Butcher,Person
-98,Henryk,Król,M,true,Reszel,1826-05-07,Lublin,1899-05-06,,Cemetery in Lublin,Doctor,Person
-99,Wiktoria,Mazur,F,true,Lublin,1826-05-05,Chełmno,1878-05-11,Cancer,Cemetery in Chełmno,Weaver,Person
-100,Dariusz,Baran,M,true,Kielce,1827-11-02,Lipce,1898-06-08,Pneumonia,Cemetery in Lipce,Cooper,Person
-101,Anna,Lewandowska,F,true,Wisła,1827-10-07,Olsztyn,1830-08-07,Typhus,Cemetery in Olsztyn,,Person
-102,Mirosław,Kaczmarek,M,true,Kraków,1827-10-03,Rzeszów,1874-08-21,Dropsy,Cemetery in Rzeszów,Mason,Person
-103,Stefan,Lewandowski,M,true,Chochołów,1828-07-21,Łódź,1833-06-19,Drowning,Cemetery in Łódź,,Person
-104,Franciszek,Król,M,true,Krynica,1828-09-16,Katowice,1905-03-08,Cholera,Cemetery in Katowice,Teacher,Person
-105,Łukasz,Wiśniewski,M,true,Posen,1828-07-05,Supraśl,1895-04-25,Fire,Cemetery in Supraśl,Judge,Person
-106,Józefa,Baran,F,true,Posen,1829-01-10,Zwierzyniec,1899-10-18,Cancer,Cemetery in Zwierzyniec,Potter,Person
-107,Michał,Król,M,true,Zalipie,1829-06-19,Tykocin,1829-08-15,Stroke,Cemetery in Tykocin,,Person
-108,Władysław,Kaczmarek,M,true,Gliwice,1830-01-20,Warszawa,1897-01-09,Plague,Cemetery in Warszawa,Tailor,Person
-109,Barbara,Baran,F,true,Reszel,1831-01-28,Chochołów,1922-12-26,Stroke,Cemetery in Chochołów,,Person
-110,Natalia,Kaczmarek,F,true,Złoty Potok,1831-07-25,Wisła,1918-11-19,Heart failure,Cemetery in Wisła,Scribe,Person
-111,Jerzy,Wiśniewski,M,true,Breslau,1831-02-25,Bromberg,1832-04-17,Drowning,Cemetery in Bromberg,,Person
-112,Piotr,Wiśniewski,M,true,Krynica,1832-09-12,Kielce,1860-10-16,Accident,Cemetery in Kielce,Priest,Person
-113,Leon,Nowak,M,true,Biecz,1832-09-02,Lipce,1834-10-22,,Cemetery in Lipce,,Person
-114,Adam,Baran,M,true,Warszawa,1833-12-28,Białystok,1877-08-15,,Cemetery in Białystok,Baker,Person
-115,Barbara,Wiśniewska,F,true,Lipce,1833-06-09,Sandomierz,1885-05-28,Cholera,Cemetery in Sandomierz,Miner,Person
-116,Ludwika,Baran,F,true,Bronowice,1834-12-09,Danzig,1907-11-03,Dysentery,Cemetery in Danzig,Butcher,Person
-117,Bartosz,Nowak,M,true,Olsztyn,1835-04-12,Radom,1919-06-27,,Cemetery in Radom,Merchant,Person
-118,Filip,Szymański,M,true,Zalipie,1835-01-18,Posen,1880-06-21,Apoplexy,Cemetery in Posen,Butcher,Person
-119,Bartosz,Nowak,M,true,Chochołów,1836-05-15,Chełmno,1896-06-07,Stroke,Cemetery in Chełmno,Artist,Person
-120,Irena,Szymańska,F,true,Łódź,1837-07-17,Bronowice,1903-05-27,Influenza,Cemetery in Bronowice,Soldier,Person
-121,Maria,Wiśniewska,F,true,Sromowce,1838-01-16,Zwierzyniec,1897-11-01,Heart failure,Cemetery in Zwierzyniec,Weaver,Person
-122,Kamil,Nowak,M,true,Pszczyna,1839-05-10,Lanckorona,1839-02-27,Smallpox,Cemetery in Lanckorona,,Person
-123,Wiktoria,Baran,F,true,Cieszyn,1839-01-26,Sandomierz,1842-07-06,Murder,Cemetery in Sandomierz,,Person
-124,Ewa,Nowak,F,true,Biecz,1841-11-09,Bromberg,1914-02-25,,Cemetery in Bromberg,Innkeeper,Person
-125,Rozalia,Baran,F,true,Łódź,1841-01-15,Reszel,1897-01-17,,Cemetery in Reszel,Doctor,Person
-126,Kamil,Lewandowski,M,true,Kielce,1841-11-19,Thorn,1880-09-10,Apoplexy,Cemetery in Thorn,Merchant,Person
-127,Aleksandra,Nowak,F,true,Kielce,1842-03-17,Sanok,1895-04-25,Consumption,Cemetery in Sanok,Butcher,Person
-128,Oliwia,Zielińska,F,true,Reszel,1842-06-10,Sanok,1898-03-20,Fire,Cemetery in Sanok,Scribe,Person
-129,Grzegorz,Baran,M,true,Biecz,1843-10-03,Stettin,1902-08-01,,Cemetery in Stettin,Carpenter,Person
-130,Piotr,Lewandowski,M,true,Bromberg,1843-01-02,Bromberg,1848-06-19,Fever,Cemetery in Bromberg,,Person
-131,Regina,Zielińska,F,true,Bronowice,1843-04-22,Radom,1888-06-12,Fire,Cemetery in Radom,Merchant,Person
-132,Jadwiga,Wojciechowska,F,true,Lublin,1843-03-27,Sosnowiec,1901-05-12,Pneumonia,Cemetery in Sosnowiec,Farmer,Person
-133,Danuta,Baran,F,true,Lipce,1843-10-14,Katowice,1886-10-08,Drowning,Cemetery in Katowice,Soldier,Person
-134,Julia,Baran,F,true,Lublin,1844-03-07,Chełmno,1849-04-17,Consumption,Cemetery in Chełmno,,Person
-135,Małgorzata,Wojciechowska,F,true,Zalipie,1845-06-17,Rzeszów,1904-12-26,Dropsy,Cemetery in Rzeszów,Judge,Person
-136,Czesława,Lewandowska,F,true,Gdynia,1846-09-22,Kazimierz Dolny,1851-03-21,Cholera,Cemetery in Kazimierz Dolny,,Person
-137,Danuta,Zielińska,F,true,Gdynia,1846-01-05,Posen,1851-11-01,,Cemetery in Posen,,Person
-138,Urszula,Zielińska,F,true,Wisła,1846-03-04,Sandomierz,1849-07-25,Apoplexy,Cemetery in Sandomierz,,Person
-139,Mateusz,Zieliński,M,true,Gdynia,1847-10-12,Zalipie,1912-08-12,,Cemetery in Zalipie,Soldier,Person
-140,Wanda,Zielińska,F,true,Kielce,1848-07-09,Zwierzyniec,1883-02-07,Fire,Cemetery in Zwierzyniec,Tanner,Person
-141,Danuta,Wojciechowska,F,true,Posen,1848-07-05,Złoty Potok,1911-12-10,Typhus,Cemetery in Złoty Potok,Clerk,Person
-142,Halina,Zielińska,F,true,Pszczyna,1848-02-25,Biecz,1938-08-03,War casualty,Cemetery in Biecz,Teacher,Person
-143,Czesława,Zielińska,F,true,Sromowce,1849-05-22,Krynica,1849-11-17,Dysentery,Cemetery in Krynica,,Person
-144,Genowefa,Wojciechowska,F,true,Częstochowa,1849-07-17,Kielce,1851-10-02,,Cemetery in Kielce,,Person
-145,Tomasz,Wiśniewski,M,true,Wisła,1849-03-02,Częstochowa,1931-05-27,Cholera,Cemetery in Częstochowa,Miller,Person
-146,Michał,Nowak,M,true,Sromowce,1849-04-28,Bronowice,1908-11-25,Heart failure,Cemetery in Bronowice,Scribe,Person
-147,Jadwiga,Zielińska,F,true,Lipce,1850-09-26,Kielce,1903-10-17,Typhus,Cemetery in Kielce,Innkeeper,Person
-148,Bartosz,Kaczmarek,M,true,Rzeszów,1850-06-27,Biecz,1936-12-10,Starvation,Cemetery in Biecz,Teacher,Person
-149,Maja,Wiśniewska,F,true,Częstochowa,1851-04-11,Chochołów,1895-05-08,Consumption,Cemetery in Chochołów,Tailor,Person
-150,Barbara,Mazur,F,true,Złoty Potok,1851-06-02,Warszawa,1896-12-06,Starvation,Cemetery in Warszawa,Carpenter,Person
-151,Elżbieta,Zając,F,true,Kielce,1851-09-26,Thorn,1907-03-24,,Cemetery in Thorn,Blacksmith,Person
-152,Kamil,Zieliński,M,true,Rzeszów,1852-10-02,Tykocin,1904-11-19,Apoplexy,Cemetery in Tykocin,Scribe,Person
-153,Kamil,Kaczmarek,M,true,Wisła,1852-12-19,Kraków,1909-11-15,Heart failure,Cemetery in Kraków,Carpenter,Person
-154,Krystyna,Kaczmarek,F,true,Cieszyn,1853-09-17,Sromowce,1919-02-05,Infectious disease,Cemetery in Sromowce,Mason,Person
-155,Helena,Wiśniewska,F,true,Katowice,1853-06-19,Lanckorona,1939-09-02,Typhus,Cemetery in Lanckorona,Soldier,Person
-156,Julia,Mazur,F,true,Lipce,1853-03-08,Krynica,1899-01-10,Murder,Cemetery in Krynica,Miner,Person
-157,Danuta,Zając,F,true,Kraków,1853-05-24,Reszel,1921-02-19,Cholera,Cemetery in Reszel,Fisherman,Person
-158,Grzegorz,Nowak,M,true,Biecz,1853-03-27,Kraków,1904-07-12,Plague,Cemetery in Kraków,Baker,Person
-159,Stanisław,Król,M,true,Chełmno,1853-08-16,Lanckorona,1857-11-26,Starvation,Cemetery in Lanckorona,,Person
-160,Piotr,Zając,M,true,Warszawa,1854-08-14,Gdynia,1890-03-20,Apoplexy,Cemetery in Gdynia,Scribe,Person
-161,Mirosław,Mazur,M,true,Radom,1855-08-27,Częstochowa,1908-07-22,Drowning,Cemetery in Częstochowa,Wheelwright,Person
-162,Krystyna,Król,F,true,Sandomierz,1855-03-06,Krynica,1920-09-08,Murder,Cemetery in Krynica,Miller,Person
-163,Mateusz,Lewandowski,M,true,Rzeszów,1855-10-25,Złoty Potok,1936-11-07,Murder,Cemetery in Złoty Potok,Wheelwright,Person
-164,Czesława,Baran,F,true,Krynica,1856-01-12,Kielce,1927-11-02,Heart failure,Cemetery in Kielce,,Person
-165,Rozalia,Zając,F,true,Breslau,1857-10-02,Chełmno,1861-10-02,Plague,Cemetery in Chełmno,,Person
-166,Krystyna,Król,F,true,Radom,1857-07-22,Gliwice,1861-06-02,Starvation,Cemetery in Gliwice,,Person
-167,Elżbieta,Lewandowska,F,true,Katowice,1857-01-26,Bronowice,1907-01-16,War casualty,Cemetery in Bronowice,Farmer,Person
-168,Wojciech,Lewandowski,M,true,Gliwice,1858-09-25,Kielce,1928-02-08,Influenza,Cemetery in Kielce,Judge,Person
-169,Wojciech,Baran,M,true,Zalipie,1858-08-13,Sandomierz,1860-03-09,Plague,Cemetery in Sandomierz,,Person
-170,Jan,Król,M,true,Pszczyna,1859-04-26,Bronowice,1916-12-07,Consumption,Cemetery in Bronowice,Scribe,Person
-171,Leokadia,Zając,F,true,Reszel,1860-02-05,Chochołów,1948-10-07,Dropsy,Cemetery in Chochołów,Fisherman,Person
-172,Zofia,Baran,F,true,Kazimierz Dolny,1860-07-07,Kraków,1860-11-04,Pneumonia,Cemetery in Kraków,,Person
-173,Grzegorz,Wiśniewski,M,true,Sosnowiec,1861-07-18,Kazimierz Dolny,1861-10-12,Cancer,Cemetery in Kazimierz Dolny,,Person
-174,Bartosz,Baran,M,true,Stettin,1861-09-21,Kielce,1960-03-02,,Cemetery in Kielce,Teacher,Person
-175,Henryk,Zając,M,true,Kraków,1862-10-28,Bromberg,1940-08-23,Dysentery,Cemetery in Bromberg,Clerk,Person
-176,Małgorzata,Baran,F,true,Chochołów,1862-04-09,Bronowice,1951-01-04,,Cemetery in Bronowice,Artist,Person
-177,Mateusz,Baran,M,true,Pszczyna,1862-01-14,Sanok,1933-01-21,War casualty,Cemetery in Sanok,Scribe,Person
-178,Zygmunt,Baran,M,true,Gliwice,1863-11-26,Kazimierz Dolny,1917-08-10,Typhus,Cemetery in Kazimierz Dolny,Clerk,Person
-179,Antoni,Nowak,M,true,Zwierzyniec,1863-06-17,Sandomierz,1930-08-24,Infectious disease,Cemetery in Sandomierz,Tailor,Person
-180,Teresa,Baran,F,true,Stettin,1863-01-21,Reszel,1950-10-18,Infectious disease,Cemetery in Reszel,Potter,Person
-181,Michał,Zając,M,true,Gdynia,1864-10-21,Breslau,1937-11-14,Cholera,Cemetery in Breslau,Fisherman,Person
-182,Henryk,Baran,M,true,Kazimierz Dolny,1864-09-27,Zalipie,1936-02-11,Smallpox,Cemetery in Zalipie,Mason,Person
-183,Henryk,Baran,M,true,Reszel,1864-10-28,Gliwice,1921-01-20,,Cemetery in Gliwice,Mason,Person
-184,Henryk,Nowakowski,M,true,Olsztyn,1864-07-04,Stettin,1935-11-14,Accident,Cemetery in Stettin,Scribe,Person
-185,Józefa,Szymańska,F,true,Biecz,1864-09-23,Chochołów,1921-04-20,Unknown,Cemetery in Chochołów,Merchant,Person
-186,Grzegorz,Nowak,M,true,Danzig,1864-12-22,Sromowce,1867-01-14,Dropsy,Cemetery in Sromowce,,Person
-187,Halina,Baran,F,true,Posen,1865-03-12,Lublin,1932-04-21,Drowning,Cemetery in Lublin,Teacher,Person
-188,Urszula,Baran,F,true,Kraków,1866-04-19,Łódź,1920-07-07,Influenza,Cemetery in Łódź,Scribe,Person
-189,Katarzyna,Nowakowska,F,true,Lanckorona,1866-08-11,Bromberg,1930-04-06,Fire,Cemetery in Bromberg,Baker,Person
-190,Julian,Szymański,M,true,Gdynia,1867-06-08,Sromowce,1939-04-15,Pneumonia,Cemetery in Sromowce,Miner,Person
-191,Halina,Nowak,F,true,Breslau,1867-03-10,Rzeszów,1924-10-06,Plague,Cemetery in Rzeszów,Mason,Person
-192,Jan,Lewandowski,M,true,Sromowce,1867-04-10,Kielce,1915-06-16,Dysentery,Cemetery in Kielce,Weaver,Person
-193,Grażyna,Baran,F,true,Tykocin,1868-12-20,Sanok,1872-02-28,Drowning,Cemetery in Sanok,,Person
-194,Małgorzata,Lewandowska,F,true,Łódź,1868-02-02,Biecz,1916-12-19,Pneumonia,Cemetery in Biecz,Miller,Person
-195,Tadeusz,Nowakowski,M,true,Kielce,1869-02-14,Kraków,1935-11-05,Smallpox,Cemetery in Kraków,Farmer,Person
-196,Michał,Nowak,M,true,Posen,1869-07-23,Sosnowiec,1937-10-11,Dropsy,Cemetery in Sosnowiec,Tanner,Person
-197,Zofia,Lewandowska,F,true,Gliwice,1869-11-04,Pszczyna,1871-06-04,Infectious disease,Cemetery in Pszczyna,,Person
-198,Anna,Nowakowska,F,true,Gliwice,1870-03-11,Częstochowa,1937-01-14,Cancer,Cemetery in Częstochowa,Miller,Person
-199,Katarzyna,Szymańska,F,true,Lipce,1870-06-20,Gdynia,1951-10-09,Plague,Cemetery in Gdynia,Teacher,Person
-200,Oliwia,Mazur,F,true,Sandomierz,1870-05-03,Biecz,1907-05-05,Influenza,Cemetery in Biecz,Artist,Person
-201,Stanisław,Nowak,M,true,Olsztyn,1871-02-11,Sandomierz,1959-10-23,Infectious disease,Cemetery in Sandomierz,Soldier,Person
-202,Marianna,Lewandowska,F,true,Krynica,1871-04-11,Cieszyn,1892-01-13,Pneumonia,Cemetery in Cieszyn,Judge,Person
-203,Henryk,Zieliński,M,true,Częstochowa,1871-11-16,Reszel,1946-05-01,War casualty,Cemetery in Reszel,Teacher,Person
-204,Andrzej,Lewandowski,M,true,Breslau,1872-12-15,Sandomierz,1876-06-03,Unknown,Cemetery in Sandomierz,,Person
-205,Katarzyna,Mazur,F,true,Łódź,1872-09-13,Złoty Potok,1943-12-22,Infectious disease,Cemetery in Złoty Potok,Cooper,Person
-206,Danuta,Szymańska,F,true,Biecz,1873-12-19,Katowice,1944-11-05,Dysentery,Cemetery in Katowice,Farmer,Person
-207,Krzysztof,Mazur,M,true,Lanckorona,1873-04-01,Rzeszów,1875-01-03,Smallpox,Cemetery in Rzeszów,,Person
-208,Łukasz,Zieliński,M,true,Warszawa,1873-12-12,Pszczyna,1928-05-15,Starvation,Cemetery in Pszczyna,Miller,Person
-209,Ignacy,Lewandowski,M,true,Lipce,1874-03-11,Kraków,1937-09-07,War casualty,Cemetery in Kraków,Farmer,Person
-210,Zofia,Zielińska,F,true,Katowice,1875-02-04,Chełmno,1965-08-08,Accident,Cemetery in Chełmno,Soldier,Person
-211,Halina,Król,F,true,Bronowice,1875-08-02,Zwierzyniec,1917-07-14,Pneumonia,Cemetery in Zwierzyniec,Fisherman,Person
-212,Jakub,Szymański,M,true,Posen,1876-08-15,Tykocin,1878-04-28,War casualty,Cemetery in Tykocin,,Person
-213,Czesław,Lewandowski,M,true,Breslau,1877-11-10,Lanckorona,1916-06-23,Consumption,Cemetery in Lanckorona,Tailor,Person
-214,Irena,Wiśniewska,F,true,Bromberg,1878-03-14,Radom,1940-08-06,Influenza,Cemetery in Radom,Carpenter,Person
-215,Jan,Nowak,M,true,Olsztyn,1879-03-13,Sosnowiec,1879-11-24,Typhus,Cemetery in Sosnowiec,,Person
-216,Kamil,Lewandowski,M,true,Częstochowa,1879-07-08,Pszczyna,1943-08-11,Smallpox,Cemetery in Pszczyna,Miner,Person
-217,Kamil,Zieliński,M,true,Krynica,1879-06-18,Cieszyn,1945-12-11,Smallpox,Cemetery in Cieszyn,Soldier,Person
-218,Marcin,Lewandowski,M,true,Gliwice,1879-04-11,Sandomierz,1932-03-16,,Cemetery in Sandomierz,Shoemaker,Person
-219,Aleksandra,Wiśniewska,F,true,Lublin,1880-01-01,Olsztyn,1953-09-02,Fire,Cemetery in Olsztyn,Farmer,Person
-220,Jadwiga,Zielińska,F,true,Krynica,1880-08-02,Wisła,1930-11-01,Accident,Cemetery in Wisła,Judge,Person
-221,Andrzej,Lewandowski,M,true,Pszczyna,1880-06-23,Lublin,1963-10-09,,Cemetery in Lublin,Clerk,Person
-222,Jan,Mazur,M,true,Lublin,1880-05-14,Chełmno,1953-01-26,Stroke,Cemetery in Chełmno,Priest,Person
-223,Marian,Nowak,M,true,Breslau,1880-05-28,Breslau,1883-10-25,Cholera,Cemetery in Breslau,,Person
-224,Jadwiga,Lewandowska,F,true,Sosnowiec,1881-02-24,Cieszyn,1970-10-11,Stroke,Cemetery in Cieszyn,Priest,Person
-225,Zygmunt,Zieliński,M,true,Pszczyna,1881-01-24,Lipce,1957-06-28,Apoplexy,Cemetery in Lipce,Judge,Person
-226,Ewa,Wiśniewska,F,true,Radom,1881-01-12,Częstochowa,1940-06-19,Drowning,Cemetery in Częstochowa,Shoemaker,Person
-227,Mirosław,Zieliński,M,true,Lipce,1882-01-27,Tykocin,1944-09-18,Fever,Cemetery in Tykocin,Priest,Person
-228,Halina,Lewandowska,F,true,Sanok,1882-07-14,Gliwice,1885-01-02,,Cemetery in Gliwice,,Person
-229,Anna,Mazur,F,true,Biecz,1882-12-06,Lanckorona,1940-06-08,Fire,Cemetery in Lanckorona,Priest,Person
-230,Barbara,Nowak,F,true,Chełmno,1882-09-10,Sandomierz,1930-03-15,Unknown,Cemetery in Sandomierz,Artist,Person
-231,Julian,Wiśniewski,M,true,Olsztyn,1883-05-19,Bronowice,1974-03-21,Typhus,Cemetery in Bronowice,Wheelwright,Person
-232,Katarzyna,Zielińska,F,true,Bronowice,1883-02-03,Krynica,1884-10-28,,Cemetery in Krynica,,Person
-233,Jadwiga,Mazur,F,true,Gliwice,1883-07-08,Breslau,1966-04-23,Accident,Cemetery in Breslau,Innkeeper,Person
-234,Krystyna,Nowak,F,true,Olsztyn,1883-04-10,Chochołów,1964-09-12,Stroke,Cemetery in Chochołów,Miller,Person
-235,Zofia,Wiśniewska,F,true,Tykocin,1883-05-21,Stettin,1915-02-19,Infectious disease,Cemetery in Stettin,Tanner,Person
-236,Maciej,Wiśniewski,M,true,Pszczyna,1884-06-22,Biecz,1934-11-18,Infectious disease,Cemetery in Biecz,Mason,Person
-237,Grażyna,Mazur,F,true,Biecz,1884-01-28,Cieszyn,1923-09-12,Infectious disease,Cemetery in Cieszyn,Weaver,Person
-238,Marek,Baran,M,true,Częstochowa,1885-04-24,Rzeszów,1889-04-21,Fever,Cemetery in Rzeszów,,Person
-239,Krystyna,Zając,F,true,Supraśl,1886-11-25,Bronowice,1887-03-03,Cholera,Cemetery in Bronowice,,Person
-240,Helena,Wiśniewska,F,true,Warszawa,1887-08-08,Sromowce,1955-03-10,Infectious disease,Cemetery in Sromowce,Soldier,Person
-241,Julian,Baran,M,true,Tykocin,1887-11-01,Lublin,1950-07-09,Pneumonia,Cemetery in Lublin,Artist,Person
-242,Maciej,Wiśniewski,M,true,Biecz,1887-03-28,Kielce,1887-01-24,Cholera,Cemetery in Kielce,,Person
-243,Aleksandra,Kaczmarek,F,true,Lipce,1888-01-28,Lipce,1938-11-19,Accident,Cemetery in Lipce,Miner,Person
-244,Teresa,Zając,F,true,Radom,1889-02-13,Bronowice,1932-07-16,Plague,Cemetery in Bronowice,Cooper,Person
-245,Marian,Zając,M,true,Danzig,1890-05-13,Krynica,1894-11-28,,Cemetery in Krynica,,Person
-246,Joanna,Baran,F,true,Sandomierz,1890-07-24,Chochołów,1965-02-19,,Cemetery in Chochołów,Lawyer,Person
-247,Krzysztof,Nowakowski,M,true,Sromowce,1890-01-25,Lanckorona,1965-01-19,Fever,Cemetery in Lanckorona,Potter,Person
-248,Danuta,Kaczmarek,F,true,Łódź,1891-06-08,Radom,1895-02-28,Fever,Cemetery in Radom,,Person
-249,Ludwika,Król,F,true,Chełmno,1891-01-07,Bromberg,1940-10-17,Heart failure,Cemetery in Bromberg,Clerk,Person
-250,Władysław,Kaczmarek,M,true,Sromowce,1892-06-04,Chochołów,1955-09-18,War casualty,Cemetery in Chochołów,Scribe,Person
-251,Kazimierz,Baran,M,true,Lipce,1892-01-19,Zwierzyniec,1974-02-25,War casualty,Cemetery in Zwierzyniec,Teacher,Person
-252,Krzysztof,Król,M,true,Sandomierz,1892-08-22,Radom,1948-07-27,Plague,Cemetery in Radom,Soldier,Person
-253,Zygmunt,Nowak,M,true,Breslau,1892-12-02,Złoty Potok,1952-05-27,Starvation,Cemetery in Złoty Potok,Potter,Person
-254,Jakub,Nowak,M,true,Rzeszów,1893-02-16,Kazimierz Dolny,1963-05-13,Fire,Cemetery in Kazimierz Dolny,Miller,Person
-255,Wanda,Nowak,F,true,Cieszyn,1893-07-14,Posen,1955-01-22,War casualty,Cemetery in Posen,Priest,Person
-256,Kazimierz,Baran,M,true,Cieszyn,1894-03-10,Sandomierz,1940-05-20,Infectious disease,Cemetery in Sandomierz,Mason,Person
-257,Jerzy,Król,M,true,Thorn,1894-07-11,Gliwice,1960-06-21,Pneumonia,Cemetery in Gliwice,Baker,Person
-258,Tadeusz,Nowak,M,true,Tykocin,1895-05-10,Sosnowiec,1961-02-07,Stroke,Cemetery in Sosnowiec,Fisherman,Person
-259,Maciej,Nowak,M,true,Krynica,1895-04-18,Kraków,1965-06-06,Stroke,Cemetery in Kraków,Farmer,Person
-260,Ignacy,Szymański,M,true,Lipce,1895-03-18,Danzig,1969-10-26,Cancer,Cemetery in Danzig,Wheelwright,Person
-261,Wanda,Baran,F,true,Sosnowiec,1896-02-19,Supraśl,1915-12-21,,Cemetery in Supraśl,Judge,Person
-262,Mirosław,Nowak,M,true,Rzeszów,1897-11-02,Supraśl,1983-05-07,Murder,Cemetery in Supraśl,Wheelwright,Person
-263,Paweł,Zając,M,true,Posen,1897-08-15,Warszawa,1966-03-01,Dysentery,Cemetery in Warszawa,Judge,Person
-264,Zofia,Nowak,F,true,Krynica,1898-04-10,Zwierzyniec,1973-11-13,Apoplexy,Cemetery in Zwierzyniec,Artist,Person
-265,Monika,Szymańska,F,true,Zwierzyniec,1898-07-18,Breslau,1948-11-05,Stroke,Cemetery in Breslau,Weaver,Person
-266,Franciszek,Lewandowski,M,true,Kazimierz Dolny,1898-02-13,Wisła,1958-09-20,Plague,Cemetery in Wisła,Merchant,Person
-267,Małgorzata,Nowakowska,F,true,Olsztyn,1898-12-22,Lanckorona,1941-11-13,,Cemetery in Lanckorona,Innkeeper,Person
-268,Krzysztof,Zając,M,true,Białystok,1898-01-25,Krynica,1960-11-11,Infectious disease,Cemetery in Krynica,Mason,Person
-269,Irena,Zielińska,F,true,Sosnowiec,1899-03-23,Chełmno,1932-04-11,Smallpox,Cemetery in Chełmno,Doctor,Person
-270,Helena,Nowakowska,F,true,Zwierzyniec,1899-07-09,Radom,1977-11-06,Unknown,Cemetery in Radom,Tailor,Person
-271,Leokadia,Zając,F,true,Breslau,1899-11-06,Białystok,1948-04-18,Dysentery,Cemetery in Białystok,Potter,Person
-272,Czesława,Nowak,F,true,Bronowice,1900-05-16,Zalipie,1953-11-24,Pneumonia,Cemetery in Zalipie,,Person
-273,Natalia,Szymańska,F,true,Sandomierz,1900-02-17,Kraków,1953-08-27,,Cemetery in Kraków,Wheelwright,Person
-274,Leon,Zając,M,true,Thorn,1900-09-28,Zwierzyniec,1900-06-22,Heart failure,Cemetery in Zwierzyniec,,Person
-275,Marianna,Lewandowska,F,true,Pszczyna,1900-09-26,Lipce,1979-05-18,Plague,Cemetery in Lipce,Tanner,Person
-276,Franciszek,Nowak,M,true,Radom,1901-08-11,Kraków,1958-07-28,Starvation,Cemetery in Kraków,Cooper,Person
-277,Czesława,Nowakowska,F,true,Białystok,1901-06-12,Pszczyna,1979-07-11,,Cemetery in Pszczyna,Weaver,Person
-278,Tadeusz,Lewandowski,M,true,Supraśl,1901-01-27,Sosnowiec,1964-12-16,Dropsy,Cemetery in Sosnowiec,Mason,Person
-279,Kazimierz,Lewandowski,M,true,Białystok,1901-09-19,Biecz,1983-04-22,Cholera,Cemetery in Biecz,Blacksmith,Person
-280,Kazimiera,Baran,F,true,Warszawa,1901-03-28,Krynica,1951-09-25,Accident,Cemetery in Krynica,Lawyer,Person
-281,Monika,Szymańska,F,true,Danzig,1902-03-25,Rzeszów,1966-06-19,,Cemetery in Rzeszów,Soldier,Person
-282,Halina,Zając,F,true,Supraśl,1902-12-25,Bronowice,1967-05-26,Unknown,Cemetery in Bronowice,Farmer,Person
-283,Leon,Baran,M,true,Sandomierz,1902-05-22,Thorn,1981-04-19,Typhus,Cemetery in Thorn,Hunter,Person
-284,Marianna,Zielińska,F,true,Złoty Potok,1902-06-19,Złoty Potok,1907-03-02,Fever,Cemetery in Złoty Potok,,Person
-285,Irena,Lewandowska,F,true,Tykocin,1903-04-15,Lanckorona,1974-02-24,Dysentery,Cemetery in Lanckorona,Shoemaker,Person
-286,Teresa,Lewandowska,F,true,Pszczyna,1903-02-03,Bronowice,1965-08-21,,Cemetery in Bronowice,Weaver,Person
-287,Ludwika,Nowak,F,true,Posen,1903-08-22,Łódź,1978-04-25,Cancer,Cemetery in Łódź,Mason,Person
-288,Marcin,Baran,M,true,Radom,1903-05-02,Radom,1903-09-05,Drowning,Cemetery in Radom,,Person
-289,Marian,Zieliński,M,true,Kraków,1903-12-13,Białystok,1978-04-25,Consumption,Cemetery in Białystok,Shoemaker,Person
-290,Wanda,Szymańska,F,true,Sromowce,1904-09-25,Biecz,1904-04-11,Consumption,Cemetery in Biecz,,Person
-291,Jerzy,Lewandowski,M,true,Białystok,1904-05-18,Wisła,1953-06-04,Cancer,Cemetery in Wisła,Weaver,Person
-292,Genowefa,Zielińska,F,true,Danzig,1904-07-27,Łódź,1988-03-09,Fire,Cemetery in Łódź,Wheelwright,Person
-293,Aleksandra,Zielińska,F,true,Częstochowa,1904-03-19,Chełmno,1973-08-20,Stroke,Cemetery in Chełmno,Artist,Person
-294,Łukasz,Baran,M,true,Pszczyna,1905-08-09,Olsztyn,1959-01-19,,Cemetery in Olsztyn,Farmer,Person
-295,Jerzy,Baran,M,true,Pszczyna,1905-07-09,Lipce,1980-08-11,Consumption,Cemetery in Lipce,Teacher,Person
-296,Piotr,Szymański,M,true,Lublin,1906-05-20,Złoty Potok,1976-09-21,Apoplexy,Cemetery in Złoty Potok,,Person
-297,Genowefa,Zielińska,F,true,Chochołów,1906-01-15,Lanckorona,1958-12-07,,Cemetery in Lanckorona,Shoemaker,Person
-298,Julian,Zieliński,M,true,Danzig,1906-04-24,Bronowice,1985-06-03,Infectious disease,Cemetery in Bronowice,Artist,Person
-299,Dariusz,Baran,M,true,Krynica,1906-03-02,Sosnowiec,1976-07-09,Accident,Cemetery in Sosnowiec,Blacksmith,Person
-300,Anna,Lewandowska,F,true,Częstochowa,1907-07-15,Sanok,1907-10-28,,Cemetery in Sanok,,Person
-301,Stefan,Baran,M,true,Kazimierz Dolny,1907-10-02,Bromberg,1944-03-21,Plague,Cemetery in Bromberg,Innkeeper,Person
-302,Adam,Baran,M,true,Zalipie,1908-09-18,Sromowce,1942-07-25,Stroke,Cemetery in Sromowce,Tanner,Person
-303,Tomasz,Zieliński,M,true,Warszawa,1908-11-18,Gdynia,1971-11-12,,Cemetery in Gdynia,Clerk,Person
-304,Natalia,Nowak,F,true,Cieszyn,1908-08-05,Radom,1974-09-28,Murder,Cemetery in Radom,Mason,Person
-305,Filip,Zieliński,M,true,Supraśl,1909-09-16,Sandomierz,1975-03-23,Drowning,Cemetery in Sandomierz,Shepherd,Person
-306,Ewa,Nowak,F,true,Breslau,1909-01-05,Lanckorona,1967-03-03,,Cemetery in Lanckorona,Doctor,Person
-307,Henryk,Lewandowski,M,true,Częstochowa,1909-04-03,Pszczyna,1912-03-27,Smallpox,Cemetery in Pszczyna,,Person
-308,Ludwika,Mazur,F,true,Stettin,1909-09-08,Rzeszów,1967-12-05,Cancer,Cemetery in Rzeszów,Cooper,Person
-309,Julia,Baran,F,true,Kraków,1910-08-26,Breslau,1967-05-05,Consumption,Cemetery in Breslau,Hunter,Person
-310,Józefa,Nowak,F,true,Cieszyn,1910-12-17,Cieszyn,1974-06-24,Consumption,Cemetery in Cieszyn,Farmer,Person
-311,Genowefa,Lewandowska,F,true,Katowice,1910-01-13,Gliwice,1980-06-09,Drowning,Cemetery in Gliwice,Innkeeper,Person
-312,Dariusz,Zieliński,M,true,Złoty Potok,1911-07-01,Radom,1916-05-25,Dropsy,Cemetery in Radom,,Person
-313,Michał,Nowak,M,true,Rzeszów,1911-10-23,Lublin,1990-04-24,Infectious disease,Cemetery in Lublin,Shoemaker,Person
-314,Julia,Mazur,F,true,Bronowice,1911-03-27,Sandomierz,1962-12-19,Dysentery,Cemetery in Sandomierz,Soldier,Person
-315,Maria,Wiśniewska,F,true,Cieszyn,1911-01-05,Sosnowiec,1973-07-04,Murder,Cemetery in Sosnowiec,Blacksmith,Person
-316,Genowefa,Nowakowska,F,true,Stettin,1912-05-02,Katowice,1968-05-15,Apoplexy,Cemetery in Katowice,Shoemaker,Person
-317,Natalia,Lewandowska,F,true,Sromowce,1912-01-25,Kielce,1913-09-11,,Cemetery in Kielce,,Person
-318,Filip,Zieliński,M,true,Sosnowiec,1913-08-09,Sandomierz,1971-05-20,Fire,Cemetery in Sandomierz,Scribe,Person
-319,Zofia,Lewandowska,F,true,Danzig,1913-06-05,Sandomierz,2005-11-23,Drowning,Cemetery in Sandomierz,Tanner,Person
-320,Regina,Baran,F,true,Białystok,1913-10-11,Lipce,1989-12-20,Stroke,Cemetery in Lipce,Lawyer,Person
-321,Ignacy,Zieliński,M,true,Stettin,1914-04-17,Bromberg,1980-02-27,,Cemetery in Bromberg,Shepherd,Person
-322,Paweł,Wiśniewski,M,true,Olsztyn,1914-11-08,Radom,1974-11-07,Fever,Cemetery in Radom,Miner,Person
-323,Ludwika,Nowakowska,F,true,Sromowce,1914-01-09,Warszawa,1994-11-25,Drowning,Cemetery in Warszawa,Weaver,Person
-324,Maja,Baran,F,true,Złoty Potok,1914-08-12,Białystok,1915-10-05,Dysentery,Cemetery in Białystok,,Person
-325,Krzysztof,Zieliński,M,true,Olsztyn,1915-08-20,Łódź,1955-05-13,Pneumonia,Cemetery in Łódź,Scribe,Person
-326,Leokadia,Wiśniewska,F,true,Bronowice,1915-10-09,Thorn,1978-02-23,Cancer,Cemetery in Thorn,Innkeeper,Person
-327,Agnieszka,Wiśniewska,F,true,Białystok,1916-11-22,Sandomierz,1984-05-28,Accident,Cemetery in Sandomierz,Baker,Person
-328,Kazimierz,Baran,M,true,Kielce,1916-02-09,Bromberg,1971-07-16,,Cemetery in Bromberg,Miner,Person
-329,Stefania,Lewandowska,F,true,Reszel,1917-01-05,Olsztyn,1980-10-11,Unknown,Cemetery in Olsztyn,Fisherman,Person
-330,Jan,Zieliński,M,true,Sanok,1917-11-18,Sanok,1998-06-05,Starvation,Cemetery in Sanok,Butcher,Person
-331,Leon,Wiśniewski,M,true,Lublin,1918-09-27,Gdynia,1979-06-12,,Cemetery in Gdynia,Cooper,Person
-332,Julia,Wiśniewska,F,true,Sandomierz,1918-04-24,Pszczyna,1995-04-27,Dropsy,Cemetery in Pszczyna,Potter,Person
-333,Zuzanna,Zielińska,F,true,Bronowice,1919-09-03,Danzig,1993-10-24,Cholera,Cemetery in Danzig,Butcher,Person
-334,Tadeusz,Nowak,M,true,Pszczyna,1919-03-25,Sandomierz,1990-01-10,Stroke,Cemetery in Sandomierz,Carpenter,Person
-335,Aleksandra,Nowak,F,true,Białystok,1919-12-11,Lipce,1992-12-24,,Cemetery in Lipce,Hunter,Person
-336,Maciej,Wiśniewski,M,true,Sromowce,1920-05-04,Sandomierz,1922-11-06,Unknown,Cemetery in Sandomierz,,Person
-337,Adam,Wiśniewski,M,true,Radom,1920-04-03,Wisła,1989-05-22,Consumption,Cemetery in Wisła,Wheelwright,Person
-338,Paweł,Nowak,M,true,Gliwice,1920-04-19,Zalipie,1998-03-26,Accident,Cemetery in Zalipie,Merchant,Person
-339,Stefania,Mazur,F,true,Zalipie,1920-03-02,Częstochowa,1995-02-08,Typhus,Cemetery in Częstochowa,Wheelwright,Person
-340,Marian,Zieliński,M,true,Kielce,1920-03-25,Sromowce,1925-09-05,,Cemetery in Sromowce,,Person
-341,Anna,Wiśniewska,F,true,Pszczyna,1921-07-23,Supraśl,1980-05-16,Pneumonia,Cemetery in Supraśl,Tailor,Person
-342,Maria,Zielińska,F,true,Danzig,1921-05-26,Gdynia,1970-04-10,,Cemetery in Gdynia,Miller,Person
-343,Zofia,Nowak,F,true,Reszel,1921-05-02,Posen,1979-04-09,Dysentery,Cemetery in Posen,Hunter,Person
-344,Tomasz,Nowak,M,true,Tykocin,1921-04-09,Reszel,1990-05-02,Unknown,Cemetery in Reszel,Butcher,Person
-345,Oliwia,Mazur,F,true,Breslau,1921-08-06,Sromowce,1975-08-01,Unknown,Cemetery in Sromowce,Judge,Person
-346,Ignacy,Wiśniewski,M,true,Tykocin,1922-01-19,Lipce,1979-08-05,Accident,Cemetery in Lipce,Innkeeper,Person
-347,Marek,Zieliński,M,true,Zalipie,1922-11-20,Sandomierz,1975-07-06,Infectious disease,Cemetery in Sandomierz,Soldier,Person
-348,Andrzej,Nowak,M,true,Kazimierz Dolny,1922-12-22,Lanckorona,1927-09-26,Cancer,Cemetery in Lanckorona,,Person
-349,Wiktoria,Zielińska,F,true,Bronowice,1922-03-14,Lipce,2006-10-21,Accident,Cemetery in Lipce,Mason,Person
-350,Urszula,Wiśniewska,F,true,Danzig,1923-04-16,Chochołów,2013-02-26,Drowning,Cemetery in Chochołów,,Person
-351,Helena,Zielińska,F,true,Reszel,1923-02-05,Sromowce,1974-08-27,Typhus,Cemetery in Sromowce,Innkeeper,Person
-352,Helena,Nowak,F,true,Breslau,1923-08-09,Częstochowa,1978-02-07,Fire,Cemetery in Częstochowa,Soldier,Person
-353,Julia,Lewandowska,F,true,Sosnowiec,1923-07-23,Warszawa,1953-03-16,Cancer,Cemetery in Warszawa,Mason,Person
-354,Ludwika,Wiśniewska,F,true,Bronowice,1924-10-01,Wisła,1999-09-23,Apoplexy,Cemetery in Wisła,Teacher,Person
-355,Henryk,Zieliński,M,true,Sromowce,1924-04-05,Radom,1974-09-02,Influenza,Cemetery in Radom,Miner,Person
-356,Rozalia,Nowak,F,true,Tykocin,1924-12-18,Częstochowa,1928-11-01,Typhus,Cemetery in Częstochowa,,Person
-357,Grażyna,Wiśniewska,F,true,Łódź,1925-05-23,Lublin,1977-05-20,Smallpox,Cemetery in Lublin,Blacksmith,Person
-358,Mirosław,Wiśniewski,M,true,Kazimierz Dolny,1925-01-11,Kielce,2000-12-24,Cholera,Cemetery in Kielce,Wheelwright,Person
-359,Adam,Zieliński,M,true,Sanok,1925-01-23,Sandomierz,1926-07-11,Dysentery,Cemetery in Sandomierz,,Person
-360,Wiktoria,Wiśniewska,F,true,Katowice,1927-05-15,Thorn,1987-12-02,Dysentery,Cemetery in Thorn,Merchant,Person
-361,Aleksandra,Szymańska,F,true,Thorn,1929-09-13,Sanok,2003-01-18,Cancer,Cemetery in Sanok,Shepherd,Person
-362,Józefa,Szymańska,F,true,Cieszyn,1931-01-12,Biecz,1999-10-23,Stroke,Cemetery in Biecz,Blacksmith,Person
-363,Małgorzata,Król,F,true,Rzeszów,1931-09-27,Bronowice,1931-07-05,Cholera,Cemetery in Bronowice,,Person
-364,Julian,Nowak,M,true,Posen,1932-02-24,Gliwice,2001-01-19,Dysentery,Cemetery in Gliwice,Soldier,Person
-365,Alicja,Nowak,F,true,Tykocin,1932-05-26,Warszawa,1979-08-02,Pneumonia,Cemetery in Warszawa,Shoemaker,Person
-366,Ryszard,Król,M,true,Zalipie,1933-02-27,Thorn,1934-09-03,Influenza,Cemetery in Thorn,,Person
-367,Joanna,Nowak,F,true,Breslau,1933-10-11,Sandomierz,1987-12-26,Starvation,Cemetery in Sandomierz,Wheelwright,Person
-368,Marcin,Nowak,M,true,Gdynia,1934-05-02,Lipce,1938-01-03,Stroke,Cemetery in Lipce,,Person
-369,Ludwika,Nowak,F,true,Zwierzyniec,1934-07-26,Supraśl,1993-04-10,Unknown,Cemetery in Supraśl,Lawyer,Person
-370,Marek,Król,M,true,Pszczyna,1934-11-16,Częstochowa,1993-12-28,,Cemetery in Częstochowa,Priest,Person
-371,Leokadia,Król,F,true,Biecz,1935-12-20,Reszel,1976-09-19,Typhus,Cemetery in Reszel,Blacksmith,Person
-372,Teresa,Zielińska,F,true,Sanok,1935-11-11,Kielce,1936-09-22,Cancer,Cemetery in Kielce,,Person
-373,Teresa,Wiśniewska,F,true,Stettin,1935-10-06,Białystok,1981-01-09,,Cemetery in Białystok,Miner,Person
-374,Mateusz,Król,M,true,Wisła,1936-10-11,Lublin,1993-03-28,Dropsy,Cemetery in Lublin,Farmer,Person
-375,Leokadia,Lewandowska,F,true,Kielce,1936-09-20,Gliwice,1992-10-18,Plague,Cemetery in Gliwice,Butcher,Person
-376,Marian,Mazur,M,false,Thorn,1936-03-17,,,,,Cooper,Person
-377,Agnieszka,Król,F,true,Danzig,1937-12-09,Krynica,1996-07-18,Cholera,Cemetery in Krynica,Weaver,Person
-378,Ignacy,Nowak,M,true,Lipce,1937-10-09,Warszawa,1938-09-06,Accident,Cemetery in Warszawa,,Person
-379,Elżbieta,Król,F,true,Gdynia,1937-05-17,Lanckorona,1939-03-02,Smallpox,Cemetery in Lanckorona,,Person
-380,Józefa,Wiśniewska,F,false,Pszczyna,1937-11-12,,,,,Lawyer,Person
-381,Franciszek,Lewandowski,M,true,Częstochowa,1937-10-03,Pszczyna,2004-02-09,Cancer,Cemetery in Pszczyna,Doctor,Person
-382,Halina,Mazur,F,true,Danzig,1937-04-19,Sosnowiec,2008-09-10,Heart failure,Cemetery in Sosnowiec,Miller,Person
-383,Henryk,Zieliński,M,true,Chochołów,1938-05-03,Breslau,2010-01-11,Pneumonia,Cemetery in Breslau,Lawyer,Person
-384,Piotr,Wiśniewski,M,true,Reszel,1938-05-21,Wisła,2000-09-22,Typhus,Cemetery in Wisła,Butcher,Person
-385,Antoni,Lewandowski,M,true,Złoty Potok,1938-01-20,Bronowice,1995-07-06,Infectious disease,Cemetery in Bronowice,Teacher,Person
-386,Grzegorz,Lewandowski,M,true,Bromberg,1938-05-06,Sromowce,2002-05-20,Fire,Cemetery in Sromowce,Farmer,Person
-387,Szymon,Lewandowski,M,true,Łódź,1938-01-15,Wisła,2006-12-15,War casualty,Cemetery in Wisła,Wheelwright,Person
-388,Aleksandra,Baran,F,true,Pszczyna,1938-12-16,Supraśl,1943-01-26,Drowning,Cemetery in Supraśl,,Person
-389,Krystyna,Nowak,F,true,Sandomierz,1939-10-09,Rzeszów,2007-07-24,Unknown,Cemetery in Rzeszów,Soldier,Person
-390,Antoni,Król,M,true,Częstochowa,1939-05-06,Radom,1971-09-20,Cholera,Cemetery in Radom,Shoemaker,Person
-391,Aleksandra,Lewandowska,F,true,Lanckorona,1939-02-16,Zalipie,1942-12-23,Fire,Cemetery in Zalipie,,Person
-392,Julian,Król,M,true,Radom,1940-11-27,Warszawa,2013-06-24,Consumption,Cemetery in Warszawa,Miner,Person
-393,Wojciech,Lewandowski,M,true,Pszczyna,1940-11-18,Chełmno,2003-09-05,,Cemetery in Chełmno,Soldier,Person
-394,Jan,Mazur,M,true,Bronowice,1940-11-15,Lipce,2008-11-07,Accident,Cemetery in Lipce,Doctor,Person
-395,Bożena,Baran,F,true,Posen,1940-04-02,Thorn,1945-05-28,,Cemetery in Thorn,,Person
-396,Jakub,Nowakowski,M,true,Kielce,1940-01-19,Bronowice,1980-07-18,Smallpox,Cemetery in Bronowice,Fisherman,Person
-397,Marcin,Baran,M,true,Lipce,1940-09-02,Chełmno,1990-06-16,Cholera,Cemetery in Chełmno,Wheelwright,Person
-398,Ludwika,Zielińska,F,true,Częstochowa,1940-12-16,Radom,2015-04-06,Accident,Cemetery in Radom,Butcher,Person
-399,Leon,Zieliński,M,true,Gliwice,1941-12-16,Sosnowiec,2013-02-05,Stroke,Cemetery in Sosnowiec,Weaver,Person
-400,Łukasz,Wiśniewski,M,true,Kraków,1941-06-11,Kielce,1989-01-21,,Cemetery in Kielce,Cooper,Person
-401,Joanna,Lewandowska,F,true,Warszawa,1941-05-19,Częstochowa,1981-11-14,War casualty,Cemetery in Częstochowa,Mason,Person
-402,Stefania,Nowak,F,true,Posen,1941-11-06,Białystok,1942-01-04,Cancer,Cemetery in Białystok,,Person
-403,Regina,Lewandowska,F,true,Chełmno,1941-05-14,Biecz,2014-04-21,,Cemetery in Biecz,Lawyer,Person
-404,Piotr,Nowak,M,true,Lanckorona,1941-11-28,Gdynia,1983-10-02,Stroke,Cemetery in Gdynia,Miner,Person
-405,Urszula,Baran,F,true,Cieszyn,1942-08-21,Wisła,2005-06-17,Stroke,Cemetery in Wisła,Fisherman,Person
-406,Adam,Zieliński,M,false,Częstochowa,1942-01-22,,,,,Miller,Person
-407,Czesław,Lewandowski,M,true,Warszawa,1942-04-18,Reszel,2020-11-24,Stroke,Cemetery in Reszel,Clerk,Person
-408,Joanna,Nowak,F,true,Cieszyn,1942-01-18,Pszczyna,1979-07-03,Smallpox,Cemetery in Pszczyna,Innkeeper,Person
-409,Franciszek,Zieliński,M,false,Reszel,1942-01-05,,,,,,Person
-410,Irena,Król,F,false,Lanckorona,1943-04-15,,,,,,Person
-411,Katarzyna,Zielińska,F,true,Łódź,1943-01-21,Sanok,1946-02-04,Stroke,Cemetery in Sanok,,Person
-412,Oliwia,Baran,F,true,Gdynia,1943-06-02,Katowice,2005-01-13,,Cemetery in Katowice,Teacher,Person
-413,Adam,Nowak,M,true,Sosnowiec,1943-12-09,Kielce,1982-09-09,,Cemetery in Kielce,Shoemaker,Person
-414,Maria,Lewandowska,F,true,Breslau,1943-09-14,Kraków,2010-02-20,Unknown,Cemetery in Kraków,Lawyer,Person
-415,Henryk,Zieliński,M,true,Tykocin,1943-08-12,Radom,2015-02-18,Pneumonia,Cemetery in Radom,Farmer,Person
-416,Dariusz,Baran,M,false,Lublin,1943-09-10,,,,,Cooper,Person
-417,Wanda,Wiśniewska,F,true,Katowice,1943-07-02,Reszel,1996-02-11,Murder,Cemetery in Reszel,Farmer,Person
-418,Natalia,Zielińska,F,true,Posen,1943-04-13,Zalipie,1947-09-17,Cholera,Cemetery in Zalipie,,Person
-419,Jan,Zieliński,M,false,Breslau,1943-03-13,,,,,Innkeeper,Person
-420,Regina,Baran,F,false,Rzeszów,1944-02-04,,,,,Miller,Person
-421,Filip,Nowak,M,true,Kraków,1944-09-26,Biecz,1999-03-08,Starvation,Cemetery in Biecz,Artist,Person
-422,Urszula,Kaczmarek,F,false,Sanok,1944-04-24,,,,,Priest,Person
-423,Paweł,Król,M,true,Chełmno,1945-10-16,Sanok,1947-04-21,Heart failure,Cemetery in Sanok,,Person
-424,Kazimiera,Nowak,F,true,Gdynia,1945-10-09,Pszczyna,1994-07-23,Drowning,Cemetery in Pszczyna,Carpenter,Person
-425,Julian,Zieliński,M,true,Danzig,1945-05-03,Bronowice,2007-11-07,Consumption,Cemetery in Bronowice,Artist,Person
-426,Irena,Zielińska,F,true,Zwierzyniec,1945-02-09,Bronowice,1974-01-06,Dysentery,Cemetery in Bronowice,,Person
-427,Adam,Zieliński,M,true,Cieszyn,1945-05-08,Thorn,1996-01-04,,Cemetery in Thorn,Artist,Person
-428,Regina,Szymańska,F,true,Krynica,1945-02-08,Lanckorona,1997-09-19,Influenza,Cemetery in Lanckorona,Potter,Person
-429,Kamil,Zieliński,M,false,Cieszyn,1945-12-20,,,,,Teacher,Person
-430,Ewa,Król,F,true,Bronowice,1946-11-19,Chochołów,2006-01-03,Consumption,Cemetery in Chochołów,Blacksmith,Person
-431,Julia,Baran,F,true,Sosnowiec,1946-04-05,Częstochowa,2012-07-06,Consumption,Cemetery in Częstochowa,Cooper,Person
-432,Ewa,Nowak,F,true,Bromberg,1946-08-12,Posen,1992-09-05,,Cemetery in Posen,Cooper,Person
-433,Agnieszka,Wiśniewska,F,true,Sosnowiec,1946-05-11,Stettin,1987-05-18,Cancer,Cemetery in Stettin,Farmer,Person
-434,Helena,Nowak,F,true,Sanok,1946-12-15,Chochołów,1990-10-18,Fire,Cemetery in Chochołów,Wheelwright,Person
-435,Marian,Baran,M,true,Thorn,1947-12-03,Lublin,1949-08-14,Infectious disease,Cemetery in Lublin,,Person
-436,Marcin,Zieliński,M,true,Lublin,1947-02-26,Breslau,2009-07-09,,Cemetery in Breslau,Judge,Person
-437,Zygmunt,Szymański,M,false,Łódź,1947-06-05,,,,,Carpenter,Person
-438,Krystyna,Zielińska,F,true,Lanckorona,1947-08-23,Warszawa,1995-07-24,Infectious disease,Cemetery in Warszawa,Priest,Person
-439,Aleksandra,Nowak,F,false,Supraśl,1948-10-10,,,,,,Person
-440,Ryszard,Szymański,M,true,Tykocin,1948-03-03,Sanok,2006-07-11,Consumption,Cemetery in Sanok,Innkeeper,Person
-441,Genowefa,Nowak,F,true,Łódź,1948-07-06,Kazimierz Dolny,2004-09-04,,Cemetery in Kazimierz Dolny,Teacher,Person
-442,Jerzy,Zieliński,M,true,Kielce,1948-10-22,Bronowice,2004-04-24,Cholera,Cemetery in Bronowice,Fisherman,Person
-443,Monika,Lewandowska,F,true,Zwierzyniec,1948-07-17,Bromberg,2007-06-15,Cancer,Cemetery in Bromberg,Innkeeper,Person
-444,Julia,Baran,F,true,Radom,1948-12-09,Warszawa,2005-10-22,Stroke,Cemetery in Warszawa,Hunter,Person
-445,Natalia,Baran,F,true,Krynica,1949-05-28,Gliwice,2018-11-09,,Cemetery in Gliwice,Potter,Person
-446,Henryk,Zieliński,M,true,Białystok,1950-12-23,Pszczyna,2017-12-18,Dysentery,Cemetery in Pszczyna,Farmer,Person
-447,Zuzanna,Zielińska,F,true,Lipce,1950-05-18,Sosnowiec,2018-06-02,Heart failure,Cemetery in Sosnowiec,Scribe,Person
-448,Grażyna,Lewandowska,F,false,Biecz,1950-08-24,,,,,Farmer,Person
-449,Kazimiera,Nowak,F,false,Radom,1950-10-22,,,,,,Person
-450,Władysław,Baran,M,false,Zalipie,1950-06-28,,,,,Scribe,Person
-451,Marcin,Zieliński,M,true,Sandomierz,1950-10-05,Zwierzyniec,2004-10-06,Apoplexy,Cemetery in Zwierzyniec,Weaver,Person
-452,Filip,Zieliński,M,true,Sanok,1951-06-24,Zalipie,1951-07-23,Infectious disease,Cemetery in Zalipie,,Person
-453,Katarzyna,Baran,F,true,Gliwice,1951-09-25,Lipce,2012-12-10,Infectious disease,Cemetery in Lipce,Judge,Person
-454,Henryk,Zieliński,M,true,Gliwice,1951-03-03,Sandomierz,2004-09-02,,Cemetery in Sandomierz,Miner,Person
-455,Zofia,Zielińska,F,true,Kielce,1952-05-10,Zwierzyniec,2003-06-20,Stroke,Cemetery in Zwierzyniec,Weaver,Person
-456,Marianna,Zielińska,F,false,Thorn,1952-12-13,,,,,Blacksmith,Person
-457,Władysław,Lewandowski,M,true,Danzig,1952-09-21,Sandomierz,2019-01-12,,Cemetery in Sandomierz,Judge,Person
-458,Katarzyna,Baran,F,true,Sosnowiec,1952-11-10,Zalipie,1956-05-11,Influenza,Cemetery in Zalipie,,Person
-459,Leokadia,Nowak,F,true,Biecz,1952-05-22,Kraków,1987-04-21,Pneumonia,Cemetery in Kraków,Shoemaker,Person
-460,Elżbieta,Zielińska,F,true,Biecz,1952-08-07,Bromberg,2012-05-04,Smallpox,Cemetery in Bromberg,Weaver,Person
-461,Anna,Baran,F,false,Wisła,1953-04-05,,,,,,Person
-462,Paweł,Zieliński,M,true,Kraków,1953-10-13,Kraków,1999-07-17,Heart failure,Cemetery in Kraków,Cooper,Person
-463,Stefania,Zając,F,true,Cieszyn,1953-04-13,Bronowice,2006-03-13,Dysentery,Cemetery in Bronowice,Butcher,Person
-464,Jakub,Zieliński,M,true,Tykocin,1954-10-12,Reszel,1956-11-04,Drowning,Cemetery in Reszel,,Person
-465,Michał,Zieliński,M,true,Kielce,1954-07-17,Bromberg,2004-11-04,Starvation,Cemetery in Bromberg,Shepherd,Person
-466,Monika,Zielińska,F,false,Bromberg,1954-07-28,,,,,Blacksmith,Person
-467,Monika,Baran,F,false,Kazimierz Dolny,1955-07-07,,,,,,Person
-468,Czesława,Zając,F,true,Sosnowiec,1955-11-10,Katowice,2002-12-16,Unknown,Cemetery in Katowice,Shepherd,Person
-469,Zuzanna,Zając,F,false,Wisła,1955-05-04,,,,,Teacher,Person
-470,Marcin,Zieliński,M,true,Złoty Potok,1956-09-02,Zwierzyniec,2014-01-28,Fire,Cemetery in Zwierzyniec,Butcher,Person
-471,Michał,Baran,M,false,Rzeszów,1956-09-13,,,,,Butcher,Person
-472,Kazimierz,Zieliński,M,true,Reszel,1956-07-27,Warszawa,2011-05-18,Cholera,Cemetery in Warszawa,Blacksmith,Person
-473,Leon,Zieliński,M,true,Pszczyna,1956-08-07,Pszczyna,2006-08-09,Dropsy,Cemetery in Pszczyna,Wheelwright,Person
-474,Jerzy,Lewandowski,M,false,Bronowice,1956-08-07,,,,,Weaver,Person
-475,Filip,Zając,M,false,Lanckorona,1957-10-21,,,,,Fisherman,Person
-476,Genowefa,Zając,F,false,Sanok,1957-12-18,,,,,Scribe,Person
-477,Jadwiga,Zielińska,F,false,Biecz,1957-12-01,,,,,Shoemaker,Person
-478,Małgorzata,Zielińska,F,true,Sromowce,1958-07-19,Sromowce,2006-06-19,Fire,Cemetery in Sromowce,Carpenter,Person
-479,Wanda,Zielińska,F,true,Bronowice,1958-11-14,Thorn,2008-03-04,,Cemetery in Thorn,Miller,Person
-480,Krystyna,Lewandowska,F,false,Olsztyn,1958-05-01,,,,,Weaver,Person
-481,Mateusz,Nowak,M,true,Supraśl,1958-01-11,Warszawa,1958-01-16,,Cemetery in Warszawa,,Person
-482,Aleksandra,Zielińska,F,false,Kazimierz Dolny,1959-10-14,,,,,Miner,Person
-483,Katarzyna,Zielińska,F,true,Gdynia,1959-05-16,Krynica,1961-06-06,Starvation,Cemetery in Krynica,,Person
-484,Stanisław,Nowak,M,true,Sanok,1959-09-23,Bromberg,2007-11-28,Pneumonia,Cemetery in Bromberg,Lawyer,Person
-485,Agnieszka,Baran,F,true,Radom,1959-06-25,Zalipie,2020-01-08,Pneumonia,Cemetery in Zalipie,Shoemaker,Person
-486,Maria,Lewandowska,F,true,Bronowice,1959-07-08,Breslau,1964-04-05,Apoplexy,Cemetery in Breslau,,Person
-487,Łukasz,Zieliński,M,false,Reszel,1960-10-02,,,,,Mason,Person
-488,Krzysztof,Zieliński,M,false,Reszel,1960-10-04,,,,,Mason,Person
-489,Bożena,Nowak,F,true,Kraków,1960-01-19,Radom,1998-11-20,Infectious disease,Cemetery in Radom,Fisherman,Person
-490,Joanna,Baran,F,false,Pszczyna,1960-04-05,,,,,Fisherman,Person
-491,Piotr,Król,M,true,Thorn,1960-06-23,Bromberg,2011-04-21,Dropsy,Cemetery in Bromberg,Merchant,Person
-492,Tomasz,Zieliński,M,false,Lipce,1961-06-28,,,,,Shoemaker,Person
-493,Marianna,Król,F,true,Rzeszów,1961-04-06,Bronowice,2020-03-14,Smallpox,Cemetery in Bronowice,Clerk,Person
-494,Jadwiga,Lewandowska,F,false,Bronowice,1961-07-13,,,,,Scribe,Person
-495,Julia,Zielińska,F,false,Breslau,1962-12-06,,,,,Hunter,Person
-496,Grzegorz,Zieliński,M,true,Sandomierz,1962-01-07,Sandomierz,2019-06-13,Dropsy,Cemetery in Sandomierz,Butcher,Person
-497,Alicja,Król,F,true,Reszel,1962-09-13,Stettin,1963-08-27,Dropsy,Cemetery in Stettin,,Person
-498,Czesław,Lewandowski,M,true,Gdynia,1962-12-12,Częstochowa,2016-03-14,Starvation,Cemetery in Częstochowa,Mason,Person
-499,Czesław,Lewandowski,M,false,Lipce,1963-01-03,,,,,,Person
-500,Józefa,Lewandowska,F,false,Rzeszów,1963-03-23,,,,,Potter,Person
-501,Stefania,Zielińska,F,true,Cieszyn,1963-06-03,Sromowce,2016-05-05,,Cemetery in Sromowce,Priest,Person
-502,Katarzyna,Zielińska,F,false,Warszawa,1964-04-21,,,,,Potter,Person
-503,Ludwika,Wiśniewska,F,true,Częstochowa,1964-06-06,Pszczyna,1995-10-27,Cholera,Cemetery in Pszczyna,Innkeeper,Person
-504,Paweł,Zieliński,M,true,Łódź,1964-06-13,Bronowice,2020-03-06,,Cemetery in Bronowice,Tanner,Person
-505,Marian,Lewandowski,M,false,Częstochowa,1964-02-21,,,,,Shoemaker,Person
-506,Franciszek,Lewandowski,M,true,Lanckorona,1965-08-20,Bromberg,1996-10-08,Plague,Cemetery in Bromberg,Blacksmith,Person
-507,Marek,Lewandowski,M,false,Supraśl,1965-04-24,,,,,Cooper,Person
-508,Regina,Nowakowska,F,true,Gliwice,1965-07-07,Supraśl,1970-05-26,,Cemetery in Supraśl,,Person
-509,Zygmunt,Lewandowski,M,false,Posen,1965-01-27,,,,,Butcher,Person
-510,Regina,Zielińska,F,false,Sandomierz,1966-03-10,,,,,Weaver,Person
-511,Ludwika,Wiśniewska,F,true,Lipce,1966-04-12,Cieszyn,2018-10-28,Cancer,Cemetery in Cieszyn,Clerk,Person
-512,Ignacy,Zieliński,M,true,Sosnowiec,1966-05-19,Tykocin,2015-09-18,Apoplexy,Cemetery in Tykocin,Fisherman,Person
-513,Tomasz,Lewandowski,M,false,Biecz,1966-01-12,,,,,Judge,Person
-514,Ignacy,Nowak,M,false,Bromberg,1966-10-11,,,,,Fisherman,Person
-515,Leon,Zieliński,M,false,Kielce,1966-04-26,,,,,Hunter,Person
-516,Zuzanna,Lewandowska,F,false,Łódź,1966-05-06,,,,,Miner,Person
-517,Maria,Zielińska,F,false,Krynica,1967-04-09,,,,,Fisherman,Person
-518,Szymon,Lewandowski,M,true,Kazimierz Dolny,1967-11-19,Sromowce,2010-09-26,,Cemetery in Sromowce,Tailor,Person
-519,Ignacy,Wiśniewski,M,false,Radom,1967-02-24,,,,,Butcher,Person
-520,Małgorzata,Lewandowska,F,false,Olsztyn,1967-11-05,,,,,Clerk,Person
-521,Dariusz,Nowakowski,M,false,Lanckorona,1967-03-14,,,,,Miller,Person
-522,Kazimierz,Król,M,true,Rzeszów,1967-07-26,Posen,2001-11-20,Dropsy,Cemetery in Posen,Wheelwright,Person
-523,Filip,Lewandowski,M,true,Sosnowiec,1968-03-04,Posen,1971-10-01,War casualty,Cemetery in Posen,,Person
-524,Grażyna,Lewandowska,F,false,Kazimierz Dolny,1968-08-14,,,,,Butcher,Person
-525,Genowefa,Zielińska,F,false,Zwierzyniec,1969-05-22,,,,,Butcher,Person
-526,Ewa,Nowakowska,F,false,Radom,1969-08-16,,,,,Teacher,Person
-527,Władysław,Król,M,false,Pszczyna,1969-07-21,,,,,Fisherman,Person
-528,Krzysztof,Zieliński,M,false,Lipce,1969-04-21,,,,,Merchant,Person
-529,Józefa,Lewandowska,F,false,Krynica,1969-06-28,,,,,Farmer,Person
-530,Bożena,Wiśniewska,F,false,Reszel,1969-12-24,,,,,Mason,Person
-531,Małgorzata,Lewandowska,F,true,Rzeszów,1969-12-10,Wisła,1990-09-13,War casualty,Cemetery in Wisła,Mason,Person
-532,Leon,Zieliński,M,false,Lanckorona,1969-06-27,,,,,Shepherd,Person
-533,Agnieszka,Lewandowska,F,true,Kielce,1970-03-12,Pszczyna,1971-06-02,Unknown,Cemetery in Pszczyna,,Person
-534,Natalia,Wiśniewska,F,false,Posen,1970-04-25,,,,,Farmer,Person
-535,Joanna,Nowakowska,F,false,Pszczyna,1970-06-10,,,,,Artist,Person
-536,Rozalia,Lewandowska,F,false,Biecz,1970-05-28,,,,,Butcher,Person
-537,Józef,Wiśniewski,M,false,Częstochowa,1970-08-03,,,,,Baker,Person
-538,Franciszek,Zieliński,M,true,Zwierzyniec,1970-02-14,Zwierzyniec,1970-07-18,Drowning,Cemetery in Zwierzyniec,,Person
-539,Czesław,Król,M,false,Bromberg,1971-02-24,,,,,,Person
-540,Kazimierz,Lewandowski,M,true,Chochołów,1971-01-24,Breslau,1971-07-14,Starvation,Cemetery in Breslau,,Person
-541,Dariusz,Lewandowski,M,false,Kraków,1971-06-27,,,,,Hunter,Person
-542,Wiktoria,Zielińska,F,false,Sandomierz,1971-10-01,,,,,Lawyer,Person
-543,Maja,Nowak,F,true,Tykocin,1971-02-24,Radom,2016-09-26,Starvation,Cemetery in Radom,Doctor,Person
-544,Józefa,Król,F,false,Kraków,1971-11-12,,,,,Tanner,Person
-545,Józef,Zieliński,M,true,Reszel,1971-01-17,Gdynia,2009-11-17,,Cemetery in Gdynia,Soldier,Person
-546,Łukasz,Nowak,M,true,Warszawa,1971-08-27,Breslau,2013-07-27,Murder,Cemetery in Breslau,Miner,Person
-547,Mirosław,Nowak,M,false,Katowice,1971-07-20,,,,,Priest,Person
-548,Alicja,Wiśniewska,F,false,Rzeszów,1971-07-25,,,,,,Person
-549,Wanda,Zielińska,F,true,Biecz,1971-04-26,Wisła,1975-04-17,Fire,Cemetery in Wisła,,Person
-550,Marcin,Zieliński,M,true,Sromowce,1972-11-03,Cieszyn,2018-03-06,Pneumonia,Cemetery in Cieszyn,Carpenter,Person
-551,Katarzyna,Lewandowska,F,false,Sanok,1972-01-12,,,,,Cooper,Person
-552,Bożena,Wiśniewska,F,false,Gdynia,1973-02-10,,,,,Soldier,Person
-553,Leon,Nowak,M,false,Zwierzyniec,1973-05-16,,,,,Potter,Person
-554,Józef,Zieliński,M,true,Sosnowiec,1973-05-05,Zwierzyniec,2019-04-26,Stroke,Cemetery in Zwierzyniec,Clerk,Person
-555,Szymon,Zieliński,M,false,Tykocin,1973-10-25,,,,,Merchant,Person
-556,Marianna,Nowak,F,false,Wisła,1973-01-27,,,,,Scribe,Person
-557,Julian,Wiśniewski,M,false,Białystok,1973-10-24,,,,,Clerk,Person
-558,Mateusz,Zieliński,M,true,Danzig,1973-10-10,Lipce,1978-07-02,Drowning,Cemetery in Lipce,,Person
-559,Jerzy,Król,M,false,Bromberg,1974-11-20,,,,,Judge,Person
-560,Grzegorz,Zieliński,M,false,Zwierzyniec,1974-01-13,,,,,Tanner,Person
-561,Elżbieta,Nowak,F,false,Kielce,1974-07-14,,,,,Carpenter,Person
-562,Wiktoria,Król,F,false,Łódź,1974-12-16,,,,,Shepherd,Person
-563,Bartosz,Zieliński,M,false,Kazimierz Dolny,1974-04-27,,,,,,Person
-564,Agnieszka,Nowak,F,false,Supraśl,1974-09-20,,,,,Shepherd,Person
-565,Ewa,Mazur,F,false,Breslau,1974-09-17,,,,,Tailor,Person
-566,Wiktoria,Zielińska,F,true,Krynica,1975-02-20,Wisła,1977-03-20,Drowning,Cemetery in Wisła,,Person
-567,Jerzy,Nowak,M,false,Wisła,1975-02-26,,,,,Clerk,Person
-568,Agnieszka,Zielińska,F,false,Zwierzyniec,1975-08-28,,,,,Miller,Person
-569,Leokadia,Nowak,F,false,Radom,1975-06-11,,,,,Shepherd,Person
-570,Stanisław,Wiśniewski,M,false,Rzeszów,1975-11-25,,,,,Tailor,Person
-571,Antoni,Nowak,M,true,Wisła,1975-07-16,Cieszyn,2016-10-08,Heart failure,Cemetery in Cieszyn,Cooper,Person
-572,Aleksandra,Zielińska,F,false,Radom,1975-07-20,,,,,Mason,Person
-573,Anna,Zielińska,F,true,Lublin,1975-05-07,Wisła,1975-01-14,Consumption,Cemetery in Wisła,,Person
-574,Marian,Zieliński,M,false,Biecz,1975-09-11,,,,,Wheelwright,Person
-575,Jan,Król,M,false,Cieszyn,1976-08-22,,,,,Cooper,Person
-576,Aleksandra,Król,F,false,Olsztyn,1976-01-17,,,,,Innkeeper,Person
-577,Elżbieta,Zielińska,F,false,Kraków,1976-10-22,,,,,Blacksmith,Person
-578,Krzysztof,Nowak,M,true,Gliwice,1976-08-02,Cieszyn,1980-01-01,Influenza,Cemetery in Cieszyn,,Person
-579,Genowefa,Nowak,F,false,Gliwice,1976-12-02,,,,,Merchant,Person
-580,Adam,Wiśniewski,M,false,Kazimierz Dolny,1976-09-17,,,,,Merchant,Person
-581,Jerzy,Mazur,M,false,Sanok,1976-12-07,,,,,Shepherd,Person
-582,Natalia,Zielińska,F,false,Krynica,1976-12-04,,,,,,Person
-583,Józefa,Szymańska,F,true,Sromowce,1976-02-26,Katowice,1977-07-01,Accident,Cemetery in Katowice,,Person
-584,Kazimierz,Zieliński,M,true,Krynica,1976-06-19,Reszel,1978-01-28,Consumption,Cemetery in Reszel,,Person
-585,Antoni,Zieliński,M,false,Kazimierz Dolny,1977-07-13,,,,,Hunter,Person
-586,Krystyna,Nowak,F,false,Sanok,1977-08-14,,,,,Blacksmith,Person
-587,Helena,Nowak,F,false,Stettin,1977-08-06,,,,,Carpenter,Person
-588,Maja,Zielińska,F,false,Chochołów,1977-08-12,,,,,Teacher,Person
-589,Małgorzata,Baran,F,false,Sromowce,1977-10-27,,,,,Baker,Person
-590,Bartosz,Nowak,M,false,Zalipie,1978-02-20,,,,,Miller,Person
-591,Marianna,Król,F,false,Sandomierz,1978-06-15,,,,,Miller,Person
-592,Zofia,Nowak,F,false,Krynica,1978-07-01,,,,,Teacher,Person
-593,Paweł,Zieliński,M,true,Częstochowa,1978-01-14,Kraków,1979-05-19,Fever,Cemetery in Kraków,,Person
-594,Marek,Szymański,M,false,Bronowice,1978-04-06,,,,,Baker,Person
-595,Leokadia,Zielińska,F,true,Bronowice,1978-04-19,Zwierzyniec,2009-03-12,Cholera,Cemetery in Zwierzyniec,Farmer,Person
-596,Marek,Wiśniewski,M,false,Zwierzyniec,1978-09-13,,,,,Tanner,Person
-597,Stanisław,Lewandowski,M,false,Krynica,1978-11-05,,,,,Potter,Person
-598,Bartosz,Król,M,false,Katowice,1979-07-19,,,,,Miller,Person
-599,Stefan,Mazur,M,false,Lanckorona,1979-01-05,,,,,Baker,Person
-600,Łukasz,Zieliński,M,false,Krynica,1979-06-13,,,,,Innkeeper,Person
-601,Irena,Baran,F,false,Krynica,1979-05-19,,,,,Soldier,Person
-602,Czesław,Zieliński,M,false,Olsztyn,1979-11-22,,,,,Artist,Person
-603,Bożena,Szymańska,F,true,Kraków,1979-12-11,Krynica,1984-10-05,Fire,Cemetery in Krynica,,Person
-604,Ludwika,Król,F,false,Sosnowiec,1980-04-27,,,,,,Person
-605,Ignacy,Nowak,M,true,Wisła,1980-08-27,Sandomierz,1980-03-08,War casualty,Cemetery in Sandomierz,,Person
-606,Piotr,Szymański,M,false,Sromowce,1980-01-04,,,,,Innkeeper,Person
-607,Krzysztof,Zieliński,M,false,Cieszyn,1980-03-03,,,,,Tailor,Person
-608,Tadeusz,Wiśniewski,M,false,Tykocin,1980-12-19,,,,,,Person
-609,Agnieszka,Nowak,F,true,Bronowice,1980-01-18,Pszczyna,1985-06-03,Apoplexy,Cemetery in Pszczyna,,Person
-610,Antoni,Zieliński,M,false,Lipce,1980-10-10,,,,,Shepherd,Person
-611,Tadeusz,Wiśniewski,M,false,Zwierzyniec,1980-07-03,,,,,Butcher,Person
-612,Ludwika,Zielińska,F,false,Chochołów,1981-12-02,,,,,Carpenter,Person
-613,Andrzej,Baran,M,true,Białystok,1981-01-17,Chochołów,1984-02-14,Infectious disease,Cemetery in Chochołów,,Person
-614,Rozalia,Zielińska,F,true,Pszczyna,1981-10-19,Krynica,1981-07-25,Accident,Cemetery in Krynica,,Person
-615,Bożena,Lewandowska,F,false,Chochołów,1981-02-16,,,,,Innkeeper,Person
-616,Wanda,Zielińska,F,true,Pszczyna,1981-09-16,Kazimierz Dolny,1982-06-07,,Cemetery in Kazimierz Dolny,,Person
-617,Barbara,Szymańska,F,false,Thorn,1981-07-01,,,,,Merchant,Person
-618,Stefan,Zieliński,M,false,Posen,1981-05-08,,,,,Soldier,Person
-619,Jakub,Mazur,M,true,Złoty Potok,1982-05-05,Białystok,1987-08-18,,Cemetery in Białystok,,Person
-620,Agnieszka,Szymańska,F,false,Katowice,1982-07-11,,,,,Cooper,Person
-621,Elżbieta,Baran,F,false,Danzig,1982-09-22,,,,,Weaver,Person
-622,Danuta,Wiśniewska,F,false,Wisła,1982-08-14,,,,,Shoemaker,Person
-623,Stanisław,Zieliński,M,false,Wisła,1982-02-03,,,,,Clerk,Person
-624,Monika,Wiśniewska,F,true,Cieszyn,1982-07-14,Reszel,1983-05-22,Dysentery,Cemetery in Reszel,,Person
-625,Antoni,Zieliński,M,false,Olsztyn,1982-02-14,,,,,Potter,Person
-626,Michał,Zieliński,M,true,Gdynia,1982-01-17,Biecz,1986-10-16,Fire,Cemetery in Biecz,,Person
-627,Monika,Zielińska,F,true,Katowice,1982-10-25,Thorn,1984-03-01,Infectious disease,Cemetery in Thorn,,Person
-628,Stefan,Zieliński,M,false,Chochołów,1982-03-27,,,,,Scribe,Person
-629,Maciej,Zieliński,M,false,Breslau,1983-09-15,,,,,Miller,Person
-630,Adam,Lewandowski,M,true,Sanok,1983-01-17,Sanok,1985-10-09,Smallpox,Cemetery in Sanok,,Person
-631,Czesława,Nowak,F,false,Bromberg,1983-03-08,,,,,,Person
-632,Stefania,Zielińska,F,false,Zalipie,1983-11-08,,,,,Hunter,Person
-633,Paweł,Nowak,M,false,Zwierzyniec,1983-04-19,,,,,,Person
-634,Julia,Zielińska,F,false,Zwierzyniec,1984-04-22,,,,,Doctor,Person
-635,Monika,Baran,F,false,Lublin,1984-05-20,,,,,Hunter,Person
-636,Stefan,Wiśniewski,M,false,Kraków,1984-04-15,,,,,,Person
-637,Danuta,Zielińska,F,false,Wisła,1984-01-03,,,,,Carpenter,Person
-638,Krzysztof,Nowak,M,false,Supraśl,1984-09-21,,,,,Potter,Person
-639,Antoni,Zieliński,M,false,Kazimierz Dolny,1984-07-24,,,,,Tanner,Person
-640,Ewa,Zielińska,F,false,Lanckorona,1984-12-04,,,,,Doctor,Person
-641,Ludwika,Król,F,true,Supraśl,1984-04-06,Bronowice,1987-12-21,Cancer,Cemetery in Bronowice,,Person
-642,Tadeusz,Zieliński,M,false,Złoty Potok,1984-12-02,,,,,,Person
-643,Jakub,Zieliński,M,false,Biecz,1984-10-01,,,,,Baker,Person
-644,Genowefa,Zielińska,F,false,Kazimierz Dolny,1985-02-06,,,,,,Person
-645,Ludwika,Lewandowska,F,true,Gliwice,1985-02-25,Bronowice,1987-04-26,Unknown,Cemetery in Bronowice,,Person
-646,Jan,Zieliński,M,false,Łódź,1985-01-24,,,,,Shepherd,Person
-647,Franciszek,Zieliński,M,false,Cieszyn,1985-01-21,,,,,,Person
-648,Ewa,Nowak,F,false,Kazimierz Dolny,1985-07-13,,,,,Merchant,Person
-649,Marian,Król,M,true,Danzig,1985-10-16,Stettin,2008-03-20,Heart failure,Cemetery in Stettin,Shepherd,Person
-650,Józefa,Zielińska,F,false,Warszawa,1985-09-03,,,,,Shoemaker,Person
-651,Genowefa,Zielińska,F,false,Sromowce,1986-06-13,,,,,Merchant,Person
-652,Jadwiga,Zielińska,F,false,Chochołów,1986-06-07,,,,,Fisherman,Person
-653,Maria,Zielińska,F,true,Lublin,1986-04-13,Reszel,1987-03-16,,Cemetery in Reszel,,Person
-654,Mirosław,Król,M,false,Zwierzyniec,1986-06-13,,,,,Artist,Person
-655,Stefan,Zieliński,M,false,Breslau,1987-09-25,,,,,Carpenter,Person
-656,Ewa,Baran,F,false,Chochołów,1987-12-24,,,,,Baker,Person
-657,Leon,Zieliński,M,true,Supraśl,1987-02-01,Supraśl,1988-08-14,War casualty,Cemetery in Supraśl,,Person
-658,Piotr,Zieliński,M,false,Sromowce,1987-11-11,,,,,Wheelwright,Person
-659,Kazimiera,Zielińska,F,false,Warszawa,1987-07-21,,,,,Artist,Person
-660,Marcin,Zieliński,M,true,Reszel,1987-08-15,Krynica,1987-10-03,Stroke,Cemetery in Krynica,,Person
-661,Szymon,Baran,M,false,Gliwice,1987-12-10,,,,,,Person
-662,Adam,Lewandowski,M,false,Tykocin,1987-08-07,,,,,Scribe,Person
-663,Bartosz,Zieliński,M,false,Breslau,1987-06-16,,,,,Shepherd,Person
-664,Małgorzata,Zielińska,F,false,Danzig,1988-10-03,,,,,Scribe,Person
-665,Dariusz,Zieliński,M,false,Sosnowiec,1988-09-23,,,,,Innkeeper,Person
-666,Mateusz,Lewandowski,M,false,Zalipie,1988-07-16,,,,,Wheelwright,Person
-667,Piotr,Król,M,false,Sanok,1988-04-25,,,,,Innkeeper,Person
-668,Agnieszka,Zielińska,F,false,Tykocin,1989-04-03,,,,,Hunter,Person
-669,Zygmunt,Zieliński,M,false,Breslau,1989-03-09,,,,,,Person
-670,Grażyna,Baran,F,true,Radom,1989-11-20,Chełmno,1993-12-15,Pneumonia,Cemetery in Chełmno,,Person
-671,Grzegorz,Zieliński,M,false,Supraśl,1989-04-08,,,,,,Person
-672,Marianna,Baran,F,false,Supraśl,1989-04-28,,,,,Tailor,Person
-673,Kazimierz,Lewandowski,M,false,Tykocin,1989-12-28,,,,,Shoemaker,Person
-674,Oliwia,Lewandowska,F,false,Zalipie,1989-10-06,,,,,Scribe,Person
-675,Dariusz,Zieliński,M,false,Kazimierz Dolny,1989-02-12,,,,,Potter,Person
-676,Monika,Zielińska,F,false,Katowice,1989-10-27,,,,,Innkeeper,Person
-677,Ignacy,Zieliński,M,false,Olsztyn,1990-01-14,,,,,Innkeeper,Person
-678,Mateusz,Zieliński,M,false,Lublin,1990-03-14,,,,,Butcher,Person
-679,Ryszard,Zieliński,M,false,Chełmno,1990-09-03,,,,,,Person
-680,Tomasz,Nowakowski,M,false,Bromberg,1990-02-25,,,,,Weaver,Person
-681,Halina,Zielińska,F,false,Gdynia,1990-12-08,,,,,Cooper,Person
-682,Joanna,Zielińska,F,false,Radom,1990-01-17,,,,,,Person
-683,Ignacy,Nowak,M,true,Radom,1990-10-12,Częstochowa,1990-02-27,War casualty,Cemetery in Częstochowa,,Person
-684,Teresa,Lewandowska,F,true,Sanok,1990-01-19,Reszel,1995-08-13,Cholera,Cemetery in Reszel,,Person
-685,Kazimierz,Król,M,false,Kielce,1991-01-25,,,,,,Person
-686,Halina,Baran,F,false,Lublin,1991-05-05,,,,,Hunter,Person
-687,Irena,Zielińska,F,false,Bronowice,1991-07-28,,,,,Hunter,Person
-688,Grażyna,Zielińska,F,false,Posen,1991-06-17,,,,,Lawyer,Person
-689,Irena,Szymańska,F,false,Sanok,1991-07-10,,,,,Judge,Person
-690,Grażyna,Zielińska,F,false,Chełmno,1992-06-02,,,,,Baker,Person
-691,Maja,Zielińska,F,false,Olsztyn,1992-02-26,,,,,Artist,Person
-692,Leokadia,Baran,F,false,Warszawa,1992-07-19,,,,,Innkeeper,Person
-693,Julia,Lewandowska,F,false,Katowice,1992-04-05,,,,,Tailor,Person
-694,Władysław,Nowakowski,M,false,Łódź,1992-10-10,,,,,Baker,Person
-695,Bartosz,Zieliński,M,false,Kazimierz Dolny,1992-09-12,,,,,,Person
-696,Helena,Zielińska,F,false,Rzeszów,1992-03-09,,,,,Lawyer,Person
-697,Zygmunt,Szymański,M,false,Cieszyn,1992-04-06,,,,,Tailor,Person
-698,Kazimiera,Lewandowska,F,false,Lublin,1992-08-16,,,,,,Person
-699,Łukasz,Zieliński,M,false,Reszel,1992-01-22,,,,,,Person
-700,Danuta,Lewandowska,F,false,Rzeszów,1993-06-13,,,,,Hunter,Person
-701,Leokadia,Lewandowska,F,false,Lipce,1993-06-25,,,,,,Person
-702,Irena,Zielińska,F,false,Stettin,1993-01-12,,,,,Clerk,Person
-703,Irena,Zając,F,false,Supraśl,1993-12-18,,,,,Judge,Person
-704,Stefania,Zielińska,F,false,Sanok,1993-11-17,,,,,,Person
-705,Julian,Lewandowski,M,false,Chełmno,1994-11-18,,,,,Priest,Person
-706,Antoni,Nowakowski,M,false,Bronowice,1994-01-21,,,,,,Person
-707,Wanda,Zielińska,F,false,Łódź,1994-10-21,,,,,Miller,Person
-708,Paweł,Zieliński,M,true,Łódź,1994-05-23,Breslau,1995-11-26,Starvation,Cemetery in Breslau,,Person
-709,Mateusz,Zieliński,M,false,Kazimierz Dolny,1994-09-02,,,,,Scribe,Person
-710,Ewa,Zając,F,true,Chełmno,1994-09-17,Warszawa,1994-09-26,Fire,Cemetery in Warszawa,,Person
-711,Wiesław,Zieliński,M,false,Bromberg,1994-08-27,,,,,,Person
-712,Czesław,Zieliński,M,false,Łódź,1994-02-24,,,,,,Person
-713,Filip,Zieliński,M,false,Bromberg,1994-02-16,,,,,,Person
-714,Krystyna,Zielińska,F,false,Kazimierz Dolny,1994-07-19,,,,,Hunter,Person
-715,Marek,Zieliński,M,false,Gliwice,1995-02-15,,,,,Soldier,Person
-716,Barbara,Zielińska,F,false,Chochołów,1995-09-12,,,,,Miller,Person
-717,Marek,Zieliński,M,false,Olsztyn,1995-05-03,,,,,,Person
-718,Julian,Zieliński,M,false,Cieszyn,1995-01-16,,,,,Tanner,Person
-719,Alicja,Lewandowska,F,false,Gdynia,1996-10-15,,,,,,Person
-720,Alicja,Nowakowska,F,false,Posen,1996-07-06,,,,,Priest,Person
-721,Jerzy,Zieliński,M,false,Zalipie,1996-07-23,,,,,,Person
-722,Szymon,Lewandowski,M,true,Zwierzyniec,1996-06-05,Bromberg,1999-10-15,Fire,Cemetery in Bromberg,,Person
-723,Franciszek,Zieliński,M,false,Thorn,1996-09-01,,,,,Tailor,Person
-724,Katarzyna,Zając,F,false,Gdynia,1996-10-10,,,,,,Person
-725,Ignacy,Zieliński,M,false,Katowice,1996-04-26,,,,,,Person
-726,Franciszek,Zieliński,M,false,Thorn,1996-04-02,,,,,,Person
-727,Ignacy,Wiśniewski,M,false,Sromowce,1996-04-26,,,,,,Person
-728,Regina,Król,F,false,Biecz,1996-12-08,,,,,Cooper,Person
-729,Leokadia,Zielińska,F,false,Radom,1996-01-23,,,,,,Person
-730,Andrzej,Lewandowski,M,false,Białystok,1996-11-24,,,,,,Person
-731,Kazimierz,Lewandowski,M,false,Posen,1997-03-16,,,,,,Person
-732,Leokadia,Zielińska,F,false,Kielce,1997-02-09,,,,,,Person
-733,Kamil,Zieliński,M,false,Supraśl,1997-12-17,,,,,Scribe,Person
-734,Bartosz,Zieliński,M,false,Chełmno,1997-01-14,,,,,,Person
-735,Marcin,Wiśniewski,M,false,Warszawa,1997-04-10,,,,,,Person
-736,Filip,Mazur,M,true,Częstochowa,1997-10-06,Lublin,1998-01-05,Dropsy,Cemetery in Lublin,,Person
-737,Maciej,Nowak,M,false,Chochołów,1997-10-12,,,,,,Person
-738,Zygmunt,Zieliński,M,true,Złoty Potok,1997-10-18,Danzig,2002-06-08,Murder,Cemetery in Danzig,,Person
-739,Grzegorz,Zieliński,M,false,Biecz,1997-01-11,,,,,,Person
-740,Szymon,Lewandowski,M,false,Thorn,1997-05-02,,,,,Innkeeper,Person
-741,Stefan,Król,M,false,Bronowice,1997-04-21,,,,,,Person
-742,Barbara,Zielińska,F,false,Stettin,1998-07-22,,,,,,Person
-743,Wiesław,Lewandowski,M,false,Kazimierz Dolny,1998-02-05,,,,,,Person
-744,Oliwia,Zając,F,false,Lublin,1998-02-11,,,,,,Person
-745,Julia,Zielińska,F,false,Olsztyn,1998-02-07,,,,,Mason,Person
-746,Joanna,Zielińska,F,false,Kraków,1998-08-26,,,,,,Person
-747,Urszula,Zielińska,F,false,Tykocin,1998-09-18,,,,,,Person
-748,Regina,Wiśniewska,F,true,Posen,1998-03-27,Breslau,1999-12-07,,Cemetery in Breslau,,Person
-749,Rozalia,Król,F,false,Krynica,1998-10-21,,,,,Wheelwright,Person
-750,Wiesław,Zieliński,M,false,Białystok,1998-02-14,,,,,Hunter,Person
-751,Tomasz,Zieliński,M,true,Gdynia,1998-08-05,Posen,2003-02-11,Influenza,Cemetery in Posen,,Person
-752,Tomasz,Lewandowski,M,false,Pszczyna,1998-09-27,,,,,Scribe,Person
-753,Ewa,Zielińska,F,false,Thorn,1998-02-09,,,,,,Person
-754,Jadwiga,Lewandowska,F,false,Bronowice,1999-12-03,,,,,,Person
-755,Elżbieta,Lewandowska,F,false,Radom,1999-12-19,,,,,Artist,Person
-756,Teresa,Zielińska,F,false,Bromberg,1999-06-23,,,,,,Person
-757,Zygmunt,Zieliński,M,false,Biecz,1999-07-02,,,,,,Person
-758,Wiktoria,Lewandowska,F,false,Breslau,1999-07-21,,,,,,Person
-759,Grzegorz,Król,M,true,Chełmno,1999-08-18,Bromberg,2004-08-19,Cholera,Cemetery in Bromberg,,Person
-760,Katarzyna,Lewandowska,F,false,Olsztyn,1999-04-22,,,,,,Person
-761,Wanda,Wiśniewska,F,false,Pszczyna,1999-09-08,,,,,,Person
-762,Wiktoria,Król,F,false,Sandomierz,1999-10-17,,,,,,Person
-763,Bożena,Mazur,F,false,Lanckorona,1999-12-02,,,,,,Person
-764,Alicja,Lewandowska,F,true,Pszczyna,2000-07-27,Pszczyna,2001-03-22,Apoplexy,Cemetery in Pszczyna,,Person
-765,Tomasz,Zieliński,M,false,Supraśl,2000-02-28,,,,,,Person
-766,Katarzyna,Król,F,false,Lublin,2000-10-10,,,,,,Person
-767,Anna,Zielińska,F,true,Zalipie,2000-06-22,Lublin,2000-11-11,Cholera,Cemetery in Lublin,,Person
-768,Maja,Zielińska,F,false,Kazimierz Dolny,2000-03-17,,,,,,Person
-769,Dariusz,Wiśniewski,M,false,Posen,2000-10-17,,,,,,Person
-770,Marek,Król,M,true,Lublin,2000-03-22,Łódź,2003-11-01,Consumption,Cemetery in Łódź,,Person
-771,Piotr,Zieliński,M,true,Reszel,2000-08-26,Łódź,2005-08-27,,Cemetery in Łódź,,Person
-772,Krzysztof,Zieliński,M,false,Sromowce,2000-09-16,,,,,,Person
-773,Regina,Mazur,F,false,Złoty Potok,2000-12-08,,,,,,Person
-774,Halina,Nowak,F,false,Danzig,2000-05-07,,,,,,Person
-775,Piotr,Nowak,M,false,Sandomierz,2000-03-02,,,,,,Person
-776,Ryszard,Lewandowski,M,true,Chochołów,2000-09-26,Posen,2003-06-09,Unknown,Cemetery in Posen,,Person
-777,Irena,Zielińska,F,true,Zwierzyniec,2001-10-23,Lublin,2001-03-28,Fever,Cemetery in Lublin,,Person
-778,Halina,Zielińska,F,false,Pszczyna,2001-04-27,,,,,,Person
-779,Julian,Lewandowski,M,true,Złoty Potok,2001-10-16,Sanok,2004-12-21,Pneumonia,Cemetery in Sanok,,Person
-780,Monika,Wiśniewska,F,true,Krynica,2001-03-16,Lipce,2006-07-17,,Cemetery in Lipce,,Person
-781,Marian,Zieliński,M,false,Tykocin,2001-06-24,,,,,,Person
-782,Władysław,Mazur,M,false,Olsztyn,2001-01-11,,,,,,Person
-783,Julian,Zieliński,M,true,Lublin,2001-04-12,Kraków,2002-12-20,Consumption,Cemetery in Kraków,,Person
-784,Kamil,Zieliński,M,true,Kraków,2001-05-08,Białystok,2004-09-16,Cholera,Cemetery in Białystok,,Person
-785,Zygmunt,Wiśniewski,M,false,Rzeszów,2001-06-01,,,,,,Person
-786,Julia,Lewandowska,F,false,Zwierzyniec,2001-02-08,,,,,,Person
-787,Leon,Lewandowski,M,false,Biecz,2002-05-25,,,,,,Person
-788,Natalia,Zielińska,F,false,Kielce,2002-02-22,,,,,,Person
-789,Mirosław,Zieliński,M,false,Bronowice,2002-05-08,,,,,,Person
-790,Franciszek,Zieliński,M,true,Stettin,2002-12-06,Biecz,2006-11-25,Cancer,Cemetery in Biecz,,Person
-791,Helena,Lewandowska,F,false,Bronowice,2002-01-20,,,,,,Person
-792,Zuzanna,Zielińska,F,false,Rzeszów,2002-09-15,,,,,Scribe,Person
-793,Zuzanna,Wiśniewska,F,false,Sosnowiec,2002-04-25,,,,,,Person
-794,Marianna,Zielińska,F,false,Gliwice,2002-05-11,,,,,,Person
-795,Franciszek,Zieliński,M,false,Tykocin,2003-03-03,,,,,,Person
-796,Leokadia,Zielińska,F,false,Stettin,2003-02-25,,,,,,Person
-797,Agnieszka,Zielińska,F,false,Kraków,2003-08-19,,,,,,Person
-798,Aleksandra,Nowak,F,false,Sandomierz,2003-04-06,,,,,,Person
-799,Czesław,Zieliński,M,false,Białystok,2003-03-26,,,,,,Person
-800,Joanna,Mazur,F,false,Breslau,2003-03-10,,,,,,Person
-801,Monika,Zielińska,F,false,Białystok,2003-01-28,,,,,,Person
-802,Zofia,Wiśniewska,F,true,Zwierzyniec,2003-02-18,Rzeszów,2003-02-02,,Cemetery in Rzeszów,,Person
-803,Antoni,Wiśniewski,M,false,Warszawa,2003-10-09,,,,,,Person
-804,Zofia,Zielińska,F,false,Breslau,2003-05-08,,,,,,Person
-805,Wanda,Zielińska,F,false,Gliwice,2004-03-06,,,,,,Person
-806,Czesław,Nowak,M,false,Łódź,2004-02-28,,,,,,Person
-807,Piotr,Lewandowski,M,false,Reszel,2004-02-06,,,,,,Person
-808,Franciszek,Zieliński,M,false,Biecz,2004-01-17,,,,,,Person
-809,Grażyna,Wiśniewska,F,true,Sromowce,2004-08-02,Radom,2006-11-27,,Cemetery in Radom,,Person
-810,Tomasz,Szymański,M,false,Sromowce,2004-05-21,,,,,,Person
-811,Franciszek,Król,M,false,Chochołów,2004-11-12,,,,,,Person
-812,Natalia,Szymańska,F,false,Zwierzyniec,2004-04-03,,,,,,Person
-813,Szymon,Zieliński,M,false,Gdynia,2005-10-21,,,,,,Person
-814,Władysław,Zieliński,M,true,Sromowce,2005-08-26,Kielce,2005-03-03,Smallpox,Cemetery in Kielce,,Person
-815,Maja,Zielińska,F,false,Bromberg,2005-04-21,,,,,,Person
-816,Agnieszka,Mazur,F,true,Stettin,2005-03-10,Kazimierz Dolny,2006-01-26,Infectious disease,Cemetery in Kazimierz Dolny,,Person
-817,Marek,Wiśniewski,M,true,Thorn,2005-09-28,Gdynia,2010-10-11,Drowning,Cemetery in Gdynia,,Person
-818,Czesława,Wiśniewska,F,false,Posen,2005-10-06,,,,,,Person
-819,Grażyna,Szymańska,F,true,Pszczyna,2005-09-15,Posen,2010-07-09,Cholera,Cemetery in Posen,,Person
-820,Stefan,Zieliński,M,false,Kraków,2005-02-11,,,,,,Person
-821,Zofia,Król,F,false,Biecz,2005-04-10,,,,,,Person
-822,Tadeusz,Szymański,M,false,Rzeszów,2005-02-04,,,,,,Person
-823,Helena,Nowak,F,false,Breslau,2005-04-14,,,,,,Person
-824,Paweł,Wiśniewski,M,false,Breslau,2005-03-07,,,,,,Person
-825,Adam,Król,M,false,Tykocin,2005-11-19,,,,,,Person
-826,Wojciech,Zieliński,M,true,Tykocin,2006-10-12,Sosnowiec,2009-04-01,Apoplexy,Cemetery in Sosnowiec,,Person
-827,Agnieszka,Zielińska,F,false,Olsztyn,2006-06-03,,,,,,Person
-828,Elżbieta,Zielińska,F,false,Krynica,2006-07-08,,,,,,Person
-829,Genowefa,Zielińska,F,false,Radom,2006-04-01,,,,,,Person
-830,Julian,Szymański,M,true,Warszawa,2006-07-09,Danzig,2010-11-23,Plague,Cemetery in Danzig,,Person
-831,Leokadia,Nowak,F,false,Warszawa,2006-12-21,,,,,,Person
-832,Marianna,Baran,F,false,Kazimierz Dolny,2006-10-12,,,,,,Person
-833,Danuta,Zielińska,F,false,Katowice,2007-04-02,,,,,,Person
-834,Stanisław,Zieliński,M,false,Wisła,2007-08-24,,,,,,Person
-835,Tomasz,Lewandowski,M,false,Tykocin,2007-05-27,,,,,,Person
-836,Bożena,Zielińska,F,false,Wisła,2007-07-14,,,,,,Person
-837,Marianna,Wiśniewska,F,false,Lanckorona,2007-12-06,,,,,,Person
-838,Małgorzata,Wiśniewska,F,false,Krynica,2007-02-26,,,,,,Person
-839,Irena,Szymańska,F,false,Gdynia,2007-02-15,,,,,,Person
-840,Tadeusz,Wiśniewski,M,false,Posen,2007-04-13,,,,,,Person
-841,Alicja,Nowak,F,false,Złoty Potok,2007-10-22,,,,,,Person
-842,Julian,Król,M,false,Lanckorona,2007-08-11,,,,,,Person
-843,Bożena,Zielińska,F,false,Rzeszów,2007-06-10,,,,,,Person
-844,Tadeusz,Lewandowski,M,false,Wisła,2007-03-26,,,,,,Person
-845,Agnieszka,Zielińska,F,false,Rzeszów,2008-03-24,,,,,,Person
-846,Zuzanna,Zielińska,F,false,Krynica,2008-09-28,,,,,,Person
-847,Wiesław,Mazur,M,false,Sandomierz,2008-04-24,,,,,,Person
-848,Grzegorz,Wiśniewski,M,true,Pszczyna,2008-07-25,Białystok,2008-04-26,Typhus,Cemetery in Białystok,,Person
-849,Łukasz,Wiśniewski,M,false,Kielce,2008-06-22,,,,,,Person
-850,Tadeusz,Zieliński,M,false,Pszczyna,2008-01-05,,,,,,Person
-851,Kamil,Król,M,false,Wisła,2008-10-27,,,,,,Person
-852,Zygmunt,Nowak,M,true,Sandomierz,2008-10-23,Danzig,2009-06-11,Plague,Cemetery in Danzig,,Person
-853,Andrzej,Nowak,M,false,Zwierzyniec,2008-10-14,,,,,,Person
-854,Władysław,Zieliński,M,false,Chełmno,2008-01-19,,,,,,Person
-855,Paweł,Wiśniewski,M,false,Krynica,2008-10-24,,,,,,Person
-856,Zuzanna,Baran,F,false,Cieszyn,2008-10-20,,,,,,Person
-857,Halina,Zielińska,F,true,Łódź,2008-07-04,Kielce,2010-12-16,Typhus,Cemetery in Kielce,,Person
-858,Czesław,Zieliński,M,false,Sromowce,2008-11-18,,,,,,Person
-859,Antoni,Lewandowski,M,false,Breslau,2008-06-10,,,,,,Person
-860,Danuta,Zielińska,F,false,Sosnowiec,2009-02-10,,,,,,Person
-861,Kazimiera,Zielińska,F,false,Katowice,2009-07-20,,,,,,Person
-862,Teresa,Wiśniewska,F,false,Gliwice,2009-12-13,,,,,,Person
-863,Franciszek,Szymański,M,true,Sosnowiec,2009-07-08,Krynica,2012-02-08,Murder,Cemetery in Krynica,,Person
-864,Stefania,Nowak,F,true,Sromowce,2009-02-11,Posen,2009-09-14,Plague,Cemetery in Posen,,Person
-865,Jakub,Król,M,false,Stettin,2009-01-12,,,,,,Person
-866,Wiktoria,Zielińska,F,false,Częstochowa,2009-01-01,,,,,,Person
-867,Zuzanna,Zielińska,F,false,Kielce,2009-03-19,,,,,,Person
-868,Mirosław,Zieliński,M,false,Gdynia,2009-04-24,,,,,,Person
-869,Ewa,Król,F,false,Olsztyn,2009-12-19,,,,,,Person
-870,Jadwiga,Zielińska,F,true,Sanok,2009-06-12,Częstochowa,2011-08-28,Pneumonia,Cemetery in Częstochowa,,Person
-871,Halina,Wiśniewska,F,false,Katowice,2009-07-20,,,,,,Person
-872,Maciej,Zieliński,M,false,Rzeszów,2010-07-15,,,,,,Person
-873,Krzysztof,Mazur,M,true,Wisła,2010-07-01,Lipce,2013-02-08,Plague,Cemetery in Lipce,,Person
-874,Andrzej,Wiśniewski,M,false,Tykocin,2010-03-18,,,,,,Person
-875,Maja,Król,F,false,Kraków,2010-10-07,,,,,,Person
-876,Halina,Nowak,F,true,Chochołów,2010-10-20,Breslau,2012-10-08,War casualty,Cemetery in Breslau,,Person
-877,Leon,Wiśniewski,M,false,Kraków,2010-07-16,,,,,,Person
-878,Jadwiga,Baran,F,false,Sromowce,2010-07-05,,,,,,Person
-879,Julia,Lewandowska,F,false,Thorn,2010-01-05,,,,,,Person
-880,Maja,Zielińska,F,false,Olsztyn,2010-12-09,,,,,,Person
-881,Maja,Lewandowska,F,false,Kazimierz Dolny,2010-06-17,,,,,,Person
-882,Zygmunt,Zieliński,M,false,Cieszyn,2010-06-22,,,,,,Person
-883,Urszula,Król,F,false,Stettin,2010-05-28,,,,,,Person
-884,Bartosz,Wiśniewski,M,false,Breslau,2010-09-13,,,,,,Person
-885,Maria,Baran,F,false,Stettin,2010-09-26,,,,,,Person
-886,Henryk,Zieliński,M,false,Gliwice,2010-12-23,,,,,,Person
-887,Stefan,Król,M,false,Sandomierz,2011-12-23,,,,,,Person
-888,Henryk,Nowak,M,false,Posen,2011-07-04,,,,,,Person
-889,Jan,Król,M,false,Kazimierz Dolny,2011-07-02,,,,,,Person
-890,Czesława,Zielińska,F,true,Wisła,2011-08-01,Łódź,2012-11-18,Cholera,Cemetery in Łódź,,Person
-891,Krystyna,Lewandowska,F,false,Bromberg,2011-05-13,,,,,,Person
-892,Urszula,Zielińska,F,false,Kielce,2011-05-12,,,,,,Person
-893,Filip,Wiśniewski,M,false,Chochołów,2011-03-16,,,,,,Person
-894,Julian,Wiśniewski,M,false,Lipce,2011-02-20,,,,,,Person
-895,Oliwia,Baran,F,true,Sromowce,2011-03-17,Częstochowa,2016-11-02,Consumption,Cemetery in Częstochowa,,Person
-896,Józefa,Zielińska,F,false,Reszel,2011-03-03,,,,,,Person
-897,Grzegorz,Zieliński,M,false,Lublin,2011-03-08,,,,,,Person
-898,Czesława,Zielińska,F,false,Gliwice,2011-01-18,,,,,,Person
-899,Katarzyna,Zielińska,F,false,Złoty Potok,2012-07-22,,,,,,Person
-900,Wojciech,Mazur,M,false,Bromberg,2012-01-17,,,,,,Person
-901,Szymon,Wiśniewski,M,false,Kazimierz Dolny,2012-02-19,,,,,,Person
-902,Józef,Wiśniewski,M,false,Breslau,2012-12-06,,,,,,Person
-903,Alicja,Zielińska,F,true,Łódź,2012-12-06,Supraśl,2012-03-03,Heart failure,Cemetery in Supraśl,,Person
-904,Helena,Lewandowska,F,false,Łódź,2012-02-21,,,,,,Person
-905,Jan,Zieliński,M,false,Rzeszów,2012-02-21,,,,,,Person
-906,Oliwia,Wiśniewska,F,false,Sosnowiec,2012-06-10,,,,,,Person
-907,Danuta,Wiśniewska,F,false,Radom,2012-06-06,,,,,,Person
-908,Ewa,Mazur,F,false,Złoty Potok,2012-12-17,,,,,,Person
-909,Marianna,Zielińska,F,false,Cieszyn,2012-02-15,,,,,,Person
-910,Jerzy,Zieliński,M,false,Chełmno,2012-01-12,,,,,,Person
-911,Aleksandra,Zielińska,F,false,Pszczyna,2012-06-04,,,,,,Person
-912,Paweł,Zieliński,M,false,Zwierzyniec,2012-04-09,,,,,,Person
-913,Czesława,Mazur,F,false,Zwierzyniec,2013-05-06,,,,,,Person
-914,Dariusz,Król,M,false,Posen,2013-06-19,,,,,,Person
-915,Wiesław,Lewandowski,M,true,Lublin,2013-02-02,Złoty Potok,2017-04-20,Murder,Cemetery in Złoty Potok,,Person
-916,Jadwiga,Zielińska,F,true,Sandomierz,2013-01-02,Chochołów,2018-05-08,Starvation,Cemetery in Chochołów,,Person
-917,Zygmunt,Lewandowski,M,false,Posen,2013-10-12,,,,,,Person
-918,Stanisław,Wiśniewski,M,true,Breslau,2013-11-19,Kraków,2018-05-05,,Cemetery in Kraków,,Person
-919,Julian,Wiśniewski,M,true,Chełmno,2013-04-24,Łódź,2016-06-17,Fever,Cemetery in Łódź,,Person
-920,Filip,Zieliński,M,false,Sandomierz,2013-03-03,,,,,,Person
-921,Urszula,Zielińska,F,false,Danzig,2013-03-15,,,,,,Person
-922,Oliwia,Zielińska,F,false,Wisła,2013-08-27,,,,,,Person
-923,Krzysztof,Nowak,M,false,Danzig,2013-06-12,,,,,,Person
-924,Paweł,Zieliński,M,false,Biecz,2014-04-20,,,,,,Person
-925,Andrzej,Wiśniewski,M,true,Kielce,2014-02-15,Częstochowa,2014-03-16,,Cemetery in Częstochowa,,Person
-926,Józef,Zieliński,M,false,Thorn,2014-10-23,,,,,,Person
-927,Leon,Zieliński,M,false,Białystok,2014-04-26,,,,,,Person
-928,Bożena,Wiśniewska,F,false,Warszawa,2014-11-11,,,,,,Person
-929,Urszula,Mazur,F,false,Lanckorona,2014-09-03,,,,,,Person
-930,Genowefa,Zielińska,F,false,Wisła,2014-02-06,,,,,,Person
-931,Krzysztof,Zieliński,M,false,Danzig,2014-02-23,,,,,,Person
-932,Aleksandra,Zielińska,F,false,Sromowce,2014-11-11,,,,,,Person
-933,Stanisław,Zieliński,M,false,Biecz,2014-08-28,,,,,,Person
-934,Tadeusz,Lewandowski,M,false,Sosnowiec,2014-01-03,,,,,,Person
-935,Stefania,Zielińska,F,false,Wisła,2015-11-11,,,,,,Person
-936,Małgorzata,Wiśniewska,F,false,Wisła,2015-08-07,,,,,,Person
-937,Zygmunt,Lewandowski,M,false,Thorn,2015-09-17,,,,,,Person
-938,Katarzyna,Zielińska,F,false,Posen,2015-06-22,,,,,,Person
-939,Łukasz,Zieliński,M,false,Białystok,2015-06-22,,,,,,Person
-940,Alicja,Zielińska,F,true,Lublin,2015-09-05,Bronowice,2017-07-06,Plague,Cemetery in Bronowice,,Person
-941,Marianna,Lewandowska,F,true,Katowice,2015-12-01,Bronowice,2020-03-09,War casualty,Cemetery in Bronowice,,Person
-942,Marcin,Zieliński,M,true,Bronowice,2016-02-05,Chochołów,2020-09-17,Accident,Cemetery in Chochołów,,Person
-943,Mateusz,Wiśniewski,M,false,Sosnowiec,2016-10-24,,,,,,Person
-944,Małgorzata,Wiśniewska,F,false,Krynica,2016-02-10,,,,,,Person
-945,Maja,Mazur,F,false,Stettin,2016-09-18,,,,,,Person
-946,Marcin,Zieliński,M,false,Katowice,2016-02-08,,,,,,Person
-947,Grażyna,Zielińska,F,false,Kazimierz Dolny,2016-12-09,,,,,,Person
-948,Małgorzata,Zielińska,F,false,Kielce,2016-12-28,,,,,,Person
-949,Maciej,Lewandowski,M,false,Rzeszów,2016-12-19,,,,,,Person
-950,Tomasz,Król,M,false,Lanckorona,2016-12-02,,,,,,Person
-951,Jan,Baran,M,false,Złoty Potok,2016-05-22,,,,,,Person
-952,Franciszek,Mazur,M,false,Krynica,2017-02-26,,,,,,Person
-953,Zuzanna,Zielińska,F,false,Zalipie,2017-12-04,,,,,,Person
-954,Danuta,Zielińska,F,false,Sosnowiec,2017-10-19,,,,,,Person
-955,Aleksandra,Król,F,true,Sanok,2017-06-01,Bronowice,2017-12-26,Influenza,Cemetery in Bronowice,,Person
-956,Mateusz,Król,M,false,Cieszyn,2017-07-27,,,,,,Person
-957,Mateusz,Lewandowski,M,false,Danzig,2017-10-22,,,,,,Person
-958,Stefan,Zieliński,M,false,Danzig,2017-07-07,,,,,,Person
-959,Marcin,Zieliński,M,true,Biecz,2017-12-06,Stettin,2018-05-28,Smallpox,Cemetery in Stettin,,Person
-960,Aleksandra,Baran,F,true,Bronowice,2017-09-06,Reszel,2019-01-16,Drowning,Cemetery in Reszel,,Person
-961,Krzysztof,Zieliński,M,false,Gdynia,2017-02-28,,,,,,Person
-962,Krzysztof,Zieliński,M,false,Zwierzyniec,2017-01-14,,,,,,Person
-963,Adam,Zieliński,M,false,Danzig,2017-05-03,,,,,,Person
-964,Jadwiga,Zielińska,F,false,Złoty Potok,2018-02-09,,,,,,Person
-965,Rozalia,Lewandowska,F,false,Sosnowiec,2018-03-22,,,,,,Person
-966,Łukasz,Lewandowski,M,false,Katowice,2018-09-07,,,,,,Person
-967,Elżbieta,Zielińska,F,false,Supraśl,2018-12-17,,,,,,Person
-968,Władysław,Zieliński,M,false,Złoty Potok,2018-04-06,,,,,,Person
-969,Danuta,Baran,F,false,Thorn,2018-12-22,,,,,,Person
-970,Michał,Zieliński,M,false,Lanckorona,2018-07-20,,,,,,Person
-971,Dariusz,Szymański,M,true,Tykocin,2018-12-27,Wisła,2020-06-01,Consumption,Cemetery in Wisła,,Person
-972,Jadwiga,Zielińska,F,false,Białystok,2018-10-20,,,,,,Person
-973,Michał,Zieliński,M,false,Kraków,2018-01-15,,,,,,Person
-974,Rozalia,Zielińska,F,false,Reszel,2018-04-05,,,,,,Person
-975,Rozalia,Zielińska,F,false,Zalipie,2018-08-18,,,,,,Person
-976,Marian,Lewandowski,M,false,Radom,2018-10-19,,,,,,Person
-977,Michał,Mazur,M,false,Breslau,2019-12-26,,,,,,Person
-978,Leokadia,Zielińska,F,false,Pszczyna,2019-11-08,,,,,,Person
-979,Antoni,Zieliński,M,false,Zwierzyniec,2019-05-17,,,,,,Person
-980,Ignacy,Król,M,false,Chełmno,2019-10-22,,,,,,Person
-981,Czesław,Zieliński,M,false,Breslau,2019-12-03,,,,,,Person
-982,Krystyna,Zielińska,F,false,Tykocin,2019-03-25,,,,,,Person
-983,Monika,Szymańska,F,false,Chełmno,2019-05-14,,,,,,Person
-984,Stefan,Lewandowski,M,false,Danzig,2019-11-18,,,,,,Person
-985,Antoni,Lewandowski,M,false,Białystok,2019-08-19,,,,,,Person
-986,Bożena,Nowakowska,F,true,Częstochowa,2019-01-13,Katowice,2019-11-07,Murder,Cemetery in Katowice,,Person
-987,Maciej,Nowak,M,false,Kraków,2019-04-02,,,,,,Person
-988,Agnieszka,Król,F,false,Gliwice,2020-04-16,,,,,,Person
-989,Wiktoria,Lewandowska,F,false,Biecz,2020-03-24,,,,,,Person
-990,Tomasz,Zieliński,M,false,Katowice,2020-08-06,,,,,,Person
-991,Józefa,Zielińska,F,false,Kazimierz Dolny,2020-09-12,,,,,,Person
-992,Rozalia,Zielińska,F,false,Rzeszów,2020-08-11,,,,,,Person
-993,Katarzyna,Lewandowska,F,false,Posen,2020-12-18,,,,,,Person
-994,Ignacy,Zieliński,M,false,Bromberg,2020-05-24,,,,,,Person
-995,Alicja,Nowakowska,F,false,Lipce,2020-11-28,,,,,,Person
-996,Zygmunt,Zieliński,M,false,Sromowce,2020-03-08,,,,,,Person
-997,Rozalia,Zielińska,F,false,Cieszyn,2020-10-03,,,,,,Person
-998,Tomasz,Zieliński,M,false,Kielce,2020-06-23,,,,,,Person
-999,Stefania,Zielińska,F,false,Kielce,2020-03-20,,,,,,Person
-1000,Regina,Zielińska,F,false,Cieszyn,2021-02-01,,,,,,Person
+1,Ryszard,Wojciechowski,M,true,Breslau,1622-02-26,Zielona Góra,1664-06-07,Pneumonia,Cemetery in Zielona Góra,Judge,Person
+2,Maja,Wieczorek,F,true,Gorzów Wielkopolski,1632-03-04,Ostrowiec Świętokrzyski,1698-07-10,Pneumonia,Cemetery in Ostrowiec Świętokrzyski,Shoemaker,Person
+3,Krzysztof,Zieliński,M,true,Malbork,1602-05-12,Stargard,1673-11-04,Cancer,Cemetery in Stargard,,Person
+4,Joanna,Piotrowska,F,true,Stettin,1610-01-01,Świnoujście,1681-09-24,,Cemetery in Świnoujście,Tanner,Person
+5,Stanisław,Grabowski,M,true,Gniezno,1608-02-04,Leszno,1672-03-05,War casualty,Cemetery in Leszno,Teacher,Person
+6,Zofia,Olszewska,F,true,Ostrów Wielkopolski,1605-04-27,Gniezno,1675-07-25,Fire,Cemetery in Gniezno,Merchant,Person
+7,Dariusz,Pawlak,M,true,Łomża,1602-08-16,Radom,1685-05-17,War casualty,Cemetery in Radom,Clerk,Person
+8,Marianna,Pawlak,F,true,Zamość,1606-12-27,Płock,1653-09-28,,Cemetery in Płock,Clerk,Person
+9,Paweł,Nowakowski,M,true,Tarnobrzeg,1600-07-19,Oświęcim,1661-02-28,,Cemetery in Oświęcim,Clerk,Person
+10,Natalia,Adamczyk,F,true,Kraków,1605-12-10,Nowy Sącz,1681-10-13,Fire,Cemetery in Nowy Sącz,Hunter,Person
+11,Franciszek,Pawłowski,M,true,Gorzów Wielkopolski,1615-01-11,Legnica,1676-06-12,Heart failure,Cemetery in Legnica,Wheelwright,Person
+12,Joanna,Wojciechowska,F,true,Legnica,1617-02-02,Jelenia Góra,1662-10-05,,Cemetery in Jelenia Góra,Judge,Person
+13,Mirosław,Król,M,true,Stettin,1628-09-08,Gdynia,1695-02-14,Unknown,Cemetery in Gdynia,,Person
+14,Julia,Woźniak,F,true,Koszalin,1632-05-27,Chojnice,1700-02-27,Influenza,Cemetery in Chojnice,Scribe,Person
+15,Wojciech,Kamiński,M,true,Września,1621-07-14,Grudziądz,1669-12-28,Accident,Cemetery in Grudziądz,Farmer,Person
+16,Joanna,Mazur,F,true,Włocławek,1626-09-19,Śrem,1684-03-23,Starvation,Cemetery in Śrem,Weaver,Person
+17,Wojciech,Zieliński,M,true,Zamość,1624-09-06,Chełm,1652-09-11,,Cemetery in Chełm,Innkeeper,Person
+18,Danuta,Mazur,F,true,Białystok,1632-10-01,Białystok,1667-07-25,Consumption,Cemetery in Białystok,Mason,Person
+19,Andrzej,Grabowski,M,true,Przemyśl,1622-04-26,Bochnia,1684-03-12,,Cemetery in Bochnia,Shoemaker,Person
+20,Teresa,Kowalczyk,F,true,Przemyśl,1624-08-17,Kraków,1663-05-27,Unknown,Cemetery in Kraków,Weaver,Person
+21,Łukasz,Adamczyk,M,true,Opole,1601-07-07,Breslau,1676-08-11,Apoplexy,Cemetery in Breslau,Cooper,Person
+22,Marianna,Jankowska,F,true,Legnica,1605-08-09,Wałbrzych,1678-04-16,Infectious disease,Cemetery in Wałbrzych,,Person
+23,Mirosław,Dudek,M,true,Chojnice,1620-11-16,Kołobrzeg,1681-02-03,Fever,Cemetery in Kołobrzeg,Clerk,Person
+24,Julia,Lewandowska,F,true,Elbląg,1626-08-08,Sopot,1675-03-17,Fire,Cemetery in Sopot,Priest,Person
+25,Filip,Kwiatkowski,M,true,Rawicz,1623-09-08,Piła,1695-04-28,Infectious disease,Cemetery in Piła,Mason,Person
+26,Zofia,Wojciechowska,F,true,Ostrów Wielkopolski,1622-10-03,Posen,1704-05-11,Fever,Cemetery in Posen,Priest,Person
+27,Wojciech,Kaczmarek,M,true,Radom,1615-07-14,Łomża,1657-11-03,Cholera,Cemetery in Łomża,Potter,Person
+28,Oliwia,Kaczmarek,F,true,Płock,1617-09-26,Suwałki,1663-02-27,Murder,Cemetery in Suwałki,,Person
+29,Wanda,Zielińska,F,true,Radom,1651-04-13,Konin,1715-12-10,Pneumonia,Cemetery in Konin,,Person
+30,Irena,Zielińska,F,true,Chełm,1653-04-21,Zamość,1654-07-02,Drowning,Cemetery in Zamość,,Person
+31,Łukasz,Kamiński,M,true,Rawicz,1655-05-27,Rawicz,1725-10-13,Smallpox,Cemetery in Rawicz,Carpenter,Person
+32,Julian,Kamiński,M,true,Grudziądz,1656-11-22,Kościan,1727-11-24,Infectious disease,Cemetery in Kościan,,Person
+33,Stefan,Grabowski,M,true,Rzeszów,1656-03-28,Kielce,1659-08-10,Cancer,Cemetery in Kielce,,Person
+34,Kazimierz,Król,M,true,Malbork,1657-02-11,Elbląg,1705-04-04,Plague,Cemetery in Elbląg,Cooper,Person
+35,Maja,Król,F,true,Elbląg,1658-03-05,Kielce,1703-10-27,,Cemetery in Kielce,Tanner,Person
+36,Czesław,Grabowski,M,true,Kielce,1658-02-28,Rzeszów,1736-09-06,Cholera,Cemetery in Rzeszów,Miner,Person
+37,Zofia,Wojciechowska,F,true,Wałbrzych,1659-11-25,Jasło,1708-12-18,Unknown,Cemetery in Jasło,Teacher,Person
+38,Leon,Kamiński,M,true,Września,1659-11-26,Piła,1660-02-27,,Cemetery in Piła,,Person
+39,Jadwiga,Wojciechowska,F,true,Świdnica,1660-06-15,Gdynia,1733-09-17,Accident,Cemetery in Gdynia,Lawyer,Person
+40,Alicja,Kwiatkowska,F,true,Thorn,1660-10-01,Tarnobrzeg,1712-08-15,Unknown,Cemetery in Tarnobrzeg,Hunter,Person
+41,Bożena,Pawlak,F,true,Lublin,1660-08-04,Ostrowiec Świętokrzyski,1684-03-28,Smallpox,Cemetery in Ostrowiec Świętokrzyski,Blacksmith,Person
+42,Kamil,Król,M,true,Malbork,1661-08-26,Olsztyn,1661-08-27,,Cemetery in Olsztyn,,Person
+43,Ignacy,Grabowski,M,true,Nowy Sącz,1661-09-05,Tarnobrzeg,1662-05-21,Typhus,Cemetery in Tarnobrzeg,,Person
+44,Wiesław,Wojciechowski,M,true,Gorzów Wielkopolski,1662-11-24,Legnica,1685-11-21,Cholera,Cemetery in Legnica,Teacher,Person
+45,Teresa,Król,F,true,Sopot,1662-06-15,Koszalin,1662-10-08,Apoplexy,Cemetery in Koszalin,,Person
+46,Henryk,Kamiński,M,true,Gostyń,1662-02-04,Kościan,1709-02-06,Infectious disease,Cemetery in Kościan,Tanner,Person
+47,Filip,Kwiatkowski,M,true,Grudziądz,1662-04-07,Bromberg,1690-02-05,Apoplexy,Cemetery in Bromberg,Priest,Person
+48,Michał,Grabowski,M,true,Rzeszów,1663-11-25,Bochnia,1731-03-28,Dropsy,Cemetery in Bochnia,Priest,Person
+49,Grażyna,Wojciechowska,F,true,Zielona Góra,1664-05-21,Opole,1664-10-07,Apoplexy,Cemetery in Opole,,Person
+50,Regina,Kamińska,F,true,Śrem,1664-11-01,Zielona Góra,1743-08-23,Influenza,Cemetery in Zielona Góra,Tailor,Person
+51,Bożena,Wojciechowska,F,true,Breslau,1665-07-23,Breslau,1741-10-12,Apoplexy,Cemetery in Breslau,Fisherman,Person
+52,Bożena,Kamińska,F,true,Konin,1665-08-05,Thorn,1666-07-02,Apoplexy,Cemetery in Thorn,,Person
+53,Elżbieta,Kamińska,F,true,Kościan,1667-11-10,Tarnów,1706-12-22,Dropsy,Cemetery in Tarnów,Fisherman,Person
+54,Zygmunt,Pawłowski,M,true,Breslau,1668-10-26,Breslau,1713-10-15,Dysentery,Cemetery in Breslau,Scribe,Person
+55,Jan,Pawłowski,M,true,Breslau,1669-05-19,Jelenia Góra,1742-07-05,Smallpox,Cemetery in Jelenia Góra,,Person
+56,Urszula,Piotrowska,F,true,Wałbrzych,1641-01-28,Kielce,1688-01-16,,Cemetery in Kielce,Doctor,Person
+57,Mateusz,Wieczorek,M,true,Wałbrzych,1647-09-01,Breslau,1714-04-01,Drowning,Cemetery in Breslau,Lawyer,Person
+58,Anna,Jankowska,F,true,Świdnica,1643-05-11,Breslau,1697-04-23,,Cemetery in Breslau,Shepherd,Person
+59,Tomasz,Nowakowski,M,true,Elbląg,1647-06-06,Sopot,1701-07-02,Heart failure,Cemetery in Sopot,Doctor,Person
+60,Bartosz,Kowalski,M,true,Ostrowiec Świętokrzyski,1651-04-26,Kraków,1691-05-13,Infectious disease,Cemetery in Kraków,Carpenter,Person
+61,Stefan,Lewandowski,M,true,Posen,1648-05-09,Piła,1708-04-01,,Cemetery in Piła,Innkeeper,Person
+62,Adam,Wieczorek,M,true,Breslau,1675-01-17,Breslau,1748-10-02,Plague,Cemetery in Breslau,Priest,Person
+63,Kazimierz,Kowalski,M,true,Oświęcim,1675-02-26,Przemyśl,1745-12-15,Consumption,Cemetery in Przemyśl,Tanner,Person
+64,Krystyna,Dąbrowska,F,true,Białystok,1646-12-23,Bromberg,1682-02-09,War casualty,Cemetery in Bromberg,Carpenter,Person
+65,Jadwiga,Wieczorek,F,true,Świdnica,1676-03-07,Świdnica,1678-02-25,,Cemetery in Świdnica,,Person
+66,Alicja,Kwiatkowska,F,true,Posen,1648-03-18,Kołobrzeg,1698-01-08,Unknown,Cemetery in Kołobrzeg,Tanner,Person
+67,Henryk,Lewandowski,M,true,Śrem,1677-02-04,Inowrocław,1677-06-03,Cholera,Cemetery in Inowrocław,,Person
+68,Joanna,Majewska,F,true,Włocławek,1656-02-05,Gniezno,1690-03-15,Plague,Cemetery in Gniezno,Scribe,Person
+69,Julian,Wieczorek,M,true,Świdnica,1678-07-28,Legnica,1725-03-11,,Cemetery in Legnica,Innkeeper,Person
+70,Julian,Lewandowski,M,true,Kościan,1678-05-15,Posen,1680-08-17,,Cemetery in Posen,,Person
+71,Dariusz,Kamiński,M,true,Jasło,1659-09-23,Tarnobrzeg,1717-12-13,Smallpox,Cemetery in Tarnobrzeg,Mason,Person
+72,Jerzy,Wieczorek,M,true,Świdnica,1679-07-21,Gorzów Wielkopolski,1736-12-08,,Cemetery in Gorzów Wielkopolski,Shoemaker,Person
+73,Tomasz,Nowakowski,M,true,Koszalin,1679-11-01,Sopot,1751-05-13,Drowning,Cemetery in Sopot,Tailor,Person
+74,Zuzanna,Wróbel,F,true,Lublin,1662-11-03,Rawicz,1706-06-01,,Cemetery in Rawicz,Weaver,Person
+75,Agnieszka,Wieczorek,F,true,Gorzów Wielkopolski,1680-04-28,Sanok,1728-08-19,Unknown,Cemetery in Sanok,,Person
+76,Monika,Lewandowska,F,true,Konin,1681-11-27,Kalisz,1682-05-12,Plague,Cemetery in Kalisz,,Person
+77,Rozalia,Nowakowska,F,true,Gdynia,1681-12-23,Opole,1757-09-02,Plague,Cemetery in Opole,Innkeeper,Person
+78,Marian,Wojciechowski,M,true,Świdnica,1681-04-06,Legnica,1682-09-20,Cancer,Cemetery in Legnica,,Person
+79,Bartosz,Wieczorek,M,true,Wałbrzych,1682-06-21,Opole,1740-11-16,Heart failure,Cemetery in Opole,Scribe,Person
+80,Leon,Nowakowski,M,true,Stargard,1683-02-06,Danzig,1723-02-15,,Cemetery in Danzig,Potter,Person
+81,Ewa,Kamińska,F,true,Inowrocław,1683-09-20,Breslau,1729-09-01,Murder,Cemetery in Breslau,Miller,Person
+82,Marianna,Król,F,true,Stargard,1683-07-24,Stargard,1749-08-06,,Cemetery in Stargard,Hunter,Person
+83,Ignacy,Wieczorek,M,true,Legnica,1684-09-06,Gorzów Wielkopolski,1689-11-02,Drowning,Cemetery in Gorzów Wielkopolski,,Person
+84,Czesława,Król,F,true,Słupsk,1684-03-01,Świnoujście,1685-01-03,Starvation,Cemetery in Świnoujście,,Person
+85,Kazimierz,Grabowski,M,true,Kraków,1684-08-15,Sandomierz,1738-09-20,Accident,Cemetery in Sandomierz,Farmer,Person
+86,Jan,Kamiński,M,true,Jasło,1684-11-19,Bochnia,1727-10-11,Heart failure,Cemetery in Bochnia,Shepherd,Person
+87,Andrzej,Kamiński,M,true,Rawicz,1685-10-13,Thorn,1728-12-09,Smallpox,Cemetery in Thorn,Clerk,Person
+88,Andrzej,Kamiński,M,true,Bochnia,1685-03-27,Przemyśl,1752-01-03,,Cemetery in Przemyśl,Soldier,Person
+89,Natalia,Król,F,true,Wejherowo,1686-10-26,Kraków,1750-05-01,Heart failure,Cemetery in Kraków,Innkeeper,Person
+90,Joanna,Lewandowska,F,true,Konin,1686-06-21,Grudziądz,1686-07-18,,Cemetery in Grudziądz,,Person
+91,Łukasz,Grabowski,M,true,Kraków,1687-04-08,Przemyśl,1688-04-01,,Cemetery in Przemyśl,,Person
+92,Krzysztof,Kamiński,M,true,Grudziądz,1688-02-03,Bromberg,1735-09-13,,Cemetery in Bromberg,Weaver,Person
+93,Dariusz,Kamiński,M,true,Rzeszów,1688-10-01,Kraków,1689-02-19,Starvation,Cemetery in Kraków,,Person
+94,Jerzy,Lewandowski,M,true,Gniezno,1688-03-01,Leszno,1736-07-27,Plague,Cemetery in Leszno,Miller,Person
+95,Marian,Grabowski,M,true,Bochnia,1688-03-13,Ostrowiec Świętokrzyski,1689-05-21,Smallpox,Cemetery in Ostrowiec Świętokrzyski,,Person
+96,Mirosław,Lewandowski,M,true,Ostrów Wielkopolski,1690-06-11,Piła,1692-09-26,Dropsy,Cemetery in Piła,,Person
+97,Grażyna,Grabowska,F,true,Sandomierz,1690-06-17,Sanok,1750-09-03,,Cemetery in Sanok,Butcher,Person
+98,Tomasz,Grabowski,M,true,Tarnów,1690-02-22,Nowy Sącz,1690-12-13,Smallpox,Cemetery in Nowy Sącz,,Person
+99,Józefa,Kamińska,F,true,Jasło,1691-02-26,Rzeszów,1691-08-09,Influenza,Cemetery in Rzeszów,,Person
+100,Marcin,Grabowski,M,true,Bochnia,1691-02-13,Tarnobrzeg,1692-05-19,Unknown,Cemetery in Tarnobrzeg,,Person
+101,Teresa,Kowalska,F,true,Tarnobrzeg,1691-01-09,Legnica,1761-05-26,Typhus,Cemetery in Legnica,Cooper,Person
+102,Wiesław,Lewandowski,M,true,Konin,1692-01-10,Gniezno,1740-10-01,Apoplexy,Cemetery in Gniezno,Shepherd,Person
+103,Wiktoria,Grabowska,F,true,Ostrowiec Świętokrzyski,1692-08-21,Gorzów Wielkopolski,1755-07-04,,Cemetery in Gorzów Wielkopolski,Miner,Person
+104,Szymon,Pawłowski,M,true,Świdnica,1692-12-11,Jelenia Góra,1747-07-14,Starvation,Cemetery in Jelenia Góra,Shepherd,Person
+105,Julian,Pawłowski,M,true,Jelenia Góra,1693-08-18,Opole,1696-07-02,Apoplexy,Cemetery in Opole,,Person
+106,Regina,Kamińska,F,true,Grudziądz,1693-06-14,Inowrocław,1693-03-22,Heart failure,Cemetery in Inowrocław,,Person
+107,Stefan,Kamiński,M,true,Jasło,1694-03-10,Rzeszów,1748-06-01,Plague,Cemetery in Rzeszów,Scribe,Person
+108,Wiktoria,Grabowska,F,true,Tarnów,1694-03-04,Breslau,1761-11-08,Infectious disease,Cemetery in Breslau,Potter,Person
+109,Monika,Grabowska,F,true,Przemyśl,1694-01-04,Kielce,1694-03-27,Heart failure,Cemetery in Kielce,,Person
+110,Michał,Pawłowski,M,true,Legnica,1694-03-19,Wałbrzych,1773-07-02,,Cemetery in Wałbrzych,Hunter,Person
+111,Marcin,Kamiński,M,true,Posen,1695-07-22,Grudziądz,1746-11-03,Smallpox,Cemetery in Grudziądz,,Person
+112,Krystyna,Kowalska,F,true,Kraków,1695-07-17,Sandomierz,1711-08-06,,Cemetery in Sandomierz,,Person
+113,Joanna,Kamińska,F,true,Bochnia,1696-11-27,Gorzów Wielkopolski,1759-03-07,Dysentery,Cemetery in Gorzów Wielkopolski,Wheelwright,Person
+114,Wojciech,Grabowski,M,true,Sanok,1696-06-24,Kielce,1754-08-27,Plague,Cemetery in Kielce,Tanner,Person
+115,Kamil,Pawłowski,M,true,Świdnica,1696-04-26,Legnica,1768-11-08,Dysentery,Cemetery in Legnica,Doctor,Person
+116,Helena,Grabowska,F,true,Kielce,1697-02-18,Grudziądz,1758-05-21,Dysentery,Cemetery in Grudziądz,,Person
+117,Urszula,Kamińska,F,true,Rawicz,1697-06-19,Przemyśl,1756-02-11,Dropsy,Cemetery in Przemyśl,Weaver,Person
+118,Stefan,Kamiński,M,true,Oświęcim,1699-01-21,Tarnów,1699-10-09,War casualty,Cemetery in Tarnów,,Person
+119,Zygmunt,Grabowski,M,true,Sandomierz,1699-03-15,Sandomierz,1792-12-17,Drowning,Cemetery in Sandomierz,Baker,Person
+120,Adam,Pawłowski,M,true,Gorzów Wielkopolski,1699-06-17,Świdnica,1749-12-12,Typhus,Cemetery in Świdnica,Baker,Person
+121,Regina,Kamińska,F,true,Thorn,1699-05-02,Gostyń,1700-03-18,War casualty,Cemetery in Gostyń,,Person
+122,Piotr,Kamiński,M,true,Rzeszów,1700-09-03,Bochnia,1767-04-19,Fire,Cemetery in Bochnia,,Person
+123,Andrzej,Kamiński,M,true,Kościan,1700-02-18,Bromberg,1705-01-25,Dysentery,Cemetery in Bromberg,,Person
+124,Oliwia,Grabowska,F,true,Rzeszów,1701-09-02,Gorzów Wielkopolski,1762-03-01,Drowning,Cemetery in Gorzów Wielkopolski,Shepherd,Person
+125,Ewa,Pawłowska,F,true,Opole,1701-11-03,Gdynia,1775-12-10,Apoplexy,Cemetery in Gdynia,Weaver,Person
+126,Wojciech,Kamiński,M,true,Bochnia,1702-11-20,Ostrowiec Świętokrzyski,1704-04-09,Unknown,Cemetery in Ostrowiec Świętokrzyski,,Person
+127,Ewa,Pawłowska,F,true,Breslau,1702-01-15,Ostrowiec Świętokrzyski,1764-05-20,Starvation,Cemetery in Ostrowiec Świętokrzyski,Artist,Person
+128,Kamil,Grabowski,M,true,Przemyśl,1703-06-12,Bochnia,1757-11-15,Dysentery,Cemetery in Bochnia,Blacksmith,Person
+129,Maja,Kamińska,F,true,Ostrowiec Świętokrzyski,1705-10-27,Krosno,1705-10-05,Murder,Cemetery in Krosno,,Person
+130,Mirosław,Wieczorek,M,true,Jelenia Góra,1705-05-11,Gorzów Wielkopolski,1767-12-09,,Cemetery in Gorzów Wielkopolski,Artist,Person
+131,Stefan,Kamiński,M,true,Inowrocław,1707-02-02,Ostrów Wielkopolski,1783-03-10,Plague,Cemetery in Ostrów Wielkopolski,Soldier,Person
+132,Mirosław,Wieczorek,M,true,Zielona Góra,1707-02-03,Opole,1767-09-17,Cancer,Cemetery in Opole,Hunter,Person
+133,Zofia,Wieczorek,F,true,Legnica,1708-06-17,Jelenia Góra,1734-07-04,Heart failure,Cemetery in Jelenia Góra,,Person
+134,Halina,Kamińska,F,true,Września,1708-07-15,Rawicz,1709-07-22,Influenza,Cemetery in Rawicz,,Person
+135,Maja,Wieczorek,F,true,Jelenia Góra,1708-06-10,Wałbrzych,1709-10-01,Unknown,Cemetery in Wałbrzych,,Person
+136,Paweł,Pawłowski,M,true,Świdnica,1708-12-03,Świdnica,1708-04-17,Dropsy,Cemetery in Świdnica,,Person
+137,Oliwia,Kamińska,F,true,Grudziądz,1709-10-14,Wałbrzych,1765-03-06,,Cemetery in Wałbrzych,Artist,Person
+138,Marian,Pawłowski,M,true,Jelenia Góra,1709-01-26,Świdnica,1781-04-14,Dysentery,Cemetery in Świdnica,Cooper,Person
+139,Oliwia,Wieczorek,F,true,Wałbrzych,1710-01-09,Kraków,1763-07-26,Dropsy,Cemetery in Kraków,,Person
+140,Stanisław,Nowakowski,M,true,Malbork,1710-09-28,Stargard,1783-10-25,,Cemetery in Stargard,Blacksmith,Person
+141,Ludwika,Wieczorek,F,true,Opole,1711-07-03,Tarnów,1755-04-25,Dropsy,Cemetery in Tarnów,Carpenter,Person
+142,Szymon,Wieczorek,M,true,Breslau,1711-08-02,Gorzów Wielkopolski,1711-09-12,,Cemetery in Gorzów Wielkopolski,,Person
+143,Bartosz,Pawłowski,M,true,Świdnica,1712-07-07,Świdnica,1774-07-20,Murder,Cemetery in Świdnica,,Person
+144,Wiesław,Nowakowski,M,true,Chojnice,1712-07-13,Gdynia,1772-06-15,Dysentery,Cemetery in Gdynia,Clerk,Person
+145,Wiesław,Wieczorek,M,true,Breslau,1712-12-23,Zielona Góra,1781-01-16,Unknown,Cemetery in Zielona Góra,Clerk,Person
+146,Marianna,Kowalska,F,true,Tarnobrzeg,1712-06-12,Jelenia Góra,1774-12-06,Cancer,Cemetery in Jelenia Góra,Judge,Person
+147,Mateusz,Wieczorek,M,true,Breslau,1713-11-05,Legnica,1713-04-08,Heart failure,Cemetery in Legnica,,Person
+148,Mateusz,Wieczorek,M,true,Zielona Góra,1713-12-22,Zielona Góra,1762-05-14,Influenza,Cemetery in Zielona Góra,,Person
+149,Helena,Nowakowska,F,true,Sopot,1714-03-23,Inowrocław,1768-06-24,Accident,Cemetery in Inowrocław,Scribe,Person
+150,Dariusz,Wieczorek,M,true,Opole,1714-11-14,Legnica,1714-12-23,Unknown,Cemetery in Legnica,,Person
+151,Jan,Kowalski,M,true,Zakopane,1714-04-24,Przemyśl,1768-04-06,War casualty,Cemetery in Przemyśl,Miner,Person
+152,Kazimierz,Grabowski,M,true,Tarnów,1714-02-11,Nowy Sącz,1775-03-25,Heart failure,Cemetery in Nowy Sącz,Blacksmith,Person
+153,Regina,Wieczorek,F,true,Wałbrzych,1715-12-05,Ostrowiec Świętokrzyski,1765-01-28,Dropsy,Cemetery in Ostrowiec Świętokrzyski,,Person
+154,Ignacy,Wieczorek,M,true,Wałbrzych,1715-06-24,Zielona Góra,1746-02-25,Fever,Cemetery in Zielona Góra,,Person
+155,Maciej,Kamiński,M,true,Kościan,1715-04-14,Gniezno,1718-06-07,Pneumonia,Cemetery in Gniezno,,Person
+156,Natalia,Wieczorek,F,true,Gorzów Wielkopolski,1716-01-19,Tarnów,1767-12-23,Dropsy,Cemetery in Tarnów,Artist,Person
+157,Stanisław,Nowakowski,M,true,Elbląg,1716-06-02,Olsztyn,1784-03-24,,Cemetery in Olsztyn,Farmer,Person
+158,Jadwiga,Kowalska,F,true,Kielce,1716-01-21,Stettin,1773-01-23,Influenza,Cemetery in Stettin,Artist,Person
+159,Maja,Grabowska,F,true,Krosno,1716-02-01,Breslau,1781-01-13,War casualty,Cemetery in Breslau,Weaver,Person
+160,Irena,Wieczorek,F,true,Legnica,1716-12-15,Tarnobrzeg,1788-05-24,Influenza,Cemetery in Tarnobrzeg,Judge,Person
+161,Ignacy,Nowakowski,M,true,Gdynia,1717-11-06,Olsztyn,1717-11-02,Pneumonia,Cemetery in Olsztyn,,Person
+162,Dariusz,Wieczorek,M,true,Breslau,1717-02-26,Świdnica,1718-06-10,Accident,Cemetery in Świdnica,,Person
+163,Dariusz,Kowalski,M,true,Jasło,1717-06-19,Nowy Sącz,1739-09-02,Consumption,Cemetery in Nowy Sącz,Farmer,Person
+164,Dariusz,Kamiński,M,true,Gniezno,1717-11-11,Gniezno,1717-05-19,Cholera,Cemetery in Gniezno,,Person
+165,Grzegorz,Grabowski,M,true,Tarnów,1718-01-25,Ostrowiec Świętokrzyski,1788-02-15,Cholera,Cemetery in Ostrowiec Świętokrzyski,Hunter,Person
+166,Henryk,Wieczorek,M,true,Gorzów Wielkopolski,1718-01-14,Gorzów Wielkopolski,1793-05-04,Smallpox,Cemetery in Gorzów Wielkopolski,Baker,Person
+167,Tomasz,Wieczorek,M,true,Wałbrzych,1719-12-26,Zielona Góra,1791-04-26,Accident,Cemetery in Zielona Góra,,Person
+168,Krystyna,Kamińska,F,true,Ostrów Wielkopolski,1719-03-25,Breslau,1746-07-28,Dropsy,Cemetery in Breslau,Lawyer,Person
+169,Zofia,Kowalska,F,true,Sandomierz,1720-01-07,Bochnia,1721-03-17,Fever,Cemetery in Bochnia,,Person
+170,Monika,Kamińska,F,true,Bromberg,1720-05-07,Września,1722-07-18,Infectious disease,Cemetery in Września,,Person
+171,Antoni,Wieczorek,M,true,Opole,1720-07-23,Wałbrzych,1742-06-08,,Cemetery in Wałbrzych,Blacksmith,Person
+172,Maja,Kamińska,F,true,Września,1720-09-25,Zielona Góra,1791-11-03,Infectious disease,Cemetery in Zielona Góra,Doctor,Person
+173,Mateusz,Grabowski,M,true,Krosno,1721-04-20,Nowy Sącz,1811-11-04,Plague,Cemetery in Nowy Sącz,Doctor,Person
+174,Teresa,Lewandowska,F,true,Posen,1721-12-10,Konin,1721-08-17,Unknown,Cemetery in Konin,,Person
+175,Antoni,Wieczorek,M,true,Legnica,1722-05-01,Opole,1781-11-04,Murder,Cemetery in Opole,Lawyer,Person
+176,Ludwika,Grabowska,F,true,Kielce,1722-06-17,Legnica,1780-10-07,Murder,Cemetery in Legnica,Artist,Person
+177,Tadeusz,Kamiński,M,true,Bromberg,1722-03-28,Gniezno,1766-09-27,,Cemetery in Gniezno,,Person
+178,Zofia,Wieczorek,F,true,Opole,1722-03-19,Chojnice,1785-02-15,Typhus,Cemetery in Chojnice,Miner,Person
+179,Marianna,Nowakowska,F,true,Elbląg,1722-08-11,Tarnobrzeg,1794-05-24,Heart failure,Cemetery in Tarnobrzeg,Blacksmith,Person
+180,Elżbieta,Lewandowska,F,true,Inowrocław,1722-09-22,Świdnica,1778-06-08,Typhus,Cemetery in Świdnica,Judge,Person
+181,Mateusz,Wieczorek,M,true,Wałbrzych,1723-09-07,Jelenia Góra,1764-11-18,Typhus,Cemetery in Jelenia Góra,,Person
+182,Anna,Wieczorek,F,true,Zielona Góra,1723-09-12,Kalisz,1773-07-14,War casualty,Cemetery in Kalisz,Artist,Person
+183,Filip,Nowakowski,M,true,Malbork,1723-03-04,Gdynia,1784-12-14,Unknown,Cemetery in Gdynia,Farmer,Person
+184,Monika,Wieczorek,F,true,Jelenia Góra,1724-01-23,Legnica,1725-08-27,Smallpox,Cemetery in Legnica,,Person
+185,Czesław,Lewandowski,M,true,Gniezno,1724-05-27,Gostyń,1764-02-15,Cholera,Cemetery in Gostyń,Hunter,Person
+186,Mirosław,Lewandowski,M,true,Bromberg,1724-11-20,Thorn,1781-11-08,,Cemetery in Thorn,Cooper,Person
+187,Henryk,Grabowski,M,true,Tarnobrzeg,1724-03-15,Ostrowiec Świętokrzyski,1725-03-28,,Cemetery in Ostrowiec Świętokrzyski,,Person
+188,Wiesław,Grabowski,M,true,Oświęcim,1725-01-10,Krosno,1795-12-16,Plague,Cemetery in Krosno,,Person
+189,Jerzy,Wieczorek,M,true,Zielona Góra,1725-07-28,Opole,1775-06-23,Accident,Cemetery in Opole,Merchant,Person
+190,Szymon,Lewandowski,M,true,Września,1726-07-28,Rawicz,1726-09-05,Consumption,Cemetery in Rawicz,,Person
+191,Alicja,Grabowska,F,true,Zakopane,1726-04-20,Bochnia,1729-10-15,Influenza,Cemetery in Bochnia,,Person
+192,Czesława,Kamińska,F,true,Zakopane,1726-02-10,Gorzów Wielkopolski,1765-12-02,Infectious disease,Cemetery in Gorzów Wielkopolski,Artist,Person
+193,Joanna,Grabowska,F,true,Przemyśl,1727-06-22,Gorzów Wielkopolski,1800-10-18,Apoplexy,Cemetery in Gorzów Wielkopolski,Butcher,Person
+194,Marianna,Lewandowska,F,true,Leszno,1727-03-21,Legnica,1778-08-08,War casualty,Cemetery in Legnica,Shepherd,Person
+195,Ryszard,Lewandowski,M,true,Kalisz,1728-06-07,Posen,1778-01-10,Accident,Cemetery in Posen,Priest,Person
+196,Marian,Kamiński,M,true,Nowy Sącz,1728-05-24,Oświęcim,1728-08-09,Infectious disease,Cemetery in Oświęcim,,Person
+197,Joanna,Kamińska,F,true,Zakopane,1728-09-10,Świdnica,1778-11-05,Murder,Cemetery in Świdnica,Artist,Person
+198,Wiesław,Lewandowski,M,true,Gostyń,1729-03-26,Rawicz,1793-02-17,Fever,Cemetery in Rawicz,,Person
+199,Paweł,Lewandowski,M,true,Śrem,1729-07-01,Konin,1730-09-25,Unknown,Cemetery in Konin,,Person
+200,Piotr,Grabowski,M,true,Oświęcim,1729-07-13,Ostrowiec Świętokrzyski,1817-02-01,Cholera,Cemetery in Ostrowiec Świętokrzyski,Teacher,Person
+201,Bartosz,Kamiński,M,true,Rzeszów,1729-12-27,Tarnobrzeg,1733-01-17,Pneumonia,Cemetery in Tarnobrzeg,,Person
+202,Monika,Lewandowska,F,true,Września,1730-04-20,Breslau,1793-06-24,Murder,Cemetery in Breslau,Priest,Person
+203,Anna,Lewandowska,F,true,Gostyń,1730-02-04,Świdnica,1750-04-03,Accident,Cemetery in Świdnica,Shoemaker,Person
+204,Marcin,Grabowski,M,true,Sandomierz,1731-10-15,Oświęcim,1796-01-20,Consumption,Cemetery in Oświęcim,Scribe,Person
+205,Alicja,Pawłowska,F,true,Jelenia Góra,1731-11-07,Śrem,1784-12-24,Consumption,Cemetery in Śrem,Tailor,Person
+206,Leokadia,Lewandowska,F,true,Bromberg,1732-09-14,Konin,1754-04-05,Pneumonia,Cemetery in Konin,Fisherman,Person
+207,Regina,Kamińska,F,true,Sanok,1732-04-05,Zakopane,1783-09-22,Plague,Cemetery in Zakopane,Carpenter,Person
+208,Anna,Pawłowska,F,true,Breslau,1732-05-09,Opole,1732-09-14,Cholera,Cemetery in Opole,,Person
+209,Stefania,Pawłowska,F,true,Legnica,1733-08-26,Rawicz,1783-11-13,,Cemetery in Rawicz,Weaver,Person
+210,Andrzej,Pawłowski,M,true,Świdnica,1733-07-13,Zielona Góra,1787-07-07,Cancer,Cemetery in Zielona Góra,Lawyer,Person
+211,Marcin,Wieczorek,M,true,Jelenia Góra,1733-04-09,Zielona Góra,1736-09-27,Unknown,Cemetery in Zielona Góra,,Person
+212,Andrzej,Grabowski,M,true,Przemyśl,1734-08-24,Tarnobrzeg,1794-10-16,Drowning,Cemetery in Tarnobrzeg,,Person
+213,Tadeusz,Kamiński,M,true,Ostrowiec Świętokrzyski,1734-07-22,Kielce,1735-08-17,Cholera,Cemetery in Kielce,,Person
+214,Paweł,Pawłowski,M,true,Opole,1734-03-27,Opole,1772-03-03,Cancer,Cemetery in Opole,Clerk,Person
+215,Stefania,Kamińska,F,true,Września,1734-09-28,Zakopane,1816-05-12,Influenza,Cemetery in Zakopane,Lawyer,Person
+216,Oliwia,Grabowska,F,true,Nowy Sącz,1734-02-26,Tarnów,1739-12-01,Drowning,Cemetery in Tarnów,,Person
+217,Stanisław,Wieczorek,M,true,Opole,1735-05-11,Legnica,1810-05-06,Dropsy,Cemetery in Legnica,Shepherd,Person
+218,Grażyna,Grabowska,F,true,Sanok,1735-08-28,Sanok,1735-03-22,Smallpox,Cemetery in Sanok,,Person
+219,Czesława,Pawłowska,F,true,Jelenia Góra,1736-05-19,Oświęcim,1781-02-27,Unknown,Cemetery in Oświęcim,Scribe,Person
+220,Jerzy,Grabowski,M,true,Ostrowiec Świętokrzyski,1736-05-25,Przemyśl,1811-01-06,Unknown,Cemetery in Przemyśl,Doctor,Person
+221,Małgorzata,Pawłowska,F,true,Świdnica,1736-12-27,Malbork,1811-08-11,War casualty,Cemetery in Malbork,Hunter,Person
+222,Zuzanna,Grabowska,F,true,Kraków,1737-06-24,Sandomierz,1738-10-26,Fever,Cemetery in Sandomierz,,Person
+223,Czesława,Kamińska,F,true,Bochnia,1737-01-23,Jasło,1796-10-18,Apoplexy,Cemetery in Jasło,Lawyer,Person
+224,Teresa,Wieczorek,F,true,Legnica,1737-08-01,Konin,1783-10-17,Typhus,Cemetery in Konin,Tanner,Person
+225,Oliwia,Kamińska,F,true,Inowrocław,1737-04-02,Świdnica,1792-08-18,Fever,Cemetery in Świdnica,Lawyer,Person
+226,Agnieszka,Grabowska,F,true,Zakopane,1737-11-24,Śrem,1762-07-02,Apoplexy,Cemetery in Śrem,,Person
+227,Jakub,Pawłowski,M,true,Jelenia Góra,1737-08-02,Breslau,1788-02-12,Smallpox,Cemetery in Breslau,Miner,Person
+228,Wiesław,Kamiński,M,true,Nowy Sącz,1738-02-08,Tarnobrzeg,1804-01-20,Cholera,Cemetery in Tarnobrzeg,Baker,Person
+229,Czesław,Pawłowski,M,true,Świdnica,1738-02-16,Opole,1739-11-22,Starvation,Cemetery in Opole,,Person
+230,Władysław,Pawłowski,M,true,Opole,1738-06-21,Świdnica,1775-01-27,Dropsy,Cemetery in Świdnica,Judge,Person
+231,Wanda,Kamińska,F,true,Gniezno,1739-11-16,Breslau,1789-01-23,Fire,Cemetery in Breslau,,Person
+232,Andrzej,Grabowski,M,true,Przemyśl,1739-10-26,Bochnia,1757-05-22,Drowning,Cemetery in Bochnia,,Person
+233,Regina,Pawłowska,F,true,Gorzów Wielkopolski,1739-01-02,Rzeszów,1805-09-25,Cholera,Cemetery in Rzeszów,Tailor,Person
+234,Kazimiera,Kamińska,F,true,Tarnów,1740-02-04,Nowy Sącz,1740-08-07,,Cemetery in Nowy Sącz,,Person
+235,Małgorzata,Kamińska,F,true,Grudziądz,1740-09-09,Wałbrzych,1801-03-28,Stroke,Cemetery in Wałbrzych,,Person
+236,Oliwia,Pawłowska,F,true,Świdnica,1740-11-22,Zakopane,1810-03-05,Heart failure,Cemetery in Zakopane,Clerk,Person
+237,Regina,Wieczorek,F,true,Świdnica,1740-04-27,Piła,1810-11-06,Fever,Cemetery in Piła,Baker,Person
+238,Maja,Wieczorek,F,true,Gorzów Wielkopolski,1740-10-26,Kościan,1796-01-05,Starvation,Cemetery in Kościan,Miller,Person
+239,Halina,Pawłowska,F,true,Breslau,1741-04-13,Gorzów Wielkopolski,1743-10-04,Consumption,Cemetery in Gorzów Wielkopolski,,Person
+240,Tadeusz,Pawłowski,M,true,Zielona Góra,1741-11-03,Legnica,1814-11-07,Influenza,Cemetery in Legnica,Miller,Person
+241,Teresa,Kamińska,F,true,Ostrowiec Świętokrzyski,1742-08-05,Legnica,1791-03-25,Cholera,Cemetery in Legnica,,Person
+242,Wanda,Pawłowska,F,true,Breslau,1742-11-20,Gorzów Wielkopolski,1795-09-17,Murder,Cemetery in Gorzów Wielkopolski,Weaver,Person
+243,Maciej,Kamiński,M,true,Piła,1742-07-23,Gniezno,1815-05-20,Stroke,Cemetery in Gniezno,Blacksmith,Person
+244,Halina,Pawłowska,F,true,Legnica,1742-09-17,Inowrocław,1810-10-02,Plague,Cemetery in Inowrocław,,Person
+245,Agnieszka,Wieczorek,F,true,Legnica,1742-09-08,Legnica,1743-03-17,Cancer,Cemetery in Legnica,,Person
+246,Filip,Wieczorek,M,true,Opole,1742-06-02,Legnica,1742-10-21,Heart failure,Cemetery in Legnica,,Person
+247,Irena,Wieczorek,F,true,Opole,1743-03-15,Zielona Góra,1746-05-28,Drowning,Cemetery in Zielona Góra,,Person
+248,Władysław,Pawłowski,M,true,Breslau,1743-10-23,Legnica,1767-12-08,Dysentery,Cemetery in Legnica,Artist,Person
+249,Ignacy,Pawłowski,M,true,Opole,1744-01-03,Gorzów Wielkopolski,1806-04-28,Infectious disease,Cemetery in Gorzów Wielkopolski,Baker,Person
+250,Leokadia,Wieczorek,F,true,Świdnica,1744-06-12,Legnica,1745-08-04,Stroke,Cemetery in Legnica,,Person
+251,Kazimierz,Pawłowski,M,true,Gorzów Wielkopolski,1744-10-09,Gorzów Wielkopolski,1744-05-22,,Cemetery in Gorzów Wielkopolski,,Person
+252,Anna,Pawłowska,F,true,Breslau,1745-05-12,Jelenia Góra,1799-11-09,Consumption,Cemetery in Jelenia Góra,Clerk,Person
+253,Regina,Pawłowska,F,true,Gorzów Wielkopolski,1745-05-21,Gniezno,1804-11-02,Murder,Cemetery in Gniezno,Priest,Person
+254,Wiesław,Wieczorek,M,true,Breslau,1745-04-13,Świdnica,1753-01-22,Consumption,Cemetery in Świdnica,,Person
+255,Anna,Pawłowska,F,true,Wałbrzych,1745-10-07,Thorn,1785-04-24,Starvation,Cemetery in Thorn,Weaver,Person
+256,Jan,Pawłowski,M,true,Breslau,1746-03-10,Gorzów Wielkopolski,1803-10-02,Drowning,Cemetery in Gorzów Wielkopolski,Shoemaker,Person
+257,Irena,Wieczorek,F,true,Świdnica,1746-01-27,Stargard,1786-05-26,Unknown,Cemetery in Stargard,Shoemaker,Person
+258,Marcin,Wieczorek,M,true,Jelenia Góra,1746-03-22,Gorzów Wielkopolski,1809-08-04,Typhus,Cemetery in Gorzów Wielkopolski,Clerk,Person
+259,Adam,Kamiński,M,true,Thorn,1746-09-26,Gniezno,1805-02-21,War casualty,Cemetery in Gniezno,Scribe,Person
+260,Maciej,Pawłowski,M,true,Legnica,1747-08-01,Świdnica,1748-12-05,Plague,Cemetery in Świdnica,,Person
+261,Piotr,Pawłowski,M,true,Wałbrzych,1747-08-28,Wałbrzych,1823-12-26,Typhus,Cemetery in Wałbrzych,,Person
+262,Jan,Kamiński,M,true,Kościan,1747-04-01,Ostrów Wielkopolski,1825-10-18,Drowning,Cemetery in Ostrów Wielkopolski,Doctor,Person
+263,Barbara,Pawłowska,F,true,Breslau,1748-10-27,Jelenia Góra,1749-10-09,Accident,Cemetery in Jelenia Góra,,Person
+264,Zygmunt,Wieczorek,M,true,Świdnica,1748-01-13,Wałbrzych,1749-04-15,Cholera,Cemetery in Wałbrzych,,Person
+265,Wojciech,Kamiński,M,true,Śrem,1748-05-28,Grudziądz,1812-11-25,,Cemetery in Grudziądz,,Person
+266,Paweł,Nowakowski,M,true,Olsztyn,1748-09-24,Świnoujście,1788-04-04,,Cemetery in Świnoujście,Cooper,Person
+267,Monika,Grabowska,F,true,Sandomierz,1748-06-13,Rzeszów,1803-02-15,War casualty,Cemetery in Rzeszów,Merchant,Person
+268,Czesława,Wieczorek,F,true,Jelenia Góra,1748-06-21,Jasło,1831-11-08,Influenza,Cemetery in Jasło,Lawyer,Person
+269,Danuta,Nowakowska,F,true,Słupsk,1749-01-18,Świdnica,1812-12-08,Starvation,Cemetery in Świdnica,Blacksmith,Person
+270,Wiktoria,Nowakowska,F,true,Stargard,1749-04-09,Inowrocław,1788-07-02,Pneumonia,Cemetery in Inowrocław,,Person
+271,Regina,Grabowska,F,true,Krosno,1749-04-03,Gorzów Wielkopolski,1802-04-09,Influenza,Cemetery in Gorzów Wielkopolski,Judge,Person
+272,Ewa,Kowalska,F,true,Kraków,1749-06-16,Thorn,1837-08-17,Starvation,Cemetery in Thorn,Soldier,Person
+273,Helena,Grabowska,F,true,Tarnów,1750-06-24,Krosno,1750-02-24,War casualty,Cemetery in Krosno,,Person
+274,Zofia,Wieczorek,F,true,Gorzów Wielkopolski,1750-10-09,Zakopane,1817-03-27,Unknown,Cemetery in Zakopane,Lawyer,Person
+275,Stefan,Wieczorek,M,true,Opole,1751-01-20,Breslau,1752-01-12,,Cemetery in Breslau,,Person
+276,Zuzanna,Nowakowska,F,true,Malbork,1751-12-11,Gorzów Wielkopolski,1795-08-22,Smallpox,Cemetery in Gorzów Wielkopolski,Tailor,Person
+277,Wanda,Grabowska,F,true,Sandomierz,1751-04-09,Września,1818-02-07,,Cemetery in Września,Cooper,Person
+278,Bożena,Grabowska,F,true,Tarnobrzeg,1751-12-28,Zielona Góra,1808-06-21,Infectious disease,Cemetery in Zielona Góra,Merchant,Person
+279,Krzysztof,Kowalski,M,true,Rzeszów,1751-07-27,Kraków,1804-02-07,Accident,Cemetery in Kraków,Farmer,Person
+280,Anna,Grabowska,F,true,Krosno,1752-05-16,Kielce,1834-04-08,,Cemetery in Kielce,Innkeeper,Person
+281,Franciszek,Wieczorek,M,true,Gorzów Wielkopolski,1752-02-10,Wałbrzych,1802-05-05,Smallpox,Cemetery in Wałbrzych,Cooper,Person
+282,Jadwiga,Nowakowska,F,true,Danzig,1752-02-14,Wejherowo,1752-09-22,Consumption,Cemetery in Wejherowo,,Person
+283,Aleksandra,Grabowska,F,true,Przemyśl,1752-09-09,Inowrocław,1808-10-09,Unknown,Cemetery in Inowrocław,Baker,Person
+284,Jadwiga,Wieczorek,F,true,Gorzów Wielkopolski,1753-12-22,Świdnica,1758-04-08,Murder,Cemetery in Świdnica,,Person
+285,Józef,Wieczorek,M,true,Wałbrzych,1753-11-21,Jelenia Góra,1799-08-15,Influenza,Cemetery in Jelenia Góra,,Person
+286,Mateusz,Grabowski,M,true,Oświęcim,1753-10-07,Zakopane,1794-12-03,Fever,Cemetery in Zakopane,Hunter,Person
+287,Barbara,Kowalska,F,true,Oświęcim,1753-05-28,Gostyń,1831-11-27,,Cemetery in Gostyń,Butcher,Person
+288,Wanda,Wieczorek,F,true,Jelenia Góra,1754-07-18,Posen,1808-04-07,Stroke,Cemetery in Posen,,Person
+289,Maciej,Nowakowski,M,true,Wejherowo,1754-12-20,Stargard,1754-12-10,Accident,Cemetery in Stargard,,Person
+290,Józefa,Wieczorek,F,true,Jelenia Góra,1754-08-23,Wałbrzych,1754-01-18,Smallpox,Cemetery in Wałbrzych,,Person
+291,Jan,Grabowski,M,true,Nowy Sącz,1755-02-20,Sanok,1821-09-04,Smallpox,Cemetery in Sanok,Carpenter,Person
+292,Jakub,Grabowski,M,true,Sandomierz,1755-12-23,Sandomierz,1777-05-27,Cholera,Cemetery in Sandomierz,Scribe,Person
+293,Czesław,Grabowski,M,true,Tarnów,1755-07-01,Oświęcim,1806-08-26,Fire,Cemetery in Oświęcim,Scribe,Person
+294,Leon,Wieczorek,M,true,Zielona Góra,1755-02-27,Jelenia Góra,1756-03-18,Accident,Cemetery in Jelenia Góra,,Person
+295,Joanna,Lewandowska,F,true,Inowrocław,1755-01-08,Tarnów,1827-09-27,Fire,Cemetery in Tarnów,Weaver,Person
+296,Józef,Lewandowski,M,true,Piła,1755-08-19,Rawicz,1755-01-22,Cancer,Cemetery in Rawicz,,Person
+297,Anna,Kowalska,F,true,Przemyśl,1756-06-04,Tarnów,1756-11-19,Consumption,Cemetery in Tarnów,,Person
+298,Łukasz,Grabowski,M,true,Kielce,1756-08-01,Rzeszów,1813-07-07,Heart failure,Cemetery in Rzeszów,Teacher,Person
+299,Jadwiga,Wieczorek,F,true,Opole,1756-11-11,Thorn,1819-12-05,Typhus,Cemetery in Thorn,,Person
+300,Ludwika,Lewandowska,F,true,Włocławek,1756-12-09,Jelenia Góra,1826-05-01,Pneumonia,Cemetery in Jelenia Góra,Farmer,Person
+301,Alicja,Wieczorek,F,true,Opole,1756-08-26,Przemyśl,1805-10-24,,Cemetery in Przemyśl,Hunter,Person
+302,Halina,Lewandowska,F,true,Bromberg,1756-02-20,Krosno,1807-10-24,Typhus,Cemetery in Krosno,,Person
+303,Urszula,Lewandowska,F,true,Gostyń,1756-09-26,Śrem,1760-09-13,Heart failure,Cemetery in Śrem,,Person
+304,Stanisław,Grabowski,M,true,Kraków,1757-02-19,Oświęcim,1824-01-23,Consumption,Cemetery in Oświęcim,Miner,Person
+305,Julian,Nowakowski,M,true,Słupsk,1757-12-14,Chojnice,1833-12-15,Plague,Cemetery in Chojnice,Carpenter,Person
+306,Ewa,Grabowska,F,true,Oświęcim,1757-03-23,Jelenia Góra,1793-02-12,Accident,Cemetery in Jelenia Góra,,Person
+307,Mirosław,Lewandowski,M,true,Śrem,1757-08-12,Piła,1813-11-23,Fire,Cemetery in Piła,Wheelwright,Person
+308,Franciszek,Lewandowski,M,true,Posen,1757-01-19,Rawicz,1809-06-22,Accident,Cemetery in Rawicz,,Person
+309,Jan,Grabowski,M,true,Nowy Sącz,1758-04-04,Przemyśl,1817-02-14,Dropsy,Cemetery in Przemyśl,Innkeeper,Person
+310,Grażyna,Wieczorek,F,true,Wałbrzych,1758-06-09,Olsztyn,1818-04-02,Fire,Cemetery in Olsztyn,Farmer,Person
+311,Piotr,Lewandowski,M,true,Września,1758-03-26,Kalisz,1826-12-26,Typhus,Cemetery in Kalisz,Merchant,Person
+312,Jerzy,Lewandowski,M,true,Września,1758-02-05,Grudziądz,1827-11-16,,Cemetery in Grudziądz,Farmer,Person
+313,Julia,Wieczorek,F,true,Świdnica,1759-06-12,Wałbrzych,1759-03-22,Unknown,Cemetery in Wałbrzych,,Person
+314,Władysław,Lewandowski,M,true,Leszno,1759-02-07,Piła,1799-01-12,Fire,Cemetery in Piła,Carpenter,Person
+315,Łukasz,Lewandowski,M,true,Grudziądz,1759-08-24,Kościan,1814-11-16,Smallpox,Cemetery in Kościan,Blacksmith,Person
+316,Zofia,Grabowska,F,true,Bochnia,1759-04-23,Kraków,1760-04-08,,Cemetery in Kraków,,Person
+317,Ryszard,Pawłowski,M,true,Opole,1759-02-19,Wałbrzych,1806-06-25,,Cemetery in Wałbrzych,Wheelwright,Person
+318,Władysław,Lewandowski,M,true,Grudziądz,1760-02-15,Włocławek,1797-04-07,Apoplexy,Cemetery in Włocławek,Mason,Person
+319,Bartosz,Lewandowski,M,true,Grudziądz,1760-11-11,Września,1760-11-28,Heart failure,Cemetery in Września,,Person
+320,Józefa,Lewandowska,F,true,Gostyń,1760-09-05,Wałbrzych,1807-02-27,Consumption,Cemetery in Wałbrzych,,Person
+321,Katarzyna,Wieczorek,F,true,Jelenia Góra,1760-06-12,Zielona Góra,1781-08-10,Starvation,Cemetery in Zielona Góra,Mason,Person
+322,Urszula,Grabowska,F,true,Bochnia,1760-04-04,Tarnobrzeg,1762-11-19,Fire,Cemetery in Tarnobrzeg,,Person
+323,Tomasz,Grabowski,M,true,Tarnobrzeg,1760-08-12,Oświęcim,1825-07-11,Typhus,Cemetery in Oświęcim,,Person
+324,Helena,Pawłowska,F,true,Zielona Góra,1760-08-09,Gdynia,1796-10-25,Apoplexy,Cemetery in Gdynia,Doctor,Person
+325,Kazimiera,Wieczorek,F,true,Gorzów Wielkopolski,1761-07-05,Legnica,1766-09-21,Unknown,Cemetery in Legnica,,Person
+326,Wiktoria,Wieczorek,F,true,Legnica,1761-11-27,Inowrocław,1827-08-20,Fire,Cemetery in Inowrocław,Tanner,Person
+327,Tomasz,Pawłowski,M,true,Zielona Góra,1761-02-17,Zielona Góra,1761-12-24,Cholera,Cemetery in Zielona Góra,,Person
+328,Barbara,Lewandowska,F,true,Rawicz,1762-03-26,Leszno,1799-04-03,Cholera,Cemetery in Leszno,,Person
+329,Ludwika,Lewandowska,F,true,Posen,1762-10-17,Krosno,1818-08-21,Typhus,Cemetery in Krosno,Cooper,Person
+330,Andrzej,Lewandowski,M,true,Grudziądz,1762-07-12,Kalisz,1763-02-06,Smallpox,Cemetery in Kalisz,,Person
+331,Małgorzata,Grabowska,F,true,Sandomierz,1762-11-06,Sanok,1824-11-08,Infectious disease,Cemetery in Sanok,Baker,Person
+332,Stefania,Grabowska,F,true,Kraków,1762-07-08,Krosno,1798-05-12,Influenza,Cemetery in Krosno,Lawyer,Person
+333,Monika,Pawłowska,F,true,Świdnica,1762-08-03,Kołobrzeg,1815-06-24,,Cemetery in Kołobrzeg,Lawyer,Person
+334,Józefa,Lewandowska,F,true,Śrem,1763-08-26,Września,1768-07-04,Apoplexy,Cemetery in Września,,Person
+335,Marcin,Wieczorek,M,true,Wałbrzych,1763-09-07,Breslau,1811-04-14,Fever,Cemetery in Breslau,,Person
+336,Marianna,Lewandowska,F,true,Włocławek,1763-05-12,Oświęcim,1836-06-15,Dysentery,Cemetery in Oświęcim,Scribe,Person
+337,Agnieszka,Grabowska,F,true,Sanok,1763-09-21,Tarnobrzeg,1764-12-02,Consumption,Cemetery in Tarnobrzeg,,Person
+338,Helena,Wieczorek,F,true,Zielona Góra,1763-12-13,Zielona Góra,1824-06-20,Unknown,Cemetery in Zielona Góra,Mason,Person
+339,Krystyna,Grabowska,F,true,Sanok,1763-04-07,Tarnów,1817-01-22,Pneumonia,Cemetery in Tarnów,Shoemaker,Person
+340,Adam,Lewandowski,M,false,Grudziądz,1764-08-02,,,,,,Person
+341,Zygmunt,Pawłowski,M,true,Jelenia Góra,1764-07-05,Świdnica,1764-07-13,Drowning,Cemetery in Świdnica,,Person
+342,Łukasz,Wieczorek,M,true,Świdnica,1765-05-01,Breslau,1803-03-11,,Cemetery in Breslau,Carpenter,Person
+343,Julian,Lewandowski,M,true,Rawicz,1765-04-20,Posen,1782-10-18,,Cemetery in Posen,,Person
+344,Monika,Grabowska,F,true,Jasło,1765-06-01,Ostrowiec Świętokrzyski,1767-12-15,Apoplexy,Cemetery in Ostrowiec Świętokrzyski,,Person
+345,Zygmunt,Wieczorek,M,true,Świdnica,1765-09-28,Jelenia Góra,1767-09-25,Unknown,Cemetery in Jelenia Góra,,Person
+346,Leokadia,Pawłowska,F,true,Świdnica,1765-12-25,Zakopane,1821-02-11,Stroke,Cemetery in Zakopane,Artist,Person
+347,Ludwika,Grabowska,F,true,Jasło,1765-08-11,Posen,1802-02-05,Accident,Cemetery in Posen,Miner,Person
+348,Leon,Kamiński,M,true,Rawicz,1765-06-27,Gniezno,1821-09-06,Typhus,Cemetery in Gniezno,Tanner,Person
+349,Ewa,Grabowska,F,true,Krosno,1766-02-03,Przemyśl,1770-09-05,,Cemetery in Przemyśl,,Person
+350,Maja,Wieczorek,F,true,Świdnica,1766-06-08,Jelenia Góra,1766-04-09,Unknown,Cemetery in Jelenia Góra,,Person
+351,Leon,Lewandowski,M,true,Śrem,1766-11-07,Ostrów Wielkopolski,1829-07-01,Fire,Cemetery in Ostrów Wielkopolski,,Person
+352,Bartosz,Grabowski,M,true,Zakopane,1766-05-10,Kielce,1820-10-04,Heart failure,Cemetery in Kielce,Tailor,Person
+353,Oliwia,Wieczorek,F,true,Wałbrzych,1767-04-23,Świdnica,1768-02-01,Plague,Cemetery in Świdnica,,Person
+354,Henryk,Wieczorek,M,true,Gorzów Wielkopolski,1767-06-21,Legnica,1825-05-28,Fever,Cemetery in Legnica,Judge,Person
+355,Wojciech,Grabowski,M,true,Krosno,1767-08-10,Krosno,1827-01-28,Accident,Cemetery in Krosno,Blacksmith,Person
+356,Helena,Kamińska,F,true,Gostyń,1767-11-25,Stettin,1820-09-08,Influenza,Cemetery in Stettin,,Person
+357,Grzegorz,Grabowski,M,true,Ostrowiec Świętokrzyski,1767-02-12,Nowy Sącz,1837-12-14,Dropsy,Cemetery in Nowy Sącz,Judge,Person
+358,Tomasz,Grabowski,M,true,Krosno,1767-12-15,Bochnia,1771-06-02,Accident,Cemetery in Bochnia,,Person
+359,Andrzej,Wieczorek,M,true,Gorzów Wielkopolski,1768-03-05,Jelenia Góra,1839-03-17,Murder,Cemetery in Jelenia Góra,Carpenter,Person
+360,Kazimierz,Grabowski,M,true,Oświęcim,1768-03-19,Zakopane,1784-10-23,Pneumonia,Cemetery in Zakopane,,Person
+361,Teresa,Wieczorek,F,true,Gorzów Wielkopolski,1768-04-07,Włocławek,1835-01-10,Heart failure,Cemetery in Włocławek,Lawyer,Person
+362,Marian,Wieczorek,M,true,Wałbrzych,1768-05-03,Gorzów Wielkopolski,1768-08-20,Dropsy,Cemetery in Gorzów Wielkopolski,,Person
+363,Zofia,Wieczorek,F,true,Breslau,1769-06-14,Rzeszów,1826-12-18,Dropsy,Cemetery in Rzeszów,Teacher,Person
+364,Monika,Lewandowska,F,true,Grudziądz,1769-06-04,Gniezno,1772-01-23,Plague,Cemetery in Gniezno,,Person
+365,Władysław,Kamiński,M,true,Kościan,1769-10-28,Posen,1811-02-11,Fire,Cemetery in Posen,Blacksmith,Person
+366,Anna,Grabowska,F,true,Przemyśl,1769-10-05,Sandomierz,1769-12-25,Accident,Cemetery in Sandomierz,,Person
+367,Bartosz,Grabowski,M,true,Nowy Sącz,1769-07-17,Sanok,1834-04-08,Fire,Cemetery in Sanok,Merchant,Person
+368,Kazimierz,Wieczorek,M,true,Breslau,1770-01-22,Wałbrzych,1771-04-28,Unknown,Cemetery in Wałbrzych,,Person
+369,Leokadia,Grabowska,F,true,Jasło,1770-05-21,Gniezno,1825-12-27,Pneumonia,Cemetery in Gniezno,Fisherman,Person
+370,Monika,Wieczorek,F,true,Wałbrzych,1770-02-06,Inowrocław,1831-05-20,Dysentery,Cemetery in Inowrocław,Blacksmith,Person
+371,Józef,Wieczorek,M,false,Świdnica,1771-04-01,,,,,,Person
+372,Oliwia,Wieczorek,F,true,Świdnica,1771-03-15,Breslau,1771-11-12,,Cemetery in Breslau,,Person
+373,Ignacy,Wieczorek,M,true,Jelenia Góra,1771-01-26,Jelenia Góra,1771-03-01,Pneumonia,Cemetery in Jelenia Góra,,Person
+374,Paweł,Lewandowski,M,true,Włocławek,1771-04-06,Gostyń,1821-05-27,Accident,Cemetery in Gostyń,,Person
+375,Adam,Grabowski,M,true,Zakopane,1771-07-13,Ostrowiec Świętokrzyski,1821-01-11,,Cemetery in Ostrowiec Świętokrzyski,Priest,Person
+376,Regina,Grabowska,F,true,Kielce,1771-09-08,Tarnów,1837-08-26,Apoplexy,Cemetery in Tarnów,Shoemaker,Person
+377,Teresa,Wieczorek,F,true,Jelenia Góra,1771-12-23,Ostrów Wielkopolski,1823-03-21,War casualty,Cemetery in Ostrów Wielkopolski,Weaver,Person
+378,Barbara,Grabowska,F,true,Przemyśl,1772-10-06,Jasło,1822-09-26,Consumption,Cemetery in Jasło,Cooper,Person
+379,Bożena,Grabowska,F,false,Przemyśl,1772-10-01,,,,,,Person
+380,Ignacy,Wieczorek,M,true,Opole,1772-01-19,Zielona Góra,1836-08-05,Cancer,Cemetery in Zielona Góra,Scribe,Person
+381,Joanna,Kamińska,F,true,Oświęcim,1772-01-01,Sanok,1773-11-15,Cancer,Cemetery in Sanok,,Person
+382,Kazimiera,Pawłowska,F,true,Opole,1772-07-13,Breslau,1823-03-22,Accident,Cemetery in Breslau,Miner,Person
+383,Bartosz,Grabowski,M,true,Oświęcim,1773-05-25,Sandomierz,1811-08-23,Smallpox,Cemetery in Sandomierz,Fisherman,Person
+384,Urszula,Wieczorek,F,true,Świdnica,1773-04-11,Posen,1811-02-24,Fire,Cemetery in Posen,Carpenter,Person
+385,Julian,Grabowski,M,false,Bochnia,1773-03-02,,,,,,Person
+386,Maja,Grabowska,F,true,Ostrowiec Świętokrzyski,1773-09-09,Ostrów Wielkopolski,1827-11-11,Accident,Cemetery in Ostrów Wielkopolski,Lawyer,Person
+387,Michał,Pawłowski,M,true,Opole,1773-02-11,Legnica,1774-08-26,Starvation,Cemetery in Legnica,,Person
+388,Jadwiga,Lewandowska,F,true,Konin,1774-05-17,Świdnica,1827-12-04,Infectious disease,Cemetery in Świdnica,Hunter,Person
+389,Dariusz,Kamiński,M,true,Przemyśl,1774-12-28,Oświęcim,1824-05-14,Drowning,Cemetery in Oświęcim,Tailor,Person
+390,Filip,Kamiński,M,true,Inowrocław,1774-04-07,Kościan,1837-03-20,Smallpox,Cemetery in Kościan,Cooper,Person
+391,Zofia,Grabowska,F,true,Oświęcim,1775-12-08,Rzeszów,1834-08-21,,Cemetery in Rzeszów,Mason,Person
+392,Helena,Kamińska,F,true,Oświęcim,1775-01-02,Świdnica,1829-10-12,Cancer,Cemetery in Świdnica,Shoemaker,Person
+393,Julia,Kowalska,F,true,Zakopane,1775-10-21,Krosno,1825-09-09,,Cemetery in Krosno,Hunter,Person
+394,Antoni,Wieczorek,M,true,Breslau,1776-07-18,Zielona Góra,1812-03-23,Infectious disease,Cemetery in Zielona Góra,Wheelwright,Person
+395,Grażyna,Pawłowska,F,true,Gorzów Wielkopolski,1776-05-16,Breslau,1780-03-15,Fever,Cemetery in Breslau,,Person
+396,Zuzanna,Kamińska,F,true,Bromberg,1776-02-28,Kościan,1777-09-15,War casualty,Cemetery in Kościan,,Person
+397,Ryszard,Kamiński,M,true,Inowrocław,1776-05-08,Kościan,1812-01-27,Consumption,Cemetery in Kościan,Miller,Person
+398,Tadeusz,Kamiński,M,true,Rzeszów,1777-03-18,Jasło,1777-11-16,Accident,Cemetery in Jasło,,Person
+399,Kamil,Nowakowski,M,true,Stettin,1777-11-20,Stargard,1780-04-25,Infectious disease,Cemetery in Stargard,,Person
+400,Adam,Kowalski,M,true,Przemyśl,1778-03-03,Rzeszów,1820-08-26,,Cemetery in Rzeszów,Innkeeper,Person
+401,Wiesław,Kamiński,M,true,Gostyń,1778-08-08,Posen,1783-05-12,Fire,Cemetery in Posen,,Person
+402,Wojciech,Pawłowski,M,true,Jelenia Góra,1778-04-13,Świdnica,1779-05-17,Dropsy,Cemetery in Świdnica,,Person
+403,Czesław,Kamiński,M,false,Gniezno,1779-06-27,,,,,,Person
+404,Franciszek,Kowalski,M,true,Bochnia,1779-07-14,Zakopane,1780-12-28,Dysentery,Cemetery in Zakopane,,Person
+405,Zygmunt,Pawłowski,M,true,Gorzów Wielkopolski,1779-10-13,Gorzów Wielkopolski,1779-06-02,Smallpox,Cemetery in Gorzów Wielkopolski,,Person
+406,Grażyna,Nowakowska,F,true,Stettin,1779-03-27,Koszalin,1789-11-14,,Cemetery in Koszalin,,Person
+407,Marianna,Wieczorek,F,false,Zielona Góra,1779-06-20,,,,,,Person
+408,Halina,Kamińska,F,true,Nowy Sącz,1780-07-07,Wałbrzych,1838-07-09,,Cemetery in Wałbrzych,Scribe,Person
+409,Halina,Pawłowska,F,true,Gorzów Wielkopolski,1780-06-13,Legnica,1781-02-07,Drowning,Cemetery in Legnica,,Person
+410,Wiesław,Kamiński,M,true,Rawicz,1781-04-16,Ostrów Wielkopolski,1824-06-05,Typhus,Cemetery in Ostrów Wielkopolski,Tailor,Person
+411,Grzegorz,Pawłowski,M,true,Wałbrzych,1781-09-26,Jelenia Góra,1833-07-08,Dysentery,Cemetery in Jelenia Góra,Blacksmith,Person
+412,Henryk,Nowakowski,M,true,Elbląg,1781-08-09,Stargard,1829-08-25,Smallpox,Cemetery in Stargard,Mason,Person
+413,Jakub,Wieczorek,M,true,Wałbrzych,1781-05-08,Gorzów Wielkopolski,1782-03-12,Fever,Cemetery in Gorzów Wielkopolski,,Person
+414,Stefan,Pawłowski,M,true,Opole,1781-02-24,Legnica,1826-10-20,War casualty,Cemetery in Legnica,,Person
+415,Wojciech,Wieczorek,M,true,Zielona Góra,1781-05-20,Zielona Góra,1844-04-05,Cancer,Cemetery in Zielona Góra,Tailor,Person
+416,Zygmunt,Grabowski,M,true,Kraków,1781-08-22,Rzeszów,1802-04-20,Murder,Cemetery in Rzeszów,Hunter,Person
+417,Halina,Kamińska,F,true,Oświęcim,1782-05-18,Sandomierz,1784-02-15,Cancer,Cemetery in Sandomierz,,Person
+418,Joanna,Kamińska,F,true,Kalisz,1782-03-10,Września,1810-10-22,Smallpox,Cemetery in Września,Fisherman,Person
+419,Szymon,Kowalski,M,true,Sanok,1782-12-03,Przemyśl,1811-04-22,Consumption,Cemetery in Przemyśl,Miner,Person
+420,Andrzej,Pawłowski,M,true,Jelenia Góra,1782-06-19,Zielona Góra,1822-11-12,,Cemetery in Zielona Góra,Teacher,Person
+421,Józefa,Lewandowska,F,false,Gniezno,1782-06-09,,,,,,Person
+422,Urszula,Pawłowska,F,true,Opole,1782-02-07,Breslau,1786-02-07,Pneumonia,Cemetery in Breslau,,Person
+423,Marian,Kamiński,M,true,Września,1782-02-15,Konin,1822-05-20,Unknown,Cemetery in Konin,Shoemaker,Person
+424,Michał,Wieczorek,M,true,Legnica,1782-12-26,Gorzów Wielkopolski,1838-02-06,Stroke,Cemetery in Gorzów Wielkopolski,Innkeeper,Person
+425,Mateusz,Grabowski,M,false,Ostrowiec Świętokrzyski,1782-04-16,,,,,,Person
+426,Władysław,Kamiński,M,true,Zakopane,1783-01-15,Oświęcim,1841-08-07,Consumption,Cemetery in Oświęcim,Clerk,Person
+427,Wiesław,Kamiński,M,true,Września,1783-09-26,Grudziądz,1840-10-04,Fire,Cemetery in Grudziądz,Priest,Person
+428,Ludwika,Kamińska,F,true,Thorn,1783-11-10,Posen,1787-03-18,Apoplexy,Cemetery in Posen,,Person
+429,Tadeusz,Nowakowski,M,true,Koszalin,1783-08-23,Danzig,1825-04-04,Dysentery,Cemetery in Danzig,,Person
+430,Krzysztof,Wieczorek,M,true,Gorzów Wielkopolski,1783-08-05,Gorzów Wielkopolski,1783-03-06,Smallpox,Cemetery in Gorzów Wielkopolski,,Person
+431,Regina,Lewandowska,F,false,Śrem,1783-09-26,,,,,,Person
+432,Wiktoria,Kamińska,F,false,Kościan,1783-03-04,,,,,,Person
+433,Krystyna,Kowalska,F,false,Sanok,1784-06-26,,,,,,Person
+434,Grzegorz,Pawłowski,M,true,Jelenia Góra,1784-11-04,Legnica,1787-02-02,Dropsy,Cemetery in Legnica,,Person
+435,Wojciech,Nowakowski,M,false,Wejherowo,1784-12-13,,,,,,Person
+436,Grażyna,Wieczorek,F,true,Legnica,1784-01-16,Kościan,1838-09-16,Stroke,Cemetery in Kościan,Tailor,Person
+437,Anna,Pawłowska,F,true,Legnica,1784-11-14,Opole,1785-08-12,Stroke,Cemetery in Opole,,Person
+438,Maja,Pawłowska,F,true,Breslau,1784-12-13,Gorzów Wielkopolski,1785-06-01,Accident,Cemetery in Gorzów Wielkopolski,,Person
+439,Regina,Grabowska,F,true,Rzeszów,1784-12-05,Zakopane,1785-11-03,Stroke,Cemetery in Zakopane,,Person
+440,Jan,Grabowski,M,true,Bochnia,1784-04-16,Ostrowiec Świętokrzyski,1833-06-06,Pneumonia,Cemetery in Ostrowiec Świętokrzyski,,Person
+441,Anna,Kamińska,F,true,Piła,1785-01-05,Konin,1788-06-18,,Cemetery in Konin,,Person
+442,Marian,Kamiński,M,false,Śrem,1785-03-02,,,,,,Person
+443,Szymon,Pawłowski,M,false,Wałbrzych,1785-12-07,,,,,,Person
+444,Czesław,Kamiński,M,true,Gniezno,1785-03-14,Gniezno,1785-06-05,,Cemetery in Gniezno,,Person
+445,Leokadia,Grabowska,F,true,Zakopane,1785-06-15,Kołobrzeg,1829-03-07,Cancer,Cemetery in Kołobrzeg,Tailor,Person
+446,Czesław,Grabowski,M,true,Sanok,1785-02-13,Rzeszów,1790-10-05,Dysentery,Cemetery in Rzeszów,,Person
+447,Marcin,Lewandowski,M,true,Posen,1785-04-08,Konin,1839-08-25,,Cemetery in Konin,Judge,Person
+448,Kamil,Kowalski,M,true,Bochnia,1786-03-15,Nowy Sącz,1787-03-04,Cancer,Cemetery in Nowy Sącz,,Person
+449,Krzysztof,Pawłowski,M,true,Wałbrzych,1786-07-05,Świdnica,1788-03-22,Smallpox,Cemetery in Świdnica,,Person
+450,Jan,Nowakowski,M,true,Stargard,1786-07-26,Chojnice,1839-11-01,Cholera,Cemetery in Chojnice,,Person
+451,Wiktoria,Wieczorek,F,true,Zielona Góra,1786-03-26,Inowrocław,1835-01-19,Plague,Cemetery in Inowrocław,Cooper,Person
+452,Mateusz,Pawłowski,M,true,Opole,1786-09-14,Opole,1807-03-27,Infectious disease,Cemetery in Opole,Doctor,Person
+453,Czesław,Grabowski,M,false,Krosno,1786-08-23,,,,,,Person
+454,Natalia,Nowakowska,F,false,Olsztyn,1786-11-11,,,,,,Person
+455,Stefan,Lewandowski,M,true,Bromberg,1786-11-28,Piła,1834-09-28,Stroke,Cemetery in Piła,Mason,Person
+456,Stefan,Grabowski,M,true,Sandomierz,1786-07-14,Rzeszów,1789-08-26,Cholera,Cemetery in Rzeszów,,Person
+457,Kazimierz,Lewandowski,M,true,Leszno,1786-10-20,Rawicz,1837-12-19,Smallpox,Cemetery in Rawicz,Potter,Person
+458,Wojciech,Wieczorek,M,true,Opole,1787-11-14,Świdnica,1839-01-09,Cancer,Cemetery in Świdnica,Clerk,Person
+459,Alicja,Pawłowska,F,true,Wałbrzych,1787-09-01,Opole,1839-02-05,Cancer,Cemetery in Opole,Carpenter,Person
+460,Zofia,Kamińska,F,true,Leszno,1787-06-24,Breslau,1838-07-26,Smallpox,Cemetery in Breslau,Miller,Person
+461,Maria,Lewandowska,F,false,Konin,1787-10-04,,,,,,Person
+462,Agnieszka,Grabowska,F,true,Tarnobrzeg,1787-02-14,Ostrowiec Świętokrzyski,1788-08-06,Drowning,Cemetery in Ostrowiec Świętokrzyski,,Person
+463,Wiesław,Kowalski,M,false,Bochnia,1788-01-01,,,,,,Person
+464,Aleksandra,Pawłowska,F,true,Wałbrzych,1788-08-02,Krosno,1835-03-21,Accident,Cemetery in Krosno,Fisherman,Person
+465,Stefania,Pawłowska,F,true,Breslau,1788-03-17,Legnica,1814-02-28,Plague,Cemetery in Legnica,Mason,Person
+466,Zuzanna,Grabowska,F,true,Rzeszów,1788-09-22,Kielce,1789-07-06,Smallpox,Cemetery in Kielce,,Person
+467,Joanna,Nowakowska,F,true,Gdynia,1788-11-07,Posen,1811-04-11,Unknown,Cemetery in Posen,Baker,Person
+468,Maciej,Lewandowski,M,true,Inowrocław,1788-04-25,Kalisz,1828-07-08,,Cemetery in Kalisz,Tanner,Person
+469,Leokadia,Grabowska,F,false,Kielce,1788-12-15,,,,,,Person
+470,Krystyna,Lewandowska,F,true,Gostyń,1788-09-20,Sanok,1835-04-08,Dropsy,Cemetery in Sanok,,Person
+471,Teresa,Grabowska,F,false,Zakopane,1788-04-23,,,,,,Person
+472,Kazimierz,Grabowski,M,true,Tarnów,1788-04-24,Kielce,1841-04-28,Typhus,Cemetery in Kielce,,Person
+473,Julia,Lewandowska,F,false,Gostyń,1788-04-07,,,,,,Person
+474,Jadwiga,Wieczorek,F,true,Gorzów Wielkopolski,1789-12-09,Piła,1841-03-28,Starvation,Cemetery in Piła,Miner,Person
+475,Joanna,Pawłowska,F,true,Breslau,1789-04-09,Świnoujście,1842-03-16,,Cemetery in Świnoujście,,Person
+476,Zuzanna,Nowakowska,F,true,Malbork,1789-02-18,Chojnice,1807-01-13,Dysentery,Cemetery in Chojnice,Cooper,Person
+477,Mirosław,Lewandowski,M,true,Rawicz,1789-09-05,Gniezno,1803-07-15,Plague,Cemetery in Gniezno,,Person
+478,Stefania,Lewandowska,F,true,Włocławek,1789-10-26,Zakopane,1816-05-18,,Cemetery in Zakopane,Soldier,Person
+479,Oliwia,Grabowska,F,true,Kraków,1789-06-08,Jelenia Góra,1843-11-20,Heart failure,Cemetery in Jelenia Góra,Tailor,Person
+480,Bartosz,Lewandowski,M,true,Piła,1789-11-09,Konin,1813-12-04,Stroke,Cemetery in Konin,Scribe,Person
+481,Kazimiera,Pawłowska,F,false,Opole,1790-06-07,,,,,,Person
+482,Marianna,Pawłowska,F,true,Wałbrzych,1790-06-08,Opole,1791-09-27,Drowning,Cemetery in Opole,,Person
+483,Grażyna,Grabowska,F,false,Ostrowiec Świętokrzyski,1790-09-18,,,,,,Person
+484,Danuta,Grabowska,F,true,Kraków,1790-05-04,Nowy Sącz,1790-06-28,Unknown,Cemetery in Nowy Sącz,,Person
+485,Krzysztof,Grabowski,M,true,Przemyśl,1790-03-18,Bochnia,1790-11-20,Stroke,Cemetery in Bochnia,,Person
+486,Ryszard,Lewandowski,M,true,Leszno,1790-09-02,Piła,1840-09-18,Accident,Cemetery in Piła,Mason,Person
+487,Elżbieta,Kowalska,F,true,Kraków,1791-04-01,Tarnów,1791-10-11,Cholera,Cemetery in Tarnów,,Person
+488,Wojciech,Nowakowski,M,false,Świnoujście,1791-11-15,,,,,,Person
+489,Helena,Grabowska,F,false,Tarnów,1791-07-01,,,,,,Person
+490,Marcin,Lewandowski,M,false,Śrem,1791-01-13,,,,,,Person
+491,Małgorzata,Lewandowska,F,true,Kalisz,1791-07-12,Kalisz,1815-11-28,Drowning,Cemetery in Kalisz,Cooper,Person
+492,Łukasz,Kamiński,M,true,Kalisz,1791-02-08,Thorn,1792-02-06,Accident,Cemetery in Thorn,,Person
+493,Helena,Grabowska,F,false,Krosno,1791-01-23,,,,,,Person
+494,Oliwia,Grabowska,F,true,Kraków,1791-12-02,Tarnów,1792-08-16,Dysentery,Cemetery in Tarnów,,Person
+495,Krzysztof,Lewandowski,M,false,Posen,1791-08-07,,,,,,Person
+496,Szymon,Wieczorek,M,false,Legnica,1792-09-04,,,,,,Person
+497,Ludwika,Grabowska,F,true,Oświęcim,1792-12-25,Gniezno,1835-01-18,,Cemetery in Gniezno,Blacksmith,Person
+498,Alicja,Grabowska,F,true,Zakopane,1792-05-20,Nowy Sącz,1792-06-11,Influenza,Cemetery in Nowy Sącz,,Person
+499,Danuta,Lewandowska,F,true,Ostrów Wielkopolski,1792-08-06,Posen,1793-07-22,Plague,Cemetery in Posen,,Person
+500,Jadwiga,Grabowska,F,true,Jasło,1793-06-04,Nowy Sącz,1798-12-23,Dropsy,Cemetery in Nowy Sącz,,Person
+501,Julia,Grabowska,F,true,Przemyśl,1793-08-01,Kraków,1797-05-23,Drowning,Cemetery in Kraków,,Person
+502,Stefan,Grabowski,M,false,Bochnia,1793-03-25,,,,,,Person
+503,Teresa,Grabowska,F,true,Oświęcim,1793-07-10,Zakopane,1794-08-20,Smallpox,Cemetery in Zakopane,,Person
+504,Maria,Lewandowska,F,false,Śrem,1793-11-09,,,,,,Person
+505,Julian,Kamiński,M,false,Kościan,1793-06-21,,,,,,Person
+506,Agnieszka,Grabowska,F,false,Nowy Sącz,1793-05-21,,,,,,Person
+507,Leon,Grabowski,M,true,Kraków,1793-06-13,Rzeszów,1794-02-11,Unknown,Cemetery in Rzeszów,,Person
+508,Zofia,Lewandowska,F,true,Gniezno,1793-12-09,Bromberg,1840-05-16,Unknown,Cemetery in Bromberg,Miner,Person
+509,Monika,Grabowska,F,true,Przemyśl,1793-02-19,Kalisz,1838-05-13,Cholera,Cemetery in Kalisz,Judge,Person
+510,Ludwika,Wieczorek,F,true,Legnica,1794-02-14,Gorzów Wielkopolski,1844-02-25,War casualty,Cemetery in Gorzów Wielkopolski,,Person
+511,Wojciech,Grabowski,M,true,Rzeszów,1794-02-05,Ostrowiec Świętokrzyski,1834-10-03,,Cemetery in Ostrowiec Świętokrzyski,,Person
+512,Genowefa,Lewandowska,F,true,Gniezno,1794-02-03,Rawicz,1795-05-09,,Cemetery in Rawicz,,Person
+513,Danuta,Lewandowska,F,true,Włocławek,1794-12-03,Grudziądz,1842-02-22,Pneumonia,Cemetery in Grudziądz,Shepherd,Person
+514,Tadeusz,Grabowski,M,true,Sanok,1795-01-06,Sanok,1796-12-25,Typhus,Cemetery in Sanok,,Person
+515,Marek,Grabowski,M,true,Kraków,1795-10-02,Sandomierz,1796-02-01,Apoplexy,Cemetery in Sandomierz,,Person
+516,Zofia,Grabowska,F,true,Tarnobrzeg,1795-05-13,Zakopane,1796-07-23,Starvation,Cemetery in Zakopane,,Person
+517,Ignacy,Lewandowski,M,false,Kalisz,1795-01-01,,,,,,Person
+518,Ryszard,Kamiński,M,true,Śrem,1795-05-12,Ostrów Wielkopolski,1816-04-27,Fire,Cemetery in Ostrów Wielkopolski,Doctor,Person
+519,Marian,Grabowski,M,true,Kraków,1796-08-18,Jasło,1797-01-23,Apoplexy,Cemetery in Jasło,,Person
+520,Adam,Grabowski,M,false,Rzeszów,1796-12-23,,,,,,Person
+521,Kazimiera,Kamińska,F,true,Thorn,1796-06-02,Posen,1797-03-16,,Cemetery in Posen,,Person
+522,Czesław,Grabowski,M,true,Bochnia,1796-04-26,Kielce,1796-08-23,Murder,Cemetery in Kielce,,Person
+523,Józef,Wieczorek,M,false,Świdnica,1796-11-22,,,,,,Person
+524,Paweł,Grabowski,M,false,Nowy Sącz,1797-11-17,,,,,,Person
+525,Helena,Kamińska,F,false,Września,1797-11-12,,,,,,Person
+526,Genowefa,Grabowska,F,false,Jasło,1797-09-15,,,,,,Person
+527,Maciej,Grabowski,M,false,Oświęcim,1797-01-03,,,,,,Person
+528,Józefa,Lewandowska,F,false,Gniezno,1797-07-24,,,,,,Person
+529,Mateusz,Kamiński,M,true,Włocławek,1797-05-05,Posen,1800-05-28,War casualty,Cemetery in Posen,,Person
+530,Agnieszka,Lewandowska,F,true,Włocławek,1797-08-26,Bromberg,1798-07-24,Dysentery,Cemetery in Bromberg,,Person
+531,Kamil,Lewandowski,M,false,Inowrocław,1798-10-16,,,,,,Person
+532,Łukasz,Wieczorek,M,true,Opole,1798-06-20,Legnica,1817-10-28,Dropsy,Cemetery in Legnica,Hunter,Person
+533,Alicja,Grabowska,F,false,Ostrowiec Świętokrzyski,1799-07-15,,,,,,Person
+534,Maria,Grabowska,F,false,Ostrowiec Świętokrzyski,1799-03-24,,,,,,Person
+535,Antoni,Lewandowski,M,false,Ostrów Wielkopolski,1799-04-21,,,,,,Person
+536,Czesława,Kamińska,F,false,Września,1799-08-26,,,,,,Person
+537,Zofia,Lewandowska,F,true,Piła,1799-08-13,Kościan,1835-02-14,Dysentery,Cemetery in Kościan,,Person
+538,Kazimiera,Wieczorek,F,false,Opole,1799-09-21,,,,,,Person
+539,Michał,Wieczorek,M,true,Wałbrzych,1799-03-06,Opole,1836-03-08,Pneumonia,Cemetery in Opole,Weaver,Person
+540,Józefa,Lewandowska,F,true,Gostyń,1799-07-14,Piła,1800-05-28,Cancer,Cemetery in Piła,,Person
+541,Regina,Kamińska,F,false,Inowrocław,1799-12-12,,,,,,Person
+542,Grzegorz,Wieczorek,M,false,Breslau,1799-03-14,,,,,,Person
+543,Danuta,Nowakowska,F,false,Koszalin,1799-08-15,,,,,,Person
+544,Jan,Grabowski,M,false,Jasło,1800-09-13,,,,,,Person
+545,Jan,Kamiński,M,false,Ostrów Wielkopolski,1800-07-18,,,,,,Person
+546,Łukasz,Lewandowski,M,true,Gostyń,1800-12-06,Konin,1800-08-27,Murder,Cemetery in Konin,,Person
+547,Bożena,Kowalska,F,false,Nowy Sącz,1800-06-12,,,,,,Person
+548,Grzegorz,Lewandowski,M,false,Piła,1801-12-26,,,,,,Person
+549,Natalia,Wieczorek,F,true,Gorzów Wielkopolski,1801-09-26,Wałbrzych,1802-05-27,Drowning,Cemetery in Wałbrzych,,Person
+550,Józefa,Nowakowska,F,false,Koszalin,1801-12-08,,,,,,Person
+551,Antoni,Kamiński,M,false,Leszno,1801-08-04,,,,,,Person
+552,Henryk,Grabowski,M,false,Sanok,1802-11-05,,,,,,Person
+553,Monika,Lewandowska,F,false,Rawicz,1802-09-21,,,,,,Person
+554,Natalia,Lewandowska,F,false,Thorn,1802-09-21,,,,,,Person
+555,Paweł,Wieczorek,M,true,Wałbrzych,1802-03-09,Jelenia Góra,1844-08-15,,Cemetery in Jelenia Góra,Baker,Person
+556,Antoni,Wieczorek,M,false,Breslau,1802-12-07,,,,,,Person
+557,Stanisław,Kamiński,M,true,Śrem,1802-05-18,Kościan,1802-12-24,Fire,Cemetery in Kościan,,Person
+558,Wiesław,Kamiński,M,true,Gostyń,1802-11-21,Włocławek,1803-04-07,Consumption,Cemetery in Włocławek,,Person
+559,Teresa,Lewandowska,F,false,Ostrów Wielkopolski,1803-05-26,,,,,,Person
+560,Kazimierz,Kamiński,M,false,Inowrocław,1803-08-18,,,,,,Person
+561,Dariusz,Lewandowski,M,false,Kościan,1803-10-26,,,,,,Person
+562,Irena,Wieczorek,F,false,Gorzów Wielkopolski,1803-04-14,,,,,,Person
+563,Elżbieta,Wieczorek,F,false,Wałbrzych,1803-06-16,,,,,,Person
+564,Henryk,Wieczorek,M,false,Opole,1803-12-06,,,,,,Person
+565,Maciej,Kowalski,M,false,Bochnia,1803-04-02,,,,,,Person
+566,Piotr,Kamiński,M,false,Sanok,1803-09-23,,,,,,Person
+567,Mateusz,Grabowski,M,true,Bochnia,1803-08-13,Jasło,1803-01-16,Accident,Cemetery in Jasło,,Person
+568,Adam,Kowalski,M,false,Nowy Sącz,1803-05-17,,,,,,Person
+569,Elżbieta,Grabowska,F,false,Przemyśl,1804-09-20,,,,,,Person
+570,Czesław,Kamiński,M,false,Kościan,1804-05-18,,,,,,Person
+571,Julian,Wieczorek,M,false,Gorzów Wielkopolski,1804-06-06,,,,,,Person
+572,Krystyna,Kamińska,F,false,Kościan,1804-02-11,,,,,,Person
+573,Michał,Kamiński,M,false,Rzeszów,1804-03-15,,,,,,Person
+574,Stanisław,Kowalski,M,true,Sanok,1804-11-03,Krosno,1804-02-26,Drowning,Cemetery in Krosno,,Person
+575,Małgorzata,Kamińska,F,false,Śrem,1804-11-02,,,,,,Person
+576,Bożena,Wieczorek,F,true,Breslau,1804-03-28,Breslau,1841-06-22,War casualty,Cemetery in Breslau,Judge,Person
+577,Regina,Wieczorek,F,true,Opole,1804-08-14,Zielona Góra,1825-01-08,Murder,Cemetery in Zielona Góra,Cooper,Person
+578,Mateusz,Wieczorek,M,true,Wałbrzych,1804-03-25,Gorzów Wielkopolski,1805-01-09,Pneumonia,Cemetery in Gorzów Wielkopolski,,Person
+579,Anna,Lewandowska,F,true,Września,1805-02-12,Leszno,1806-09-21,Drowning,Cemetery in Leszno,,Person
+580,Julian,Kamiński,M,false,Konin,1805-03-04,,,,,,Person
+581,Czesław,Wieczorek,M,false,Gorzów Wielkopolski,1805-04-17,,,,,,Person
+582,Rozalia,Grabowska,F,false,Sanok,1805-01-23,,,,,,Person
+583,Paweł,Wieczorek,M,false,Jelenia Góra,1805-04-26,,,,,,Person
+584,Jan,Wieczorek,M,false,Breslau,1806-12-24,,,,,,Person
+585,Franciszek,Wieczorek,M,false,Gorzów Wielkopolski,1806-02-11,,,,,,Person
+586,Natalia,Wieczorek,F,false,Opole,1806-07-24,,,,,,Person
+587,Jan,Grabowski,M,false,Oświęcim,1806-10-10,,,,,,Person
+588,Mateusz,Kowalski,M,true,Bochnia,1806-12-23,Kraków,1828-03-28,Smallpox,Cemetery in Kraków,Blacksmith,Person
+589,Ludwika,Kamińska,F,true,Posen,1806-08-19,Września,1811-02-14,Dropsy,Cemetery in Września,,Person
+590,Czesława,Wieczorek,F,true,Zielona Góra,1806-07-10,Wałbrzych,1807-02-07,,Cemetery in Wałbrzych,,Person
+591,Urszula,Kamińska,F,false,Ostrów Wielkopolski,1806-09-25,,,,,,Person
+592,Zofia,Kamińska,F,true,Tarnów,1807-11-03,Krosno,1807-09-27,,Cemetery in Krosno,,Person
+593,Antoni,Grabowski,M,true,Jasło,1807-02-22,Sanok,1810-02-24,Plague,Cemetery in Sanok,,Person
+594,Paweł,Wieczorek,M,true,Zielona Góra,1807-12-28,Jelenia Góra,1836-08-03,Fever,Cemetery in Jelenia Góra,,Person
+595,Adam,Wieczorek,M,false,Wałbrzych,1807-10-01,,,,,,Person
+596,Łukasz,Kamiński,M,true,Września,1808-11-05,Ostrów Wielkopolski,1810-02-21,Typhus,Cemetery in Ostrów Wielkopolski,,Person
+597,Stanisław,Wieczorek,M,true,Opole,1808-04-28,Jelenia Góra,1809-01-12,Consumption,Cemetery in Jelenia Góra,,Person
+598,Bartosz,Kamiński,M,true,Sandomierz,1808-12-14,Oświęcim,1813-08-23,War casualty,Cemetery in Oświęcim,,Person
+599,Władysław,Kowalski,M,false,Kielce,1808-08-15,,,,,,Person
+600,Stefan,Wieczorek,M,false,Gorzów Wielkopolski,1808-07-09,,,,,,Person
+601,Alicja,Wieczorek,F,false,Gorzów Wielkopolski,1808-12-11,,,,,,Person
+602,Czesława,Grabowska,F,false,Sandomierz,1808-04-25,,,,,,Person
+603,Oliwia,Wieczorek,F,true,Breslau,1808-06-04,Świdnica,1809-11-11,,Cemetery in Świdnica,,Person
+604,Jadwiga,Kamińska,F,false,Września,1808-08-03,,,,,,Person
+605,Franciszek,Kamiński,M,true,Sandomierz,1808-04-24,Rzeszów,1809-08-03,,Cemetery in Rzeszów,,Person
+606,Danuta,Wieczorek,F,false,Świdnica,1809-01-05,,,,,,Person
+607,Elżbieta,Grabowska,F,false,Oświęcim,1809-01-17,,,,,,Person
+608,Jakub,Kowalski,M,true,Rzeszów,1809-10-18,Zakopane,1810-03-27,Fire,Cemetery in Zakopane,,Person
+609,Jadwiga,Kamińska,F,true,Konin,1809-10-26,Posen,1822-09-06,Smallpox,Cemetery in Posen,,Person
+610,Krystyna,Wieczorek,F,true,Wałbrzych,1809-10-03,Piła,1835-09-06,Cholera,Cemetery in Piła,Wheelwright,Person
+611,Maja,Wieczorek,F,true,Gorzów Wielkopolski,1809-01-11,Zielona Góra,1809-05-11,Influenza,Cemetery in Zielona Góra,,Person
+612,Czesław,Kamiński,M,false,Grudziądz,1809-11-01,,,,,,Person
+613,Genowefa,Grabowska,F,false,Tarnów,1809-12-03,,,,,,Person
+614,Mirosław,Pawłowski,M,true,Zielona Góra,1809-06-08,Legnica,1814-03-15,Typhus,Cemetery in Legnica,,Person
+615,Maja,Kamińska,F,false,Gniezno,1810-01-16,,,,,,Person
+616,Tomasz,Grabowski,M,false,Oświęcim,1810-01-24,,,,,,Person
+617,Jadwiga,Kowalska,F,false,Tarnów,1810-04-11,,,,,,Person
+618,Joanna,Kamińska,F,true,Thorn,1810-09-08,Grudziądz,1811-08-06,Consumption,Cemetery in Grudziądz,,Person
+619,Wojciech,Wieczorek,M,false,Breslau,1810-07-02,,,,,,Person
+620,Władysław,Kamiński,M,false,Bromberg,1810-01-08,,,,,,Person
+621,Piotr,Kamiński,M,true,Tarnów,1810-07-05,Kielce,1842-01-02,Drowning,Cemetery in Kielce,Judge,Person
+622,Agnieszka,Nowakowska,F,true,Gdynia,1810-07-11,Sandomierz,1835-06-12,Plague,Cemetery in Sandomierz,Wheelwright,Person
+623,Paweł,Kamiński,M,false,Bromberg,1810-10-24,,,,,,Person
+624,Ignacy,Grabowski,M,false,Przemyśl,1810-10-08,,,,,,Person
+625,Halina,Grabowska,F,true,Krosno,1811-04-05,Kielce,1815-06-03,Influenza,Cemetery in Kielce,,Person
+626,Teresa,Kamińska,F,true,Grudziądz,1811-12-23,Ostrów Wielkopolski,1812-11-28,,Cemetery in Ostrów Wielkopolski,,Person
+627,Julian,Wieczorek,M,false,Legnica,1811-10-24,,,,,,Person
+628,Anna,Wieczorek,F,false,Breslau,1811-03-14,,,,,,Person
+629,Ewa,Wieczorek,F,false,Świdnica,1811-04-16,,,,,,Person
+630,Ignacy,Pawłowski,M,false,Opole,1811-05-01,,,,,,Person
+631,Monika,Nowakowska,F,true,Chojnice,1811-06-24,Świnoujście,1815-08-24,Dysentery,Cemetery in Świnoujście,,Person
+632,Aleksandra,Kamińska,F,false,Thorn,1811-03-28,,,,,,Person
+633,Zygmunt,Grabowski,M,true,Krosno,1811-01-21,Nowy Sącz,1829-09-03,War casualty,Cemetery in Nowy Sącz,Butcher,Person
+634,Andrzej,Wieczorek,M,false,Opole,1812-03-18,,,,,,Person
+635,Piotr,Grabowski,M,true,Zakopane,1812-03-04,Nowy Sącz,1812-10-12,Infectious disease,Cemetery in Nowy Sącz,,Person
+636,Marianna,Kamińska,F,false,Przemyśl,1812-02-09,,,,,,Person
+637,Urszula,Nowakowska,F,true,Olsztyn,1812-04-04,Olsztyn,1812-04-27,,Cemetery in Olsztyn,,Person
+638,Natalia,Lewandowska,F,false,Śrem,1812-10-23,,,,,,Person
+639,Julia,Wieczorek,F,false,Opole,1812-04-09,,,,,,Person
+640,Barbara,Wieczorek,F,true,Gorzów Wielkopolski,1813-07-08,Wałbrzych,1813-07-23,Dropsy,Cemetery in Wałbrzych,,Person
+641,Marianna,Wieczorek,F,false,Gorzów Wielkopolski,1813-10-06,,,,,,Person
+642,Józef,Wieczorek,M,false,Wałbrzych,1813-02-02,,,,,,Person
+643,Łukasz,Kamiński,M,false,Leszno,1813-05-16,,,,,,Person
+644,Katarzyna,Kamińska,F,false,Kalisz,1813-11-14,,,,,,Person
+645,Czesława,Grabowska,F,false,Nowy Sącz,1813-10-25,,,,,,Person
+646,Andrzej,Lewandowski,M,false,Posen,1813-01-15,,,,,,Person
+647,Kazimierz,Lewandowski,M,true,Konin,1813-04-22,Rawicz,1813-04-21,Infectious disease,Cemetery in Rawicz,,Person
+648,Anna,Wieczorek,F,false,Wałbrzych,1813-01-18,,,,,,Person
+649,Krystyna,Pawłowska,F,false,Legnica,1813-07-20,,,,,,Person
+650,Krystyna,Lewandowska,F,false,Thorn,1813-07-07,,,,,,Person
+651,Józefa,Nowakowska,F,true,Stargard,1813-05-23,Stettin,1814-04-13,Influenza,Cemetery in Stettin,,Person
+652,Teresa,Pawłowska,F,false,Jelenia Góra,1813-09-12,,,,,,Person
+653,Zuzanna,Lewandowska,F,false,Kościan,1813-01-27,,,,,,Person
+654,Julian,Kamiński,M,false,Ostrów Wielkopolski,1814-02-03,,,,,,Person
+655,Kazimierz,Kamiński,M,false,Bochnia,1814-08-15,,,,,,Person
+656,Dariusz,Pawłowski,M,false,Legnica,1814-10-11,,,,,,Person
+657,Halina,Nowakowska,F,false,Chojnice,1814-09-01,,,,,,Person
+658,Krystyna,Lewandowska,F,true,Ostrów Wielkopolski,1814-01-08,Grudziądz,1818-06-12,Stroke,Cemetery in Grudziądz,,Person
+659,Teresa,Kamińska,F,false,Gniezno,1814-08-16,,,,,,Person
+660,Franciszek,Wieczorek,M,true,Gorzów Wielkopolski,1815-11-28,Jelenia Góra,1816-10-03,Murder,Cemetery in Jelenia Góra,,Person
+661,Ewa,Grabowska,F,false,Sandomierz,1815-10-27,,,,,,Person
+662,Barbara,Wieczorek,F,true,Wałbrzych,1815-10-09,Zielona Góra,1816-09-01,Dropsy,Cemetery in Zielona Góra,,Person
+663,Zygmunt,Pawłowski,M,false,Jelenia Góra,1815-08-20,,,,,,Person
+664,Regina,Nowakowska,F,true,Wejherowo,1815-12-13,Tarnobrzeg,1844-02-01,Fever,Cemetery in Tarnobrzeg,Artist,Person
+665,Filip,Lewandowski,M,false,Leszno,1815-07-08,,,,,,Person
+666,Adam,Lewandowski,M,false,Gniezno,1815-03-27,,,,,,Person
+667,Helena,Nowakowska,F,false,Gdynia,1815-07-19,,,,,,Person
+668,Joanna,Pawłowska,F,true,Legnica,1815-04-22,Wałbrzych,1816-03-18,Smallpox,Cemetery in Wałbrzych,,Person
+669,Władysław,Kamiński,M,false,Gniezno,1815-07-03,,,,,,Person
+670,Ryszard,Nowakowski,M,false,Stargard,1815-11-25,,,,,,Person
+671,Józef,Grabowski,M,false,Sanok,1815-03-16,,,,,,Person
+672,Jan,Grabowski,M,true,Zakopane,1816-06-27,Kielce,1818-01-11,Apoplexy,Cemetery in Kielce,,Person
+673,Urszula,Wieczorek,F,false,Legnica,1816-07-15,,,,,,Person
+674,Józef,Kamiński,M,false,Ostrów Wielkopolski,1816-01-27,,,,,,Person
+675,Grażyna,Grabowska,F,true,Ostrowiec Świętokrzyski,1816-11-13,Zakopane,1834-07-06,Dysentery,Cemetery in Zakopane,Mason,Person
+676,Kazimiera,Wieczorek,F,true,Wałbrzych,1816-04-28,Opole,1821-05-15,Murder,Cemetery in Opole,,Person
+677,Tomasz,Lewandowski,M,true,Września,1816-08-11,Konin,1820-10-08,War casualty,Cemetery in Konin,,Person
+678,Jadwiga,Lewandowska,F,true,Bromberg,1816-01-23,Posen,1833-05-17,Pneumonia,Cemetery in Posen,,Person
+679,Mateusz,Nowakowski,M,false,Sopot,1816-09-02,,,,,,Person
+680,Teresa,Grabowska,F,true,Sandomierz,1816-01-12,Jasło,1816-12-28,Fever,Cemetery in Jasło,,Person
+681,Józefa,Grabowska,F,false,Nowy Sącz,1816-06-06,,,,,,Person
+682,Marian,Wieczorek,M,false,Świdnica,1817-03-20,,,,,,Person
+683,Urszula,Kamińska,F,false,Bochnia,1817-09-10,,,,,,Person
+684,Bartosz,Nowakowski,M,true,Gdynia,1817-01-06,Elbląg,1822-04-03,Apoplexy,Cemetery in Elbląg,,Person
+685,Tomasz,Lewandowski,M,false,Leszno,1817-07-19,,,,,,Person
+686,Kamil,Lewandowski,M,false,Śrem,1817-07-10,,,,,,Person
+687,Andrzej,Nowakowski,M,true,Danzig,1817-01-25,Koszalin,1817-10-09,War casualty,Cemetery in Koszalin,,Person
+688,Franciszek,Pawłowski,M,false,Gorzów Wielkopolski,1817-05-27,,,,,,Person
+689,Wanda,Grabowska,F,false,Bochnia,1817-08-07,,,,,,Person
+690,Jadwiga,Wieczorek,F,false,Opole,1818-12-25,,,,,,Person
+691,Adam,Kamiński,M,true,Września,1818-12-16,Bromberg,1819-09-14,Smallpox,Cemetery in Bromberg,,Person
+692,Grażyna,Pawłowska,F,true,Wałbrzych,1818-09-02,Legnica,1820-09-07,Starvation,Cemetery in Legnica,,Person
+693,Aleksandra,Nowakowska,F,false,Gdynia,1818-07-05,,,,,,Person
+694,Paweł,Lewandowski,M,false,Inowrocław,1818-11-10,,,,,,Person
+695,Paweł,Wieczorek,M,false,Opole,1818-11-27,,,,,,Person
+696,Natalia,Pawłowska,F,true,Legnica,1818-07-06,Jelenia Góra,1819-10-22,Accident,Cemetery in Jelenia Góra,,Person
+697,Katarzyna,Kowalska,F,false,Bochnia,1818-01-15,,,,,,Person
+698,Piotr,Pawłowski,M,true,Breslau,1818-05-26,Zielona Góra,1823-11-20,Smallpox,Cemetery in Zielona Góra,,Person
+699,Marek,Wieczorek,M,false,Opole,1819-07-21,,,,,,Person
+700,Czesław,Kamiński,M,false,Tarnów,1819-08-22,,,,,,Person
+701,Teresa,Pawłowska,F,true,Zielona Góra,1819-04-13,Zielona Góra,1819-07-27,,Cemetery in Zielona Góra,,Person
+702,Rozalia,Grabowska,F,false,Nowy Sącz,1819-08-21,,,,,,Person
+703,Ludwika,Nowakowska,F,false,Koszalin,1819-03-20,,,,,,Person
+704,Kamil,Lewandowski,M,false,Leszno,1819-10-01,,,,,,Person
+705,Stefan,Nowakowski,M,false,Sopot,1819-11-15,,,,,,Person
+706,Maciej,Pawłowski,M,true,Legnica,1819-09-13,Świdnica,1819-04-20,,Cemetery in Świdnica,,Person
+707,Henryk,Grabowski,M,false,Sandomierz,1819-11-02,,,,,,Person
+708,Stanisław,Nowakowski,M,true,Słupsk,1819-05-13,Stettin,1820-07-03,Murder,Cemetery in Stettin,,Person
+709,Genowefa,Grabowska,F,true,Tarnów,1819-07-05,Oświęcim,1821-06-13,Dysentery,Cemetery in Oświęcim,,Person
+710,Grzegorz,Wieczorek,M,true,Legnica,1820-12-02,Świdnica,1822-06-26,Unknown,Cemetery in Świdnica,,Person
+711,Urszula,Kamińska,F,false,Włocławek,1820-09-15,,,,,,Person
+712,Zofia,Pawłowska,F,true,Jelenia Góra,1820-02-10,Opole,1820-10-04,Smallpox,Cemetery in Opole,,Person
+713,Henryk,Lewandowski,M,false,Września,1820-04-12,,,,,,Person
+714,Wiesław,Wieczorek,M,false,Wałbrzych,1820-12-05,,,,,,Person
+715,Teresa,Lewandowska,F,true,Włocławek,1820-07-15,Śrem,1821-05-18,Dysentery,Cemetery in Śrem,,Person
+716,Stefan,Nowakowski,M,false,Olsztyn,1820-10-07,,,,,,Person
+717,Ludwika,Pawłowska,F,true,Zielona Góra,1820-05-02,Opole,1820-10-05,Unknown,Cemetery in Opole,,Person
+718,Ignacy,Kowalski,M,false,Oświęcim,1820-06-24,,,,,,Person
+719,Czesław,Pawłowski,M,false,Opole,1820-06-13,,,,,,Person
+720,Łukasz,Lewandowski,M,true,Konin,1820-10-20,Gniezno,1821-07-26,Fever,Cemetery in Gniezno,,Person
+721,Halina,Grabowska,F,false,Tarnów,1820-04-03,,,,,,Person
+722,Halina,Wieczorek,F,false,Jelenia Góra,1821-09-15,,,,,,Person
+723,Irena,Kamińska,F,true,Bochnia,1821-09-25,Nowy Sącz,1826-10-06,Starvation,Cemetery in Nowy Sącz,,Person
+724,Irena,Nowakowska,F,false,Stargard,1821-02-19,,,,,,Person
+725,Regina,Grabowska,F,true,Jasło,1821-10-28,Kraków,1843-02-25,Unknown,Cemetery in Kraków,Scribe,Person
+726,Zuzanna,Lewandowska,F,true,Thorn,1821-01-08,Thorn,1821-11-17,Drowning,Cemetery in Thorn,,Person
+727,Danuta,Pawłowska,F,false,Zielona Góra,1821-06-19,,,,,,Person
+728,Natalia,Grabowska,F,false,Jasło,1821-02-27,,,,,,Person
+729,Genowefa,Nowakowska,F,false,Słupsk,1821-08-09,,,,,,Person
+730,Maja,Kamińska,F,false,Bromberg,1821-08-19,,,,,,Person
+731,Adam,Wieczorek,M,false,Zielona Góra,1821-03-09,,,,,,Person
+732,Krystyna,Pawłowska,F,true,Jelenia Góra,1822-07-14,Jelenia Góra,1823-03-13,Consumption,Cemetery in Jelenia Góra,,Person
+733,Józef,Nowakowski,M,false,Gdynia,1822-09-26,,,,,,Person
+734,Kazimiera,Grabowska,F,true,Kielce,1822-07-15,Kielce,1823-04-12,,Cemetery in Kielce,,Person
+735,Elżbieta,Wieczorek,F,false,Gorzów Wielkopolski,1822-10-03,,,,,,Person
+736,Leon,Nowakowski,M,false,Sopot,1822-06-24,,,,,,Person
+737,Halina,Nowakowska,F,true,Kołobrzeg,1822-01-23,Stargard,1823-01-10,Apoplexy,Cemetery in Stargard,,Person
+738,Wanda,Pawłowska,F,true,Jelenia Góra,1822-09-25,Wałbrzych,1822-09-08,Apoplexy,Cemetery in Wałbrzych,,Person
+739,Mateusz,Kowalski,M,false,Ostrowiec Świętokrzyski,1822-08-25,,,,,,Person
+740,Marian,Pawłowski,M,false,Breslau,1822-02-20,,,,,,Person
+741,Piotr,Lewandowski,M,false,Bromberg,1822-11-11,,,,,,Person
+742,Agnieszka,Wieczorek,F,false,Wałbrzych,1822-01-27,,,,,,Person
+743,Maja,Kamińska,F,false,Gniezno,1822-06-05,,,,,,Person
+744,Genowefa,Kamińska,F,true,Tarnów,1823-08-17,Ostrowiec Świętokrzyski,1824-02-24,,Cemetery in Ostrowiec Świętokrzyski,,Person
+745,Ignacy,Lewandowski,M,false,Gostyń,1823-04-23,,,,,,Person
+746,Ewa,Lewandowska,F,false,Posen,1823-01-11,,,,,,Person
+747,Michał,Pawłowski,M,false,Breslau,1823-08-16,,,,,,Person
+748,Antoni,Lewandowski,M,true,Włocławek,1823-06-02,Włocławek,1823-10-24,Dysentery,Cemetery in Włocławek,,Person
+749,Marianna,Nowakowska,F,false,Koszalin,1823-07-23,,,,,,Person
+750,Małgorzata,Grabowska,F,true,Kielce,1823-01-25,Kielce,1825-03-12,Typhus,Cemetery in Kielce,,Person
+751,Alicja,Kamińska,F,false,Ostrów Wielkopolski,1823-11-15,,,,,,Person
+752,Szymon,Kamiński,M,true,Śrem,1823-09-01,Bromberg,1838-02-13,Unknown,Cemetery in Bromberg,,Person
+753,Katarzyna,Lewandowska,F,false,Kalisz,1823-09-17,,,,,,Person
+754,Leon,Pawłowski,M,false,Wałbrzych,1824-05-01,,,,,,Person
+755,Marianna,Nowakowska,F,true,Elbląg,1824-06-25,Świnoujście,1826-03-17,,Cemetery in Świnoujście,,Person
+756,Agnieszka,Lewandowska,F,false,Gostyń,1824-11-15,,,,,,Person
+757,Oliwia,Nowakowska,F,false,Danzig,1824-03-27,,,,,,Person
+758,Czesław,Pawłowski,M,false,Wałbrzych,1825-02-07,,,,,,Person
+759,Marianna,Grabowska,F,false,Ostrowiec Świętokrzyski,1825-03-05,,,,,,Person
+760,Jadwiga,Lewandowska,F,true,Posen,1825-04-26,Ostrów Wielkopolski,1826-05-23,Typhus,Cemetery in Ostrów Wielkopolski,,Person
+761,Kazimierz,Pawłowski,M,false,Wałbrzych,1825-03-26,,,,,,Person
+762,Stefania,Kowalska,F,false,Kielce,1825-04-25,,,,,,Person
+763,Zygmunt,Grabowski,M,false,Jasło,1825-07-08,,,,,,Person
+764,Szymon,Wieczorek,M,true,Zielona Góra,1825-03-15,Wałbrzych,1825-03-06,Drowning,Cemetery in Wałbrzych,,Person
+765,Małgorzata,Kamińska,F,true,Konin,1825-10-06,Śrem,1828-02-05,Heart failure,Cemetery in Śrem,,Person
+766,Małgorzata,Nowakowska,F,false,Słupsk,1825-09-03,,,,,,Person
+767,Kazimierz,Kamiński,M,false,Inowrocław,1825-07-03,,,,,,Person
+768,Ewa,Kowalska,F,false,Bochnia,1825-10-26,,,,,,Person
+769,Agnieszka,Grabowska,F,false,Krosno,1825-04-09,,,,,,Person
+770,Irena,Lewandowska,F,false,Kościan,1825-01-12,,,,,,Person
+771,Danuta,Kamińska,F,false,Zakopane,1826-04-15,,,,,,Person
+772,Grzegorz,Pawłowski,M,true,Breslau,1826-01-03,Legnica,1828-07-03,Fire,Cemetery in Legnica,,Person
+773,Grażyna,Lewandowska,F,true,Rawicz,1826-06-02,Gostyń,1828-02-17,Dysentery,Cemetery in Gostyń,,Person
+774,Rozalia,Pawłowska,F,false,Opole,1826-02-17,,,,,,Person
+775,Paweł,Kowalski,M,false,Tarnobrzeg,1826-01-01,,,,,,Person
+776,Stefania,Lewandowska,F,true,Gniezno,1826-06-18,Rawicz,1826-07-03,Consumption,Cemetery in Rawicz,,Person
+777,Władysław,Wieczorek,M,true,Zielona Góra,1826-06-01,Jelenia Góra,1840-08-02,Dropsy,Cemetery in Jelenia Góra,,Person
+778,Kazimierz,Lewandowski,M,false,Gniezno,1826-10-13,,,,,,Person
+779,Franciszek,Grabowski,M,false,Ostrowiec Świętokrzyski,1826-10-21,,,,,,Person
+780,Stefan,Grabowski,M,false,Bochnia,1826-02-05,,,,,,Person
+781,Czesława,Lewandowska,F,true,Konin,1826-04-15,Konin,1831-10-21,Heart failure,Cemetery in Konin,,Person
+782,Helena,Grabowska,F,false,Oświęcim,1826-04-28,,,,,,Person
+783,Szymon,Grabowski,M,false,Oświęcim,1827-11-01,,,,,,Person
+784,Joanna,Kamińska,F,true,Leszno,1827-10-15,Ostrów Wielkopolski,1842-01-07,Pneumonia,Cemetery in Ostrów Wielkopolski,,Person
+785,Helena,Nowakowska,F,true,Olsztyn,1827-03-04,Świnoujście,1827-07-05,,Cemetery in Świnoujście,,Person
+786,Dariusz,Kowalski,M,true,Tarnów,1827-01-18,Nowy Sącz,1839-11-21,,Cemetery in Nowy Sącz,,Person
+787,Wiesław,Grabowski,M,false,Rzeszów,1827-04-25,,,,,,Person
+788,Joanna,Grabowska,F,true,Jasło,1827-09-25,Nowy Sącz,1828-04-05,Accident,Cemetery in Nowy Sącz,,Person
+789,Anna,Wieczorek,F,true,Opole,1827-05-06,Jelenia Góra,1828-12-23,Dropsy,Cemetery in Jelenia Góra,,Person
+790,Elżbieta,Wieczorek,F,false,Świdnica,1827-05-05,,,,,,Person
+791,Maria,Lewandowska,F,false,Śrem,1827-04-19,,,,,,Person
+792,Leokadia,Wieczorek,F,false,Jelenia Góra,1827-09-06,,,,,,Person
+793,Andrzej,Kowalski,M,false,Bochnia,1828-04-21,,,,,,Person
+794,Kazimiera,Lewandowska,F,false,Kościan,1828-08-19,,,,,,Person
+795,Dariusz,Grabowski,M,false,Oświęcim,1828-09-18,,,,,,Person
+796,Kazimiera,Wieczorek,F,true,Gorzów Wielkopolski,1828-04-19,Wałbrzych,1828-08-18,Fire,Cemetery in Wałbrzych,,Person
+797,Krzysztof,Lewandowski,M,false,Kalisz,1828-05-27,,,,,,Person
+798,Marian,Kamiński,M,true,Września,1828-12-15,Posen,1829-08-21,Unknown,Cemetery in Posen,,Person
+799,Antoni,Lewandowski,M,false,Piła,1828-11-25,,,,,,Person
+800,Zygmunt,Lewandowski,M,false,Gostyń,1828-04-26,,,,,,Person
+801,Krzysztof,Grabowski,M,false,Sanok,1828-06-03,,,,,,Person
+802,Jan,Grabowski,M,false,Tarnobrzeg,1828-06-16,,,,,,Person
+803,Maja,Kowalska,F,false,Nowy Sącz,1829-11-16,,,,,,Person
+804,Tadeusz,Grabowski,M,false,Krosno,1829-01-04,,,,,,Person
+805,Maja,Wieczorek,F,false,Breslau,1829-03-11,,,,,,Person
+806,Wojciech,Kamiński,M,false,Bromberg,1829-01-01,,,,,,Person
+807,Mirosław,Lewandowski,M,false,Konin,1829-09-19,,,,,,Person
+808,Kamil,Kowalski,M,false,Zakopane,1829-11-09,,,,,,Person
+809,Halina,Grabowska,F,false,Jasło,1829-09-07,,,,,,Person
+810,Stanisław,Lewandowski,M,false,Leszno,1829-08-23,,,,,,Person
+811,Paweł,Wieczorek,M,false,Legnica,1829-03-05,,,,,,Person
+812,Władysław,Wieczorek,M,false,Jelenia Góra,1829-12-08,,,,,,Person
+813,Ignacy,Lewandowski,M,true,Bromberg,1829-08-18,Rawicz,1829-02-27,Unknown,Cemetery in Rawicz,,Person
+814,Jakub,Wieczorek,M,false,Gorzów Wielkopolski,1829-03-17,,,,,,Person
+815,Jadwiga,Wieczorek,F,false,Świdnica,1829-09-20,,,,,,Person
+816,Marian,Wieczorek,M,true,Zielona Góra,1829-02-11,Breslau,1829-06-24,Murder,Cemetery in Breslau,,Person
+817,Kamil,Lewandowski,M,false,Kościan,1829-12-14,,,,,,Person
+818,Marian,Wieczorek,M,false,Opole,1829-08-25,,,,,,Person
+819,Grażyna,Lewandowska,F,true,Thorn,1830-05-17,Konin,1830-09-17,Influenza,Cemetery in Konin,,Person
+820,Józef,Grabowski,M,false,Ostrowiec Świętokrzyski,1830-12-04,,,,,,Person
+821,Irena,Wieczorek,F,false,Zielona Góra,1830-09-14,,,,,,Person
+822,Łukasz,Lewandowski,M,false,Gniezno,1830-11-14,,,,,,Person
+823,Filip,Grabowski,M,false,Kielce,1830-10-02,,,,,,Person
+824,Czesława,Wieczorek,F,false,Wałbrzych,1830-12-28,,,,,,Person
+825,Krystyna,Grabowska,F,false,Ostrowiec Świętokrzyski,1830-12-21,,,,,,Person
+826,Stanisław,Wieczorek,M,false,Gorzów Wielkopolski,1830-09-15,,,,,,Person
+827,Grzegorz,Grabowski,M,true,Przemyśl,1830-06-03,Krosno,1830-08-09,,Cemetery in Krosno,,Person
+828,Maciej,Lewandowski,M,false,Bromberg,1831-09-12,,,,,,Person
+829,Dariusz,Wieczorek,M,true,Zielona Góra,1831-07-05,Opole,1832-04-01,Pneumonia,Cemetery in Opole,,Person
+830,Czesława,Lewandowska,F,true,Posen,1831-11-12,Piła,1832-12-17,Typhus,Cemetery in Piła,,Person
+831,Andrzej,Wieczorek,M,true,Gorzów Wielkopolski,1831-05-15,Legnica,1831-05-19,Dysentery,Cemetery in Legnica,,Person
+832,Kamil,Grabowski,M,false,Kielce,1831-04-19,,,,,,Person
+833,Marcin,Kamiński,M,true,Inowrocław,1831-03-21,Gniezno,1832-07-14,Consumption,Cemetery in Gniezno,,Person
+834,Katarzyna,Grabowska,F,false,Kielce,1831-04-14,,,,,,Person
+835,Krzysztof,Lewandowski,M,false,Posen,1831-03-05,,,,,,Person
+836,Barbara,Grabowska,F,false,Jasło,1831-12-03,,,,,,Person
+837,Elżbieta,Lewandowska,F,false,Kalisz,1832-04-05,,,,,,Person
+838,Regina,Grabowska,F,true,Bochnia,1832-05-04,Sandomierz,1834-02-25,Cholera,Cemetery in Sandomierz,,Person
+839,Andrzej,Wieczorek,M,false,Zielona Góra,1832-04-07,,,,,,Person
+840,Stefania,Kamińska,F,true,Rawicz,1832-06-18,Konin,1836-07-03,Drowning,Cemetery in Konin,,Person
+841,Mateusz,Lewandowski,M,false,Gniezno,1832-04-08,,,,,,Person
+842,Ewa,Grabowska,F,false,Bochnia,1832-05-25,,,,,,Person
+843,Aleksandra,Lewandowska,F,false,Piła,1832-02-13,,,,,,Person
+844,Wojciech,Wieczorek,M,true,Jelenia Góra,1832-07-11,Gorzów Wielkopolski,1832-08-14,Dysentery,Cemetery in Gorzów Wielkopolski,,Person
+845,Wojciech,Wieczorek,M,true,Legnica,1832-10-24,Opole,1832-02-10,Dysentery,Cemetery in Opole,,Person
+846,Stanisław,Grabowski,M,false,Rzeszów,1832-05-22,,,,,,Person
+847,Małgorzata,Kamińska,F,false,Września,1832-09-26,,,,,,Person
+848,Agnieszka,Wieczorek,F,true,Świdnica,1832-07-08,Gorzów Wielkopolski,1833-07-05,Plague,Cemetery in Gorzów Wielkopolski,,Person
+849,Małgorzata,Lewandowska,F,false,Kościan,1832-07-24,,,,,,Person
+850,Leokadia,Wieczorek,F,false,Wałbrzych,1832-10-17,,,,,,Person
+851,Genowefa,Grabowska,F,false,Ostrowiec Świętokrzyski,1833-07-10,,,,,,Person
+852,Monika,Lewandowska,F,false,Kościan,1833-09-27,,,,,,Person
+853,Maja,Wieczorek,F,false,Jelenia Góra,1833-05-19,,,,,,Person
+854,Monika,Kamińska,F,true,Grudziądz,1833-07-18,Konin,1838-12-14,Smallpox,Cemetery in Konin,,Person
+855,Małgorzata,Grabowska,F,false,Tarnobrzeg,1833-04-20,,,,,,Person
+856,Stefania,Grabowska,F,false,Jasło,1833-06-11,,,,,,Person
+857,Wanda,Kowalska,F,false,Kielce,1833-04-05,,,,,,Person
+858,Grażyna,Grabowska,F,false,Oświęcim,1834-09-12,,,,,,Person
+859,Leon,Wieczorek,M,true,Legnica,1834-09-17,Jelenia Góra,1835-11-28,Apoplexy,Cemetery in Jelenia Góra,,Person
+860,Krystyna,Lewandowska,F,false,Thorn,1834-11-17,,,,,,Person
+861,Anna,Grabowska,F,false,Sanok,1834-04-08,,,,,,Person
+862,Ludwika,Grabowska,F,false,Sandomierz,1834-12-17,,,,,,Person
+863,Maria,Wieczorek,F,false,Zielona Góra,1834-05-16,,,,,,Person
+864,Henryk,Wieczorek,M,false,Breslau,1834-02-11,,,,,,Person
+865,Alicja,Grabowska,F,false,Zakopane,1834-04-22,,,,,,Person
+866,Aleksandra,Grabowska,F,true,Tarnów,1835-05-02,Jasło,1835-05-03,Dropsy,Cemetery in Jasło,,Person
+867,Paweł,Lewandowski,M,true,Inowrocław,1835-10-14,Śrem,1835-01-14,Plague,Cemetery in Śrem,,Person
+868,Józefa,Kamińska,F,false,Inowrocław,1835-02-03,,,,,,Person
+869,Tomasz,Kamiński,M,true,Konin,1835-11-23,Kościan,1836-03-13,Consumption,Cemetery in Kościan,,Person
+870,Oliwia,Grabowska,F,false,Ostrowiec Świętokrzyski,1835-01-18,,,,,,Person
+871,Agnieszka,Wieczorek,F,true,Opole,1835-08-14,Breslau,1835-02-27,,Cemetery in Breslau,,Person
+872,Franciszek,Kowalski,M,true,Zakopane,1835-07-15,Tarnów,1835-01-21,Dropsy,Cemetery in Tarnów,,Person
+873,Ludwika,Wieczorek,F,true,Zielona Góra,1835-04-03,Gorzów Wielkopolski,1836-11-27,Infectious disease,Cemetery in Gorzów Wielkopolski,,Person
+874,Julia,Kamińska,F,false,Gniezno,1835-07-15,,,,,,Person
+875,Elżbieta,Kamińska,F,false,Oświęcim,1835-02-01,,,,,,Person
+876,Mirosław,Grabowski,M,false,Tarnobrzeg,1836-10-01,,,,,,Person
+877,Agnieszka,Grabowska,F,false,Krosno,1836-02-10,,,,,,Person
+878,Bożena,Grabowska,F,true,Kraków,1836-01-04,Rzeszów,1838-10-05,Drowning,Cemetery in Rzeszów,,Person
+879,Kamil,Kamiński,M,false,Ostrów Wielkopolski,1836-09-21,,,,,,Person
+880,Dariusz,Grabowski,M,false,Tarnów,1836-03-07,,,,,,Person
+881,Alicja,Wieczorek,F,true,Jelenia Góra,1836-10-12,Gorzów Wielkopolski,1841-05-05,Smallpox,Cemetery in Gorzów Wielkopolski,,Person
+882,Rozalia,Kamińska,F,true,Włocławek,1836-08-06,Konin,1837-11-17,Unknown,Cemetery in Konin,,Person
+883,Agnieszka,Wieczorek,F,true,Wałbrzych,1836-07-08,Gorzów Wielkopolski,1836-11-25,Cholera,Cemetery in Gorzów Wielkopolski,,Person
+884,Anna,Lewandowska,F,true,Grudziądz,1837-01-03,Grudziądz,1841-06-22,Typhus,Cemetery in Grudziądz,,Person
+885,Oliwia,Kamińska,F,true,Kalisz,1837-11-10,Września,1841-01-22,Dysentery,Cemetery in Września,,Person
+886,Filip,Wieczorek,M,false,Wałbrzych,1837-11-08,,,,,,Person
+887,Łukasz,Grabowski,M,true,Nowy Sącz,1837-11-06,Sandomierz,1838-07-18,Starvation,Cemetery in Sandomierz,,Person
+888,Czesława,Wieczorek,F,false,Zielona Góra,1837-07-16,,,,,,Person
+889,Andrzej,Wieczorek,M,true,Jelenia Góra,1837-12-10,Świdnica,1838-12-14,Unknown,Cemetery in Świdnica,,Person
+890,Wojciech,Kamiński,M,false,Piła,1837-12-19,,,,,,Person
+891,Zygmunt,Wieczorek,M,false,Zielona Góra,1837-07-18,,,,,,Person
+892,Józef,Wieczorek,M,false,Świdnica,1837-03-22,,,,,,Person
+893,Natalia,Pawłowska,F,false,Breslau,1837-11-24,,,,,,Person
+894,Katarzyna,Grabowska,F,true,Sandomierz,1838-07-18,Tarnobrzeg,1840-07-07,Typhus,Cemetery in Tarnobrzeg,,Person
+895,Jan,Kamiński,M,true,Konin,1838-02-10,Posen,1839-06-27,Influenza,Cemetery in Posen,,Person
+896,Wiktoria,Wieczorek,F,false,Wałbrzych,1838-01-17,,,,,,Person
+897,Józefa,Kowalska,F,false,Tarnów,1838-11-21,,,,,,Person
+898,Tomasz,Wieczorek,M,false,Legnica,1838-07-15,,,,,,Person
+899,Natalia,Kamińska,F,true,Posen,1838-01-01,Śrem,1838-11-11,Heart failure,Cemetery in Śrem,,Person
+900,Ryszard,Wieczorek,M,false,Świdnica,1838-04-16,,,,,,Person
+901,Maja,Kamińska,F,false,Ostrowiec Świętokrzyski,1838-10-04,,,,,,Person
+902,Irena,Kamińska,F,false,Kraków,1838-02-04,,,,,,Person
+903,Tadeusz,Lewandowski,M,false,Września,1839-10-07,,,,,,Person
+904,Leokadia,Grabowska,F,false,Przemyśl,1839-09-24,,,,,,Person
+905,Mateusz,Kamiński,M,false,Gniezno,1839-04-17,,,,,,Person
+906,Piotr,Wieczorek,M,true,Wałbrzych,1839-03-16,Jelenia Góra,1839-09-11,,Cemetery in Jelenia Góra,,Person
+907,Piotr,Grabowski,M,false,Ostrowiec Świętokrzyski,1839-01-14,,,,,,Person
+908,Krystyna,Grabowska,F,false,Tarnobrzeg,1839-06-21,,,,,,Person
+909,Zuzanna,Wieczorek,F,false,Zielona Góra,1839-06-17,,,,,,Person
+910,Rozalia,Wieczorek,F,true,Świdnica,1839-06-14,Jelenia Góra,1840-03-12,Starvation,Cemetery in Jelenia Góra,,Person
+911,Maciej,Pawłowski,M,false,Jelenia Góra,1839-01-16,,,,,,Person
+912,Jakub,Kamiński,M,false,Bromberg,1839-06-13,,,,,,Person
+913,Jadwiga,Kowalska,F,false,Tarnobrzeg,1839-12-28,,,,,,Person
+914,Tadeusz,Lewandowski,M,false,Grudziądz,1839-08-19,,,,,,Person
+915,Łukasz,Kamiński,M,true,Posen,1839-04-20,Kalisz,1840-08-10,Pneumonia,Cemetery in Kalisz,,Person
+916,Maria,Kamińska,F,false,Posen,1840-10-22,,,,,,Person
+917,Leokadia,Wieczorek,F,true,Zielona Góra,1840-05-23,Jelenia Góra,1841-04-25,Accident,Cemetery in Jelenia Góra,,Person
+918,Władysław,Kowalski,M,true,Rzeszów,1840-09-04,Sanok,1841-10-01,Stroke,Cemetery in Sanok,,Person
+919,Tomasz,Wieczorek,M,true,Gorzów Wielkopolski,1840-06-13,Breslau,1841-09-09,Smallpox,Cemetery in Breslau,,Person
+920,Mateusz,Kamiński,M,true,Września,1840-02-22,Włocławek,1841-08-10,Fire,Cemetery in Włocławek,,Person
+921,Danuta,Wieczorek,F,false,Opole,1840-06-22,,,,,,Person
+922,Urszula,Kamińska,F,false,Śrem,1840-12-04,,,,,,Person
+923,Mateusz,Wieczorek,M,true,Świdnica,1840-06-17,Świdnica,1841-07-05,,Cemetery in Świdnica,,Person
+924,Stefan,Wieczorek,M,true,Zielona Góra,1840-11-10,Jelenia Góra,1840-04-04,Dropsy,Cemetery in Jelenia Góra,,Person
+925,Wiktoria,Kamińska,F,false,Tarnobrzeg,1840-06-21,,,,,,Person
+926,Jerzy,Lewandowski,M,true,Śrem,1840-01-23,Gniezno,1843-09-04,Pneumonia,Cemetery in Gniezno,,Person
+927,Marian,Lewandowski,M,false,Rawicz,1840-09-09,,,,,,Person
+928,Helena,Grabowska,F,false,Tarnobrzeg,1840-05-26,,,,,,Person
+929,Bożena,Kamińska,F,false,Śrem,1841-06-22,,,,,,Person
+930,Alicja,Grabowska,F,true,Rzeszów,1841-04-21,Oświęcim,1842-02-17,,Cemetery in Oświęcim,,Person
+931,Czesław,Grabowski,M,false,Oświęcim,1841-01-24,,,,,,Person
+932,Zygmunt,Wieczorek,M,false,Opole,1841-07-09,,,,,,Person
+933,Henryk,Kamiński,M,false,Grudziądz,1841-10-04,,,,,,Person
+934,Jan,Wieczorek,M,true,Zielona Góra,1841-10-09,Opole,1841-09-27,,Cemetery in Opole,,Person
+935,Kamil,Kamiński,M,false,Śrem,1841-08-06,,,,,,Person
+936,Stefan,Kowalski,M,true,Tarnów,1841-02-12,Bochnia,1841-07-21,Fire,Cemetery in Bochnia,,Person
+937,Dariusz,Kamiński,M,false,Bochnia,1841-08-09,,,,,,Person
+938,Krystyna,Lewandowska,F,true,Leszno,1841-10-18,Piła,1841-03-01,Drowning,Cemetery in Piła,,Person
+939,Mateusz,Grabowski,M,false,Sandomierz,1841-02-07,,,,,,Person
+940,Aleksandra,Wieczorek,F,false,Świdnica,1841-08-09,,,,,,Person
+941,Stefan,Lewandowski,M,true,Września,1841-08-07,Ostrów Wielkopolski,1844-12-06,Drowning,Cemetery in Ostrów Wielkopolski,,Person
+942,Helena,Lewandowska,F,false,Bromberg,1842-03-25,,,,,,Person
+943,Józefa,Kamińska,F,false,Grudziądz,1842-09-11,,,,,,Person
+944,Agnieszka,Wieczorek,F,false,Breslau,1842-09-01,,,,,,Person
+945,Halina,Kowalska,F,true,Jasło,1842-02-03,Tarnobrzeg,1842-06-27,Apoplexy,Cemetery in Tarnobrzeg,,Person
+946,Ignacy,Grabowski,M,false,Tarnobrzeg,1842-07-10,,,,,,Person
+947,Grzegorz,Kamiński,M,false,Piła,1842-04-24,,,,,,Person
+948,Józefa,Wieczorek,F,false,Breslau,1842-12-20,,,,,,Person
+949,Ludwika,Wieczorek,F,false,Jelenia Góra,1842-05-08,,,,,,Person
+950,Ignacy,Pawłowski,M,false,Jelenia Góra,1842-09-07,,,,,,Person
+951,Wiktoria,Lewandowska,F,false,Posen,1842-08-13,,,,,,Person
+952,Michał,Wieczorek,M,false,Jelenia Góra,1842-11-01,,,,,,Person
+953,Andrzej,Lewandowski,M,false,Bromberg,1842-01-18,,,,,,Person
+954,Tomasz,Wieczorek,M,false,Gorzów Wielkopolski,1842-01-05,,,,,,Person
+955,Maria,Grabowska,F,false,Zakopane,1843-08-20,,,,,,Person
+956,Alicja,Kowalska,F,false,Nowy Sącz,1843-07-14,,,,,,Person
+957,Ewa,Wieczorek,F,true,Świdnica,1843-10-17,Zielona Góra,1843-03-03,Heart failure,Cemetery in Zielona Góra,,Person
+958,Kamil,Kamiński,M,false,Thorn,1843-03-26,,,,,,Person
+959,Anna,Wieczorek,F,false,Gorzów Wielkopolski,1843-11-27,,,,,,Person
+960,Zygmunt,Wieczorek,M,true,Opole,1843-02-01,Świdnica,1843-11-02,,Cemetery in Świdnica,,Person
+961,Ryszard,Pawłowski,M,false,Gorzów Wielkopolski,1843-06-03,,,,,,Person
+962,Irena,Kowalska,F,false,Kraków,1843-04-28,,,,,,Person
+963,Bożena,Kamińska,F,false,Oświęcim,1843-05-17,,,,,,Person
+964,Zuzanna,Kamińska,F,false,Krosno,1843-01-06,,,,,,Person
+965,Łukasz,Grabowski,M,false,Oświęcim,1843-07-21,,,,,,Person
+966,Marcin,Wieczorek,M,false,Świdnica,1843-09-09,,,,,,Person
+967,Wojciech,Lewandowski,M,false,Kościan,1843-02-24,,,,,,Person
+968,Leon,Wieczorek,M,true,Gorzów Wielkopolski,1843-10-13,Gorzów Wielkopolski,1844-01-20,Apoplexy,Cemetery in Gorzów Wielkopolski,,Person
+969,Krystyna,Wieczorek,F,false,Jelenia Góra,1843-02-22,,,,,,Person
+970,Czesław,Wieczorek,M,false,Jelenia Góra,1843-07-24,,,,,,Person
+971,Marian,Lewandowski,M,false,Leszno,1843-05-28,,,,,,Person
+972,Dariusz,Kamiński,M,false,Ostrowiec Świętokrzyski,1843-09-25,,,,,,Person
+973,Julian,Kamiński,M,false,Posen,1844-06-09,,,,,,Person
+974,Natalia,Kamińska,F,false,Włocławek,1844-10-01,,,,,,Person
+975,Łukasz,Lewandowski,M,false,Śrem,1844-08-25,,,,,,Person
+976,Marian,Lewandowski,M,false,Posen,1844-03-01,,,,,,Person
+977,Franciszek,Lewandowski,M,false,Gostyń,1844-07-03,,,,,,Person
+978,Stefania,Lewandowska,F,true,Rawicz,1844-03-01,Kościan,1844-07-03,Infectious disease,Cemetery in Kościan,,Person
+979,Irena,Wieczorek,F,false,Jelenia Góra,1844-01-10,,,,,,Person
+980,Rozalia,Wieczorek,F,false,Opole,1844-09-09,,,,,,Person
+981,Jakub,Kamiński,M,false,Posen,1844-07-26,,,,,,Person
+982,Zygmunt,Lewandowski,M,false,Rawicz,1844-12-05,,,,,,Person
+983,Henryk,Wieczorek,M,false,Legnica,1844-08-15,,,,,,Person
+984,Danuta,Lewandowska,F,false,Posen,1845-06-22,,,,,,Person
+985,Łukasz,Kamiński,M,false,Ostrów Wielkopolski,1845-08-17,,,,,,Person
+986,Dariusz,Grabowski,M,false,Bochnia,1845-12-07,,,,,,Person
+987,Grzegorz,Kowalski,M,false,Nowy Sącz,1845-11-26,,,,,,Person
+988,Monika,Grabowska,F,false,Kielce,1845-02-24,,,,,,Person
+989,Marek,Wieczorek,M,false,Jelenia Góra,1845-09-22,,,,,,Person
+990,Kazimierz,Wieczorek,M,false,Legnica,1845-01-28,,,,,,Person
+991,Stanisław,Pawłowski,M,false,Jelenia Góra,1845-05-27,,,,,,Person
+992,Filip,Kowalski,M,false,Kraków,1845-09-08,,,,,,Person
+993,Henryk,Kamiński,M,false,Bochnia,1845-01-09,,,,,,Person
+994,Tadeusz,Grabowski,M,false,Sandomierz,1845-03-20,,,,,,Person
+995,Czesława,Wieczorek,F,false,Breslau,1845-08-09,,,,,,Person
+996,Anna,Lewandowska,F,false,Rawicz,1845-01-18,,,,,,Person
+997,Leokadia,Wieczorek,F,false,Opole,1845-03-28,,,,,,Person
+998,Zygmunt,Lewandowski,M,false,Gostyń,1845-10-13,,,,,,Person
+999,Maria,Wieczorek,F,false,Świdnica,1845-02-24,,,,,,Person
+1000,Ryszard,Lewandowski,M,false,Gostyń,1845-03-02,,,,,,Person

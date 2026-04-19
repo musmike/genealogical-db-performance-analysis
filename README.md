@@ -81,14 +81,15 @@ sudo apt install -y python3.13 python3.13-venv
 cd data_generator
 python3.13 -m venv .venv
 source .venv/bin/activate
+pip install matplotlib
 ```
 
-### Run
+### Run Data Generator
 ```bash
 python main.py
 ```
 
-This will generate three datasets into `data_generator/output/`:
+This will generate three datasets into `data_generator/output/` and automatically create a `population_growth.png` chart for each dataset:
 
 | Directory | Population | Generations |
 |-----------|-----------|-------------|
@@ -97,6 +98,15 @@ This will generate three datasets into `data_generator/output/`:
 | `100k/`   | 100,000   | ~50         |
 
 Generation takes approximately 1 minute depending on hardware.
+
+### Find Optimal Parameters (Advanced)
+
+If you want to modify the target population behaviors or need to generate a completely new valid seed that meets strict benchmark constraints (exponential growth curve, exact tree depth), you can run the parameter search utility:
+
+```bash
+python parameter_search.py
+```
+This script will test hundreds of configurations and output a Python snippet that you can paste directly into `config.py` to replace the existing `SEED` and `SCENARIOS`.
 
 
 ## Notes

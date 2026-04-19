@@ -14,7 +14,7 @@ Replacements to be executed:
   Bromberg -> Bydgoszcz
   Thorn -> Toruń
 
-Expected affected rows in 'people' table/nodes: 2419
-Expected affected rows in 'families' table/nodes: 625
-Total expected updates: 3044
+Expected affected rows in 'people' table/nodes: 1119
+Expected affected rows in 'families' table/nodes: 228
+Total expected updates: 1347
 

@@ -37,6 +37,7 @@ class Person:
     target_marriage_age: int = 0
     widowed_year: int = 0
     ex_spouses: Set[int] = field(default_factory=set)
+    fertility_end: int = 45
 
 @dataclass
 class Family:

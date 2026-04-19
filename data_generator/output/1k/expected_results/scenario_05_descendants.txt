@@ -1,156 +1,186 @@
 --- SCENARIO 05: DESCENDANT RETRIEVAL ---
 Biological relationships only.
 Objective: Find person with most distinct biological descendants up to 3 generations forward.
-Distinct biological descendants found: 144
+Distinct biological descendants found: 174
 
-Recommended Person ID: 243
+Recommended Person ID: 160
 
 
-Expected rows: 144
+Expected rows: 174
 
-descendant_id | generation | given_name | surname     | sex | birth_date | birth_place     | death_date | death_place | burial_place            | cause_of_death     | father_id | mother_id
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-315           | 1          | Maria      | Wiśniewska  | F   | 1911-01-05 | Cieszyn         | 1973-07-04 | Sosnowiec   | Cemetery in Sosnowiec   | Murder             | 236       | 243      
-322           | 1          | Paweł      | Wiśniewski  | M   | 1914-11-08 | Olsztyn         | 1974-11-07 | Radom       | Cemetery in Radom       | Fever              | 236       | 243      
-327           | 1          | Agnieszka  | Wiśniewska  | F   | 1916-11-22 | Białystok       | 1984-05-28 | Sandomierz  | Cemetery in Sandomierz  | Accident           | 236       | 243      
-331           | 1          | Leon       | Wiśniewski  | M   | 1918-09-27 | Lublin          | 1979-06-12 | Gdynia      | Cemetery in Gdynia      | NULL               | 236       | 243      
-336           | 1          | Maciej     | Wiśniewski  | M   | 1920-05-04 | Sromowce        | 1922-11-06 | Sandomierz  | Cemetery in Sandomierz  | Unknown            | 236       | 243      
-341           | 1          | Anna       | Wiśniewska  | F   | 1921-07-23 | Pszczyna        | 1980-05-16 | Supraśl     | Cemetery in Supraśl     | Pneumonia          | 236       | 243      
-346           | 1          | Ignacy     | Wiśniewski  | M   | 1922-01-19 | Tykocin         | 1979-08-05 | Lipce       | Cemetery in Lipce       | Accident           | 236       | 243      
-354           | 1          | Ludwika    | Wiśniewska  | F   | 1924-10-01 | Bronowice       | 1999-09-23 | Wisła       | Cemetery in Wisła       | Apoplexy           | 236       | 243      
-357           | 1          | Grażyna    | Wiśniewska  | F   | 1925-05-23 | Łódź            | 1977-05-20 | Lublin      | Cemetery in Lublin      | Smallpox           | 236       | 243      
-372           | 2          | Teresa     | Zielińska   | F   | 1935-11-11 | Sanok           | 1936-09-22 | Kielce      | Cemetery in Kielce      | Cancer             | 289       | 315      
-373           | 2          | Teresa     | Wiśniewska  | F   | 1935-10-06 | Stettin         | 1981-01-09 | Białystok   | Cemetery in Białystok   | NULL               | 322       | 293      
-380           | 2          | Józefa     | Wiśniewska  | F   | 1937-11-12 | Pszczyna        | NULL       | NULL        | NULL                    | NULL               | 322       | 293      
-383           | 2          | Henryk     | Zieliński   | M   | 1938-05-03 | Chochołów       | 2010-01-11 | Breslau     | Cemetery in Breslau     | Pneumonia          | 289       | 315      
-388           | 2          | Aleksandra | Baran       | F   | 1938-12-16 | Pszczyna        | 1943-01-26 | Supraśl     | Cemetery in Supraśl     | Drowning           | 294       | 327      
-395           | 2          | Bożena     | Baran       | F   | 1940-04-02 | Posen           | 1945-05-28 | Thorn       | Cemetery in Thorn       | NULL               | 294       | 327      
-399           | 2          | Leon       | Zieliński   | M   | 1941-12-16 | Gliwice         | 2013-02-05 | Sosnowiec   | Cemetery in Sosnowiec   | Stroke             | 289       | 315      
-400           | 2          | Łukasz     | Wiśniewski  | M   | 1941-06-11 | Kraków          | 1989-01-21 | Kielce      | Cemetery in Kielce      | NULL               | 322       | 293      
-405           | 2          | Urszula    | Baran       | F   | 1942-08-21 | Cieszyn         | 2005-06-17 | Wisła       | Cemetery in Wisła       | Stroke             | 294       | 327      
-411           | 2          | Katarzyna  | Zielińska   | F   | 1943-01-21 | Łódź            | 1946-02-04 | Sanok       | Cemetery in Sanok       | Stroke             | 289       | 315      
-412           | 2          | Oliwia     | Baran       | F   | 1943-06-02 | Gdynia          | 2005-01-13 | Katowice    | Cemetery in Katowice    | NULL               | 294       | 327      
-420           | 2          | Regina     | Baran       | F   | 1944-02-04 | Rzeszów         | NULL       | NULL        | NULL                    | NULL               | 294       | 327      
-431           | 2          | Julia      | Baran       | F   | 1946-04-05 | Sosnowiec       | 2012-07-06 | Częstochowa | Cemetery in Częstochowa | Consumption        | 294       | 327      
-435           | 2          | Marian     | Baran       | M   | 1947-12-03 | Thorn           | 1949-08-14 | Lublin      | Cemetery in Lublin      | Infectious disease | 294       | 327      
-442           | 2          | Jerzy      | Zieliński   | M   | 1948-10-22 | Kielce          | 2004-04-24 | Bronowice   | Cemetery in Bronowice   | Cholera            | 318       | 341      
-447           | 2          | Zuzanna    | Zielińska   | F   | 1950-05-18 | Lipce           | 2018-06-02 | Sosnowiec   | Cemetery in Sosnowiec   | Heart failure      | 318       | 341      
-449           | 2          | Kazimiera  | Nowak       | F   | 1950-10-22 | Radom           | NULL       | NULL        | NULL                    | NULL               | 258       | 357      
-451           | 2          | Marcin     | Zieliński   | M   | 1950-10-05 | Sandomierz      | 2004-10-06 | Zwierzyniec | Cemetery in Zwierzyniec | Apoplexy           | 303       | 354      
-452           | 2          | Filip      | Zieliński   | M   | 1951-06-24 | Sanok           | 1951-07-23 | Zalipie     | Cemetery in Zalipie     | Infectious disease | 318       | 341      
-454           | 2          | Henryk     | Zieliński   | M   | 1951-03-03 | Gliwice         | 2004-09-02 | Sandomierz  | Cemetery in Sandomierz  | NULL               | 303       | 354      
-456           | 2          | Marianna   | Zielińska   | F   | 1952-12-13 | Thorn           | NULL       | NULL        | NULL                    | NULL               | 318       | 341      
-459           | 2          | Leokadia   | Nowak       | F   | 1952-05-22 | Biecz           | 1987-04-21 | Kraków      | Cemetery in Kraków      | Pneumonia          | 258       | 357      
-460           | 2          | Elżbieta   | Zielińska   | F   | 1952-08-07 | Biecz           | 2012-05-04 | Bromberg    | Cemetery in Bromberg    | Smallpox           | 303       | 354      
-462           | 2          | Paweł      | Zieliński   | M   | 1953-10-13 | Kraków          | 1999-07-17 | Kraków      | Cemetery in Kraków      | Heart failure      | 303       | 354      
-465           | 2          | Michał     | Zieliński   | M   | 1954-07-17 | Kielce          | 2004-11-04 | Bromberg    | Cemetery in Bromberg    | Starvation         | 318       | 341      
-508           | 2          | Regina     | Nowakowska  | F   | 1965-07-07 | Gliwice         | 1970-05-26 | Supraśl     | Cemetery in Supraśl     | NULL               | 396       | 357      
-521           | 2          | Dariusz    | Nowakowski  | M   | 1967-03-14 | Lanckorona      | NULL       | NULL        | NULL                    | NULL               | 396       | 357      
-526           | 2          | Ewa        | Nowakowska  | F   | 1969-08-16 | Radom           | NULL       | NULL        | NULL                    | NULL               | 396       | 357      
-530           | 2          | Bożena     | Wiśniewska  | F   | 1969-12-24 | Reszel          | NULL       | NULL        | NULL                    | NULL               | 346       | 403      
-535           | 2          | Joanna     | Nowakowska  | F   | 1970-06-10 | Pszczyna        | NULL       | NULL        | NULL                    | NULL               | 396       | 357      
-537           | 2          | Józef      | Wiśniewski  | M   | 1970-08-03 | Częstochowa     | NULL       | NULL        | NULL                    | NULL               | 346       | 403      
-548           | 2          | Alicja     | Wiśniewska  | F   | 1971-07-25 | Rzeszów         | NULL       | NULL        | NULL                    | NULL               | 331       | 434      
-557           | 2          | Julian     | Wiśniewski  | M   | 1973-10-24 | Białystok       | NULL       | NULL        | NULL                    | NULL               | 331       | 434      
-570           | 2          | Stanisław  | Wiśniewski  | M   | 1975-11-25 | Rzeszów         | NULL       | NULL        | NULL                    | NULL               | 331       | 434      
-580           | 2          | Adam       | Wiśniewski  | M   | 1976-09-17 | Kazimierz Dolny | NULL       | NULL        | NULL                    | NULL               | 331       | 434      
-469           | 3          | Zuzanna    | Zając       | F   | 1955-05-04 | Wisła           | NULL       | NULL        | NULL                    | NULL               | 268       | 373      
-476           | 3          | Genowefa   | Zając       | F   | 1957-12-18 | Sanok           | NULL       | NULL        | NULL                    | NULL               | 268       | 373      
-503           | 3          | Ludwika    | Wiśniewska  | F   | 1964-06-06 | Częstochowa     | 1995-10-27 | Pszczyna    | Cemetery in Pszczyna    | Cholera            | 400       | 375      
-504           | 3          | Paweł      | Zieliński   | M   | 1964-06-13 | Łódź            | 2020-03-06 | Bronowice   | Cemetery in Bronowice   | NULL               | 383       | 389      
-505           | 3          | Marian     | Lewandowski | M   | 1964-02-21 | Częstochowa     | NULL       | NULL        | NULL                    | NULL               | 385       | 380      
-507           | 3          | Marek      | Lewandowski | M   | 1965-04-24 | Supraśl         | NULL       | NULL        | NULL                    | NULL               | 385       | 380      
-509           | 3          | Zygmunt    | Lewandowski | M   | 1965-01-27 | Posen           | NULL       | NULL        | NULL                    | NULL               | 393       | 373      
-511           | 3          | Ludwika    | Wiśniewska  | F   | 1966-04-12 | Lipce           | 2018-10-28 | Cieszyn     | Cemetery in Cieszyn     | Cancer             | 400       | 375      
-512           | 3          | Ignacy     | Zieliński   | M   | 1966-05-19 | Sosnowiec       | 2015-09-18 | Tykocin     | Cemetery in Tykocin     | Apoplexy           | 383       | 389      
-513           | 3          | Tomasz     | Lewandowski | M   | 1966-01-12 | Biecz           | NULL       | NULL        | NULL                    | NULL               | 393       | 373      
-516           | 3          | Zuzanna    | Lewandowska | F   | 1966-05-06 | Łódź            | NULL       | NULL        | NULL                    | NULL               | 407       | 405      
-519           | 3          | Ignacy     | Wiśniewski  | M   | 1967-02-24 | Radom           | NULL       | NULL        | NULL                    | NULL               | 400       | 375      
-520           | 3          | Małgorzata | Lewandowska | F   | 1967-11-05 | Olsztyn         | NULL       | NULL        | NULL                    | NULL               | 385       | 380      
-524           | 3          | Grażyna    | Lewandowska | F   | 1968-08-14 | Kazimierz Dolny | NULL       | NULL        | NULL                    | NULL               | 385       | 380      
-529           | 3          | Józefa     | Lewandowska | F   | 1969-06-28 | Krynica         | NULL       | NULL        | NULL                    | NULL               | 407       | 405      
-534           | 3          | Natalia    | Wiśniewska  | F   | 1970-04-25 | Posen           | NULL       | NULL        | NULL                    | NULL               | 400       | 375      
-536           | 3          | Rozalia    | Lewandowska | F   | 1970-05-28 | Biecz           | NULL       | NULL        | NULL                    | NULL               | 407       | 405      
-540           | 3          | Kazimierz  | Lewandowski | M   | 1971-01-24 | Chochołów       | 1971-07-14 | Breslau     | Cemetery in Breslau     | Starvation         | 407       | 405      
-545           | 3          | Józef      | Zieliński   | M   | 1971-01-17 | Reszel          | 2009-11-17 | Gdynia      | Cemetery in Gdynia      | NULL               | 451       | 441      
-547           | 3          | Mirosław   | Nowak       | M   | 1971-07-20 | Katowice        | NULL       | NULL        | NULL                    | NULL               | 313       | 420      
-552           | 3          | Bożena     | Wiśniewska  | F   | 1973-02-10 | Gdynia          | NULL       | NULL        | NULL                    | NULL               | 400       | 375      
-555           | 3          | Szymon     | Zieliński   | M   | 1973-10-25 | Tykocin         | NULL       | NULL        | NULL                    | NULL               | 451       | 441      
-556           | 3          | Marianna   | Nowak       | F   | 1973-01-27 | Wisła           | NULL       | NULL        | NULL                    | NULL               | 313       | 420      
-568           | 3          | Agnieszka  | Zielińska   | F   | 1975-08-28 | Zwierzyniec     | NULL       | NULL        | NULL                    | NULL               | 451       | 441      
-572           | 3          | Aleksandra | Zielińska   | F   | 1975-07-20 | Radom           | NULL       | NULL        | NULL                    | NULL               | 399       | 414      
-574           | 3          | Marian     | Zieliński   | M   | 1975-09-11 | Biecz           | NULL       | NULL        | NULL                    | NULL               | 446       | 431      
-579           | 3          | Genowefa   | Nowak       | F   | 1976-12-02 | Gliwice         | NULL       | NULL        | NULL                    | NULL               | 313       | 420      
-582           | 3          | Natalia    | Zielińska   | F   | 1976-12-04 | Krynica         | NULL       | NULL        | NULL                    | NULL               | 399       | 414      
-583           | 3          | Józefa     | Szymańska   | F   | 1976-02-26 | Sromowce        | 1977-07-01 | Katowice    | Cemetery in Katowice    | Accident           | 437       | 459      
-584           | 3          | Kazimierz  | Zieliński   | M   | 1976-06-19 | Krynica         | 1978-01-28 | Reszel      | Cemetery in Reszel      | Consumption        | 446       | 431      
-586           | 3          | Krystyna   | Nowak       | F   | 1977-08-14 | Sanok           | NULL       | NULL        | NULL                    | NULL               | 313       | 420      
-593           | 3          | Paweł      | Zieliński   | M   | 1978-01-14 | Częstochowa     | 1979-05-19 | Kraków      | Cemetery in Kraków      | Fever              | 399       | 414      
-594           | 3          | Marek      | Szymański   | M   | 1978-04-06 | Bronowice       | NULL       | NULL        | NULL                    | NULL               | 437       | 459      
-595           | 3          | Leokadia   | Zielińska   | F   | 1978-04-19 | Bronowice       | 2009-03-12 | Zwierzyniec | Cemetery in Zwierzyniec | Cholera            | 446       | 431      
-603           | 3          | Bożena     | Szymańska   | F   | 1979-12-11 | Kraków          | 1984-10-05 | Krynica     | Cemetery in Krynica     | Fire               | 440       | 449      
-606           | 3          | Piotr      | Szymański   | M   | 1980-01-04 | Sromowce        | NULL       | NULL        | NULL                    | NULL               | 437       | 459      
-607           | 3          | Krzysztof  | Zieliński   | M   | 1980-03-03 | Cieszyn         | NULL       | NULL        | NULL                    | NULL               | 446       | 431      
-617           | 3          | Barbara    | Szymańska   | F   | 1981-07-01 | Thorn           | NULL       | NULL        | NULL                    | NULL               | 440       | 449      
-618           | 3          | Stefan     | Zieliński   | M   | 1981-05-08 | Posen           | NULL       | NULL        | NULL                    | NULL               | 472       | 412      
-620           | 3          | Agnieszka  | Szymańska   | F   | 1982-07-11 | Katowice        | NULL       | NULL        | NULL                    | NULL               | 437       | 459      
-625           | 3          | Antoni     | Zieliński   | M   | 1982-02-14 | Olsztyn         | NULL       | NULL        | NULL                    | NULL               | 472       | 412      
-626           | 3          | Michał     | Zieliński   | M   | 1982-01-17 | Gdynia          | 1986-10-16 | Biecz       | Cemetery in Biecz       | Fire               | 465       | 434      
-627           | 3          | Monika     | Zielińska   | F   | 1982-10-25 | Katowice        | 1984-03-01 | Thorn       | Cemetery in Thorn       | Infectious disease | 442       | 403      
-629           | 3          | Maciej     | Zieliński   | M   | 1983-09-15 | Breslau         | NULL       | NULL        | NULL                    | NULL               | 446       | 431      
-632           | 3          | Stefania   | Zielińska   | F   | 1983-11-08 | Zalipie         | NULL       | NULL        | NULL                    | NULL               | 472       | 412      
-634           | 3          | Julia      | Zielińska   | F   | 1984-04-22 | Zwierzyniec     | NULL       | NULL        | NULL                    | NULL               | 399       | 414      
-639           | 3          | Antoni     | Zieliński   | M   | 1984-07-24 | Kazimierz Dolny | NULL       | NULL        | NULL                    | NULL               | 472       | 412      
-642           | 3          | Tadeusz    | Zieliński   | M   | 1984-12-02 | Złoty Potok     | NULL       | NULL        | NULL                    | NULL               | 454       | 493      
-644           | 3          | Genowefa   | Zielińska   | F   | 1985-02-06 | Kazimierz Dolny | NULL       | NULL        | NULL                    | NULL               | 446       | 431      
-646           | 3          | Jan        | Zieliński   | M   | 1985-01-24 | Łódź            | NULL       | NULL        | NULL                    | NULL               | 442       | 403      
-651           | 3          | Genowefa   | Zielińska   | F   | 1986-06-13 | Sromowce        | NULL       | NULL        | NULL                    | NULL               | 399       | 414      
-652           | 3          | Jadwiga    | Zielińska   | F   | 1986-06-07 | Chochołów       | NULL       | NULL        | NULL                    | NULL               | 454       | 493      
-655           | 3          | Stefan     | Zieliński   | M   | 1987-09-25 | Breslau         | NULL       | NULL        | NULL                    | NULL               | 446       | 431      
-663           | 3          | Bartosz    | Zieliński   | M   | 1987-06-16 | Breslau         | NULL       | NULL        | NULL                    | NULL               | 462       | 434      
-665           | 3          | Dariusz    | Zieliński   | M   | 1988-09-23 | Sosnowiec       | NULL       | NULL        | NULL                    | NULL               | 454       | 493      
-671           | 3          | Grzegorz   | Zieliński   | M   | 1989-04-08 | Supraśl         | NULL       | NULL        | NULL                    | NULL               | 462       | 434      
-675           | 3          | Dariusz    | Zieliński   | M   | 1989-02-12 | Kazimierz Dolny | NULL       | NULL        | NULL                    | NULL               | 465       | 500      
-676           | 3          | Monika     | Zielińska   | F   | 1989-10-27 | Katowice        | NULL       | NULL        | NULL                    | NULL               | 496       | 526      
-677           | 3          | Ignacy     | Zieliński   | M   | 1990-01-14 | Olsztyn         | NULL       | NULL        | NULL                    | NULL               | 446       | 431      
-679           | 3          | Ryszard    | Zieliński   | M   | 1990-09-03 | Chełmno         | NULL       | NULL        | NULL                    | NULL               | 454       | 493      
-680           | 3          | Tomasz     | Nowakowski  | M   | 1990-02-25 | Bromberg        | NULL       | NULL        | NULL                    | NULL               | 521       | 501      
-682           | 3          | Joanna     | Zielińska   | F   | 1990-01-17 | Radom           | NULL       | NULL        | NULL                    | NULL               | 496       | 526      
-683           | 3          | Ignacy     | Nowak       | M   | 1990-10-12 | Radom           | 1990-02-27 | Częstochowa | Cemetery in Częstochowa | War casualty       | 514       | 456      
-688           | 3          | Grażyna    | Zielińska   | F   | 1991-06-17 | Posen           | NULL       | NULL        | NULL                    | NULL               | 496       | 526      
-691           | 3          | Maja       | Zielińska   | F   | 1992-02-26 | Olsztyn         | NULL       | NULL        | NULL                    | NULL               | 454       | 493      
-694           | 3          | Władysław  | Nowakowski  | M   | 1992-10-10 | Łódź            | NULL       | NULL        | NULL                    | NULL               | 521       | 501      
-706           | 3          | Antoni     | Nowakowski  | M   | 1994-01-21 | Bronowice       | NULL       | NULL        | NULL                    | NULL               | 521       | 501      
-708           | 3          | Paweł      | Zieliński   | M   | 1994-05-23 | Łódź            | 1995-11-26 | Breslau     | Cemetery in Breslau     | Starvation         | 496       | 526      
-712           | 3          | Czesław    | Zieliński   | M   | 1994-02-24 | Łódź            | NULL       | NULL        | NULL                    | NULL               | 462       | 510      
-720           | 3          | Alicja     | Nowakowska  | F   | 1996-07-06 | Posen           | NULL       | NULL        | NULL                    | NULL               | 521       | 501      
-721           | 3          | Jerzy      | Zieliński   | M   | 1996-07-23 | Zalipie         | NULL       | NULL        | NULL                    | NULL               | 496       | 526      
-725           | 3          | Ignacy     | Zieliński   | M   | 1996-04-26 | Katowice        | NULL       | NULL        | NULL                    | NULL               | 462       | 510      
-727           | 3          | Ignacy     | Wiśniewski  | M   | 1996-04-26 | Sromowce        | NULL       | NULL        | NULL                    | NULL               | 537       | 478      
-732           | 3          | Leokadia   | Zielińska   | F   | 1997-02-09 | Kielce          | NULL       | NULL        | NULL                    | NULL               | 462       | 510      
-735           | 3          | Marcin     | Wiśniewski  | M   | 1997-04-10 | Warszawa        | NULL       | NULL        | NULL                    | NULL               | 537       | 478      
-746           | 3          | Joanna     | Zielińska   | F   | 1998-08-26 | Kraków          | NULL       | NULL        | NULL                    | NULL               | 462       | 510      
-748           | 3          | Regina     | Wiśniewska  | F   | 1998-03-27 | Posen           | 1999-12-07 | Breslau     | Cemetery in Breslau     | NULL               | 537       | 478      
-761           | 3          | Wanda      | Wiśniewska  | F   | 1999-09-08 | Pszczyna        | NULL       | NULL        | NULL                    | NULL               | 557       | 551      
-762           | 3          | Wiktoria   | Król        | F   | 1999-10-17 | Sandomierz      | NULL       | NULL        | NULL                    | NULL               | 522       | 530      
-769           | 3          | Dariusz    | Wiśniewski  | M   | 2000-10-17 | Posen           | NULL       | NULL        | NULL                    | NULL               | 557       | 551      
-770           | 3          | Marek      | Król        | M   | 2000-03-22 | Lublin          | 2003-11-01 | Łódź        | Cemetery in Łódź        | Consumption        | 522       | 530      
-780           | 3          | Monika     | Wiśniewska  | F   | 2001-03-16 | Krynica         | 2006-07-17 | Lipce       | Cemetery in Lipce       | NULL               | 557       | 551      
-786           | 3          | Julia      | Lewandowska | F   | 2001-02-08 | Zwierzyniec     | NULL       | NULL        | NULL                    | NULL               | 597       | 548      
-831           | 3          | Leokadia   | Nowak       | F   | 2006-12-21 | Warszawa        | NULL       | NULL        | NULL                    | NULL               | 567       | 535      
-841           | 3          | Alicja     | Nowak       | F   | 2007-10-22 | Złoty Potok     | NULL       | NULL        | NULL                    | NULL               | 590       | 530      
-853           | 3          | Andrzej    | Nowak       | M   | 2008-10-14 | Zwierzyniec     | NULL       | NULL        | NULL                    | NULL               | 567       | 535      
-855           | 3          | Paweł      | Wiśniewski  | M   | 2008-10-24 | Krynica         | NULL       | NULL        | NULL                    | NULL               | 580       | 615      
-876           | 3          | Halina     | Nowak       | F   | 2010-10-20 | Chochołów       | 2012-10-08 | Breslau     | Cemetery in Breslau     | War casualty       | 567       | 535      
-877           | 3          | Leon       | Wiśniewski  | M   | 2010-07-16 | Kraków          | NULL       | NULL        | NULL                    | NULL               | 580       | 615      
-884           | 3          | Bartosz    | Wiśniewski  | M   | 2010-09-13 | Breslau         | NULL       | NULL        | NULL                    | NULL               | 570       | 681      
-888           | 3          | Henryk     | Nowak       | M   | 2011-07-04 | Posen           | NULL       | NULL        | NULL                    | NULL               | 567       | 535      
-894           | 3          | Julian     | Wiśniewski  | M   | 2011-02-20 | Lipce           | NULL       | NULL        | NULL                    | NULL               | 537       | 635      
-902           | 3          | Józef      | Wiśniewski  | M   | 2012-12-06 | Breslau         | NULL       | NULL        | NULL                    | NULL               | 580       | 615      
-907           | 3          | Danuta     | Wiśniewska  | F   | 2012-06-06 | Radom           | NULL       | NULL        | NULL                    | NULL               | 537       | 635      
-919           | 3          | Julian     | Wiśniewski  | M   | 2013-04-24 | Chełmno         | 2016-06-17 | Łódź        | Cemetery in Łódź        | Fever              | 570       | 681      
-925           | 3          | Andrzej    | Wiśniewski  | M   | 2014-02-15 | Kielce          | 2014-03-16 | Częstochowa | Cemetery in Częstochowa | NULL               | 580       | 615      
-928           | 3          | Bożena     | Wiśniewska  | F   | 2014-11-11 | Warszawa        | NULL       | NULL        | NULL                    | NULL               | 537       | 635      
-936           | 3          | Małgorzata | Wiśniewska  | F   | 2015-08-07 | Wisła           | NULL       | NULL        | NULL                    | NULL               | 580       | 615      
-943           | 3          | Mateusz    | Wiśniewski  | M   | 2016-10-24 | Sosnowiec       | NULL       | NULL        | NULL                    | NULL               | 570       | 681      
-944           | 3          | Małgorzata | Wiśniewska  | F   | 2016-02-10 | Krynica         | NULL       | NULL        | NULL                    | NULL               | 537       | 635      
+descendant_id | generation | given_name | surname     | sex | birth_date | birth_place             | death_date | death_place             | burial_place                        | cause_of_death     | father_id | mother_id
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+221           | 1          | Małgorzata | Pawłowska   | F   | 1736-12-27 | Świdnica                | 1811-08-11 | Malbork                 | Cemetery in Malbork                 | War casualty       | 120       | 160      
+227           | 1          | Jakub      | Pawłowski   | M   | 1737-08-02 | Jelenia Góra            | 1788-02-12 | Breslau                 | Cemetery in Breslau                 | Smallpox           | 120       | 160      
+230           | 1          | Władysław  | Pawłowski   | M   | 1738-06-21 | Opole                   | 1775-01-27 | Świdnica                | Cemetery in Świdnica                | Dropsy             | 120       | 160      
+236           | 1          | Oliwia     | Pawłowska   | F   | 1740-11-22 | Świdnica                | 1810-03-05 | Zakopane                | Cemetery in Zakopane                | Heart failure      | 120       | 160      
+244           | 1          | Halina     | Pawłowska   | F   | 1742-09-17 | Legnica                 | 1810-10-02 | Inowrocław              | Cemetery in Inowrocław              | Plague             | 120       | 160      
+249           | 1          | Ignacy     | Pawłowski   | M   | 1744-01-03 | Opole                   | 1806-04-28 | Gorzów Wielkopolski     | Cemetery in Gorzów Wielkopolski     | Infectious disease | 120       | 160      
+256           | 1          | Jan        | Pawłowski   | M   | 1746-03-10 | Breslau                 | 1803-10-02 | Gorzów Wielkopolski     | Cemetery in Gorzów Wielkopolski     | Drowning           | 120       | 160      
+261           | 1          | Piotr      | Pawłowski   | M   | 1747-08-28 | Wałbrzych               | 1823-12-26 | Wałbrzych               | Cemetery in Wałbrzych               | Typhus             | 120       | 160      
+283           | 1          | Aleksandra | Grabowska   | F   | 1752-09-09 | Przemyśl                | 1808-10-09 | Inowrocław              | Cemetery in Inowrocław              | Unknown            | 200       | 160      
+293           | 1          | Czesław    | Grabowski   | M   | 1755-07-01 | Tarnów                  | 1806-08-26 | Oświęcim                | Cemetery in Oświęcim                | Fire               | 200       | 160      
+298           | 1          | Łukasz     | Grabowski   | M   | 1756-08-01 | Kielce                  | 1813-07-07 | Rzeszów                 | Cemetery in Rzeszów                 | Heart failure      | 200       | 160      
+352           | 2          | Bartosz    | Grabowski   | M   | 1766-05-10 | Zakopane                | 1820-10-04 | Kielce                  | Cemetery in Kielce                  | Heart failure      | 173       | 236      
+357           | 2          | Grzegorz   | Grabowski   | M   | 1767-02-12 | Ostrowiec Świętokrzyski | 1837-12-14 | Nowy Sącz               | Cemetery in Nowy Sącz               | Dropsy             | 173       | 236      
+366           | 2          | Anna       | Grabowska   | F   | 1769-10-05 | Przemyśl                | 1769-12-25 | Sandomierz              | Cemetery in Sandomierz              | Accident           | 173       | 236      
+375           | 2          | Adam       | Grabowski   | M   | 1771-07-13 | Zakopane                | 1821-01-11 | Ostrowiec Świętokrzyski | Cemetery in Ostrowiec Świętokrzyski | NULL               | 173       | 236      
+379           | 2          | Bożena     | Grabowska   | F   | 1772-10-01 | Przemyśl                | NULL       | NULL                    | NULL                                | NULL               | 173       | 236      
+382           | 2          | Kazimiera  | Pawłowska   | F   | 1772-07-13 | Opole                   | 1823-03-22 | Breslau                 | Cemetery in Breslau                 | Accident           | 230       | 276      
+385           | 2          | Julian     | Grabowski   | M   | 1773-03-02 | Bochnia                 | NULL       | NULL                    | NULL                                | NULL               | 173       | 236      
+387           | 2          | Michał     | Pawłowski   | M   | 1773-02-11 | Opole                   | 1774-08-26 | Legnica                 | Cemetery in Legnica                 | Starvation         | 230       | 276      
+390           | 2          | Filip      | Kamiński    | M   | 1774-04-07 | Inowrocław              | 1837-03-20 | Kościan                 | Cemetery in Kościan                 | Smallpox           | 265       | 244      
+395           | 2          | Grażyna    | Pawłowska   | F   | 1776-05-16 | Gorzów Wielkopolski     | 1780-03-15 | Breslau                 | Cemetery in Breslau                 | Fever              | 230       | 276      
+396           | 2          | Zuzanna    | Kamińska    | F   | 1776-02-28 | Bromberg                | 1777-09-15 | Kościan                 | Cemetery in Kościan                 | War casualty       | 265       | 244      
+399           | 2          | Kamil      | Nowakowski  | M   | 1777-11-20 | Stettin                 | 1780-04-25 | Stargard                | Cemetery in Stargard                | Infectious disease | 266       | 283      
+402           | 2          | Wojciech   | Pawłowski   | M   | 1778-04-13 | Jelenia Góra            | 1779-05-17 | Świdnica                | Cemetery in Świdnica                | Dropsy             | 256       | 269      
+403           | 2          | Czesław    | Kamiński    | M   | 1779-06-27 | Gniezno                 | NULL       | NULL                    | NULL                                | NULL               | 265       | 244      
+405           | 2          | Zygmunt    | Pawłowski   | M   | 1779-10-13 | Gorzów Wielkopolski     | 1779-06-02 | Gorzów Wielkopolski     | Cemetery in Gorzów Wielkopolski     | Smallpox           | 256       | 269      
+409           | 2          | Halina     | Pawłowska   | F   | 1780-06-13 | Gorzów Wielkopolski     | 1781-02-07 | Legnica                 | Cemetery in Legnica                 | Drowning           | 261       | 320      
+411           | 2          | Grzegorz   | Pawłowski   | M   | 1781-09-26 | Wałbrzych               | 1833-07-08 | Jelenia Góra            | Cemetery in Jelenia Góra            | Dysentery          | 256       | 269      
+412           | 2          | Henryk     | Nowakowski  | M   | 1781-08-09 | Elbląg                  | 1829-08-25 | Stargard                | Cemetery in Stargard                | Smallpox           | 266       | 283      
+414           | 2          | Stefan     | Pawłowski   | M   | 1781-02-24 | Opole                   | 1826-10-20 | Legnica                 | Cemetery in Legnica                 | War casualty       | 261       | 320      
+420           | 2          | Andrzej    | Pawłowski   | M   | 1782-06-19 | Jelenia Góra            | 1822-11-12 | Zielona Góra            | Cemetery in Zielona Góra            | NULL               | 256       | 269      
+427           | 2          | Wiesław    | Kamiński    | M   | 1783-09-26 | Września                | 1840-10-04 | Grudziądz               | Cemetery in Grudziądz               | Fire               | 265       | 244      
+429           | 2          | Tadeusz    | Nowakowski  | M   | 1783-08-23 | Koszalin                | 1825-04-04 | Danzig                  | Cemetery in Danzig                  | Dysentery          | 266       | 283      
+434           | 2          | Grzegorz   | Pawłowski   | M   | 1784-11-04 | Jelenia Góra            | 1787-02-02 | Legnica                 | Cemetery in Legnica                 | Dropsy             | 256       | 269      
+435           | 2          | Wojciech   | Nowakowski  | M   | 1784-12-13 | Wejherowo               | NULL       | NULL                    | NULL                                | NULL               | 266       | 283      
+437           | 2          | Anna       | Pawłowska   | F   | 1784-11-14 | Legnica                 | 1785-08-12 | Opole                   | Cemetery in Opole                   | Stroke             | 261       | 320      
+441           | 2          | Anna       | Kamińska    | F   | 1785-01-05 | Piła                    | 1788-06-18 | Konin                   | Cemetery in Konin                   | NULL               | 265       | 244      
+443           | 2          | Szymon     | Pawłowski   | M   | 1785-12-07 | Wałbrzych               | NULL       | NULL                    | NULL                                | NULL               | 256       | 269      
+449           | 2          | Krzysztof  | Pawłowski   | M   | 1786-07-05 | Wałbrzych               | 1788-03-22 | Świdnica                | Cemetery in Świdnica                | Smallpox           | 256       | 269      
+450           | 2          | Jan        | Nowakowski  | M   | 1786-07-26 | Stargard                | 1839-11-01 | Chojnice                | Cemetery in Chojnice                | Cholera            | 266       | 283      
+459           | 2          | Alicja     | Pawłowska   | F   | 1787-09-01 | Wałbrzych               | 1839-02-05 | Opole                   | Cemetery in Opole                   | Cancer             | 261       | 320      
+464           | 2          | Aleksandra | Pawłowska   | F   | 1788-08-02 | Wałbrzych               | 1835-03-21 | Krosno                  | Cemetery in Krosno                  | Accident           | 256       | 269      
+471           | 2          | Teresa     | Grabowska   | F   | 1788-04-23 | Zakopane                | NULL       | NULL                    | NULL                                | NULL               | 293       | 332      
+479           | 2          | Oliwia     | Grabowska   | F   | 1789-06-08 | Kraków                  | 1843-11-20 | Jelenia Góra            | Cemetery in Jelenia Góra            | Heart failure      | 293       | 332      
+481           | 2          | Kazimiera  | Pawłowska   | F   | 1790-06-07 | Opole                   | NULL       | NULL                    | NULL                                | NULL               | 261       | 320      
+489           | 2          | Helena     | Grabowska   | F   | 1791-07-01 | Tarnów                  | NULL       | NULL                    | NULL                                | NULL               | 293       | 332      
+502           | 2          | Stefan     | Grabowski   | M   | 1793-03-25 | Bochnia                 | NULL       | NULL                    | NULL                                | NULL               | 293       | 332      
+515           | 2          | Marek      | Grabowski   | M   | 1795-10-02 | Kraków                  | 1796-02-01 | Sandomierz              | Cemetery in Sandomierz              | Apoplexy           | 293       | 332      
+524           | 2          | Paweł      | Grabowski   | M   | 1797-11-17 | Nowy Sącz               | NULL       | NULL                    | NULL                                | NULL               | 293       | 332      
+494           | 3          | Oliwia     | Grabowska   | F   | 1791-12-02 | Kraków                  | 1792-08-16 | Tarnów                  | Cemetery in Tarnów                  | Dysentery          | 357       | 295      
+507           | 3          | Leon       | Grabowski   | M   | 1793-06-13 | Kraków                  | 1794-02-11 | Rzeszów                 | Cemetery in Rzeszów                 | Unknown            | 357       | 295      
+509           | 3          | Monika     | Grabowska   | F   | 1793-02-19 | Przemyśl                | 1838-05-13 | Kalisz                  | Cemetery in Kalisz                  | Cholera            | 352       | 336      
+522           | 3          | Czesław    | Grabowski   | M   | 1796-04-26 | Bochnia                 | 1796-08-23 | Kielce                  | Cemetery in Kielce                  | Murder             | 352       | 336      
+523           | 3          | Józef      | Wieczorek   | M   | 1796-11-22 | Świdnica                | NULL       | NULL                    | NULL                                | NULL               | 371       | 382      
+527           | 3          | Maciej     | Grabowski   | M   | 1797-01-03 | Oświęcim                | NULL       | NULL                    | NULL                                | NULL               | 357       | 295      
+530           | 3          | Agnieszka  | Lewandowska | F   | 1797-08-26 | Włocławek               | 1798-07-24 | Bromberg                | Cemetery in Bromberg                | Dysentery          | 340       | 379      
+534           | 3          | Maria      | Grabowska   | F   | 1799-03-24 | Ostrowiec Świętokrzyski | NULL       | NULL                    | NULL                                | NULL               | 352       | 336      
+537           | 3          | Zofia      | Lewandowska | F   | 1799-08-13 | Piła                    | 1835-02-14 | Kościan                 | Cemetery in Kościan                 | Dysentery          | 340       | 379      
+538           | 3          | Kazimiera  | Wieczorek   | F   | 1799-09-21 | Opole                   | NULL       | NULL                    | NULL                                | NULL               | 371       | 382      
+548           | 3          | Grzegorz   | Lewandowski | M   | 1801-12-26 | Piła                    | NULL       | NULL                    | NULL                                | NULL               | 340       | 379      
+551           | 3          | Antoni     | Kamiński    | M   | 1801-08-04 | Leszno                  | NULL       | NULL                    | NULL                                | NULL               | 390       | 386      
+552           | 3          | Henryk     | Grabowski   | M   | 1802-11-05 | Sanok                   | NULL       | NULL                    | NULL                                | NULL               | 352       | 336      
+554           | 3          | Natalia    | Lewandowska | F   | 1802-09-21 | Thorn                   | NULL       | NULL                    | NULL                                | NULL               | 340       | 379      
+555           | 3          | Paweł      | Wieczorek   | M   | 1802-03-09 | Wałbrzych               | 1844-08-15 | Jelenia Góra            | Cemetery in Jelenia Góra            | NULL               | 371       | 382      
+557           | 3          | Stanisław  | Kamiński    | M   | 1802-05-18 | Śrem                    | 1802-12-24 | Kościan                 | Cemetery in Kościan                 | Fire               | 390       | 386      
+561           | 3          | Dariusz    | Lewandowski | M   | 1803-10-26 | Kościan                 | NULL       | NULL                    | NULL                                | NULL               | 340       | 379      
+562           | 3          | Irena      | Wieczorek   | F   | 1803-04-14 | Gorzów Wielkopolski     | NULL       | NULL                    | NULL                                | NULL               | 371       | 382      
+569           | 3          | Elżbieta   | Grabowska   | F   | 1804-09-20 | Przemyśl                | NULL       | NULL                    | NULL                                | NULL               | 352       | 336      
+571           | 3          | Julian     | Wieczorek   | M   | 1804-06-06 | Gorzów Wielkopolski     | NULL       | NULL                    | NULL                                | NULL               | 371       | 382      
+572           | 3          | Krystyna   | Kamińska    | F   | 1804-02-11 | Kościan                 | NULL       | NULL                    | NULL                                | NULL               | 390       | 386      
+584           | 3          | Jan        | Wieczorek   | M   | 1806-12-24 | Breslau                 | NULL       | NULL                    | NULL                                | NULL               | 371       | 382      
+595           | 3          | Adam       | Wieczorek   | M   | 1807-10-01 | Wałbrzych               | NULL       | NULL                    | NULL                                | NULL               | 424       | 459      
+603           | 3          | Oliwia     | Wieczorek   | F   | 1808-06-04 | Breslau                 | 1809-11-11 | Świdnica                | Cemetery in Świdnica                | NULL               | 424       | 459      
+604           | 3          | Jadwiga    | Kamińska    | F   | 1808-08-03 | Września                | NULL       | NULL                    | NULL                                | NULL               | 427       | 483      
+606           | 3          | Danuta     | Wieczorek   | F   | 1809-01-05 | Świdnica                | NULL       | NULL                    | NULL                                | NULL               | 371       | 382      
+614           | 3          | Mirosław   | Pawłowski   | M   | 1809-06-08 | Zielona Góra            | 1814-03-15 | Legnica                 | Cemetery in Legnica                 | Typhus             | 414       | 460      
+619           | 3          | Wojciech   | Wieczorek   | M   | 1810-07-02 | Breslau                 | NULL       | NULL                    | NULL                                | NULL               | 424       | 459      
+620           | 3          | Władysław  | Kamiński    | M   | 1810-01-08 | Bromberg                | NULL       | NULL                    | NULL                                | NULL               | 427       | 483      
+622           | 3          | Agnieszka  | Nowakowska  | F   | 1810-07-11 | Gdynia                  | 1835-06-12 | Sandomierz              | Cemetery in Sandomierz              | Plague             | 412       | 475      
+623           | 3          | Paweł      | Kamiński    | M   | 1810-10-24 | Bromberg                | NULL       | NULL                    | NULL                                | NULL               | 403       | 451      
+629           | 3          | Ewa        | Wieczorek   | F   | 1811-04-16 | Świdnica                | NULL       | NULL                    | NULL                                | NULL               | 424       | 459      
+630           | 3          | Ignacy     | Pawłowski   | M   | 1811-05-01 | Opole                   | NULL       | NULL                    | NULL                                | NULL               | 414       | 460      
+631           | 3          | Monika     | Nowakowska  | F   | 1811-06-24 | Chojnice                | 1815-08-24 | Świnoujście             | Cemetery in Świnoujście             | Dysentery          | 412       | 475      
+632           | 3          | Aleksandra | Kamińska    | F   | 1811-03-28 | Thorn                   | NULL       | NULL                    | NULL                                | NULL               | 403       | 451      
+633           | 3          | Zygmunt    | Grabowski   | M   | 1811-01-21 | Krosno                  | 1829-09-03 | Nowy Sącz               | Cemetery in Nowy Sącz               | War casualty       | 440       | 464      
+634           | 3          | Andrzej    | Wieczorek   | M   | 1812-03-18 | Opole                   | NULL       | NULL                    | NULL                                | NULL               | 371       | 382      
+637           | 3          | Urszula    | Nowakowska  | F   | 1812-04-04 | Olsztyn                 | 1812-04-27 | Olsztyn                 | Cemetery in Olsztyn                 | NULL               | 412       | 475      
+639           | 3          | Julia      | Wieczorek   | F   | 1812-04-09 | Opole                   | NULL       | NULL                    | NULL                                | NULL               | 496       | 481      
+642           | 3          | Józef      | Wieczorek   | M   | 1813-02-02 | Wałbrzych               | NULL       | NULL                    | NULL                                | NULL               | 424       | 459      
+643           | 3          | Łukasz     | Kamiński    | M   | 1813-05-16 | Leszno                  | NULL       | NULL                    | NULL                                | NULL               | 427       | 483      
+644           | 3          | Katarzyna  | Kamińska    | F   | 1813-11-14 | Kalisz                  | NULL       | NULL                    | NULL                                | NULL               | 403       | 451      
+645           | 3          | Czesława   | Grabowska   | F   | 1813-10-25 | Nowy Sącz               | NULL       | NULL                    | NULL                                | NULL               | 440       | 464      
+648           | 3          | Anna       | Wieczorek   | F   | 1813-01-18 | Wałbrzych               | NULL       | NULL                    | NULL                                | NULL               | 496       | 481      
+651           | 3          | Józefa     | Nowakowska  | F   | 1813-05-23 | Stargard                | 1814-04-13 | Stettin                 | Cemetery in Stettin                 | Influenza          | 429       | 469      
+652           | 3          | Teresa     | Pawłowska   | F   | 1813-09-12 | Jelenia Góra            | NULL       | NULL                    | NULL                                | NULL               | 411       | 474      
+653           | 3          | Zuzanna    | Lewandowska | F   | 1813-01-27 | Kościan                 | NULL       | NULL                    | NULL                                | NULL               | 311       | 479      
+654           | 3          | Julian     | Kamiński    | M   | 1814-02-03 | Ostrów Wielkopolski     | NULL       | NULL                    | NULL                                | NULL               | 427       | 483      
+656           | 3          | Dariusz    | Pawłowski   | M   | 1814-10-11 | Legnica                 | NULL       | NULL                    | NULL                                | NULL               | 414       | 460      
+657           | 3          | Halina     | Nowakowska  | F   | 1814-09-01 | Chojnice                | NULL       | NULL                    | NULL                                | NULL               | 412       | 475      
+662           | 3          | Barbara    | Wieczorek   | F   | 1815-10-09 | Wałbrzych               | 1816-09-01 | Zielona Góra            | Cemetery in Zielona Góra            | Dropsy             | 424       | 459      
+663           | 3          | Zygmunt    | Pawłowski   | M   | 1815-08-20 | Jelenia Góra            | NULL       | NULL                    | NULL                                | NULL               | 414       | 460      
+664           | 3          | Regina     | Nowakowska  | F   | 1815-12-13 | Wejherowo               | 1844-02-01 | Tarnobrzeg              | Cemetery in Tarnobrzeg              | Fever              | 412       | 475      
+667           | 3          | Helena     | Nowakowska  | F   | 1815-07-19 | Gdynia                  | NULL       | NULL                    | NULL                                | NULL               | 429       | 469      
+668           | 3          | Joanna     | Pawłowska   | F   | 1815-04-22 | Legnica                 | 1816-03-18 | Wałbrzych               | Cemetery in Wałbrzych               | Smallpox           | 411       | 474      
+670           | 3          | Ryszard    | Nowakowski  | M   | 1815-11-25 | Stargard                | NULL       | NULL                    | NULL                                | NULL               | 435       | 445      
+673           | 3          | Urszula    | Wieczorek   | F   | 1816-07-15 | Legnica                 | NULL       | NULL                    | NULL                                | NULL               | 424       | 459      
+674           | 3          | Józef      | Kamiński    | M   | 1816-01-27 | Ostrów Wielkopolski     | NULL       | NULL                    | NULL                                | NULL               | 427       | 483      
+675           | 3          | Grażyna    | Grabowska   | F   | 1816-11-13 | Ostrowiec Świętokrzyski | 1834-07-06 | Zakopane                | Cemetery in Zakopane                | Dysentery          | 440       | 464      
+676           | 3          | Kazimiera  | Wieczorek   | F   | 1816-04-28 | Wałbrzych               | 1821-05-15 | Opole                   | Cemetery in Opole                   | Murder             | 496       | 481      
+679           | 3          | Mateusz    | Nowakowski  | M   | 1816-09-02 | Sopot                   | NULL       | NULL                    | NULL                                | NULL               | 435       | 445      
+684           | 3          | Bartosz    | Nowakowski  | M   | 1817-01-06 | Gdynia                  | 1822-04-03 | Elbląg                  | Cemetery in Elbląg                  | Apoplexy           | 412       | 475      
+687           | 3          | Andrzej    | Nowakowski  | M   | 1817-01-25 | Danzig                  | 1817-10-09 | Koszalin                | Cemetery in Koszalin                | War casualty       | 429       | 469      
+688           | 3          | Franciszek | Pawłowski   | M   | 1817-05-27 | Gorzów Wielkopolski     | NULL       | NULL                    | NULL                                | NULL               | 411       | 474      
+690           | 3          | Jadwiga    | Wieczorek   | F   | 1818-12-25 | Opole                   | NULL       | NULL                    | NULL                                | NULL               | 424       | 459      
+691           | 3          | Adam       | Kamiński    | M   | 1818-12-16 | Września                | 1819-09-14 | Bromberg                | Cemetery in Bromberg                | Smallpox           | 427       | 483      
+692           | 3          | Grażyna    | Pawłowska   | F   | 1818-09-02 | Wałbrzych               | 1820-09-07 | Legnica                 | Cemetery in Legnica                 | Starvation         | 414       | 460      
+693           | 3          | Aleksandra | Nowakowska  | F   | 1818-07-05 | Gdynia                  | NULL       | NULL                    | NULL                                | NULL               | 412       | 475      
+695           | 3          | Paweł      | Wieczorek   | M   | 1818-11-27 | Opole                   | NULL       | NULL                    | NULL                                | NULL               | 496       | 481      
+696           | 3          | Natalia    | Pawłowska   | F   | 1818-07-06 | Legnica                 | 1819-10-22 | Jelenia Góra            | Cemetery in Jelenia Góra            | Accident           | 443       | 506      
+698           | 3          | Piotr      | Pawłowski   | M   | 1818-05-26 | Breslau                 | 1823-11-20 | Zielona Góra            | Cemetery in Zielona Góra            | Smallpox           | 420       | 504      
+701           | 3          | Teresa     | Pawłowska   | F   | 1819-04-13 | Zielona Góra            | 1819-07-27 | Zielona Góra            | Cemetery in Zielona Góra            | NULL               | 414       | 460      
+702           | 3          | Rozalia    | Grabowska   | F   | 1819-08-21 | Nowy Sącz               | NULL       | NULL                    | NULL                                | NULL               | 440       | 464      
+703           | 3          | Ludwika    | Nowakowska  | F   | 1819-03-20 | Koszalin                | NULL       | NULL                    | NULL                                | NULL               | 429       | 469      
+705           | 3          | Stefan     | Nowakowski  | M   | 1819-11-15 | Sopot                   | NULL       | NULL                    | NULL                                | NULL               | 435       | 445      
+706           | 3          | Maciej     | Pawłowski   | M   | 1819-09-13 | Legnica                 | 1819-04-20 | Świdnica                | Cemetery in Świdnica                | NULL               | 443       | 506      
+708           | 3          | Stanisław  | Nowakowski  | M   | 1819-05-13 | Słupsk                  | 1820-07-03 | Stettin                 | Cemetery in Stettin                 | Murder             | 450       | 510      
+710           | 3          | Grzegorz   | Wieczorek   | M   | 1820-12-02 | Legnica                 | 1822-06-26 | Świdnica                | Cemetery in Świdnica                | Unknown            | 424       | 459      
+711           | 3          | Urszula    | Kamińska    | F   | 1820-09-15 | Włocławek               | NULL       | NULL                    | NULL                                | NULL               | 427       | 483      
+712           | 3          | Zofia      | Pawłowska   | F   | 1820-02-10 | Jelenia Góra            | 1820-10-04 | Opole                   | Cemetery in Opole                   | Smallpox           | 414       | 460      
+714           | 3          | Wiesław    | Wieczorek   | M   | 1820-12-05 | Wałbrzych               | NULL       | NULL                    | NULL                                | NULL               | 496       | 481      
+716           | 3          | Stefan     | Nowakowski  | M   | 1820-10-07 | Olsztyn                 | NULL       | NULL                    | NULL                                | NULL               | 429       | 469      
+717           | 3          | Ludwika    | Pawłowska   | F   | 1820-05-02 | Zielona Góra            | 1820-10-05 | Opole                   | Cemetery in Opole                   | Unknown            | 443       | 506      
+719           | 3          | Czesław    | Pawłowski   | M   | 1820-06-13 | Opole                   | NULL       | NULL                    | NULL                                | NULL               | 420       | 504      
+724           | 3          | Irena      | Nowakowska  | F   | 1821-02-19 | Stargard                | NULL       | NULL                    | NULL                                | NULL               | 412       | 475      
+725           | 3          | Regina     | Grabowska   | F   | 1821-10-28 | Jasło                   | 1843-02-25 | Kraków                  | Cemetery in Kraków                  | Unknown            | 440       | 464      
+727           | 3          | Danuta     | Pawłowska   | F   | 1821-06-19 | Zielona Góra            | NULL       | NULL                    | NULL                                | NULL               | 420       | 504      
+729           | 3          | Genowefa   | Nowakowska  | F   | 1821-08-09 | Słupsk                  | NULL       | NULL                    | NULL                                | NULL               | 450       | 510      
+731           | 3          | Adam       | Wieczorek   | M   | 1821-03-09 | Zielona Góra            | NULL       | NULL                    | NULL                                | NULL               | 556       | 489      
+732           | 3          | Krystyna   | Pawłowska   | F   | 1822-07-14 | Jelenia Góra            | 1823-03-13 | Jelenia Góra            | Cemetery in Jelenia Góra            | Consumption        | 414       | 460      
+733           | 3          | Józef      | Nowakowski  | M   | 1822-09-26 | Gdynia                  | NULL       | NULL                    | NULL                                | NULL               | 412       | 475      
+734           | 3          | Kazimiera  | Grabowska   | F   | 1822-07-15 | Kielce                  | 1823-04-12 | Kielce                  | Cemetery in Kielce                  | NULL               | 440       | 464      
+735           | 3          | Elżbieta   | Wieczorek   | F   | 1822-10-03 | Gorzów Wielkopolski     | NULL       | NULL                    | NULL                                | NULL               | 496       | 481      
+736           | 3          | Leon       | Nowakowski  | M   | 1822-06-24 | Sopot                   | NULL       | NULL                    | NULL                                | NULL               | 429       | 469      
+737           | 3          | Halina     | Nowakowska  | F   | 1822-01-23 | Kołobrzeg               | 1823-01-10 | Stargard                | Cemetery in Stargard                | Apoplexy           | 435       | 445      
+738           | 3          | Wanda      | Pawłowska   | F   | 1822-09-25 | Jelenia Góra            | 1822-09-08 | Wałbrzych               | Cemetery in Wałbrzych               | Apoplexy           | 443       | 506      
+742           | 3          | Agnieszka  | Wieczorek   | F   | 1822-01-27 | Wałbrzych               | NULL       | NULL                    | NULL                                | NULL               | 556       | 489      
+747           | 3          | Michał     | Pawłowski   | M   | 1823-08-16 | Breslau                 | NULL       | NULL                    | NULL                                | NULL               | 443       | 506      
+749           | 3          | Marianna   | Nowakowska  | F   | 1823-07-23 | Koszalin                | NULL       | NULL                    | NULL                                | NULL               | 450       | 510      
+754           | 3          | Leon       | Pawłowski   | M   | 1824-05-01 | Wałbrzych               | NULL       | NULL                    | NULL                                | NULL               | 414       | 460      
+755           | 3          | Marianna   | Nowakowska  | F   | 1824-06-25 | Elbląg                  | 1826-03-17 | Świnoujście             | Cemetery in Świnoujście             | NULL               | 429       | 469      
+758           | 3          | Czesław    | Pawłowski   | M   | 1825-02-07 | Wałbrzych               | NULL       | NULL                    | NULL                                | NULL               | 414       | 460      
+759           | 3          | Marianna   | Grabowska   | F   | 1825-03-05 | Ostrowiec Świętokrzyski | NULL       | NULL                    | NULL                                | NULL               | 440       | 464      
+761           | 3          | Kazimierz  | Pawłowski   | M   | 1825-03-26 | Wałbrzych               | NULL       | NULL                    | NULL                                | NULL               | 443       | 506      
+764           | 3          | Szymon     | Wieczorek   | M   | 1825-03-15 | Zielona Góra            | 1825-03-06 | Wałbrzych               | Cemetery in Wałbrzych               | Drowning           | 556       | 489      
+772           | 3          | Grzegorz   | Pawłowski   | M   | 1826-01-03 | Breslau                 | 1828-07-03 | Legnica                 | Cemetery in Legnica                 | Fire               | 414       | 460      
+774           | 3          | Rozalia    | Pawłowska   | F   | 1826-02-17 | Opole                   | NULL       | NULL                    | NULL                                | NULL               | 443       | 506      
+777           | 3          | Władysław  | Wieczorek   | M   | 1826-06-01 | Zielona Góra            | 1840-08-02 | Jelenia Góra            | Cemetery in Jelenia Góra            | Dropsy             | 556       | 489      
+780           | 3          | Stefan     | Grabowski   | M   | 1826-02-05 | Bochnia                 | NULL       | NULL                    | NULL                                | NULL               | 524       | 541      
+782           | 3          | Helena     | Grabowska   | F   | 1826-04-28 | Oświęcim                | NULL       | NULL                    | NULL                                | NULL               | 502       | 563      
+788           | 3          | Joanna     | Grabowska   | F   | 1827-09-25 | Jasło                   | 1828-04-05 | Nowy Sącz               | Cemetery in Nowy Sącz               | Accident           | 524       | 541      
+796           | 3          | Kazimiera  | Wieczorek   | F   | 1828-04-19 | Gorzów Wielkopolski     | 1828-08-18 | Wałbrzych               | Cemetery in Wałbrzych               | Fire               | 556       | 489      
+801           | 3          | Krzysztof  | Grabowski   | M   | 1828-06-03 | Sanok                   | NULL       | NULL                    | NULL                                | NULL               | 502       | 563      
+805           | 3          | Maja       | Wieczorek   | F   | 1829-03-11 | Breslau                 | NULL       | NULL                    | NULL                                | NULL               | 556       | 489      
+818           | 3          | Marian     | Wieczorek   | M   | 1829-08-25 | Opole                   | NULL       | NULL                    | NULL                                | NULL               | 585       | 479      
+821           | 3          | Irena      | Wieczorek   | F   | 1830-09-14 | Zielona Góra            | NULL       | NULL                    | NULL                                | NULL               | 556       | 489      
+823           | 3          | Filip      | Grabowski   | M   | 1830-10-02 | Kielce                  | NULL       | NULL                    | NULL                                | NULL               | 524       | 541      
+825           | 3          | Krystyna   | Grabowska   | F   | 1830-12-21 | Ostrowiec Świętokrzyski | NULL       | NULL                    | NULL                                | NULL               | 502       | 563      
+831           | 3          | Andrzej    | Wieczorek   | M   | 1831-05-15 | Gorzów Wielkopolski     | 1831-05-19 | Legnica                 | Cemetery in Legnica                 | Dysentery          | 585       | 479      
+842           | 3          | Ewa        | Grabowska   | F   | 1832-05-25 | Bochnia                 | NULL       | NULL                    | NULL                                | NULL               | 502       | 563      
+853           | 3          | Maja       | Wieczorek   | F   | 1833-05-19 | Jelenia Góra            | NULL       | NULL                    | NULL                                | NULL               | 585       | 479      
+858           | 3          | Grażyna    | Grabowska   | F   | 1834-09-12 | Oświęcim                | NULL       | NULL                    | NULL                                | NULL               | 502       | 563      
+866           | 3          | Aleksandra | Grabowska   | F   | 1835-05-02 | Tarnów                  | 1835-05-03 | Jasło                   | Cemetery in Jasło                   | Dropsy             | 502       | 563      
+876           | 3          | Mirosław   | Grabowski   | M   | 1836-10-01 | Tarnobrzeg              | NULL       | NULL                    | NULL                                | NULL               | 502       | 563      
+894           | 3          | Katarzyna  | Grabowska   | F   | 1838-07-18 | Sandomierz              | 1840-07-07 | Tarnobrzeg              | Cemetery in Tarnobrzeg              | Typhus             | 502       | 563      
