@@ -8,9 +8,9 @@
 // Orders the results first by generation ascending, then by ancestor_id ascending within each generation.
 
 
-// RECOMMENDED PARAMETERS: Person ID = 980
+// RECOMMENDED PARAMETERS: Person ID = 999
 
-MATCH (start:Person {id: 980})
+MATCH (start:Person {id: 999})
 
 MATCH path = (start)
               ((:Person)<-[c:HAS_CHILD WHERE c.relationshipType = 'BIOLOGICAL']-(:Family)<-[:HUSBAND_OF|WIFE_OF]-(:Person)){1,5}

@@ -5,6 +5,6 @@ The youngest parent is determined by the exact age difference in days between th
 
 Expected rows: 1
 
-parent_id | given_name | surname    | sex | birth_date | birth_place | age_at_first_child | age_difference_in_days | child_id | child_birth_date | child_birth_place
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-43116     | Alicja     | Malinowska | F   | 1664-12-11 | Rzeszów     | 16                 | 5872                   | 46025    | 1681-01-08       | Krosno           
+parent_id | given_name | surname | sex | birth_date | birth_place | age_at_first_child | age_difference_in_days | child_id | child_birth_date | child_birth_place
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+36636     | Monika     | Woźniak | F   | 1582-11-21 | Wałbrzych   | 16                 | 5900                   | 38982    | 1599-01-16       | Świdnica         

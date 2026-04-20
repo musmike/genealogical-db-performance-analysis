@@ -893,10 +893,6 @@ class AnalyticsEngine:
     def _plot_network_topology(self, max_depth: int, depths: dict, bio_children_map: dict):
         """Generates a full network topology graph (nodes and edges per generation)."""
 
-        # ROZWIĄZANIE PROBLEMU DŁUGICH LINII:
-        # Obliczamy "Głębokość Wizualną", która w przeciwieństwie do biologicznej,
-        # traktuje adopcje jako zwykłe przejście pokolenia. Dzięki temu adoptowane
-        # dzieci nie utkną w Pokoleniu 1, tylko wylądują tam, gdzie ich przybrani rodzice.
         visual_depths = {}
         for p_id in sorted(self.people.keys()):
             p = self.people[p_id]
@@ -914,21 +910,16 @@ class AnalyticsEngine:
         for p_id, d in visual_depths.items():
             gen_nodes[d].append(p_id)
 
-        # Sortowanie wewnątrz generacji by rodzeństwa były obok siebie
         for d in gen_nodes:
             gen_nodes[d].sort(key=lambda pid: self.people[pid].parents_family_id or 0)
 
-        # Znalezienie najliczniejszego pokolenia by ustalić stały odstęp dla wszystkich
         max_n = max(len(p_ids) for p_ids in gen_nodes.values()) if gen_nodes else 1
 
         coords = {}
         for d, p_ids in gen_nodes.items():
             n = len(p_ids)
-            # Stały odstęp między węzłami
             dx = 0.9 / (max_n - 1) if max_n > 1 else 0
-            # Całkowita szerokość obecnego pokolenia
             total_width = (n - 1) * dx
-            # Wyśrodkowanie pokolenia (0.5 to środek wykresu)
             start_x = 0.5 - (total_width / 2)
 
             for i, p_id in enumerate(p_ids):
@@ -938,7 +929,6 @@ class AnalyticsEngine:
         lines = []
         line_colors = []
 
-        # Tworzenie krawędzi - niebieskie dla ojców, czerwone dla matek
         for p_id, children in bio_children_map.items():
             if p_id in coords:
                 p_coord = coords[p_id]
@@ -960,7 +950,6 @@ class AnalyticsEngine:
         else:
             line_alpha, line_width, node_size = 0.02, 0.05, 0.05
 
-        # Rysowanie krawędzi i węzłów
         lc = LineCollection(lines, colors=line_colors, linewidths=line_width, alpha=line_alpha, zorder=1)
         ax.add_collection(lc)
 
@@ -968,20 +957,18 @@ class AnalyticsEngine:
         y_vals = [coords[pid][1] for pid in coords]
         ax.scatter(x_vals, y_vals, color='black', s=node_size, zorder=2)
 
-        # Etykiety zliczeń po prawej stronie
         for d in range(1, vis_max_depth + 1):
             count = len(gen_nodes.get(d, []))
             if count > 0:
                 ax.text(0.96, d, f"n={count}", va='center', ha='left', fontsize=9, color='black')
 
-        ax.invert_yaxis()  # Założyciele na górze
+        ax.invert_yaxis()
 
         step = 5 if vis_max_depth > 25 else 1
         ax.set_yticks(range(1, vis_max_depth + 1, step))
         ax.set_ylabel("Generation", fontsize=12)
         ax.set_xticks([])
 
-        # Ukrycie ramki
         for spine in ax.spines.values():
             spine.set_visible(False)
         ax.tick_params(axis='y', length=0)

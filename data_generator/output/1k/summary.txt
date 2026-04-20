@@ -1,156 +1,155 @@
 === POPULATION AND GRAPH TOPOLOGY REPORT ===
 Target population: 1000
 Total people generated: 1000
-People alive at end of simulation (1845): 363
-Total families: 318
+People alive at end of simulation (1827): 376
+Total families: 296
 
 --- POPULATION GROWTH OVER TIME ---
-Year 1650: Alive 28 people. Total generated: 28
-Year 1675: Alive 41 people. Total generated: 63
-Year 1700: Alive 59 people. Total generated: 123
-Year 1725: Alive 89 people. Total generated: 189
-Year 1750: Alive 119 people. Total generated: 274
-Year 1775: Alive 160 people. Total generated: 393
-Year 1800: Alive 205 people. Total generated: 547
-Year 1825: Alive 275 people. Total generated: 770
-Year 1845 (END): Alive 363 people. Total generated: 1000
+Year 1650: Alive 38 people. Total generated: 38
+Year 1675: Alive 53 people. Total generated: 78
+Year 1700: Alive 81 people. Total generated: 161
+Year 1725: Alive 122 people. Total generated: 261
+Year 1750: Alive 151 people. Total generated: 369
+Year 1775: Alive 187 people. Total generated: 497
+Year 1800: Alive 263 people. Total generated: 700
+Year 1825: Alive 358 people. Total generated: 976
+Year 1827 (END): Alive 376 people. Total generated: 1000
 
 --- GRAPH TOPOLOGY & DEMOGRAPHICS ---
-Max graph depth (oldest root to youngest descendant): 10 generations
-Average depth of leaf nodes (endpoints): 6.95 generations
-Sex ratio: 504 Males / 496 Females
-Oldest person age reached: 93 years
+Max graph depth (oldest root to youngest descendant): 9 generations
+Average depth of leaf nodes (endpoints): 6.21 generations
+Sex ratio: 495 Males / 505 Females
+Oldest person age reached: 89 years
 Average lifespan (deceased individuals): 30.0 years
-Average lifespan (excluding deaths under 6 years): 52.0 years
-Marriage rate: 82.2% of eligible population (>= 16 years)
-Total divorces / annulments: 3
-Families with children: 224
-Average children per fertile family: 4.29
+Average lifespan (excluding deaths under 6 years): 51.2 years
+Marriage rate: 81.2% of eligible population (>= 16 years)
+Total divorces / annulments: 1
+Families with children: 212
+Average children per fertile family: 4.49
 Largest family generated: 11 children
 Family distribution (children per family):
-  1 child(ren): 29 families
-  2 child(ren): 32 families
-  3 child(ren): 36 families
-  4 child(ren): 32 families
-  5 child(ren): 28 families
-  6 child(ren): 21 families
-  7 child(ren): 20 families
-  8 child(ren): 14 families
-  9 child(ren): 7 families
-  10 child(ren): 4 families
-  11 child(ren): 1 families
-Adopted/Foster individuals: 48
+  1 child(ren): 25 families
+  2 child(ren): 24 families
+  3 child(ren): 38 families
+  4 child(ren): 28 families
+  5 child(ren): 27 families
+  6 child(ren): 22 families
+  7 child(ren): 17 families
+  8 child(ren): 21 families
+  9 child(ren): 6 families
+  10 child(ren): 0 families
+  11 child(ren): 4 families
+Adopted/Foster individuals: 42
 
 --- PARENT AGE AT SUBSEQUENT BIRTHS (Only from first marriages) ---
-  Child 1: Mother: 25.0 yrs | Father: 28.1 yrs
-  Child 2: Mother: 26.8 yrs | Father: 30.1 yrs
-  Child 3: Mother: 28.6 yrs | Father: 32.1 yrs
-  Child 4: Mother: 29.9 yrs | Father: 33.7 yrs
-  Child 5: Mother: 32.2 yrs | Father: 36.0 yrs
-  Child 6: Mother: 33.9 yrs | Father: 37.2 yrs
-  Child 7: Mother: 35.3 yrs | Father: 38.5 yrs
-  Child 8: Mother: 37.0 yrs | Father: 40.8 yrs
-  Child 9: Mother: 36.7 yrs | Father: 39.9 yrs
-  Child 10: Mother: 36.4 yrs | Father: 39.8 yrs
+  Child 1: Mother: 25.8 yrs | Father: 28.1 yrs
+  Child 2: Mother: 27.1 yrs | Father: 29.7 yrs
+  Child 3: Mother: 29.1 yrs | Father: 31.6 yrs
+  Child 4: Mother: 30.9 yrs | Father: 33.5 yrs
+  Child 5: Mother: 32.2 yrs | Father: 35.3 yrs
+  Child 6: Mother: 33.9 yrs | Father: 36.3 yrs
+  Child 7: Mother: 34.9 yrs | Father: 37.6 yrs
+  Child 8: Mother: 35.8 yrs | Father: 39.5 yrs
+  Child 9: Mother: 38.8 yrs | Father: 42.8 yrs
+  Child 10: Mother: 40.5 yrs | Father: 42.4 yrs
+  Child 11: Mother: 44.6 yrs | Father: 42.6 yrs
 
 --- PARENT AGE AT BIRTH DISTRIBUTION ---
 Mother age distribution:
-  16 years: 1 mothers
-  17 years: 6 mothers
-  18 years: 9 mothers
-  19 years: 13 mothers
-  20 years: 29 mothers
-  21 years: 32 mothers
-  22 years: 37 mothers
-  23 years: 46 mothers
-  24 years: 56 mothers
+  16 years: 2 mothers
+  17 years: 5 mothers
+  18 years: 10 mothers
+  19 years: 10 mothers
+  20 years: 25 mothers
+  21 years: 30 mothers
+  22 years: 31 mothers
+  23 years: 42 mothers
+  24 years: 53 mothers
   25 years: 54 mothers
-  26 years: 61 mothers
+  26 years: 52 mothers
   27 years: 63 mothers
-  28 years: 64 mothers
-  29 years: 57 mothers
+  28 years: 63 mothers
+  29 years: 58 mothers
   30 years: 52 mothers
-  31 years: 52 mothers
+  31 years: 60 mothers
   32 years: 46 mothers
-  33 years: 33 mothers
-  34 years: 35 mothers
-  35 years: 36 mothers
-  36 years: 28 mothers
-  37 years: 27 mothers
-  38 years: 24 mothers
-  39 years: 20 mothers
-  40 years: 13 mothers
-  41 years: 15 mothers
-  42 years: 7 mothers
-  43 years: 3 mothers
-  44 years: 2 mothers
-  45 years: 2 mothers
+  33 years: 44 mothers
+  34 years: 37 mothers
+  35 years: 46 mothers
+  36 years: 37 mothers
+  37 years: 18 mothers
+  38 years: 23 mothers
+  39 years: 18 mothers
+  40 years: 15 mothers
+  41 years: 8 mothers
+  42 years: 5 mothers
+  43 years: 6 mothers
+  44 years: 1 mothers
+  45 years: 3 mothers
   46 years: 1 mothers
+  47 years: 2 mothers
 Father age distribution:
-  18 years: 3 fathers
-  19 years: 4 fathers
-  20 years: 8 fathers
-  21 years: 4 fathers
-  22 years: 17 fathers
-  23 years: 14 fathers
-  24 years: 28 fathers
-  25 years: 32 fathers
-  26 years: 40 fathers
-  27 years: 41 fathers
-  28 years: 51 fathers
-  29 years: 52 fathers
-  30 years: 47 fathers
-  31 years: 53 fathers
-  32 years: 62 fathers
-  33 years: 55 fathers
-  34 years: 50 fathers
-  35 years: 52 fathers
-  36 years: 39 fathers
-  37 years: 51 fathers
-  38 years: 37 fathers
-  39 years: 32 fathers
-  40 years: 33 fathers
-  41 years: 22 fathers
-  42 years: 20 fathers
+  18 years: 1 fathers
+  19 years: 1 fathers
+  20 years: 9 fathers
+  21 years: 15 fathers
+  22 years: 12 fathers
+  23 years: 28 fathers
+  24 years: 39 fathers
+  25 years: 27 fathers
+  26 years: 46 fathers
+  27 years: 47 fathers
+  28 years: 46 fathers
+  29 years: 59 fathers
+  30 years: 43 fathers
+  31 years: 48 fathers
+  32 years: 58 fathers
+  33 years: 32 fathers
+  34 years: 56 fathers
+  35 years: 43 fathers
+  36 years: 40 fathers
+  37 years: 33 fathers
+  38 years: 31 fathers
+  39 years: 29 fathers
+  40 years: 24 fathers
+  41 years: 21 fathers
+  42 years: 19 fathers
   43 years: 15 fathers
-  44 years: 13 fathers
-  45 years: 7 fathers
-  46 years: 10 fathers
-  47 years: 2 fathers
-  48 years: 4 fathers
-  49 years: 4 fathers
-  50 years: 3 fathers
-  51 years: 2 fathers
+  44 years: 20 fathers
+  45 years: 11 fathers
+  46 years: 9 fathers
+  47 years: 15 fathers
+  48 years: 5 fathers
+  49 years: 7 fathers
+  50 years: 7 fathers
+  51 years: 6 fathers
   52 years: 3 fathers
-  53 years: 3 fathers
+  53 years: 2 fathers
   54 years: 2 fathers
-  55 years: 1 fathers
-  56 years: 1 fathers
-  57 years: 2 fathers
+  55 years: 2 fathers
+  56 years: 3 fathers
+  57 years: 4 fathers
   58 years: 1 fathers
-  60 years: 2 fathers
-  61 years: 2 fathers
+  60 years: 1 fathers
 
 --- AGE DISTRIBUTION (Living) ---
-  0-9 years: 94 people
-  10-19 years: 72 people
-  20-29 years: 63 people
-  30-39 years: 55 people
-  40-49 years: 45 people
-  50-59 years: 20 people
-  60-69 years: 10 people
-  70-79 years: 3 people
-  80-89 years: 1 people
+  0-9 years: 100 people
+  10-19 years: 79 people
+  20-29 years: 54 people
+  30-39 years: 66 people
+  40-49 years: 38 people
+  50-59 years: 19 people
+  60-69 years: 15 people
+  70-79 years: 5 people
 
 --- AGE DISTRIBUTION (Deceased) ---
-  0-9 years: 277 people
-  10-19 years: 16 people
-  20-29 years: 31 people
-  30-39 years: 25 people
-  40-49 years: 64 people
-  50-59 years: 99 people
-  60-69 years: 67 people
-  70-79 years: 49 people
-  80-89 years: 7 people
-  90-99 years: 2 people
+  0-9 years: 269 people
+  10-19 years: 23 people
+  20-29 years: 24 people
+  30-39 years: 22 people
+  40-49 years: 82 people
+  50-59 years: 89 people
+  60-69 years: 59 people
+  70-79 years: 45 people
+  80-89 years: 11 people
 

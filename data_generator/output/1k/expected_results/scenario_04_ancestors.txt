@@ -2,72 +2,73 @@
 Biological relationships only.
 Objective: Find person with most distinct biological ancestors up to 5 generations back.
 Theoretical max (Perfect Tree): 62
-Distinct biological ancestors found: 60
+Distinct biological ancestors found: 61
 
-Recommended Person ID: 980
+Recommended Person ID: 999
 
 
-Expected rows: 60
+Expected rows: 61
 
-ancestor_id | generation | given_name | surname       | sex | birth_date | birth_place             | death_date | death_place             | burial_place                        | cause_of_death     | father_id | mother_id
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-584         | 1          | Jan        | Wieczorek     | M   | 1806-12-24 | Breslau                 | NULL       | NULL                    | NULL                                | NULL               | 371       | 382      
-721         | 1          | Halina     | Grabowska     | F   | 1820-04-03 | Tarnów                  | NULL       | NULL                    | NULL                                | NULL               | 472       | 536      
-371         | 2          | Józef      | Wieczorek     | M   | 1771-04-01 | Świdnica                | NULL       | NULL                    | NULL                                | NULL               | 217       | 194      
-382         | 2          | Kazimiera  | Pawłowska     | F   | 1772-07-13 | Opole                   | 1823-03-22 | Breslau                 | Cemetery in Breslau                 | Accident           | 230       | 276      
-472         | 2          | Kazimierz  | Grabowski     | M   | 1788-04-24 | Tarnów                  | 1841-04-28 | Kielce                  | Cemetery in Kielce                  | Typhus             | 309       | 331      
-536         | 2          | Czesława   | Kamińska      | F   | 1799-08-26 | Września                | NULL       | NULL                    | NULL                                | NULL               | 365       | 377      
-194         | 3          | Marianna   | Lewandowska   | F   | 1727-03-21 | Leszno                  | 1778-08-08 | Legnica                 | Cemetery in Legnica                 | War casualty       | 102       | 124      
-217         | 3          | Stanisław  | Wieczorek     | M   | 1735-05-11 | Opole                   | 1810-05-06 | Legnica                 | Cemetery in Legnica                 | Dropsy             | 130       | 137      
-230         | 3          | Władysław  | Pawłowski     | M   | 1738-06-21 | Opole                   | 1775-01-27 | Świdnica                | Cemetery in Świdnica                | Dropsy             | 120       | 160      
-276         | 3          | Zuzanna    | Nowakowska    | F   | 1751-12-11 | Malbork                 | 1795-08-22 | Gorzów Wielkopolski     | Cemetery in Gorzów Wielkopolski     | Smallpox           | 157       | 158      
-309         | 3          | Jan        | Grabowski     | M   | 1758-04-04 | Nowy Sącz               | 1817-02-14 | Przemyśl                | Cemetery in Przemyśl                | Dropsy             | 188       | 179      
-331         | 3          | Małgorzata | Grabowska     | F   | 1762-11-06 | Sandomierz              | 1824-11-08 | Sanok                   | Cemetery in Sanok                   | Infectious disease | 204       | 219      
-365         | 3          | Władysław  | Kamiński      | M   | 1769-10-28 | Kościan                 | 1811-02-11 | Posen                   | Cemetery in Posen                   | Fire               | 243       | 255      
-377         | 3          | Teresa     | Wieczorek     | F   | 1771-12-23 | Jelenia Góra            | 1823-03-21 | Ostrów Wielkopolski     | Cemetery in Ostrów Wielkopolski     | War casualty       | 175       | 241      
-102         | 4          | Wiesław    | Lewandowski   | M   | 1692-01-10 | Konin                   | 1740-10-01 | Gniezno                 | Cemetery in Gniezno                 | Apoplexy           | 61        | 51       
-120         | 4          | Adam       | Pawłowski     | M   | 1699-06-17 | Gorzów Wielkopolski     | 1749-12-12 | Świdnica                | Cemetery in Świdnica                | Typhus             | 55        | 50       
-124         | 4          | Oliwia     | Grabowska     | F   | 1701-09-02 | Rzeszów                 | 1762-03-01 | Gorzów Wielkopolski     | Cemetery in Gorzów Wielkopolski     | Drowning           | 48        | 35       
-130         | 4          | Mirosław   | Wieczorek     | M   | 1705-05-11 | Jelenia Góra            | 1767-12-09 | Gorzów Wielkopolski     | Cemetery in Gorzów Wielkopolski     | NULL               | 69        | 77       
-137         | 4          | Oliwia     | Kamińska      | F   | 1709-10-14 | Grudziądz               | 1765-03-06 | Wałbrzych               | Cemetery in Wałbrzych               | NULL               | 46        | 89       
-157         | 4          | Stanisław  | Nowakowski    | M   | 1716-06-02 | Elbląg                  | 1784-03-24 | Olsztyn                 | Cemetery in Olsztyn                 | NULL               | 73        | 82       
-158         | 4          | Jadwiga    | Kowalska      | F   | 1716-01-21 | Kielce                  | 1773-01-23 | Stettin                 | Cemetery in Stettin                 | Influenza          | 63        | 97       
-160         | 4          | Irena      | Wieczorek     | F   | 1716-12-15 | Legnica                 | 1788-05-24 | Tarnobrzeg              | Cemetery in Tarnobrzeg              | Influenza          | 79        | 113      
-175         | 4          | Antoni     | Wieczorek     | M   | 1722-05-01 | Legnica                 | 1781-11-04 | Opole                   | Cemetery in Opole                   | Murder             | 62        | 103      
-179         | 4          | Marianna   | Nowakowska    | F   | 1722-08-11 | Elbląg                  | 1794-05-24 | Tarnobrzeg              | Cemetery in Tarnobrzeg              | Heart failure      | 80        | 125      
-188         | 4          | Wiesław    | Grabowski     | M   | 1725-01-10 | Oświęcim                | 1795-12-16 | Krosno                  | Cemetery in Krosno                  | Plague             | 85        | 89       
-204         | 4          | Marcin     | Grabowski     | M   | 1731-10-15 | Sandomierz              | 1796-01-20 | Oświęcim                | Cemetery in Oświęcim                | Consumption        | 119       | 117      
-219         | 4          | Czesława   | Pawłowska     | F   | 1736-05-19 | Jelenia Góra            | 1781-02-27 | Oświęcim                | Cemetery in Oświęcim                | Unknown            | 138       | 146      
-241         | 4          | Teresa     | Kamińska      | F   | 1742-08-05 | Ostrowiec Świętokrzyski | 1791-03-25 | Legnica                 | Cemetery in Legnica                 | Cholera            | 122       | 127      
-243         | 4          | Maciej     | Kamiński      | M   | 1742-07-23 | Piła                    | 1815-05-20 | Gniezno                 | Cemetery in Gniezno                 | Stroke             | 131       | 158      
-255         | 4          | Anna       | Pawłowska     | F   | 1745-10-07 | Wałbrzych               | 1785-04-24 | Thorn                   | Cemetery in Thorn                   | Starvation         | 143       | 172      
-35          | 5          | Maja       | Król          | F   | 1658-03-05 | Elbląg                  | 1703-10-27 | Kielce                  | Cemetery in Kielce                  | NULL               | 13        | 14       
-46          | 5          | Henryk     | Kamiński      | M   | 1662-02-04 | Gostyń                  | 1709-02-06 | Kościan                 | Cemetery in Kościan                 | Infectious disease | 15        | 16       
-48          | 5          | Michał     | Grabowski     | M   | 1663-11-25 | Rzeszów                 | 1731-03-28 | Bochnia                 | Cemetery in Bochnia                 | Dropsy             | 19        | 20       
-50          | 5          | Regina     | Kamińska      | F   | 1664-11-01 | Śrem                    | 1743-08-23 | Zielona Góra            | Cemetery in Zielona Góra            | Influenza          | 15        | 16       
-51          | 5          | Bożena     | Wojciechowska | F   | 1665-07-23 | Breslau                 | 1741-10-12 | Breslau                 | Cemetery in Breslau                 | Apoplexy           | 1         | 2        
-55          | 5          | Jan        | Pawłowski     | M   | 1669-05-19 | Breslau                 | 1742-07-05 | Jelenia Góra            | Cemetery in Jelenia Góra            | Smallpox           | 11        | 29       
-61          | 5          | Stefan     | Lewandowski   | M   | 1648-05-09 | Posen                   | 1708-04-01 | Piła                    | Cemetery in Piła                    | NULL               | NULL      | NULL     
-62          | 5          | Adam       | Wieczorek     | M   | 1675-01-17 | Breslau                 | 1748-10-02 | Breslau                 | Cemetery in Breslau                 | Plague             | 57        | 58       
-63          | 5          | Kazimierz  | Kowalski      | M   | 1675-02-26 | Oświęcim                | 1745-12-15 | Przemyśl                | Cemetery in Przemyśl                | Consumption        | 60        | 56       
-69          | 5          | Julian     | Wieczorek     | M   | 1678-07-28 | Świdnica                | 1725-03-11 | Legnica                 | Cemetery in Legnica                 | NULL               | 57        | 58       
-73          | 5          | Tomasz     | Nowakowski    | M   | 1679-11-01 | Koszalin                | 1751-05-13 | Sopot                   | Cemetery in Sopot                   | Drowning           | 59        | 66       
-77          | 5          | Rozalia    | Nowakowska    | F   | 1681-12-23 | Gdynia                  | 1757-09-02 | Opole                   | Cemetery in Opole                   | Plague             | 59        | 66       
-79          | 5          | Bartosz    | Wieczorek     | M   | 1682-06-21 | Wałbrzych               | 1740-11-16 | Opole                   | Cemetery in Opole                   | Heart failure      | 57        | 58       
-80          | 5          | Leon       | Nowakowski    | M   | 1683-02-06 | Stargard                | 1723-02-15 | Danzig                  | Cemetery in Danzig                  | NULL               | 59        | 66       
-82          | 5          | Marianna   | Król          | F   | 1683-07-24 | Stargard                | 1749-08-06 | Stargard                | Cemetery in Stargard                | NULL               | 34        | 39       
-85          | 5          | Kazimierz  | Grabowski     | M   | 1684-08-15 | Kraków                  | 1738-09-20 | Sandomierz              | Cemetery in Sandomierz              | Accident           | 36        | 41       
-89          | 5          | Natalia    | Król          | F   | 1686-10-26 | Wejherowo               | 1750-05-01 | Kraków                  | Cemetery in Kraków                  | Heart failure      | 34        | 39       
-97          | 5          | Grażyna    | Grabowska     | F   | 1690-06-17 | Sandomierz              | 1750-09-03 | Sanok                   | Cemetery in Sanok                   | NULL               | 36        | 40       
-103         | 5          | Wiktoria   | Grabowska     | F   | 1692-08-21 | Ostrowiec Świętokrzyski | 1755-07-04 | Gorzów Wielkopolski     | Cemetery in Gorzów Wielkopolski     | NULL               | 48        | 35       
-113         | 5          | Joanna     | Kamińska      | F   | 1696-11-27 | Bochnia                 | 1759-03-07 | Gorzów Wielkopolski     | Cemetery in Gorzów Wielkopolski     | Dysentery          | 71        | 37       
-117         | 5          | Urszula    | Kamińska      | F   | 1697-06-19 | Rawicz                  | 1756-02-11 | Przemyśl                | Cemetery in Przemyśl                | Dropsy             | 31        | 74       
-119         | 5          | Zygmunt    | Grabowski     | M   | 1699-03-15 | Sandomierz              | 1792-12-17 | Sandomierz              | Cemetery in Sandomierz              | Drowning           | 48        | 35       
-122         | 5          | Piotr      | Kamiński      | M   | 1700-09-03 | Rzeszów                 | 1767-04-19 | Bochnia                 | Cemetery in Bochnia                 | Fire               | 71        | 37       
-125         | 5          | Ewa        | Pawłowska     | F   | 1701-11-03 | Opole                   | 1775-12-10 | Gdynia                  | Cemetery in Gdynia                  | Apoplexy           | 55        | 50       
-127         | 5          | Ewa        | Pawłowska     | F   | 1702-01-15 | Breslau                 | 1764-05-20 | Ostrowiec Świętokrzyski | Cemetery in Ostrowiec Świętokrzyski | Starvation         | 55        | 50       
-131         | 5          | Stefan     | Kamiński      | M   | 1707-02-02 | Inowrocław              | 1783-03-10 | Ostrów Wielkopolski     | Cemetery in Ostrów Wielkopolski     | Plague             | 46        | 89       
-138         | 5          | Marian     | Pawłowski     | M   | 1709-01-26 | Jelenia Góra            | 1781-04-14 | Świdnica                | Cemetery in Świdnica                | Dysentery          | 54        | 75       
-143         | 5          | Bartosz    | Pawłowski     | M   | 1712-07-07 | Świdnica                | 1774-07-20 | Świdnica                | Cemetery in Świdnica                | Murder             | 54        | 75       
-146         | 5          | Marianna   | Kowalska      | F   | 1712-06-12 | Tarnobrzeg              | 1774-12-06 | Jelenia Góra            | Cemetery in Jelenia Góra            | Cancer             | 63        | 97       
-172         | 5          | Maja       | Kamińska      | F   | 1720-09-25 | Września                | 1791-11-03 | Zielona Góra            | Cemetery in Zielona Góra            | Infectious disease | 111       | 116      
+ancestor_id | generation | given_name | surname     | sex | birth_date | birth_place         | death_date | death_place         | burial_place                    | cause_of_death     | father_id | mother_id
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+610         | 1          | Marcin     | Piotrowski  | M   | 1791-06-07 | Gorzów Wielkopolski | NULL       | NULL                | NULL                            | NULL               | 354       | 459      
+736         | 1          | Aleksandra | Piotrowska  | F   | 1806-04-27 | Breslau             | NULL       | NULL                | NULL                            | NULL               | 507       | 552      
+354         | 2          | Stanisław  | Piotrowski  | M   | 1748-08-03 | Breslau             | 1816-08-21 | Zielona Góra        | Cemetery in Zielona Góra        | Cancer             | 226       | 201      
+459         | 2          | Józefa     | Kwiatkowska | F   | 1767-03-21 | Olsztyn             | 1820-04-18 | Wałbrzych           | Cemetery in Wałbrzych           | Typhus             | 242       | 332      
+507         | 2          | Marek      | Piotrowski  | M   | 1778-07-24 | Breslau             | 1824-07-11 | Jelenia Góra        | Cemetery in Jelenia Góra        | Typhus             | 369       | 368      
+552         | 2          | Ludwika    | Piotrowska  | F   | 1785-04-05 | Wejherowo           | NULL       | NULL                | NULL                            | NULL               | 405       | 377      
+201         | 3          | Grażyna    | Kowalska    | F   | 1713-02-06 | Suwałki             | 1771-06-12 | Wałbrzych           | Cemetery in Wałbrzych           | Fever              | 114       | 147      
+226         | 3          | Wiesław    | Piotrowski  | M   | 1717-10-15 | Świdnica            | 1788-07-22 | Opole               | Cemetery in Opole               | Accident           | 126       | 125      
+242         | 3          | Zygmunt    | Kwiatkowski | M   | 1721-05-13 | Malbork             | 1800-10-15 | Kołobrzeg           | Cemetery in Kołobrzeg           | Dysentery          | 112       | 133      
+332         | 3          | Aleksandra | Wiśniewska  | F   | 1743-08-23 | Gdynia              | 1786-05-03 | Stettin             | Cemetery in Stettin             | Dysentery          | 215       | 191      
+368         | 3          | Leokadia   | Wiśniewska  | F   | 1750-01-17 | Inowrocław          | 1813-08-01 | Stargard            | Cemetery in Stargard            | Influenza          | 233       | 248      
+369         | 3          | Stanisław  | Piotrowski  | M   | 1750-02-14 | Legnica             | 1796-03-12 | Breslau             | Cemetery in Breslau             | Murder             | 225       | 269      
+377         | 3          | Anna       | Piotrowska  | F   | 1753-09-25 | Koszalin            | 1813-02-02 | Stettin             | Cemetery in Stettin             | Unknown            | 212       | 209      
+405         | 3          | Maciej     | Piotrowski  | M   | 1759-02-26 | Stargard            | 1810-07-14 | Słupsk              | Cemetery in Słupsk              | Apoplexy           | 274       | 322      
+112         | 4          | Kazimierz  | Kwiatkowski | M   | 1683-10-13 | Sopot               | 1743-12-05 | Słupsk              | Cemetery in Słupsk              | Cancer             | 70        | 50       
+114         | 4          | Krzysztof  | Kowalski    | M   | 1684-11-22 | Skierniewice        | 1735-11-05 | Suwałki             | Cemetery in Suwałki             | Fever              | 72        | 71       
+125         | 4          | Irena      | Piotrowska  | F   | 1686-07-14 | Elbląg              | 1744-09-05 | Breslau             | Cemetery in Breslau             | Dysentery          | 56        | 76       
+126         | 4          | Antoni     | Piotrowski  | M   | 1686-12-14 | Breslau             | 1737-04-21 | Wałbrzych           | Cemetery in Wałbrzych           | War casualty       | 79        | 57       
+133         | 4          | Maja       | Piotrowska  | F   | 1689-10-15 | Danzig              | 1750-11-21 | Świnoujście         | Cemetery in Świnoujście         | Fire               | 58        | 59       
+147         | 4          | Zuzanna    | Walczak     | F   | 1694-06-06 | Inowrocław          | 1745-06-15 | Zielona Góra        | Cemetery in Zielona Góra        | Dysentery          | 54        | 47       
+191         | 4          | Czesława   | Kowalska    | F   | 1711-08-14 | Biała Podlaska      | 1756-03-13 | Stettin             | Cemetery in Stettin             | Drowning           | 110       | 95       
+209         | 4          | Urszula    | Walczak     | F   | 1714-05-05 | Inowrocław          | 1753-09-04 | Słupsk              | Cemetery in Słupsk              | Drowning           | 54        | 122      
+212         | 4          | Henryk     | Piotrowski  | M   | 1715-02-26 | Wejherowo           | 1773-12-15 | Wejherowo           | Cemetery in Wejherowo           | Starvation         | 121       | 88       
+215         | 4          | Wojciech   | Wiśniewski  | M   | 1715-11-26 | Koszalin            | 1764-01-20 | Stettin             | Cemetery in Stettin             | Infectious disease | 150       | 132      
+225         | 4          | Julian     | Piotrowski  | M   | 1717-06-27 | Breslau             | 1764-02-08 | Gorzów Wielkopolski | Cemetery in Gorzów Wielkopolski | Dysentery          | 131       | 139      
+233         | 4          | Paweł      | Wiśniewski  | M   | 1719-03-06 | Września            | 1777-02-08 | Thorn               | Cemetery in Thorn               | Starvation         | 104       | 111      
+248         | 4          | Zofia      | Kwiatkowska | F   | 1722-11-24 | Gdynia              | 1795-08-13 | Bromberg            | Cemetery in Bromberg            | Typhus             | 120       | 137      
+269         | 4          | Krystyna   | Piotrowska  | F   | 1729-05-28 | Wejherowo           | 1794-01-25 | Gorzów Wielkopolski | Cemetery in Gorzów Wielkopolski | Plague             | 163       | 182      
+274         | 4          | Wiesław    | Piotrowski  | M   | 1731-01-14 | Gdynia              | 1768-09-23 | Koszalin            | Cemetery in Koszalin            | Infectious disease | 151       | 175      
+322         | 4          | Wanda      | Wiśniewska  | F   | 1742-04-28 | Olsztyn             | 1798-03-17 | Breslau             | Cemetery in Breslau             | Dropsy             | 153       | 180      
+47          | 5          | Urszula    | Grabowska   | F   | 1655-12-14 | Lublin              | 1711-02-28 | Thorn               | Cemetery in Thorn               | Drowning           | 7         | 8        
+50          | 5          | Leokadia   | Wiśniewska  | F   | 1657-12-07 | Wejherowo           | 1693-05-28 | Sopot               | Cemetery in Sopot               | Murder             | 3         | 4        
+54          | 5          | Tadeusz    | Walczak     | M   | 1657-08-18 | Konin               | 1725-09-23 | Kalisz              | Cemetery in Kalisz              | War casualty       | 25        | 26       
+56          | 5          | Antoni     | Piotrowski  | M   | 1659-11-18 | Słupsk              | 1712-03-24 | Koszalin            | Cemetery in Koszalin            | Influenza          | 13        | 14       
+57          | 5          | Ewa        | Wiśniewska  | F   | 1660-09-25 | Sopot               | 1718-02-25 | Opole               | Cemetery in Opole               | NULL               | 3         | 4        
+58          | 5          | Dariusz    | Piotrowski  | M   | 1660-03-16 | Stargard            | 1743-08-18 | Olsztyn             | Cemetery in Olsztyn             | Consumption        | 13        | 14       
+59          | 5          | Teresa     | Grabowska   | F   | 1661-11-11 | Ostrołęka           | 1728-12-15 | Kołobrzeg           | Cemetery in Kołobrzeg           | Murder             | 7         | 8        
+70          | 5          | Julian     | Kwiatkowski | M   | 1648-04-16 | Wejherowo           | 1700-04-09 | Stargard            | Cemetery in Stargard            | NULL               | NULL      | NULL     
+71          | 5          | Genowefa   | Olszewska   | F   | 1644-12-12 | Września            | 1695-11-20 | Chełm               | Cemetery in Chełm               | Plague             | NULL      | NULL     
+72          | 5          | Adam       | Kowalski    | M   | 1645-01-15 | Łomża               | 1726-09-01 | Chełm               | Cemetery in Chełm               | Influenza          | NULL      | NULL     
+76          | 5          | Wiktoria   | Lewandowska | F   | 1651-10-26 | Zakopane            | 1715-12-25 | Stettin             | Cemetery in Stettin             | Drowning           | NULL      | NULL     
+79          | 5          | Jakub      | Piotrowski  | M   | 1650-11-18 | Opole               | 1711-10-27 | Legnica             | Cemetery in Legnica             | Cholera            | NULL      | NULL     
+88          | 5          | Urszula    | Pawlak      | F   | 1678-04-09 | Suwałki             | 1718-06-02 | Świnoujście         | Cemetery in Świnoujście         | Dysentery          | 81        | 75       
+95          | 5          | Helena     | Wiśniewska  | F   | 1680-08-04 | Grudziądz           | 1762-01-05 | Ostrołęka           | Cemetery in Ostrołęka           | Stroke             | 73        | 53       
+104         | 5          | Wojciech   | Wiśniewski  | M   | 1682-07-21 | Włocławek           | 1743-01-20 | Gniezno             | Cemetery in Gniezno             | Murder             | 73        | 53       
+110         | 5          | Adam       | Kowalski    | M   | 1683-08-25 | Biała Podlaska      | 1740-08-25 | Biała Podlaska      | Cemetery in Biała Podlaska      | Drowning           | 72        | 71       
+111         | 5          | Czesława   | Walczak     | F   | 1683-10-23 | Leszno              | 1759-11-09 | Inowrocław          | Cemetery in Inowrocław          | Plague             | 41        | 52       
+120         | 5          | Zygmunt    | Kwiatkowski | M   | 1685-11-10 | Świnoujście         | 1737-03-17 | Wejherowo           | Cemetery in Wejherowo           | Heart failure      | 70        | 50       
+121         | 5          | Krzysztof  | Piotrowski  | M   | 1685-02-26 | Stargard            | 1736-06-19 | Kołobrzeg           | Cemetery in Kołobrzeg           | Infectious disease | 56        | 76       
+122         | 5          | Ewa        | Kowalska    | F   | 1686-10-04 | Suwałki             | 1754-07-09 | Stettin             | Cemetery in Stettin             | Dropsy             | 72        | 71       
+131         | 5          | Grzegorz   | Piotrowski  | M   | 1689-11-16 | Wałbrzych           | 1778-06-09 | Zielona Góra        | Cemetery in Zielona Góra        | Unknown            | 79        | 57       
+132         | 5          | Czesława   | Walczak     | F   | 1689-11-27 | Gniezno             | 1744-08-18 | Elbląg              | Cemetery in Elbląg              | Typhus             | 54        | 47       
+137         | 5          | Józefa     | Pawlak      | F   | 1691-12-21 | Ostrołęka           | 1749-02-28 | Danzig              | Cemetery in Danzig              | Consumption        | 81        | 75       
+139         | 5          | Elżbieta   | Walczak     | F   | 1691-03-17 | Września            | 1732-12-27 | Breslau             | Cemetery in Breslau             | War casualty       | 54        | 47       
+150         | 5          | Wiesław    | Wiśniewski  | M   | 1695-02-23 | Świnoujście         | 1756-11-01 | Stargard            | Cemetery in Stargard            | Plague             | 61        | 69       
+151         | 5          | Marian     | Piotrowski  | M   | 1696-01-16 | Stargard            | 1762-07-26 | Malbork             | Cemetery in Malbork             | Drowning           | 64        | 67       
+153         | 5          | Marian     | Wiśniewski  | M   | 1697-07-01 | Koszalin            | 1776-03-15 | Malbork             | Cemetery in Malbork             | Drowning           | 61        | 69       
+163         | 5          | Tomasz     | Piotrowski  | M   | 1701-10-20 | Olsztyn             | 1753-09-01 | Danzig              | Cemetery in Danzig              | Fire               | 62        | 96       
+175         | 5          | Monika     | Kowalska    | F   | 1705-09-11 | Białystok           | 1731-03-26 | Koszalin            | Cemetery in Koszalin            | Typhus             | 82        | 115      
+180         | 5          | Ludwika    | Wiśniewska  | F   | 1707-04-10 | Grudziądz           | 1754-01-15 | Świnoujście         | Cemetery in Świnoujście         | NULL               | 104       | 111      
+182         | 5          | Wanda      | Kowalska    | F   | 1708-11-24 | Radom               | 1787-09-22 | Świnoujście         | Cemetery in Świnoujście         | Typhus             | 82        | 115      

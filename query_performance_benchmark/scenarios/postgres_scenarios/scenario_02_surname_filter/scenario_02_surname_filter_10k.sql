@@ -7,7 +7,7 @@
 -- Orders the results by birth_date ascending.
 
 
--- RECOMMENDED PARAMETERS: Surname = 'Zając', Birth Year Range = 1744-1793
+-- RECOMMENDED PARAMETERS: Surname = 'Krawczyk', Birth Year Range = 1770-1819
 
 SELECT
     p.id AS person_id,
@@ -18,6 +18,6 @@ SELECT
     p.death_date,
     p.birth_place
 FROM people p
-WHERE p.surname = 'Zając'
-  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1744 AND 1793
+WHERE p.surname = 'Krawczyk'
+  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1770 AND 1819
 ORDER BY p.birth_date ASC;

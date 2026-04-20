@@ -2,24 +2,24 @@
 Benchmark: Insert two biological parents and one sibling for an existing adopted person, then delete them.
 
 Target Person (Adopted child anchor):
-  - ID: 179
-  - Name: Oliwia Olszewska
-  - Birth year: 1405
-  - Adopting Family ID: 41
+  - ID: 135
+  - Name: Franciszek Wieczorek
+  - Birth year: 1402
+  - Adopting Family ID: 44
 This person has no biological parents in the dataset, making it safe to INSERT new ones.
 
 [RECORDS TO BE INSERTED / DELETED]
 Person entities to insert (Columns: id, given_name, surname, sex, is_deceased, birth_date, birth_place, death_date, death_place, cause_of_death, burial_place, occupation):
-  1. Father (ID 20001): 'Jan', 'Kowalski', 'M', true, '1375-06-15', 'Kraków', '1440-11-02', 'Kraków', 'Old age', 'Cemetery in Kraków', 'Farmer'
-  2. Mother (ID 20002): 'Anna', 'Kowalska', 'F', true, '1378-03-22', 'Kraków', '1448-01-10', 'Kraków', 'Fever', 'Cemetery in Kraków', 'Weaver'
-  3. Sibling (ID 20003): 'Piotr', 'Kowalski', 'M', true, '1408-09-01', 'Kraków', '1438-04-12', 'Kraków', 'Accident', 'Cemetery in Kraków', 'Blacksmith'
+  1. Father (ID 20001): 'Jan', 'Kowalski', 'M', true, '1372-06-15', 'Kraków', '1437-11-02', 'Kraków', 'Old age', 'Cemetery in Kraków', 'Farmer'
+  2. Mother (ID 20002): 'Anna', 'Kowalska', 'F', true, '1375-03-22', 'Kraków', '1445-01-10', 'Kraków', 'Fever', 'Cemetery in Kraków', 'Weaver'
+  3. Sibling (ID 20003): 'Piotr', 'Kowalski', 'M', true, '1405-09-01', 'Kraków', '1435-04-12', 'Kraków', 'Accident', 'Cemetery in Kraków', 'Blacksmith'
 
 Family entity to insert (Columns: id, status, marriage_date, marriage_place, husband_id, wife_id):
-  1. Marriage (ID 20001): 'MARRIED', '1397-05-10', 'Kraków', 20001, 20002
+  1. Marriage (ID 20001): 'MARRIED', '1394-05-10', 'Kraków', 20001, 20002
 
 Relationships to establish:
   - Father (ID 20001) is husband of Family (ID 20001)
   - Mother (ID 20002) is wife of Family (ID 20001)
-  - Biological parent-child link between Family (ID 20001) and the anchor child (ID 179)
+  - Biological parent-child link between Family (ID 20001) and the anchor child (ID 135)
   - Biological parent-child link between Family (ID 20001) and the new sibling (ID 20003)
 

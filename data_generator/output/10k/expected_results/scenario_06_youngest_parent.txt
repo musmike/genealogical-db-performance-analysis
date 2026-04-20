@@ -5,6 +5,6 @@ The youngest parent is determined by the exact age difference in days between th
 
 Expected rows: 1
 
-parent_id | given_name | surname   | sex | birth_date | birth_place | age_at_first_child | age_difference_in_days | child_id | child_birth_date | child_birth_place
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-259       | Danuta     | Jabłońska | F   | 1415-09-17 | Tarnów      | 16                 | 5953                   | 348      | 1432-01-04       | Grudziądz        
+parent_id | given_name | surname    | sex | birth_date | birth_place | age_at_first_child | age_difference_in_days | child_id | child_birth_date | child_birth_place
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1664      | Genowefa   | Malinowska | F   | 1577-10-16 | Słupsk      | 16                 | 5971                   | 1942     | 1594-02-20       | Wejherowo        

@@ -7,7 +7,7 @@
 -- Orders the results by birth_date ascending.
 
 
--- RECOMMENDED PARAMETERS: Surname = 'Król', Birth Year Range = 1744-1793
+-- RECOMMENDED PARAMETERS: Surname = 'Górski', Birth Year Range = 1461-1510
 
 SELECT
     p.id AS person_id,
@@ -18,6 +18,6 @@ SELECT
     p.death_date,
     p.birth_place
 FROM people p
-WHERE p.surname = 'Król'
-  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1744 AND 1793
+WHERE p.surname = 'Górski'
+  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1461 AND 1510
 ORDER BY p.birth_date ASC;

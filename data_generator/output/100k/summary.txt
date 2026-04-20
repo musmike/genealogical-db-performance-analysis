@@ -1,206 +1,207 @@
 === POPULATION AND GRAPH TOPOLOGY REPORT ===
 Target population: 100000
 Total people generated: 100000
-People alive at end of simulation (1882): 13673
-Total families: 42173
+People alive at end of simulation (1858): 12789
+Total families: 42542
 
 --- POPULATION GROWTH OVER TIME ---
-Year 700: Alive 200 people. Total generated: 200
-Year 725: Alive 200 people. Total generated: 378
-Year 750: Alive 263 people. Total generated: 608
-Year 775: Alive 258 people. Total generated: 768
-Year 800: Alive 274 people. Total generated: 964
-Year 825: Alive 301 people. Total generated: 1178
-Year 850: Alive 338 people. Total generated: 1421
-Year 875: Alive 399 people. Total generated: 1725
-Year 900: Alive 451 people. Total generated: 2039
-Year 925: Alive 501 people. Total generated: 2353
-Year 950: Alive 561 people. Total generated: 2718
-Year 975: Alive 586 people. Total generated: 3119
-Year 1000: Alive 652 people. Total generated: 3553
-Year 1025: Alive 716 people. Total generated: 4027
-Year 1050: Alive 742 people. Total generated: 4546
-Year 1075: Alive 763 people. Total generated: 5056
-Year 1100: Alive 771 people. Total generated: 5555
-Year 1125: Alive 835 people. Total generated: 6132
-Year 1150: Alive 913 people. Total generated: 6756
-Year 1175: Alive 1047 people. Total generated: 7497
-Year 1200: Alive 1130 people. Total generated: 8260
-Year 1225: Alive 1240 people. Total generated: 9145
-Year 1250: Alive 1328 people. Total generated: 10056
-Year 1275: Alive 1482 people. Total generated: 11113
-Year 1300: Alive 1527 people. Total generated: 12157
-Year 1325: Alive 1615 people. Total generated: 13298
-Year 1350: Alive 1640 people. Total generated: 14417
-Year 1375: Alive 1783 people. Total generated: 15650
-Year 1400: Alive 1953 people. Total generated: 17029
-Year 1425: Alive 2185 people. Total generated: 18516
-Year 1450: Alive 2346 people. Total generated: 20137
-Year 1475: Alive 2619 people. Total generated: 21977
-Year 1500: Alive 2890 people. Total generated: 24003
-Year 1525: Alive 3231 people. Total generated: 26249
-Year 1550: Alive 3536 people. Total generated: 28650
-Year 1575: Alive 3888 people. Total generated: 31308
-Year 1600: Alive 4302 people. Total generated: 34318
-Year 1625: Alive 4726 people. Total generated: 37537
-Year 1650: Alive 5176 people. Total generated: 41078
-Year 1675: Alive 5787 people. Total generated: 45037
-Year 1700: Alive 6520 people. Total generated: 49670
-Year 1725: Alive 7116 people. Total generated: 54496
-Year 1750: Alive 7938 people. Total generated: 59947
-Year 1775: Alive 9015 people. Total generated: 66180
-Year 1800: Alive 9798 people. Total generated: 72886
-Year 1825: Alive 10795 people. Total generated: 80296
-Year 1850: Alive 11869 people. Total generated: 88410
-Year 1875: Alive 13015 people. Total generated: 97302
-Year 1882 (END): Alive 13673 people. Total generated: 100000
+Year 700: Alive 154 people. Total generated: 154
+Year 725: Alive 177 people. Total generated: 301
+Year 750: Alive 234 people. Total generated: 495
+Year 775: Alive 277 people. Total generated: 688
+Year 800: Alive 320 people. Total generated: 909
+Year 825: Alive 343 people. Total generated: 1112
+Year 850: Alive 397 people. Total generated: 1400
+Year 875: Alive 451 people. Total generated: 1712
+Year 900: Alive 497 people. Total generated: 2081
+Year 925: Alive 530 people. Total generated: 2446
+Year 950: Alive 575 people. Total generated: 2835
+Year 975: Alive 639 people. Total generated: 3258
+Year 1000: Alive 710 people. Total generated: 3729
+Year 1025: Alive 761 people. Total generated: 4255
+Year 1050: Alive 813 people. Total generated: 4813
+Year 1075: Alive 868 people. Total generated: 5402
+Year 1100: Alive 880 people. Total generated: 5991
+Year 1125: Alive 909 people. Total generated: 6567
+Year 1150: Alive 967 people. Total generated: 7269
+Year 1175: Alive 1117 people. Total generated: 8047
+Year 1200: Alive 1231 people. Total generated: 8913
+Year 1225: Alive 1383 people. Total generated: 9874
+Year 1250: Alive 1577 people. Total generated: 10938
+Year 1275: Alive 1625 people. Total generated: 12026
+Year 1300: Alive 1697 people. Total generated: 13251
+Year 1325: Alive 1824 people. Total generated: 14569
+Year 1350: Alive 2021 people. Total generated: 15971
+Year 1375: Alive 2228 people. Total generated: 17485
+Year 1400: Alive 2461 people. Total generated: 19146
+Year 1425: Alive 2751 people. Total generated: 21084
+Year 1450: Alive 2911 people. Total generated: 23082
+Year 1475: Alive 3036 people. Total generated: 25149
+Year 1500: Alive 3356 people. Total generated: 27492
+Year 1525: Alive 3681 people. Total generated: 30047
+Year 1550: Alive 4005 people. Total generated: 32828
+Year 1575: Alive 4333 people. Total generated: 35866
+Year 1600: Alive 4777 people. Total generated: 39141
+Year 1625: Alive 5272 people. Total generated: 42852
+Year 1650: Alive 5791 people. Total generated: 46860
+Year 1675: Alive 6341 people. Total generated: 51302
+Year 1700: Alive 7007 people. Total generated: 56042
+Year 1725: Alive 7774 people. Total generated: 61424
+Year 1750: Alive 8630 people. Total generated: 67387
+Year 1775: Alive 9596 people. Total generated: 73981
+Year 1800: Alive 10355 people. Total generated: 81143
+Year 1825: Alive 11373 people. Total generated: 88900
+Year 1850: Alive 12448 people. Total generated: 97406
+Year 1858 (END): Alive 12789 people. Total generated: 100000
 
 --- GRAPH TOPOLOGY & DEMOGRAPHICS ---
-Max graph depth (oldest root to youngest descendant): 52 generations
-Average depth of leaf nodes (endpoints): 38.74 generations
-Sex ratio: 49994 Males / 50006 Females
+Max graph depth (oldest root to youngest descendant): 50 generations
+Average depth of leaf nodes (endpoints): 37.30 generations
+Sex ratio: 50220 Males / 49780 Females
 Oldest person age reached: 99 years
-Average lifespan (deceased individuals): 35.7 years
+Average lifespan (deceased individuals): 35.5 years
 Average lifespan (excluding deaths under 6 years): 53.3 years
-Marriage rate: 89.4% of eligible population (>= 16 years)
-Total divorces / annulments: 434
-Families with children: 29500
-Average children per fertile family: 3.38
-Largest family generated: 12 children
+Marriage rate: 89.6% of eligible population (>= 16 years)
+Total divorces / annulments: 416
+Families with children: 29573
+Average children per fertile family: 3.37
+Largest family generated: 13 children
 Family distribution (children per family):
-  1 child(ren): 5473 families
-  2 child(ren): 5990 families
-  3 child(ren): 5581 families
-  4 child(ren): 4715 families
-  5 child(ren): 3401 families
-  6 child(ren): 2136 families
-  7 child(ren): 1241 families
-  8 child(ren): 610 families
-  9 child(ren): 249 families
+  1 child(ren): 5550 families
+  2 child(ren): 6032 families
+  3 child(ren): 5659 families
+  4 child(ren): 4508 families
+  5 child(ren): 3371 families
+  6 child(ren): 2265 families
+  7 child(ren): 1254 families
+  8 child(ren): 595 families
+  9 child(ren): 230 families
   10 child(ren): 78 families
-  11 child(ren): 21 families
-  12 child(ren): 5 families
-Adopted/Foster individuals: 3956
+  11 child(ren): 27 families
+  12 child(ren): 3 families
+  13 child(ren): 1 families
+Adopted/Foster individuals: 3997
 
 --- PARENT AGE AT SUBSEQUENT BIRTHS (Only from first marriages) ---
-  Child 1: Mother: 23.8 yrs | Father: 26.5 yrs
-  Child 2: Mother: 25.7 yrs | Father: 28.4 yrs
-  Child 3: Mother: 27.6 yrs | Father: 30.3 yrs
-  Child 4: Mother: 29.5 yrs | Father: 32.3 yrs
-  Child 5: Mother: 31.2 yrs | Father: 34.1 yrs
-  Child 6: Mother: 33.0 yrs | Father: 36.0 yrs
-  Child 7: Mother: 34.6 yrs | Father: 37.8 yrs
-  Child 8: Mother: 35.9 yrs | Father: 39.4 yrs
-  Child 9: Mother: 37.1 yrs | Father: 40.8 yrs
-  Child 10: Mother: 38.6 yrs | Father: 42.6 yrs
-  Child 11: Mother: 39.9 yrs | Father: 41.9 yrs
-  Child 12: Mother: 40.0 yrs | Father: 42.6 yrs
+  Child 1: Mother: 23.6 yrs | Father: 26.6 yrs
+  Child 2: Mother: 25.5 yrs | Father: 28.5 yrs
+  Child 3: Mother: 27.4 yrs | Father: 30.4 yrs
+  Child 4: Mother: 29.3 yrs | Father: 32.3 yrs
+  Child 5: Mother: 31.1 yrs | Father: 34.2 yrs
+  Child 6: Mother: 32.8 yrs | Father: 36.0 yrs
+  Child 7: Mother: 34.3 yrs | Father: 37.9 yrs
+  Child 8: Mother: 35.8 yrs | Father: 39.5 yrs
+  Child 9: Mother: 37.1 yrs | Father: 40.5 yrs
+  Child 10: Mother: 37.9 yrs | Father: 41.4 yrs
+  Child 11: Mother: 39.8 yrs | Father: 43.8 yrs
+  Child 12: Mother: 39.8 yrs | Father: 43.8 yrs
+  Child 13: Mother: 42.4 yrs | Father: 46.2 yrs
 
 --- PARENT AGE AT BIRTH DISTRIBUTION ---
 Mother age distribution:
-  16 years: 176 mothers
-  17 years: 629 mothers
-  18 years: 1386 mothers
-  19 years: 2187 mothers
-  20 years: 3407 mothers
-  21 years: 4488 mothers
-  22 years: 5465 mothers
-  23 years: 6191 mothers
-  24 years: 6962 mothers
-  25 years: 7384 mothers
-  26 years: 7401 mothers
-  27 years: 7061 mothers
-  28 years: 6488 mothers
-  29 years: 6009 mothers
-  30 years: 5359 mothers
-  31 years: 4523 mothers
-  32 years: 4056 mothers
-  33 years: 3325 mothers
-  34 years: 2832 mothers
-  35 years: 2351 mothers
-  36 years: 1935 mothers
-  37 years: 1440 mothers
-  38 years: 1181 mothers
-  39 years: 940 mothers
-  40 years: 767 mothers
-  41 years: 607 mothers
-  42 years: 484 mothers
-  43 years: 321 mothers
-  44 years: 223 mothers
-  45 years: 136 mothers
-  46 years: 90 mothers
+  16 years: 218 mothers
+  17 years: 727 mothers
+  18 years: 1463 mothers
+  19 years: 2341 mothers
+  20 years: 3397 mothers
+  21 years: 4518 mothers
+  22 years: 5575 mothers
+  23 years: 6353 mothers
+  24 years: 7134 mothers
+  25 years: 7233 mothers
+  26 years: 7439 mothers
+  27 years: 7003 mothers
+  28 years: 6446 mothers
+  29 years: 5972 mothers
+  30 years: 5132 mothers
+  31 years: 4544 mothers
+  32 years: 3884 mothers
+  33 years: 3264 mothers
+  34 years: 2787 mothers
+  35 years: 2296 mothers
+  36 years: 1845 mothers
+  37 years: 1490 mothers
+  38 years: 1218 mothers
+  39 years: 991 mothers
+  40 years: 744 mothers
+  41 years: 602 mothers
+  42 years: 423 mothers
+  43 years: 325 mothers
+  44 years: 198 mothers
+  45 years: 155 mothers
+  46 years: 92 mothers
   47 years: 40 mothers
 Father age distribution:
-  18 years: 177 fathers
-  19 years: 586 fathers
-  20 years: 1156 fathers
-  21 years: 1819 fathers
-  22 years: 2564 fathers
-  23 years: 3572 fathers
-  24 years: 4326 fathers
-  25 years: 5227 fathers
-  26 years: 5817 fathers
-  27 years: 6279 fathers
-  28 years: 6579 fathers
-  29 years: 6472 fathers
-  30 years: 6175 fathers
-  31 years: 5928 fathers
-  32 years: 5351 fathers
-  33 years: 4848 fathers
-  34 years: 4230 fathers
-  35 years: 3579 fathers
-  36 years: 3124 fathers
-  37 years: 2615 fathers
-  38 years: 2165 fathers
-  39 years: 1763 fathers
-  40 years: 1487 fathers
-  41 years: 1235 fathers
-  42 years: 1109 fathers
-  43 years: 957 fathers
-  44 years: 873 fathers
-  45 years: 776 fathers
-  46 years: 670 fathers
-  47 years: 667 fathers
-  48 years: 613 fathers
-  49 years: 495 fathers
-  50 years: 503 fathers
-  51 years: 390 fathers
-  52 years: 389 fathers
-  53 years: 289 fathers
-  54 years: 247 fathers
-  55 years: 214 fathers
-  56 years: 173 fathers
-  57 years: 112 fathers
-  58 years: 82 fathers
-  59 years: 75 fathers
-  60 years: 45 fathers
-  61 years: 31 fathers
-  62 years: 31 fathers
-  63 years: 11 fathers
-  64 years: 11 fathers
-  65 years: 7 fathers
+  18 years: 161 fathers
+  19 years: 539 fathers
+  20 years: 1083 fathers
+  21 years: 1791 fathers
+  22 years: 2524 fathers
+  23 years: 3499 fathers
+  24 years: 4310 fathers
+  25 years: 5063 fathers
+  26 years: 5740 fathers
+  27 years: 6365 fathers
+  28 years: 6497 fathers
+  29 years: 6541 fathers
+  30 years: 6350 fathers
+  31 years: 5830 fathers
+  32 years: 5440 fathers
+  33 years: 4915 fathers
+  34 years: 4180 fathers
+  35 years: 3704 fathers
+  36 years: 3073 fathers
+  37 years: 2639 fathers
+  38 years: 2138 fathers
+  39 years: 1749 fathers
+  40 years: 1507 fathers
+  41 years: 1234 fathers
+  42 years: 1057 fathers
+  43 years: 1015 fathers
+  44 years: 879 fathers
+  45 years: 763 fathers
+  46 years: 667 fathers
+  47 years: 629 fathers
+  48 years: 570 fathers
+  49 years: 529 fathers
+  50 years: 512 fathers
+  51 years: 439 fathers
+  52 years: 425 fathers
+  53 years: 345 fathers
+  54 years: 297 fathers
+  55 years: 236 fathers
+  56 years: 159 fathers
+  57 years: 130 fathers
+  58 years: 101 fathers
+  59 years: 69 fathers
+  60 years: 58 fathers
+  61 years: 35 fathers
+  62 years: 27 fathers
+  63 years: 21 fathers
+  64 years: 10 fathers
+  65 years: 4 fathers
 
 --- AGE DISTRIBUTION (Living) ---
-  0-9 years: 2997 people
-  10-19 years: 2472 people
-  20-29 years: 2316 people
-  30-39 years: 2048 people
-  40-49 years: 1720 people
-  50-59 years: 1172 people
-  60-69 years: 648 people
-  70-79 years: 249 people
-  80-89 years: 48 people
-  90-99 years: 3 people
+  0-9 years: 2481 people
+  10-19 years: 2351 people
+  20-29 years: 2167 people
+  30-39 years: 2017 people
+  40-49 years: 1705 people
+  50-59 years: 1132 people
+  60-69 years: 656 people
+  70-79 years: 234 people
+  80-89 years: 45 people
+  90-99 years: 1 people
 
 --- AGE DISTRIBUTION (Deceased) ---
-  0-9 years: 29557 people
-  10-19 years: 2912 people
-  20-29 years: 3583 people
-  30-39 years: 3420 people
-  40-49 years: 10936 people
-  50-59 years: 14024 people
-  60-69 years: 12275 people
-  70-79 years: 6828 people
-  80-89 years: 2515 people
-  90-99 years: 277 people
+  0-9 years: 30142 people
+  10-19 years: 2853 people
+  20-29 years: 3729 people
+  30-39 years: 3516 people
+  40-49 years: 11085 people
+  50-59 years: 13897 people
+  60-69 years: 12182 people
+  70-79 years: 6966 people
+  80-89 years: 2600 people
+  90-99 years: 241 people
 

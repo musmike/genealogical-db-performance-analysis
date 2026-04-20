@@ -4,14 +4,15 @@ Target LCA path length required: 16
 Constraint: Person A and Person B are not closely related AND
             biological distance to LCA > 3 for both sides.
 
-Recommended Person A (ID: 94155)
-Recommended Person B (ID: 98333)
+Recommended Person A (ID: 97932)
+Recommended Person B (ID: 94444)
 
 
-Expected rows: 3
+Expected rows: 4
 
-lca_id | given_name | surname    | sex | birth_date | birth_place  | death_date | death_place         | path_length_from_a | path_length_from_b | total_dist
-------------------------------------------------------------------------------------------------------------------------------------------------------------
-38866  | Dariusz    | Malinowski | M   | 1635-02-24 | Krosno       | 1685-03-09 | Jasło               | 8                  | 8                  | 16        
-39349  | Danuta     | Woźniak    | F   | 1638-03-07 | Przemyśl     | 1690-10-20 | Sanok               | 8                  | 8                  | 16        
-41165  | Teresa     | Piotrowska | F   | 1651-02-14 | Zielona Góra | 1699-11-06 | Gorzów Wielkopolski | 8                  | 8                  | 16        
+lca_id | given_name | surname | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
+------------------------------------------------------------------------------------------------------------------------------------------------
+40147  | Stefan     | Górski  | M   | 1608-04-01 | Gdynia      | 1690-02-13 | Sopot       | 8                  | 8                  | 16        
+40281  | Andrzej    | Górski  | M   | 1609-12-05 | Stettin     | 1662-08-12 | Kołobrzeg   | 8                  | 8                  | 16        
+40392  | Genowefa   | Górska  | F   | 1610-11-12 | Olsztyn     | 1655-09-26 | Danzig      | 8                  | 8                  | 16        
+42122  | Anna       | Górska  | F   | 1621-01-15 | Świnoujście | 1669-01-22 | Koszalin    | 8                  | 8                  | 16        

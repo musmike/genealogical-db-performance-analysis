@@ -8,10 +8,10 @@
 -- Orders the results first by generation ascending, then by descendant_id ascending within each generation.
 
 
--- RECOMMENDED PARAMETERS: Person ID = 1619
+-- RECOMMENDED PARAMETERS: Person ID = 2489
 
 WITH RECURSIVE descendants(person_id, depth, via_family_id, visited) AS (
-    SELECT 1619, 0, NULL::int, ARRAY[1619]
+    SELECT 2489, 0, NULL::int, ARRAY[2489]
 
     UNION ALL
 
@@ -31,7 +31,7 @@ WITH RECURSIVE descendants(person_id, depth, via_family_id, visited) AS (
 deduped AS (
     SELECT DISTINCT ON (person_id) person_id, depth, via_family_id
     FROM descendants
-    WHERE person_id <> 1619
+    WHERE person_id <> 2489
     ORDER BY person_id, depth
 )
 

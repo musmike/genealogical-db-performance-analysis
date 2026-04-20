@@ -5,22 +5,22 @@
 -- as identified in expected_results/scenario_08_09_insert_delete.txt, to avoid FK/graph integrity complications.
 
 
--- RECOMMENDED PARAMETERS: Adopted Anchor Person ID = 121
+-- RECOMMENDED PARAMETERS: Adopted Anchor Person ID = 211
 
 INSERT INTO people (id, given_name, surname, sex, is_deceased, birth_date, birth_place, death_date, death_place, cause_of_death, burial_place, occupation)
 VALUES
-    (2001, 'Jan',  'Kowalski', 'M', true, '1669-06-15', 'Kraków', '1734-11-02', 'Kraków', 'Old age', 'Cemetery in Kraków', 'Farmer'),
-    (2002, 'Anna', 'Kowalska', 'F', true, '1672-03-22', 'Kraków', '1742-01-10', 'Kraków', 'Fever', 'Cemetery in Kraków', 'Weaver');
+    (2001, 'Jan',  'Kowalski', 'M', true, '1685-06-15', 'Kraków', '1750-11-02', 'Kraków', 'Old age', 'Cemetery in Kraków', 'Farmer'),
+    (2002, 'Anna', 'Kowalska', 'F', true, '1688-03-22', 'Kraków', '1758-01-10', 'Kraków', 'Fever', 'Cemetery in Kraków', 'Weaver');
 
 INSERT INTO families (id, status, marriage_date, marriage_place, husband_id, wife_id)
-VALUES (2001, 'MARRIED', '1691-05-10', 'Kraków', 2001, 2002);
+VALUES (2001, 'MARRIED', '1707-05-10', 'Kraków', 2001, 2002);
 
 -- ANCHOR
 INSERT INTO family_children (family_id, child_id, relationship_type)
-VALUES (2001, 121, 'BIOLOGICAL'); 
+VALUES (2001, 211, 'BIOLOGICAL'); 
 
 INSERT INTO people (id, given_name, surname, sex, is_deceased, birth_date, birth_place, death_date, death_place, cause_of_death, burial_place, occupation)
-VALUES (2003, 'Piotr', 'Kowalski', 'M', true, '1702-09-01', 'Kraków', '1732-04-12', 'Kraków', 'Accident', 'Cemetery in Kraków', 'Blacksmith');
+VALUES (2003, 'Piotr', 'Kowalski', 'M', true, '1718-09-01', 'Kraków', '1748-04-12', 'Kraków', 'Accident', 'Cemetery in Kraków', 'Blacksmith');
 
 INSERT INTO family_children (family_id, child_id, relationship_type)
 VALUES (2001, 2003, 'BIOLOGICAL');

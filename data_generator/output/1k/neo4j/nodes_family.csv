@@ -1,319 +1,297 @@
 id:ID(Family),status:STRING,marriageDate:DATE,marriagePlace:STRING,:LABEL
-1,WIDOWED,1658-10-04,Jelenia Góra,Family
-2,WIDOWED,1655-07-20,Kołobrzeg,Family
-3,WIDOWED,1650-07-24,Inowrocław,Family
-4,WIDOWED,1656-02-07,Warszawa,Family
-5,WIDOWED,1662-05-04,Przemyśl,Family
-6,WIDOWED,1652-09-27,Wałbrzych,Family
-7,WIDOWED,1656-08-02,Olsztyn,Family
-8,WIDOWED,1655-12-01,Piła,Family
-9,WIDOWED,1650-03-03,Łomża,Family
-10,WIDOWED,1654-07-24,Krosno,Family
-11,WIDOWED,1665-07-08,Jelenia Góra,Family
-12,WIDOWED,1665-03-13,Chojnice,Family
-13,WIDOWED,1659-03-21,Piła,Family
-14,WIDOWED,1661-05-09,Warszawa,Family
-15,WIDOWED,1658-11-23,Białystok,Family
-16,WIDOWED,1666-03-27,Świdnica,Family
-17,WIDOWED,1667-09-28,Lublin,Family
-18,WIDOWED,1674-10-09,Jelenia Góra,Family
-19,WIDOWED,1674-05-23,Opole,Family
-20,WIDOWED,1676-04-27,Skierniewice,Family
-21,WIDOWED,1677-05-18,Inowrocław,Family
-22,WIDOWED,1677-06-27,Kalisz,Family
-23,WIDOWED,1680-04-25,Gorzów Wielkopolski,Family
-24,WIDOWED,1682-08-23,Gostyń,Family
-25,WIDOWED,1682-04-10,Wałbrzych,Family
-26,WIDOWED,1682-05-02,Siedlce,Family
-27,WIDOWED,1683-06-05,Jelenia Góra,Family
-28,WIDOWED,1684-11-09,Breslau,Family
-29,WIDOWED,1686-01-06,Wejherowo,Family
-30,WIDOWED,1686-04-23,Gdynia,Family
-31,WIDOWED,1688-12-07,Gorzów Wielkopolski,Family
-32,WIDOWED,1690-05-28,Rawicz,Family
-33,WIDOWED,1691-08-13,Bromberg,Family
-34,WIDOWED,1692-08-12,Suwałki,Family
-35,WIDOWED,1693-07-04,Przemyśl,Family
-36,WIDOWED,1704-04-21,Gdynia,Family
-37,WIDOWED,1706-01-19,Wejherowo,Family
-38,WIDOWED,1706-02-23,Włocławek,Family
-39,WIDOWED,1707-08-02,Świdnica,Family
-40,ANNULLED,1707-12-09,Kołobrzeg,Family
-41,WIDOWED,1708-08-28,Stettin,Family
-42,WIDOWED,1709-06-12,Zakopane,Family
-43,WIDOWED,1710-11-09,Leszno,Family
-44,WIDOWED,1711-11-25,Oświęcim,Family
-45,WIDOWED,1711-02-28,Gostyń,Family
-46,WIDOWED,1713-01-19,Rzeszów,Family
-47,WIDOWED,1713-09-21,Przemyśl,Family
-48,WIDOWED,1715-12-07,Sandomierz,Family
-49,WIDOWED,1715-11-23,Zielona Góra,Family
-50,WIDOWED,1719-04-25,Kraków,Family
-51,WIDOWED,1719-10-16,Bochnia,Family
-52,WIDOWED,1721-01-05,Legnica,Family
-53,WIDOWED,1721-08-21,Sanok,Family
-54,WIDOWED,1723-06-14,Kościan,Family
-55,WIDOWED,1725-03-18,Stargard,Family
-56,WIDOWED,1727-12-04,Zielona Góra,Family
-57,WIDOWED,1727-01-26,Opole,Family
-58,WIDOWED,1727-04-24,Opole,Family
-59,WIDOWED,1730-12-21,Posen,Family
-60,WIDOWED,1730-01-26,Sandomierz,Family
-61,WIDOWED,1731-10-07,Opole,Family
-62,WIDOWED,1731-11-16,Kościan,Family
-63,DIVORCED,1733-10-16,Rzeszów,Family
-64,WIDOWED,1733-03-06,Tarnów,Family
-65,WIDOWED,1734-03-25,Jasło,Family
-66,WIDOWED,1734-03-03,Gorzów Wielkopolski,Family
-67,WIDOWED,1735-10-22,Gorzów Wielkopolski,Family
-68,WIDOWED,1737-01-21,Kościan,Family
-69,WIDOWED,1738-06-22,Leszno,Family
-70,WIDOWED,1738-06-14,Jelenia Góra,Family
-71,WIDOWED,1738-10-11,Wałbrzych,Family
-72,WIDOWED,1739-04-26,Grudziądz,Family
-73,WIDOWED,1739-01-16,Stettin,Family
-74,WIDOWED,1741-12-17,Piła,Family
-75,WIDOWED,1742-12-20,Świdnica,Family
-76,WIDOWED,1743-05-20,Zakopane,Family
-77,WIDOWED,1745-12-22,Gdynia,Family
-78,WIDOWED,1746-09-25,Września,Family
-79,WIDOWED,1746-05-25,Zielona Góra,Family
-80,WIDOWED,1747-06-04,Thorn,Family
-81,WIDOWED,1747-03-10,Zielona Góra,Family
-82,WIDOWED,1748-06-26,Zielona Góra,Family
-83,WIDOWED,1748-05-10,Gostyń,Family
-84,WIDOWED,1748-06-15,Opole,Family
-85,WIDOWED,1749-04-15,Opole,Family
-86,WIDOWED,1750-10-09,Ostrowiec Świętokrzyski,Family
-87,WIDOWED,1750-12-09,Piła,Family
-88,WIDOWED,1751-08-22,Opole,Family
-89,WIDOWED,1752-06-17,Jasło,Family
-90,WIDOWED,1753-08-28,Gorzów Wielkopolski,Family
-91,WIDOWED,1753-05-02,Rawicz,Family
-92,WIDOWED,1754-10-05,Świdnica,Family
-93,WIDOWED,1754-11-09,Breslau,Family
-94,WIDOWED,1754-04-19,Tarnów,Family
-95,WIDOWED,1755-04-24,Legnica,Family
-96,WIDOWED,1756-03-20,Bochnia,Family
-97,WIDOWED,1757-09-01,Zielona Góra,Family
-98,WIDOWED,1757-04-12,Kościan,Family
-99,WIDOWED,1758-01-23,Rzeszów,Family
-100,WIDOWED,1758-01-15,Wałbrzych,Family
-101,WIDOWED,1758-10-14,Ostrów Wielkopolski,Family
-102,WIDOWED,1761-12-13,Sanok,Family
-103,WIDOWED,1761-02-17,Nowy Sącz,Family
-104,WIDOWED,1761-08-27,Sanok,Family
-105,WIDOWED,1763-07-08,Rawicz,Family
-106,WIDOWED,1764-02-24,Inowrocław,Family
-107,WIDOWED,1764-11-20,Breslau,Family
-108,WIDOWED,1764-11-19,Świdnica,Family
-109,WIDOWED,1764-01-14,Zielona Góra,Family
-110,WIDOWED,1765-08-22,Gorzów Wielkopolski,Family
-111,WIDOWED,1766-06-25,Tarnów,Family
-112,WIDOWED,1766-06-07,Zakopane,Family
-113,WIDOWED,1767-08-21,Wałbrzych,Family
-114,WIDOWED,1767-07-27,Sanok,Family
-115,WIDOWED,1769-02-14,Świdnica,Family
-116,WIDOWED,1770-04-23,Rzeszów,Family
-117,WIDOWED,1770-12-14,Zielona Góra,Family
-118,WIDOWED,1771-05-11,Malbork,Family
-119,WIDOWED,1772-08-26,Wałbrzych,Family
-120,WIDOWED,1773-08-16,Zielona Góra,Family
-121,WIDOWED,1773-02-15,Gorzów Wielkopolski,Family
-122,WIDOWED,1774-01-09,Zielona Góra,Family
-123,WIDOWED,1775-08-27,Breslau,Family
-124,WIDOWED,1775-01-08,Wałbrzych,Family
-125,WIDOWED,1776-03-21,Chojnice,Family
-126,WIDOWED,1776-09-23,Krosno,Family
-127,WIDOWED,1777-03-25,Jelenia Góra,Family
-128,WIDOWED,1778-08-16,Oświęcim,Family
-129,WIDOWED,1779-03-06,Konin,Family
-130,WIDOWED,1779-06-14,Jelenia Góra,Family
-131,WIDOWED,1779-05-18,Thorn,Family
-132,WIDOWED,1780-08-18,Gniezno,Family
-133,WIDOWED,1780-01-16,Konin,Family
-134,WIDOWED,1780-01-17,Września,Family
-135,WIDOWED,1780-05-27,Breslau,Family
-136,WIDOWED,1780-07-23,Wałbrzych,Family
-137,WIDOWED,1780-12-20,Legnica,Family
-138,WIDOWED,1780-11-09,Nowy Sącz,Family
-139,WIDOWED,1780-07-24,Gniezno,Family
-140,WIDOWED,1781-11-07,Gorzów Wielkopolski,Family
-141,WIDOWED,1781-12-13,Gostyń,Family
-142,WIDOWED,1783-02-02,Tarnobrzeg,Family
-143,WIDOWED,1783-04-22,Jelenia Góra,Family
-144,WIDOWED,1784-03-10,Zielona Góra,Family
-145,WIDOWED,1784-11-20,Sandomierz,Family
-146,WIDOWED,1785-05-27,Stettin,Family
-147,WIDOWED,1785-03-11,Legnica,Family
-148,WIDOWED,1785-03-16,Kraków,Family
-149,WIDOWED,1785-08-02,Posen,Family
-150,WIDOWED,1785-12-19,Gostyń,Family
-151,WIDOWED,1786-01-01,Gorzów Wielkopolski,Family
-152,WIDOWED,1786-06-01,Sandomierz,Family
-153,WIDOWED,1786-07-21,Bochnia,Family
-154,WIDOWED,1786-10-16,Nowy Sącz,Family
-155,WIDOWED,1786-09-12,Opole,Family
-156,WIDOWED,1787-12-01,Grudziądz,Family
-157,WIDOWED,1789-06-25,Świdnica,Family
-158,WIDOWED,1789-07-21,Sandomierz,Family
-159,WIDOWED,1789-08-06,Przemyśl,Family
-160,WIDOWED,1789-03-22,Bochnia,Family
-161,WIDOWED,1790-06-03,Wałbrzych,Family
-162,WIDOWED,1790-10-23,Konin,Family
-163,WIDOWED,1790-08-22,Wałbrzych,Family
-164,WIDOWED,1792-03-11,Ostrów Wielkopolski,Family
-165,WIDOWED,1793-05-12,Świdnica,Family
-166,WIDOWED,1794-01-25,Opole,Family
-167,MARRIED,1795-07-10,Ostrowiec Świętokrzyski,Family
-168,WIDOWED,1795-10-28,Wałbrzych,Family
-169,WIDOWED,1796-04-27,Ostrowiec Świętokrzyski,Family
-170,WIDOWED,1797-06-08,Ostrowiec Świętokrzyski,Family
-171,WIDOWED,1797-11-17,Ostrowiec Świętokrzyski,Family
-172,WIDOWED,1797-02-03,Kalisz,Family
-173,WIDOWED,1797-05-11,Breslau,Family
-174,WIDOWED,1798-01-21,Kalisz,Family
-175,WIDOWED,1798-12-20,Września,Family
-176,WIDOWED,1798-07-02,Tarnobrzeg,Family
-177,WIDOWED,1798-02-12,Gorzów Wielkopolski,Family
-178,WIDOWED,1799-02-03,Gniezno,Family
-179,WIDOWED,1799-07-12,Sandomierz,Family
-180,WIDOWED,1800-01-07,Tarnów,Family
-181,WIDOWED,1801-09-15,Grudziądz,Family
-182,WIDOWED,1801-03-21,Gorzów Wielkopolski,Family
-183,WIDOWED,1801-06-27,Tarnów,Family
-184,WIDOWED,1801-02-24,Sopot,Family
-185,WIDOWED,1801-05-07,Legnica,Family
-186,WIDOWED,1802-05-28,Grudziądz,Family
-187,WIDOWED,1803-10-21,Śrem,Family
-188,WIDOWED,1803-07-07,Nowy Sącz,Family
-189,WIDOWED,1805-07-12,Włocławek,Family
-190,WIDOWED,1805-12-12,Śrem,Family
-191,WIDOWED,1806-06-27,Legnica,Family
-192,WIDOWED,1807-12-23,Nowy Sącz,Family
-193,WIDOWED,1807-09-04,Bochnia,Family
-194,WIDOWED,1807-01-03,Breslau,Family
-195,WIDOWED,1808-07-09,Świdnica,Family
-196,WIDOWED,1808-12-03,Kościan,Family
-197,WIDOWED,1808-07-19,Gorzów Wielkopolski,Family
-198,WIDOWED,1808-08-02,Breslau,Family
-199,WIDOWED,1809-05-25,Jelenia Góra,Family
-200,WIDOWED,1809-05-19,Malbork,Family
-201,WIDOWED,1810-03-16,Zielona Góra,Family
-202,WIDOWED,1810-12-18,Thorn,Family
-203,WIDOWED,1810-12-17,Wejherowo,Family
-204,WIDOWED,1811-07-22,Kościan,Family
-205,WIDOWED,1811-07-18,Grudziądz,Family
-206,WIDOWED,1811-07-14,Breslau,Family
-207,MARRIED,1811-12-17,Jelenia Góra,Family
-208,WIDOWED,1811-12-09,Wałbrzych,Family
-209,WIDOWED,1812-11-18,Kalisz,Family
-210,WIDOWED,1812-04-06,Tarnów,Family
-211,WIDOWED,1812-03-28,Gostyń,Family
-212,WIDOWED,1812-02-05,Tarnów,Family
-213,WIDOWED,1812-10-10,Wałbrzych,Family
-214,WIDOWED,1812-03-13,Sandomierz,Family
-215,WIDOWED,1813-02-01,Legnica,Family
-216,WIDOWED,1813-09-09,Bromberg,Family
-217,WIDOWED,1813-02-24,Kraków,Family
-218,WIDOWED,1813-05-26,Rzeszów,Family
-219,DIVORCED,1814-10-17,Zielona Góra,Family
-220,WIDOWED,1814-05-14,Gniezno,Family
-221,WIDOWED,1815-01-12,Gostyń,Family
-222,MARRIED,1816-06-16,Ostrowiec Świętokrzyski,Family
-223,OTHER,1817-11-13,Zakopane,Family
-224,WIDOWED,1817-05-20,Posen,Family
-225,WIDOWED,1817-05-19,Gostyń,Family
-226,MARRIED,1817-07-07,Rawicz,Family
-227,WIDOWED,1818-05-11,Śrem,Family
-228,WIDOWED,1818-02-25,Gorzów Wielkopolski,Family
-229,WIDOWED,1818-01-08,Świnoujście,Family
-230,WIDOWED,1819-12-12,Bromberg,Family
-231,WIDOWED,1820-10-28,Śrem,Family
-232,MARRIED,1820-03-18,Tarnów,Family
-233,WIDOWED,1821-06-14,Sanok,Family
-234,MARRIED,1821-02-25,Olsztyn,Family
-235,MARRIED,1822-10-26,Jasło,Family
-236,MARRIED,1822-11-12,Bromberg,Family
-237,MARRIED,1824-09-05,Śrem,Family
-238,WIDOWED,1824-01-17,Krosno,Family
-239,MARRIED,1824-09-27,Gorzów Wielkopolski,Family
-240,MARRIED,1824-08-19,Włocławek,Family
-241,WIDOWED,1824-07-03,Jasło,Family
-242,WIDOWED,1824-09-03,Inowrocław,Family
-243,MARRIED,1825-03-28,Opole,Family
-244,WIDOWED,1825-11-22,Rawicz,Family
-245,WIDOWED,1825-06-25,Gorzów Wielkopolski,Family
-246,MARRIED,1825-05-28,Jelenia Góra,Family
-247,MARRIED,1826-01-02,Ostrów Wielkopolski,Family
-248,MARRIED,1826-08-18,Tarnów,Family
-249,MARRIED,1827-02-02,Gorzów Wielkopolski,Family
-250,MARRIED,1827-06-02,Oświęcim,Family
-251,WIDOWED,1827-04-06,Bromberg,Family
-252,MARRIED,1827-06-24,Zielona Góra,Family
-253,WIDOWED,1828-04-07,Zielona Góra,Family
-254,WIDOWED,1828-05-25,Malbork,Family
-255,OTHER,1828-01-10,Krosno,Family
-256,WIDOWED,1828-01-06,Piła,Family
-257,MARRIED,1829-04-13,Kielce,Family
-258,MARRIED,1829-11-06,Kościan,Family
-259,WIDOWED,1829-10-04,Oświęcim,Family
-260,MARRIED,1829-05-13,Gorzów Wielkopolski,Family
-261,MARRIED,1830-05-27,Włocławek,Family
-262,MARRIED,1830-03-01,Kraków,Family
-263,MARRIED,1830-04-14,Inowrocław,Family
-264,MARRIED,1830-01-15,Kraków,Family
-265,OTHER,1830-07-05,Breslau,Family
-266,MARRIED,1830-04-19,Legnica,Family
-267,WIDOWED,1831-09-02,Koszalin,Family
-268,MARRIED,1831-02-04,Kościan,Family
-269,WIDOWED,1831-09-15,Kalisz,Family
-270,MARRIED,1831-01-08,Wałbrzych,Family
-271,MARRIED,1832-02-03,Sanok,Family
-272,MARRIED,1832-07-27,Gostyń,Family
-273,MARRIED,1833-04-15,Śrem,Family
-274,MARRIED,1833-08-13,Gorzów Wielkopolski,Family
-275,MARRIED,1834-02-05,Thorn,Family
-276,WIDOWED,1834-02-22,Nowy Sącz,Family
-277,WIDOWED,1834-06-16,Stettin,Family
-278,WIDOWED,1834-08-14,Gorzów Wielkopolski,Family
-279,WIDOWED,1835-08-05,Nowy Sącz,Family
-280,MARRIED,1835-08-24,Chojnice,Family
-281,WIDOWED,1835-09-11,Świdnica,Family
-282,MARRIED,1835-07-06,Ostrowiec Świętokrzyski,Family
-283,WIDOWED,1835-05-09,Wałbrzych,Family
-284,MARRIED,1836-09-17,Kraków,Family
-285,MARRIED,1836-09-08,Świdnica,Family
-286,MARRIED,1836-06-07,Bromberg,Family
-287,MARRIED,1836-11-19,Przemyśl,Family
-288,MARRIED,1836-10-20,Bromberg,Family
-289,MARRIED,1837-02-20,Gdynia,Family
-290,MARRIED,1837-08-18,Malbork,Family
-291,WIDOWED,1837-11-20,Wejherowo,Family
-292,MARRIED,1838-07-23,Oświęcim,Family
-293,MARRIED,1838-05-26,Krosno,Family
-294,MARRIED,1839-07-09,Sanok,Family
-295,MARRIED,1839-12-28,Gorzów Wielkopolski,Family
-296,PARTNERS,1839-09-22,Wałbrzych,Family
-297,WIDOWED,1840-09-09,Jelenia Góra,Family
-298,MARRIED,1840-04-16,Rzeszów,Family
-299,MARRIED,1840-03-16,Opole,Family
-300,MARRIED,1840-02-18,Wałbrzych,Family
-301,WIDOWED,1841-01-06,Olsztyn,Family
-302,MARRIED,1841-12-22,Gorzów Wielkopolski,Family
-303,MARRIED,1841-02-03,Nowy Sącz,Family
-304,PARTNERS,1841-02-15,Jelenia Góra,Family
-305,MARRIED,1841-03-05,Gorzów Wielkopolski,Family
-306,MARRIED,1842-06-27,Bochnia,Family
-307,MARRIED,1842-09-12,Gniezno,Family
-308,MARRIED,1842-10-17,Kraków,Family
-309,MARRIED,1843-03-28,Gniezno,Family
-310,MARRIED,1843-02-10,Włocławek,Family
-311,MARRIED,1843-01-17,Konin,Family
-312,PARTNERS,1843-06-10,Kościan,Family
-313,MARRIED,1843-07-27,Tarnów,Family
-314,MARRIED,1843-06-05,Tarnów,Family
-315,MARRIED,1844-06-17,Bochnia,Family
-316,MARRIED,1844-09-06,Sopot,Family
-317,MARRIED,1844-07-06,Nowy Sącz,Family
-318,PARTNERS,1844-04-11,Legnica,Family
+1,WIDOWED,1664-01-21,Zielona Góra,Family
+2,WIDOWED,1654-01-11,Elbląg,Family
+3,WIDOWED,1656-04-09,Gniezno,Family
+4,WIDOWED,1652-12-01,Białystok,Family
+5,WIDOWED,1664-05-10,Rzeszów,Family
+6,WIDOWED,1652-06-28,Opole,Family
+7,WIDOWED,1656-05-08,Gdynia,Family
+8,WIDOWED,1658-11-03,Piła,Family
+9,WIDOWED,1650-06-13,Ciechanów,Family
+10,WIDOWED,1652-07-07,Bochnia,Family
+11,WIDOWED,1665-04-25,Jelenia Góra,Family
+12,WIDOWED,1650-10-07,Gdynia,Family
+13,WIDOWED,1650-07-18,Grudziądz,Family
+14,WIDOWED,1664-07-01,Skierniewice,Family
+15,WIDOWED,1663-06-19,Ostrowiec Świętokrzyski,Family
+16,WIDOWED,1660-10-27,Wałbrzych,Family
+17,WIDOWED,1663-08-15,Wejherowo,Family
+18,WIDOWED,1659-07-10,Posen,Family
+19,WIDOWED,1661-09-11,Suwałki,Family
+20,WIDOWED,1659-04-15,Inowrocław,Family
+21,WIDOWED,1664-09-10,Września,Family
+22,WIDOWED,1665-05-02,Wałbrzych,Family
+23,WIDOWED,1672-08-12,Gniezno,Family
+24,WIDOWED,1673-03-10,Lublin,Family
+25,WIDOWED,1673-08-18,Malbork,Family
+26,WIDOWED,1675-06-17,Sopot,Family
+27,WIDOWED,1676-04-12,Stargard,Family
+28,WIDOWED,1676-02-26,Gniezno,Family
+29,WIDOWED,1677-03-26,Oświęcim,Family
+30,WIDOWED,1678-11-26,Słupsk,Family
+31,WIDOWED,1678-02-11,Sanok,Family
+32,WIDOWED,1679-01-06,Bromberg,Family
+33,WIDOWED,1679-04-06,Przemyśl,Family
+34,WIDOWED,1680-10-09,Olsztyn,Family
+35,WIDOWED,1681-01-24,Nowy Sącz,Family
+36,WIDOWED,1683-05-12,Białystok,Family
+37,WIDOWED,1685-08-14,Skierniewice,Family
+38,WIDOWED,1687-05-06,Ciechanów,Family
+39,WIDOWED,1688-01-12,Ostrołęka,Family
+40,WIDOWED,1688-04-13,Koszalin,Family
+41,WIDOWED,1691-05-25,Kielce,Family
+42,WIDOWED,1693-10-26,Zamość,Family
+43,WIDOWED,1696-03-28,Ostrołęka,Family
+44,WIDOWED,1697-02-19,Gostyń,Family
+45,WIDOWED,1697-08-24,Posen,Family
+46,WIDOWED,1698-12-26,Świnoujście,Family
+47,WIDOWED,1700-06-07,Września,Family
+48,WIDOWED,1700-01-16,Chełm,Family
+49,WIDOWED,1701-09-02,Sopot,Family
+50,WIDOWED,1702-08-06,Biała Podlaska,Family
+51,WIDOWED,1703-01-16,Zamość,Family
+52,WIDOWED,1706-02-10,Gniezno,Family
+53,WIDOWED,1706-01-20,Września,Family
+54,WIDOWED,1706-08-27,Inowrocław,Family
+55,WIDOWED,1707-11-16,Jelenia Góra,Family
+56,WIDOWED,1708-03-14,Leszno,Family
+57,WIDOWED,1708-02-03,Elbląg,Family
+58,WIDOWED,1710-10-11,Kościan,Family
+59,WIDOWED,1710-10-22,Stettin,Family
+60,WIDOWED,1711-11-19,Inowrocław,Family
+61,WIDOWED,1712-06-17,Sopot,Family
+62,WIDOWED,1713-12-26,Biała Podlaska,Family
+63,WIDOWED,1713-10-23,Kołobrzeg,Family
+64,WIDOWED,1713-12-27,Ciechanów,Family
+65,WIDOWED,1714-08-08,Kalisz,Family
+66,WIDOWED,1716-12-07,Breslau,Family
+67,WIDOWED,1716-02-22,Ciechanów,Family
+68,WIDOWED,1717-12-11,Świdnica,Family
+69,WIDOWED,1718-02-11,Świdnica,Family
+70,WIDOWED,1719-11-05,Warszawa,Family
+71,WIDOWED,1720-12-23,Siedlce,Family
+72,WIDOWED,1720-02-21,Gdynia,Family
+73,WIDOWED,1720-02-09,Gdynia,Family
+74,WIDOWED,1727-10-22,Bromberg,Family
+75,WIDOWED,1728-05-08,Płock,Family
+76,WIDOWED,1728-03-17,Skierniewice,Family
+77,WIDOWED,1728-06-17,Gostyń,Family
+78,WIDOWED,1728-06-17,Stettin,Family
+79,WIDOWED,1729-07-05,Zamość,Family
+80,WIDOWED,1729-07-19,Płock,Family
+81,WIDOWED,1729-01-21,Konin,Family
+82,WIDOWED,1730-10-14,Gostyń,Family
+83,WIDOWED,1730-07-10,Chełm,Family
+84,WIDOWED,1732-02-26,Sopot,Family
+85,WIDOWED,1733-05-10,Siedlce,Family
+86,WIDOWED,1733-08-19,Ostrołęka,Family
+87,WIDOWED,1734-05-19,Lublin,Family
+88,WIDOWED,1734-03-14,Śrem,Family
+89,WIDOWED,1735-06-08,Koszalin,Family
+90,WIDOWED,1736-06-14,Gdynia,Family
+91,WIDOWED,1737-06-11,Zielona Góra,Family
+92,WIDOWED,1738-03-11,Stettin,Family
+93,WIDOWED,1738-03-09,Chojnice,Family
+94,WIDOWED,1738-05-04,Siedlce,Family
+95,WIDOWED,1739-02-25,Wejherowo,Family
+96,WIDOWED,1739-03-20,Inowrocław,Family
+97,WIDOWED,1739-04-21,Ostrów Wielkopolski,Family
+98,WIDOWED,1740-09-01,Chełm,Family
+99,WIDOWED,1740-09-19,Stargard,Family
+100,WIDOWED,1742-02-09,Gorzów Wielkopolski,Family
+101,WIDOWED,1745-04-13,Włocławek,Family
+102,WIDOWED,1746-06-20,Chojnice,Family
+103,WIDOWED,1746-02-14,Olsztyn,Family
+104,WIDOWED,1746-04-12,Radom,Family
+105,WIDOWED,1747-12-15,Malbork,Family
+106,WIDOWED,1749-02-09,Stettin,Family
+107,WIDOWED,1749-09-17,Inowrocław,Family
+108,WIDOWED,1752-01-25,Wejherowo,Family
+109,WIDOWED,1752-04-06,Grudziądz,Family
+110,WIDOWED,1753-02-27,Gdynia,Family
+111,WIDOWED,1753-01-12,Łódź,Family
+112,WIDOWED,1754-05-06,Koszalin,Family
+113,WIDOWED,1755-08-02,Słupsk,Family
+114,WIDOWED,1755-09-06,Danzig,Family
+115,WIDOWED,1756-10-02,Słupsk,Family
+116,WIDOWED,1756-10-23,Koszalin,Family
+117,WIDOWED,1756-05-11,Radom,Family
+118,WIDOWED,1756-04-03,Gostyń,Family
+119,WIDOWED,1758-11-23,Wejherowo,Family
+120,WIDOWED,1758-11-25,Białystok,Family
+121,WIDOWED,1758-03-05,Chojnice,Family
+122,WIDOWED,1758-11-04,Koszalin,Family
+123,WIDOWED,1758-06-19,Stargard,Family
+124,WIDOWED,1759-12-01,Biała Podlaska,Family
+125,WIDOWED,1760-10-13,Zamość,Family
+126,WIDOWED,1760-09-03,Wejherowo,Family
+127,WIDOWED,1760-01-02,Słupsk,Family
+128,WIDOWED,1760-10-15,Gdynia,Family
+129,WIDOWED,1761-06-07,Opole,Family
+130,WIDOWED,1761-08-10,Suwałki,Family
+131,WIDOWED,1761-01-10,Piła,Family
+132,WIDOWED,1762-11-25,Sopot,Family
+133,WIDOWED,1763-09-24,Stettin,Family
+134,WIDOWED,1764-09-21,Piła,Family
+135,WIDOWED,1764-05-03,Elbląg,Family
+136,WIDOWED,1764-12-12,Olsztyn,Family
+137,WIDOWED,1765-06-15,Leszno,Family
+138,WIDOWED,1766-06-03,Słupsk,Family
+139,WIDOWED,1769-09-23,Legnica,Family
+140,WIDOWED,1769-06-18,Łomża,Family
+141,WIDOWED,1770-08-26,Stettin,Family
+142,WIDOWED,1770-05-08,Łomża,Family
+143,WIDOWED,1770-01-18,Sopot,Family
+144,WIDOWED,1770-11-28,Opole,Family
+145,WIDOWED,1773-04-19,Danzig,Family
+146,WIDOWED,1773-11-22,Leszno,Family
+147,WIDOWED,1774-08-07,Konin,Family
+148,WIDOWED,1774-06-21,Grudziądz,Family
+149,WIDOWED,1775-01-19,Grudziądz,Family
+150,WIDOWED,1775-05-01,Świdnica,Family
+151,WIDOWED,1775-12-27,Włocławek,Family
+152,WIDOWED,1776-05-06,Kołobrzeg,Family
+153,WIDOWED,1777-07-14,Świnoujście,Family
+154,WIDOWED,1777-06-25,Gorzów Wielkopolski,Family
+155,WIDOWED,1777-11-28,Kościan,Family
+156,WIDOWED,1779-09-21,Olsztyn,Family
+157,WIDOWED,1779-10-26,Chojnice,Family
+158,WIDOWED,1780-06-21,Wejherowo,Family
+159,WIDOWED,1780-11-24,Słupsk,Family
+160,WIDOWED,1780-08-23,Wałbrzych,Family
+161,WIDOWED,1780-06-09,Leszno,Family
+162,WIDOWED,1781-09-20,Zielona Góra,Family
+163,WIDOWED,1782-09-03,Skierniewice,Family
+164,WIDOWED,1782-03-18,Stettin,Family
+165,WIDOWED,1782-07-21,Gdynia,Family
+166,WIDOWED,1783-09-17,Gdynia,Family
+167,MARRIED,1783-12-08,Grudziądz,Family
+168,WIDOWED,1783-08-26,Ostrów Wielkopolski,Family
+169,WIDOWED,1783-02-26,Grudziądz,Family
+170,WIDOWED,1784-01-02,Danzig,Family
+171,WIDOWED,1784-09-07,Słupsk,Family
+172,WIDOWED,1784-01-22,Danzig,Family
+173,WIDOWED,1784-12-20,Olsztyn,Family
+174,WIDOWED,1784-08-18,Konin,Family
+175,WIDOWED,1785-02-23,Malbork,Family
+176,WIDOWED,1785-05-15,Gostyń,Family
+177,WIDOWED,1785-11-01,Gdynia,Family
+178,WIDOWED,1786-10-07,Olsztyn,Family
+179,WIDOWED,1786-12-01,Breslau,Family
+180,WIDOWED,1787-05-03,Słupsk,Family
+181,WIDOWED,1787-07-12,Śrem,Family
+182,WIDOWED,1787-10-05,Jelenia Góra,Family
+183,WIDOWED,1788-06-25,Kołobrzeg,Family
+184,WIDOWED,1788-10-24,Płock,Family
+185,WIDOWED,1788-01-17,Elbląg,Family
+186,WIDOWED,1788-12-25,Kołobrzeg,Family
+187,WIDOWED,1789-04-07,Świnoujście,Family
+188,WIDOWED,1789-08-03,Wejherowo,Family
+189,WIDOWED,1790-10-11,Świdnica,Family
+190,WIDOWED,1790-02-28,Breslau,Family
+191,WIDOWED,1790-12-11,Olsztyn,Family
+192,WIDOWED,1790-06-24,Sopot,Family
+193,WIDOWED,1790-06-09,Kalisz,Family
+194,WIDOWED,1791-12-27,Danzig,Family
+195,WIDOWED,1791-09-18,Suwałki,Family
+196,WIDOWED,1791-09-23,Świnoujście,Family
+197,WIDOWED,1791-06-13,Ciechanów,Family
+198,WIDOWED,1791-10-17,Chełm,Family
+199,WIDOWED,1792-01-06,Malbork,Family
+200,WIDOWED,1792-05-08,Kołobrzeg,Family
+201,WIDOWED,1792-12-06,Śrem,Family
+202,WIDOWED,1793-06-21,Świnoujście,Family
+203,WIDOWED,1794-09-01,Lublin,Family
+204,MARRIED,1795-07-24,Kołobrzeg,Family
+205,WIDOWED,1795-01-07,Świdnica,Family
+206,WIDOWED,1795-09-28,Gostyń,Family
+207,WIDOWED,1796-09-07,Września,Family
+208,WIDOWED,1796-12-03,Sopot,Family
+209,WIDOWED,1796-05-28,Włocławek,Family
+210,WIDOWED,1796-10-27,Breslau,Family
+211,OTHER,1797-01-21,Kołobrzeg,Family
+212,WIDOWED,1798-09-03,Świdnica,Family
+213,MARRIED,1799-11-26,Łódź,Family
+214,MARRIED,1800-04-01,Warszawa,Family
+215,WIDOWED,1800-10-11,Thorn,Family
+216,WIDOWED,1801-06-14,Gorzów Wielkopolski,Family
+217,WIDOWED,1801-10-21,Sopot,Family
+218,MARRIED,1803-11-26,Opole,Family
+219,MARRIED,1804-07-08,Słupsk,Family
+220,MARRIED,1805-04-15,Koszalin,Family
+221,WIDOWED,1805-08-08,Kołobrzeg,Family
+222,WIDOWED,1805-02-06,Ostrów Wielkopolski,Family
+223,PARTNERS,1805-10-20,Danzig,Family
+224,WIDOWED,1805-07-20,Świnoujście,Family
+225,MARRIED,1805-04-23,Elbląg,Family
+226,WIDOWED,1806-08-01,Stettin,Family
+227,MARRIED,1806-02-16,Radom,Family
+228,WIDOWED,1806-07-05,Jelenia Góra,Family
+229,MARRIED,1806-03-16,Kalisz,Family
+230,WIDOWED,1807-03-15,Chojnice,Family
+231,MARRIED,1807-10-24,Warszawa,Family
+232,MARRIED,1807-02-11,Ostrów Wielkopolski,Family
+233,WIDOWED,1807-01-25,Łódź,Family
+234,MARRIED,1808-04-10,Gorzów Wielkopolski,Family
+235,PARTNERS,1809-11-01,Breslau,Family
+236,OTHER,1809-07-06,Koszalin,Family
+237,MARRIED,1809-08-14,Wejherowo,Family
+238,WIDOWED,1810-08-25,Płock,Family
+239,MARRIED,1810-03-07,Rawicz,Family
+240,MARRIED,1810-11-17,Koszalin,Family
+241,MARRIED,1811-07-19,Koszalin,Family
+242,MARRIED,1811-12-04,Stargard,Family
+243,MARRIED,1811-06-23,Ostrów Wielkopolski,Family
+244,MARRIED,1811-01-04,Stargard,Family
+245,WIDOWED,1812-09-26,Sopot,Family
+246,MARRIED,1812-12-27,Ostrołęka,Family
+247,MARRIED,1812-11-16,Breslau,Family
+248,MARRIED,1812-07-01,Białystok,Family
+249,MARRIED,1812-05-20,Danzig,Family
+250,OTHER,1813-06-10,Siedlce,Family
+251,WIDOWED,1813-08-26,Kołobrzeg,Family
+252,MARRIED,1813-04-10,Piła,Family
+253,MARRIED,1813-11-11,Świdnica,Family
+254,MARRIED,1813-04-06,Kołobrzeg,Family
+255,WIDOWED,1814-09-08,Wejherowo,Family
+256,WIDOWED,1814-05-18,Koszalin,Family
+257,MARRIED,1814-02-03,Wejherowo,Family
+258,MARRIED,1814-12-08,Stettin,Family
+259,WIDOWED,1814-04-25,Ostrołęka,Family
+260,WIDOWED,1814-08-17,Biała Podlaska,Family
+261,WIDOWED,1815-06-08,Stettin,Family
+262,MARRIED,1815-12-06,Świnoujście,Family
+263,WIDOWED,1816-05-02,Gorzów Wielkopolski,Family
+264,MARRIED,1816-12-18,Kościan,Family
+265,MARRIED,1817-08-13,Malbork,Family
+266,MARRIED,1817-05-18,Legnica,Family
+267,MARRIED,1817-07-23,Stettin,Family
+268,MARRIED,1817-10-24,Stargard,Family
+269,MARRIED,1818-11-10,Gdynia,Family
+270,MARRIED,1818-02-21,Sopot,Family
+271,MARRIED,1818-02-09,Opole,Family
+272,MARRIED,1819-02-21,Chojnice,Family
+273,PARTNERS,1819-11-23,Radom,Family
+274,MARRIED,1819-01-27,Świdnica,Family
+275,MARRIED,1819-02-19,Wejherowo,Family
+276,ANNULLED,1820-09-18,Elbląg,Family
+277,OTHER,1820-04-21,Malbork,Family
+278,MARRIED,1820-05-23,Świdnica,Family
+279,WIDOWED,1821-01-18,Ostrołęka,Family
+280,OTHER,1821-08-02,Stettin,Family
+281,WIDOWED,1821-01-28,Zielona Góra,Family
+282,MARRIED,1821-01-22,Stettin,Family
+283,MARRIED,1822-07-07,Gniezno,Family
+284,MARRIED,1822-06-24,Gdynia,Family
+285,MARRIED,1822-02-22,Opole,Family
+286,PARTNERS,1822-03-06,Kołobrzeg,Family
+287,MARRIED,1824-07-08,Suwałki,Family
+288,MARRIED,1824-08-15,Świnoujście,Family
+289,PARTNERS,1825-09-18,Wałbrzych,Family
+290,MARRIED,1825-01-03,Thorn,Family
+291,MARRIED,1825-01-24,Legnica,Family
+292,MARRIED,1825-12-22,Gorzów Wielkopolski,Family
+293,MARRIED,1825-04-28,Płock,Family
+294,MARRIED,1826-07-24,Opole,Family
+295,OTHER,1826-01-07,Zielona Góra,Family
+296,MARRIED,1826-03-07,Elbląg,Family

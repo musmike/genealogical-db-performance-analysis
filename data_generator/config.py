@@ -5,7 +5,7 @@ and dictionaries of historical data: names, surnames, places, and occupations.
 """
 
 # A fixed seed guarantees full reproducibility of simulation results
-SEED = 275228
+SEED = 748376
 
 # Scenario parameters for each population scale.
 # Define scenario-specific genealogical tree depth (LCA/ancestors/descendants),
@@ -13,15 +13,15 @@ SEED = 275228
 SCENARIOS = {
     1000: {
         'lca_path': 8, 'ancestors_depth': 5, 'descendants_depth': 3,
-        'start_year': 1650, 'initial_pairs': 14, 'avg_children': 6.81, 'immigrants_per_year': 1
+        'start_year': 1650, 'initial_pairs': 19, 'avg_children': 7.1, 'immigrants_per_year': 1
     },
     10000: {
         'lca_path': 12, 'ancestors_depth': 10, 'descendants_depth': 6,
-        'start_year': 1400, 'initial_pairs': 75, 'avg_children': 5.2, 'immigrants_per_year': 2
+        'start_year': 1400, 'initial_pairs': 63, 'avg_children': 4.99, 'immigrants_per_year': 2
     },
     100000: {
         'lca_path': 16, 'ancestors_depth': 15, 'descendants_depth': 10,
-        'start_year': 700, 'initial_pairs': 100, 'avg_children': 4.53, 'immigrants_per_year': 4
+        'start_year': 700, 'initial_pairs': 77, 'avg_children': 4.53, 'immigrants_per_year': 4
     }
 }
 

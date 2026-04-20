@@ -9,7 +9,7 @@ behind the synthetic genealogical dataset generator used for the benchmark.
 
 The generator produces three independent, deterministic synthetic genealogies
 targeting population sizes of 1 000, 10 000, and 100 000 individuals.
-All runs use a fixed random seed (`SEED = 275228` in `config.py`) to guarantee
+All runs use a fixed random seed (`SEED = 748376` in `config.py`) to guarantee
 full reproducibility.
 
 Each simulation produces two families of CSV files optimised for bulk import:
@@ -42,8 +42,8 @@ Per-scale parameters are defined in the `SCENARIOS` dictionary:
 | Parameter | 1 k | 10 k | 100 k |
 |---|---|---|---|
 | `start_year` | 1650 | 1400 | 700 |
-| `initial_pairs` | 14 | 75 | 100 |
-| `avg_children` | 6.81 | 5.2 | 4.53 |
+| `initial_pairs` | 19 | 63 | 77 |
+| `avg_children` | 7.1 | 4.99 | 4.53 |
 | `ancestors_depth` | 5 | 10 | 15 |
 | `descendants_depth` | 3 | 6 | 10 |
 | `lca_path_length` | 8 | 12 | 16 |

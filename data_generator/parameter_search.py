@@ -58,7 +58,7 @@ def is_shaped_correctly(yearly_data, target_pop):
 
     if target_pop == 1000:
         STAGNATION_WINDOW = 20
-        MAX_DROP_ABS = 4
+        MAX_DROP_ABS = 3
     elif target_pop == 10000:
         STAGNATION_WINDOW = 30
     else:
@@ -218,8 +218,8 @@ def check_ancestors_target(people, families, target_pop):
 def find_params_for_target(target_pop, depth_min, depth_max, base_seed, rng, max_attempts=40):
     for attempt in range(max_attempts):
         if target_pop == 1000:
-            pairs = rng.randint(7, 40)
-            children = round(rng.uniform(5.4, 7.8), 2)
+            pairs = rng.randint(10, 30)
+            children = round(rng.uniform(6.7, 7.8), 2)
             immigrants = int(rng.uniform(0, 2))
         elif target_pop == 10000:
             pairs = rng.randint(60, 110)
@@ -239,19 +239,19 @@ def find_params_for_target(target_pop, depth_min, depth_max, base_seed, rng, max
             sim = engine.SimulationEngine(target_population=target_pop, output_dir=None)
             sim.run()
 
-        # 1. Check population collapse
-        if len(sim.people) < target_pop:
-            print(f"\r[{target_pop}] Attempt {attempt + 1:02d}/{max_attempts} | Depth {depth:02d} (target: {target_str}) "
-                  f"| Population collapse!{' ' * 40}", end="", flush=True)
-            continue
-
-        # 2. Check depth
         depth = calculate_max_depth(sim.people, sim.families)
         target_str = f"<{depth_min}, {depth_max}>"
 
+        # 1. Check depth
         if not (depth_min <= depth <= depth_max):
             print(f"\r[{target_pop}] Attempt {attempt + 1:02d}/{max_attempts} | Depth {depth:02d} (target: {target_str}) "
                   f"| Wrong depth, skipping...{' ' * 30}", end="", flush=True)
+            continue
+
+        # 2. Check population collapse
+        if len(sim.people) < target_pop:
+            print(f"\r[{target_pop}] Attempt {attempt + 1:02d}/{max_attempts} | Depth {depth:02d} (target: {target_str}) "
+                  f"| Population collapse!{' ' * 40}", end="", flush=True)
             continue
 
         # 3. Check shape

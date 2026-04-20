@@ -151,6 +151,10 @@ class SimulationEngine:
         husband.marriages_count += 1
         wife.marriages_count += 1
 
+        # Occupation is assigned at marriage if not already set
+        if not husband.occupation: husband.occupation = random.choice(OCCUPATIONS)
+        if not wife.occupation: wife.occupation = random.choice(OCCUPATIONS)
+
         config = SCENARIOS.get(self.target_population, SCENARIOS[1000])
         avg_children = config['avg_children']
 

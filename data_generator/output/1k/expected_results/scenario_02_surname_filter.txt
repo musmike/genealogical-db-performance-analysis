@@ -1,59 +1,59 @@
 --- SCENARIO 02: SURNAME FILTER ---
-Recommended surname: Wieczorek
-Recommended birth year range: 1724-1773
+Recommended surname: Piotrowski
+Recommended birth year range: 1738-1787
 
 
 Expected rows: 50
 
-person_id | given_name | surname   | sex | birth_date | birth_place         | death_date | death_place        
---------------------------------------------------------------------------------------------------------------
-184       | Monika     | Wieczorek | F   | 1724-01-23 | Jelenia Góra        | 1725-08-27 | Legnica            
-189       | Jerzy      | Wieczorek | M   | 1725-07-28 | Zielona Góra        | 1775-06-23 | Opole              
-211       | Marcin     | Wieczorek | M   | 1733-04-09 | Jelenia Góra        | 1736-09-27 | Zielona Góra       
-217       | Stanisław  | Wieczorek | M   | 1735-05-11 | Opole               | 1810-05-06 | Legnica            
-224       | Teresa     | Wieczorek | F   | 1737-08-01 | Legnica             | 1783-10-17 | Konin              
-237       | Regina     | Wieczorek | F   | 1740-04-27 | Świdnica            | 1810-11-06 | Piła               
-238       | Maja       | Wieczorek | F   | 1740-10-26 | Gorzów Wielkopolski | 1796-01-05 | Kościan            
-246       | Filip      | Wieczorek | M   | 1742-06-02 | Opole               | 1742-10-21 | Legnica            
-245       | Agnieszka  | Wieczorek | F   | 1742-09-08 | Legnica             | 1743-03-17 | Legnica            
-247       | Irena      | Wieczorek | F   | 1743-03-15 | Opole               | 1746-05-28 | Zielona Góra       
-250       | Leokadia   | Wieczorek | F   | 1744-06-12 | Świdnica            | 1745-08-04 | Legnica            
-254       | Wiesław    | Wieczorek | M   | 1745-04-13 | Breslau             | 1753-01-22 | Świdnica           
-257       | Irena      | Wieczorek | F   | 1746-01-27 | Świdnica            | 1786-05-26 | Stargard           
-258       | Marcin     | Wieczorek | M   | 1746-03-22 | Jelenia Góra        | 1809-08-04 | Gorzów Wielkopolski
-264       | Zygmunt    | Wieczorek | M   | 1748-01-13 | Świdnica            | 1749-04-15 | Wałbrzych          
-268       | Czesława   | Wieczorek | F   | 1748-06-21 | Jelenia Góra        | 1831-11-08 | Jasło              
-274       | Zofia      | Wieczorek | F   | 1750-10-09 | Gorzów Wielkopolski | 1817-03-27 | Zakopane           
-275       | Stefan     | Wieczorek | M   | 1751-01-20 | Opole               | 1752-01-12 | Breslau            
-281       | Franciszek | Wieczorek | M   | 1752-02-10 | Gorzów Wielkopolski | 1802-05-05 | Wałbrzych          
-285       | Józef      | Wieczorek | M   | 1753-11-21 | Wałbrzych           | 1799-08-15 | Jelenia Góra       
-284       | Jadwiga    | Wieczorek | F   | 1753-12-22 | Gorzów Wielkopolski | 1758-04-08 | Świdnica           
-288       | Wanda      | Wieczorek | F   | 1754-07-18 | Jelenia Góra        | 1808-04-07 | Posen              
-290       | Józefa     | Wieczorek | F   | 1754-08-23 | Jelenia Góra        | 1754-01-18 | Wałbrzych          
-294       | Leon       | Wieczorek | M   | 1755-02-27 | Zielona Góra        | 1756-03-18 | Jelenia Góra       
-301       | Alicja     | Wieczorek | F   | 1756-08-26 | Opole               | 1805-10-24 | Przemyśl           
-299       | Jadwiga    | Wieczorek | F   | 1756-11-11 | Opole               | 1819-12-05 | Thorn              
-310       | Grażyna    | Wieczorek | F   | 1758-06-09 | Wałbrzych           | 1818-04-02 | Olsztyn            
-313       | Julia      | Wieczorek | F   | 1759-06-12 | Świdnica            | 1759-03-22 | Wałbrzych          
-321       | Katarzyna  | Wieczorek | F   | 1760-06-12 | Jelenia Góra        | 1781-08-10 | Zielona Góra       
-325       | Kazimiera  | Wieczorek | F   | 1761-07-05 | Gorzów Wielkopolski | 1766-09-21 | Legnica            
-326       | Wiktoria   | Wieczorek | F   | 1761-11-27 | Legnica             | 1827-08-20 | Inowrocław         
-335       | Marcin     | Wieczorek | M   | 1763-09-07 | Wałbrzych           | 1811-04-14 | Breslau            
-338       | Helena     | Wieczorek | F   | 1763-12-13 | Zielona Góra        | 1824-06-20 | Zielona Góra       
-342       | Łukasz     | Wieczorek | M   | 1765-05-01 | Świdnica            | 1803-03-11 | Breslau            
-345       | Zygmunt    | Wieczorek | M   | 1765-09-28 | Świdnica            | 1767-09-25 | Jelenia Góra       
-350       | Maja       | Wieczorek | F   | 1766-06-08 | Świdnica            | 1766-04-09 | Jelenia Góra       
-353       | Oliwia     | Wieczorek | F   | 1767-04-23 | Wałbrzych           | 1768-02-01 | Świdnica           
-354       | Henryk     | Wieczorek | M   | 1767-06-21 | Gorzów Wielkopolski | 1825-05-28 | Legnica            
-359       | Andrzej    | Wieczorek | M   | 1768-03-05 | Gorzów Wielkopolski | 1839-03-17 | Jelenia Góra       
-361       | Teresa     | Wieczorek | F   | 1768-04-07 | Gorzów Wielkopolski | 1835-01-10 | Włocławek          
-362       | Marian     | Wieczorek | M   | 1768-05-03 | Wałbrzych           | 1768-08-20 | Gorzów Wielkopolski
-363       | Zofia      | Wieczorek | F   | 1769-06-14 | Breslau             | 1826-12-18 | Rzeszów            
-368       | Kazimierz  | Wieczorek | M   | 1770-01-22 | Breslau             | 1771-04-28 | Wałbrzych          
-370       | Monika     | Wieczorek | F   | 1770-02-06 | Wałbrzych           | 1831-05-20 | Inowrocław         
-373       | Ignacy     | Wieczorek | M   | 1771-01-26 | Jelenia Góra        | 1771-03-01 | Jelenia Góra       
-372       | Oliwia     | Wieczorek | F   | 1771-03-15 | Świdnica            | 1771-11-12 | Breslau            
-371       | Józef      | Wieczorek | M   | 1771-04-01 | Świdnica            | NULL       | NULL               
-377       | Teresa     | Wieczorek | F   | 1771-12-23 | Jelenia Góra        | 1823-03-21 | Ostrów Wielkopolski
-380       | Ignacy     | Wieczorek | M   | 1772-01-19 | Opole               | 1836-08-05 | Zielona Góra       
-384       | Urszula    | Wieczorek | F   | 1773-04-11 | Świdnica            | 1811-02-24 | Posen              
+person_id | given_name | surname    | sex | birth_date | birth_place         | death_date | death_place        
+---------------------------------------------------------------------------------------------------------------
+307       | Józef      | Piotrowski | M   | 1738-03-12 | Olsztyn             | 1740-03-16 | Stettin            
+310       | Marek      | Piotrowski | M   | 1740-06-05 | Opole               | 1806-02-21 | Jelenia Góra       
+319       | Franciszek | Piotrowski | M   | 1741-04-17 | Danzig              | 1743-09-06 | Słupsk             
+331       | Wojciech   | Piotrowski | M   | 1743-03-03 | Jelenia Góra        | 1743-10-16 | Opole              
+334       | Tomasz     | Piotrowski | M   | 1744-07-15 | Danzig              | 1746-07-20 | Danzig             
+345       | Wiesław    | Piotrowski | M   | 1746-04-23 | Chojnice            | 1747-11-25 | Gdynia             
+344       | Marcin     | Piotrowski | M   | 1746-06-09 | Wałbrzych           | 1751-08-28 | Wałbrzych          
+349       | Mirosław   | Piotrowski | M   | 1747-05-06 | Danzig              | 1801-01-14 | Malbork            
+359       | Henryk     | Piotrowski | M   | 1748-03-19 | Gorzów Wielkopolski | 1814-12-12 | Wałbrzych          
+354       | Stanisław  | Piotrowski | M   | 1748-08-03 | Breslau             | 1816-08-21 | Zielona Góra       
+369       | Stanisław  | Piotrowski | M   | 1750-02-14 | Legnica             | 1796-03-12 | Breslau            
+366       | Michał     | Piotrowski | M   | 1750-02-16 | Koszalin            | NULL       | NULL               
+392       | Tadeusz    | Piotrowski | M   | 1756-01-05 | Legnica             | 1771-08-25 | Opole              
+390       | Zygmunt    | Piotrowski | M   | 1756-08-11 | Kołobrzeg           | NULL       | NULL               
+398       | Jan        | Piotrowski | M   | 1757-04-16 | Opole               | 1825-08-15 | Wałbrzych          
+399       | Tadeusz    | Piotrowski | M   | 1758-10-02 | Stargard            | NULL       | NULL               
+405       | Maciej     | Piotrowski | M   | 1759-02-26 | Stargard            | 1810-07-14 | Słupsk             
+402       | Czesław    | Piotrowski | M   | 1759-08-06 | Legnica             | 1824-02-03 | Legnica            
+404       | Julian     | Piotrowski | M   | 1759-12-14 | Wałbrzych           | NULL       | NULL               
+413       | Mirosław   | Piotrowski | M   | 1760-01-23 | Opole               | 1760-06-25 | Gorzów Wielkopolski
+430       | Mateusz    | Piotrowski | M   | 1763-03-23 | Wejherowo           | 1815-07-12 | Słupsk             
+433       | Stefan     | Piotrowski | M   | 1763-10-28 | Wałbrzych           | 1816-01-17 | Świdnica           
+435       | Ignacy     | Piotrowski | M   | 1764-01-28 | Opole               | 1822-05-02 | Zielona Góra       
+436       | Zygmunt    | Piotrowski | M   | 1764-05-11 | Opole               | 1767-05-14 | Świdnica           
+441       | Władysław  | Piotrowski | M   | 1765-01-24 | Opole               | 1810-06-01 | Zielona Góra       
+445       | Marek      | Piotrowski | M   | 1765-06-08 | Stargard            | 1822-06-22 | Wejherowo          
+453       | Ryszard    | Piotrowski | M   | 1766-09-08 | Wejherowo           | 1767-07-28 | Gdynia             
+457       | Łukasz     | Piotrowski | M   | 1767-05-22 | Legnica             | NULL       | NULL               
+472       | Piotr      | Piotrowski | M   | 1770-08-12 | Gdynia              | 1810-05-18 | Elbląg             
+480       | Łukasz     | Piotrowski | M   | 1771-05-17 | Wałbrzych           | 1821-08-06 | Legnica            
+479       | Franciszek | Piotrowski | M   | 1771-07-14 | Zielona Góra        | 1814-03-28 | Wałbrzych          
+485       | Marek      | Piotrowski | M   | 1772-05-14 | Wałbrzych           | NULL       | NULL               
+482       | Łukasz     | Piotrowski | M   | 1772-09-05 | Sopot               | 1773-11-25 | Koszalin           
+489       | Ryszard    | Piotrowski | M   | 1773-02-22 | Świdnica            | 1798-04-05 | Legnica            
+490       | Ignacy     | Piotrowski | M   | 1774-06-26 | Chojnice            | NULL       | NULL               
+496       | Marek      | Piotrowski | M   | 1775-02-23 | Legnica             | NULL       | NULL               
+504       | Czesław    | Piotrowski | M   | 1778-05-24 | Świdnica            | 1781-12-06 | Breslau            
+507       | Marek      | Piotrowski | M   | 1778-07-24 | Breslau             | 1824-07-11 | Jelenia Góra       
+508       | Zygmunt    | Piotrowski | M   | 1779-09-03 | Legnica             | NULL       | NULL               
+513       | Andrzej    | Piotrowski | M   | 1780-02-05 | Świdnica            | 1822-08-28 | Legnica            
+520       | Krzysztof  | Piotrowski | M   | 1781-09-09 | Wałbrzych           | NULL       | NULL               
+530       | Marian     | Piotrowski | M   | 1783-05-09 | Jelenia Góra        | 1806-10-16 | Breslau            
+534       | Filip      | Piotrowski | M   | 1783-12-16 | Olsztyn             | NULL       | NULL               
+539       | Stefan     | Piotrowski | M   | 1784-03-10 | Olsztyn             | 1826-03-10 | Chojnice           
+541       | Marian     | Piotrowski | M   | 1784-04-07 | Jelenia Góra        | NULL       | NULL               
+545       | Józef      | Piotrowski | M   | 1785-06-07 | Jelenia Góra        | 1785-07-12 | Zielona Góra       
+549       | Jan        | Piotrowski | M   | 1785-06-15 | Breslau             | NULL       | NULL               
+548       | Tomasz     | Piotrowski | M   | 1785-07-05 | Elbląg              | NULL       | NULL               
+558       | Leon       | Piotrowski | M   | 1786-06-10 | Legnica             | NULL       | NULL               
+562       | Grzegorz   | Piotrowski | M   | 1787-07-16 | Opole               | NULL       | NULL               
