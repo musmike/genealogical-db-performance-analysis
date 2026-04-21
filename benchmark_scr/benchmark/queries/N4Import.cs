@@ -1,0 +1,50 @@
+﻿using benchmark_scr.queries;
+using BenchmarkDotNet.Attributes;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace benchmark_scr.benchmark.queries {
+    [MemoryDiagnoser]
+    public class N4Import {
+        private Neo4jDriver driver;
+        private QueryRepo repo;
+        private readonly string path;
+
+        public N4Import() {
+            path = Configg.basePath;
+        }
+
+        [GlobalSetup]
+        public void Setup() {
+            var env = Environment.GetEnvironmentVariable("DATASET");
+
+            if(string.IsNullOrWhiteSpace(env))
+                throw new Exception("DATASET env var is missing");
+
+            Console.WriteLine($"RAW DATASET: {env}");
+
+            var dataset = Enum.Parse<Dataset>(env, ignoreCase: true);
+
+            repo = new QueryRepo(path, dataset);
+            driver = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
+        }
+
+        [Benchmark]
+        public void Import() {
+            BashRunner.RunAsync(repo.Neo4jImportScript)
+                .GetAwaiter().GetResult();
+            BashRunner.RunAsync (repo.Neo4jDatabaseScript)
+                .GetAwaiter().GetResult();
+
+        }
+
+        [GlobalCleanup]
+        public void Cleanup() {
+            driver.ExecuteWriteScriptAsync(repo.Neo4jIndexesCypher)
+                .GetAwaiter().GetResult();
+        }
+    }
+}
