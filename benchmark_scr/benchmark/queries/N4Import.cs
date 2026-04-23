@@ -36,13 +36,13 @@ namespace benchmark_scr.benchmark.queries {
         public void Import() {
             BashRunner.RunAsync(repo.Neo4jImportScript)
                 .GetAwaiter().GetResult();
-            BashRunner.RunAsync (repo.Neo4jDatabaseScript)
-                .GetAwaiter().GetResult();
 
         }
 
         [GlobalCleanup]
         public void Cleanup() {
+            BashRunner.RunAsync(repo.Neo4jDatabaseScript)
+                .GetAwaiter().GetResult();
             driver.ExecuteWriteScriptAsync(repo.Neo4jIndexesCypher)
                 .GetAwaiter().GetResult();
         }
