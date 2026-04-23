@@ -14,10 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-  <Content Include="db_setup\**\*">
+  <Content Include="..\query_performance_benchmark\db_setup\**\*">
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
-  <Content Include="scenarios\**\*">
+  <Content Include="..\query_performance_benchmark\scenarios\**\*">
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
 </ItemGroup>

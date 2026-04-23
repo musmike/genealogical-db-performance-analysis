@@ -9,3 +9,5 @@
 /query_performance_benchmark/benchmark_scr/bin
 /query_performance_benchmark/benchmark_scr/obj
 /query_performance_benchmark/benchmark_scr/.vs/benchmark_scr/v17
+/benchmark_scr/.vs
+/benchmark_scr/obj
