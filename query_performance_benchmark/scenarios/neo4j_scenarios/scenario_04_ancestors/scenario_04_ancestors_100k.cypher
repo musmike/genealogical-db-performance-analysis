@@ -13,16 +13,12 @@
 MATCH (start:Person {id: 99982})
 
 MATCH path = (start)
-              ((:Person)<-[c:HAS_CHILD WHERE c.relationshipType = 'BIOLOGICAL']-(:Family)<-[:HUSBAND_OF|WIFE_OF]-(:Person)){1,15}
+              ((:Person)<-[:HAS_BIOLOGICAL_CHILD]-
+              (:Family)<-[:HUSBAND_OF|WIFE_OF]-(:Person)){1,15}
               (anc:Person)
+WITH anc, min(length(path)) / 2 AS gen
 
-WITH anc, length(path)/2 AS generation
-
-WITH anc, min(generation) AS gen
-
-WITH DISTINCT anc, gen
-
-OPTIONAL MATCH (anc)<-[pc:HAS_CHILD WHERE pc.relationshipType = 'BIOLOGICAL']-(pf:Family)
+OPTIONAL MATCH (anc)<-[:HAS_BIOLOGICAL_CHILD]-(pf:Family)
 OPTIONAL MATCH (father:Person)-[:HUSBAND_OF]->(pf)
 OPTIONAL MATCH (mother:Person)-[:WIFE_OF]->(pf)
 
@@ -40,5 +36,4 @@ RETURN
     anc.causeOfDeath   AS cause_of_death,
     father.id          AS father_id,
     mother.id          AS mother_id
-
-ORDER BY generation, ancestor_id;
+ORDER BY generation ASC, ancestor_id ASC;

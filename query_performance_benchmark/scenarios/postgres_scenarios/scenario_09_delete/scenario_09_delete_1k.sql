@@ -5,6 +5,8 @@
 -- no biological parents in the dataset, as identified in expected_results/scenario_08_09_insert_delete.txt
 
 
-DELETE FROM family_children WHERE family_id = 2001;
-DELETE FROM families        WHERE id        = 2001;
-DELETE FROM people          WHERE id IN (2001, 2002, 2003);
+DELETE FROM families        
+WHERE id = 2001;
+
+DELETE FROM people          
+WHERE id IN (2001, 2002, 2003);

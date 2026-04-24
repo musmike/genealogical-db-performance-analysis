@@ -67,7 +67,7 @@ class DataExporter:
         """
         Generates CSV files conforming to the neo4j-admin import format:
         node files (nodes_person, nodes_family) and separate relationship files
-        for each edge type (HUSBAND_OF, WIFE_OF, HAS_CHILD).
+        for each edge type (HUSBAND_OF, WIFE_OF, HAS_BIOLOGICAL_CHILD, HAS_ADOPTED_CHILD, etc.).
         Separating relationship types into individual files is required by the Neo4j bulk import tool.
         """
         neo4j_dir = os.path.join(self.output_dir, 'neo4j')
@@ -114,11 +114,26 @@ class DataExporter:
                 if fam.wife_id:
                     writer.writerow([fam.wife_id, fam.id, 'WIFE_OF'])
 
-        with open(os.path.join(neo4j_dir, 'rels_child_of.csv'), 'w', newline='', encoding='utf-8') as f:
-            writer = csv.writer(f)
-            writer.writerow([':START_ID(Family)', ':END_ID(Person)', 'relationshipType:STRING', ':TYPE'])
+        child_files = {}
+        child_writers = {}
+
+        try:
             for fam in self.families.values():
                 for child_dict in fam.children:
-                    writer.writerow([fam.id, child_dict['id'], child_dict['type'], 'HAS_CHILD'])
+                    rel_type_raw = child_dict['type'].upper()
+                    neo4j_rel_type = f"HAS_{rel_type_raw}_CHILD"
+
+                    if neo4j_rel_type not in child_writers:
+                        filename = f"rels_{neo4j_rel_type.lower()}.csv"
+                        f = open(os.path.join(neo4j_dir, filename), 'w', newline='', encoding='utf-8')
+                        child_files[neo4j_rel_type] = f
+                        writer = csv.writer(f)
+                        writer.writerow([':START_ID(Family)', ':END_ID(Person)', ':TYPE'])
+                        child_writers[neo4j_rel_type] = writer
+
+                    child_writers[neo4j_rel_type].writerow([fam.id, child_dict['id'], neo4j_rel_type])
+        finally:
+            for f in child_files.values():
+                f.close()
 
         print(f"[{self.target_population}] Neo4j CSV export complete → {neo4j_dir}/")

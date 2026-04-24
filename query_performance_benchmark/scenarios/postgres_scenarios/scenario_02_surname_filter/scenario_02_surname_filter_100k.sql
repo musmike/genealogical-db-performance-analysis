@@ -10,14 +10,15 @@
 -- RECOMMENDED PARAMETERS: Surname = 'Górski', Birth Year Range = 1461-1510
 
 SELECT
-    p.id AS person_id,
-    p.given_name,
-    p.surname,
-    p.sex,
-    p.birth_date,
-    p.death_date,
-    p.birth_place
+    p.id            AS person_id, 
+    p.given_name    AS given_name, 
+    p.surname       AS surname, 
+    p.sex           AS sex, 
+    p.birth_date    AS birth_date, 
+    p.birth_place   AS birth_place, 
+    p.death_date    AS death_date, 
+    p.death_place   AS death_place
 FROM people p
 WHERE p.surname = 'Górski'
-  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1461 AND 1510
+    AND p.birth_date >= '1461-01-01' AND p.birth_date <= '1510-12-31'
 ORDER BY p.birth_date ASC;

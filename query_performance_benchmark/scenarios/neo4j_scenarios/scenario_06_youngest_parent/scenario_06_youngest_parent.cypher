@@ -9,36 +9,26 @@
 // More than one individual may be returned if multiple parents had their first child
 // at the same youngest age or if there are multiple children born to the same parent at the same age (e.g., twins).
 
-MATCH (f:Family)-[r:HAS_CHILD WHERE r.relationshipType = 'BIOLOGICAL']->(c:Person)
-MATCH (p:Person)-[:HUSBAND_OF|WIFE_OF]->(f)
+MATCH (p:Person)-[:HUSBAND_OF|WIFE_OF]->(f:Family)-[:HAS_BIOLOGICAL_CHILD]->(c:Person)
+WHERE p.birthDate IS NOT NULL AND c.birthDate IS NOT NULL
 
-WITH c, p,
-     duration.inDays(p.birthDate, c.birthDate).days AS ageDiff
+WITH p, c, duration.inDays(p.birthDate, c.birthDate).days AS ageDiff
+WITH min(ageDiff) AS minDiff, collect({p: p, c: c, ageDiff: ageDiff}) AS allPairs
 
-WITH min(ageDiff) AS minDiff
+UNWIND [pair IN allPairs WHERE pair.ageDiff = minDiff] AS winner
 
-MATCH (f:Family)-[:HAS_CHILD]->(c:Person)
-MATCH (p:Person)-[:HUSBAND_OF|WIFE_OF]->(f)
-
-WITH c, p,
-     duration.inDays(p.birthDate, c.birthDate).days AS ageDiff,
-     duration.between(p.birthDate, c.birthDate).years AS ageYears,
-     minDiff
-
-WHERE ageDiff = minDiff
-
-RETURN p.id AS parent_id,
-      p.givenName as given_name,
-      p.surname as surname,
-      p.sex as sex,
-      p.birthDate as birth_date,
-      p.birthPlace as birth_place,
-      ageYears as age_at_first_child,
-      ageDiff AS age_difference_in_days,
-      c.id as child_id,
-      c.birthDate as child_birth_date,
-      c.birthPlace as child_birth_place
-ORDER BY
-p.id ASC,
-c.id ASC
-;
+WITH winner.p AS p, winner.c AS c, minDiff AS age_difference_in_days, 
+     duration.between(winner.p.birthDate, winner.c.birthDate).years AS age_at_first_child
+RETURN 
+      p.id                    AS parent_id, 
+      p.givenName             AS given_name, 
+      p.surname               AS surname, 
+      p.sex                   AS sex, 
+      p.birthDate             AS birth_date, 
+      p.birthPlace            AS birth_place, 
+      age_at_first_child      AS age_at_first_child, 
+      age_difference_in_days  AS age_difference_in_days, 
+      c.id                    AS child_id, 
+      c.birthDate             AS child_birth_date, 
+      c.birthPlace            AS child_birth_place
+ORDER BY parent_id ASC, child_id ASC;

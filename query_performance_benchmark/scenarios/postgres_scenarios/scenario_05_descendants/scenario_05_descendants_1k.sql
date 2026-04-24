@@ -10,43 +10,39 @@
 
 -- RECOMMENDED PARAMETERS: Person ID = 54
 
-WITH RECURSIVE descendants(person_id, depth, via_family_id, visited) AS (
-    SELECT 54, 0, NULL::int, ARRAY[54]
+WITH RECURSIVE descendants AS (
+    SELECT 54 AS person_id, 0 AS depth
 
     UNION ALL
 
-    SELECT child.id, d.depth + 1, f.id, d.visited || child.id
+    SELECT fc.child_id, d.depth + 1
     FROM descendants d
-    JOIN families f 
-        ON d.person_id IN (f.husband_id, f.wife_id)
-    JOIN family_children fc 
-        ON fc.family_id = f.id 
-       AND fc.relationship_type = 'BIOLOGICAL'
-    JOIN people child 
-        ON child.id = fc.child_id
+    JOIN families f ON f.husband_id = d.person_id OR f.wife_id = d.person_id
+    JOIN family_children fc ON fc.family_id = f.id AND fc.relationship_type = 'BIOLOGICAL'
     WHERE d.depth < 3
-      AND NOT (child.id = ANY(d.visited))
 ),
-
 deduped AS (
-    SELECT DISTINCT ON (person_id) person_id, depth, via_family_id
+    SELECT person_id, MIN(depth) AS depth
     FROM descendants
     WHERE person_id <> 54
-    ORDER BY person_id, depth
+    GROUP BY person_id
 )
-
 SELECT 
-    p.id AS descendant_id,
-    d.depth AS generation,
-    p.given_name, p.surname, p.sex, p.birth_date, p.birth_place,
-    p.death_date, p.death_place, p.burial_place, p.cause_of_death,
-    f.father_id,
-    m.mother_id
-
+    p.id                AS descendant_id, 
+    d.depth             AS generation, 
+    p.given_name        AS given_name, 
+    p.surname           AS surname, 
+    p.sex               AS sex, 
+    p.birth_date        AS birth_date, 
+    p.birth_place       AS birth_place, 
+    p.death_date        AS death_date, 
+    p.death_place       AS death_place, 
+    p.burial_place      AS burial_place, 
+    p.cause_of_death    AS cause_of_death, 
+    pf.husband_id       AS father_id,
+    pf.wife_id          AS mother_id
 FROM deduped d
 JOIN people p ON p.id = d.person_id
-
-LEFT JOIN father_lookup f ON f.child_id = p.id
-LEFT JOIN mother_lookup m ON m.child_id = p.id
-
-ORDER BY generation, p.id;
+LEFT JOIN family_children pfc ON pfc.child_id = p.id AND pfc.relationship_type = 'BIOLOGICAL'
+LEFT JOIN families pf ON pf.id = pfc.family_id
+ORDER BY generation ASC, p.id ASC;

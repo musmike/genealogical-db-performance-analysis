@@ -22,7 +22,9 @@ anc_a(person_id, depth, visited) AS (
     CROSS JOIN LATERAL (
         VALUES (f.husband_id), (f.wife_id)
     ) AS parents(parent_id)
-    WHERE a.depth < 12 AND NOT (parent_id = ANY(a.visited))
+    WHERE a.depth < 12 
+    AND parents.parent_id IS NOT NULL
+    AND NOT (parent_id = ANY(a.visited))
 ),
 anc_b(person_id, depth, visited) AS (
     SELECT 6972, 0, ARRAY[6972]
@@ -34,7 +36,9 @@ anc_b(person_id, depth, visited) AS (
     CROSS JOIN LATERAL (
         VALUES (f.husband_id), (f.wife_id)
     ) AS parents(parent_id)
-    WHERE b.depth < 12 AND NOT (parent_id = ANY(b.visited))
+    WHERE b.depth < 12 
+    AND parents.parent_id IS NOT NULL
+    AND NOT (parent_id = ANY(b.visited))
 ),
 min_a AS (
     SELECT person_id, MIN(depth) AS depth FROM anc_a GROUP BY person_id
@@ -47,10 +51,19 @@ common AS (
     FROM min_a a
     JOIN min_b b ON b.person_id = a.person_id
 )
-SELECT c.person_id AS lca_id, p.given_name, p.surname, p.sex,
-       p.birth_date, p.birth_place, p.death_date, p.death_place,
-       c.dist_a AS path_length_from_a, c.dist_b AS path_length_from_b, c.total_dist
+SELECT 
+    c.person_id     AS lca_id, 
+    p.given_name    AS given_name, 
+    p.surname       AS surname, 
+    p.sex           AS sex, 
+    p.birth_date    AS birth_date, 
+    p.birth_place   AS birth_place, 
+    p.death_date    AS death_date, 
+    p.death_place   AS death_place, 
+    c.dist_a        AS path_length_from_a, 
+    c.dist_b        AS path_length_from_b, 
+    c.total_dist    AS total_dist
 FROM common c
 JOIN people p ON p.id = c.person_id
 WHERE c.total_dist = (SELECT MIN(total_dist) FROM common)
-ORDER BY c.person_id;
+ORDER BY c.person_id ASC;

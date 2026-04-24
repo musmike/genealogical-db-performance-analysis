@@ -5,41 +5,37 @@
 -- Affected names: Posen→Poznań, Danzig→Gdańsk, Breslau→Wrocław,
 -- Stettin→Szczecin, Bromberg→Bydgoszcz, Thorn→Toruń.
 
-update people
-set
-	birth_place = CASE birth_place
-    WHEN 'Posen' THEN 'Poznań'
-    WHEN 'Danzig' THEN 'Gdańsk'
-    WHEN 'Breslau' THEN 'Wrocław'
-    WHEN 'Stettin' THEN 'Szczecin'
-    WHEN 'Bromberg' THEN 'Bydgoszcz'
-    WHEN 'Thorn' THEN 'Toruń'
-    ELSE birth_place
-  END,
+UPDATE people
+SET 
+    birth_place = CASE birth_place
+        WHEN 'Posen' THEN 'Poznań'
+        WHEN 'Danzig' THEN 'Gdańsk'
+        WHEN 'Breslau' THEN 'Wrocław'
+        WHEN 'Stettin' THEN 'Szczecin'
+        WHEN 'Bromberg' THEN 'Bydgoszcz'
+        WHEN 'Thorn' THEN 'Toruń'
+        ELSE birth_place
+    END,
+    death_place = CASE death_place
+        WHEN 'Posen' THEN 'Poznań'
+        WHEN 'Danzig' THEN 'Gdańsk'
+        WHEN 'Breslau' THEN 'Wrocław'
+        WHEN 'Stettin' THEN 'Szczecin'
+        WHEN 'Bromberg' THEN 'Bydgoszcz'
+        WHEN 'Thorn' THEN 'Toruń'
+        ELSE death_place
+    END
+WHERE birth_place IN ('Posen','Danzig','Breslau','Stettin','Bromberg','Thorn') 
+    OR death_place IN ('Posen','Danzig','Breslau','Stettin','Bromberg','Thorn');
 
-  death_place = CASE death_place
-    WHEN 'Posen' THEN 'Poznań'
-    WHEN 'Danzig' THEN 'Gdańsk'
-    WHEN 'Breslau' THEN 'Wrocław'
-    WHEN 'Stettin' THEN 'Szczecin'
-    WHEN 'Bromberg' THEN 'Bydgoszcz'
-    WHEN 'Thorn' THEN 'Toruń'
-    ELSE death_place
-  END
-        
-WHERE
-  birth_place IN ('Posen','Danzig','Breslau','Stettin','Bromberg','Thorn') OR
-  death_place IN ('Posen','Danzig','Breslau','Stettin','Bromberg','Thorn');
-
-
-update families
+UPDATE families
 SET marriage_place = CASE marriage_place
-  WHEN 'Posen' THEN 'Poznań'
-  WHEN 'Danzig' THEN 'Gdańsk'
-  WHEN 'Breslau' THEN 'Wrocław'
-  WHEN 'Stettin' THEN 'Szczecin'
-  WHEN 'Bromberg' THEN 'Bydgoszcz'
-  WHEN 'Thorn' THEN 'Toruń'
-  ELSE marriage_place
+    WHEN 'Posen' THEN 'Poznań'
+    WHEN 'Danzig' THEN 'Gdańsk'
+    WHEN 'Breslau' THEN 'Wrocław'
+    WHEN 'Stettin' THEN 'Szczecin'
+    WHEN 'Bromberg' THEN 'Bydgoszcz'
+    WHEN 'Thorn' THEN 'Toruń'
+    ELSE marriage_place
 END
 WHERE marriage_place IN ('Posen','Danzig','Breslau','Stettin','Bromberg','Thorn');

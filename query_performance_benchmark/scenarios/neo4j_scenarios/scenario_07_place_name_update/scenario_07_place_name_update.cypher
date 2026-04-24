@@ -5,43 +5,20 @@
 // Affected names: Posen→Poznań, Danzig→Gdańsk, Breslau→Wrocław,
 // Stettin→Szczecin, Bromberg→Bydgoszcz, Thorn→Toruń.
 
-WITH [
-  ['Posen','Poznań'],
-  ['Danzig','Gdańsk'],
-  ['Breslau','Wrocław'],
-  ['Stettin','Szczecin'],
-  ['Bromberg','Bydgoszcz'],
-  ['Thorn','Toruń']
-] AS replacements
+WITH {`Posen`: 'Poznań', `Danzig`: 'Gdańsk', `Breslau`: 'Wrocław', 
+    `Stettin`: 'Szczecin', `Bromberg`: 'Bydgoszcz', `Thorn`: 'Toruń'} AS pairs
+MATCH (p:Person) 
+WHERE p.birthPlace IN keys(pairs) 
+SET p.birthPlace = pairs[p.birthPlace];
 
-MATCH (n:Person)
-UNWIND replacements AS pair
-WITH n, pair
-WHERE n.birthPlace = pair[0]
-   OR n.deathPlace = pair[0]
-   OR n.burialPlace = pair[0]
+WITH {`Posen`: 'Poznań', `Danzig`: 'Gdańsk', `Breslau`: 'Wrocław', 
+    `Stettin`: 'Szczecin', `Bromberg`: 'Bydgoszcz', `Thorn`: 'Toruń'} AS pairs
+MATCH (p:Person) 
+WHERE p.deathPlace IN keys(pairs) 
+SET p.deathPlace = pairs[p.deathPlace];
 
-SET
-  n.birthPlace = CASE WHEN n.birthPlace = pair[0] THEN pair[1] ELSE n.birthPlace END,
-  n.deathPlace = CASE WHEN n.deathPlace = pair[0] THEN pair[1] ELSE n.deathPlace END
-
-RETURN n;
-
-WITH [
-  ['Posen','Poznań'],
-  ['Danzig','Gdańsk'],
-  ['Breslau','Wrocław'],
-  ['Stettin','Szczecin'],
-  ['Bromberg','Bydgoszcz'],
-  ['Thorn','Toruń']
-] AS replacements
-
-MATCH (n:Family)
-UNWIND replacements AS pair
-WITH n, pair
-WHERE n.marriagePlace = pair[0]
-
-SET
-  n.marriagePlace = pair[1]
-
-RETURN n;
+WITH {`Posen`: 'Poznań', `Danzig`: 'Gdańsk', `Breslau`: 'Wrocław', 
+    `Stettin`: 'Szczecin', `Bromberg`: 'Bydgoszcz', `Thorn`: 'Toruń'} AS pairs
+MATCH (f:Family) 
+WHERE f.marriagePlace IN keys(pairs) 
+SET f.marriagePlace = pairs[f.marriagePlace];

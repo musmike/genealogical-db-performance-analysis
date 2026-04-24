@@ -1051,9 +1051,11 @@ class AnalyticsEngine:
             def upd_lca_cypher(txt):
                 txt = re.sub(r'(WHERE\s+startNode\.id\s+IN\s+\[)\d+\s*,\s*\d+(\])',
                              rf'\g<1>{lca_p1_id}, {lca_p2_id}\g<2>', txt)
-                txt = re.sub(r'(sId\s*=\s*)\d+(.*?AS\s+distA)', rf'\g<1>{lca_p1_id}\g<2>', txt)
-                txt = re.sub(r'(sId\s*=\s*)\d+(.*?AS\s+distB)', rf'\g<1>{lca_p2_id}\g<2>', txt)
-                txt = re.sub(r'(<-\[:HUSBAND_OF\|WIFE_OF\]-\(\)\)\{0,)\d+(\})', rf'\g<1>{lca_path - 1}\g<2>', txt)
+                txt = re.sub(r'(sId\s*=\s*)\d+(\s+THEN\s+dist\s+END\)\s+AS\s+distA)', rf'\g<1>{lca_p1_id}\g<2>', txt)
+                txt = re.sub(r'(sId\s*=\s*)\d+(\s+THEN\s+dist\s+END\)\s+AS\s+distB)', rf'\g<1>{lca_p2_id}\g<2>', txt)
+
+                txt = re.sub(r'(<-\[:HUSBAND_OF\|WIFE_OF\]-\(\)\)\{\s*)\d+\s*,\s*\d+(\s*\})',
+                             rf'\g<1>0,{lca_path - 1}\g<2>', txt)
                 txt = re.sub(r'(\(\d+\s+hops\s+for)', f'({lca_path} hops for', txt)
                 return inject_rec(txt, f"Person A = {lca_p1_id}, Person B = {lca_p2_id}", True)
 
@@ -1064,14 +1066,16 @@ class AnalyticsEngine:
         if surname and year_start is not None:
             def upd_s02_sql(txt):
                 txt = re.sub(r"(WHERE\s+p\.surname\s*=\s*')[^']+(')", rf"\g<1>{surname}\g<2>", txt)
-                txt = re.sub(r'(BETWEEN\s+)\d+(\s+AND\s+)\d+', rf'\g<1>{year_start}\g<2>{year_start + 49}', txt)
+                txt = re.sub(r"(AND\s+p\.birth_date\s*>=\s*')\d+(-01-01'\s*AND\s*p\.birth_date\s*<=\s*')\d+(-12-31')",
+                             rf"\g<1>{year_start}\g<2>{year_start + 49}\g<3>", txt)
                 return inject_rec(txt, f"Surname = '{surname}', Birth Year Range = {year_start}-{year_start + 49}",
                                   False)
 
             def upd_s02_cypher(txt):
-                txt = re.sub(r'(WHERE\s+n\.birthDate\.year\s*>=\s*)\d+(\s+and\s+n\.birthDate\.year\s*<=\s*)\d+',
-                             rf'\g<1>{year_start}\g<2>{year_start + 49}', txt, flags=re.IGNORECASE)
-                txt = re.sub(r"(AND\s+n\.surname\s*=\s*')[^']+(')", rf"\g<1>{surname}\g<2>", txt)
+                txt = re.sub(r"(WHERE\s+p\.surname\s*=\s*')[^']+(')", rf"\g<1>{surname}\g<2>", txt)
+                txt = re.sub(
+                    r"(AND\s+p\.birthDate\s*>=\s*date\(')\d+(-01-01'\)\s*AND\s*p\.birthDate\s*<=\s*date\(')\d+(-12-31'\))",
+                    rf"\g<1>{year_start}\g<2>{year_start + 49}\g<3>", txt, flags=re.IGNORECASE)
                 return inject_rec(txt, f"Surname = '{surname}', Birth Year Range = {year_start}-{year_start + 49}",
                                   True)
 
@@ -1094,7 +1098,8 @@ class AnalyticsEngine:
 
             def upd_s04_cypher(txt):
                 txt = re.sub(r'(MATCH\s+\(start:Person\s+\{id:\s*)\d+(\})', rf'\g<1>{ancestor_id}\g<2>', txt)
-                txt = re.sub(r'(<-\[:HUSBAND_OF\|WIFE_OF\]-\(:Person\)\)\{1,)\d+(\})', rf'\g<1>{anc_depth}\g<2>',
+                txt = re.sub(r'(<-\[:HUSBAND_OF\|WIFE_OF\]-\(:Person\)\)\{\s*)\d+\s*,\s*\d+(\s*\})',
+                             rf'\g<1>1,{anc_depth}\g<2>',
                              txt)
                 txt = re.sub(r'\(\d+\s+generations\s+in\s+this\s+case\)', f'({anc_depth} generations in this case)',
                              txt)
@@ -1106,8 +1111,8 @@ class AnalyticsEngine:
         # ── SCENARIO 05: DESCENDANTS
         if descendant_id is not None:
             def upd_s05_sql(txt):
-                txt = re.sub(r'(SELECT\s+)\d+(\s*,\s*0\s*,\s*NULL::int\s*,\s*ARRAY\s*\[)\d+(\])',
-                             rf'\g<1>{descendant_id}\g<2>{descendant_id}\g<3>', txt)
+                txt = re.sub(r'(SELECT\s+)\d+(\s+AS\s+person_id\s*,\s*0\s+AS\s+depth)', rf'\g<1>{descendant_id}\g<2>',
+                             txt)
                 txt = re.sub(r'(WHERE\s+person_id\s*<>\s*)\d+', rf'\g<1>{descendant_id}', txt)
                 txt = re.sub(r'(WHERE\s+d\.depth\s*<\s*)\d+', rf'\g<1>{desc_depth}', txt)
                 txt = re.sub(r'\(\d+\s+generations\s+for', f'({desc_depth} generations for', txt)
@@ -1115,7 +1120,8 @@ class AnalyticsEngine:
 
             def upd_s05_cypher(txt):
                 txt = re.sub(r'(MATCH\s+\(start:Person\s+\{id:\s*)\d+(\})', rf'\g<1>{descendant_id}\g<2>', txt)
-                txt = re.sub(r'(\[r:HAS_CHILD[^\]]+\]->\(\)\)\{1,\s*)\d+(\})', rf'\g<1>{desc_depth}\g<2>', txt)
+                txt = re.sub(r'(:HAS_BIOLOGICAL_CHILD]->\(:Person\)\)\{\s*)\d+\s*,\s*\d+(\s*\})',
+                             rf'\g<1>1,{desc_depth}\g<2>', txt)
                 txt = re.sub(r'\(\d+\s+generations\s+for', f'({desc_depth} generations for', txt)
                 return inject_rec(txt, f"Person ID = {descendant_id}", True)
 
@@ -1139,39 +1145,41 @@ class AnalyticsEngine:
 
             def upd_s08_sql(txt):
                 txt = re.sub(
-                    rf"(\({new_f_id}\s*,\s*'Jan'\s*,\s*'Kowalski'\s*,\s*'M'\s*,\s*true\s*,\s*')\d{{4}}-06-15('\s*,\s*'Kraków'\s*,\s*')\d{{4}}-11-02(')",
-                    rf"\g<1>{fy(f_by)}-06-15\g<2>{fy(f_dy)}-11-02\g<3>", txt)
+                    rf"(\({new_f_id}\s*,\s*'Jan'\s*,\s*'Kowalski'\s*,\s*'M'\s*,\s*true\s*,\s*')\d+(-06-15'\s*,\s*'Kraków'\s*,\s*')\d+(-11-02')",
+                    rf"\g<1>{fy(f_by)}\g<2>{fy(f_dy)}\g<3>", txt)
                 txt = re.sub(
-                    rf"(\({new_m_id}\s*,\s*'Anna'\s*,\s*'Kowalska'\s*,\s*'F'\s*,\s*true\s*,\s*')\d{{4}}-03-22('\s*,\s*'Kraków'\s*,\s*')\d{{4}}-01-10(')",
-                    rf"\g<1>{fy(m_by)}-03-22\g<2>{fy(m_dy)}-01-10\g<3>", txt)
+                    rf"(\({new_m_id}\s*,\s*'Anna'\s*,\s*'Kowalska'\s*,\s*'F'\s*,\s*true\s*,\s*')\d+(-03-22'\s*,\s*'Kraków'\s*,\s*')\d+(-01-10')",
+                    rf"\g<1>{fy(m_by)}\g<2>{fy(m_dy)}\g<3>", txt)
                 txt = re.sub(
-                    rf"(\({new_fam_id}\s*,\s*'MARRIED'\s*,\s*')\d{{4}}-05-10(')",
-                    rf"\g<1>{fy(mar_y)}-05-10\g<2>", txt)
+                    rf"(\({new_fam_id}\s*,\s*'MARRIED'\s*,\s*')\d+(-05-10')",
+                    rf"\g<1>{fy(mar_y)}\g<2>", txt)
                 txt = re.sub(
-                    rf"(-- ANCHOR\s*INSERT INTO family_children\s*\(family_id,\s*child_id,\s*relationship_type\)\s*VALUES\s*\({new_fam_id},\s*)\d+(\s*,\s*'BIOLOGICAL'\s*\))",
+                    rf"(-- Adopted individual\s*INSERT INTO family_children\s*\(family_id,\s*child_id,\s*relationship_type\)\s*VALUES\s*\({new_fam_id},\s*)\d+(\s*,\s*'BIOLOGICAL'\s*\))",
                     rf"\g<1>{candidate.id}\g<2>", txt)
                 txt = re.sub(
-                    rf"(\({new_sib_id}\s*,\s*'Piotr'\s*,\s*'Kowalski'\s*,\s*'M'\s*,\s*true\s*,\s*')\d{{4}}-09-01('\s*,\s*'Kraków'\s*,\s*')\d{{4}}-04-12(')",
-                    rf"\g<1>{fy(sib_by)}-09-01\g<2>{fy(sib_dy)}-04-12\g<3>", txt)
+                    rf"(\({new_sib_id}\s*,\s*'Piotr'\s*,\s*'Kowalski'\s*,\s*'M'\s*,\s*true\s*,\s*')\d+(-09-01'\s*,\s*'Kraków'\s*,\s*')\d+(-04-12')",
+                    rf"\g<1>{fy(sib_by)}\g<2>{fy(sib_dy)}\g<3>", txt)
 
                 return inject_rec(txt, f"Adopted Anchor Person ID = {candidate.id}", False)
 
             def upd_s08_cypher(txt):
                 txt = re.sub(
-                    rf"(id:\s*{new_f_id}\s*,\s*givenName:\s*'Jan'.*?birthDate:\s*date\(')\d{{4}}-06-15('.*?deathDate:\s*date\(')\d{{4}}-11-02(')",
-                    rf"\g<1>{fy(f_by)}-06-15\g<2>{fy(f_dy)}-11-02\g<3>", txt)
+                    rf"(id:\s*{new_f_id}\s*,\s*givenName:\s*'Jan'.*?birthDate:\s*date\(')\d+(-06-15'.*?deathDate:\s*date\(')\d+(-11-02')",
+                    rf"\g<1>{fy(f_by)}\g<2>{fy(f_dy)}\g<3>", txt, flags=re.DOTALL)
                 txt = re.sub(
-                    rf"(id:\s*{new_m_id}\s*,\s*givenName:\s*'Anna'.*?birthDate:\s*date\(')\d{{4}}-03-22('.*?deathDate:\s*date\(')\d{{4}}-01-10(')",
-                    rf"\g<1>{fy(m_by)}-03-22\g<2>{fy(m_dy)}-01-10\g<3>", txt)
+                    rf"(id:\s*{new_m_id}\s*,\s*givenName:\s*'Anna'.*?birthDate:\s*date\(')\d+(-03-22'.*?deathDate:\s*date\(')\d+(-01-10')",
+                    rf"\g<1>{fy(m_by)}\g<2>{fy(m_dy)}\g<3>", txt, flags=re.DOTALL)
                 txt = re.sub(
-                    rf"(id:\s*{new_fam_id}\s*,.*?marriageDate:\s*date\(')\d{{4}}-05-10(')",
-                    rf"\g<1>{fy(mar_y)}-05-10\g<2>", txt)
+                    rf"(id:\s*{new_fam_id}\s*,.*?marriageDate:\s*date\(')\d+(-05-10')",
+                    rf"\g<1>{fy(mar_y)}\g<2>", txt, flags=re.DOTALL)
+
                 txt = re.sub(
-                    rf"(MATCH\s*\(f:Family\s*\{{id:\s*{new_fam_id}\}}\)\s*,\s*\(adopted:Person\s*\{{id:\s*)(?:\d+|<ANCHOR_ID>)(\}})",
+                    rf"(MATCH\s*\(f:Family\s*\{{id:\s*{new_fam_id}\}}\)\s*,\s*\(adopted:Person\s*\{{id:\s*)\d+(\}})",
                     rf"\g<1>{candidate.id}\g<2>", txt)
+
                 txt = re.sub(
-                    rf"(id:\s*{new_sib_id}\s*,\s*givenName:\s*'Piotr'.*?birthDate:\s*date\(')\d{{4}}-09-01('.*?deathDate:\s*date\(')\d{{4}}-04-12(')",
-                    rf"\g<1>{fy(sib_by)}-09-01\g<2>{fy(sib_dy)}-04-12\g<3>", txt)
+                    rf"(id:\s*{new_sib_id}\s*,\s*givenName:\s*'Piotr'.*?birthDate:\s*date\(')\d+(-09-01'.*?deathDate:\s*date\(')\d+(-04-12')",
+                    rf"\g<1>{fy(sib_by)}\g<2>{fy(sib_dy)}\g<3>", txt, flags=re.DOTALL)
 
                 return inject_rec(txt, f"Adopted Anchor Person ID = {candidate.id}", True)
 
