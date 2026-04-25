@@ -1,18 +1,68 @@
-// Scenario 01, 04, 05: lookup for traversal start nodes
+// ============================================================
+// Scenario 01: Lowest Common Ancestor (LCA)
+// ============================================================
+
 CREATE CONSTRAINT person_id_unique IF NOT EXISTS FOR (p:Person) REQUIRE p.id IS UNIQUE;
+
+
+// ============================================================
+// Scenario 02: Surname and Birth Year Filter
+// ============================================================
+
+CREATE INDEX person_surname_birthdate IF NOT EXISTS FOR (p:Person) ON (p.surname, p.birthDate);
+
+
+// ============================================================
+// Scenario 03: Births per City per Quarter-Century
+// ============================================================
+
+CREATE INDEX idx_person_place_birthdate IF NOT EXISTS FOR (p:Person) ON (p.birthPlace, p.birthDate);
+
+
+// ============================================================
+// Scenario 04: Ancestor Retrieval
+// ============================================================
+
+// Already covered by person_id_unique (Scenario 01)
+// CREATE CONSTRAINT person_id_unique IF NOT EXISTS FOR (p:Person) REQUIRE p.id IS UNIQUE;
+
+
+// ============================================================
+// Scenario 05: Descendant Retrieval
+// ============================================================
+
+// Already covered by person_id_unique (Scenario 01)
+// CREATE CONSTRAINT person_id_unique IF NOT EXISTS FOR (p:Person) REQUIRE p.id IS UNIQUE;
+
+
+// ============================================================
+// Scenario 06: Youngest Parent
+// ============================================================
+
+// No additional indexes needed.
+
+
+// ============================================================
+// Scenario 07: Place Name Update
+// ============================================================
+
+CREATE INDEX person_birthPlace IF NOT EXISTS FOR (p:Person) ON (p.birthPlace);
+CREATE INDEX person_deathPlace IF NOT EXISTS FOR (p:Person) ON (p.deathPlace);
+CREATE INDEX family_marriagePlace IF NOT EXISTS FOR (f:Family) ON (f.marriagePlace);
+
+
+// ============================================================
+// Scenario 08: Insert Family
+// ============================================================
+
+// No additional indexes needed.
+
+
+// ============================================================
+// Scenario 09: Delete Family
+// ============================================================
+
 CREATE CONSTRAINT family_id_unique IF NOT EXISTS FOR (f:Family) REQUIRE f.id IS UNIQUE;
 
-// Scenario 01, 04, 05: filters BIOLOGICAL links at each traversal step
-CREATE INDEX IF NOT EXISTS FOR ()-[r:HAS_CHILD]-() ON (r.relationshipType);
-
-// Scenario 02: surname equality filter
-CREATE INDEX IF NOT EXISTS FOR (p:Person) ON (p.surname);
-
-// Scenario 02: composite covers both surname equality and birth year range in one index scan
-CREATE INDEX IF NOT EXISTS FOR (p:Person) ON (p.surname, p.birthDate);
-
-// Scenario 03, 06: birth date range filter and age calculation
-CREATE INDEX IF NOT EXISTS FOR (p:Person) ON (p.birthDate);
-
-// Scenario 03: birth place grouping / filter
-CREATE INDEX IF NOT EXISTS FOR (p:Person) ON (p.birthPlace);
+// Already covered by person_id_unique (Scenario 01)
+// CREATE CONSTRAINT person_id_unique IF NOT EXISTS FOR (p:Person) REQUIRE p.id IS UNIQUE;

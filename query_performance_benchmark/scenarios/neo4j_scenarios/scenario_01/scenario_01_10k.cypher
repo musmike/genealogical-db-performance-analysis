@@ -9,25 +9,38 @@
 // Orders the results by lca_id ascending.
 
 
-// RECOMMENDED PARAMETERS: Person A = 8544, Person B = 6371
+// RECOMMENDED PARAMETERS: Person A = 8844, Person B = 6972
 
 MATCH (startNode:Person) 
-WHERE startNode.id IN [8544, 6371]
+WHERE startNode.id IN [8844, 6972]
+
 MATCH p = SHORTEST 1 PATHS (startNode)
-    ((:Person)<-[:HAS_CHILD {relationshipType: 'BIOLOGICAL'}]-(:Family)
+    ((:Person)<-[:HAS_BIOLOGICAL_CHILD]-(:Family)
     <-[:HUSBAND_OF|WIFE_OF]-()){0,11}(anc:Person)
-WITH anc, startNode.id AS sId, length(p)/2 AS dist
+WITH anc, startNode.id AS sId, length(p) / 2 AS dist
 WITH anc,
-     min(CASE WHEN sId=8544 THEN dist END) AS distA,
-     min(CASE WHEN sId=6371 THEN dist END) AS distB
+     min(CASE WHEN sId=8844 THEN dist END) AS distA,
+     min(CASE WHEN sId=6972 THEN dist END) AS distB
 WHERE distA IS NOT NULL AND distB IS NOT NULL
-WITH anc, distA, distB, distA+distB AS total_dist
+
+WITH anc, distA, distB, distA + distB AS total_dist
 WITH min(total_dist) AS minTotal, 
      collect({anc:anc, distA:distA, distB:distB, total:total_dist}) AS candidates
+
 UNWIND candidates AS c
-WITH c WHERE c.total = minTotal
-RETURN c.anc.id AS lca_id, c.anc.givenName AS given_name, c.anc.surname AS surname, 
-       c.anc.sex AS sex, c.anc.birthDate AS birth_date, c.anc.birthPlace AS birth_place, 
-       c.anc.deathDate AS death_date, c.anc.deathPlace AS death_place, 
-       c.distA AS path_length_from_a, c.distB AS path_length_from_b, c.total AS total_dist
-ORDER BY lca_id;
+WITH c 
+WHERE c.total = minTotal
+
+RETURN 
+    c.anc.id            AS lca_id, 
+    c.anc.givenName     AS given_name, 
+    c.anc.surname       AS surname, 
+    c.anc.sex           AS sex, 
+    c.anc.birthDate     AS birth_date, 
+    c.anc.birthPlace    AS birth_place, 
+    c.anc.deathDate     AS death_date, 
+    c.anc.deathPlace    AS death_place, 
+    c.distA             AS path_length_from_a, 
+    c.distB             AS path_length_from_b, 
+    c.total             AS total_dist
+ORDER BY lca_id ASC;

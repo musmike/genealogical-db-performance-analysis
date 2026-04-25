@@ -13,7 +13,9 @@ OUTPUT=$(docker exec neo4j_db \
   --nodes=Family=/import/10k/neo4j/nodes_family.csv \
   --relationships=HUSBAND_OF=/import/10k/neo4j/rels_husband_of.csv \
   --relationships=WIFE_OF=/import/10k/neo4j/rels_wife_of.csv \
-  --relationships=HAS_CHILD=/import/10k/neo4j/rels_child_of.csv 2>&1)
+  --relationships=HAS_BIOLOGICAL_CHILD=/import/10k/neo4j/rels_has_biological_child.csv \
+  --relationships=HAS_ADOPTED_CHILD=/import/10k/neo4j/rels_has_adopted_child.csv \
+  --relationships=HAS_FOSTER_CHILD=/import/10k/neo4j/rels_has_foster_child.csv 2>&1)
 
 # Display the exact "IMPORT DONE ..." line from output
 IMPORT_LINE=$(echo "$OUTPUT" | grep "IMPORT DONE")

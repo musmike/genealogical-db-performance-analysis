@@ -7,18 +7,18 @@
 // Orders the results by birth_date ascending.
 
 
-// RECOMMENDED PARAMETERS: Surname = 'Zieliński', Birth Year Range = 1933-1982
+// RECOMMENDED PARAMETERS: Surname = 'Piotrowski', Birth Year Range = 1738-1787
 
-MATCH (n:Person)
-WHERE n.birthDate.year >= 1933 and n.birthDate.year <= 1982
-AND n.surname = 'Zieliński'
-RETURN 
-n.id as person_id,
-n.givenName as given_name,
-n.surname as surname,
-n.sex as sex,
-n.birthDate as birth_date,
-n.deathDate as death_date,
-n.deathPlace as death_place
-ORDER BY n.birthDate ASC
-;
+MATCH (p:Person)
+WHERE p.surname = 'Piotrowski' 
+    AND p.birthDate >= date('1738-01-01') AND p.birthDate <= date('1787-12-31')
+RETURN
+    p.id            AS person_id, 
+    p.givenName     AS given_name, 
+    p.surname       AS surname, 
+    p.sex           AS sex, 
+    p.birthDate     AS birth_date, 
+    p.birthPlace    AS birth_place, 
+    p.deathDate     AS death_date, 
+    p.deathPlace    AS death_place
+ORDER BY birth_date ASC;

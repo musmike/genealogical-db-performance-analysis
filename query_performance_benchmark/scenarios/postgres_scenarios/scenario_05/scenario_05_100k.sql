@@ -1,6 +1,6 @@
 -- Scenario 05: Descendant Retrieval
 -- Retrieves all distinct biological descendants of a selected individual
--- up to a configured depth (10 generations for 100k).
+-- up to a configured depth (17 generations for 100k).
 -- Uses the individual identified in expected_results/scenario_05_descendants_100k.txt as having the most descendants.
 -- Should return the columns in the following order and with the following names:
 -- descendant_id, generation (the shortest path length from the starting individual), given_name, surname,
@@ -8,50 +8,45 @@
 -- Orders the results first by generation ascending, then by descendant_id ascending within each generation.
 
 
--- RECOMMENDED PARAMETERS: Person ID = 32896
+-- RECOMMENDED PARAMETERS: Person ID = 12035
 
-WITH RECURSIVE descendants(person_id, depth, via_family_id, visited) AS (
-    SELECT 32896, 0, NULL::int, ARRAY[32896]
+WITH RECURSIVE descendants AS (
+    SELECT 12035 AS person_id, 0 AS depth
 
-    UNION ALL
+    UNION
 
-    SELECT child.id, d.depth + 1, f.id, d.visited || child.id
+    SELECT fc.child_id, d.depth + 1
     FROM descendants d
-    JOIN families f 
-        ON d.person_id IN (f.husband_id, f.wife_id)
-    JOIN family_children fc 
-        ON fc.family_id = f.id 
-       AND fc.relationship_type = 'BIOLOGICAL'
-    JOIN people child 
-        ON child.id = fc.child_id
-    WHERE d.depth < 10
-      AND NOT (child.id = ANY(d.visited))
+    JOIN LATERAL (
+        SELECT id FROM families WHERE husband_id = d.person_id
+        UNION
+        SELECT id FROM families WHERE wife_id = d.person_id
+    ) f ON true
+    JOIN family_children fc ON fc.family_id = f.id AND fc.relationship_type = 'BIOLOGICAL'
+    WHERE d.depth < 17
 ),
-
 deduped AS (
-    SELECT DISTINCT ON (person_id) person_id, depth, via_family_id
+    SELECT DISTINCT ON (person_id) person_id, depth
     FROM descendants
-    WHERE person_id <> 32896
+    WHERE person_id <> 12035
     ORDER BY person_id, depth
 )
-
 SELECT 
-    p.id AS descendant_id,
-    d.depth AS generation,
-    p.given_name,
-    p.surname,
-    p.sex,
-    p.birth_date,
-    p.birth_place,
-    p.death_date,
-    p.death_place,
-    p.burial_place,
-    p.cause_of_death,
-    f.husband_id AS father_id,
-    f.wife_id AS mother_id
-
+    p.id                AS descendant_id, 
+    d.depth             AS generation, 
+    p.given_name        AS given_name, 
+    p.surname           AS surname, 
+    p.sex               AS sex, 
+    p.birth_date        AS birth_date, 
+    p.birth_place       AS birth_place, 
+    p.death_date        AS death_date, 
+    p.death_place       AS death_place, 
+    p.burial_place      AS burial_place, 
+    p.cause_of_death    AS cause_of_death, 
+    pf.husband_id       AS father_id,
+    pf.wife_id          AS mother_id
 FROM deduped d
-JOIN people p 
-    ON p.id = d.person_id
-LEFT JOIN families f
-    ON f.id = d.via_family_id;
+JOIN people p ON p.id = d.person_id
+LEFT JOIN family_children pfc ON pfc.child_id = p.id AND pfc.relationship_type = 'BIOLOGICAL'
+LEFT JOIN families pf ON pf.id = pfc.family_id
+ORDER BY generation ASC, descendant_id ASC;

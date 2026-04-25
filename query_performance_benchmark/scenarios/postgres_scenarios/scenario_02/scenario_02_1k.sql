@@ -7,17 +7,18 @@
 -- Orders the results by birth_date ascending.
 
 
--- RECOMMENDED PARAMETERS: Surname = 'Zieliński', Birth Year Range = 1933-1982
+-- RECOMMENDED PARAMETERS: Surname = 'Piotrowski', Birth Year Range = 1738-1787
 
 SELECT
-    p.id AS person_id,
-    p.given_name,
-    p.surname,
-    p.sex,
-    p.birth_date,
-    p.death_date,
-    p.birth_place
+    p.id            AS person_id, 
+    p.given_name    AS given_name, 
+    p.surname       AS surname, 
+    p.sex           AS sex, 
+    p.birth_date    AS birth_date, 
+    p.birth_place   AS birth_place, 
+    p.death_date    AS death_date, 
+    p.death_place   AS death_place
 FROM people p
-WHERE p.surname = 'Zieliński'
-  AND EXTRACT(YEAR FROM p.birth_date) BETWEEN 1933 AND 1982
-ORDER BY p.birth_date ASC;
+WHERE p.surname = 'Piotrowski'
+    AND p.birth_date >= '1738-01-01' AND p.birth_date <= '1787-12-31'
+ORDER BY birth_date ASC;

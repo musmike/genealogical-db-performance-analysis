@@ -9,48 +9,59 @@
 -- Orders the results by lca_id ascending.
 
 
--- RECOMMENDED PARAMETERS: Person A = 8544, Person B = 6371
+-- RECOMMENDED PARAMETERS: Person A = 8844, Person B = 6972
 
-WITH RECURSIVE
-anc_a(person_id, depth, visited) AS (
-    SELECT 8544, 0, ARRAY[8544]
-    UNION ALL
-    SELECT parent_id, a.depth + 1, a.visited || parent_id
+WITH RECURSIVE 
+anc_a AS (
+    SELECT 8844 AS person_id, 0 AS depth
+    UNION
+    SELECT parent_id, a.depth + 1
     FROM anc_a a
     JOIN family_children fc ON fc.child_id = a.person_id AND fc.relationship_type = 'BIOLOGICAL'
     JOIN families f ON f.id = fc.family_id
     CROSS JOIN LATERAL (
         VALUES (f.husband_id), (f.wife_id)
     ) AS parents(parent_id)
-    WHERE a.depth < 12 AND NOT (parent_id = ANY(a.visited))
+    WHERE a.depth < 12 
+    AND parents.parent_id IS NOT NULL
 ),
-anc_b(person_id, depth, visited) AS (
-    SELECT 6371, 0, ARRAY[6371]
-    UNION ALL
-    SELECT parent_id, b.depth + 1, b.visited || parent_id
+anc_b AS (
+    SELECT 6972 AS person_id, 0 AS depth
+    UNION
+    SELECT parent_id, b.depth + 1
     FROM anc_b b
     JOIN family_children fc ON fc.child_id = b.person_id AND fc.relationship_type = 'BIOLOGICAL'
     JOIN families f ON f.id = fc.family_id
     CROSS JOIN LATERAL (
         VALUES (f.husband_id), (f.wife_id)
     ) AS parents(parent_id)
-    WHERE b.depth < 12 AND NOT (parent_id = ANY(b.visited))
+    WHERE b.depth < 12 
+    AND parents.parent_id IS NOT NULL
 ),
 min_a AS (
-    SELECT person_id, MIN(depth) AS depth FROM anc_a GROUP BY person_id
+    SELECT DISTINCT ON (person_id) person_id, depth FROM anc_a ORDER BY person_id, depth
 ),
 min_b AS (
-    SELECT person_id, MIN(depth) AS depth FROM anc_b GROUP BY person_id
+    SELECT DISTINCT ON (person_id) person_id, depth FROM anc_b ORDER BY person_id, depth
 ),
 common AS (
     SELECT a.person_id, a.depth AS dist_a, b.depth AS dist_b, a.depth + b.depth AS total_dist
     FROM min_a a
     JOIN min_b b ON b.person_id = a.person_id
 )
-SELECT c.person_id AS lca_id, p.given_name, p.surname, p.sex,
-       p.birth_date, p.birth_place, p.death_date, p.death_place,
-       c.dist_a AS path_length_from_a, c.dist_b AS path_length_from_b, c.total_dist
+SELECT 
+    c.person_id     AS lca_id, 
+    p.given_name    AS given_name, 
+    p.surname       AS surname, 
+    p.sex           AS sex, 
+    p.birth_date    AS birth_date, 
+    p.birth_place   AS birth_place, 
+    p.death_date    AS death_date, 
+    p.death_place   AS death_place, 
+    c.dist_a        AS path_length_from_a, 
+    c.dist_b        AS path_length_from_b, 
+    c.total_dist    AS total_dist
 FROM common c
 JOIN people p ON p.id = c.person_id
 WHERE c.total_dist = (SELECT MIN(total_dist) FROM common)
-ORDER BY c.person_id;
+ORDER BY lca_id ASC;
