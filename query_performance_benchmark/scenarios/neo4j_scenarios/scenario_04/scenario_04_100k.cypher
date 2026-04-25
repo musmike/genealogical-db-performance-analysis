@@ -1,6 +1,6 @@
 // Scenario 04: Ancestor Retrieval (100k dataset)
 // Retrieves all distinct biological ancestors of a selected individual
-// up to a configured depth (15 generations in this case).
+// up to a configured depth (20 generations in this case).
 // Uses the individual identified in expected_results/scenario_04_ancestors_100k.txt as having the most ancestors.
 // Should return the columns in the following order and with the following names:
 // ancestor_id, generation (the shortest path length from the starting individual), given_name, surname,
@@ -8,21 +8,17 @@
 // Orders the results first by generation ascending, then by ancestor_id ascending within each generation.
 
 
-// RECOMMENDED PARAMETERS: Person ID = 99868
+// RECOMMENDED PARAMETERS: Person ID = 99982
 
-MATCH (start:Person {id: 99868})
+MATCH (start:Person {id: 99982})
 
 MATCH path = (start)
-              ((:Person)<-[c:HAS_CHILD WHERE c.relationshipType = 'BIOLOGICAL']-(:Family)<-[:HUSBAND_OF|WIFE_OF]-(:Person)){1,5}
+              ((:Person)<-[:HAS_BIOLOGICAL_CHILD]-
+              (:Family)<-[:HUSBAND_OF|WIFE_OF]-(:Person)){1,20}
               (anc:Person)
+WITH anc, min(length(path)) / 2 AS gen
 
-WITH anc, length(path)/2 AS generation
-
-WITH anc, min(generation) AS gen
-
-WITH DISTINCT anc, gen
-
-OPTIONAL MATCH (anc)<-[pc:HAS_CHILD WHERE pc.relationshipType = 'BIOLOGICAL']-(pf:Family)
+OPTIONAL MATCH (anc)<-[:HAS_BIOLOGICAL_CHILD]-(pf:Family)
 OPTIONAL MATCH (father:Person)-[:HUSBAND_OF]->(pf)
 OPTIONAL MATCH (mother:Person)-[:WIFE_OF]->(pf)
 
@@ -40,5 +36,4 @@ RETURN
     anc.causeOfDeath   AS cause_of_death,
     father.id          AS father_id,
     mother.id          AS mother_id
-
-ORDER BY generation, ancestor_id;
+ORDER BY generation ASC, ancestor_id ASC;
