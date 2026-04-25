@@ -29,14 +29,15 @@ class AnalyticsEngine:
         self.yearly_data = yearly_data
 
     def run(self):
-        config = SCENARIOS.get(self.target_population, {'lca_path': 8, 'ancestors_depth': 5})
-        target_lca = config['lca_path']
+        config = SCENARIOS.get(self.target_population, {'lca_path_expected_depth': 8, 'ancestors_depth': 5})
+        target_lca_expected = config.get('lca_path_expected_depth', 8)
+        target_lca_search = config.get('lca_path_search_depth', 8)
         target_ancestors_depth = config['ancestors_depth']
 
         target_descendants_depth = config.get('descendants_depth', 3 if self.target_population <= 1000
         else (6 if self.target_population <= 10000 else 10))
 
-        target_label = str(target_lca)
+        target_label = str(target_lca_expected)
 
         def is_biological_child(p_id):
             """Ensures we only traverse genetic linkages, preventing false cycles from adoptions."""
@@ -280,11 +281,11 @@ class AnalyticsEngine:
 
         # ---------------- SCENARIO 01: LCA ----------------
         # Optimize search space by grouping candidates geographically
-        regions = {r: [] for r in PLACES.keys()}
+        regions = {r:[] for r in PLACES.keys()}
         for p_id in youngest_ids:
             regions[self.people[p_id].region_id].append(p_id)
 
-        bfs_limit = (target_lca // 2) + 10
+        bfs_limit = (target_lca_expected // 2) + 10
 
         def get_ancestors_biological(p_id, limit):
             """Performs bounded BFS to map ancestors. Essential for evaluating LCA depth."""
@@ -330,9 +331,9 @@ class AnalyticsEngine:
                 if valid_lcas:
                     min_total_dist = min(anc1[x] + anc2[x] for x in valid_lcas)
 
-                    if min_total_dist > max_distance and min_total_dist <= target_lca:
+                    if min_total_dist > max_distance and min_total_dist <= target_lca_expected:
                         max_distance = min_total_dist
-                        lcas_at_min = [x for x in valid_lcas if anc1[x] + anc2[x] == min_total_dist]
+                        lcas_at_min =[x for x in valid_lcas if anc1[x] + anc2[x] == min_total_dist]
                         lca_details = [(x, anc1[x], anc2[x]) for x in lcas_at_min]
 
                         best_pair_info = {
@@ -341,7 +342,7 @@ class AnalyticsEngine:
                             'total_dist': max_distance
                         }
 
-                        if max_distance == target_lca:
+                        if max_distance == target_lca_expected:
                             sys.stdout.write(f"\r[{self.target_population}] LCA search: "
                                              f"found target {max_distance} at iteration {i + 1}!{' ' * 20}\n")
                             sys.stdout.flush()
@@ -361,7 +362,7 @@ class AnalyticsEngine:
         info_01 += "Constraint: Person A and Person B are not closely related AND\n"
         info_01 += "            biological distance to LCA > 3 for both sides.\n"
 
-        if best_pair_info and best_pair_info['total_dist'] == target_lca:
+        if best_pair_info and best_pair_info['total_dist'] == target_lca_expected:
             info_01 += f"\nRecommended Person A (ID: {best_pair_info['p1']})\n"
             info_01 += f"Recommended Person B (ID: {best_pair_info['p2']})\n"
 
@@ -609,17 +610,29 @@ class AnalyticsEngine:
         # german_cities set is used to identify records that should be updated in the benchmark scenario.
         german_cities = {"Posen", "Danzig", "Breslau", "Stettin", "Bromberg", "Thorn"}
 
-        # Count unique people affected (a person might have both birth and death in a German city,
-        # but in SQL it counts as one row updated)
-        people_updates = sum(
+        # Count individual properties affected for accurate Neo4j reporting
+        people_birth_updates = sum(
             1 for p in self.people.values()
-            if p.birth_place in german_cities or p.death_place in german_cities
+            if p.birth_place in german_cities
+        )
+        
+        people_death_updates = sum(
+            1 for p in self.people.values()
+            if p.death_place in german_cities
         )
 
-        # Count unique families affected
+# Count unique families affected
         family_updates = sum(
             1 for fam in self.families.values()
             if fam.marriage_place in german_cities
+        )
+        
+        total_properties = people_birth_updates + people_death_updates + family_updates
+
+        # Count unique rows/nodes affected
+        people_row_updates = sum(
+            1 for p in self.people.values()
+            if p.birth_place in german_cities or p.death_place in german_cities
         )
 
         info_07 = (
@@ -637,9 +650,13 @@ class AnalyticsEngine:
             "  Stettin -> Szczecin\n"
             "  Bromberg -> Bydgoszcz\n"
             "  Thorn -> Toruń\n\n"
-            f"Expected affected rows in 'people' table/nodes: {people_updates}\n"
+            f"Expected affected rows in 'people' table/nodes: {people_row_updates}\n"
             f"Expected affected rows in 'families' table/nodes: {family_updates}\n"
-            f"Total expected updates: {people_updates + family_updates}\n"
+            f"Total expected rows updated: {people_row_updates + family_updates}\n\n"
+            f"Expected 'birth_place' properties updated: {people_birth_updates}\n"
+            f"Expected 'death_place' properties updated: {people_death_updates}\n"
+            f"Expected 'marriage_place' properties updated: {family_updates}\n"
+            f"Total expected properties updated: {total_properties}\n"
         )
         write_scenario_file('scenario_07_place_name_update.txt', info_07)
 
@@ -1010,7 +1027,8 @@ class AnalyticsEngine:
             new_f_id, new_m_id, new_sib_id, new_fam_id = 200001, 200002, 200003, 200001
 
         config_scen = SCENARIOS.get(self.target_population, SCENARIOS[1000])
-        lca_path = config_scen.get('lca_path', 8)
+        lca_search = config_scen.get('lca_path_search_depth', 8)
+        lca_expected = config_scen.get('lca_path_expected_depth', 8)
         anc_depth = config_scen.get('ancestors_depth', 5)
         desc_depth = config_scen.get('descendants_depth', 3)
 
@@ -1039,13 +1057,16 @@ class AnalyticsEngine:
 
         # ── SCENARIO 01: LCA
         if lca_p1_id and lca_p2_id:
+            if lca_expected != lca_search:
+                comment_text = f"configured target ({lca_expected} hops for {size} dataset) but the query looks for paths up to {lca_search} hops to put it under load."
+            else:
+                comment_text = f"configured target ({lca_expected} hops for {size} dataset)."
+
             def upd_lca_sql(txt):
-                txt = re.sub(r'(anc_a\s*\([^)]+\)\s*AS\s*\(\s*\n\s*SELECT\s+)\d+(\s*,\s*0\s*,\s*ARRAY\s*\[)\d+(\])',
-                             rf'\g<1>{lca_p1_id}\g<2>{lca_p1_id}\g<3>', txt)
-                txt = re.sub(r'(anc_b\s*\([^)]+\)\s*AS\s*\(\s*\n\s*SELECT\s+)\d+(\s*,\s*0\s*,\s*ARRAY\s*\[)\d+(\])',
-                             rf'\g<1>{lca_p2_id}\g<2>{lca_p2_id}\g<3>', txt)
-                txt = re.sub(r'(WHERE\s+[ab]\.depth\s*<\s*)\d+', rf'\g<1>{lca_path}', txt)
-                txt = re.sub(r'(\(\d+\s+hops\s+for)', f'({lca_path} hops for', txt)
+                txt = re.sub(r'(anc_a\s+AS\s*\(\s*\n\s*SELECT\s+)\d+(\s+AS\s+person_id)', rf'\g<1>{lca_p1_id}\g<2>', txt)
+                txt = re.sub(r'(anc_b\s+AS\s*\(\s*\n\s*SELECT\s+)\d+(\s+AS\s+person_id)', rf'\g<1>{lca_p2_id}\g<2>', txt)
+                txt = re.sub(r'(WHERE\s+[ab]\.depth\s*<\s*)\d+', rf'\g<1>{lca_search}', txt)
+                txt = re.sub(r'configured target \(\d+ hops for [^)]+\)(?: but the query looks for paths up to \d+ hops to(?: to)? put it under load)?\.?', comment_text, txt)
                 return inject_rec(txt, f"Person A = {lca_p1_id}, Person B = {lca_p2_id}", False)
 
             def upd_lca_cypher(txt):
@@ -1055,8 +1076,8 @@ class AnalyticsEngine:
                 txt = re.sub(r'(sId\s*=\s*)\d+(\s+THEN\s+dist\s+END\)\s+AS\s+distB)', rf'\g<1>{lca_p2_id}\g<2>', txt)
 
                 txt = re.sub(r'(<-\[:HUSBAND_OF\|WIFE_OF\]-\(\)\)\{\s*)\d+\s*,\s*\d+(\s*\})',
-                             rf'\g<1>0,{lca_path - 1}\g<2>', txt)
-                txt = re.sub(r'(\(\d+\s+hops\s+for)', f'({lca_path} hops for', txt)
+                             rf'\g<1>0,{lca_search - 1}\g<2>', txt)
+                txt = re.sub(r'configured target \(\d+ hops for [^)]+\)(?: but the query looks for paths up to \d+ hops to(?: to)? put it under load)?\.?', comment_text, txt)
                 return inject_rec(txt, f"Person A = {lca_p1_id}, Person B = {lca_p2_id}", True)
 
             rw(os.path.join(pg_base, "scenario_01_lca", f"scenario_01_lca_{size}.sql"), upd_lca_sql)

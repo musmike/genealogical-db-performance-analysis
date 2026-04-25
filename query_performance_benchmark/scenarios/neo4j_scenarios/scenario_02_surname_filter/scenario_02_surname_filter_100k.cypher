@@ -21,4 +21,4 @@ RETURN
     p.birthPlace    AS birth_place, 
     p.deathDate     AS death_date, 
     p.deathPlace    AS death_place
-ORDER BY p.birthDate ASC;
+ORDER BY birth_date ASC;

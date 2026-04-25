@@ -13,7 +13,7 @@
 WITH RECURSIVE ancestors AS (
     SELECT 9914 AS person_id, 0 AS depth
 
-    UNION ALL
+    UNION
     
     SELECT parent_id, a.depth + 1
     FROM ancestors a
@@ -23,10 +23,10 @@ WITH RECURSIVE ancestors AS (
     WHERE parent_id IS NOT NULL AND a.depth < 10
 ),
 deduped AS (
-    SELECT person_id, MIN(depth) AS depth
+    SELECT DISTINCT ON (person_id) person_id, depth
     FROM ancestors
     WHERE person_id <> 9914
-    GROUP BY person_id
+    ORDER BY person_id, depth
 )
 SELECT 
     p.id                AS ancestor_id, 
@@ -46,4 +46,4 @@ FROM deduped d
 JOIN people p ON p.id = d.person_id
 LEFT JOIN family_children pfc ON pfc.child_id = p.id AND pfc.relationship_type = 'BIOLOGICAL'
 LEFT JOIN families pf ON pf.id = pfc.family_id
-ORDER BY generation, p.id;
+ORDER BY generation ASC, ancestor_id ASC;

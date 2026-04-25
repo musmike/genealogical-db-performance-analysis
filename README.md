@@ -89,7 +89,7 @@ pip install matplotlib
 python main.py
 ```
 
-This will generate three datasets into `data_generator/output/` and automatically create a `population_growth.png` chart for each dataset:
+This will generate three datasets into `data_generator/output/` and automatically create multiple diagnostic charts (e.g., `population_growth.png`, `network_topology.png`), a detailed dataset summary, an expected results directory with query validation parameters, and automatically patch the benchmark SQL/Cypher queries with valid parameters for each dataset:
 
 | Directory | Population | Generations |
 |-----------|-----------|-------------|

@@ -39,15 +39,16 @@ When an optimal configuration is found, the script outputs the exact Python code
 
 Per-scale parameters are defined in the `SCENARIOS` dictionary:
 
-| Parameter | 1 k | 10 k | 100 k |
-|---|---|---|---|
-| `start_year` | 1650 | 1400 | 700 |
-| `initial_pairs` | 19 | 63 | 77 |
-| `avg_children` | 7.1 | 4.99 | 4.53 |
-| `ancestors_depth` | 5 | 10 | 15 |
-| `descendants_depth` | 3 | 6 | 10 |
-| `lca_path_length` | 8 | 12 | 16 |
-| `immigrants_per_year` | 1 | 2 | 4 |
+| Parameter | 1 k  | 10 k | 100 k |
+|---|------|------|-------|
+| `start_year` | 1650 | 1400 | 700   |
+| `initial_pairs` | 19   | 63   | 77    |
+| `avg_children` | 7.1  | 4.99 | 4.53  |
+| `ancestors_depth` | 5    | 10   | 20    |
+| `descendants_depth` | 5    | 10   | 17    |
+| `lca_path_search_depth` | 8    | 12   | 21    |
+| `lca_path_expected_depth` | 8    | 12   | 16    |
+| `immigrants_per_year` | 1    | 2    | 4     |
 
 Reference data (names, surnames, places, occupations, causes of death) are
 Polish-language historical lists drawn from `config.py`.

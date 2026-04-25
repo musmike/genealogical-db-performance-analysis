@@ -230,7 +230,7 @@ def find_params_for_target(target_pop, depth_min, depth_max, base_seed, rng, max
             children = round(rng.uniform(4.5, 4.65), 2)
             immigrants = 4
 
-        target_lca = config.SCENARIOS[target_pop].get('lca_path', config.SCENARIOS[target_pop].get('min_lca_path'))
+        target_lca = config.SCENARIOS[target_pop].get('lca_path_expected_depth')
 
         config.SCENARIOS[target_pop].update(
             {'initial_pairs': pairs, 'avg_children': children, 'immigrants_per_year': immigrants})
@@ -331,7 +331,7 @@ def run_parameter_search():
 
             print(f"   {pop}: {{")
             print(
-                f"       'lca_path': {base['lca_path']}, 'ancestors_depth': {base['ancestors_depth']}, 'descendants_depth': {base['descendants_depth']},")
+                f"       'lca_path_search_depth': {base['lca_path_search_depth']}, 'lca_path_expected_depth': {base['lca_path_expected_depth']}, 'ancestors_depth': {base['ancestors_depth']}, 'descendants_depth': {base['descendants_depth']},")
             print(
                 f"       'start_year': {base['start_year']}, 'initial_pairs': {pairs}, 'avg_children': {children}, 'immigrants_per_year': {immigrants}")
 

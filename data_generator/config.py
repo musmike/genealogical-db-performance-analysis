@@ -12,15 +12,15 @@ SEED = 748376
 # simulation start year, number of founding pairs, immigrants, and fertility rate.
 SCENARIOS = {
     1000: {
-        'lca_path': 8, 'ancestors_depth': 5, 'descendants_depth': 3,
+        'lca_path_search_depth': 8, 'lca_path_expected_depth': 8, 'ancestors_depth': 5, 'descendants_depth': 5,
         'start_year': 1650, 'initial_pairs': 19, 'avg_children': 7.1, 'immigrants_per_year': 1
     },
     10000: {
-        'lca_path': 12, 'ancestors_depth': 10, 'descendants_depth': 6,
+        'lca_path_search_depth': 12, 'lca_path_expected_depth': 12, 'ancestors_depth': 10, 'descendants_depth': 10,
         'start_year': 1400, 'initial_pairs': 63, 'avg_children': 4.99, 'immigrants_per_year': 2
     },
     100000: {
-        'lca_path': 16, 'ancestors_depth': 15, 'descendants_depth': 10,
+        'lca_path_search_depth': 21, 'lca_path_expected_depth': 16, 'ancestors_depth': 20, 'descendants_depth': 17,
         'start_year': 700, 'initial_pairs': 77, 'avg_children': 4.53, 'immigrants_per_year': 4
     }
 }

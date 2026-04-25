@@ -21,4 +21,4 @@ SELECT
 FROM people p
 WHERE p.surname = 'Piotrowski'
     AND p.birth_date >= '1738-01-01' AND p.birth_date <= '1787-12-31'
-ORDER BY p.birth_date ASC;
+ORDER BY birth_date ASC;

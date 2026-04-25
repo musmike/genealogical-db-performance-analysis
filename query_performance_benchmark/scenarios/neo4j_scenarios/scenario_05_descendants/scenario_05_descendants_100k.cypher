@@ -1,6 +1,6 @@
 // Scenario 05: Descendant Retrieval
 // Retrieves all distinct biological descendants of a selected individual
-// up to a configured depth (10 generations for 100k).
+// up to a configured depth (17 generations for 100k).
 // Uses the individual identified in expected_results/scenario_05_descendants_100k.txt as having the most descendants.
 // Should return the columns in the following order and with the following names:
 // descendant_id, generation (the shortest path length from the starting individual), given_name, surname,
@@ -8,13 +8,13 @@
 // Orders the results first by generation ascending, then by descendant_id ascending within each generation.
 
 
-// RECOMMENDED PARAMETERS: Person ID = 18037
+// RECOMMENDED PARAMETERS: Person ID = 12035
 
-MATCH (start:Person {id: 18037})
+MATCH (start:Person {id: 12035})
 
 MATCH path = (start)
               ((:Person)-[:HUSBAND_OF|WIFE_OF]->
-              (:Family)-[:HAS_BIOLOGICAL_CHILD]->(:Person)){1,10}
+              (:Family)-[:HAS_BIOLOGICAL_CHILD]->(:Person)){1,17}
               (des:Person)
 WITH des, min(length(path)) / 2 AS gen
 
@@ -36,4 +36,4 @@ RETURN
     des.causeOfDeath   AS cause_of_death, 
     father.id          AS father_id, 
     mother.id          AS mother_id
-ORDER BY generation ASC, des.id ASC;
+ORDER BY generation ASC, descendant_id ASC;

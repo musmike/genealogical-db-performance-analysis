@@ -2,7 +2,7 @@
 // Finds the closest common biological ancestor of two selected individuals.
 // The specific pair of person IDs is taken from expected_results/scenario_01_lca_100k.txt —
 // chosen such that the total path length through the LCA matches the
-// configured target (16 hops for 100k dataset).
+// configured target (16 hops for 100k dataset) but the query looks for paths up to 21 hops to put it under load.
 // Traversal follows biological relationships only (adopted/foster excluded).
 // Should return the columns in the following order and with the following names:
 // lca_id, given_name, surname, sex, birth_date, birth_place, death_date, death_place, path_length_from_a, path_length_from_b, total_dist.
@@ -16,7 +16,7 @@ WHERE startNode.id IN [97932, 94444]
 
 MATCH p = SHORTEST 1 PATHS (startNode)
     ((:Person)<-[:HAS_BIOLOGICAL_CHILD]-(:Family)
-    <-[:HUSBAND_OF|WIFE_OF]-()){0,15}(anc:Person)
+    <-[:HUSBAND_OF|WIFE_OF]-()){0,20}(anc:Person)
 WITH anc, startNode.id AS sId, length(p) / 2 AS dist
 WITH anc,
      min(CASE WHEN sId=97932 THEN dist END) AS distA,

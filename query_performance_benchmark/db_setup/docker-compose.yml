@@ -78,6 +78,9 @@ services:
       NEO4J_server_memory_heap_initial__size: 2G
       NEO4J_server_memory_heap_max__size: 2G
 
+      # Set transaction memory limit to 4GB to allow larger transactions if needed during benchmarks
+      NEO4J_dbms_memory_transaction_total_max: 4G
+
       # Page cache is the primary data cache for nodes, relationships, and properties.
       # Set to 4GB to fit within the 8GB container memory limit alongside the heap (2GB)
       # and JVM/OS overhead (~2GB).

@@ -1,6 +1,6 @@
 -- Scenario 05: Descendant Retrieval
 -- Retrieves all distinct biological descendants of a selected individual
--- up to a configured depth (3 generations for 1k).
+-- up to a configured depth (5 generations for 1k).
 -- Uses the individual identified in expected_results/scenario_05_descendants_1k.txt as having the most descendants.
 -- Should return the columns in the following order and with the following names:
 -- descendant_id, generation (the shortest path length from the starting individual), given_name, surname,
@@ -8,24 +8,28 @@
 -- Orders the results first by generation ascending, then by descendant_id ascending within each generation.
 
 
--- RECOMMENDED PARAMETERS: Person ID = 54
+-- RECOMMENDED PARAMETERS: Person ID = 26
 
 WITH RECURSIVE descendants AS (
-    SELECT 54 AS person_id, 0 AS depth
+    SELECT 26 AS person_id, 0 AS depth
 
-    UNION ALL
+    UNION
 
     SELECT fc.child_id, d.depth + 1
     FROM descendants d
-    JOIN families f ON f.husband_id = d.person_id OR f.wife_id = d.person_id
+    JOIN LATERAL (
+        SELECT id FROM families WHERE husband_id = d.person_id
+        UNION
+        SELECT id FROM families WHERE wife_id = d.person_id
+    ) f ON true
     JOIN family_children fc ON fc.family_id = f.id AND fc.relationship_type = 'BIOLOGICAL'
-    WHERE d.depth < 3
+    WHERE d.depth < 5
 ),
 deduped AS (
-    SELECT person_id, MIN(depth) AS depth
+    SELECT DISTINCT ON (person_id) person_id, depth
     FROM descendants
-    WHERE person_id <> 54
-    GROUP BY person_id
+    WHERE person_id <> 26
+    ORDER BY person_id, depth
 )
 SELECT 
     p.id                AS descendant_id, 
@@ -45,4 +49,4 @@ FROM deduped d
 JOIN people p ON p.id = d.person_id
 LEFT JOIN family_children pfc ON pfc.child_id = p.id AND pfc.relationship_type = 'BIOLOGICAL'
 LEFT JOIN families pf ON pf.id = pfc.family_id
-ORDER BY generation ASC, p.id ASC;
+ORDER BY generation ASC, descendant_id ASC;

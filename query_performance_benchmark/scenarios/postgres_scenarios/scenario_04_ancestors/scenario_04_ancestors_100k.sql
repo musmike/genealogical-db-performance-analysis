@@ -1,6 +1,6 @@
 -- Scenario 04: Ancestor Retrieval (100k dataset)
 -- Retrieves all distinct biological ancestors of a selected individual
--- up to a configured depth (15 generations in this case).
+-- up to a configured depth (20 generations in this case).
 -- Uses the individual identified in expected_results/scenario_04_ancestors_100k.txt as having the most ancestors.
 -- Should return the columns in the following order and with the following names:
 -- ancestor_id, generation (the shortest path length from the starting individual), given_name, surname,
@@ -13,20 +13,20 @@
 WITH RECURSIVE ancestors AS (
     SELECT 99982 AS person_id, 0 AS depth
 
-    UNION ALL
+    UNION
     
     SELECT parent_id, a.depth + 1
     FROM ancestors a
     JOIN family_children fc ON fc.child_id = a.person_id AND fc.relationship_type = 'BIOLOGICAL'
     JOIN families f ON f.id = fc.family_id
     CROSS JOIN LATERAL (VALUES (f.husband_id),(f.wife_id)) AS v(parent_id)
-    WHERE parent_id IS NOT NULL AND a.depth < 15
+    WHERE parent_id IS NOT NULL AND a.depth < 20
 ),
 deduped AS (
-    SELECT person_id, MIN(depth) AS depth
+    SELECT DISTINCT ON (person_id) person_id, depth
     FROM ancestors
     WHERE person_id <> 99982
-    GROUP BY person_id
+    ORDER BY person_id, depth
 )
 SELECT 
     p.id                AS ancestor_id, 
@@ -46,4 +46,4 @@ FROM deduped d
 JOIN people p ON p.id = d.person_id
 LEFT JOIN family_children pfc ON pfc.child_id = p.id AND pfc.relationship_type = 'BIOLOGICAL'
 LEFT JOIN families pf ON pf.id = pfc.family_id
-ORDER BY generation, p.id;
+ORDER BY generation ASC, ancestor_id ASC;

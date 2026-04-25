@@ -16,5 +16,10 @@ Replacements to be executed:
 
 Expected affected rows in 'people' table/nodes: 173
 Expected affected rows in 'families' table/nodes: 32
-Total expected updates: 205
+Total expected rows updated: 205
+
+Expected 'birth_place' properties updated: 115
+Expected 'death_place' properties updated: 67
+Expected 'marriage_place' properties updated: 32
+Total expected properties updated: 214
 

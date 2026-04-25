@@ -21,4 +21,4 @@ SELECT
 FROM people p
 WHERE p.surname = 'Górski'
     AND p.birth_date >= '1461-01-01' AND p.birth_date <= '1510-12-31'
-ORDER BY p.birth_date ASC;
+ORDER BY birth_date ASC;

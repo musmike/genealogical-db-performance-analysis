@@ -11,11 +11,11 @@
 
 -- RECOMMENDED PARAMETERS: Person A = 8844, Person B = 6972
 
-WITH RECURSIVE
-anc_a(person_id, depth, visited) AS (
-    SELECT 8844, 0, ARRAY[8844]
-    UNION ALL
-    SELECT parent_id, a.depth + 1, a.visited || parent_id
+WITH RECURSIVE 
+anc_a AS (
+    SELECT 8844 AS person_id, 0 AS depth
+    UNION
+    SELECT parent_id, a.depth + 1
     FROM anc_a a
     JOIN family_children fc ON fc.child_id = a.person_id AND fc.relationship_type = 'BIOLOGICAL'
     JOIN families f ON f.id = fc.family_id
@@ -24,12 +24,11 @@ anc_a(person_id, depth, visited) AS (
     ) AS parents(parent_id)
     WHERE a.depth < 12 
     AND parents.parent_id IS NOT NULL
-    AND NOT (parent_id = ANY(a.visited))
 ),
-anc_b(person_id, depth, visited) AS (
-    SELECT 6972, 0, ARRAY[6972]
-    UNION ALL
-    SELECT parent_id, b.depth + 1, b.visited || parent_id
+anc_b AS (
+    SELECT 6972 AS person_id, 0 AS depth
+    UNION
+    SELECT parent_id, b.depth + 1
     FROM anc_b b
     JOIN family_children fc ON fc.child_id = b.person_id AND fc.relationship_type = 'BIOLOGICAL'
     JOIN families f ON f.id = fc.family_id
@@ -38,13 +37,12 @@ anc_b(person_id, depth, visited) AS (
     ) AS parents(parent_id)
     WHERE b.depth < 12 
     AND parents.parent_id IS NOT NULL
-    AND NOT (parent_id = ANY(b.visited))
 ),
 min_a AS (
-    SELECT person_id, MIN(depth) AS depth FROM anc_a GROUP BY person_id
+    SELECT DISTINCT ON (person_id) person_id, depth FROM anc_a ORDER BY person_id, depth
 ),
 min_b AS (
-    SELECT person_id, MIN(depth) AS depth FROM anc_b GROUP BY person_id
+    SELECT DISTINCT ON (person_id) person_id, depth FROM anc_b ORDER BY person_id, depth
 ),
 common AS (
     SELECT a.person_id, a.depth AS dist_a, b.depth AS dist_b, a.depth + b.depth AS total_dist
@@ -66,4 +64,4 @@ SELECT
 FROM common c
 JOIN people p ON p.id = c.person_id
 WHERE c.total_dist = (SELECT MIN(total_dist) FROM common)
-ORDER BY c.person_id ASC;
+ORDER BY lca_id ASC;

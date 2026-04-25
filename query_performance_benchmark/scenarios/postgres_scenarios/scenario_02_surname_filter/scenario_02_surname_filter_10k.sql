@@ -21,4 +21,4 @@ SELECT
 FROM people p
 WHERE p.surname = 'Krawczyk'
     AND p.birth_date >= '1770-01-01' AND p.birth_date <= '1819-12-31'
-ORDER BY p.birth_date ASC;
+ORDER BY birth_date ASC;
