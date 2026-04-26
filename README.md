@@ -31,7 +31,7 @@ cd <repository_folder>
 
 ## 3. Set up the environment
 
-Run the environment setup script `env_setup.sh` to install required packages, Docker, and other dependencies:
+Run the environment setup script `env_setup.sh` to install all required dependencies (including Docker and the .NET SDK) and apply system-level optimizations to ensure stable and reproducible benchmark results:
 
 ```bash
 chmod +x env_setup.sh

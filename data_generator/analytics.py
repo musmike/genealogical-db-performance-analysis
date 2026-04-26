@@ -1032,8 +1032,8 @@ class AnalyticsEngine:
         anc_depth = config_scen.get('ancestors_depth', 5)
         desc_depth = config_scen.get('descendants_depth', 3)
 
-        pg_base = os.path.join(project_root, "query_performance_benchmark", "scenarios", "postgres_scenarios")
-        n4j_base = os.path.join(project_root, "query_performance_benchmark", "scenarios", "neo4j_scenarios")
+        pg_base = os.path.join(project_root, "benchmark_scr", "scenarios", "postgres_scenarios")
+        n4j_base = os.path.join(project_root, "benchmark_scr", "scenarios", "neo4j_scenarios")
 
         def rw(path, transform):
             if not os.path.exists(path):
