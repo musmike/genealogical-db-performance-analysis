@@ -1,8 +1,4 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/benchmark_scr/.vs/benchmark_scr/CopilotIndices/17.14.1593.33849
+﻿/benchmark_scr/.vs/benchmark_scr/CopilotIndices/17.14.1593.33849
 /benchmark_scr/.vs/benchmark_scr/DesignTimeBuild
 /benchmark_scr/.vs/benchmark_scr/FileContentIndex
 /benchmark_scr/.vs/ProjectEvaluation
@@ -11,3 +7,12 @@
 /benchmark_scr/.vs/benchmark_scr/v17
 /benchmark_scr/.vs
 /benchmark_scr/obj
+
+# Ignore everything in artifacts but allow CSV files
+/benchmark_scr/artifacts/
+!/benchmark_scr/artifacts/**/*.csv
+
+# JetBrains Rider IDE
+.idea/
+*.iml
+
