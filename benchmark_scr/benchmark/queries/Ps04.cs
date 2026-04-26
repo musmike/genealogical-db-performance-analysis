@@ -1,11 +1,7 @@
-﻿using benchmark_scr.monitoring;
+﻿using benchmark_scr.benchmark.readmodels;
+using benchmark_scr.monitoring;
 using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace benchmark_scr.benchmark.queries {
     public class Ps04 {
@@ -13,10 +9,12 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo;
         private readonly string path;
         private MemoryMonitor monitor;
-
+        private RelativeScratch scratch;
+        
         public Ps04() {
             path = Configg.basePath;
         }
+        
         [GlobalSetup]
         public void GlobalSetup() {
             var env = Environment.GetEnvironmentVariable("DATASET");
@@ -35,19 +33,40 @@ namespace benchmark_scr.benchmark.queries {
             driver.Open();
             monitor = new MemoryMonitor(env, nameof(Ps04));
             monitor.Start();
+
+            scratch = new RelativeScratch();
         }
+        
         [IterationSetup]
         public void IterationSetup() {
             monitor.NextIteration();
         }
+        
         [IterationCleanup]
         public void IterationCleanup() {
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
+        
         [Benchmark]
-        public void _Ps04() {
-            driver.ExecuteNonQuery(repo.PgScenario4);
+        public async Task<int> _Ps04() {
+            return await driver.ExecuteConsumingAsync(repo.PgScenario4, 
+                scratch, (r, s) => {
+                s.RelativeId   = r.GetInt32(0);
+                s.Generation   = r.GetInt32(1);
+                s.GivenName    = r.GetString(2);
+                s.Surname      = r.GetString(3);
+                s.Sex          = r.GetString(4);
+                s.BirthDate    = r.IsDBNull(5)  ? null : r.GetFieldValue<DateOnly>(5);
+                s.BirthPlace   = r.IsDBNull(6)  ? null : r.GetString(6);
+                s.DeathDate    = r.IsDBNull(7)  ? null : r.GetFieldValue<DateOnly>(7);
+                s.DeathPlace   = r.IsDBNull(8)  ? null : r.GetString(8);
+                s.BurialPlace  = r.IsDBNull(9)  ? null : r.GetString(9);
+                s.CauseOfDeath = r.IsDBNull(10) ? null : r.GetString(10);
+                s.FatherId     = r.IsDBNull(11) ? null : r.GetInt32(11);
+                s.MotherId     = r.IsDBNull(12) ? null : r.GetInt32(12);
+            });
         }
+        
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();

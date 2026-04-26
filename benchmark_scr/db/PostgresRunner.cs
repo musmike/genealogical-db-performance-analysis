@@ -28,6 +28,7 @@ using System.Threading.Tasks;
 //        }
 //    }
 //}
+
 public class PostgresDriver:IDisposable {
     private readonly string _connectionString;
     private NpgsqlConnection _connection;
@@ -66,6 +67,24 @@ public class PostgresDriver:IDisposable {
         while(reader.Read()) {
             handler(reader);
         }
+    }
+    
+    public async Task<int> ExecuteConsumingAsync<T>(
+        string sql, T scratch, Action<NpgsqlDataReader, T> map) {
+    
+        await using var cmd = new NpgsqlCommand(sql, _connection);
+        await using var reader = await cmd.ExecuteReaderAsync();
+        int count = 0;
+        while (await reader.ReadAsync()) {
+            map(reader, scratch);
+            count++;
+        }
+        return count;
+    }
+    
+    public async Task<int> ExecuteNonQueryAsync(string sql) {
+        await using var cmd = new NpgsqlCommand(sql, _connection);
+        return await cmd.ExecuteNonQueryAsync();
     }
 
     // --- PREPARED ---

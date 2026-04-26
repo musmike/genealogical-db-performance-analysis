@@ -1,11 +1,7 @@
-﻿using benchmark_scr.monitoring;
+﻿using benchmark_scr.benchmark.readmodels;
+using benchmark_scr.monitoring;
 using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace benchmark_scr.benchmark.queries {
     public class Ps02 {
@@ -13,10 +9,12 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo;
         private readonly string path;
         private MemoryMonitor monitor;
+        private PersonScratch scratch;
 
         public Ps02() {
             path = Configg.basePath;
         }
+        
         [GlobalSetup]
         public void GlobalSetup() {
             var env = Environment.GetEnvironmentVariable("DATASET");
@@ -35,19 +33,35 @@ namespace benchmark_scr.benchmark.queries {
             driver.Open();
             monitor = new MemoryMonitor(env, nameof(Ps02));
             monitor.Start();
+            
+            scratch = new PersonScratch();
         }
+        
         [IterationSetup]
         public void IterationSetup() {
             monitor.NextIteration();
         }
+        
         [IterationCleanup]
         public void IterationCleanup() {
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
+        
         [Benchmark]
-        public void _Ps02() {
-            driver.ExecuteNonQuery(repo.PgScenario2);
+        public async Task<int> _Ps02() {
+            return await driver.ExecuteConsumingAsync(repo.PgScenario2, 
+                scratch, (r, s) => {
+                s.PersonId  = r.GetInt32(0);
+                s.GivenName = r.GetString(1);
+                s.Surname   = r.GetString(2);
+                s.Sex       = r.GetString(3);
+                s.BirthDate = r.IsDBNull(4) ? null : r.GetFieldValue<DateOnly>(4);
+                s.BirthPlace = r.IsDBNull(5) ? null : r.GetString(5);
+                s.DeathDate = r.IsDBNull(6) ? null : r.GetFieldValue<DateOnly>(6);
+                s.DeathPlace = r.IsDBNull(7) ? null : r.GetString(7);
+            });
         }
+        
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();

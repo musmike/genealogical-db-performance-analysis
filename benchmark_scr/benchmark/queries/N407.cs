@@ -1,11 +1,6 @@
 ﻿using benchmark_scr.monitoring;
 using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace benchmark_scr.benchmark.queries {
     public class N407 {
@@ -17,6 +12,7 @@ namespace benchmark_scr.benchmark.queries {
         public N407() {
             path = Configg.basePath;
         }
+        
         [GlobalSetup]
         public void GlobalSetup() {
             var env = Environment.GetEnvironmentVariable("DATASET");
@@ -33,15 +29,15 @@ namespace benchmark_scr.benchmark.queries {
             monitor = new MemoryMonitor(env, nameof(N407));
             monitor.Start();
         }
+        
         [IterationSetup]
         public void IterationSetup() {
             monitor.NextIteration();
         }
+        
         [Benchmark]
-        public void _N407() {
-            driver.ExecuteWriteScriptAsync(repo.NeoScenario7)
-                .GetAwaiter()
-                .GetResult();
+        public async Task<int> _N407() {
+            return await driver.ExecuteWriteScriptCountAsync(repo.NeoScenario7);
         }
 
         [IterationCleanup]
@@ -50,6 +46,7 @@ namespace benchmark_scr.benchmark.queries {
                 .GetAwaiter().GetResult();
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
+        
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();

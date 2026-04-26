@@ -1,11 +1,8 @@
-﻿using benchmark_scr.monitoring;
+﻿using benchmark_scr.benchmark.readmodels;
+using benchmark_scr.monitoring;
 using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Neo4j.Driver;
 
 namespace benchmark_scr.benchmark.queries {
     public class N403 {
@@ -13,6 +10,7 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo;
         private readonly string path;
         private MemoryMonitor monitor;
+        private BirthStatScratch scratch;
 
         public N403() {
             path = Configg.basePath;
@@ -33,21 +31,32 @@ namespace benchmark_scr.benchmark.queries {
             driver = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
             monitor = new MemoryMonitor(env, nameof(N403));
             monitor.Start();
+            
+            scratch = new BirthStatScratch();
         }
+        
         [IterationSetup]
         public void IterationSetup() {
             monitor.NextIteration();
         }
+        
         [IterationCleanup]
         public void IterationCleanup() {
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
+        
         [Benchmark]
-        public void _N403() {
-            driver.ExecuteReadScriptCountAsync(repo.NeoScenario3)
-                .GetAwaiter()
-                .GetResult();
+        public async Task<int> _N403()
+        {
+            return await driver.ExecuteReadConsumingAsync(repo.NeoScenario3, 
+                scratch, (r, s) =>
+            {
+                s.City = r["city"].As<string>();
+                s.QuarterCenturyStart = r["quarter_century_start"].As<int>();
+                s.BirthCount = r["birth_count"].As<long>();
+            });
         }
+        
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();

@@ -1,11 +1,6 @@
 ﻿using benchmark_scr.monitoring;
 using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace benchmark_scr.benchmark.queries {
     public class N408 {
@@ -17,6 +12,7 @@ namespace benchmark_scr.benchmark.queries {
         public N408() {
             path = Configg.basePath;
         }
+        
         [GlobalSetup]
         public void GlobalSetup() {
             var env = Environment.GetEnvironmentVariable("DATASET");
@@ -33,22 +29,24 @@ namespace benchmark_scr.benchmark.queries {
             monitor = new MemoryMonitor(env, nameof(N408));
             monitor.Start();
         }
+        
         [IterationSetup]
         public void IterationSetup() {
             monitor.NextIteration();
         }
+        
         [Benchmark]
-        public void _N408() {
-            driver.ExecuteWriteScriptAsync(repo.NeoScenario8)
-                .GetAwaiter()
-                .GetResult();
+        public async Task<int> _N408() {
+            return await driver.ExecuteWriteScriptCountAsync(repo.NeoScenario8);
         }
+        
         [IterationCleanup]
         public void _N408Cleanup() {
             driver.ExecuteWriteScriptAsync(repo.NeoScenario9)
-                .GetAwaiter() .GetResult();
+                .GetAwaiter().GetResult();
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
+        
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();

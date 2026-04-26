@@ -1,11 +1,7 @@
-﻿using benchmark_scr.monitoring;
+﻿using benchmark_scr.benchmark.readmodels;
+using benchmark_scr.monitoring;
 using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace benchmark_scr.benchmark.queries {
     [MemoryDiagnoser]
@@ -14,6 +10,7 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo;
         private readonly string path;
         private MemoryMonitor monitor;
+        private LcaScratch scratch;
 
         public Ps01() {
             path = Configg.basePath;
@@ -37,19 +34,38 @@ namespace benchmark_scr.benchmark.queries {
             driver.Open();
             monitor = new MemoryMonitor(env, nameof(Ps01));
             monitor.Start();
+            
+            scratch = new LcaScratch();
         }
+        
         [IterationSetup]
         public void IterationSetup() {
             monitor.NextIteration();
         }
+        
         [IterationCleanup]
         public void IterationCleanup() {
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
+        
         [Benchmark]
-        public void _Ps01() {
-            driver.ExecuteNonQuery(repo.PgScenario1);
+        public async Task<int> _Ps01() {
+            return await driver.ExecuteConsumingAsync(repo.PgScenario1, 
+                scratch, (r, s) => {
+                s.LcaId     = r.GetInt32(0);
+                s.GivenName = r.GetString(1);
+                s.Surname   = r.GetString(2);
+                s.Sex       = r.GetString(3);
+                s.BirthDate = r.IsDBNull(4) ? null : r.GetFieldValue<DateOnly>(4);
+                s.BirthPlace = r.IsDBNull(5) ? null : r.GetString(5);
+                s.DeathDate = r.IsDBNull(6) ? null : r.GetFieldValue<DateOnly>(6);
+                s.DeathPlace = r.IsDBNull(7) ? null : r.GetString(7);
+                s.PathFromA = r.GetInt32(8);
+                s.PathFromB = r.GetInt32(9);
+                s.TotalDist = r.GetInt32(10);
+            });
         }
+        
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();

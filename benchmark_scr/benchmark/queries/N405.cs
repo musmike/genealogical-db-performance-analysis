@@ -1,11 +1,8 @@
-﻿using benchmark_scr.monitoring;
+﻿using benchmark_scr.benchmark.readmodels;
+using benchmark_scr.monitoring;
 using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Neo4j.Driver;
 
 namespace benchmark_scr.benchmark.queries {
     public class N405 {
@@ -13,10 +10,12 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo;
         private readonly string path;
         private MemoryMonitor monitor;
+        private RelativeScratch scratch;
 
         public N405() {
             path = Configg.basePath;
         }
+        
         [GlobalSetup]
         public void GlobalSetup() {
             var env = Environment.GetEnvironmentVariable("DATASET");
@@ -32,21 +31,42 @@ namespace benchmark_scr.benchmark.queries {
             driver = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
             monitor = new MemoryMonitor(env, nameof(N405));
             monitor.Start();
+            
+            scratch = new RelativeScratch();
         }
+        
         [IterationSetup]
         public void IterationSetup() {
             monitor.NextIteration();
         }
+        
         [IterationCleanup]
         public void IterationCleanup() {
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
+        
         [Benchmark]
-        public void _N405() {
-            driver.ExecuteReadScriptCountAsync(repo.NeoScenario5)
-                .GetAwaiter()
-                .GetResult();
+        public async Task<int> _N405()
+        {
+            return await driver.ExecuteReadConsumingAsync(repo.NeoScenario5,
+                scratch, (r, s) =>
+                {
+                    s.RelativeId = r["descendant_id"].As<int>();
+                    s.Generation = r["generation"].As<int>();
+                    s.GivenName = r["given_name"].As<string>();
+                    s.Surname = r["surname"].As<string>();
+                    s.Sex = r["sex"].As<string>();
+                    s.BirthDate = Neo4jDriver.ToDateOnly(r["birth_date"]);
+                    s.BirthPlace = r["birth_place"].As<string?>();
+                    s.DeathDate = Neo4jDriver.ToDateOnly(r["death_date"]);
+                    s.DeathPlace = r["death_place"].As<string?>();
+                    s.BurialPlace = r["burial_place"].As<string?>();
+                    s.CauseOfDeath = r["cause_of_death"].As<string?>();
+                    s.FatherId = r["father_id"].As<int?>();
+                    s.MotherId = r["mother_id"].As<int?>();
+                });
         }
+        
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();
