@@ -44,7 +44,7 @@ public class Neo4jDriver:IAsyncDisposable {
 
     // --- IMPORT ---
     public async Task<IResultSummary> ExecuteWriteAsync(string cypher) {
-        await using var session = _driver.AsyncSession();
+        await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
 
         return await session.ExecuteWriteAsync(async tx => {
             var cursor = await tx.RunAsync(cypher);
@@ -54,7 +54,7 @@ public class Neo4jDriver:IAsyncDisposable {
 
     // --- QUERY ---
     public async Task<(List<IRecord> Records, int RowCount)> ExecuteReadWithCountAsync(string cypher) {
-        await using var session = _driver.AsyncSession();
+        await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
 
         return await session.ExecuteReadAsync(async tx => {
             var cursor = await tx.RunAsync(cypher);
@@ -72,7 +72,7 @@ public class Neo4jDriver:IAsyncDisposable {
     }
 
     public async Task<int> ExecuteReadCountOnlyAsync(string cypher) {
-        await using var session = _driver.AsyncSession();
+        await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
 
         return await session.ExecuteReadAsync(async tx => {
             var cursor = await tx.RunAsync(cypher);
@@ -88,7 +88,7 @@ public class Neo4jDriver:IAsyncDisposable {
     }
 
     public async Task<(IResultSummary Summary, int RowsReturned)> ExecuteWriteWithStatsAsync(string cypher) {
-        await using var session = _driver.AsyncSession();
+        await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
 
         return await session.ExecuteWriteAsync(async tx => {
             var cursor = await tx.RunAsync(cypher);
@@ -106,7 +106,7 @@ public class Neo4jDriver:IAsyncDisposable {
     public async Task<List<IRecord>> ExecuteReadScriptAsync(string cypher) {
         var statements = SplitCypherStatements(cypher);
 
-        await using var session = _driver.AsyncSession();
+        await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
 
         return await session.ExecuteReadAsync(async tx =>
         {
@@ -125,7 +125,7 @@ public class Neo4jDriver:IAsyncDisposable {
     public async Task<int> ExecuteReadScriptCountAsync(string cypher) {
         var statements = SplitCypherStatements(cypher);
 
-        await using var session = _driver.AsyncSession();
+        await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
 
         return await session.ExecuteReadAsync(async tx =>
         {
@@ -144,7 +144,7 @@ public class Neo4jDriver:IAsyncDisposable {
     public async Task<List<IResultSummary>> ExecuteWriteScriptAsync(string cypher) {
         var statements = SplitCypherStatements(cypher);
 
-        await using var session = _driver.AsyncSession();
+        await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
 
         return await session.ExecuteWriteAsync(async tx =>
         {
