@@ -10,6 +10,7 @@ from config import SCENARIOS, PLACES
 from demographics import is_too_closely_related
 from matplotlib.ticker import FuncFormatter
 from matplotlib.collections import LineCollection
+import json
 
 class AnalyticsEngine:
     """
@@ -326,27 +327,31 @@ class AnalyticsEngine:
                 anc2 = get_ancestors_biological(p2_id, bfs_limit)
 
                 common = set(anc1.keys()).intersection(set(anc2.keys()))
-                valid_lcas = [x for x in common if anc1[x] > 3 and anc2[x] > 3]
 
-                if valid_lcas:
-                    min_total_dist = min(anc1[x] + anc2[x] for x in valid_lcas)
+                if not common:
+                    continue
 
-                    if min_total_dist > max_distance and min_total_dist <= target_lca_expected:
-                        max_distance = min_total_dist
-                        lcas_at_min =[x for x in valid_lcas if anc1[x] + anc2[x] == min_total_dist]
-                        lca_details = [(x, anc1[x], anc2[x]) for x in lcas_at_min]
+                if any(anc1[x] <= 3 or anc2[x] <= 3 for x in common):
+                    continue
 
-                        best_pair_info = {
-                            'p1': p1_id, 'p2': p2_id,
-                            'lcas': lca_details,
-                            'total_dist': max_distance
-                        }
+                min_total_dist = min(anc1[x] + anc2[x] for x in common)
 
-                        if max_distance == target_lca_expected:
-                            sys.stdout.write(f"\r[{self.target_population}] LCA search: "
-                                             f"found target {max_distance} at iteration {i + 1}!{' ' * 20}\n")
-                            sys.stdout.flush()
-                            break
+                if min_total_dist > max_distance and min_total_dist <= target_lca_expected:
+                    max_distance = min_total_dist
+                    lcas_at_min = [x for x in common if anc1[x] + anc2[x] == min_total_dist]
+                    lca_details = [(x, anc1[x], anc2[x]) for x in lcas_at_min]
+
+                    best_pair_info = {
+                        'p1': p1_id, 'p2': p2_id,
+                        'lcas': lca_details,
+                        'total_dist': max_distance
+                    }
+
+                    if max_distance == target_lca_expected:
+                        sys.stdout.write(f"\r[{self.target_population}] LCA search: "
+                                         f"found target {max_distance} at iteration {i + 1}!{' ' * 20}\n")
+                        sys.stdout.flush()
+                        break
         else:
             if best_pair_info:
                 sys.stdout.write(f"\r[{self.target_population}] LCA search: {iterations}/{iterations} "
@@ -621,7 +626,7 @@ class AnalyticsEngine:
             if p.death_place in german_cities
         )
 
-# Count unique families affected
+        # Count unique families affected
         family_updates = sum(
             1 for fam in self.families.values()
             if fam.marriage_place in german_cities
@@ -738,6 +743,42 @@ class AnalyticsEngine:
             year_start=best_year_start,
             candidate=candidate
         )
+
+        if self.target_population == 1000:
+            size_str = "1k"
+        elif self.target_population == 10000:
+            size_str = "10k"
+        else:
+            size_str = "100k"
+
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(self.output_dir)))
+
+        expected_counts = {
+            "Pg01": len(rows_01) if best_pair_info and best_pair_info['total_dist'] == target_lca_expected else 0,
+            "Neo01": len(rows_01) if best_pair_info and best_pair_info['total_dist'] == target_lca_expected else 0,
+            "Pg02": len(rows_02),
+            "Neo02": len(rows_02),
+            "Pg03": len(rows_03),
+            "Neo03": len(rows_03),
+            "Pg04": len(rows_04) if best_ancestor_person_id else 0,
+            "Neo04": len(rows_04) if best_ancestor_person_id else 0,
+            "Pg05": len(rows_05) if best_descendant_person_id else 0,
+            "Neo05": len(rows_05) if best_descendant_person_id else 0,
+            "Pg06": len(rows_06),
+            "Neo06": len(rows_06),
+            "Pg07": people_row_updates + family_updates,
+            "Neo07": people_birth_updates + people_death_updates + family_updates,
+            "Pg08": 6,
+            "Neo08": 48,
+            "Pg09": 6,
+            "Neo09": 8
+        }
+
+        counts_file = os.path.join(project_root, "benchmark_scr", "scenarios", f"expected_counts_{size_str}.json")
+        with open(counts_file, 'w', encoding='utf-8') as f:
+            json.dump(expected_counts, f, indent=4)
+
+        print(f"[{self.target_population}] Saved validation expected counts to '{counts_file}'.")
 
         self._plot_population_growth()
         self._plot_age_distribution_living()
@@ -1032,8 +1073,8 @@ class AnalyticsEngine:
         anc_depth = config_scen.get('ancestors_depth', 5)
         desc_depth = config_scen.get('descendants_depth', 3)
 
-        pg_base = os.path.join(project_root, "query_performance_benchmark", "scenarios", "postgres_scenarios")
-        n4j_base = os.path.join(project_root, "query_performance_benchmark", "scenarios", "neo4j_scenarios")
+        pg_base = os.path.join(project_root, "benchmark_scr", "scenarios", "postgres_scenarios")
+        n4j_base = os.path.join(project_root, "benchmark_scr", "scenarios", "neo4j_scenarios")
 
         def rw(path, transform):
             if not os.path.exists(path):
@@ -1080,8 +1121,8 @@ class AnalyticsEngine:
                 txt = re.sub(r'configured target \(\d+ hops for [^)]+\)(?: but the query looks for paths up to \d+ hops to(?: to)? put it under load)?\.?', comment_text, txt)
                 return inject_rec(txt, f"Person A = {lca_p1_id}, Person B = {lca_p2_id}", True)
 
-            rw(os.path.join(pg_base, "scenario_01_lca", f"scenario_01_lca_{size}.sql"), upd_lca_sql)
-            rw(os.path.join(n4j_base, "scenario_01_lca", f"scenario_01_lca_{size}.cypher"), upd_lca_cypher)
+            rw(os.path.join(pg_base, "scenario_01", f"scenario_01_{size}.sql"), upd_lca_sql)
+            rw(os.path.join(n4j_base, "scenario_01", f"scenario_01_{size}.cypher"), upd_lca_cypher)
 
         # ── SCENARIO 02: SURNAME FILTER
         if surname and year_start is not None:
@@ -1100,9 +1141,9 @@ class AnalyticsEngine:
                 return inject_rec(txt, f"Surname = '{surname}', Birth Year Range = {year_start}-{year_start + 49}",
                                   True)
 
-            rw(os.path.join(pg_base, "scenario_02_surname_filter", f"scenario_02_surname_filter_{size}.sql"),
+            rw(os.path.join(pg_base, "scenario_02", f"scenario_02_{size}.sql"),
                upd_s02_sql)
-            rw(os.path.join(n4j_base, "scenario_02_surname_filter", f"scenario_02_surname_filter_{size}.cypher"),
+            rw(os.path.join(n4j_base, "scenario_02", f"scenario_02_{size}.cypher"),
                upd_s02_cypher)
 
         # ── SCENARIO 04: ANCESTORS
@@ -1126,8 +1167,8 @@ class AnalyticsEngine:
                              txt)
                 return inject_rec(txt, f"Person ID = {ancestor_id}", True)
 
-            rw(os.path.join(pg_base, "scenario_04_ancestors", f"scenario_04_ancestors_{size}.sql"), upd_s04_sql)
-            rw(os.path.join(n4j_base, "scenario_04_ancestors", f"scenario_04_ancestors_{size}.cypher"), upd_s04_cypher)
+            rw(os.path.join(pg_base, "scenario_04", f"scenario_04_{size}.sql"), upd_s04_sql)
+            rw(os.path.join(n4j_base, "scenario_04", f"scenario_04_{size}.cypher"), upd_s04_cypher)
 
         # ── SCENARIO 05: DESCENDANTS
         if descendant_id is not None:
@@ -1146,8 +1187,8 @@ class AnalyticsEngine:
                 txt = re.sub(r'\(\d+\s+generations\s+for', f'({desc_depth} generations for', txt)
                 return inject_rec(txt, f"Person ID = {descendant_id}", True)
 
-            rw(os.path.join(pg_base, "scenario_05_descendants", f"scenario_05_descendants_{size}.sql"), upd_s05_sql)
-            rw(os.path.join(n4j_base, "scenario_05_descendants", f"scenario_05_descendants_{size}.cypher"),
+            rw(os.path.join(pg_base, "scenario_05", f"scenario_05_{size}.sql"), upd_s05_sql)
+            rw(os.path.join(n4j_base, "scenario_05", f"scenario_05_{size}.cypher"),
                upd_s05_cypher)
 
         # ── SCENARIO 08 & 09: INSERT/DELETE
@@ -1204,7 +1245,7 @@ class AnalyticsEngine:
 
                 return inject_rec(txt, f"Adopted Anchor Person ID = {candidate.id}", True)
 
-            rw(os.path.join(pg_base, "scenario_08_insert", f"scenario_08_insert_{size}.sql"), upd_s08_sql)
-            rw(os.path.join(n4j_base, "scenario_08_insert", f"scenario_08_insert_{size}.cypher"), upd_s08_cypher)
+            rw(os.path.join(pg_base, "scenario_08", f"scenario_08_{size}.sql"), upd_s08_sql)
+            rw(os.path.join(n4j_base, "scenario_08", f"scenario_08_{size}.cypher"), upd_s08_cypher)
 
         print(f"[{self.target_population}] Scenario query files updated automatically.")

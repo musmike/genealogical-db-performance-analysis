@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 
 namespace benchmark_scr.queries {
     internal class QueryRepo {
@@ -57,10 +53,20 @@ namespace benchmark_scr.queries {
 
         public string PgReverse7 { get; }
         public string NeoReverse7 { get; }
+        
+        public Dictionary<string, int> ExpectedCounts { get; } 
 
         public QueryRepo(string basePath, Dataset dataset) {
             var suffix = DatasetSuffix[dataset];
 
+            string countsPath = Path.Combine(AppContext.BaseDirectory, "scenarios", $"expected_counts_{suffix}.json");
+            if (File.Exists(countsPath)) {
+                string json = File.ReadAllText(countsPath);
+                ExpectedCounts = JsonSerializer.Deserialize<Dictionary<string, int>>(json) ?? new Dictionary<string, int>();
+            } else {
+                ExpectedCounts = new Dictionary<string, int>();
+            }
+            
             PgDDL = Read(basePath, "db_setup/postgresql/01_creating_tables.sql");
             PgData = Read(basePath, $"db_setup/postgresql/02_data_import_{suffix}.sql");
             PgIndexes = Read(basePath, "db_setup/postgresql/03_creating_indexes.sql");

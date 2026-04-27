@@ -14,13 +14,20 @@ using System.Threading.Tasks;
 //            AuthTokens.Basic("neo4j", "password"));
 //        }
 //}
-public class Neo4jDriver:IAsyncDisposable {
+
+public class Neo4jDriver : IAsyncDisposable {
     private readonly IDriver _driver;
 
     public Neo4jDriver(string uri, string user, string password) {
         _driver = GraphDatabase.Driver(uri, AuthTokens.Basic(user, password));
     }
 
+    public static DateOnly? ToDateOnly(object? val) {
+        if (val is LocalDate ld)
+            return new DateOnly(ld.Year, ld.Month, ld.Day);
+        return null;
+    }
+    
     private static List<string> SplitCypherStatements(string cypher) {
         var lines = cypher
             .Split('\n')
@@ -103,6 +110,7 @@ public class Neo4jDriver:IAsyncDisposable {
             return (summary, rows);
         });
     }
+    
     public async Task<List<IRecord>> ExecuteReadScriptAsync(string cypher) {
         var statements = SplitCypherStatements(cypher);
 
@@ -122,6 +130,7 @@ public class Neo4jDriver:IAsyncDisposable {
             return results;
         });
     }
+    
     public async Task<int> ExecuteReadScriptCountAsync(string cypher) {
         var statements = SplitCypherStatements(cypher);
 
@@ -141,6 +150,7 @@ public class Neo4jDriver:IAsyncDisposable {
             return totalCount;
         });
     }
+    
     public async Task<List<IResultSummary>> ExecuteWriteScriptAsync(string cypher) {
         var statements = SplitCypherStatements(cypher);
 
@@ -156,6 +166,46 @@ public class Neo4jDriver:IAsyncDisposable {
             }
 
             return summaries;
+        });
+    }
+    
+    public async Task<int> ExecuteReadConsumingAsync<T>(string cypher, T scratch, Action<IRecord, T> map) {
+    
+        var statements = SplitCypherStatements(cypher);
+        await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
+
+        return await session.ExecuteReadAsync(async tx => {
+            int totalCount = 0;
+            
+            foreach (var stmt in statements) {
+                var cursor = await tx.RunAsync(stmt);
+                
+                while (await cursor.FetchAsync()) {
+                    map(cursor.Current, scratch);
+                    totalCount++;
+                }
+            }
+            
+            return totalCount;
+        });
+    }
+    
+    public async Task<int> ExecuteWriteScriptCountAsync(string cypher) {
+        var statements = SplitCypherStatements(cypher);
+        await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
+
+        return await session.ExecuteWriteAsync(async tx => {
+            int totalAffected = 0;
+            foreach (var stmt in statements) {
+                var cursor = await tx.RunAsync(stmt);
+                var summary = await cursor.ConsumeAsync();
+                totalAffected += summary.Counters.NodesCreated
+                                 + summary.Counters.NodesDeleted
+                                 + summary.Counters.RelationshipsCreated
+                                 + summary.Counters.RelationshipsDeleted
+                                 + summary.Counters.PropertiesSet;
+            }
+            return totalAffected;
         });
     }
 }

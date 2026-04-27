@@ -64,7 +64,7 @@ static IConfig PostgresConfig(Dataset dataset) {
         .AddExporter(CsvExporter.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithOptions(ConfigOptions.Default)
-        .WithArtifactsPath($"artifacts/{dataset}/postgres");
+        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "postgres"));
 }
 
 static IConfig Neo4jConfig(Dataset dataset) {
@@ -73,7 +73,7 @@ static IConfig Neo4jConfig(Dataset dataset) {
         .AddJob(Job.Default.WithId($"neo4j-{dataset}").WithWarmupCount(5).WithIterationCount(20))
         .AddExporter(CsvExporter.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
-        .WithArtifactsPath($"artifacts/{dataset}/neo4j")
+        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j")) 
         .AddLogger(ConsoleLogger.Default);
 }
 
@@ -88,7 +88,7 @@ static IConfig PostgresImportConfig(Dataset dataset) {
         .AddExporter(CsvExporter.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithOptions(ConfigOptions.Default)
-        .WithArtifactsPath($"artifacts/{dataset}/postgres");
+        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "postgres"));
 }
 
 static IConfig Neo4jImportConfig(Dataset dataset) {
@@ -97,7 +97,7 @@ static IConfig Neo4jImportConfig(Dataset dataset) {
         .AddJob(Job.Default.WithId($"neo4j-{dataset}-import").WithWarmupCount(1).WithIterationCount(5))
         .AddExporter(CsvExporter.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
-        .WithArtifactsPath($"artifacts/{dataset}/neo4j")
+        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j")) 
         .AddLogger(ConsoleLogger.Default);
 }
 
@@ -111,5 +111,6 @@ enum Dataset {
 
 public static class Configg {
     public static string basePath = Path.GetDirectoryName(typeof(Program).Assembly.Location)!;
+    public static string repoRoot = Environment.GetEnvironmentVariable("REPO_ROOT") ?? Directory.GetCurrentDirectory(); 
 }
 

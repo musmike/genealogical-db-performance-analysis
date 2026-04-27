@@ -4,12 +4,13 @@ Target LCA path length required: 8
 Constraint: Person A and Person B are not closely related AND
             biological distance to LCA > 3 for both sides.
 
-Recommended Person A (ID: 549)
-Recommended Person B (ID: 785)
+Recommended Person A (ID: 456)
+Recommended Person B (ID: 379)
 
 
-Expected rows: 1
+Expected rows: 2
 
-lca_id | given_name | surname | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
-------------------------------------------------------------------------------------------------------------------------------------------------
-54     | Tadeusz    | Walczak | M   | 1657-08-18 | Konin       | 1725-09-23 | Kalisz      | 4                  | 4                  | 8         
+lca_id | given_name | surname    | sex | birth_date | birth_place | death_date | death_place | path_length_from_a | path_length_from_b | total_dist
+---------------------------------------------------------------------------------------------------------------------------------------------------
+3      | Łukasz     | Wiśniewski | M   | 1628-01-02 | Świnoujście | 1669-09-05 | Słupsk      | 4                  | 4                  | 8         
+4      | Marianna   | Malinowska | F   | 1629-06-11 | Olsztyn     | 1699-12-03 | Stargard    | 4                  | 4                  | 8         

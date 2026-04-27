@@ -2,7 +2,7 @@
 
 # ==============================================================
 # Setup script for Ubuntu Server 24.04 LTS
-# Installs: Docker Engine 29.3.0, .NET 10 SDK, OpenSSH
+# Installs: Docker Engine 29.3.0, .NET 9 SDK, OpenSSH
 # Disables: unnecessary background services
 # Optimizes: CPU governor, swap, journald
 # ==============================================================
@@ -174,7 +174,7 @@ sudo apt install -y \
 
 # Pin Docker version to prevent accidental upgrades
 sudo apt-mark hold docker-ce docker-ce-cli
-sudo usermod -aG docker $(logname)
+sudo usermod -aG docker $USER
 
 # ==============================================================
 # Install .NET 9 SDK (specific version for reproducibility)
@@ -199,7 +199,7 @@ sudo apt-mark hold dotnet-sdk-9.0
 # ==============================================================
 
 echo -e "\n=== Starting Docker Compose services ==="
-sudo docker compose -f query_performance_benchmark/db_setup/docker-compose.yml up -d
+sudo docker compose -f benchmark_scr/db_setup/docker-compose.yml up -d
 
 echo "Docker services started. Check status with: sudo docker ps"
 

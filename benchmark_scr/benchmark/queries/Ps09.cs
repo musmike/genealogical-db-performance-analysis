@@ -1,11 +1,6 @@
 ﻿using benchmark_scr.monitoring;
 using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace benchmark_scr.benchmark.queries {
     public class Ps09 {
@@ -13,10 +8,12 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo;
         private MemoryMonitor monitor;
         private readonly string path;
+        private int expectedCount;
 
         public Ps09() {
             path = Configg.basePath;
         }
+        
         [GlobalSetup]
         public void GlobalSetup() {
             var env = Environment.GetEnvironmentVariable("DATASET");
@@ -35,20 +32,40 @@ namespace benchmark_scr.benchmark.queries {
             driver.Open();
             monitor = new MemoryMonitor(env, nameof(Ps09));
             monitor.Start();
+            
+            expectedCount = repo.ExpectedCounts.GetValueOrDefault("Pg09", -1);
+            
+            if (expectedCount == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Pg09 is missing in configuration."
+                );
+            }
         }
+        
         [IterationCleanup]
         public void IterationCleanup() {
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
+        
         [Benchmark]
-        public void _Ps09() {
-            driver.ExecuteNonQuery(repo.PgScenario9);
+        public async Task<int> _Ps09() {
+            int rowsCount = await driver.ExecuteNonQueryAsync(repo.PgScenario9);
+            
+            if (rowsCount != expectedCount) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of rows returned ({rowsCount}). Expected {expectedCount}."
+                );
+            }
+            
+            return rowsCount;
         }
+        
         [IterationSetup]
         public void _Ps09Setup() {
             driver.ExecuteNonQuery(repo.PgScenario8);
             monitor.NextIteration();
         }
+        
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();

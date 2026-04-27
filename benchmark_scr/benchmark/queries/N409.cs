@@ -1,11 +1,6 @@
 ﻿using benchmark_scr.monitoring;
 using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace benchmark_scr.benchmark.queries {
     public class N409 {
@@ -13,10 +8,12 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo;
         private readonly string path;
         private MemoryMonitor monitor;
+        private int expectedAffected;
 
         public N409() {
             path = Configg.basePath;
         }
+        
         [GlobalSetup]
         public void GlobalSetup() {
             var env = Environment.GetEnvironmentVariable("DATASET");
@@ -32,24 +29,41 @@ namespace benchmark_scr.benchmark.queries {
             driver = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
             monitor = new MemoryMonitor(env, nameof(N409));
             monitor.Start();
+            
+            expectedAffected = repo.ExpectedCounts.GetValueOrDefault("Neo09", -1);
+            
+            if (expectedAffected == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Neo09 is missing in configuration."
+                );
+            }
         }
 
         [Benchmark]
-        public void _N409() {
-            driver.ExecuteWriteScriptAsync(repo.NeoScenario9)
-                .GetAwaiter()
-                .GetResult();
+        public async Task<int> _N409() {
+            int objsCount = await driver.ExecuteWriteScriptCountAsync(repo.NeoScenario9);
+            
+            if (objsCount != expectedAffected) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of objects affected ({objsCount}). Expected {expectedAffected}."
+                );
+            }
+            
+            return objsCount;
         }
+        
         [IterationSetup]
         public void _N409Setup() {
             driver.ExecuteWriteScriptAsync(repo.NeoScenario8)
-                .GetAwaiter() .GetResult();
+                .GetAwaiter().GetResult();
             monitor.NextIteration();
         }
+        
         [IterationCleanup]
         public void IterationCleanup() {
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
+        
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();
