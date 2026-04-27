@@ -14,6 +14,8 @@ echo "1. Building the C# application (Release)"
 echo "=========================================="
 
 
+rm -rf benchmark_scr/bin benchmark_scr/obj benchmark_scr/BenchmarkDotNet.Bin benchmark_scr/BenchmarkDotNet.Artifacts
+
 sudo -u "$ACTUAL_USER" dotnet publish benchmark_scr/benchmark_scr.csproj -c Release -r linux-x64 /p:PublishSingleFile=true
 
 
