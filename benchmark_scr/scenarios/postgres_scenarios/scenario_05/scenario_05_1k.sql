@@ -8,10 +8,10 @@
 -- Orders the results first by generation ascending, then by descendant_id ascending within each generation.
 
 
--- RECOMMENDED PARAMETERS: Person ID = 26
+-- RECOMMENDED PARAMETERS: Person ID = 72
 
 WITH RECURSIVE descendants AS (
-    SELECT 26 AS person_id, 0 AS depth
+    SELECT 72 AS person_id, 0 AS depth
 
     UNION
 
@@ -28,7 +28,7 @@ WITH RECURSIVE descendants AS (
 deduped AS (
     SELECT DISTINCT ON (person_id) person_id, depth
     FROM descendants
-    WHERE person_id <> 26
+    WHERE person_id <> 72
     ORDER BY person_id, depth
 )
 SELECT 

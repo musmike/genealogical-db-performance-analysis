@@ -10,6 +10,7 @@ namespace benchmark_scr.benchmark.queries {
         private readonly string path;
         private MemoryMonitor monitor;
         private YoungestParentScratch scratch;
+        private int expectedCount;
 
         public Ps06() {
             path = Configg.basePath;
@@ -35,6 +36,13 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
             
             scratch = new YoungestParentScratch();
+            expectedCount = repo.ExpectedCounts.GetValueOrDefault("Pg06", -1);
+            
+            if (expectedCount == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Pg06 is missing in configuration."
+                );
+            }
         }
         
         [IterationSetup]
@@ -49,7 +57,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [Benchmark]
         public async Task<int> _Ps06() {
-            return await driver.ExecuteConsumingAsync(repo.PgScenario6, 
+            int rowsCount = await driver.ExecuteConsumingAsync(repo.PgScenario6, 
                 scratch, (r, s) => {
                 s.ParentId         = r.GetInt32(0);
                 s.GivenName        = r.GetString(1);
@@ -63,6 +71,14 @@ namespace benchmark_scr.benchmark.queries {
                 s.ChildBirthDate   = r.IsDBNull(9)  ? null : r.GetFieldValue<DateOnly>(9);
                 s.ChildBirthPlace  = r.IsDBNull(10) ? null : r.GetString(10);
             });
+            
+            if (rowsCount != expectedCount) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of rows returned ({rowsCount}). Expected {expectedCount}."
+                );
+            }
+            
+            return rowsCount;
         }
         
         [GlobalCleanup]

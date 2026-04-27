@@ -5,8 +5,8 @@ public class RelativeScratch
 {
     public int RelativeId;
     public int Generation;
-    public string GivenName = "";
-    public string Surname = "";
+    public string? GivenName = "";
+    public string? Surname = "";
     public string Sex = "";
     public DateOnly? BirthDate;
     public string? BirthPlace;

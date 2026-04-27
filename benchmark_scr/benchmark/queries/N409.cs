@@ -8,6 +8,7 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo;
         private readonly string path;
         private MemoryMonitor monitor;
+        private int expectedAffected;
 
         public N409() {
             path = Configg.basePath;
@@ -28,11 +29,27 @@ namespace benchmark_scr.benchmark.queries {
             driver = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
             monitor = new MemoryMonitor(env, nameof(N409));
             monitor.Start();
+            
+            expectedAffected = repo.ExpectedCounts.GetValueOrDefault("Neo09", -1);
+            
+            if (expectedAffected == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Neo09 is missing in configuration."
+                );
+            }
         }
 
         [Benchmark]
         public async Task<int> _N409() {
-            return await driver.ExecuteWriteScriptCountAsync(repo.NeoScenario9);
+            int objsCount = await driver.ExecuteWriteScriptCountAsync(repo.NeoScenario9);
+            
+            if (objsCount != expectedAffected) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of objects affected ({objsCount}). Expected {expectedAffected}."
+                );
+            }
+            
+            return objsCount;
         }
         
         [IterationSetup]

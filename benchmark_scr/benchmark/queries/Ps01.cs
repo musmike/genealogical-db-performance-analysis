@@ -11,6 +11,7 @@ namespace benchmark_scr.benchmark.queries {
         private readonly string path;
         private MemoryMonitor monitor;
         private LcaScratch scratch;
+        private int expectedCount;
 
         public Ps01() {
             path = Configg.basePath;
@@ -36,6 +37,13 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
             
             scratch = new LcaScratch();
+            expectedCount = repo.ExpectedCounts.GetValueOrDefault("Pg01", -1);
+            
+            if (expectedCount == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Pg01 is missing in configuration."
+                );
+            }
         }
         
         [IterationSetup]
@@ -50,7 +58,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [Benchmark]
         public async Task<int> _Ps01() {
-            return await driver.ExecuteConsumingAsync(repo.PgScenario1, 
+            int rowsCount = await driver.ExecuteConsumingAsync(repo.PgScenario1, 
                 scratch, (r, s) => {
                 s.LcaId     = r.GetInt32(0);
                 s.GivenName = r.GetString(1);
@@ -64,6 +72,14 @@ namespace benchmark_scr.benchmark.queries {
                 s.PathFromB = r.GetInt32(9);
                 s.TotalDist = r.GetInt32(10);
             });
+            
+            if (rowsCount != expectedCount) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of rows returned ({rowsCount}). Expected {expectedCount}."
+                );
+            }
+            
+            return rowsCount;
         }
         
         [GlobalCleanup]

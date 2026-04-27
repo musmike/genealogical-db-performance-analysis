@@ -11,6 +11,7 @@ namespace benchmark_scr.benchmark.queries {
         private readonly string path;
         private MemoryMonitor monitor;
         private RelativeScratch scratch;
+        private int expectedCount;
 
         public N405() {
             path = Configg.basePath;
@@ -33,6 +34,13 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
             
             scratch = new RelativeScratch();
+            expectedCount = repo.ExpectedCounts.GetValueOrDefault("Neo05", -1);
+            
+            if (expectedCount == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Neo05 is missing in configuration."
+                );
+            }
         }
         
         [IterationSetup]
@@ -48,7 +56,7 @@ namespace benchmark_scr.benchmark.queries {
         [Benchmark]
         public async Task<int> _N405()
         {
-            return await driver.ExecuteReadConsumingAsync(repo.NeoScenario5,
+            int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario5,
                 scratch, (r, s) =>
                 {
                     s.RelativeId = r["descendant_id"].As<int>();
@@ -65,6 +73,14 @@ namespace benchmark_scr.benchmark.queries {
                     s.FatherId = r["father_id"].As<int?>();
                     s.MotherId = r["mother_id"].As<int?>();
                 });
+            
+            if (rowsCount != expectedCount) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of rows returned ({rowsCount}). Expected {expectedCount}."
+                );
+            }
+            
+            return rowsCount;
         }
         
         [GlobalCleanup]

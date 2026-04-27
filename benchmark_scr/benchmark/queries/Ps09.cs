@@ -8,6 +8,7 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo;
         private MemoryMonitor monitor;
         private readonly string path;
+        private int expectedCount;
 
         public Ps09() {
             path = Configg.basePath;
@@ -31,6 +32,14 @@ namespace benchmark_scr.benchmark.queries {
             driver.Open();
             monitor = new MemoryMonitor(env, nameof(Ps09));
             monitor.Start();
+            
+            expectedCount = repo.ExpectedCounts.GetValueOrDefault("Pg09", -1);
+            
+            if (expectedCount == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Pg09 is missing in configuration."
+                );
+            }
         }
         
         [IterationCleanup]
@@ -40,7 +49,15 @@ namespace benchmark_scr.benchmark.queries {
         
         [Benchmark]
         public async Task<int> _Ps09() {
-            return await driver.ExecuteNonQueryAsync(repo.PgScenario9);
+            int rowsCount = await driver.ExecuteNonQueryAsync(repo.PgScenario9);
+            
+            if (rowsCount != expectedCount) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of rows returned ({rowsCount}). Expected {expectedCount}."
+                );
+            }
+            
+            return rowsCount;
         }
         
         [IterationSetup]

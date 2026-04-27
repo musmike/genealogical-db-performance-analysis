@@ -10,6 +10,7 @@ namespace benchmark_scr.benchmark.queries {
         private readonly string path;
         private MemoryMonitor monitor;
         private BirthStatScratch scratch;
+        private int expectedCount;
         
         public Ps03() {
             path = Configg.basePath;
@@ -35,6 +36,13 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
             
             scratch = new BirthStatScratch();
+            expectedCount = repo.ExpectedCounts.GetValueOrDefault("Pg03", -1);
+            
+            if (expectedCount == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Pg03 is missing in configuration."
+                );
+            }
         }
         
         [IterationSetup]
@@ -49,12 +57,20 @@ namespace benchmark_scr.benchmark.queries {
         
         [Benchmark]
         public async Task<int> _Ps03() {
-            return await driver.ExecuteConsumingAsync(repo.PgScenario3, 
+            int rowsCount = await driver.ExecuteConsumingAsync(repo.PgScenario3, 
                 scratch, (r, s) => {
                 s.City                = r.GetString(0);
                 s.QuarterCenturyStart = r.GetInt32(1);
                 s.BirthCount          = r.GetInt64(2);
             });
+            
+            if (rowsCount != expectedCount) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of rows returned ({rowsCount}). Expected {expectedCount}."
+                );
+            }
+            
+            return rowsCount;
         }
         
         [GlobalCleanup]

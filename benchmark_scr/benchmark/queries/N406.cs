@@ -11,6 +11,7 @@ namespace benchmark_scr.benchmark.queries {
         private readonly string path;
         private MemoryMonitor monitor;
         private YoungestParentScratch scratch;
+        private int expectedCount;
 
         public N406() {
             path = Configg.basePath;
@@ -33,6 +34,13 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
 
             scratch = new YoungestParentScratch();
+            expectedCount = repo.ExpectedCounts.GetValueOrDefault("Neo06", -1);
+            
+            if (expectedCount == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Neo06 is missing in configuration."
+                );
+            }
         }
         
         [IterationSetup]
@@ -48,7 +56,7 @@ namespace benchmark_scr.benchmark.queries {
         [Benchmark]
         public async Task<int> _N406()
         {
-            return await driver.ExecuteReadConsumingAsync(repo.NeoScenario6, 
+            int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario6, 
                 scratch, (r, s) =>
             {
                 s.ParentId = r["parent_id"].As<int>();
@@ -63,6 +71,14 @@ namespace benchmark_scr.benchmark.queries {
                 s.ChildBirthDate = Neo4jDriver.ToDateOnly(r["child_birth_date"]);
                 s.ChildBirthPlace = r["child_birth_place"].As<string?>();
             });
+            
+            if (rowsCount != expectedCount) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of rows returned ({rowsCount}). Expected {expectedCount}."
+                );
+            }
+            
+            return rowsCount;
         }
         
         [GlobalCleanup]

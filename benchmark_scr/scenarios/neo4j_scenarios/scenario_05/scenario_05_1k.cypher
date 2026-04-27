@@ -8,9 +8,9 @@
 // Orders the results first by generation ascending, then by descendant_id ascending within each generation.
 
 
-// RECOMMENDED PARAMETERS: Person ID = 26
+// RECOMMENDED PARAMETERS: Person ID = 72
 
-MATCH (start:Person {id: 26})
+MATCH (start:Person {id: 72})
 
 MATCH path = (start)
               ((:Person)-[:HUSBAND_OF|WIFE_OF]->

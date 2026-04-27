@@ -9,11 +9,11 @@
 -- Orders the results by lca_id ascending.
 
 
--- RECOMMENDED PARAMETERS: Person A = 549, Person B = 785
+-- RECOMMENDED PARAMETERS: Person A = 456, Person B = 379
 
 WITH RECURSIVE 
 anc_a AS (
-    SELECT 549 AS person_id, 0 AS depth
+    SELECT 456 AS person_id, 0 AS depth
     UNION
     SELECT parent_id, a.depth + 1
     FROM anc_a a
@@ -26,7 +26,7 @@ anc_a AS (
     AND parents.parent_id IS NOT NULL
 ),
 anc_b AS (
-    SELECT 785 AS person_id, 0 AS depth
+    SELECT 379 AS person_id, 0 AS depth
     UNION
     SELECT parent_id, b.depth + 1
     FROM anc_b b

@@ -10,6 +10,7 @@ namespace benchmark_scr.benchmark.queries {
         private readonly string path;
         private MemoryMonitor monitor;
         private RelativeScratch scratch;
+        private int expectedCount;
         
         public Ps04() {
             path = Configg.basePath;
@@ -35,6 +36,13 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
 
             scratch = new RelativeScratch();
+            expectedCount = repo.ExpectedCounts.GetValueOrDefault("Pg04", -1);
+            
+            if (expectedCount == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Pg04 is missing in configuration."
+                );
+            }
         }
         
         [IterationSetup]
@@ -49,7 +57,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [Benchmark]
         public async Task<int> _Ps04() {
-            return await driver.ExecuteConsumingAsync(repo.PgScenario4, 
+            int rowsCount = await driver.ExecuteConsumingAsync(repo.PgScenario4, 
                 scratch, (r, s) => {
                 s.RelativeId   = r.GetInt32(0);
                 s.Generation   = r.GetInt32(1);
@@ -65,6 +73,14 @@ namespace benchmark_scr.benchmark.queries {
                 s.FatherId     = r.IsDBNull(11) ? null : r.GetInt32(11);
                 s.MotherId     = r.IsDBNull(12) ? null : r.GetInt32(12);
             });
+            
+            if (rowsCount != expectedCount) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of rows returned ({rowsCount}). Expected {expectedCount}."
+                );
+            }
+            
+            return rowsCount;
         }
         
         [GlobalCleanup]

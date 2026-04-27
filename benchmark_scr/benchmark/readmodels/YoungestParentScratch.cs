@@ -4,8 +4,8 @@ namespace benchmark_scr.benchmark.readmodels;
 public class YoungestParentScratch
 {
     public int ParentId;
-    public string GivenName = "";
-    public string Surname = "";
+    public string? GivenName = "";
+    public string? Surname = "";
     public string Sex = "";
     public DateOnly? BirthDate;
     public string? BirthPlace;

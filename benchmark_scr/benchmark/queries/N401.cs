@@ -12,6 +12,7 @@ namespace benchmark_scr.benchmark.queries {
         private readonly string path;
         private MemoryMonitor monitor;
         private LcaScratch scratch;
+        private int expectedCount;
 
         public N401() {
             path = Configg.basePath;
@@ -34,6 +35,13 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
 
             scratch = new LcaScratch();
+            expectedCount = repo.ExpectedCounts.GetValueOrDefault("Neo01", -1);
+            
+            if (expectedCount == -1) {
+                throw new InvalidOperationException(
+                    "Expected count for Neo01 is missing in configuration."
+                );
+            }
         }
         
         [IterationSetup]
@@ -48,7 +56,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [Benchmark]
         public async Task<int> _N401() {
-            return await driver.ExecuteReadConsumingAsync(repo.NeoScenario1, scratch, (r, s) => {
+            int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario1, scratch, (r, s) => {
                 s.LcaId     = r["lca_id"].As<int>();
                 s.GivenName = r["given_name"].As<string>();
                 s.Surname   = r["surname"].As<string>();
@@ -61,6 +69,14 @@ namespace benchmark_scr.benchmark.queries {
                 s.PathFromB = r["path_length_from_b"].As<int>();
                 s.TotalDist = r["total_dist"].As<int>();
             });
+            
+            if (rowsCount != expectedCount) {
+                throw new InvalidOperationException(
+                    $"Unexpected number of rows returned ({rowsCount}). Expected {expectedCount}."
+                );
+            }
+            
+            return rowsCount;
         }
         
         [GlobalCleanup]
