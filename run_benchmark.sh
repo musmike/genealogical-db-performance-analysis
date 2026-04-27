@@ -58,12 +58,12 @@ echo "========================================"
 apt update
 apt install -y python3.13 python3.13-venv
 
-cd results
+cd analysis_scr
 python3.13 -m venv .venv
 source .venv/bin/activate
-pip install matplotlib pandas
+pip install matplotlib pandas scipy
 
-python generate_charts.py
+python scr.py
 
 cd "$REPO_ROOT"
 
