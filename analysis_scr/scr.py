@@ -16,8 +16,8 @@ task_strings = ["Lowest Common Ancestor",
                 "Descendant Retrieval",
                 "Youngest Parent",
                 "Place Name Update",
-                "Insert Family"#,
-                # "Delete Family"
+                "Insert Family",
+                "Delete Family"
                 ]
 
 dataset_strings = ["small", "medium", "large"]
@@ -361,8 +361,8 @@ def plot_multi_benchmark_report(
 
 dtrps = []
 for dt in dataset_strings:
-    n4j = load_summary_folder(base_path + dt + "/neo4j/results/benchmark_scr.benchmark.queries.N40{}-report.csv", 8)
-    pst = load_summary_folder(base_path + dt + "/postgres/results/benchmark_scr.benchmark.queries.Ps0{}-report.csv", 8)
+    n4j = load_summary_folder(base_path + dt + "/neo4j/results/benchmark_scr.benchmark.queries.N40{}-report.csv", 9)
+    pst = load_summary_folder(base_path + dt + "/postgres/results/benchmark_scr.benchmark.queries.Ps0{}-report.csv", 9)
     n4j = n4j.reset_index(drop=True)
     pst = pst.reset_index(drop=True)
     
