@@ -770,7 +770,7 @@ class AnalyticsEngine:
             "Neo07": people_birth_updates + people_death_updates + family_updates,
             "Pg08": 6,
             "Neo08": 48,
-            "Pg09": 6,
+            "Pg09": 4,
             "Neo09": 8
         }
 
