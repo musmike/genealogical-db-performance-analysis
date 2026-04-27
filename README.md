@@ -19,7 +19,7 @@ Before cloning the repository, make sure Git is installed:
 ```bash
 sudo apt update
 sudo apt install -y git
-````
+```
 
 Then clone the repository containing the benchmark scripts:
 
@@ -45,23 +45,17 @@ sudo reboot
 ```
 
 
-## 4. Build and run the benchmark
+## 4. Run the benchmarks
 
-After reboot, build the benchmark binary:
+After reboot, you can run the entire benchmark suite using the orchestrator script. 
+This script will automatically build the C# project, run tests for all dataset sizes (1k, 10k, 100k), and generate the final charts.
+
 ```bash
-cd <repository_folder>
-dotnet publish -c Release -r linux-x64 --self-contained true /p:PublishSingleFile=true \
-  -o query_performance_benchmark \
-  query_performance_benchmark/benchmark_scr/benchmark_scr.csproj
+chmod +x run_benchmarks.sh
+sudo ./run_benchmarks.sh
 ```
 
-Then run it:
-```bash
-chmod +x query_performance_benchmark/benchmark_scr
-sudo ./query_performance_benchmark/benchmark_scr
-```
-
-> The binary connects to the database containers and executes the performance tests.
+> The script requires `sudo` privileges to allow the benchmark tool to read Docker's RAM usage metrics (cgroups). Once finished, the results will be available in the artifacts/ directory and charts in the results/ directory.
 
 
 ## Generate data (optional)
