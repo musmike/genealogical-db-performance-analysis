@@ -45,18 +45,17 @@ sudo reboot
 ```
 
 
-## 4. Run the benchmarks
+## 4. Run the benchmark
 
 After reboot, you can run the entire benchmark suite using the orchestrator script. 
 This script will automatically build the C# project, run tests for all dataset sizes (1k, 10k, 100k), and generate the final charts.
 
 ```bash
-chmod +x run_benchmarks.sh
-sudo ./run_benchmarks.sh
+chmod +x run_benchmark.sh
+sudo ./run_benchmark.sh
 ```
 
-> The script requires `sudo` privileges to allow the benchmark tool to read Docker's RAM usage metrics (cgroups). Once finished, the results will be available in the artifacts/ directory and charts in the results/ directory.
-
+> The script requires `sudo` privileges to allow the benchmark tool to read Docker's RAM usage metrics (cgroups). Once finished, the results (charts and CSV data) will be available in the results directory.
 
 ## Generate data (optional)
 

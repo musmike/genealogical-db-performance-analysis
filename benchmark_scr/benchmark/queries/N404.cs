@@ -59,19 +59,19 @@ namespace benchmark_scr.benchmark.queries {
             int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario4, 
                 scratch, (r, s) =>
             {
-                s.RelativeId = r["ancestor_id"].As<int>();
-                s.Generation = r["generation"].As<int>();
-                s.GivenName = r["given_name"].As<string>();
-                s.Surname = r["surname"].As<string>();
-                s.Sex = r["sex"].As<string>();
-                s.BirthDate = Neo4jDriver.ToDateOnly(r["birth_date"]);
-                s.BirthPlace = r["birth_place"].As<string?>();
-                s.DeathDate = Neo4jDriver.ToDateOnly(r["death_date"]);
-                s.DeathPlace = r["death_place"].As<string?>();
-                s.BurialPlace = r["burial_place"].As<string?>();
+                s.RelativeId   = r["ancestor_id"].As<int>();
+                s.Generation   = r["generation"].As<int>();
+                s.GivenName    = r["given_name"].As<string?>();
+                s.Surname      = r["surname"].As<string?>();
+                s.Sex          = r["sex"].As<string>();
+                s.BirthDate    = Neo4jDriver.ToDateOnly(r["birth_date"]);
+                s.BirthPlace   = r["birth_place"].As<string?>();
+                s.DeathDate    = Neo4jDriver.ToDateOnly(r["death_date"]);
+                s.DeathPlace   = r["death_place"].As<string?>();
+                s.BurialPlace  = r["burial_place"].As<string?>();
                 s.CauseOfDeath = r["cause_of_death"].As<string?>();
-                s.FatherId = r["father_id"].As<int?>();
-                s.MotherId = r["mother_id"].As<int?>();
+                s.FatherId     = r["father_id"].As<int?>();
+                s.MotherId     = r["mother_id"].As<int?>();
             });
             
             if (rowsCount != expectedCount) {

@@ -99,8 +99,8 @@ namespace benchmark_scr.monitoring {
 
         public void Export() {
             var path = Path.Combine(
-                _basePath,
-                "artifacts",
+                Configg.repoRoot,
+                "results",
                 _dataset,
                 "memory",
                 $"memory_{_benchmarkName}.csv");

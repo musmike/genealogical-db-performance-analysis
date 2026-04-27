@@ -59,15 +59,15 @@ namespace benchmark_scr.benchmark.queries {
         public async Task<int> _Ps02() {
             int rowsCount = await driver.ExecuteConsumingAsync(repo.PgScenario2, 
                 scratch, (r, s) => {
-                s.PersonId  = r.GetInt32(0);
-                s.GivenName = r.GetString(1);
-                s.Surname   = r.GetString(2);
-                s.Sex       = r.GetString(3);
-                s.BirthDate = r.IsDBNull(4) ? null : r.GetFieldValue<DateOnly>(4);
-                s.BirthPlace = r.IsDBNull(5) ? null : r.GetString(5);
-                s.DeathDate = r.IsDBNull(6) ? null : r.GetFieldValue<DateOnly>(6);
-                s.DeathPlace = r.IsDBNull(7) ? null : r.GetString(7);
-            });
+                    s.PersonId   = r.GetInt32(0);
+                    s.GivenName  = r.IsDBNull(1) ? null : r.GetString(1);
+                    s.Surname    = r.IsDBNull(2) ? null : r.GetString(2);
+                    s.Sex        = r.GetString(3);
+                    s.BirthDate  = r.IsDBNull(4) ? null : r.GetFieldValue<DateOnly>(4);
+                    s.BirthPlace = r.IsDBNull(5) ? null : r.GetString(5);
+                    s.DeathDate  = r.IsDBNull(6) ? null : r.GetFieldValue<DateOnly>(6);
+                    s.DeathPlace = r.IsDBNull(7) ? null : r.GetString(7);
+                });
             
             if (rowsCount != expectedCount) {
                 throw new InvalidOperationException(

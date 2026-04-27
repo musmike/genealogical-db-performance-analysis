@@ -59,20 +59,20 @@ namespace benchmark_scr.benchmark.queries {
         public async Task<int> _Ps05() {
             int rowsCount = await driver.ExecuteConsumingAsync(repo.PgScenario5, 
                 scratch, (r, s) => {
-                s.RelativeId   = r.GetInt32(0);
-                s.Generation   = r.GetInt32(1);
-                s.GivenName    = r.GetString(2);
-                s.Surname      = r.GetString(3);
-                s.Sex          = r.GetString(4);
-                s.BirthDate    = r.IsDBNull(5)  ? null : r.GetFieldValue<DateOnly>(5);
-                s.BirthPlace   = r.IsDBNull(6)  ? null : r.GetString(6);
-                s.DeathDate    = r.IsDBNull(7)  ? null : r.GetFieldValue<DateOnly>(7);
-                s.DeathPlace   = r.IsDBNull(8)  ? null : r.GetString(8);
-                s.BurialPlace  = r.IsDBNull(9)  ? null : r.GetString(9);
-                s.CauseOfDeath = r.IsDBNull(10) ? null : r.GetString(10);
-                s.FatherId     = r.IsDBNull(11) ? null : r.GetInt32(11);
-                s.MotherId     = r.IsDBNull(12) ? null : r.GetInt32(12);
-            });
+                    s.RelativeId   = r.GetInt32(0);
+                    s.Generation   = r.GetInt32(1);
+                    s.GivenName    = r.IsDBNull(2) ? null : r.GetString(2);
+                    s.Surname      = r.IsDBNull(3) ? null : r.GetString(3);
+                    s.Sex          = r.GetString(4);
+                    s.BirthDate    = r.IsDBNull(5)  ? null : r.GetFieldValue<DateOnly>(5);
+                    s.BirthPlace   = r.IsDBNull(6)  ? null : r.GetString(6);
+                    s.DeathDate    = r.IsDBNull(7)  ? null : r.GetFieldValue<DateOnly>(7);
+                    s.DeathPlace   = r.IsDBNull(8)  ? null : r.GetString(8);
+                    s.BurialPlace  = r.IsDBNull(9)  ? null : r.GetString(9);
+                    s.CauseOfDeath = r.IsDBNull(10) ? null : r.GetString(10);
+                    s.FatherId     = r.IsDBNull(11) ? null : r.GetInt32(11);
+                    s.MotherId     = r.IsDBNull(12) ? null : r.GetInt32(12);
+                });
             
             if (rowsCount != expectedCount) {
                 throw new InvalidOperationException(

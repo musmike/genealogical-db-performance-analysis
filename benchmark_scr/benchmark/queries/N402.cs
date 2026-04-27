@@ -59,13 +59,13 @@ namespace benchmark_scr.benchmark.queries {
             int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario2, 
                 scratch, (r, s) =>
             {
-                s.PersonId = r["person_id"].As<int>();
-                s.GivenName = r["given_name"].As<string>();
-                s.Surname = r["surname"].As<string>();
-                s.Sex = r["sex"].As<string>();
-                s.BirthDate = Neo4jDriver.ToDateOnly(r["birth_date"]);
+                s.PersonId   = r["person_id"].As<int>();
+                s.GivenName  = r["given_name"].As<string?>();
+                s.Surname    = r["surname"].As<string?>();
+                s.Sex        = r["sex"].As<string>();
+                s.BirthDate  = Neo4jDriver.ToDateOnly(r["birth_date"]);
                 s.BirthPlace = r["birth_place"].As<string?>();
-                s.DeathDate = Neo4jDriver.ToDateOnly(r["death_date"]);
+                s.DeathDate  = Neo4jDriver.ToDateOnly(r["death_date"]);
                 s.DeathPlace = r["death_place"].As<string?>();
             });
             

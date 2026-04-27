@@ -59,18 +59,18 @@ namespace benchmark_scr.benchmark.queries {
         public async Task<int> _Ps06() {
             int rowsCount = await driver.ExecuteConsumingAsync(repo.PgScenario6, 
                 scratch, (r, s) => {
-                s.ParentId         = r.GetInt32(0);
-                s.GivenName        = r.GetString(1);
-                s.Surname          = r.GetString(2);
-                s.Sex              = r.GetString(3);
-                s.BirthDate        = r.IsDBNull(4) ? null : r.GetFieldValue<DateOnly>(4);
-                s.BirthPlace       = r.IsDBNull(5) ? null : r.GetString(5);
-                s.AgeAtFirstChild  = r.GetInt32(6);
-                s.AgeDiffDays      = r.GetInt32(7);
-                s.ChildId          = r.GetInt32(8);
-                s.ChildBirthDate   = r.IsDBNull(9)  ? null : r.GetFieldValue<DateOnly>(9);
-                s.ChildBirthPlace  = r.IsDBNull(10) ? null : r.GetString(10);
-            });
+                    s.ParentId         = r.GetInt32(0);
+                    s.GivenName        = r.IsDBNull(1) ? null : r.GetString(1);
+                    s.Surname          = r.IsDBNull(2) ? null : r.GetString(2);
+                    s.Sex              = r.GetString(3);
+                    s.BirthDate        = r.IsDBNull(4) ? null : r.GetFieldValue<DateOnly>(4);
+                    s.BirthPlace       = r.IsDBNull(5) ? null : r.GetString(5);
+                    s.AgeAtFirstChild  = r.GetInt32(6);
+                    s.AgeDiffDays      = r.GetInt32(7);
+                    s.ChildId          = r.GetInt32(8);
+                    s.ChildBirthDate   = r.IsDBNull(9)  ? null : r.GetFieldValue<DateOnly>(9);
+                    s.ChildBirthPlace  = r.IsDBNull(10) ? null : r.GetString(10);
+                });
             
             if (rowsCount != expectedCount) {
                 throw new InvalidOperationException(

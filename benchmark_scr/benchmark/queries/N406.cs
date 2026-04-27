@@ -59,17 +59,17 @@ namespace benchmark_scr.benchmark.queries {
             int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario6, 
                 scratch, (r, s) =>
             {
-                s.ParentId = r["parent_id"].As<int>();
-                s.GivenName = r["given_name"].As<string>();
-                s.Surname = r["surname"].As<string>();
-                s.Sex = r["sex"].As<string>();
-                s.BirthDate = Neo4jDriver.ToDateOnly(r["birth_date"]);
-                s.BirthPlace = r["birth_place"].As<string?>();
-                s.AgeAtFirstChild = r["age_at_first_child"].As<int>();
-                s.AgeDiffDays = r["age_difference_in_days"].As<int>();
-                s.ChildId = r["child_id"].As<int>();
-                s.ChildBirthDate = Neo4jDriver.ToDateOnly(r["child_birth_date"]);
-                s.ChildBirthPlace = r["child_birth_place"].As<string?>();
+                s.ParentId         = r["parent_id"].As<int>();
+                s.GivenName        = r["given_name"].As<string?>();
+                s.Surname          = r["surname"].As<string?>();
+                s.Sex              = r["sex"].As<string>();
+                s.BirthDate        = Neo4jDriver.ToDateOnly(r["birth_date"]);
+                s.BirthPlace       = r["birth_place"].As<string?>();
+                s.AgeAtFirstChild  = r["age_at_first_child"].As<int>();
+                s.AgeDiffDays      = r["age_difference_in_days"].As<int>();
+                s.ChildId          = r["child_id"].As<int>();
+                s.ChildBirthDate   = Neo4jDriver.ToDateOnly(r["child_birth_date"]);
+                s.ChildBirthPlace  = r["child_birth_place"].As<string?>();
             });
             
             if (rowsCount != expectedCount) {
