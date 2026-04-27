@@ -176,7 +176,7 @@ def plot_multi_benchmark_report(
     titlePref="",
     titleSuff="",
     importDt=False,
-    output_dir="benchmark_plots",
+    output_dir="../results/benchmark_plots",
     fmt="png"
 ):
     import os
