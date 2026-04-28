@@ -59,17 +59,17 @@ namespace benchmark_scr.benchmark.queries {
             int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario6, 
                 scratch, (r, s) =>
             {
-                s.ParentId         = r["parent_id"].As<int>();
-                s.GivenName        = r["given_name"].As<string?>();
-                s.Surname          = r["surname"].As<string?>();
-                s.Sex              = r["sex"].As<string>();
-                s.BirthDate        = Neo4jDriver.ToDateOnly(r["birth_date"]);
-                s.BirthPlace       = r["birth_place"].As<string?>();
-                s.AgeAtFirstChild  = r["age_at_first_child"].As<int>();
-                s.AgeDiffDays      = r["age_difference_in_days"].As<int>();
-                s.ChildId          = r["child_id"].As<int>();
-                s.ChildBirthDate   = Neo4jDriver.ToDateOnly(r["child_birth_date"]);
-                s.ChildBirthPlace  = r["child_birth_place"].As<string?>();
+                s.ParentId         = r[0].As<int>();
+                s.GivenName        = r[1].As<string?>();
+                s.Surname          = r[2].As<string?>();
+                s.Sex              = r[3].As<string>();
+                s.BirthDate        = r[4] is LocalDate bd ? new DateOnly(bd.Year, bd.Month, bd.Day) : null;
+                s.BirthPlace       = r[5].As<string?>();
+                s.AgeAtFirstChild  = r[6].As<int>();
+                s.AgeDiffDays      = r[7].As<int>();
+                s.ChildId          = r[8].As<int>();
+                s.ChildBirthDate   = r[9] is LocalDate cbd ? new DateOnly(cbd.Year, cbd.Month, cbd.Day) : null;
+                s.ChildBirthPlace  = r[10].As<string?>();
             });
             
             if (rowsCount != expectedCount) {

@@ -57,6 +57,28 @@ sudo ./run_benchmark.sh
 
 > The script requires `sudo` privileges to allow the benchmark tool to read Docker's RAM usage metrics (cgroups). Once finished, the results (charts and CSV data) will be available in the results directory.
 
+
+## Generate charts only (optional)
+
+If you already have the benchmark results and only want to regenerate the charts without re-running the entire performance test suite, you can run the analysis script manually.
+
+```bash
+# Install Python 3.13 if not already installed
+sudo apt update
+sudo apt install -y python3.13 python3.13-venv
+
+# Navigate to the analysis directory and set up the environment
+cd analysis_scr
+python3.13 -m venv .venv
+source .venv/bin/activate
+
+# Install required packages and generate charts
+pip install matplotlib pandas scipy
+python scr.py
+```
+*Note: The generated charts will be saved in your `results/` directory.*
+
+
 ## Generate data (optional)
 
 This step is only required if you want to regenerate the simulation data.

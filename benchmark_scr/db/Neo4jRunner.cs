@@ -21,12 +21,6 @@ public class Neo4jDriver : IAsyncDisposable {
     public Neo4jDriver(string uri, string user, string password) {
         _driver = GraphDatabase.Driver(uri, AuthTokens.Basic(user, password));
     }
-
-    public static DateOnly? ToDateOnly(object? val) {
-        if (val is LocalDate ld)
-            return new DateOnly(ld.Year, ld.Month, ld.Day);
-        return null;
-    }
     
     private static List<string> SplitCypherStatements(string cypher) {
         var lines = cypher

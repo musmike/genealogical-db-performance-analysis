@@ -59,9 +59,9 @@ namespace benchmark_scr.benchmark.queries {
             int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario3, 
                 scratch, (r, s) =>
             {
-                s.City                = r["city"].As<string>();
-                s.QuarterCenturyStart = r["quarter_century_start"].As<int>();
-                s.BirthCount          = r["birth_count"].As<long>();
+                s.City                = r[0].As<string>();
+                s.QuarterCenturyStart = r[1].As<int>();
+                s.BirthCount          = r[2].As<long>();
             });
             
             if (rowsCount != expectedCount) {
