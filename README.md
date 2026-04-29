@@ -31,7 +31,7 @@ cd <repository_folder>
 
 ## 3. Set up the environment
 
-Run the environment setup script `env_setup.sh` to install all required dependencies (including Docker and the .NET SDK) and apply system-level optimizations to ensure stable and reproducible benchmark results:
+Run the environment setup script `env_setup.sh` to install all required dependencies (including Docker and the .NET SDK) and apply system-level optimizations to ensure stable and reproducible benchmark results. You will be required to enter your sudo password during execution, as administrative privileges are needed.
 
 ```bash
 chmod +x env_setup.sh
@@ -64,6 +64,7 @@ If you already have the benchmark results and only want to regenerate the charts
 
 ```bash
 # Install Python 3.13 if not already installed
+sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install -y python3.13 python3.13-venv
 
@@ -88,6 +89,8 @@ The repository already contains pre-generated data in `data_generator/output/`.
 
 - Python 3.13 — install via your system package manager:
 ```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
 sudo apt install -y python3.13 python3.13-venv
 ```
 

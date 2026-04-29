@@ -1,0 +1,131 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1/" /p:OutDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1/bin/Release/net9.0/" /p:OutputPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1/bin/Release/net9.0/" /p:PublishDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1/publish/" in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1
+// command took 1.47 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1/" /p:OutDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1/bin/Release/net9.0/" /p:OutputPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1/bin/Release/net9.0/" /p:PublishDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1/publish/" --output "/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1/bin/Release/net9.0/" in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1
+// command took 4.71 sec and exited with 0
+// ***** Done, took 00:00:06 (6.23 sec)   *****
+// Found 1 benchmarks:
+//   PsImport.Import: pg-small-import(IterationCount=5, WarmupCount=1)
+
+// **************************
+// Benchmark: PsImport.Import: pg-small-import(IterationCount=5, WarmupCount=1)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet benchmark_scr-pg-small-import-1.dll --anonymousPipes 120 121 --benchmarkName benchmark_scr.benchmark.queries.PsImport.Import --job pg-small-import --benchmarkId 0 in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-small-import-1/bin/Release/net9.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: pg-small-import(IterationCount=5, WarmupCount=1)
+
+RAW DATASET: small
+OverheadJitting  1: 1 op, 127901.00 ns, 127.9010 us/op
+WorkloadJitting  1: 1 op, 46383411.00 ns, 46.3834 ms/op
+
+WorkloadPilot    1: 2 op, 47901412.00 ns, 23.9507 ms/op
+WorkloadPilot    2: 3 op, 69517951.00 ns, 23.1727 ms/op
+WorkloadPilot    3: 4 op, 96452504.00 ns, 24.1131 ms/op
+WorkloadPilot    4: 5 op, 119397806.00 ns, 23.8796 ms/op
+WorkloadPilot    5: 6 op, 157287973.00 ns, 26.2147 ms/op
+WorkloadPilot    6: 7 op, 162047401.00 ns, 23.1496 ms/op
+WorkloadPilot    7: 8 op, 184404383.00 ns, 23.0505 ms/op
+WorkloadPilot    8: 9 op, 207745372.00 ns, 23.0828 ms/op
+WorkloadPilot    9: 10 op, 234494593.00 ns, 23.4495 ms/op
+WorkloadPilot   10: 11 op, 271363509.00 ns, 24.6694 ms/op
+WorkloadPilot   11: 12 op, 275815299.00 ns, 22.9846 ms/op
+WorkloadPilot   12: 13 op, 301220107.00 ns, 23.1708 ms/op
+WorkloadPilot   13: 14 op, 341990035.00 ns, 24.4279 ms/op
+WorkloadPilot   14: 15 op, 348533024.00 ns, 23.2355 ms/op
+WorkloadPilot   15: 16 op, 375803236.00 ns, 23.4877 ms/op
+WorkloadPilot   16: 32 op, 781431737.00 ns, 24.4197 ms/op
+
+WorkloadWarmup   1: 32 op, 788738652.00 ns, 24.6481 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 32 op, 784160934.00 ns, 24.5050 ms/op
+WorkloadActual   2: 32 op, 804190088.00 ns, 25.1309 ms/op
+WorkloadActual   3: 32 op, 786357467.00 ns, 24.5737 ms/op
+WorkloadActual   4: 32 op, 812124262.00 ns, 25.3789 ms/op
+WorkloadActual   5: 32 op, 822580578.00 ns, 25.7056 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 32 op, 784160934.00 ns, 24.5050 ms/op
+WorkloadResult   2: 32 op, 804190088.00 ns, 25.1309 ms/op
+WorkloadResult   3: 32 op, 786357467.00 ns, 24.5737 ms/op
+WorkloadResult   4: 32 op, 812124262.00 ns, 25.3789 ms/op
+WorkloadResult   5: 32 op, 822580578.00 ns, 25.7056 ms/op
+// GC:  0 0 0 233728 32
+// Threading:  128 0 32
+
+// AfterAll
+// Benchmark Process 51980 has exited with code 0.
+
+Mean = 25.059 ms, StdErr = 0.231 ms (0.92%), N = 5, StdDev = 0.517 ms
+Min = 24.505 ms, Q1 = 24.574 ms, Median = 25.131 ms, Q3 = 25.379 ms, Max = 25.706 ms
+IQR = 0.805 ms, LowerFence = 23.366 ms, UpperFence = 26.587 ms
+ConfidenceInterval = [23.069 ms; 27.049 ms] (CI 99.9%), Margin = 1.990 ms (7.94% of Mean)
+Skewness = 0.03, Kurtosis = 0.94, MValue = 2
+
+// ** Remained 0 (0.0 %) benchmark(s) to run. Estimated finish 2026-04-29 20:42 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  home/musmike/genealogical-db-performance-analysis/results/small/postgres/results/benchmark_scr.benchmark.queries.PsImport-report.csv
+  home/musmike/genealogical-db-performance-analysis/results/small/postgres/results/benchmark_scr.benchmark.queries.PsImport-report-github.md
+  home/musmike/genealogical-db-performance-analysis/results/small/postgres/results/benchmark_scr.benchmark.queries.PsImport-report.html
+  home/musmike/genealogical-db-performance-analysis/results/small/postgres/results/benchmark_scr.benchmark.queries.PsImport-measurements.csv
+
+// * Detailed results *
+PsImport.Import: pg-small-import(IterationCount=5, WarmupCount=1)
+Runtime = .NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 25.059 ms, StdErr = 0.231 ms (0.92%), N = 5, StdDev = 0.517 ms
+Min = 24.505 ms, Q1 = 24.574 ms, Median = 25.131 ms, Q3 = 25.379 ms, Max = 25.706 ms
+IQR = 0.805 ms, LowerFence = 23.366 ms, UpperFence = 26.587 ms
+ConfidenceInterval = [23.069 ms; 27.049 ms] (CI 99.9%), Margin = 1.990 ms (7.94% of Mean)
+Skewness = 0.03, Kurtosis = 0.94, MValue = 2
+-------------------- Histogram --------------------
+[24.108 ms ; 25.022 ms) | @@
+[25.022 ms ; 25.815 ms) | @@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, Linux Ubuntu 24.04.4 LTS (Noble Numbat)
+Intel Core i7-10700K CPU 3.80GHz (Max: 0.80GHz), 1 CPU, 16 logical and 8 physical cores
+.NET SDK 9.0.116
+  [Host]          : .NET 9.0.15 (9.0.15), X64 RyuJIT x86-64-v3
+  pg-small-import : .NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3
+
+Job=pg-small-import  IterationCount=5  WarmupCount=1  
+
+| Method | Mean     | Error    | StdDev   | Allocated |
+|------- |---------:|---------:|---------:|----------:|
+| Import | 25.06 ms | 1.990 ms | 0.517 ms |   7.13 KB |
+// * Config Issues *
+
+// * Warnings *
+Configuration
+  Summary -> The exporter CsvExporter is already present in configuration. There may be unexpected results.
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms      : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:10 (10.06 sec), executed benchmarks: 1
+
+Global total time: 00:00:16 (16.37 sec), executed benchmarks: 1
+// * Artifacts cleanup *
+Artifacts cleanup is finished

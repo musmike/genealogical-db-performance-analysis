@@ -9,9 +9,11 @@
 
 set -e
 
-echo -e "\n=== Updating system ==="
+sudo -v
+
+
+echo -e "\n=== Updating package lists ==="
 sudo apt update -y
-sudo apt upgrade -y
 
 # ==============================================================
 # SSH — enable remote access
@@ -172,12 +174,12 @@ sudo apt install -y \
     docker-buildx-plugin \
     docker-compose-plugin
 
-# Pin Docker version to prevent accidental upgrades
-sudo apt-mark hold docker-ce docker-ce-cli
+# Pin Docker to prevent accidental upgrades
+sudo apt-mark hold docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo usermod -aG docker $USER
 
 # ==============================================================
-# Install .NET 9 SDK (specific version for reproducibility)
+# Install .NET 9 SDK
 # ==============================================================
 
 echo -e "\n=== Installing .NET 9 SDK ==="
@@ -185,14 +187,8 @@ echo -e "\n=== Installing .NET 9 SDK ==="
 sudo apt install -y software-properties-common
 sudo add-apt-repository -y ppa:dotnet/backports
 sudo apt update -y
-
-DOTNET_VERSION="9.0.115-0ubuntu1~24.04.1~ppa1"
-
-sudo apt install -y dotnet-sdk-9.0=$DOTNET_VERSION
-
-# Lock SDK to prevent upgrades
+sudo apt install -y dotnet-sdk-9.0
 sudo apt-mark hold dotnet-sdk-9.0
-
 
 # ==============================================================
 # Start databases via Docker Compose
