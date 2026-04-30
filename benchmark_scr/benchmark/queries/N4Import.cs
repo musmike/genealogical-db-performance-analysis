@@ -24,23 +24,26 @@ namespace benchmark_scr.benchmark.queries {
             var dataset = Enum.Parse<Dataset>(env, ignoreCase: true);
 
             repo = new QueryRepo(path, dataset);
+            
+            EnvManager.PrepareNeo4j();
+            
             driver = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
         }
         
         [IterationSetup]
         public void IterationSetup() {
-            BashRunner.RunAsync(repo.Neo4jDropDbScript)
+            BashRunner.RunAsync("bash", repo.Neo4jDropDbScript)
                 .GetAwaiter().GetResult();
         }
 
         [Benchmark]
         public async Task Import() {
-            await BashRunner.RunAsync(repo.Neo4jImportScript);
+            await BashRunner.RunAsync("bash", repo.Neo4jImportScript);
         }
 
         [GlobalCleanup]
         public void Cleanup() {
-            BashRunner.RunAsync(repo.Neo4jCreateDbScript)
+            BashRunner.RunAsync("bash", repo.Neo4jCreateDbScript)
                 .GetAwaiter().GetResult();
             driver.ExecuteWriteScriptAsync(repo.Neo4jCreateIndexesCypher)
                 .GetAwaiter().GetResult();

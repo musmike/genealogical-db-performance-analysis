@@ -12,9 +12,6 @@ ACTUAL_USER="${SUDO_USER:-$USER}"
 export REPO_ROOT=$(pwd)
 
 
-docker compose -f benchmark_scr/db_setup/docker-compose.yml up -d
-
-
 echo "=========================================="
 echo "1. Building the C# application (Release)"
 echo "=========================================="

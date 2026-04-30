@@ -29,6 +29,9 @@ namespace benchmark_scr.benchmark.queries {
             var dataset = Enum.Parse<Dataset>(env, ignoreCase: true);
 
             repo = new QueryRepo(path, dataset);
+            
+            EnvManager.PrepareNeo4j();
+            
             driver = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
             monitor = new MemoryMonitor(env, nameof(N403));
             monitor.Start();

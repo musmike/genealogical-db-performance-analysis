@@ -24,19 +24,22 @@ namespace benchmark_scr.benchmark.queries {
             var dataset = Enum.Parse<Dataset>(env, ignoreCase: true);
 
             repo = new QueryRepo(path, dataset);
+            
+            EnvManager.PreparePostgres();
+            
             driver = new PostgresDriver(
                 "Host=localhost;Port=5432;Username=user;Password=password;Database=benchmarkdb");
         }
         
         [IterationSetup]
         public void IterationSetup() {
-            BashRunner.RunAsync(repo.PgDropAndCreateDbScript)
+            BashRunner.RunAsync("bash", repo.PgDropAndCreateDbScript)
                 .GetAwaiter().GetResult();
         }
 
         [Benchmark]
         public async Task Import() {
-            await BashRunner.RunAsync(repo.PgImportScript);
+            await BashRunner.RunAsync("bash", repo.PgImportScript);
         }
 
         [GlobalCleanup]

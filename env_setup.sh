@@ -197,9 +197,9 @@ sudo apt-mark hold dotnet-sdk-9.0
 echo -e "\n=== Starting Docker Compose services ==="
 sudo docker compose -f benchmark_scr/db_setup/docker-compose.yml up -d
 
-echo "Docker services started. Check status with: sudo docker ps"
+echo "Docker services prepared. Check status with: sudo docker ps"
 
 # ==============================================================
 echo -e "\n=== Setup complete ==="
 echo "REBOOT REQUIRED to apply Docker group changes."
-echo "After reboot, build and run the benchmark binary — see README.md"
+echo "After reboot, run the benchmark suite — see README.md"

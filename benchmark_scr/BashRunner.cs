@@ -1,33 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
 namespace benchmark_scr {
+
     internal static class BashRunner {
-        public static async Task<int> RunAsync(string scriptPath, string args = "") {
+
+        public static async Task<int> RunAsync(string fileName, params string[] args) {
             var psi = new ProcessStartInfo {
-                FileName = "/bin/bash",
-                Arguments = $"{scriptPath} {args}",
+                FileName = fileName,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
 
+            foreach (var arg in args)
+                psi.ArgumentList.Add(arg);
+
             using var process = new Process { StartInfo = psi };
 
-            process.OutputDataReceived += (_, e) =>
-            {
-                if(e.Data != null)
+            process.OutputDataReceived += (_, e) => {
+                if (!string.IsNullOrEmpty(e.Data))
                     Console.WriteLine(e.Data);
             };
 
-            process.ErrorDataReceived += (_, e) =>
-            {
-                if(e.Data != null)
+            process.ErrorDataReceived += (_, e) => {
+                if (!string.IsNullOrEmpty(e.Data))
                     Console.Error.WriteLine(e.Data);
             };
 
@@ -36,7 +33,6 @@ namespace benchmark_scr {
             process.BeginErrorReadLine();
 
             await process.WaitForExitAsync();
-
             return process.ExitCode;
         }
     }
