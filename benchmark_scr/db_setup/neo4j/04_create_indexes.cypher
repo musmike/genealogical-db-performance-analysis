@@ -1,3 +1,9 @@
+// Constraints for the node "Person"
+CREATE CONSTRAINT person_sex_required
+FOR (p:Person)
+REQUIRE p.sex IS NOT NULL;
+
+
 // ============================================================
 // Scenario 01: Lowest Common Ancestor (LCA)
 // ============================================================

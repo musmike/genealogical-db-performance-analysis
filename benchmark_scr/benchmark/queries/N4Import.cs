@@ -26,19 +26,25 @@ namespace benchmark_scr.benchmark.queries {
             repo = new QueryRepo(path, dataset);
             driver = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
         }
+        
+        [IterationSetup]
+        public void IterationSetup() {
+            BashRunner.RunAsync(repo.Neo4jDropDbScript)
+                .GetAwaiter().GetResult();
+        }
 
         [Benchmark]
-        public void Import() {
-            BashRunner.RunAsync(repo.Neo4jImportScript)
-                .GetAwaiter().GetResult();
-
+        public async Task Import() {
+            await BashRunner.RunAsync(repo.Neo4jImportScript);
         }
 
         [GlobalCleanup]
         public void Cleanup() {
-            BashRunner.RunAsync(repo.Neo4jDatabaseScript)
+            BashRunner.RunAsync(repo.Neo4jCreateDbScript)
                 .GetAwaiter().GetResult();
-            driver.ExecuteWriteScriptAsync(repo.Neo4jIndexesCypher)
+            driver.ExecuteWriteScriptAsync(repo.Neo4jCreateIndexesCypher)
+                .GetAwaiter().GetResult();
+            driver.ExecuteWriteScriptAsync("CALL db.awaitIndexes();")
                 .GetAwaiter().GetResult();
         }
     }

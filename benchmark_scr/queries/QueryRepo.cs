@@ -23,14 +23,15 @@ namespace benchmark_scr.queries {
             { Dataset.medium, "10k" },
             { Dataset.large, "100k" }
         };
-        public string PgDDL { get; }
-        public string PgData { get; }
-        public string PgIndexes { get; }
+        
+        public string PgDropAndCreateDbScript { get; }
+        public string PgImportScript { get; }
+        public string PgCreateIndexesSql { get; }
+        public string Neo4jDropDbScript { get; }
         public string Neo4jImportScript { get; }
-        public string Neo4jDatabaseScript { get; }
-        public string Neo4jIndexesCypher { get; }
-
-
+        public string Neo4jCreateDbScript { get; }
+        public string Neo4jCreateIndexesCypher { get; }
+        
         public string PgScenario1 { get; }
         public string PgScenario2 { get; }
         public string PgScenario3 { get; }
@@ -67,15 +68,15 @@ namespace benchmark_scr.queries {
                 ExpectedCounts = new Dictionary<string, int>();
             }
             
-            PgDDL = Read(basePath, "db_setup/postgresql/01_creating_tables.sql");
-            PgData = Read(basePath, $"db_setup/postgresql/02_data_import_{suffix}.sql");
-            PgIndexes = Read(basePath, "db_setup/postgresql/03_creating_indexes.sql");
+            PgDropAndCreateDbScript = Path.Combine(Environment.GetEnvironmentVariable("BASE_PATH")!, "db_setup/postgresql/01_drop_and_create_database.sh");
+            PgImportScript = Path.Combine(Environment.GetEnvironmentVariable("BASE_PATH")!, $"db_setup/postgresql/02_import_data_{suffix}.sh");
+            PgCreateIndexesSql = Read(basePath, "db_setup/postgresql/03_create_indexes.sql");
 
-            Neo4jImportScript = Path.Combine(Environment.GetEnvironmentVariable("BASE_PATH")!, $"db_setup/neo4j/01_data_import_{suffix}.sh");
-            Neo4jDatabaseScript = Path.Combine(Environment.GetEnvironmentVariable("BASE_PATH")!, $"db_setup/neo4j/02_creating_database.sh");
-            Neo4jIndexesCypher = Read(basePath, "db_setup/neo4j/03_creating_indexes.cypher");
-
-
+            Neo4jDropDbScript = Path.Combine(Environment.GetEnvironmentVariable("BASE_PATH")!, "db_setup/neo4j/01_drop_database.sh");
+            Neo4jImportScript = Path.Combine(Environment.GetEnvironmentVariable("BASE_PATH")!, $"db_setup/neo4j/02_import_data_{suffix}.sh");
+            Neo4jCreateDbScript = Path.Combine(Environment.GetEnvironmentVariable("BASE_PATH")!, "db_setup/neo4j/03_create_database.sh");
+            Neo4jCreateIndexesCypher = Read(basePath, "db_setup/neo4j/04_create_indexes.cypher");
+            
             PgScenario1 = LoadScenario(basePath, "postgres_scenarios", 1, suffix, ".sql");
             PgScenario2 = LoadScenario(basePath, "postgres_scenarios", 2, suffix, ".sql");
             PgScenario3 = LoadScenario(basePath, "postgres_scenarios", 3, suffix, ".sql");

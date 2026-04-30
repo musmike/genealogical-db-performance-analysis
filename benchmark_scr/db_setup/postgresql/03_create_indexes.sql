@@ -1,3 +1,34 @@
+--- 1. Constraints for table 'people' ---
+ALTER TABLE people ADD PRIMARY KEY (id);
+
+ALTER TABLE people ALTER COLUMN sex SET NOT NULL;
+
+ALTER TABLE people ADD CONSTRAINT check_sex CHECK (sex IN ('M', 'F', 'U'));
+
+--- 2. Constraints for table 'families' ---
+ALTER TABLE families ADD PRIMARY KEY (id);
+
+ALTER TABLE families ADD CONSTRAINT at_least_one_parent CHECK (
+    husband_id IS NOT NULL OR wife_id IS NOT NULL
+);
+ALTER TABLE families ADD CONSTRAINT fk_families_husband FOREIGN KEY (husband_id)
+    REFERENCES people(id);
+ALTER TABLE families ADD CONSTRAINT fk_families_wife FOREIGN KEY (wife_id)
+    REFERENCES people(id);
+
+--- 3. Constraints for table 'family_children' ---
+ALTER TABLE family_children ADD CONSTRAINT pk_family_children PRIMARY KEY (family_id, child_id);
+
+ALTER TABLE family_children ALTER COLUMN family_id SET NOT NULL;
+ALTER TABLE family_children ALTER COLUMN child_id SET NOT NULL;
+ALTER TABLE family_children ALTER COLUMN relationship_type SET NOT NULL;
+
+ALTER TABLE family_children ADD CONSTRAINT fk_fc_family FOREIGN KEY (family_id)
+    REFERENCES families(id) ON DELETE CASCADE;
+ALTER TABLE family_children ADD CONSTRAINT fk_fc_child FOREIGN KEY (child_id)
+    REFERENCES people(id) ON DELETE CASCADE;
+
+
 -- ============================================================
 -- Scenario 01: Lowest Common Ancestor (LCA)
 -- ============================================================

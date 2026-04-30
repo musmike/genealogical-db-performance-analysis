@@ -67,6 +67,8 @@ apt update
 apt install -y python3.13 python3.13-venv
 
 cd analysis_scr
+
+sudo -u "$ACTUAL_USER" rm -rf .venv
 sudo -u "$ACTUAL_USER" python3.13 -m venv .venv
 sudo -u "$ACTUAL_USER" .venv/bin/pip install matplotlib pandas scipy
 sudo -u "$ACTUAL_USER" .venv/bin/python scr.py

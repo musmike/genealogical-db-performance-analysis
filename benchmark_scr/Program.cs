@@ -1,16 +1,10 @@
 ﻿using benchmark_scr.benchmark.queries;
-using benchmark_scr.monitoring;
-using benchmark_scr.queries;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Diagnosers;
 using BenchmarkDotNet.Exporters.Csv;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
-using BenchmarkDotNet.Validators;
-using Neo4j.Driver;
-using System.Data;
-
 
 
 var datasetArg = args.FirstOrDefault();
@@ -70,7 +64,10 @@ static IConfig PostgresConfig(Dataset dataset) {
 static IConfig Neo4jConfig(Dataset dataset) {
     return DefaultConfig.Instance
         .AddDiagnoser(MemoryDiagnoser.Default)
-        .AddJob(Job.Default.WithId($"neo4j-{dataset}").WithWarmupCount(5).WithIterationCount(20))
+        .AddJob(Job.Default
+            .WithId($"neo4j-{dataset}")
+            .WithWarmupCount(5)
+            .WithIterationCount(20))
         .AddExporter(CsvExporter.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j")) 
@@ -81,8 +78,8 @@ static IConfig PostgresImportConfig(Dataset dataset) {
     return DefaultConfig.Instance
         .AddJob(Job.Default
             .WithId($"pg-{dataset}-import")
-            .WithWarmupCount(1)
-            .WithIterationCount(5))
+            .WithWarmupCount(2).
+            WithIterationCount(10))
         .AddLogger(ConsoleLogger.Default)
         .AddDiagnoser(MemoryDiagnoser.Default)
         .AddExporter(CsvExporter.Default)
@@ -94,7 +91,10 @@ static IConfig PostgresImportConfig(Dataset dataset) {
 static IConfig Neo4jImportConfig(Dataset dataset) {
     return DefaultConfig.Instance
         .AddDiagnoser(MemoryDiagnoser.Default)
-        .AddJob(Job.Default.WithId($"neo4j-{dataset}-import").WithWarmupCount(1).WithIterationCount(5))
+        .AddJob(Job.Default
+            .WithId($"neo4j-{dataset}-import")
+            .WithWarmupCount(2)
+            .WithIterationCount(10))
         .AddExporter(CsvExporter.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j")) 

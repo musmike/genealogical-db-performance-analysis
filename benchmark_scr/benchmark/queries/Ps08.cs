@@ -27,7 +27,7 @@ namespace benchmark_scr.benchmark.queries {
 
             repo = new QueryRepo(path, dataset);
             driver = new PostgresDriver(
-                "Host=localhost;Port=5432;Username=user;Password=password;Database=benchmark_db");
+                "Host=localhost;Port=5432;Username=user;Password=password;Database=benchmarkdb");
 
             driver.Open();
             monitor = new MemoryMonitor(env, nameof(Ps08));

@@ -25,20 +25,27 @@ namespace benchmark_scr.benchmark.queries {
 
             repo = new QueryRepo(path, dataset);
             driver = new PostgresDriver(
-                "Host=localhost;Port=5432;Username=user;Password=password;Database=benchmark_db");
-
-            driver.Open();
+                "Host=localhost;Port=5432;Username=user;Password=password;Database=benchmarkdb");
+        }
+        
+        [IterationSetup]
+        public void IterationSetup() {
+            BashRunner.RunAsync(repo.PgDropAndCreateDbScript)
+                .GetAwaiter().GetResult();
         }
 
         [Benchmark]
-        public void Import() {
-            driver.ExecuteNonQuery(repo.PgDDL);
-            driver.ExecuteNonQuery(repo.PgData);
+        public async Task Import() {
+            await BashRunner.RunAsync(repo.PgImportScript);
         }
 
         [GlobalCleanup]
         public void Cleanup() {
-            driver.ExecuteNonQuery(repo.PgIndexes);
+            driver.Open();
+            driver.ExecuteNonQuery(repo.PgCreateIndexesSql);
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
         }
     }
 }
