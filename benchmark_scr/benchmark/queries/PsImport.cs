@@ -49,6 +49,9 @@ namespace benchmark_scr.benchmark.queries {
             driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
             driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
             driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
+            driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = true);");
+            driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = true);");
+            driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = true);");
         }
     }
 }

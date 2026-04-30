@@ -43,11 +43,21 @@ namespace benchmark_scr.benchmark.queries {
                     "Expected count for Pg09 is missing in configuration."
                 );
             }
+            
+            driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = false);");
+            driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = false);");
+            driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = false);");
         }
         
-        [IterationCleanup]
-        public void IterationCleanup() {
-            MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
+        [IterationSetup]
+        public void _Ps09Setup() {
+            driver.ExecuteNonQuery(repo.PgScenario8);
+            
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
+            
+            monitor.NextIteration();
         }
         
         [Benchmark]
@@ -63,15 +73,22 @@ namespace benchmark_scr.benchmark.queries {
             return rowsCount;
         }
         
-        [IterationSetup]
-        public void _Ps09Setup() {
-            driver.ExecuteNonQuery(repo.PgScenario8);
-            monitor.NextIteration();
+        [IterationCleanup]
+        public void IterationCleanup() {
+            MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
+            
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
         }
         
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();
+            
+            driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = true);");
+            driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = true);");
+            driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = true);");
         }
     }
 }

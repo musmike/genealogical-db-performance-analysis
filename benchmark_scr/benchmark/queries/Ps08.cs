@@ -43,10 +43,18 @@ namespace benchmark_scr.benchmark.queries {
                     "Expected count for Pg08 is missing in configuration."
                 );
             }
+            
+            driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = false);");
+            driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = false);");
+            driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = false);");
         }
         
         [IterationSetup]
         public void IterationSetup() {
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
+            
             monitor.NextIteration();
         }
 
@@ -65,13 +73,22 @@ namespace benchmark_scr.benchmark.queries {
 
         [IterationCleanup]
         public void _Ps08Cleanup() {
-            driver.ExecuteNonQuery(repo.PgScenario9);
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
+            
+            driver.ExecuteNonQuery(repo.PgScenario9);
+            
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
         }
         
         [GlobalCleanup]
         public void Cleanup() {
             monitor.Export();
+            
+            driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = true);");
+            driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = true);");
+            driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = true);");
         }
     }
 }
