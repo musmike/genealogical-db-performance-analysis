@@ -7,11 +7,11 @@ using Neo4j.Driver;
 namespace benchmark_scr.benchmark.queries {
     [MemoryDiagnoser]
     public class N401 {
-        private Neo4jDriver driver;
-        private QueryRepo repo;
+        private Neo4jDriver driver = null!;
+        private QueryRepo repo = null!;
         private readonly string path;
-        private MemoryMonitor monitor;
-        private LcaScratch scratch;
+        private MemoryMonitor monitor = null!;
+        private LcaScratch scratch = null!;
         private int expectedCount;
 
         public N401() {

@@ -1,37 +1,8 @@
-﻿using Neo4j.Driver;
-using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-//static class PostgresRunner {
-//    private static readonly NpgsqlConnection _conn;
-//    static PostgresRunner() {
-//        _conn = new NpgsqlConnection(
-//            "Host=localhost;Port=5432;Username=postgres;Password=postgres;Database=postgres");
-//        _conn.Open();
-//    }
-
-//    public static void Execute(Dataset ds, QueryId q, bool consume = true) {
-//        string sql = QueryStore.Get(DbType.PostgreSQL, ds, q);
-//        using var cmd = new NpgsqlCommand(sql, _conn);
-//        if(!consume) {
-//            cmd.ExecuteNonQuery();
-//            return;
-//        }
-
-//        using var reader = cmd.ExecuteReader();
-//        while(reader.Read()) { 
-
-//        }
-//    }
-//}
+﻿using Npgsql;
 
 public class PostgresDriver:IDisposable {
     private readonly string _connectionString;
-    private NpgsqlConnection _connection;
+    private NpgsqlConnection _connection = null!;
 
     public PostgresDriver(string connectionString) {
         _connectionString = connectionString;

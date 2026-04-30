@@ -5,11 +5,11 @@ using BenchmarkDotNet.Attributes;
 
 namespace benchmark_scr.benchmark.queries {
     public class Ps06 {
-        private PostgresDriver driver;
-        private QueryRepo repo;
+        private PostgresDriver driver = null!;
+        private QueryRepo repo = null!;
         private readonly string path;
-        private MemoryMonitor monitor;
-        private YoungestParentScratch scratch;
+        private MemoryMonitor monitor = null!;
+        private YoungestParentScratch scratch = null!;
         private int expectedCount;
 
         public Ps06() {

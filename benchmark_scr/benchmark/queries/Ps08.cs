@@ -4,10 +4,10 @@ using BenchmarkDotNet.Attributes;
 
 namespace benchmark_scr.benchmark.queries {
     public class Ps08 {
-        private PostgresDriver driver;
-        private QueryRepo repo;
+        private PostgresDriver driver = null!;
+        private QueryRepo repo = null!;
         private readonly string path;
-        private MemoryMonitor monitor;
+        private MemoryMonitor monitor = null!;
         private int expectedCount;
 
         public Ps08() {

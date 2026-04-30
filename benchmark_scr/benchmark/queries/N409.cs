@@ -4,10 +4,10 @@ using BenchmarkDotNet.Attributes;
 
 namespace benchmark_scr.benchmark.queries {
     public class N409 {
-        private Neo4jDriver driver;
-        private QueryRepo repo;
+        private Neo4jDriver driver = null!;
+        private QueryRepo repo = null!;
         private readonly string path;
-        private MemoryMonitor monitor;
+        private MemoryMonitor monitor = null!;
         private int expectedAffected;
 
         public N409() {

@@ -4,8 +4,8 @@ using BenchmarkDotNet.Attributes;
 namespace benchmark_scr.benchmark.queries {
     [MemoryDiagnoser]
     public class N4Import {
-        private Neo4jDriver driver;
-        private QueryRepo repo;
+        private Neo4jDriver driver = null!;
+        private QueryRepo repo = null!;
         private readonly string path;
 
         public N4Import() {

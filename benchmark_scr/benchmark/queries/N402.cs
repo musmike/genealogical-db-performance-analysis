@@ -6,11 +6,11 @@ using Neo4j.Driver;
 
 namespace benchmark_scr.benchmark.queries {
     public class N402 {
-        private Neo4jDriver driver;
-        private QueryRepo repo;
+        private Neo4jDriver driver = null!;
+        private QueryRepo repo = null!;
         private readonly string path;
-        private MemoryMonitor monitor;
-        private PersonScratch scratch;
+        private MemoryMonitor monitor = null!;
+        private PersonScratch scratch = null!;
         private int expectedCount;
 
         public N402() {

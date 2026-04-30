@@ -55,7 +55,6 @@ static IConfig PostgresConfig(Dataset dataset) {
             .WithIterationCount(20))
         .AddLogger(ConsoleLogger.Default)
         .AddDiagnoser(MemoryDiagnoser.Default)
-        .AddExporter(CsvExporter.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithOptions(ConfigOptions.Default)
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "postgres"));
@@ -68,7 +67,6 @@ static IConfig Neo4jConfig(Dataset dataset) {
             .WithId($"neo4j-{dataset}")
             .WithWarmupCount(5)
             .WithIterationCount(20))
-        .AddExporter(CsvExporter.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j")) 
         .AddLogger(ConsoleLogger.Default);
@@ -82,7 +80,6 @@ static IConfig PostgresImportConfig(Dataset dataset) {
             WithIterationCount(10))
         .AddLogger(ConsoleLogger.Default)
         .AddDiagnoser(MemoryDiagnoser.Default)
-        .AddExporter(CsvExporter.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithOptions(ConfigOptions.Default)
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "postgres"));
@@ -95,7 +92,6 @@ static IConfig Neo4jImportConfig(Dataset dataset) {
             .WithId($"neo4j-{dataset}-import")
             .WithWarmupCount(2)
             .WithIterationCount(10))
-        .AddExporter(CsvExporter.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j")) 
         .AddLogger(ConsoleLogger.Default);
@@ -110,7 +106,7 @@ enum Dataset {
 
 
 public static class Configg {
-    public static string basePath = Path.GetDirectoryName(typeof(Program).Assembly.Location)!;
+    public static string basePath = AppContext.BaseDirectory;
     public static string repoRoot = Environment.GetEnvironmentVariable("REPO_ROOT") ?? Directory.GetCurrentDirectory(); 
 }
 

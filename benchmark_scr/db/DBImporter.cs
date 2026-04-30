@@ -19,6 +19,7 @@ namespace benchmark_scr.db {
             string datasetSql,
             string finalSql) {
             _pg.ImportAsync(ddl, datasetSql, finalSql);
+            await Task.CompletedTask;
         }
 
         public async Task ImportNeo4jAsync(
