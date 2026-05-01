@@ -1,0 +1,3 @@
+LcaId,GivenName,Surname,Sex,BirthDate,BirthPlace,DeathDate,DeathPlace,PathFromA,PathFromB,TotalDist
+3,Łukasz,Wiśniewski,M,1628-01-02,Świnoujście,1669-09-05,Słupsk,4,4,8
+4,Marianna,Malinowska,F,1629-06-11,Olsztyn,1699-12-03,Stargard,4,4,8

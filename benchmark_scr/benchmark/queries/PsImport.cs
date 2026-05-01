@@ -6,6 +6,7 @@ namespace benchmark_scr.benchmark.queries {
         private PostgresDriver driver = null!;
         private QueryRepo repo = null!;
         private readonly string path;
+        private DatabaseValidator validator = null!;
 
         public PsImport() {
             path = Configg.basePath;
@@ -21,6 +22,7 @@ namespace benchmark_scr.benchmark.queries {
             Console.WriteLine($"RAW DATASET: {env}");
 
             var dataset = Enum.Parse<Dataset>(env, ignoreCase: true);
+            validator = new DatabaseValidator(dataset);
 
             repo = new QueryRepo(path, dataset);
             
@@ -32,17 +34,17 @@ namespace benchmark_scr.benchmark.queries {
         
         [IterationSetup]
         public void IterationSetup() {
-            BashRunner.RunAsync("bash", repo.PgDropAndCreateDbScript)
+            BashRunner.RunAsync("bash", true, repo.PgDropAndCreateDbScript)
                 .GetAwaiter().GetResult();
         }
 
         [Benchmark]
         public async Task Import() {
-            await BashRunner.RunAsync("bash", repo.PgImportScript);
+            await BashRunner.RunAsync("bash", true, repo.PgImportScript);
         }
 
         [GlobalCleanup]
-        public void Cleanup() {
+        public async Task Cleanup() {
             driver.Open();
             driver.ExecuteNonQuery(repo.PgCreateIndexesSql);
             driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
@@ -51,6 +53,7 @@ namespace benchmark_scr.benchmark.queries {
             driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = true);");
             driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = true);");
             driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = true);");
+            await validator.ValidatePostgresAsync();
         }
     }
 }

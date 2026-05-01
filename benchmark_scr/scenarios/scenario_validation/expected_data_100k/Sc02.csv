@@ -1,0 +1,965 @@
+PersonId,GivenName,Surname,Sex,BirthDate,BirthPlace,DeathDate,DeathPlace
+23873,Władysław,Górski,M,1461-01-15,Gorzów Wielkopolski,1511-11-06,Gorzów Wielkopolski
+23893,Henryk,Górski,M,1461-01-21,Zielona Góra,1522-10-15,Legnica
+23863,Tadeusz,Górski,M,1461-01-27,Tarnów,1462-08-14,Tarnobrzeg
+23875,Bartosz,Górski,M,1461-02-16,Zielona Góra,1510-05-12,Zielona Góra
+23850,Łukasz,Górski,M,1461-04-01,Zielona Góra,1480-11-07,Gorzów Wielkopolski
+23839,Julian,Górski,M,1461-04-03,Gorzów Wielkopolski,1524-12-16,Legnica
+23848,Kamil,Górski,M,1461-04-11,Sanok,1536-08-03,Oświęcim
+23872,Czesław,Górski,M,1461-04-19,Świdnica,1537-12-14,Opole
+23831,Zygmunt,Górski,M,1461-06-04,Kraków,1462-07-25,Oświęcim
+23856,Kamil,Górski,M,1461-06-19,Krosno,1462-02-20,Zakopane
+23886,Ryszard,Górski,M,1461-08-15,Ostrowiec Świętokrzyski,1482-02-09,Zakopane
+23902,Marian,Górski,M,1461-09-09,Kraków,1503-02-11,Bochnia
+23835,Ignacy,Górski,M,1461-10-05,Jelenia Góra,1521-11-23,Gorzów Wielkopolski
+23846,Krzysztof,Górski,M,1461-10-24,Jelenia Góra,1462-06-26,Legnica
+23897,Adam,Górski,M,1461-10-28,Legnica,1462-07-14,Jelenia Góra
+23858,Stefan,Górski,M,1461-11-17,Wałbrzych,1461-01-19,Gorzów Wielkopolski
+23949,Ryszard,Górski,M,1462-01-02,Gdynia,1502-01-08,Stettin
+23939,Andrzej,Górski,M,1462-02-26,Kielce,1467-07-17,Tarnobrzeg
+23918,Szymon,Górski,M,1462-03-12,Malbork,1504-03-24,Słupsk
+23972,Tomasz,Górski,M,1462-03-25,Kraków,1462-06-12,Krosno
+23978,Jakub,Górski,M,1462-04-03,Stettin,1462-09-27,Gdynia
+23924,Wiesław,Górski,M,1462-05-09,Zielona Góra,1467-03-20,Zielona Góra
+23904,Bartosz,Górski,M,1462-06-02,Bochnia,1529-01-06,Sanok
+23937,Czesław,Górski,M,1462-06-03,Rzeszów,1529-01-22,Oświęcim
+23988,Stefan,Górski,M,1462-06-04,Wałbrzych,1540-11-04,Breslau
+23989,Adam,Górski,M,1462-06-09,Krosno,1502-01-26,Nowy Sącz
+23981,Marek,Górski,M,1462-06-23,Breslau,1506-07-24,Breslau
+23909,Zygmunt,Górski,M,1462-06-26,Słupsk,1466-10-21,Stargard
+23973,Czesław,Górski,M,1462-06-26,Opole,1462-04-26,Legnica
+23977,Antoni,Górski,M,1462-07-04,Zielona Góra,1464-11-28,Breslau
+23956,Julian,Górski,M,1462-07-19,Słupsk,1465-12-26,Gdynia
+23912,Józef,Górski,M,1462-08-21,Stettin,1514-04-07,Danzig
+23964,Julian,Górski,M,1462-09-13,Zielona Góra,1511-05-17,Świdnica
+23975,Dariusz,Górski,M,1462-09-13,Breslau,1462-06-06,Jelenia Góra
+23979,Paweł,Górski,M,1462-09-13,Wałbrzych,1508-11-23,Jelenia Góra
+23938,Tomasz,Górski,M,1462-10-04,Zielona Góra,1508-07-27,Breslau
+23929,Tomasz,Górski,M,1462-10-09,Zielona Góra,1530-12-15,Zielona Góra
+23926,Marcin,Górski,M,1462-10-26,Tarnów,1499-11-04,Krosno
+23908,Zygmunt,Górski,M,1462-11-16,Bochnia,1507-09-18,Kraków
+23946,Wiesław,Górski,M,1462-11-19,Gdynia,1537-11-15,Stettin
+23967,Czesław,Górski,M,1462-11-20,Słupsk,1463-02-25,Koszalin
+23983,Jan,Górski,M,1462-12-21,Sopot,1517-02-21,Świnoujście
+24036,Antoni,Górski,M,1463-01-12,Świdnica,1468-09-21,Zielona Góra
+24041,Kazimierz,Górski,M,1463-01-16,Ostrowiec Świętokrzyski,1525-04-13,Tarnów
+24004,Andrzej,Górski,M,1463-03-02,Świdnica,1508-01-04,Zielona Góra
+24019,Dariusz,Górski,M,1463-03-09,Rzeszów,1529-03-13,Zakopane
+24032,Marek,Górski,M,1463-03-12,Nowy Sącz,1513-10-24,Zakopane
+24012,Wiesław,Górski,M,1463-04-09,Jelenia Góra,1528-05-05,Świdnica
+24030,Krzysztof,Górski,M,1463-05-21,Zielona Góra,1463-02-21,Zielona Góra
+23995,Dariusz,Górski,M,1463-06-21,Sopot,1463-01-06,Koszalin
+24011,Jerzy,Górski,M,1463-07-15,Gorzów Wielkopolski,1480-02-01,Legnica
+24001,Leon,Górski,M,1463-08-17,Wałbrzych,1490-03-28,Świdnica
+24047,Jerzy,Górski,M,1463-09-18,Rzeszów,1464-01-16,Przemyśl
+24071,Ignacy,Górski,M,1463-09-20,Przemyśl,1510-12-24,Ostrowiec Świętokrzyski
+24020,Ryszard,Górski,M,1463-09-28,Słupsk,1464-01-02,Kołobrzeg
+24035,Marek,Górski,M,1463-10-11,Oświęcim,1533-05-21,Sanok
+24055,Dariusz,Górski,M,1463-10-24,Koszalin,1516-04-02,Gdynia
+24002,Adam,Górski,M,1463-10-28,Świdnica,1510-11-16,Legnica
+23996,Ignacy,Górski,M,1463-11-01,Świdnica,1544-04-14,Jelenia Góra
+24003,Józef,Górski,M,1463-11-12,Bochnia,1499-09-15,Kielce
+23994,Józef,Górski,M,1463-12-25,Świnoujście,1464-02-13,Koszalin
+24088,Piotr,Górski,M,1464-01-06,Opole,1469-03-12,Wałbrzych
+24171,Marek,Górski,M,1464-01-10,Zielona Góra,1511-04-07,Gorzów Wielkopolski
+24165,Łukasz,Górski,M,1464-01-14,Breslau,1466-09-03,Jelenia Góra
+24169,Piotr,Górski,M,1464-01-16,Wałbrzych,1464-10-15,Jelenia Góra
+24080,Marian,Górski,M,1464-02-18,Breslau,1510-03-03,Wałbrzych
+24146,Ignacy,Górski,M,1464-03-09,Sopot,1465-01-01,Koszalin
+24100,Julian,Górski,M,1464-03-21,Danzig,1541-08-08,Koszalin
+24107,Tadeusz,Górski,M,1464-03-23,Wałbrzych,1465-11-26,Opole
+24128,Andrzej,Górski,M,1464-05-01,Danzig,1523-02-24,Wejherowo
+24096,Maciej,Górski,M,1464-05-03,Zakopane,1518-04-15,Tarnobrzeg
+24093,Kazimierz,Górski,M,1464-06-15,Oświęcim,1501-04-26,Sanok
+24143,Wojciech,Górski,M,1464-06-17,Breslau,1516-04-16,Wałbrzych
+24099,Adam,Górski,M,1464-06-25,Danzig,1469-01-04,Danzig
+24078,Ignacy,Górski,M,1464-07-05,Opole,1514-05-03,Wałbrzych
+24126,Ignacy,Górski,M,1464-07-08,Jasło,1503-07-05,Rzeszów
+24076,Tadeusz,Górski,M,1464-07-16,Jasło,1518-11-14,Sanok
+24125,Filip,Górski,M,1464-08-09,Breslau,1469-05-20,Wałbrzych
+24075,Kazimierz,Górski,M,1464-09-12,Świnoujście,1521-12-18,Sopot
+24163,Marcin,Górski,M,1464-09-13,Zielona Góra,1544-12-28,Jelenia Góra
+24082,Zygmunt,Górski,M,1464-09-14,Świdnica,1535-02-16,Zielona Góra
+24123,Jan,Górski,M,1464-09-14,Breslau,1464-09-24,Świdnica
+24158,Ignacy,Górski,M,1464-10-04,Rzeszów,1511-01-06,Nowy Sącz
+24111,Leon,Górski,M,1464-10-22,Chojnice,1464-02-24,Wejherowo
+24127,Dariusz,Górski,M,1464-11-22,Świdnica,1509-03-11,Wałbrzych
+24079,Grzegorz,Górski,M,1464-12-03,Kielce,1500-11-14,Tarnobrzeg
+24091,Michał,Górski,M,1464-12-03,Zielona Góra,1465-07-15,Zielona Góra
+24134,Jakub,Górski,M,1464-12-19,Przemyśl,1526-08-18,Sanok
+24230,Mateusz,Górski,M,1465-01-22,Zielona Góra,1513-03-06,Legnica
+24242,Łukasz,Górski,M,1465-02-21,Wejherowo,1511-08-08,Słupsk
+24226,Marcin,Górski,M,1465-03-26,Opole,1511-10-13,Legnica
+24253,Julian,Górski,M,1465-05-04,Zielona Góra,1465-07-12,Świdnica
+24245,Leon,Górski,M,1465-07-06,Sanok,1511-07-22,Jasło
+24237,Wiesław,Górski,M,1465-07-28,Nowy Sącz,1534-05-15,Oświęcim
+24193,Kazimierz,Górski,M,1465-08-12,Malbork,1470-03-07,Stettin
+24246,Mirosław,Górski,M,1465-08-13,Oświęcim,1545-10-18,Kraków
+24201,Kamil,Górski,M,1465-09-13,Kołobrzeg,1465-06-03,Danzig
+24214,Ignacy,Górski,M,1465-09-16,Gorzów Wielkopolski,1528-12-03,Świdnica
+24172,Adam,Górski,M,1465-09-23,Gdynia,1524-08-26,Sopot
+24252,Tadeusz,Górski,M,1465-10-24,Zielona Góra,1521-02-11,Zielona Góra
+24191,Stanisław,Górski,M,1465-11-08,Przemyśl,1504-02-19,Oświęcim
+24254,Łukasz,Górski,M,1465-11-16,Legnica,1540-08-03,Jelenia Góra
+24176,Kamil,Górski,M,1465-12-03,Zielona Góra,1465-08-09,Breslau
+24288,Stanisław,Górski,M,1466-01-04,Wałbrzych,1514-03-04,Gorzów Wielkopolski
+24334,Wiesław,Górski,M,1466-01-05,Jelenia Góra,1530-04-11,Zielona Góra
+24350,Stanisław,Górski,M,1466-01-06,Tarnów,1467-07-03,Tarnobrzeg
+24262,Stanisław,Górski,M,1466-01-19,Kołobrzeg,1518-03-26,Słupsk
+24293,Marian,Górski,M,1466-02-07,Sandomierz,1467-07-25,Tarnów
+24330,Jerzy,Górski,M,1466-02-21,Rzeszów,1534-05-10,Tarnów
+24340,Piotr,Górski,M,1466-03-02,Legnica,1539-07-13,Zielona Góra
+24323,Grzegorz,Górski,M,1466-03-03,Sopot,1553-08-10,Stettin
+24317,Marian,Górski,M,1466-03-13,Sanok,1467-01-17,Kraków
+24272,Wiesław,Górski,M,1466-03-16,Krosno,1525-01-25,Nowy Sącz
+24344,Maciej,Górski,M,1466-04-21,Sandomierz,1466-09-23,Rzeszów
+24332,Franciszek,Górski,M,1466-04-26,Jelenia Góra,1470-02-15,Gorzów Wielkopolski
+24274,Jakub,Górski,M,1466-05-19,Danzig,1524-07-19,Elbląg
+24355,Leon,Górski,M,1466-07-03,Oświęcim,1506-01-20,Krosno
+24280,Ignacy,Górski,M,1466-07-16,Breslau,1466-09-14,Jelenia Góra
+24313,Kazimierz,Górski,M,1466-07-16,Gdynia,1551-07-08,Stargard
+24336,Stanisław,Górski,M,1466-08-06,Świnoujście,1540-10-05,Stettin
+24335,Stanisław,Górski,M,1466-08-14,Jelenia Góra,1530-05-14,Legnica
+24268,Kamil,Górski,M,1466-09-14,Wałbrzych,1466-12-15,Wałbrzych
+24338,Jakub,Górski,M,1466-10-05,Kielce,1467-02-23,Ostrowiec Świętokrzyski
+24282,Tadeusz,Górski,M,1466-10-08,Opole,1512-07-18,Gorzów Wielkopolski
+24287,Mateusz,Górski,M,1466-10-16,Breslau,1522-01-12,Świdnica
+24301,Łukasz,Górski,M,1466-11-01,Stargard,1550-01-19,Danzig
+24331,Wojciech,Górski,M,1466-11-19,Elbląg,1515-05-10,Malbork
+24270,Michał,Górski,M,1466-12-18,Wałbrzych,1513-03-25,Opole
+24265,Stefan,Górski,M,1466-12-20,Kraków,1526-03-08,Przemyśl
+24430,Ryszard,Górski,M,1467-01-18,Zielona Góra,1468-01-22,Legnica
+24435,Julian,Górski,M,1467-02-12,Zielona Góra,1467-04-28,Breslau
+24398,Henryk,Górski,M,1467-03-03,Kraków,1517-05-08,Bochnia
+24386,Paweł,Górski,M,1467-03-13,Stargard,1468-10-25,Sopot
+24414,Henryk,Górski,M,1467-03-23,Zielona Góra,1548-03-11,Jelenia Góra
+24443,Czesław,Górski,M,1467-04-05,Breslau,1467-08-05,Opole
+24376,Ryszard,Górski,M,1467-04-27,Legnica,1509-01-15,Jelenia Góra
+24366,Stefan,Górski,M,1467-05-01,Świnoujście,1470-01-21,Stargard
+24369,Łukasz,Górski,M,1467-05-03,Zielona Góra,1551-06-11,Legnica
+24391,Grzegorz,Górski,M,1467-06-28,Świdnica,1472-03-27,Świdnica
+24449,Dariusz,Górski,M,1467-07-14,Wejherowo,1524-03-17,Elbląg
+24380,Krzysztof,Górski,M,1467-07-25,Stargard,1485-03-07,Chojnice
+24395,Marcin,Górski,M,1467-08-04,Wałbrzych,1488-01-23,Jelenia Góra
+24422,Paweł,Górski,M,1467-08-20,Sanok,1486-08-28,Przemyśl
+24394,Ryszard,Górski,M,1467-09-12,Stargard,1541-10-03,Koszalin
+24417,Ignacy,Górski,M,1467-09-17,Zielona Góra,1468-10-27,Wałbrzych
+24429,Łukasz,Górski,M,1467-10-15,Stargard,1471-11-16,Malbork
+24382,Zygmunt,Górski,M,1467-11-01,Tarnów,1535-10-27,Jasło
+24418,Marek,Górski,M,1467-11-05,Opole,1515-12-01,Legnica
+24404,Leon,Górski,M,1467-12-11,Przemyśl,1513-02-21,Przemyśl
+24359,Jerzy,Górski,M,1467-12-17,Jelenia Góra,1529-01-15,Gorzów Wielkopolski
+24458,Zygmunt,Górski,M,1468-01-19,Legnica,1469-10-06,Świdnica
+24537,Krzysztof,Górski,M,1468-02-06,Zielona Góra,1468-10-16,Legnica
+24485,Władysław,Górski,M,1468-02-20,Gorzów Wielkopolski,1534-06-11,Wałbrzych
+24478,Jerzy,Górski,M,1468-02-21,Opole,1527-06-17,Legnica
+24523,Jan,Górski,M,1468-02-24,Malbork,1535-01-09,Wejherowo
+24524,Kazimierz,Górski,M,1468-02-24,Chojnice,1471-01-16,Elbląg
+24494,Tadeusz,Górski,M,1468-03-07,Opole,1468-10-09,Gorzów Wielkopolski
+24493,Mirosław,Górski,M,1468-03-21,Zielona Góra,1505-11-20,Wałbrzych
+24502,Tomasz,Górski,M,1468-04-03,Chojnice,1510-03-10,Świnoujście
+24455,Grzegorz,Górski,M,1468-04-26,Wałbrzych,1532-08-22,Gorzów Wielkopolski
+24460,Dariusz,Górski,M,1468-05-15,Opole,1469-03-28,Zielona Góra
+24465,Kamil,Górski,M,1468-07-03,Wałbrzych,1471-05-02,Zielona Góra
+24521,Henryk,Górski,M,1468-07-23,Gorzów Wielkopolski,1539-05-27,Gorzów Wielkopolski
+24489,Marian,Górski,M,1468-08-09,Krosno,1518-11-19,Ostrowiec Świętokrzyski
+24504,Antoni,Górski,M,1468-08-14,Jasło,1469-06-07,Krosno
+24480,Grzegorz,Górski,M,1468-09-03,Sopot,1473-02-13,Olsztyn
+24498,Andrzej,Górski,M,1468-09-08,Sandomierz,1533-05-27,Jasło
+24511,Łukasz,Górski,M,1468-09-12,Świdnica,1524-06-14,Breslau
+24516,Michał,Górski,M,1468-09-14,Sanok,1469-07-21,Nowy Sącz
+24466,Grzegorz,Górski,M,1468-11-02,Elbląg,1532-07-05,Elbląg
+24457,Jerzy,Górski,M,1468-11-05,Zakopane,1470-11-22,Tarnów
+24486,Zygmunt,Górski,M,1468-11-13,Koszalin,1515-12-05,Stargard
+24560,Stanisław,Górski,M,1469-01-01,Świdnica,1470-10-20,Jelenia Góra
+24627,Andrzej,Górski,M,1469-01-25,Kielce,1523-11-19,Tarnobrzeg
+24550,Czesław,Górski,M,1469-02-03,Świdnica,1525-11-08,Breslau
+24597,Leon,Górski,M,1469-03-08,Stettin,1525-01-24,Słupsk
+24567,Kamil,Górski,M,1469-03-09,Gorzów Wielkopolski,1508-12-27,Wałbrzych
+24553,Łukasz,Górski,M,1469-03-13,Stettin,1469-12-23,Danzig
+24621,Kamil,Górski,M,1469-04-07,Opole,1469-07-23,Wałbrzych
+24622,Jerzy,Górski,M,1469-04-08,Kielce,1557-08-28,Tarnobrzeg
+24562,Grzegorz,Górski,M,1469-04-09,Legnica,1508-09-08,Gorzów Wielkopolski
+24592,Czesław,Górski,M,1469-05-12,Zielona Góra,1472-07-05,Wałbrzych
+24581,Julian,Górski,M,1469-05-16,Bochnia,1527-03-27,Sanok
+24565,Jerzy,Górski,M,1469-06-02,Wejherowo,1539-07-07,Wejherowo
+24629,Tadeusz,Górski,M,1469-06-09,Stettin,1474-05-03,Wejherowo
+24604,Grzegorz,Górski,M,1469-06-28,Kołobrzeg,1537-07-04,Stargard
+24616,Franciszek,Górski,M,1469-08-25,Wałbrzych,1529-08-02,Legnica
+24625,Tadeusz,Górski,M,1469-10-05,Jasło,1497-12-16,Kielce
+24628,Marek,Górski,M,1469-10-07,Wałbrzych,1527-04-04,Opole
+24578,Krzysztof,Górski,M,1469-11-05,Świdnica,1527-08-22,Jelenia Góra
+24619,Paweł,Górski,M,1469-12-21,Wałbrzych,1525-12-12,Opole
+24580,Maciej,Górski,M,1469-12-28,Rzeszów,1474-03-17,Tarnów
+24662,Leon,Górski,M,1470-01-01,Wałbrzych,1541-10-24,Opole
+24671,Czesław,Górski,M,1470-04-06,Oświęcim,1558-05-07,Oświęcim
+24668,Kazimierz,Górski,M,1470-04-23,Wejherowo,1493-09-28,Chojnice
+24641,Dariusz,Górski,M,1470-07-11,Zielona Góra,1530-02-27,Breslau
+24650,Henryk,Górski,M,1470-08-06,Wałbrzych,1491-09-27,Legnica
+24701,Julian,Górski,M,1470-08-16,Legnica,1471-04-17,Breslau
+24673,Henryk,Górski,M,1470-09-11,Kraków,1472-06-22,Rzeszów
+24642,Filip,Górski,M,1470-09-20,Jelenia Góra,1534-03-22,Jelenia Góra
+24697,Wojciech,Górski,M,1470-09-20,Legnica,1471-05-12,Zielona Góra
+24655,Józef,Górski,M,1470-10-08,Jelenia Góra,1532-04-05,Świdnica
+24661,Jerzy,Górski,M,1470-10-14,Świdnica,1522-07-16,Breslau
+24713,Kamil,Górski,M,1470-10-19,Świdnica,1470-03-26,Opole
+24666,Krzysztof,Górski,M,1470-10-20,Ostrowiec Świętokrzyski,1472-10-07,Sandomierz
+24670,Kamil,Górski,M,1470-12-02,Ostrowiec Świętokrzyski,1496-02-04,Sandomierz
+24782,Julian,Górski,M,1471-01-14,Jasło,1543-01-25,Krosno
+24743,Piotr,Górski,M,1471-01-24,Przemyśl,1472-08-19,Sandomierz
+24720,Piotr,Górski,M,1471-03-05,Świdnica,1535-05-27,Breslau
+24773,Mirosław,Górski,M,1471-03-09,Kołobrzeg,1545-02-10,Kołobrzeg
+24803,Stefan,Górski,M,1471-03-23,Zakopane,1471-09-26,Ostrowiec Świętokrzyski
+24724,Szymon,Górski,M,1471-04-09,Jelenia Góra,1550-02-15,Opole
+24746,Bartosz,Górski,M,1471-06-01,Jasło,1552-11-10,Bochnia
+24802,Stanisław,Górski,M,1471-06-01,Legnica,1495-04-22,Legnica
+24737,Bartosz,Górski,M,1471-07-20,Wałbrzych,1498-05-17,Jelenia Góra
+24790,Tomasz,Górski,M,1471-07-25,Oświęcim,1527-07-28,Przemyśl
+24739,Jakub,Górski,M,1471-08-17,Gorzów Wielkopolski,1471-03-17,Wałbrzych
+24725,Marek,Górski,M,1471-11-01,Tarnobrzeg,1533-03-27,Przemyśl
+24804,Jan,Górski,M,1471-12-02,Przemyśl,1542-01-07,Sanok
+24869,Grzegorz,Górski,M,1472-01-07,Sandomierz,1484-08-24,Jasło
+24807,Józef,Górski,M,1472-02-15,Wałbrzych,1498-01-04,Jelenia Góra
+24880,Stanisław,Górski,M,1472-02-17,Wałbrzych,1521-02-11,Legnica
+24883,Leon,Górski,M,1472-05-01,Legnica,1477-07-24,Świdnica
+24864,Piotr,Górski,M,1472-05-15,Chojnice,1472-03-24,Elbląg
+24882,Szymon,Górski,M,1472-06-25,Zielona Góra,1472-04-19,Wałbrzych
+24816,Dariusz,Górski,M,1472-07-05,Zakopane,1475-12-26,Krosno
+24871,Tadeusz,Górski,M,1472-08-10,Ostrowiec Świętokrzyski,1473-04-09,Sandomierz
+24806,Leon,Górski,M,1472-08-11,Opole,1472-08-24,Breslau
+24845,Kamil,Górski,M,1472-08-25,Wejherowo,1528-03-28,Olsztyn
+24857,Marian,Górski,M,1472-09-03,Opole,1559-03-02,Breslau
+24824,Michał,Górski,M,1472-10-28,Olsztyn,1476-07-26,Świnoujście
+24877,Marian,Górski,M,1472-11-11,Kielce,1523-10-11,Tarnobrzeg
+24874,Paweł,Górski,M,1472-11-18,Jelenia Góra,1472-11-06,Legnica
+24808,Bartosz,Górski,M,1472-12-20,Breslau,1546-12-18,Zielona Góra
+24936,Grzegorz,Górski,M,1473-01-03,Legnica,1519-04-28,Jelenia Góra
+24959,Wiesław,Górski,M,1473-01-05,Danzig,1534-09-23,Elbląg
+24976,Marian,Górski,M,1473-01-07,Jelenia Góra,1521-03-10,Świdnica
+24927,Kamil,Górski,M,1473-02-09,Zielona Góra,1474-06-20,Legnica
+24902,Franciszek,Górski,M,1473-02-19,Kraków,1473-09-28,Kraków
+24966,Piotr,Górski,M,1473-02-20,Zielona Góra,1514-10-23,Świdnica
+24970,Adam,Górski,M,1473-03-19,Zielona Góra,1541-07-08,Gorzów Wielkopolski
+24895,Marian,Górski,M,1473-06-16,Opole,1529-12-07,Opole
+24979,Marek,Górski,M,1473-06-20,Rzeszów,1532-11-13,Tarnów
+24985,Ryszard,Górski,M,1473-08-08,Zielona Góra,1514-06-28,Zielona Góra
+24945,Kazimierz,Górski,M,1473-08-15,Zielona Góra,1555-02-14,Jelenia Góra
+24925,Kamil,Górski,M,1473-09-02,Legnica,1546-01-11,Gorzów Wielkopolski
+24954,Mateusz,Górski,M,1473-09-06,Opole,1512-11-14,Wałbrzych
+24962,Józef,Górski,M,1473-09-18,Sandomierz,1474-02-24,Sanok
+24908,Józef,Górski,M,1473-10-18,Sandomierz,1513-04-14,Kraków
+24919,Dariusz,Górski,M,1473-11-01,Jelenia Góra,1539-12-08,Świdnica
+24986,Mirosław,Górski,M,1473-11-03,Nowy Sącz,1477-05-11,Tarnobrzeg
+25011,Kamil,Górski,M,1474-01-05,Opole,1521-03-01,Jelenia Góra
+25043,Piotr,Górski,M,1474-01-16,Chojnice,1544-08-22,Sopot
+25027,Mateusz,Górski,M,1474-02-02,Breslau,1534-01-02,Legnica
+25061,Władysław,Górski,M,1474-02-08,Gorzów Wielkopolski,1497-02-19,Jelenia Góra
+25007,Ryszard,Górski,M,1474-03-14,Zielona Góra,1474-07-08,Świdnica
+25018,Jakub,Górski,M,1474-04-26,Kraków,1515-06-08,Nowy Sącz
+25054,Henryk,Górski,M,1474-05-03,Jelenia Góra,1538-09-02,Opole
+24988,Adam,Górski,M,1474-05-10,Breslau,1511-11-04,Świdnica
+25028,Piotr,Górski,M,1474-07-01,Wałbrzych,1512-06-23,Świdnica
+25037,Józef,Górski,M,1474-09-19,Zielona Góra,1543-07-10,Jelenia Góra
+25026,Franciszek,Górski,M,1474-09-20,Zielona Góra,1534-07-07,Wałbrzych
+25020,Filip,Górski,M,1474-10-06,Tarnobrzeg,1534-01-16,Rzeszów
+25053,Michał,Górski,M,1474-10-18,Opole,1474-02-22,Wałbrzych
+25046,Zygmunt,Górski,M,1474-10-28,Jelenia Góra,1536-07-14,Wałbrzych
+25004,Kazimierz,Górski,M,1474-11-13,Sopot,1474-03-17,Danzig
+25021,Andrzej,Górski,M,1474-12-04,Nowy Sącz,1533-05-25,Krosno
+25135,Jakub,Górski,M,1475-01-25,Koszalin,1535-09-12,Wejherowo
+25081,Jan,Górski,M,1475-02-01,Wałbrzych,1475-07-08,Wałbrzych
+25106,Henryk,Górski,M,1475-02-27,Gorzów Wielkopolski,1475-04-01,Świdnica
+25114,Mirosław,Górski,M,1475-04-01,Gorzów Wielkopolski,1521-05-01,Wałbrzych
+25101,Bartosz,Górski,M,1475-05-26,Nowy Sącz,1544-05-28,Kraków
+25091,Jakub,Górski,M,1475-06-03,Opole,1542-07-14,Świdnica
+25147,Maciej,Górski,M,1475-06-27,Świnoujście,1475-05-26,Malbork
+25134,Grzegorz,Górski,M,1475-07-20,Jasło,1538-11-05,Bochnia
+25088,Michał,Górski,M,1475-09-25,Opole,1539-02-07,Gorzów Wielkopolski
+25126,Piotr,Górski,M,1475-10-04,Sanok,1490-06-26,Sandomierz
+25133,Michał,Górski,M,1475-10-06,Bochnia,1480-07-10,Tarnobrzeg
+25073,Mateusz,Górski,M,1475-10-11,Ostrowiec Świętokrzyski,1544-02-02,Tarnobrzeg
+25085,Antoni,Górski,M,1475-12-14,Opole,1514-10-07,Gorzów Wielkopolski
+25087,Andrzej,Górski,M,1475-12-23,Wałbrzych,1531-01-28,Wałbrzych
+25180,Jerzy,Górski,M,1476-02-24,Stettin,1535-01-18,Stargard
+25163,Mirosław,Górski,M,1476-03-22,Przemyśl,1513-08-06,Ostrowiec Świętokrzyski
+25186,Franciszek,Górski,M,1476-03-27,Opole,1487-01-18,Jelenia Góra
+25182,Stefan,Górski,M,1476-05-02,Jelenia Góra,1476-02-27,Wałbrzych
+25198,Ignacy,Górski,M,1476-05-12,Wałbrzych,1521-11-14,Legnica
+25191,Tomasz,Górski,M,1476-05-23,Chojnice,1476-01-24,Słupsk
+25152,Marian,Górski,M,1476-07-27,Kraków,1522-02-16,Sandomierz
+25212,Wojciech,Górski,M,1476-08-01,Elbląg,1519-05-26,Elbląg
+25159,Wojciech,Górski,M,1476-08-02,Rzeszów,1543-08-07,Jasło
+25209,Mirosław,Górski,M,1476-09-24,Kraków,1479-05-21,Jasło
+25172,Leon,Górski,M,1476-10-22,Legnica,1566-10-09,Gorzów Wielkopolski
+25201,Tadeusz,Górski,M,1476-11-07,Opole,1495-11-19,Legnica
+25243,Wojciech,Górski,M,1477-01-24,Gorzów Wielkopolski,1533-02-10,Wałbrzych
+25261,Julian,Górski,M,1477-01-28,Słupsk,1480-12-04,Stargard
+25217,Szymon,Górski,M,1477-02-06,Kołobrzeg,1482-12-18,Elbląg
+25270,Leon,Górski,M,1477-02-28,Rzeszów,1490-04-06,Zakopane
+25253,Józef,Górski,M,1477-03-05,Przemyśl,1526-04-09,Przemyśl
+25248,Paweł,Górski,M,1477-03-12,Kraków,1514-07-27,Zakopane
+25214,Szymon,Górski,M,1477-03-20,Wałbrzych,1538-12-09,Wałbrzych
+25224,Filip,Górski,M,1477-03-27,Jelenia Góra,1494-02-04,Gorzów Wielkopolski
+25299,Marian,Górski,M,1477-06-18,Kołobrzeg,1517-03-09,Olsztyn
+25290,Wiesław,Górski,M,1477-06-19,Przemyśl,1539-11-22,Bochnia
+25262,Marcin,Górski,M,1477-08-11,Chojnice,1526-08-02,Olsztyn
+25234,Wojciech,Górski,M,1477-09-25,Zielona Góra,1481-04-28,Jelenia Góra
+25266,Bartosz,Górski,M,1477-11-27,Breslau,1517-11-10,Wałbrzych
+25268,Stanisław,Górski,M,1477-12-21,Sopot,1502-08-11,Słupsk
+25328,Mateusz,Górski,M,1478-01-15,Sanok,1540-01-02,Oświęcim
+25304,Józef,Górski,M,1478-02-16,Przemyśl,1540-06-11,Sanok
+25307,Leon,Górski,M,1478-02-26,Breslau,1497-02-25,Gorzów Wielkopolski
+25344,Henryk,Górski,M,1478-04-27,Zakopane,1517-05-12,Zakopane
+25340,Krzysztof,Górski,M,1478-05-13,Kielce,1502-06-27,Ostrowiec Świętokrzyski
+25332,Grzegorz,Górski,M,1478-05-14,Kielce,1542-09-11,Oświęcim
+25377,Czesław,Górski,M,1478-06-20,Tarnobrzeg,1479-02-25,Rzeszów
+25329,Krzysztof,Górski,M,1478-06-24,Słupsk,1530-08-11,Gdynia
+25368,Łukasz,Górski,M,1478-09-05,Zakopane,1478-05-14,Sanok
+25343,Jakub,Górski,M,1478-10-08,Koszalin,1543-01-13,Stargard
+25346,Antoni,Górski,M,1478-10-15,Jelenia Góra,1529-02-07,Świdnica
+25352,Ryszard,Górski,M,1478-10-18,Breslau,1517-11-12,Świdnica
+25370,Filip,Górski,M,1478-12-05,Świdnica,1547-08-08,Breslau
+25354,Kazimierz,Górski,M,1478-12-24,Bochnia,1535-08-28,Tarnobrzeg
+25388,Leon,Górski,M,1479-01-22,Jelenia Góra,1555-08-19,Gorzów Wielkopolski
+25381,Stanisław,Górski,M,1479-01-23,Kielce,1479-08-03,Tarnobrzeg
+25414,Filip,Górski,M,1479-01-24,Wałbrzych,1523-04-15,Wałbrzych
+25383,Jan,Górski,M,1479-02-02,Tarnów,1535-09-07,Tarnobrzeg
+25435,Marian,Górski,M,1479-02-08,Sandomierz,1480-04-05,Przemyśl
+25450,Franciszek,Górski,M,1479-04-11,Bochnia,1522-08-17,Tarnów
+25389,Filip,Górski,M,1479-06-06,Breslau,1560-12-26,Świdnica
+25442,Wiesław,Górski,M,1479-06-08,Breslau,1521-09-04,Gorzów Wielkopolski
+25443,Marcin,Górski,M,1479-06-10,Wałbrzych,1482-12-14,Zielona Góra
+25400,Marian,Górski,M,1479-06-26,Sandomierz,1550-04-28,Krosno
+25410,Grzegorz,Górski,M,1479-06-26,Ostrowiec Świętokrzyski,1551-11-22,Sanok
+25451,Józef,Górski,M,1479-07-05,Zielona Góra,1557-10-18,Jelenia Góra
+25418,Wiesław,Górski,M,1479-09-13,Danzig,1551-04-13,Malbork
+25387,Leon,Górski,M,1479-09-14,Gorzów Wielkopolski,1500-08-09,Zielona Góra
+25427,Julian,Górski,M,1479-11-17,Opole,1563-04-14,Breslau
+25445,Jan,Górski,M,1479-11-19,Rzeszów,1534-12-27,Krosno
+25382,Władysław,Górski,M,1479-12-17,Gorzów Wielkopolski,1527-08-19,Jelenia Góra
+25465,Michał,Górski,M,1479-12-24,Zielona Góra,1533-03-17,Breslau
+25409,Jan,Górski,M,1479-12-27,Zielona Góra,1548-08-20,Gorzów Wielkopolski
+25541,Paweł,Górski,M,1480-01-11,Słupsk,1525-06-09,Elbląg
+25518,Marek,Górski,M,1480-02-05,Wejherowo,1481-01-14,Wejherowo
+25475,Mirosław,Górski,M,1480-02-11,Wałbrzych,1480-02-27,Gorzów Wielkopolski
+25507,Szymon,Górski,M,1480-02-15,Sandomierz,1480-09-01,Sandomierz
+25491,Jan,Górski,M,1480-04-12,Krosno,1480-02-27,Sandomierz
+25515,Adam,Górski,M,1480-05-04,Świdnica,1546-05-28,Jelenia Góra
+25523,Jan,Górski,M,1480-07-17,Opole,1558-08-13,Gorzów Wielkopolski
+25481,Józef,Górski,M,1480-08-06,Legnica,1507-09-27,Gorzów Wielkopolski
+25535,Marcin,Górski,M,1480-08-25,Świdnica,1482-09-23,Breslau
+25558,Bartosz,Górski,M,1480-09-17,Ostrowiec Świętokrzyski,1483-07-12,Sandomierz
+25556,Zygmunt,Górski,M,1480-12-04,Legnica,1526-09-18,Jelenia Góra
+25522,Antoni,Górski,M,1480-12-19,Breslau,1484-05-07,Wałbrzych
+25632,Mateusz,Górski,M,1481-01-05,Wałbrzych,1547-01-24,Legnica
+25587,Ignacy,Górski,M,1481-04-20,Breslau,1530-06-28,Świdnica
+25608,Władysław,Górski,M,1481-04-28,Malbork,1546-04-26,Świnoujście
+25606,Julian,Górski,M,1481-05-21,Stargard,1528-03-22,Olsztyn
+25592,Maciej,Górski,M,1481-06-19,Świdnica,1545-06-10,Zielona Góra
+25589,Czesław,Górski,M,1481-07-05,Legnica,1505-03-11,Breslau
+25624,Józef,Górski,M,1481-07-08,Legnica,1547-11-01,Zielona Góra
+25600,Bartosz,Górski,M,1481-08-09,Zielona Góra,1481-10-15,Legnica
+25601,Stanisław,Górski,M,1481-08-15,Świdnica,1545-09-11,Wałbrzych
+25584,Leon,Górski,M,1481-08-19,Sanok,1551-11-07,Tarnów
+25633,Ignacy,Górski,M,1481-08-26,Przemyśl,1538-04-07,Bochnia
+25583,Kazimierz,Górski,M,1481-09-23,Świdnica,1545-04-10,Opole
+25565,Julian,Górski,M,1481-11-07,Breslau,1485-08-10,Świdnica
+25575,Jan,Górski,M,1481-11-14,Ostrowiec Świętokrzyski,1535-07-25,Sandomierz
+25735,Andrzej,Górski,M,1482-01-20,Tarnobrzeg,1526-04-17,Sandomierz
+25641,Kamil,Górski,M,1482-01-21,Jelenia Góra,1532-02-07,Legnica
+25639,Maciej,Górski,M,1482-01-22,Legnica,1538-07-18,Breslau
+25650,Henryk,Górski,M,1482-02-01,Świdnica,1568-05-11,Świdnica
+25716,Krzysztof,Górski,M,1482-02-03,Opole,1483-05-10,Jelenia Góra
+25661,Michał,Górski,M,1482-02-17,Słupsk,1545-01-17,Kołobrzeg
+25694,Maciej,Górski,M,1482-02-17,Zakopane,1536-11-15,Tarnów
+25733,Henryk,Górski,M,1482-02-17,Świdnica,1528-09-24,Gorzów Wielkopolski
+25705,Łukasz,Górski,M,1482-02-25,Rzeszów,1534-04-28,Kielce
+25674,Adam,Górski,M,1482-03-10,Jasło,1538-10-06,Bochnia
+25665,Marcin,Górski,M,1482-03-13,Breslau,1566-02-04,Jelenia Góra
+25657,Ryszard,Górski,M,1482-04-02,Malbork,1482-02-14,Sopot
+25692,Marek,Górski,M,1482-04-24,Bochnia,1548-09-01,Przemyśl
+25651,Stanisław,Górski,M,1482-05-07,Koszalin,1541-06-23,Kołobrzeg
+25658,Filip,Górski,M,1482-05-27,Sanok,1555-11-21,Nowy Sącz
+25659,Stanisław,Górski,M,1482-05-28,Przemyśl,1482-02-07,Kielce
+25638,Grzegorz,Górski,M,1482-06-01,Gorzów Wielkopolski,1545-03-09,Legnica
+25727,Maciej,Górski,M,1482-06-05,Jasło,1553-03-28,Jasło
+25683,Wiesław,Górski,M,1482-07-15,Wałbrzych,1482-04-08,Zielona Góra
+25671,Szymon,Górski,M,1482-07-17,Zielona Góra,1563-04-20,Opole
+25676,Adam,Górski,M,1482-08-20,Legnica,1492-07-01,Breslau
+25669,Jan,Górski,M,1482-09-02,Tarnów,1534-11-22,Bochnia
+25730,Julian,Górski,M,1482-09-16,Tarnobrzeg,1538-11-02,Kielce
+25726,Kamil,Górski,M,1482-09-17,Koszalin,1542-05-11,Wejherowo
+25654,Wiesław,Górski,M,1482-10-11,Wałbrzych,1485-07-05,Gorzów Wielkopolski
+25640,Bartosz,Górski,M,1482-10-24,Legnica,1558-03-19,Jelenia Góra
+25663,Bartosz,Górski,M,1482-10-26,Przemyśl,1527-01-03,Tarnobrzeg
+25712,Grzegorz,Górski,M,1482-11-12,Opole,1482-08-09,Opole
+25706,Franciszek,Górski,M,1482-11-28,Gorzów Wielkopolski,1551-06-03,Zielona Góra
+25781,Tomasz,Górski,M,1483-02-13,Jasło,1507-03-17,Sanok
+25802,Tadeusz,Górski,M,1483-02-14,Gdynia,1552-07-01,Gdynia
+25818,Krzysztof,Górski,M,1483-02-18,Wałbrzych,1486-11-26,Legnica
+25755,Czesław,Górski,M,1483-03-07,Wałbrzych,1534-09-13,Wałbrzych
+25797,Zygmunt,Górski,M,1483-03-17,Gorzów Wielkopolski,1485-09-03,Zielona Góra
+25744,Kamil,Górski,M,1483-03-28,Zakopane,1519-09-11,Kraków
+25815,Jerzy,Górski,M,1483-04-03,Sanok,1535-10-20,Tarnobrzeg
+25768,Ignacy,Górski,M,1483-04-19,Wałbrzych,1484-05-03,Gorzów Wielkopolski
+25764,Marcin,Górski,M,1483-04-22,Tarnobrzeg,1545-12-22,Rzeszów
+25787,Tadeusz,Górski,M,1483-06-12,Legnica,1483-10-16,Jelenia Góra
+25814,Marian,Górski,M,1483-07-11,Świdnica,1539-11-27,Legnica
+25767,Kamil,Górski,M,1483-07-15,Krosno,1561-04-25,Nowy Sącz
+25789,Paweł,Górski,M,1483-08-12,Sandomierz,1500-10-01,Ostrowiec Świętokrzyski
+25803,Mateusz,Górski,M,1483-08-17,Zakopane,1535-03-19,Jasło
+25790,Zygmunt,Górski,M,1483-09-01,Opole,1530-11-02,Gorzów Wielkopolski
+25739,Mirosław,Górski,M,1483-09-03,Jelenia Góra,1522-10-14,Opole
+25819,Filip,Górski,M,1483-10-14,Wałbrzych,1536-03-10,Legnica
+25762,Leon,Górski,M,1483-11-06,Zielona Góra,1483-06-03,Opole
+25741,Kazimierz,Górski,M,1483-11-25,Zielona Góra,1484-09-04,Zielona Góra
+25746,Jakub,Górski,M,1483-12-17,Zielona Góra,1540-06-09,Gorzów Wielkopolski
+25808,Michał,Górski,M,1483-12-28,Gorzów Wielkopolski,1550-10-18,Opole
+25884,Józef,Górski,M,1484-01-20,Bochnia,1534-02-27,Kielce
+25820,Jerzy,Górski,M,1484-02-03,Przemyśl,1484-10-17,Kraków
+25850,Czesław,Górski,M,1484-02-08,Zielona Góra,1552-08-11,Breslau
+25871,Henryk,Górski,M,1484-03-01,Legnica,1557-09-10,Legnica
+25873,Jerzy,Górski,M,1484-03-04,Zielona Góra,1484-10-22,Świdnica
+25881,Szymon,Górski,M,1484-03-17,Przemyśl,1522-11-16,Bochnia
+25834,Stanisław,Górski,M,1484-03-24,Tarnów,1540-06-21,Bochnia
+25879,Tadeusz,Górski,M,1484-04-13,Zakopane,1484-12-19,Zakopane
+25896,Tomasz,Górski,M,1484-04-22,Świdnica,1484-10-02,Zielona Góra
+25889,Marek,Górski,M,1484-05-07,Sandomierz,1547-06-16,Przemyśl
+25901,Stefan,Górski,M,1484-05-25,Opole,1484-02-22,Zielona Góra
+25899,Szymon,Górski,M,1484-05-27,Opole,1484-08-18,Zielona Góra
+25853,Zygmunt,Górski,M,1484-06-08,Oświęcim,1540-10-15,Nowy Sącz
+25849,Stanisław,Górski,M,1484-08-28,Elbląg,1489-11-18,Wejherowo
+25824,Łukasz,Górski,M,1484-10-23,Wałbrzych,1509-09-09,Jelenia Góra
+25870,Antoni,Górski,M,1484-10-23,Świdnica,1551-05-27,Jelenia Góra
+25868,Stanisław,Górski,M,1484-11-09,Zakopane,1544-09-26,Tarnobrzeg
+25842,Henryk,Górski,M,1484-11-19,Breslau,1530-06-19,Zielona Góra
+25830,Julian,Górski,M,1484-11-21,Tarnów,1541-10-03,Przemyśl
+25888,Zygmunt,Górski,M,1484-12-07,Ostrowiec Świętokrzyski,1541-10-14,Kielce
+25897,Mirosław,Górski,M,1484-12-10,Sanok,1562-09-27,Tarnów
+25883,Mirosław,Górski,M,1484-12-15,Wałbrzych,1488-04-07,Świdnica
+25894,Tomasz,Górski,M,1484-12-23,Opole,1487-02-10,Zielona Góra
+25920,Mirosław,Górski,M,1485-01-16,Breslau,1533-02-27,Świdnica
+25996,Stanisław,Górski,M,1485-01-16,Przemyśl,1503-06-06,Kraków
+25923,Józef,Górski,M,1485-01-23,Legnica,1552-02-20,Wałbrzych
+25970,Adam,Górski,M,1485-02-09,Tarnobrzeg,1485-02-03,Sanok
+25932,Wojciech,Górski,M,1485-02-20,Kraków,1553-05-06,Kraków
+25951,Marian,Górski,M,1485-02-27,Sopot,1485-02-22,Gdynia
+25931,Józef,Górski,M,1485-03-07,Przemyśl,1564-09-27,Kraków
+25939,Mirosław,Górski,M,1485-03-18,Wałbrzych,1489-12-20,Opole
+26012,Antoni,Górski,M,1485-04-25,Świnoujście,1490-06-11,Olsztyn
+25914,Mirosław,Górski,M,1485-05-08,Zielona Góra,1488-01-07,Zielona Góra
+26005,Władysław,Górski,M,1485-06-10,Zielona Góra,1486-04-08,Jelenia Góra
+25917,Leon,Górski,M,1485-06-12,Ostrowiec Świętokrzyski,1487-11-09,Zakopane
+25933,Filip,Górski,M,1485-06-16,Jelenia Góra,1485-11-15,Zielona Góra
+25968,Jan,Górski,M,1485-06-28,Kraków,1522-11-07,Tarnów
+25936,Tomasz,Górski,M,1485-07-09,Gorzów Wielkopolski,1530-06-01,Jelenia Góra
+25963,Julian,Górski,M,1485-07-16,Przemyśl,1531-08-21,Rzeszów
+25916,Marek,Górski,M,1485-07-20,Oświęcim,1548-01-05,Sandomierz
+25985,Piotr,Górski,M,1485-08-14,Breslau,1512-08-21,Wałbrzych
+26011,Andrzej,Górski,M,1485-08-19,Opole,1486-01-14,Świdnica
+25988,Jakub,Górski,M,1485-10-06,Breslau,1527-03-22,Opole
+25999,Kamil,Górski,M,1485-10-12,Ostrowiec Świętokrzyski,1488-06-28,Oświęcim
+25940,Julian,Górski,M,1485-11-26,Jelenia Góra,1537-10-14,Jelenia Góra
+25981,Jan,Górski,M,1485-12-15,Breslau,1526-10-01,Breslau
+25944,Wojciech,Górski,M,1485-12-22,Stettin,1539-05-28,Gdynia
+25926,Andrzej,Górski,M,1485-12-26,Świdnica,1542-04-20,Opole
+26087,Tomasz,Górski,M,1486-01-20,Przemyśl,1533-04-19,Kraków
+26060,Paweł,Górski,M,1486-02-25,Świdnica,1486-10-26,Gorzów Wielkopolski
+26019,Ignacy,Górski,M,1486-03-14,Świnoujście,1502-04-25,Świnoujście
+26016,Mirosław,Górski,M,1486-04-02,Opole,1487-05-01,Wałbrzych
+26089,Ryszard,Górski,M,1486-04-08,Świdnica,1525-10-07,Gorzów Wielkopolski
+26075,Dariusz,Górski,M,1486-05-02,Legnica,1548-09-23,Jelenia Góra
+26106,Ignacy,Górski,M,1486-05-13,Malbork,1542-07-09,Sopot
+26070,Krzysztof,Górski,M,1486-05-17,Wałbrzych,1487-08-13,Gorzów Wielkopolski
+26117,Ryszard,Górski,M,1486-05-26,Malbork,1490-04-27,Kołobrzeg
+26037,Czesław,Górski,M,1486-06-02,Wejherowo,1540-08-02,Świnoujście
+26023,Marek,Górski,M,1486-06-12,Stargard,1535-09-03,Słupsk
+26071,Łukasz,Górski,M,1486-07-02,Świdnica,1544-08-22,Gorzów Wielkopolski
+26061,Mateusz,Górski,M,1486-07-14,Tarnów,1543-07-12,Rzeszów
+26042,Grzegorz,Górski,M,1486-07-21,Koszalin,1543-02-17,Stargard
+26111,Paweł,Górski,M,1486-08-06,Stettin,1536-11-14,Wejherowo
+26099,Tadeusz,Górski,M,1486-08-10,Stargard,1486-02-10,Kołobrzeg
+26095,Mirosław,Górski,M,1486-08-16,Jasło,1527-09-09,Bochnia
+26073,Łukasz,Górski,M,1486-08-25,Wałbrzych,1561-08-16,Jelenia Góra
+26063,Henryk,Górski,M,1486-08-28,Sopot,1547-06-27,Olsztyn
+26101,Ryszard,Górski,M,1486-09-18,Jelenia Góra,1548-11-20,Opole
+26046,Kazimierz,Górski,M,1486-09-28,Świdnica,1486-12-14,Opole
+26113,Łukasz,Górski,M,1486-09-28,Słupsk,1548-10-21,Chojnice
+26040,Ignacy,Górski,M,1486-10-05,Kielce,1491-11-07,Jasło
+26048,Łukasz,Górski,M,1486-10-15,Jelenia Góra,1575-02-01,Jelenia Góra
+26078,Stanisław,Górski,M,1486-11-01,Danzig,1491-06-16,Sopot
+26183,Mateusz,Górski,M,1487-01-16,Olsztyn,1550-09-23,Stargard
+26197,Jakub,Górski,M,1487-01-23,Nowy Sącz,1487-05-05,Krosno
+26146,Bartosz,Górski,M,1487-02-23,Kielce,1550-05-18,Sanok
+26147,Mirosław,Górski,M,1487-02-28,Kołobrzeg,1554-12-01,Olsztyn
+26166,Marek,Górski,M,1487-03-14,Breslau,1557-05-23,Gorzów Wielkopolski
+26188,Julian,Górski,M,1487-03-17,Breslau,1544-12-25,Breslau
+26167,Łukasz,Górski,M,1487-04-08,Świdnica,1499-08-14,Zielona Góra
+26202,Ryszard,Górski,M,1487-05-20,Świdnica,1490-04-24,Legnica
+26184,Maciej,Górski,M,1487-06-11,Zielona Góra,1488-12-27,Legnica
+26172,Adam,Górski,M,1487-07-04,Słupsk,1550-10-05,Danzig
+26173,Piotr,Górski,M,1487-07-21,Tarnobrzeg,1488-06-23,Kielce
+26178,Łukasz,Górski,M,1487-07-27,Danzig,1532-05-08,Koszalin
+26130,Grzegorz,Górski,M,1487-08-03,Sanok,1500-09-06,Rzeszów
+26122,Marian,Górski,M,1487-09-23,Kraków,1538-02-18,Tarnobrzeg
+26176,Marcin,Górski,M,1487-10-15,Gdynia,1557-11-10,Sopot
+26192,Leon,Górski,M,1487-11-02,Jelenia Góra,1527-07-14,Zielona Góra
+26186,Józef,Górski,M,1487-11-17,Chojnice,1576-01-02,Gdynia
+26128,Marek,Górski,M,1487-12-25,Gorzów Wielkopolski,1556-12-18,Opole
+26272,Szymon,Górski,M,1488-01-06,Gorzów Wielkopolski,1546-10-03,Legnica
+26234,Antoni,Górski,M,1488-02-01,Zielona Góra,1489-09-23,Legnica
+26237,Mateusz,Górski,M,1488-02-22,Legnica,1489-05-21,Opole
+26290,Dariusz,Górski,M,1488-03-15,Sanok,1543-08-03,Sandomierz
+26246,Dariusz,Górski,M,1488-03-28,Gorzów Wielkopolski,1531-08-01,Jelenia Góra
+26269,Marek,Górski,M,1488-04-01,Jelenia Góra,1528-12-23,Zielona Góra
+26281,Mateusz,Górski,M,1488-04-13,Zielona Góra,1553-03-17,Breslau
+26210,Szymon,Górski,M,1488-04-18,Danzig,1488-06-13,Koszalin
+26239,Tadeusz,Górski,M,1488-05-09,Chojnice,1545-06-17,Koszalin
+26260,Jerzy,Górski,M,1488-05-23,Zielona Góra,1491-07-27,Świdnica
+26291,Jakub,Górski,M,1488-06-19,Zakopane,1529-07-04,Kraków
+26261,Adam,Górski,M,1488-06-23,Wejherowo,1488-01-14,Świnoujście
+26241,Andrzej,Górski,M,1488-07-08,Gorzów Wielkopolski,1544-08-21,Jelenia Góra
+26276,Dariusz,Górski,M,1488-09-14,Breslau,1532-07-02,Wałbrzych
+26251,Józef,Górski,M,1488-11-05,Jelenia Góra,1526-04-11,Zielona Góra
+26206,Władysław,Górski,M,1488-11-24,Olsztyn,1552-09-15,Chojnice
+26233,Zygmunt,Górski,M,1488-12-06,Legnica,1563-09-01,Wałbrzych
+26262,Andrzej,Górski,M,1488-12-14,Rzeszów,1527-08-24,Rzeszów
+26289,Marcin,Górski,M,1488-12-22,Zielona Góra,1543-06-14,Gorzów Wielkopolski
+26285,Wiesław,Górski,M,1488-12-23,Świdnica,1489-05-19,Opole
+26337,Zygmunt,Górski,M,1489-01-04,Koszalin,1494-07-10,Słupsk
+26385,Stefan,Górski,M,1489-02-06,Breslau,1489-06-27,Legnica
+26366,Maciej,Górski,M,1489-02-17,Przemyśl,1540-01-18,Jasło
+26375,Leon,Górski,M,1489-02-20,Słupsk,1490-07-09,Sopot
+26315,Łukasz,Górski,M,1489-03-10,Gorzów Wielkopolski,1490-06-15,Breslau
+26371,Franciszek,Górski,M,1489-04-01,Kielce,1542-02-08,Nowy Sącz
+26332,Ignacy,Górski,M,1489-04-06,Rzeszów,1490-09-19,Rzeszów
+26319,Ryszard,Górski,M,1489-04-07,Zielona Góra,1539-06-08,Gorzów Wielkopolski
+26295,Paweł,Górski,M,1489-05-09,Sanok,1494-08-01,Zakopane
+26330,Wiesław,Górski,M,1489-05-19,Świdnica,1556-08-02,Wałbrzych
+26350,Filip,Górski,M,1489-05-20,Wałbrzych,1534-03-09,Jelenia Góra
+26363,Dariusz,Górski,M,1489-05-26,Sopot,1532-03-13,Elbląg
+26345,Antoni,Górski,M,1489-06-20,Sopot,1535-08-05,Elbląg
+26348,Zygmunt,Górski,M,1489-07-07,Zielona Góra,1490-08-13,Jelenia Góra
+26347,Marcin,Górski,M,1489-08-02,Opole,1490-01-01,Jelenia Góra
+26356,Szymon,Górski,M,1489-08-16,Legnica,1538-08-16,Wałbrzych
+26323,Jakub,Górski,M,1489-08-28,Ostrowiec Świętokrzyski,1546-02-24,Ostrowiec Świętokrzyski
+26328,Marek,Górski,M,1489-09-09,Sandomierz,1548-09-11,Tarnobrzeg
+26381,Maciej,Górski,M,1489-09-16,Wałbrzych,1548-07-15,Gorzów Wielkopolski
+26340,Marcin,Górski,M,1489-09-27,Ostrowiec Świętokrzyski,1489-03-02,Tarnów
+26335,Krzysztof,Górski,M,1489-10-03,Stettin,1553-09-13,Malbork
+26318,Jerzy,Górski,M,1489-11-03,Oświęcim,1548-01-28,Tarnobrzeg
+26343,Łukasz,Górski,M,1489-11-27,Słupsk,1492-07-01,Danzig
+26312,Krzysztof,Górski,M,1489-12-03,Breslau,1509-06-13,Opole
+26313,Jakub,Górski,M,1489-12-04,Gorzów Wielkopolski,1560-07-13,Legnica
+26299,Stefan,Górski,M,1489-12-09,Opole,1508-11-10,Legnica
+26480,Stefan,Górski,M,1490-01-11,Opole,1556-08-15,Opole
+26470,Grzegorz,Górski,M,1490-01-18,Kraków,1513-01-12,Jasło
+26406,Henryk,Górski,M,1490-01-25,Elbląg,1490-03-16,Słupsk
+26423,Tadeusz,Górski,M,1490-01-25,Legnica,1492-10-24,Gorzów Wielkopolski
+26435,Kazimierz,Górski,M,1490-02-27,Oświęcim,1537-12-24,Rzeszów
+26448,Wiesław,Górski,M,1490-03-19,Opole,1491-09-04,Zielona Góra
+26477,Antoni,Górski,M,1490-04-04,Stettin,1549-11-21,Świnoujście
+26463,Jakub,Górski,M,1490-04-08,Świdnica,1543-03-09,Świdnica
+26446,Dariusz,Górski,M,1490-04-24,Legnica,1495-12-06,Zielona Góra
+26457,Stefan,Górski,M,1490-04-25,Wejherowo,1510-08-27,Kołobrzeg
+26440,Marian,Górski,M,1490-05-15,Świdnica,1542-07-13,Jelenia Góra
+26453,Łukasz,Górski,M,1490-05-15,Jasło,1552-08-03,Tarnobrzeg
+26479,Józef,Górski,M,1490-05-19,Breslau,1502-02-20,Jelenia Góra
+26389,Henryk,Górski,M,1490-05-26,Gdynia,1491-01-26,Słupsk
+26421,Tomasz,Górski,M,1490-05-26,Wałbrzych,1505-04-20,Świdnica
+26443,Władysław,Górski,M,1490-06-01,Opole,1564-04-24,Świdnica
+26399,Bartosz,Górski,M,1490-06-03,Zakopane,1527-07-08,Krosno
+26487,Jakub,Górski,M,1490-06-04,Sanok,1510-09-10,Kraków
+26403,Jan,Górski,M,1490-06-25,Świdnica,1491-08-12,Legnica
+26465,Kazimierz,Górski,M,1490-07-19,Opole,1490-02-16,Opole
+26404,Zygmunt,Górski,M,1490-08-10,Opole,1551-08-01,Wałbrzych
+26415,Józef,Górski,M,1490-09-06,Danzig,1545-10-21,Wejherowo
+26439,Wiesław,Górski,M,1490-09-15,Wałbrzych,1491-04-28,Opole
+26408,Julian,Górski,M,1490-09-17,Świnoujście,1494-12-13,Danzig
+26475,Adam,Górski,M,1490-09-27,Legnica,1569-06-10,Świdnica
+26417,Krzysztof,Górski,M,1490-10-03,Gorzów Wielkopolski,1539-10-07,Breslau
+26428,Jakub,Górski,M,1490-10-12,Breslau,1541-07-19,Świdnica
+26485,Kazimierz,Górski,M,1490-10-16,Kielce,1543-03-22,Krosno
+26433,Henryk,Górski,M,1490-11-01,Elbląg,1491-04-12,Świnoujście
+26427,Władysław,Górski,M,1490-11-20,Przemyśl,1491-01-08,Tarnów
+26445,Wojciech,Górski,M,1490-12-17,Zakopane,1551-06-21,Sandomierz
+26578,Kazimierz,Górski,M,1491-01-01,Kielce,1562-12-21,Nowy Sącz
+26509,Czesław,Górski,M,1491-01-03,Zakopane,1543-08-26,Tarnobrzeg
+26512,Ignacy,Górski,M,1491-01-23,Gdynia,1537-06-16,Elbląg
+26564,Ignacy,Górski,M,1491-01-23,Opole,1539-01-28,Legnica
+26532,Zygmunt,Górski,M,1491-02-11,Oświęcim,1536-09-14,Tarnów
+26581,Jan,Górski,M,1491-03-15,Kołobrzeg,1493-03-28,Chojnice
+26499,Grzegorz,Górski,M,1491-03-20,Świdnica,1563-10-20,Legnica
+26527,Władysław,Górski,M,1491-05-02,Opole,1492-04-15,Opole
+26562,Stefan,Górski,M,1491-05-02,Sandomierz,1573-03-10,Nowy Sącz
+26526,Wojciech,Górski,M,1491-06-14,Zielona Góra,1531-02-11,Świdnica
+26586,Andrzej,Górski,M,1491-06-28,Chojnice,1530-03-03,Stettin
+26521,Kazimierz,Górski,M,1491-08-14,Sanok,1548-07-14,Sandomierz
+26565,Mateusz,Górski,M,1491-09-09,Zielona Góra,1520-08-06,Świdnica
+26541,Grzegorz,Górski,M,1491-10-05,Rzeszów,1564-08-19,Bochnia
+26551,Filip,Górski,M,1491-10-07,Jasło,1513-04-16,Oświęcim
+26553,Julian,Górski,M,1491-10-21,Krosno,1574-10-08,Tarnobrzeg
+26523,Jakub,Górski,M,1491-11-08,Jelenia Góra,1569-04-24,Świdnica
+26537,Henryk,Górski,M,1491-11-25,Gorzów Wielkopolski,1574-03-06,Wałbrzych
+26515,Władysław,Górski,M,1491-12-06,Breslau,1491-08-11,Jelenia Góra
+26575,Paweł,Górski,M,1491-12-12,Tarnów,1491-05-26,Oświęcim
+26546,Wiesław,Górski,M,1491-12-14,Breslau,1494-03-06,Świdnica
+26496,Wojciech,Górski,M,1491-12-21,Gorzów Wielkopolski,1512-02-16,Zielona Góra
+26676,Filip,Górski,M,1492-01-05,Krosno,1535-11-09,Oświęcim
+26589,Henryk,Górski,M,1492-01-11,Koszalin,1551-04-06,Stettin
+26644,Filip,Górski,M,1492-02-02,Zielona Góra,1514-11-07,Breslau
+26668,Leon,Górski,M,1492-02-02,Chojnice,1558-03-22,Chojnice
+26597,Szymon,Górski,M,1492-02-11,Rzeszów,1549-04-02,Tarnobrzeg
+26610,Grzegorz,Górski,M,1492-02-25,Świdnica,1516-10-01,Wałbrzych
+26611,Marek,Górski,M,1492-05-15,Wałbrzych,1522-04-19,Zielona Góra
+26657,Józef,Górski,M,1492-05-17,Zakopane,1566-04-26,Sandomierz
+26605,Maciej,Górski,M,1492-05-21,Koszalin,1518-11-14,Sopot
+26633,Jan,Górski,M,1492-06-23,Gorzów Wielkopolski,1552-04-03,Opole
+26596,Filip,Górski,M,1492-07-19,Gorzów Wielkopolski,1535-12-07,Gorzów Wielkopolski
+26656,Andrzej,Górski,M,1492-08-13,Stettin,1546-09-27,Świnoujście
+26642,Zygmunt,Górski,M,1492-08-14,Kołobrzeg,1558-05-08,Stargard
+26655,Jerzy,Górski,M,1492-08-27,Sanok,1494-01-15,Krosno
+26674,Antoni,Górski,M,1492-09-07,Słupsk,1516-11-27,Wejherowo
+26592,Zygmunt,Górski,M,1492-10-07,Jelenia Góra,1563-07-07,Wałbrzych
+26604,Władysław,Górski,M,1492-10-20,Legnica,1497-07-14,Jelenia Góra
+26618,Tomasz,Górski,M,1492-11-05,Rzeszów,1584-07-28,Tarnobrzeg
+26686,Andrzej,Górski,M,1492-11-14,Gorzów Wielkopolski,1545-10-05,Legnica
+26591,Michał,Górski,M,1492-11-15,Jelenia Góra,1555-09-13,Wałbrzych
+26620,Bartosz,Górski,M,1492-12-19,Gorzów Wielkopolski,1533-02-05,Opole
+26743,Andrzej,Górski,M,1493-01-05,Jasło,1539-09-23,Kraków
+26703,Ignacy,Górski,M,1493-02-21,Legnica,1515-08-11,Breslau
+26740,Marcin,Górski,M,1493-02-23,Legnica,1544-06-14,Jelenia Góra
+26717,Jakub,Górski,M,1493-03-08,Zielona Góra,1545-12-11,Breslau
+26738,Grzegorz,Górski,M,1493-03-10,Stargard,1494-06-12,Stargard
+26749,Filip,Górski,M,1493-03-11,Elbląg,1532-01-05,Gdynia
+26786,Filip,Górski,M,1493-04-07,Stargard,1494-01-26,Olsztyn
+26705,Kazimierz,Górski,M,1493-04-23,Wałbrzych,1494-01-10,Wałbrzych
+26730,Kazimierz,Górski,M,1493-04-24,Ostrowiec Świętokrzyski,1560-04-19,Tarnów
+26692,Franciszek,Górski,M,1493-05-07,Jelenia Góra,1553-06-05,Jelenia Góra
+26746,Grzegorz,Górski,M,1493-06-03,Świnoujście,1552-02-17,Słupsk
+26760,Marcin,Górski,M,1493-06-08,Breslau,1494-08-20,Breslau
+26745,Marcin,Górski,M,1493-06-12,Bochnia,1494-04-02,Oświęcim
+26722,Jerzy,Górski,M,1493-06-13,Chojnice,1520-10-23,Danzig
+26726,Piotr,Górski,M,1493-07-07,Kraków,1543-09-06,Tarnobrzeg
+26741,Maciej,Górski,M,1493-07-22,Wałbrzych,1553-05-17,Wałbrzych
+26732,Kazimierz,Górski,M,1493-08-18,Jasło,1552-12-06,Tarnów
+26733,Kazimierz,Górski,M,1493-09-11,Stargard,1496-12-21,Stargard
+26774,Ignacy,Górski,M,1493-09-26,Zielona Góra,1494-03-19,Świdnica
+26713,Maciej,Górski,M,1493-11-08,Świdnica,1561-05-09,Gorzów Wielkopolski
+26728,Władysław,Górski,M,1493-11-16,Opole,1547-06-02,Jelenia Góra
+26761,Piotr,Górski,M,1493-11-20,Zakopane,1556-01-08,Przemyśl
+26771,Bartosz,Górski,M,1493-12-12,Bochnia,1538-05-01,Bochnia
+26701,Mateusz,Górski,M,1493-12-22,Opole,1566-10-13,Zielona Góra
+26899,Łukasz,Górski,M,1494-03-11,Gorzów Wielkopolski,1495-10-02,Świdnica
+26793,Adam,Górski,M,1494-03-21,Wałbrzych,1573-02-19,Legnica
+26845,Ignacy,Górski,M,1494-04-11,Wałbrzych,1515-09-23,Jelenia Góra
+26864,Kazimierz,Górski,M,1494-04-23,Oświęcim,1495-06-09,Tarnobrzeg
+26858,Mateusz,Górski,M,1494-05-20,Świdnica,1547-09-09,Świdnica
+26886,Paweł,Górski,M,1494-06-07,Jelenia Góra,1579-02-24,Zielona Góra
+26834,Dariusz,Górski,M,1494-06-13,Przemyśl,1559-05-24,Ostrowiec Świętokrzyski
+26821,Maciej,Górski,M,1494-06-16,Breslau,1495-09-19,Legnica
+26863,Wiesław,Górski,M,1494-07-14,Zielona Góra,1563-07-06,Jelenia Góra
+26873,Władysław,Górski,M,1494-07-21,Sanok,1551-04-17,Zakopane
+26846,Wiesław,Górski,M,1494-08-08,Gdynia,1547-08-07,Kołobrzeg
+26806,Julian,Górski,M,1494-08-10,Jelenia Góra,1581-04-04,Świdnica
+26799,Marcin,Górski,M,1494-08-12,Chojnice,1494-01-02,Świnoujście
+26805,Władysław,Górski,M,1494-08-24,Świdnica,1551-02-19,Legnica
+26870,Andrzej,Górski,M,1494-09-02,Ostrowiec Świętokrzyski,1559-06-03,Kielce
+26872,Paweł,Górski,M,1494-09-12,Stargard,1573-02-04,Stettin
+26900,Marek,Górski,M,1494-09-26,Sanok,1536-08-23,Tarnów
+26825,Marian,Górski,M,1494-11-11,Zielona Góra,1497-04-07,Jelenia Góra
+26811,Stanisław,Górski,M,1494-11-12,Zielona Góra,1496-04-13,Gorzów Wielkopolski
+26837,Mateusz,Górski,M,1494-11-23,Olsztyn,1495-11-20,Świnoujście
+26830,Jakub,Górski,M,1494-11-24,Opole,1572-12-23,Opole
+26869,Tadeusz,Górski,M,1494-11-25,Świdnica,1558-12-03,Legnica
+26896,Marian,Górski,M,1494-12-07,Olsztyn,1580-03-26,Elbląg
+26850,Kamil,Górski,M,1494-12-11,Stargard,1545-10-25,Kołobrzeg
+26828,Bartosz,Górski,M,1494-12-13,Zakopane,1535-12-21,Tarnów
+26954,Mirosław,Górski,M,1495-02-21,Tarnów,1562-10-14,Zakopane
+26979,Piotr,Górski,M,1495-03-08,Wejherowo,1504-01-19,Chojnice
+26915,Maciej,Górski,M,1495-03-10,Świdnica,1508-11-06,Świdnica
+26989,Dariusz,Górski,M,1495-03-10,Gorzów Wielkopolski,1499-09-27,Breslau
+26934,Marian,Górski,M,1495-04-13,Legnica,1538-07-19,Świdnica
+26983,Ignacy,Górski,M,1495-05-09,Breslau,1544-03-22,Zielona Góra
+26906,Zygmunt,Górski,M,1495-06-13,Zielona Góra,1522-08-04,Zielona Góra
+26967,Kazimierz,Górski,M,1495-07-01,Rzeszów,1559-07-24,Oświęcim
+26955,Bartosz,Górski,M,1495-07-16,Opole,1555-04-14,Legnica
+26902,Grzegorz,Górski,M,1495-09-03,Breslau,1497-12-09,Zielona Góra
+26928,Krzysztof,Górski,M,1495-09-05,Wałbrzych,1549-07-04,Jelenia Góra
+26962,Julian,Górski,M,1495-09-08,Świdnica,1557-09-11,Gorzów Wielkopolski
+26961,Tadeusz,Górski,M,1495-09-19,Stargard,1495-06-16,Wejherowo
+26937,Franciszek,Górski,M,1495-10-14,Sopot,1495-08-16,Malbork
+26994,Filip,Górski,M,1495-10-17,Jelenia Góra,1553-09-26,Świdnica
+26947,Wojciech,Górski,M,1495-10-27,Świnoujście,1559-07-03,Wejherowo
+26904,Mateusz,Górski,M,1495-11-21,Ostrowiec Świętokrzyski,1575-07-03,Kielce
+27017,Julian,Górski,M,1496-01-14,Legnica,1496-02-15,Jelenia Góra
+27042,Michał,Górski,M,1496-01-14,Legnica,1547-08-09,Gorzów Wielkopolski
+27059,Ryszard,Górski,M,1496-03-04,Opole,1497-03-09,Legnica
+27061,Ryszard,Górski,M,1496-03-04,Ostrowiec Świętokrzyski,1536-03-01,Kraków
+27069,Ryszard,Górski,M,1496-03-06,Zielona Góra,1500-10-11,Gorzów Wielkopolski
+27029,Filip,Górski,M,1496-03-26,Wejherowo,1569-12-18,Malbork
+27039,Antoni,Górski,M,1496-03-27,Zielona Góra,1497-02-12,Legnica
+27043,Franciszek,Górski,M,1496-05-01,Przemyśl,1523-06-21,Nowy Sącz
+27019,Tadeusz,Górski,M,1496-05-02,Danzig,1556-05-09,Elbląg
+27098,Czesław,Górski,M,1496-05-16,Legnica,1573-03-06,Breslau
+27096,Maciej,Górski,M,1496-06-09,Jelenia Góra,1513-11-21,Jelenia Góra
+27025,Krzysztof,Górski,M,1496-06-17,Stettin,1500-05-06,Elbląg
+27038,Franciszek,Górski,M,1496-06-17,Zakopane,1569-05-06,Ostrowiec Świętokrzyski
+27034,Leon,Górski,M,1496-07-05,Chojnice,1550-08-18,Kołobrzeg
+27024,Henryk,Górski,M,1496-07-28,Jasło,1561-06-14,Kielce
+27016,Mateusz,Górski,M,1496-10-07,Sanok,1547-09-15,Tarnobrzeg
+27000,Dariusz,Górski,M,1496-10-14,Zielona Góra,1513-03-05,Świdnica
+27048,Grzegorz,Górski,M,1496-11-21,Opole,1543-11-12,Wałbrzych
+27015,Piotr,Górski,M,1496-11-25,Sandomierz,1497-06-14,Przemyśl
+27004,Tadeusz,Górski,M,1496-12-10,Jelenia Góra,1497-01-01,Gorzów Wielkopolski
+27063,Władysław,Górski,M,1496-12-14,Kołobrzeg,1542-07-16,Stargard
+27132,Adam,Górski,M,1497-02-10,Stargard,1501-06-23,Sopot
+27163,Jerzy,Górski,M,1497-02-14,Zielona Góra,1552-11-16,Legnica
+27148,Mirosław,Górski,M,1497-02-20,Kielce,1497-04-06,Kielce
+27183,Leon,Górski,M,1497-02-24,Zakopane,1551-05-03,Ostrowiec Świętokrzyski
+27116,Antoni,Górski,M,1497-03-09,Wałbrzych,1555-03-08,Jelenia Góra
+27169,Maciej,Górski,M,1497-03-17,Tarnów,1534-03-25,Kielce
+27196,Jerzy,Górski,M,1497-05-12,Krosno,1524-12-16,Krosno
+27204,Piotr,Górski,M,1497-05-27,Jelenia Góra,1553-11-23,Jelenia Góra
+27166,Kamil,Górski,M,1497-06-11,Sopot,1521-08-14,Chojnice
+27157,Marek,Górski,M,1497-06-17,Stargard,1525-01-16,Malbork
+27122,Ryszard,Górski,M,1497-06-25,Legnica,1573-04-05,Zielona Góra
+27193,Wojciech,Górski,M,1497-07-17,Wałbrzych,1536-08-08,Opole
+27186,Marian,Górski,M,1497-07-19,Sanok,1514-05-11,Nowy Sącz
+27125,Tadeusz,Górski,M,1497-09-18,Sopot,1561-02-01,Elbląg
+27129,Franciszek,Górski,M,1497-09-20,Bochnia,1554-02-24,Kraków
+27110,Szymon,Górski,M,1497-11-11,Gorzów Wielkopolski,1572-12-26,Świdnica
+27112,Ignacy,Górski,M,1497-12-03,Wałbrzych,1555-04-24,Gorzów Wielkopolski
+27200,Marian,Górski,M,1497-12-07,Opole,1500-06-19,Zielona Góra
+27211,Ryszard,Górski,M,1498-02-14,Opole,1538-03-20,Świdnica
+27219,Filip,Górski,M,1498-02-17,Opole,1542-02-15,Gorzów Wielkopolski
+27262,Jerzy,Górski,M,1498-02-24,Opole,1499-07-03,Jelenia Góra
+27278,Paweł,Górski,M,1498-02-24,Świdnica,1499-08-24,Wałbrzych
+27218,Tomasz,Górski,M,1498-02-26,Tarnobrzeg,1574-03-07,Sandomierz
+27258,Mirosław,Górski,M,1498-03-24,Zielona Góra,1499-10-07,Gorzów Wielkopolski
+27282,Jerzy,Górski,M,1498-04-09,Rzeszów,1552-03-19,Zakopane
+27267,Julian,Górski,M,1498-04-24,Jelenia Góra,1498-08-06,Gorzów Wielkopolski
+27227,Czesław,Górski,M,1498-05-25,Koszalin,1499-08-22,Świnoujście
+27232,Stanisław,Górski,M,1498-06-12,Breslau,1562-11-22,Wałbrzych
+27209,Czesław,Górski,M,1498-06-18,Koszalin,1549-05-04,Sopot
+27265,Szymon,Górski,M,1498-06-27,Wałbrzych,1568-09-15,Świdnica
+27275,Szymon,Górski,M,1498-07-13,Gorzów Wielkopolski,1500-04-24,Świdnica
+27241,Paweł,Górski,M,1498-08-05,Zielona Góra,1545-06-01,Świdnica
+27221,Marek,Górski,M,1498-08-25,Kielce,1574-07-06,Tarnów
+27225,Czesław,Górski,M,1498-09-05,Chojnice,1498-02-18,Koszalin
+27222,Mirosław,Górski,M,1498-09-11,Bochnia,1499-12-13,Bochnia
+27207,Mirosław,Górski,M,1498-11-14,Świdnica,1565-10-22,Zielona Góra
+27243,Ryszard,Górski,M,1498-11-14,Jasło,1571-10-19,Krosno
+27236,Ignacy,Górski,M,1498-11-22,Zakopane,1534-03-23,Nowy Sącz
+27249,Andrzej,Górski,M,1498-11-27,Koszalin,1560-03-14,Koszalin
+27279,Julian,Górski,M,1498-12-15,Gorzów Wielkopolski,1523-07-11,Wałbrzych
+27367,Szymon,Górski,M,1499-01-02,Opole,1500-01-02,Opole
+27342,Jerzy,Górski,M,1499-01-06,Kołobrzeg,1573-09-06,Danzig
+27363,Tadeusz,Górski,M,1499-01-20,Stettin,1500-03-23,Wejherowo
+27323,Dariusz,Górski,M,1499-02-02,Legnica,1559-10-01,Breslau
+27291,Leon,Górski,M,1499-02-03,Wałbrzych,1559-10-12,Legnica
+27319,Marcin,Górski,M,1499-02-19,Bochnia,1504-10-24,Sanok
+27343,Jakub,Górski,M,1499-02-21,Gorzów Wielkopolski,1571-07-03,Breslau
+27373,Julian,Górski,M,1499-03-13,Breslau,1580-08-15,Świdnica
+27322,Julian,Górski,M,1499-03-21,Gdynia,1574-04-16,Stettin
+27362,Paweł,Górski,M,1499-05-08,Kraków,1561-11-03,Sandomierz
+27361,Marian,Górski,M,1499-07-16,Chojnice,1500-01-27,Gdynia
+27297,Antoni,Górski,M,1499-08-01,Wałbrzych,1525-03-12,Świdnica
+27354,Henryk,Górski,M,1499-09-23,Zakopane,1574-02-14,Sandomierz
+27329,Kazimierz,Górski,M,1499-10-23,Legnica,1537-04-27,Świdnica
+27353,Jan,Górski,M,1499-11-02,Sandomierz,1567-05-05,Tarnobrzeg
+27302,Jakub,Górski,M,1499-11-20,Malbork,1558-08-23,Świnoujście
+27350,Adam,Górski,M,1499-11-25,Opole,1516-03-24,Jelenia Góra
+27467,Jerzy,Górski,M,1500-01-20,Ostrowiec Świętokrzyski,1552-10-18,Sandomierz
+27471,Stefan,Górski,M,1500-01-27,Legnica,1562-04-12,Opole
+27490,Jerzy,Górski,M,1500-01-28,Świdnica,1548-07-02,Breslau
+27470,Grzegorz,Górski,M,1500-02-11,Chojnice,1541-11-05,Słupsk
+27436,Adam,Górski,M,1500-02-28,Wałbrzych,1518-12-04,Breslau
+27445,Szymon,Górski,M,1500-03-13,Kielce,1530-02-19,Tarnobrzeg
+27463,Mirosław,Górski,M,1500-03-24,Ostrowiec Świętokrzyski,1519-08-10,Bochnia
+27409,Maciej,Górski,M,1500-04-07,Świdnica,1501-12-17,Opole
+27416,Ignacy,Górski,M,1500-04-08,Wałbrzych,1500-09-17,Opole
+27464,Ignacy,Górski,M,1500-04-14,Świdnica,1501-06-27,Breslau
+27425,Marek,Górski,M,1500-04-26,Gorzów Wielkopolski,1566-02-20,Gorzów Wielkopolski
+27485,Michał,Górski,M,1500-05-26,Ostrowiec Świętokrzyski,1540-12-12,Jasło
+27482,Ryszard,Górski,M,1500-06-04,Świdnica,1501-01-16,Wałbrzych
+27455,Adam,Górski,M,1500-07-03,Breslau,1555-06-05,Wałbrzych
+27440,Ryszard,Górski,M,1500-07-18,Tarnów,1504-10-05,Sandomierz
+27420,Tadeusz,Górski,M,1500-10-14,Gdynia,1563-07-09,Elbląg
+27454,Ryszard,Górski,M,1500-11-05,Wałbrzych,1556-01-17,Gorzów Wielkopolski
+27442,Stanisław,Górski,M,1500-11-17,Wałbrzych,1558-03-02,Wałbrzych
+27408,Wiesław,Górski,M,1500-11-25,Zielona Góra,1539-04-24,Legnica
+27472,Łukasz,Górski,M,1500-12-19,Tarnobrzeg,1501-04-10,Przemyśl
+27565,Łukasz,Górski,M,1501-01-15,Jasło,1566-06-15,Kielce
+27548,Maciej,Górski,M,1501-01-24,Wałbrzych,1514-04-06,Świdnica
+27505,Tadeusz,Górski,M,1501-02-08,Ostrowiec Świętokrzyski,1501-10-05,Przemyśl
+27520,Grzegorz,Górski,M,1501-04-01,Świdnica,1544-01-09,Jelenia Góra
+27568,Czesław,Górski,M,1501-04-19,Ostrowiec Świętokrzyski,1556-09-21,Krosno
+27497,Adam,Górski,M,1501-04-22,Malbork,1502-02-27,Stargard
+27561,Wojciech,Górski,M,1501-04-23,Opole,1528-07-25,Opole
+27574,Ignacy,Górski,M,1501-06-03,Krosno,1551-06-13,Kielce
+27576,Marek,Górski,M,1501-06-05,Świdnica,1553-08-12,Świdnica
+27536,Michał,Górski,M,1501-06-23,Gorzów Wielkopolski,1508-06-14,Breslau
+27563,Bartosz,Górski,M,1501-07-13,Jelenia Góra,1569-10-05,Świdnica
+27518,Maciej,Górski,M,1501-07-21,Stettin,1573-06-19,Stargard
+27533,Stanisław,Górski,M,1501-08-23,Krosno,1502-03-26,Sanok
+27531,Ryszard,Górski,M,1501-08-24,Legnica,1501-12-10,Breslau
+27521,Leon,Górski,M,1501-10-11,Legnica,1561-09-01,Wałbrzych
+27557,Tadeusz,Górski,M,1501-11-17,Nowy Sącz,1521-08-17,Tarnobrzeg
+27499,Kamil,Górski,M,1501-11-20,Świdnica,1504-11-06,Świdnica
+27668,Antoni,Górski,M,1502-02-10,Gorzów Wielkopolski,1548-04-28,Zielona Góra
+27645,Piotr,Górski,M,1502-02-27,Kraków,1502-08-22,Sandomierz
+27590,Franciszek,Górski,M,1502-04-04,Kielce,1564-01-09,Ostrowiec Świętokrzyski
+27627,Kazimierz,Górski,M,1502-06-12,Kraków,1570-08-06,Nowy Sącz
+27600,Stanisław,Górski,M,1502-09-19,Breslau,1558-03-05,Opole
+27591,Czesław,Górski,M,1502-10-05,Świdnica,1555-06-04,Wałbrzych
+27615,Adam,Górski,M,1502-10-23,Breslau,1540-12-27,Zielona Góra
+27612,Antoni,Górski,M,1502-11-10,Gorzów Wielkopolski,1503-03-16,Legnica
+27651,Wojciech,Górski,M,1502-12-22,Bochnia,1502-09-20,Sanok
+27672,Krzysztof,Górski,M,1502-12-24,Tarnobrzeg,1543-02-28,Sanok
+27744,Filip,Górski,M,1503-01-10,Wałbrzych,1567-05-16,Opole
+27681,Filip,Górski,M,1503-02-02,Kielce,1564-03-22,Kraków
+27676,Maciej,Górski,M,1503-03-03,Wejherowo,1532-08-05,Świnoujście
+27742,Kazimierz,Górski,M,1503-04-02,Oświęcim,1504-03-10,Ostrowiec Świętokrzyski
+27720,Leon,Górski,M,1503-04-19,Jelenia Góra,1503-08-13,Świdnica
+27764,Marcin,Górski,M,1503-06-15,Krosno,1503-05-05,Sandomierz
+27684,Kamil,Górski,M,1503-07-01,Legnica,1503-05-18,Wałbrzych
+27745,Antoni,Górski,M,1503-07-09,Breslau,1503-06-24,Breslau
+27713,Krzysztof,Górski,M,1503-07-12,Sanok,1592-05-19,Przemyśl
+27753,Paweł,Górski,M,1503-08-12,Świnoujście,1565-11-21,Danzig
+27765,Paweł,Górski,M,1503-09-02,Rzeszów,1566-05-07,Krosno
+27730,Jakub,Górski,M,1503-10-08,Kielce,1590-06-17,Ostrowiec Świętokrzyski
+27735,Franciszek,Górski,M,1503-10-13,Przemyśl,1508-10-21,Kielce
+27715,Zygmunt,Górski,M,1503-10-17,Olsztyn,1503-11-19,Danzig
+27727,Marek,Górski,M,1503-11-10,Breslau,1504-01-28,Świdnica
+27740,Tomasz,Górski,M,1503-11-28,Jelenia Góra,1508-02-18,Opole
+27726,Adam,Górski,M,1503-12-03,Wałbrzych,1507-01-16,Breslau
+27862,Bartosz,Górski,M,1504-03-28,Elbląg,1508-10-06,Chojnice
+27814,Władysław,Górski,M,1504-04-18,Rzeszów,1563-05-07,Kielce
+27802,Filip,Górski,M,1504-06-17,Oświęcim,1557-01-24,Krosno
+27791,Tadeusz,Górski,M,1504-06-27,Sanok,1571-09-07,Przemyśl
+27864,Tomasz,Górski,M,1504-08-12,Elbląg,1577-09-26,Gdynia
+27783,Piotr,Górski,M,1504-08-15,Jelenia Góra,1552-12-25,Opole
+27855,Kazimierz,Górski,M,1504-08-21,Zielona Góra,1580-04-01,Zielona Góra
+27840,Bartosz,Górski,M,1504-08-24,Nowy Sącz,1545-11-16,Ostrowiec Świętokrzyski
+27800,Antoni,Górski,M,1504-09-27,Ostrowiec Świętokrzyski,1560-09-03,Sanok
+27774,Piotr,Górski,M,1504-11-04,Kraków,1522-11-18,Nowy Sącz
+27848,Dariusz,Górski,M,1504-12-09,Zielona Góra,1569-09-20,Opole
+27856,Michał,Górski,M,1504-12-18,Bochnia,1519-05-12,Nowy Sącz
+27940,Henryk,Górski,M,1505-03-06,Legnica,1508-01-17,Zielona Góra
+27938,Jakub,Górski,M,1505-03-08,Tarnów,1508-09-23,Bochnia
+27944,Ignacy,Górski,M,1505-04-15,Breslau,1564-01-26,Świdnica
+27920,Wiesław,Górski,M,1505-04-26,Gorzów Wielkopolski,1518-08-22,Wałbrzych
+27866,Jan,Górski,M,1505-06-01,Sopot,1559-08-24,Świnoujście
+27903,Mateusz,Górski,M,1505-06-02,Jasło,1510-05-13,Bochnia
+27925,Kazimierz,Górski,M,1505-06-09,Ostrowiec Świętokrzyski,1587-07-13,Oświęcim
+27966,Julian,Górski,M,1505-07-01,Gorzów Wielkopolski,1508-07-22,Breslau
+27958,Mateusz,Górski,M,1505-07-13,Jelenia Góra,1564-05-03,Gorzów Wielkopolski
+27936,Wiesław,Górski,M,1505-08-03,Przemyśl,1552-03-12,Jasło
+27923,Józef,Górski,M,1505-09-03,Jasło,1576-06-10,Bochnia
+27889,Julian,Górski,M,1505-09-19,Słupsk,1582-11-19,Olsztyn
+27876,Jerzy,Górski,M,1505-10-19,Słupsk,1506-02-03,Olsztyn
+27906,Bartosz,Górski,M,1505-10-20,Breslau,1547-02-21,Świdnica
+27880,Piotr,Górski,M,1505-10-28,Opole,1506-02-04,Jelenia Góra
+27933,Andrzej,Górski,M,1505-11-05,Sanok,1506-12-27,Tarnów
+27965,Maciej,Górski,M,1505-11-09,Sandomierz,1505-02-18,Sandomierz
+27907,Marcin,Górski,M,1505-12-10,Stargard,1596-03-13,Koszalin
+27908,Michał,Górski,M,1505-12-14,Sandomierz,1544-12-11,Kraków
+27960,Marian,Górski,M,1505-12-22,Zielona Góra,1576-03-23,Zielona Góra
+27900,Dariusz,Górski,M,1505-12-26,Kielce,1506-02-07,Przemyśl
+28010,Andrzej,Górski,M,1506-01-13,Sandomierz,1506-05-26,Bochnia
+28017,Marian,Górski,M,1506-01-13,Stettin,1510-09-21,Stettin
+27972,Ryszard,Górski,M,1506-01-14,Legnica,1594-04-11,Opole
+28009,Filip,Górski,M,1506-01-16,Breslau,1572-12-05,Jelenia Góra
+28041,Bartosz,Górski,M,1506-02-01,Legnica,1543-12-26,Świdnica
+27993,Jerzy,Górski,M,1506-02-08,Nowy Sącz,1506-03-22,Zakopane
+28018,Antoni,Górski,M,1506-02-13,Olsztyn,1525-12-04,Świnoujście
+28033,Mateusz,Górski,M,1506-02-18,Jelenia Góra,1564-04-23,Jelenia Góra
+28039,Jan,Górski,M,1506-03-23,Tarnobrzeg,1556-11-26,Przemyśl
+28040,Grzegorz,Górski,M,1506-05-15,Zielona Góra,1566-06-25,Breslau
+27980,Tadeusz,Górski,M,1506-05-28,Legnica,1554-11-26,Opole
+27981,Marek,Górski,M,1506-06-04,Rzeszów,1506-12-25,Nowy Sącz
+28034,Piotr,Górski,M,1506-09-16,Gorzów Wielkopolski,1582-09-24,Zielona Góra
+28029,Filip,Górski,M,1506-09-24,Legnica,1506-10-07,Zielona Góra
+28012,Ryszard,Górski,M,1506-09-27,Breslau,1509-05-23,Gorzów Wielkopolski
+28020,Jan,Górski,M,1506-10-28,Legnica,1552-02-19,Gorzów Wielkopolski
+27991,Łukasz,Górski,M,1506-11-15,Breslau,1510-11-21,Legnica
+28027,Marek,Górski,M,1506-12-21,Krosno,1557-03-19,Zakopane
+27976,Ryszard,Górski,M,1506-12-22,Tarnów,1544-11-19,Jasło
+28072,Maciej,Górski,M,1507-01-11,Legnica,1523-02-24,Opole
+28093,Piotr,Górski,M,1507-01-17,Przemyśl,1575-01-01,Tarnów
+28106,Jerzy,Górski,M,1507-01-22,Jelenia Góra,1566-07-18,Jelenia Góra
+28061,Szymon,Górski,M,1507-01-26,Koszalin,1557-08-09,Wejherowo
+28102,Ryszard,Górski,M,1507-03-24,Legnica,1565-04-18,Legnica
+28139,Jan,Górski,M,1507-04-12,Nowy Sącz,1548-07-03,Zakopane
+28122,Tomasz,Górski,M,1507-04-14,Breslau,1543-01-25,Legnica
+28085,Wiesław,Górski,M,1507-05-09,Ostrowiec Świętokrzyski,1507-11-03,Tarnów
+28112,Paweł,Górski,M,1507-06-08,Świdnica,1535-02-26,Zielona Góra
+28123,Jan,Górski,M,1507-06-16,Świdnica,1568-08-18,Zielona Góra
+28100,Tadeusz,Górski,M,1507-06-27,Legnica,1508-12-19,Wałbrzych
+28104,Julian,Górski,M,1507-07-11,Świnoujście,1508-07-15,Stettin
+28101,Jerzy,Górski,M,1507-07-18,Nowy Sącz,1508-11-02,Sanok
+28073,Stefan,Górski,M,1507-09-14,Wejherowo,1516-05-07,Elbląg
+28086,Wojciech,Górski,M,1507-10-11,Przemyśl,1569-04-16,Kielce
+28065,Antoni,Górski,M,1507-10-12,Gdynia,1507-01-05,Stargard
+28117,Paweł,Górski,M,1507-11-01,Jelenia Góra,1511-08-13,Jelenia Góra
+28097,Mirosław,Górski,M,1507-11-26,Legnica,1508-10-04,Legnica
+28055,Ignacy,Górski,M,1507-12-14,Zakopane,1508-11-11,Krosno
+28136,Filip,Górski,M,1507-12-24,Przemyśl,1510-05-07,Oświęcim
+28186,Szymon,Górski,M,1508-01-02,Rzeszów,1508-08-03,Rzeszów
+28210,Kamil,Górski,M,1508-01-18,Olsztyn,1508-07-26,Danzig
+28185,Stefan,Górski,M,1508-03-05,Koszalin,1509-09-11,Malbork
+28146,Wiesław,Górski,M,1508-03-08,Olsztyn,1568-06-24,Słupsk
+28149,Marek,Górski,M,1508-03-24,Jelenia Góra,1589-05-01,Jelenia Góra
+28234,Filip,Górski,M,1508-04-13,Danzig,1508-04-18,Gdynia
+28202,Stanisław,Górski,M,1508-04-23,Stargard,1568-01-03,Gdynia
+28218,Mirosław,Górski,M,1508-05-19,Kielce,1555-05-28,Sanok
+28151,Paweł,Górski,M,1508-05-20,Nowy Sącz,1508-01-23,Bochnia
+28195,Czesław,Górski,M,1508-06-03,Kielce,1567-06-16,Rzeszów
+28233,Kamil,Górski,M,1508-06-11,Świdnica,1557-09-04,Świdnica
+28162,Wiesław,Górski,M,1508-08-02,Jasło,1581-01-18,Tarnobrzeg
+28180,Mirosław,Górski,M,1508-08-22,Chojnice,1586-04-12,Koszalin
+28206,Jerzy,Górski,M,1508-09-09,Opole,1585-10-12,Jelenia Góra
+28196,Kazimierz,Górski,M,1508-09-17,Zielona Góra,1570-11-13,Opole
+28184,Grzegorz,Górski,M,1508-10-04,Legnica,1549-10-27,Breslau
+28179,Piotr,Górski,M,1508-10-06,Wałbrzych,1547-11-15,Zielona Góra
+28227,Ryszard,Górski,M,1508-11-04,Jelenia Góra,1509-03-10,Wałbrzych
+28226,Wojciech,Górski,M,1508-12-19,Wejherowo,1557-04-06,Stettin
+28152,Józef,Górski,M,1508-12-21,Legnica,1554-04-24,Zielona Góra
+28161,Władysław,Górski,M,1508-12-26,Elbląg,1570-01-25,Malbork
+28264,Marek,Górski,M,1509-01-05,Kielce,1511-11-16,Tarnów
+28301,Bartosz,Górski,M,1509-01-11,Elbląg,1510-10-22,Kołobrzeg
+28291,Antoni,Górski,M,1509-03-10,Tarnów,1592-07-27,Przemyśl
+28314,Wojciech,Górski,M,1509-03-22,Jasło,1509-07-01,Nowy Sącz
+28323,Ignacy,Górski,M,1509-03-25,Rzeszów,1575-08-17,Przemyśl
+28305,Piotr,Górski,M,1509-04-23,Jelenia Góra,1564-04-18,Jelenia Góra
+28288,Jerzy,Górski,M,1509-04-27,Wałbrzych,1584-03-24,Wałbrzych
+28280,Marcin,Górski,M,1509-06-09,Wejherowo,1509-04-06,Kołobrzeg
+28315,Władysław,Górski,M,1509-06-12,Wałbrzych,1549-03-21,Wałbrzych
+28316,Stanisław,Górski,M,1509-07-02,Gorzów Wielkopolski,1556-10-18,Jelenia Góra
+28336,Kamil,Górski,M,1509-07-02,Jasło,1551-03-07,Jasło
+28326,Antoni,Górski,M,1509-07-10,Breslau,1548-09-17,Jelenia Góra
+28339,Henryk,Górski,M,1509-07-21,Stettin,1552-01-05,Stettin
+28331,Henryk,Górski,M,1509-08-07,Koszalin,1585-05-01,Stargard
+28304,Leon,Górski,M,1509-08-09,Zielona Góra,1565-09-02,Zielona Góra
+28303,Wiesław,Górski,M,1509-09-07,Breslau,1513-07-27,Gorzów Wielkopolski
+28274,Tomasz,Górski,M,1509-12-18,Rzeszów,1579-07-11,Ostrowiec Świętokrzyski
+28400,Zygmunt,Górski,M,1510-02-09,Wałbrzych,1571-03-03,Świdnica
+28369,Zygmunt,Górski,M,1510-03-09,Krosno,1549-08-26,Bochnia
+28422,Jan,Górski,M,1510-03-21,Malbork,1579-06-05,Stettin
+28348,Julian,Górski,M,1510-06-04,Legnica,1510-07-18,Breslau
+28353,Ryszard,Górski,M,1510-07-09,Opole,1569-11-05,Jelenia Góra
+28429,Andrzej,Górski,M,1510-07-15,Gorzów Wielkopolski,1582-07-10,Świdnica
+28436,Ignacy,Górski,M,1510-07-15,Zakopane,1574-07-28,Ostrowiec Świętokrzyski
+28427,Julian,Górski,M,1510-07-21,Gdynia,1511-06-11,Sopot
+28401,Henryk,Górski,M,1510-08-11,Breslau,1576-04-25,Jelenia Góra
+28370,Leon,Górski,M,1510-08-12,Sanok,1560-08-21,Zakopane
+28425,Stefan,Górski,M,1510-08-17,Rzeszów,1532-01-24,Krosno
+28383,Stefan,Górski,M,1510-09-02,Zakopane,1554-11-15,Oświęcim
+28416,Szymon,Górski,M,1510-11-02,Kołobrzeg,1511-03-10,Elbląg
+28371,Wiesław,Górski,M,1510-11-05,Przemyśl,1510-05-19,Oświęcim
+28374,Kamil,Górski,M,1510-11-27,Malbork,1551-06-26,Świnoujście
+28408,Krzysztof,Górski,M,1510-12-01,Jelenia Góra,1529-04-01,Legnica
+28414,Filip,Górski,M,1510-12-14,Zakopane,1576-07-12,Bochnia
+28419,Andrzej,Górski,M,1510-12-23,Kraków,1511-03-14,Sanok
+28420,Adam,Górski,M,1510-12-23,Świdnica,1574-04-10,Świdnica

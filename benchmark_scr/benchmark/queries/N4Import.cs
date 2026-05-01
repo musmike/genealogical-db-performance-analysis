@@ -6,6 +6,7 @@ namespace benchmark_scr.benchmark.queries {
         private Neo4jDriver driver = null!;
         private QueryRepo repo = null!;
         private readonly string path;
+        private DatabaseValidator validator = null!;
 
         public N4Import() {
             path = Configg.basePath;
@@ -21,6 +22,7 @@ namespace benchmark_scr.benchmark.queries {
             Console.WriteLine($"RAW DATASET: {env}");
 
             var dataset = Enum.Parse<Dataset>(env, ignoreCase: true);
+            validator = new DatabaseValidator(dataset);
 
             repo = new QueryRepo(path, dataset);
             
@@ -31,23 +33,24 @@ namespace benchmark_scr.benchmark.queries {
         
         [IterationSetup]
         public void IterationSetup() {
-            BashRunner.RunAsync("bash", repo.Neo4jDropDbScript)
+            BashRunner.RunAsync("bash", true, repo.Neo4jDropDbScript)
                 .GetAwaiter().GetResult();
         }
 
         [Benchmark]
         public async Task Import() {
-            await BashRunner.RunAsync("bash", repo.Neo4jImportScript);
+            await BashRunner.RunAsync("bash", true, repo.Neo4jImportScript);
         }
 
         [GlobalCleanup]
-        public void Cleanup() {
-            BashRunner.RunAsync("bash", repo.Neo4jCreateDbScript)
+        public async Task Cleanup() {
+            BashRunner.RunAsync("bash", true, repo.Neo4jCreateDbScript)
                 .GetAwaiter().GetResult();
             driver.ExecuteWriteScriptAsync(repo.Neo4jCreateIndexesCypher)
                 .GetAwaiter().GetResult();
             driver.ExecuteWriteScriptAsync("CALL db.awaitIndexes();")
                 .GetAwaiter().GetResult();
+            await validator.ValidateNeo4jAsync();
         }
     }
 }

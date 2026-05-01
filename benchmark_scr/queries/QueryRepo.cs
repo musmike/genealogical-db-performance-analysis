@@ -60,7 +60,9 @@ namespace benchmark_scr.queries {
         public QueryRepo(string basePath, Dataset dataset) {
             var suffix = DatasetSuffix[dataset];
 
-            string countsPath = Path.Combine(AppContext.BaseDirectory, "scenarios", $"expected_counts_{suffix}.json");
+            string countsPath = Path.Combine(AppContext.BaseDirectory, $"scenarios/scenario_validation/expected_data_{suffix}", 
+                $"expected_counts_{suffix}.json");
+            
             if (File.Exists(countsPath)) {
                 string json = File.ReadAllText(countsPath);
                 ExpectedCounts = JsonSerializer.Deserialize<Dictionary<string, int>>(json) ?? new Dictionary<string, int>();

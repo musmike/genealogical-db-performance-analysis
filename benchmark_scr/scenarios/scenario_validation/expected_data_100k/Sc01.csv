@@ -1,0 +1,5 @@
+LcaId,GivenName,Surname,Sex,BirthDate,BirthPlace,DeathDate,DeathPlace,PathFromA,PathFromB,TotalDist
+40147,Stefan,Górski,M,1608-04-01,Gdynia,1690-02-13,Sopot,8,8,16
+40281,Andrzej,Górski,M,1609-12-05,Stettin,1662-08-12,Kołobrzeg,8,8,16
+40392,Genowefa,Górska,F,1610-11-12,Olsztyn,1655-09-26,Danzig,8,8,16
+42122,Anna,Górska,F,1621-01-15,Świnoujście,1669-01-22,Koszalin,8,8,16

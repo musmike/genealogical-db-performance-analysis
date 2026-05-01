@@ -3,8 +3,7 @@
 namespace benchmark_scr {
 
     internal static class BashRunner {
-
-        public static async Task<int> RunAsync(string fileName, params string[] args) {
+        public static async Task<int> RunAsync(string fileName, bool silent = false, params string[] args) {
             var psi = new ProcessStartInfo {
                 FileName = fileName,
                 RedirectStandardOutput = true,
@@ -18,15 +17,18 @@ namespace benchmark_scr {
 
             using var process = new Process { StartInfo = psi };
 
-            process.OutputDataReceived += (_, e) => {
-                if (!string.IsNullOrEmpty(e.Data))
-                    Console.WriteLine(e.Data);
-            };
+            if (!silent)
+            {
+                process.OutputDataReceived += (_, e) => {
+                    if (!string.IsNullOrEmpty(e.Data))
+                        Console.WriteLine(e.Data);
+                };
 
-            process.ErrorDataReceived += (_, e) => {
-                if (!string.IsNullOrEmpty(e.Data))
-                    Console.Error.WriteLine(e.Data);
-            };
+                process.ErrorDataReceived += (_, e) => {
+                    if (!string.IsNullOrEmpty(e.Data))
+                        Console.Error.WriteLine(e.Data);
+                };
+            }
 
             process.Start();
             process.BeginOutputReadLine();
@@ -34,6 +36,11 @@ namespace benchmark_scr {
 
             await process.WaitForExitAsync();
             return process.ExitCode;
+        }
+        
+        public static Task<int> RunAsync(string fileName, params string[] args)
+        {
+            return RunAsync(fileName, true, args);
         }
     }
 }

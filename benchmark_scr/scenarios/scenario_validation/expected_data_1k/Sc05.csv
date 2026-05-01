@@ -1,0 +1,634 @@
+RelativeId,Generation,GivenName,Surname,Sex,BirthDate,BirthPlace,DeathDate,DeathPlace,BurialPlace,CauseOfDeath,FatherId,MotherId
+74,1,Ryszard,Kowalski,M,1673-07-06,Zamość,1709-10-27,Radom,Cemetery in Radom,Fire,72,71
+77,1,Mirosław,Kowalski,M,1675-05-10,Ciechanów,1678-12-21,Ciechanów,Cemetery in Ciechanów,,72,71
+82,1,Piotr,Kowalski,M,1677-03-06,Łódź,1718-02-20,Płock,Cemetery in Płock,Plague,72,71
+86,1,Monika,Kowalska,F,1678-09-04,Siedlce,1683-09-26,Warszawa,Cemetery in Warszawa,Dropsy,72,71
+100,1,Monika,Kowalska,F,1681-03-22,Radom,1739-01-13,Sopot,Cemetery in Sopot,Starvation,72,71
+110,1,Adam,Kowalski,M,1683-08-25,Biała Podlaska,1740-08-25,Biała Podlaska,Cemetery in Biała Podlaska,Drowning,72,71
+114,1,Krzysztof,Kowalski,M,1684-11-22,Skierniewice,1735-11-05,Suwałki,Cemetery in Suwałki,Fever,72,71
+122,1,Ewa,Kowalska,F,1686-10-04,Suwałki,1754-07-09,Stettin,Cemetery in Stettin,Dropsy,72,71
+156,2,Wiesław,Kowalski,M,1699-03-25,Płock,1754-10-15,Białystok,Cemetery in Białystok,,74,88
+164,2,Urszula,Kowalska,F,1702-07-07,Białystok,1749-09-22,Olsztyn,Cemetery in Olsztyn,,74,88
+166,2,Wiesław,Kowalski,M,1703-06-06,Suwałki,1717-01-20,Suwałki,Cemetery in Suwałki,Fire,74,88
+169,2,Adam,Lewandowski,M,1703-01-25,Ciechanów,1731-02-12,Lublin,Cemetery in Lublin,Smallpox,39,100
+175,2,Monika,Kowalska,F,1705-09-11,Białystok,1731-03-26,Koszalin,Cemetery in Koszalin,Typhus,82,115
+176,2,Oliwia,Kowalska,F,1706-01-25,Białystok,1710-01-09,Biała Podlaska,Cemetery in Biała Podlaska,Dropsy,74,88
+179,2,Julia,Kowalska,F,1707-03-22,Biała Podlaska,1785-06-05,Rawicz,Cemetery in Rawicz,Stroke,110,95
+181,2,Bartosz,Kowalski,M,1708-03-06,Łódź,1765-11-14,Łódź,Cemetery in Łódź,Murder,74,88
+182,2,Wanda,Kowalska,F,1708-11-24,Radom,1787-09-22,Świnoujście,Cemetery in Świnoujście,Typhus,82,115
+183,2,Alicja,Kowalska,F,1708-01-23,Chełm,1708-12-01,Zamość,Cemetery in Zamość,,110,95
+188,2,Henryk,Kowalski,M,1710-07-08,Białystok,1715-03-21,Łomża,Cemetery in Łomża,Unknown,74,88
+190,2,Łukasz,Kowalski,M,1711-05-15,Łomża,1787-10-08,Warszawa,Cemetery in Warszawa,Dysentery,82,115
+191,2,Czesława,Kowalska,F,1711-08-14,Biała Podlaska,1756-03-13,Stettin,Cemetery in Stettin,Drowning,110,95
+195,2,Jerzy,Kowalski,M,1711-12-27,Lublin,1711-08-13,Płock,Cemetery in Płock,Dropsy,114,147
+199,2,Wanda,Kowalska,F,1713-01-04,Zamość,1717-08-07,Chełm,Cemetery in Chełm,,82,115
+200,2,Marek,Kowalski,M,1713-04-04,Ostrołęka,1757-11-05,Lublin,Cemetery in Lublin,Consumption,110,95
+201,2,Grażyna,Kowalska,F,1713-02-06,Suwałki,1771-06-12,Wałbrzych,Cemetery in Wałbrzych,Fever,114,147
+209,2,Urszula,Walczak,F,1714-05-05,Inowrocław,1753-09-04,Słupsk,Cemetery in Słupsk,Drowning,54,122
+210,2,Wanda,Kowalska,F,1715-05-11,Suwałki,1759-05-19,Kościan,Cemetery in Kościan,,110,95
+214,2,Marianna,Walczak,F,1715-04-13,Leszno,1736-04-27,Opole,Cemetery in Opole,Unknown,54,122
+216,2,Krzysztof,Kowalski,M,1716-12-24,Biała Podlaska,1770-09-24,Łódź,Cemetery in Łódź,,82,115
+217,2,Julia,Kowalska,F,1716-05-20,Białystok,1717-01-04,Zamość,Cemetery in Zamość,War casualty,110,95
+219,2,Jerzy,Kowalski,M,1716-04-06,Zamość,1796-01-20,Siedlce,Cemetery in Siedlce,Murder,114,147
+223,2,Paweł,Walczak,M,1716-03-06,Grudziądz,1717-12-17,Inowrocław,Cemetery in Inowrocław,Dysentery,54,122
+228,2,Józef,Kowalski,M,1718-06-03,Skierniewice,1800-07-28,Łódź,Cemetery in Łódź,Plague,82,115
+229,2,Tadeusz,Kowalski,M,1718-12-18,Biała Podlaska,1723-06-12,Siedlce,Cemetery in Siedlce,Fever,114,147
+230,2,Natalia,Walczak,F,1718-02-25,Grudziądz,1784-07-19,Chojnice,Cemetery in Chojnice,Fever,54,122
+237,2,Marek,Kowalski,M,1720-05-08,Zamość,1768-05-20,Łódź,Cemetery in Łódź,Apoplexy,114,147
+245,2,Jerzy,Kowalski,M,1722-12-18,Łomża,1768-07-02,Łódź,Cemetery in Łódź,,114,147
+254,2,Ignacy,Kowalski,M,1724-03-25,Lublin,1789-02-14,Suwałki,Cemetery in Suwałki,,114,147
+260,2,Oliwia,Kowalska,F,1725-01-16,Zamość,1803-05-26,Ostrołęka,Cemetery in Ostrołęka,Accident,114,147
+252,3,Zygmunt,Kowalski,M,1722-10-24,Zamość,1804-03-25,Suwałki,Cemetery in Suwałki,,156,162
+259,3,Grzegorz,Kowalski,M,1724-10-10,Zamość,1724-01-15,Siedlce,Cemetery in Siedlce,,156,162
+266,3,Elżbieta,Kowalska,F,1727-06-28,Warszawa,1777-09-20,Gdynia,Cemetery in Gdynia,Pneumonia,156,162
+268,3,Krzysztof,Kowalski,M,1729-01-18,Białystok,1811-08-02,Białystok,Cemetery in Białystok,Consumption,156,162
+269,3,Krystyna,Piotrowska,F,1729-05-28,Wejherowo,1794-01-25,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Plague,163,182
+270,3,Mirosław,Lewandowski,M,1729-05-07,Biała Podlaska,1783-12-08,Radom,Cemetery in Radom,Fire,169,172
+272,3,Mirosław,Kowalski,M,1731-12-15,Płock,1731-08-17,Zamość,Cemetery in Zamość,Dropsy,156,162
+274,3,Wiesław,Piotrowski,M,1731-01-14,Gdynia,1768-09-23,Koszalin,Cemetery in Koszalin,Infectious disease,151,175
+275,3,Bartosz,Kwiatkowski,M,1731-10-19,Wejherowo,1732-03-05,Świnoujście,Cemetery in Świnoujście,Smallpox,157,164
+277,3,Czesław,Walczak,M,1731-10-14,Posen,1794-12-13,Kościan,Cemetery in Kościan,Cancer,189,179
+278,3,Czesława,Piotrowska,F,1732-04-11,Słupsk,1808-03-25,Słupsk,Cemetery in Słupsk,,163,182
+279,3,Tadeusz,Lewandowski,M,1732-08-13,Białystok,1733-04-19,Chełm,Cemetery in Chełm,Smallpox,169,172
+280,3,Filip,Kowalski,M,1733-10-21,Ostrołęka,1734-01-21,Biała Podlaska,Cemetery in Biała Podlaska,Influenza,156,162
+281,3,Ignacy,Piotrowski,M,1733-01-02,Danzig,1787-04-19,Malbork,Cemetery in Malbork,Starvation,163,182
+282,3,Zygmunt,Kwiatkowski,M,1733-08-27,Kołobrzeg,1787-11-13,Koszalin,Cemetery in Koszalin,Infectious disease,157,164
+284,3,Joanna,Walczak,F,1733-12-19,Piła,1782-02-15,Gdynia,Cemetery in Gdynia,Dysentery,189,179
+286,3,Anna,Piotrowska,F,1734-06-06,Sopot,1806-03-11,Śrem,Cemetery in Śrem,,163,182
+289,3,Wanda,Kowalska,F,1735-08-26,Płock,1778-08-28,Świdnica,Cemetery in Świdnica,Dysentery,156,162
+290,3,Piotr,Piotrowski,M,1735-07-27,Elbląg,1735-06-03,Olsztyn,Cemetery in Olsztyn,Dropsy,163,182
+291,3,Elżbieta,Walczak,F,1735-11-25,Bromberg,1780-08-19,Sopot,Cemetery in Sopot,Typhus,189,179
+292,3,Maria,Kowalska,F,1735-01-24,Ostrołęka,1786-09-18,Września,Cemetery in Września,Accident,181,202
+293,3,Oliwia,Kowalska,F,1735-06-10,Siedlce,1736-07-27,Białystok,Cemetery in Białystok,Fire,200,172
+295,3,Julia,Kwiatkowska,F,1736-10-22,Malbork,1790-05-25,Breslau,Cemetery in Breslau,Fever,157,164
+296,3,Władysław,Kowalski,M,1736-12-16,Zamość,1737-05-17,Łódź,Cemetery in Łódź,Pneumonia,200,172
+297,3,Julian,Piotrowski,M,1736-12-05,Wałbrzych,1736-07-03,Opole,Cemetery in Opole,War casualty,131,214
+299,3,Rozalia,Kowalska,F,1737-10-10,Suwałki,1750-06-23,Warszawa,Cemetery in Warszawa,Unknown,156,162
+300,3,Zuzanna,Piotrowska,F,1737-03-03,Malbork,1737-01-07,Koszalin,Cemetery in Koszalin,,163,182
+301,3,Marek,Kowalski,M,1737-06-07,Białystok,1738-05-19,Płock,Cemetery in Płock,Plague,181,202
+302,3,Stefania,Kwiatkowska,F,1738-11-16,Wejherowo,1738-03-21,Sopot,Cemetery in Sopot,Stroke,157,164
+303,3,Natalia,Kowalska,F,1738-08-27,Suwałki,1777-05-09,Legnica,Cemetery in Legnica,Fire,181,202
+304,3,Józefa,Kowalska,F,1738-02-26,Suwałki,1749-11-17,Warszawa,Cemetery in Warszawa,Pneumonia,200,172
+306,3,Małgorzata,Piotrowska,F,1738-10-23,Opole,1742-07-19,Zielona Góra,Cemetery in Zielona Góra,Stroke,226,201
+309,3,Elżbieta,Kowalska,F,1740-01-12,Lublin,1805-11-24,Leszno,Cemetery in Leszno,Unknown,200,172
+310,3,Marek,Piotrowski,M,1740-06-05,Opole,1806-02-21,Jelenia Góra,Cemetery in Jelenia Góra,Unknown,226,201
+311,3,Aleksandra,Kowalska,F,1740-05-12,Skierniewice,1760-10-14,Łomża,Cemetery in Łomża,Unknown,237,173
+312,3,Tadeusz,Wiśniewski,M,1740-03-20,Stargard,1781-02-15,Wejherowo,Cemetery in Wejherowo,Accident,215,191
+313,3,Michał,Kwiatkowski,M,1740-07-01,Stargard,1819-10-23,Olsztyn,Cemetery in Olsztyn,Consumption,220,230
+314,3,Bartosz,Kwiatkowski,M,1741-08-06,Gdynia,1819-09-06,Olsztyn,Cemetery in Olsztyn,Unknown,157,164
+316,3,Katarzyna,Kowalska,F,1741-10-08,Biała Podlaska,1768-01-12,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Cholera,200,172
+319,3,Franciszek,Piotrowski,M,1741-04-17,Danzig,1743-09-06,Słupsk,Cemetery in Słupsk,Heart failure,212,209
+320,3,Andrzej,Kwiatkowski,M,1741-07-17,Kołobrzeg,1742-08-01,Wejherowo,Cemetery in Wejherowo,Dropsy,220,230
+321,3,Wojciech,Walczak,M,1741-03-22,Bromberg,1742-11-22,Konin,Cemetery in Konin,Pneumonia,240,210
+324,3,Stefan,Kowalski,M,1742-03-25,Łódź,1742-02-05,Płock,Cemetery in Płock,Pneumonia,237,173
+325,3,Grażyna,Kwiatkowska,F,1742-08-22,Kołobrzeg,1808-12-25,Wałbrzych,Cemetery in Wałbrzych,Fire,220,230
+326,3,Kazimiera,Walczak,F,1742-03-05,Inowrocław,1810-02-28,Jelenia Góra,Cemetery in Jelenia Góra,,240,210
+327,3,Alicja,Kwiatkowska,F,1743-06-19,Danzig,1789-01-27,Gdynia,Cemetery in Gdynia,Accident,157,164
+328,3,Barbara,Kowalska,F,1743-02-10,Skierniewice,1743-08-20,Ciechanów,Cemetery in Ciechanów,Accident,181,202
+329,3,Anna,Kowalska,F,1743-07-06,Zamość,1783-12-09,Płock,Cemetery in Płock,Starvation,200,172
+331,3,Wojciech,Piotrowski,M,1743-03-03,Jelenia Góra,1743-10-16,Opole,Cemetery in Opole,Plague,226,201
+332,3,Aleksandra,Wiśniewska,F,1743-08-23,Gdynia,1786-05-03,Stettin,Cemetery in Stettin,Dysentery,215,191
+333,3,Oliwia,Kwiatkowska,F,1743-02-27,Stettin,1783-03-27,Danzig,Cemetery in Danzig,Heart failure,220,230
+335,3,Genowefa,Wiśniewska,F,1744-03-02,Malbork,1798-08-17,Kościan,Cemetery in Kościan,Dropsy,215,191
+336,3,Anna,Piotrowska,F,1744-03-01,Malbork,1803-11-18,Olsztyn,Cemetery in Olsztyn,Murder,212,209
+337,3,Czesław,Walczak,M,1744-02-15,Leszno,1790-01-13,Śrem,Cemetery in Śrem,Plague,240,210
+338,3,Bartosz,Kowalski,M,1744-07-06,Radom,1792-04-10,Białystok,Cemetery in Białystok,Drowning,245,213
+339,3,Stanisław,Kwiatkowski,M,1745-07-12,Stargard,1749-04-11,Słupsk,Cemetery in Słupsk,Smallpox,157,164
+340,3,Stefan,Kowalski,M,1745-08-26,Radom,1745-01-19,Biała Podlaska,Cemetery in Biała Podlaska,,200,172
+342,3,Krystyna,Kowalska,F,1745-04-26,Skierniewice,1746-01-19,Łomża,Cemetery in Łomża,Infectious disease,237,173
+343,3,Maria,Kwiatkowska,F,1745-11-11,Koszalin,1815-06-02,Breslau,Cemetery in Breslau,,220,230
+346,3,Ignacy,Kowalski,M,1746-12-24,Radom,1802-09-07,Łódź,Cemetery in Łódź,War casualty,237,173
+347,3,Jadwiga,Wiśniewska,F,1746-09-01,Świnoujście,1809-10-28,Ostrów Wielkopolski,Cemetery in Ostrów Wielkopolski,Apoplexy,215,191
+348,3,Władysław,Kowalski,M,1746-01-07,Warszawa,1789-06-10,Ostrołęka,Cemetery in Ostrołęka,War casualty,245,213
+349,3,Mirosław,Piotrowski,M,1747-05-06,Danzig,1801-01-14,Malbork,Cemetery in Malbork,Heart failure,212,209
+350,3,Szymon,Kwiatkowski,M,1747-05-16,Kołobrzeg,1748-10-20,Danzig,Cemetery in Danzig,Unknown,220,230
+351,3,Antoni,Walczak,M,1747-09-16,Gostyń,1751-05-28,Września,Cemetery in Września,,240,210
+352,3,Jakub,Kowalski,M,1747-11-24,Białystok,1773-11-23,Siedlce,Cemetery in Siedlce,Unknown,181,265
+354,3,Stanisław,Piotrowski,M,1748-08-03,Breslau,1816-08-21,Zielona Góra,Cemetery in Zielona Góra,Cancer,226,201
+356,3,Julian,Kwiatkowski,M,1748-08-10,Olsztyn,1806-10-20,Koszalin,Cemetery in Koszalin,Starvation,220,230
+357,3,Bartosz,Kowalski,M,1748-07-02,Ostrołęka,1801-07-09,Łomża,Cemetery in Łomża,Consumption,245,213
+360,3,Czesława,Piotrowska,F,1749-09-19,Kołobrzeg,1750-05-13,Elbląg,Cemetery in Elbląg,,212,209
+362,3,Katarzyna,Walczak,F,1749-02-18,Inowrocław,1771-09-04,Grudziądz,Cemetery in Grudziądz,Typhus,240,210
+366,3,Michał,Piotrowski,M,1750-02-16,Koszalin,,,,,212,209
+367,3,Urszula,Walczak,F,1750-03-20,Thorn,1805-05-03,Kołobrzeg,Cemetery in Kołobrzeg,,240,210
+370,3,Szymon,Kwiatkowski,M,1751-11-25,Chojnice,1811-06-09,Koszalin,Cemetery in Koszalin,Murder,220,230
+372,3,Kazimierz,Kowalski,M,1751-11-22,Łomża,1751-04-23,Ostrołęka,Cemetery in Ostrołęka,Stroke,216,232
+374,3,Grażyna,Piotrowska,F,1752-06-21,Stargard,1755-09-16,Olsztyn,Cemetery in Olsztyn,Drowning,212,209
+377,3,Anna,Piotrowska,F,1753-09-25,Koszalin,1813-02-02,Stettin,Cemetery in Stettin,Unknown,212,209
+378,3,Mirosław,Walczak,M,1753-07-18,Bromberg,1754-04-07,Września,Cemetery in Września,Cholera,240,210
+380,3,Józefa,Kowalska,F,1753-01-04,Łódź,1801-07-16,Kołobrzeg,Cemetery in Kołobrzeg,Fire,216,232
+383,3,Halina,Walczak,F,1754-01-01,Włocławek,1794-08-17,Rawicz,Cemetery in Rawicz,Dropsy,240,210
+391,3,Alicja,Walczak,F,1756-03-28,Ostrów Wielkopolski,,,,,240,210
+406,3,Jadwiga,Kowalska,F,1759-09-01,Suwałki,1780-09-20,Ostrołęka,Cemetery in Ostrołęka,Accident,245,253
+446,3,Maria,Kowalska,F,1765-04-24,Warszawa,,,,,254,273
+451,3,Piotr,Kowalski,M,1766-09-06,Radom,1809-06-07,Lublin,Cemetery in Lublin,Smallpox,254,273
+460,3,Leokadia,Kowalska,F,1767-12-17,Chełm,1785-11-05,Skierniewice,Cemetery in Skierniewice,Unknown,254,273
+353,4,Maja,Wiśniewska,F,1747-04-28,Stargard,1783-02-07,Legnica,Cemetery in Legnica,Consumption,150,266
+359,4,Henryk,Piotrowski,M,1748-03-19,Gorzów Wielkopolski,1814-12-12,Wałbrzych,Cemetery in Wałbrzych,Fire,225,269
+364,4,Halina,Piotrowska,F,1749-11-07,Zielona Góra,1816-04-05,Września,Cemetery in Września,,225,269
+369,4,Stanisław,Piotrowski,M,1750-02-14,Legnica,1796-03-12,Breslau,Cemetery in Breslau,Murder,225,269
+376,4,Halina,Piotrowska,F,1752-08-10,Świdnica,1788-11-03,Siedlce,Cemetery in Siedlce,Plague,225,269
+379,4,Aleksandra,Piotrowska,F,1753-11-27,Breslau,1756-06-28,Świdnica,Cemetery in Świdnica,,225,269
+381,4,Marianna,Lewandowska,F,1753-06-24,Siedlce,1754-12-18,Ostrołęka,Cemetery in Ostrołęka,Fever,270,264
+382,4,Kazimiera,Kwiatkowska,F,1753-01-23,Sopot,1754-05-09,Świnoujście,Cemetery in Świnoujście,,255,291
+387,4,Kazimiera,Lewandowska,F,1755-05-14,Zamość,1812-06-01,Gdynia,Cemetery in Gdynia,Accident,270,264
+388,4,Natalia,Kwiatkowska,F,1755-08-24,Stargard,1756-01-01,Koszalin,Cemetery in Koszalin,Cholera,255,291
+389,4,Elżbieta,Wiśniewska,F,1755-11-12,Kołobrzeg,1825-11-26,Słupsk,Cemetery in Słupsk,Dysentery,256,278
+392,4,Tadeusz,Piotrowski,M,1756-01-05,Legnica,1771-08-25,Opole,Cemetery in Opole,Infectious disease,225,269
+393,4,Stefan,Kwiatkowski,M,1756-02-27,Stargard,1803-11-23,Słupsk,Cemetery in Słupsk,Plague,255,291
+394,4,Maciej,Lewandowski,M,1757-09-26,Chełm,1801-11-28,Chełm,Cemetery in Chełm,Accident,270,264
+396,4,Marek,Wiśniewski,M,1757-09-19,Świnoujście,,,,,256,278
+397,4,Stefania,Piotrowska,F,1757-05-26,Świdnica,1758-08-20,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Dysentery,238,295
+402,4,Czesław,Piotrowski,M,1759-08-06,Legnica,1824-02-03,Legnica,Cemetery in Legnica,,225,269
+403,4,Kazimierz,Wiśniewski,M,1759-05-03,Świnoujście,1804-09-18,Świnoujście,Cemetery in Świnoujście,Starvation,256,278
+404,4,Julian,Piotrowski,M,1759-12-14,Wałbrzych,,,,,238,295
+405,4,Maciej,Piotrowski,M,1759-02-26,Stargard,1810-07-14,Słupsk,Cemetery in Słupsk,Apoplexy,274,322
+407,4,Genowefa,Kwiatkowska,F,1760-07-13,Gdynia,1803-08-23,Gniezno,Cemetery in Gniezno,Fever,255,291
+409,4,Zuzanna,Piotrowska,F,1760-03-27,Legnica,,,,,238,295
+411,4,Bartosz,Walczak,M,1760-05-10,Śrem,1782-06-26,Śrem,Cemetery in Śrem,War casualty,244,292
+413,4,Mirosław,Piotrowski,M,1760-01-23,Opole,1760-06-25,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Murder,247,316
+414,4,Stefania,Piotrowska,F,1761-04-06,Legnica,1761-05-07,Jelenia Góra,Cemetery in Jelenia Góra,Accident,225,269
+415,4,Zuzanna,Wiśniewska,F,1761-05-06,Kołobrzeg,,,,,256,278
+416,4,Agnieszka,Piotrowska,F,1761-12-10,Chojnice,1766-12-15,Stargard,Cemetery in Stargard,Murder,274,322
+417,4,Dariusz,Wiśniewski,M,1761-08-17,Wejherowo,,,,,215,309
+418,4,Łukasz,Wiśniewski,M,1761-06-26,Stettin,1807-12-19,Elbląg,Cemetery in Elbląg,Pneumonia,312,204
+419,4,Stefania,Piotrowska,F,1761-06-13,Breslau,1761-04-05,Legnica,Cemetery in Legnica,Consumption,235,325
+420,4,Krzysztof,Kwiatkowski,M,1762-06-16,Gdynia,1821-05-18,Olsztyn,Cemetery in Olsztyn,Cancer,255,291
+422,4,Danuta,Piotrowska,F,1762-01-12,Zielona Góra,,,,,238,295
+423,4,Maria,Walczak,F,1762-10-20,Grudziądz,,,,,244,292
+425,4,Kazimiera,Piotrowska,F,1762-09-05,Świdnica,,,,,247,316
+427,4,Piotr,Walczak,M,1762-06-28,Inowrocław,1804-08-16,Kalisz,Cemetery in Kalisz,Starvation,240,303
+428,4,Alicja,Kwiatkowska,F,1762-05-27,Stargard,1819-03-07,Breslau,Cemetery in Breslau,Infectious disease,262,326
+429,4,Marcin,Wiśniewski,M,1763-03-09,Olsztyn,1822-08-14,Sopot,Cemetery in Sopot,Drowning,256,278
+430,4,Mateusz,Piotrowski,M,1763-03-23,Wejherowo,1815-07-12,Słupsk,Cemetery in Słupsk,,274,322
+431,4,Zofia,Piotrowska,F,1763-07-11,Gorzów Wielkopolski,1768-07-24,Zielona Góra,Cemetery in Zielona Góra,Infectious disease,247,316
+432,4,Teresa,Wiśniewska,F,1763-07-22,Malbork,1764-01-02,Olsztyn,Cemetery in Olsztyn,Heart failure,215,309
+433,4,Stefan,Piotrowski,M,1763-10-28,Wałbrzych,1816-01-17,Świdnica,Cemetery in Świdnica,Plague,235,325
+434,4,Zofia,Piotrowska,F,1764-02-24,Wałbrzych,1765-06-26,Zielona Góra,Cemetery in Zielona Góra,Starvation,225,269
+435,4,Ignacy,Piotrowski,M,1764-01-28,Opole,1822-05-02,Zielona Góra,Cemetery in Zielona Góra,Fire,238,295
+436,4,Zygmunt,Piotrowski,M,1764-05-11,Opole,1767-05-14,Świdnica,Cemetery in Świdnica,Drowning,235,325
+437,4,Bartosz,Walczak,M,1764-01-03,Posen,1764-04-20,Inowrocław,Cemetery in Inowrocław,Stroke,240,303
+438,4,Maria,Kwiatkowska,F,1764-05-02,Elbląg,1811-01-18,Sopot,Cemetery in Sopot,,262,326
+440,4,Michał,Wiśniewski,M,1765-10-06,Sopot,1825-06-15,Słupsk,Cemetery in Słupsk,Cholera,256,278
+442,4,Małgorzata,Walczak,F,1765-05-17,Thorn,1768-07-05,Gostyń,Cemetery in Gostyń,,244,292
+444,4,Dariusz,Walczak,M,1765-02-22,Inowrocław,,,,,240,303
+445,4,Marek,Piotrowski,M,1765-06-08,Stargard,1822-06-22,Wejherowo,Cemetery in Wejherowo,War casualty,276,327
+447,4,Jadwiga,Piotrowska,F,1766-12-19,Słupsk,1786-05-05,Chojnice,Cemetery in Chojnice,Cholera,274,322
+448,4,Marcin,Walczak,M,1766-09-02,Bromberg,1826-11-01,Kalisz,Cemetery in Kalisz,Fire,244,292
+449,4,Łukasz,Kwiatkowski,M,1766-07-25,Sopot,1824-08-20,Wejherowo,Cemetery in Wejherowo,Fever,262,326
+450,4,Marek,Kwiatkowski,M,1766-08-01,Stettin,,,,,242,332
+452,4,Barbara,Walczak,F,1766-07-15,Kalisz,1766-07-17,Grudziądz,Cemetery in Grudziądz,Plague,341,335
+453,4,Ryszard,Piotrowski,M,1766-09-08,Wejherowo,1767-07-28,Gdynia,Cemetery in Gdynia,Cholera,249,347
+454,4,Marek,Wiśniewski,M,1767-07-07,Olsztyn,1790-05-03,Słupsk,Cemetery in Słupsk,,256,278
+455,4,Łukasz,Walczak,M,1767-11-20,Konin,1806-04-21,Gniezno,Cemetery in Gniezno,Murder,244,292
+457,4,Łukasz,Piotrowski,M,1767-05-22,Legnica,,,,,235,325
+458,4,Danuta,Piotrowska,F,1767-06-20,Stettin,1811-07-05,Śrem,Cemetery in Śrem,Fire,276,327
+459,4,Józefa,Kwiatkowska,F,1767-03-21,Olsztyn,1820-04-18,Wałbrzych,Cemetery in Wałbrzych,Typhus,242,332
+461,4,Marianna,Wiśniewska,F,1768-01-12,Koszalin,1826-03-12,Włocławek,Cemetery in Włocławek,Fever,256,278
+462,4,Aleksandra,Piotrowska,F,1768-03-05,Olsztyn,1769-08-16,Świnoujście,Cemetery in Świnoujście,Murder,274,322
+463,4,Grażyna,Kwiatkowska,F,1768-06-06,Słupsk,1769-09-11,Kołobrzeg,Cemetery in Kołobrzeg,,262,326
+464,4,Regina,Walczak,F,1768-05-18,Ostrów Wielkopolski,1814-12-16,Legnica,Cemetery in Legnica,Consumption,341,335
+465,4,Regina,Walczak,F,1768-07-08,Kalisz,,,,,330,309
+467,4,Alicja,Kwiatkowska,F,1769-12-04,Olsztyn,1814-11-10,Koszalin,Cemetery in Koszalin,,262,326
+468,4,Grzegorz,Kwiatkowski,M,1769-01-06,Chojnice,1785-01-16,Słupsk,Cemetery in Słupsk,Smallpox,242,332
+469,4,Irena,Wiśniewska,F,1770-05-11,Gdynia,1774-10-20,Stargard,Cemetery in Stargard,Cholera,256,278
+471,4,Elżbieta,Kwiatkowska,F,1770-06-17,Gdynia,,,,,262,326
+472,4,Piotr,Piotrowski,M,1770-08-12,Gdynia,1810-05-18,Elbląg,Cemetery in Elbląg,Typhus,276,327
+473,4,Joanna,Walczak,F,1770-06-17,Grudziądz,1773-06-05,Konin,Cemetery in Konin,Smallpox,330,309
+474,4,Elżbieta,Wiśniewska,F,1771-10-19,Kołobrzeg,,,,,256,278
+476,4,Monika,Walczak,F,1771-07-27,Gostyń,1774-10-07,Leszno,Cemetery in Leszno,,341,335
+477,4,Józefa,Walczak,F,1771-12-09,Thorn,,,,,330,309
+478,4,Julia,Kowalska,F,1771-07-11,Ostrołęka,1786-07-08,Płock,Cemetery in Płock,,268,376
+480,4,Łukasz,Piotrowski,M,1771-05-17,Wałbrzych,1821-08-06,Legnica,Cemetery in Legnica,Stroke,247,325
+481,4,Zuzanna,Kwiatkowska,F,1772-10-14,Danzig,,,,,262,326
+482,4,Łukasz,Piotrowski,M,1772-09-05,Sopot,1773-11-25,Koszalin,Cemetery in Koszalin,,276,327
+483,4,Anna,Kwiatkowska,F,1772-02-01,Gdynia,,,,,242,332
+484,4,Franciszek,Walczak,M,1772-11-15,Bromberg,,,,,341,335
+485,4,Marek,Piotrowski,M,1772-05-14,Wałbrzych,,,,,310,322
+486,4,Kazimiera,Piotrowska,F,1772-12-03,Wałbrzych,1817-04-24,Piła,Cemetery in Piła,,247,325
+487,4,Paweł,Kwiatkowski,M,1773-08-03,Koszalin,1796-08-16,Malbork,Cemetery in Malbork,Starvation,262,326
+488,4,Zofia,Kowalska,F,1773-04-23,Skierniewice,,,,,268,376
+492,4,Anna,Walczak,F,1774-07-22,Rawicz,,,,,330,309
+493,4,Jerzy,Kwiatkowski,M,1775-07-25,Elbląg,1794-11-27,Stettin,Cemetery in Stettin,Dysentery,242,332
+494,4,Czesław,Walczak,M,1775-11-13,Rawicz,1775-10-25,Kościan,Cemetery in Kościan,Dysentery,330,309
+495,4,Mateusz,Kowalski,M,1775-01-04,Łomża,,,,,268,376
+496,4,Marek,Piotrowski,M,1775-02-23,Legnica,,,,,310,322
+498,4,Zuzanna,Kwiatkowska,F,1777-08-07,Wejherowo,,,,,314,400
+499,4,Marianna,Kwiatkowska,F,1777-02-26,Stettin,,,,,313,401
+500,4,Zygmunt,Kowalski,M,1777-09-15,Suwałki,1778-11-04,Ciechanów,Cemetery in Ciechanów,Apoplexy,346,317
+501,4,Adam,Kwiatkowski,M,1778-12-05,Kołobrzeg,1799-08-07,Malbork,Cemetery in Malbork,Dropsy,242,332
+502,4,Agnieszka,Walczak,F,1778-05-22,Ostrów Wielkopolski,,,,,330,309
+503,4,Zygmunt,Kowalski,M,1778-08-07,Suwałki,,,,,268,376
+504,4,Czesław,Piotrowski,M,1778-05-24,Świdnica,1781-12-06,Breslau,Cemetery in Breslau,Plague,310,322
+506,4,Tomasz,Kowalski,M,1778-11-06,Biała Podlaska,,,,,252,395
+509,4,Czesława,Kwiatkowska,F,1779-04-17,Gdynia,1780-11-23,Olsztyn,Cemetery in Olsztyn,Apoplexy,314,400
+510,4,Wanda,Kowalska,F,1779-07-10,Zamość,,,,,346,317
+511,4,Marek,Kowalski,M,1779-08-01,Łódź,1783-02-13,Płock,Cemetery in Płock,Unknown,252,395
+512,4,Czesława,Kowalska,F,1780-06-10,Radom,1810-05-28,Łomża,Cemetery in Łomża,Murder,268,376
+513,4,Andrzej,Piotrowski,M,1780-02-05,Świdnica,1822-08-28,Legnica,Cemetery in Legnica,Dysentery,310,322
+515,4,Krzysztof,Kwiatkowski,M,1780-11-12,Stettin,,,,,313,401
+516,4,Wanda,Kowalska,F,1780-06-21,Suwałki,,,,,252,395
+518,4,Ryszard,Kowalski,M,1781-11-17,Łomża,1792-08-25,Łódź,Cemetery in Łódź,Influenza,268,376
+519,4,Bożena,Kwiatkowska,F,1781-01-05,Elbląg,,,,,314,400
+521,4,Marian,Kwiatkowski,M,1781-05-09,Danzig,,,,,282,389
+522,4,Rozalia,Piotrowska,F,1782-08-22,Zielona Góra,1825-06-15,Chełm,Cemetery in Chełm,Fever,310,322
+523,4,Maria,Kwiatkowska,F,1782-02-28,Chojnice,,,,,314,400
+524,4,Julia,Kowalska,F,1782-08-08,Łomża,1784-09-04,Chełm,Cemetery in Chełm,Apoplexy,346,317
+525,4,Michał,Kwiatkowski,M,1782-12-24,Stettin,,,,,282,389
+526,4,Monika,Kwiatkowska,F,1782-05-10,Stettin,,,,,393,336
+527,4,Julia,Piotrowska,F,1782-08-12,Sopot,1821-02-24,Sopot,Cemetery in Sopot,Heart failure,281,422
+528,4,Paweł,Kwiatkowski,M,1782-05-15,Danzig,,,,,370,423
+529,4,Katarzyna,Kwiatkowska,F,1782-12-11,Elbląg,1825-10-28,Słupsk,Cemetery in Słupsk,Dropsy,356,425
+531,4,Katarzyna,Kwiatkowska,F,1783-09-01,Malbork,,,,,313,401
+536,4,Anna,Kowalska,F,1784-03-28,Biała Podlaska,1785-08-27,Łódź,Cemetery in Łódź,Apoplexy,268,376
+537,4,Kazimiera,Kwiatkowska,F,1784-02-13,Malbork,1788-12-06,Olsztyn,Cemetery in Olsztyn,Smallpox,282,389
+538,4,Wanda,Kwiatkowska,F,1784-12-19,Gdynia,,,,,393,336
+539,4,Stefan,Piotrowski,M,1784-03-10,Olsztyn,1826-03-10,Chojnice,Cemetery in Chojnice,,281,422
+540,4,Maciej,Kwiatkowski,M,1784-10-22,Gdynia,,,,,356,425
+542,4,Tadeusz,Wiśniewski,M,1784-02-10,Malbork,1784-06-04,Świnoujście,Cemetery in Świnoujście,Unknown,396,391
+543,4,Urszula,Kwiatkowska,F,1785-06-24,Chojnice,1785-07-07,Stettin,Cemetery in Stettin,Pneumonia,313,401
+546,4,Joanna,Kwiatkowska,F,1785-06-05,Kołobrzeg,,,,,393,336
+547,4,Piotr,Kwiatkowski,M,1785-02-26,Olsztyn,,,,,370,423
+548,4,Tomasz,Piotrowski,M,1785-07-05,Elbląg,,,,,366,387
+550,4,Antoni,Walczak,M,1785-04-06,Kościan,1785-11-22,Inowrocław,Cemetery in Inowrocław,Fire,408,383
+551,4,Maria,Piotrowska,F,1785-04-17,Legnica,,,,,354,459
+552,4,Ludwika,Piotrowska,F,1785-04-05,Wejherowo,,,,,405,377
+554,4,Anna,Wiśniewska,F,1785-03-13,Wejherowo,1786-11-16,Olsztyn,Cemetery in Olsztyn,Fever,417,380
+555,4,Joanna,Kowalska,F,1786-03-26,Biała Podlaska,,,,,268,376
+556,4,Helena,Piotrowska,F,1786-11-06,Stettin,1788-08-16,Kołobrzeg,Cemetery in Kołobrzeg,Unknown,281,422
+558,4,Leon,Piotrowski,M,1786-06-10,Legnica,,,,,354,459
+559,4,Leokadia,Piotrowska,F,1786-02-28,Olsztyn,1787-02-03,Wejherowo,Cemetery in Wejherowo,Typhus,405,377
+560,4,Ewa,Wiśniewska,F,1786-03-04,Stettin,1789-10-19,Danzig,Cemetery in Danzig,Heart failure,417,380
+561,4,Barbara,Wiśniewska,F,1786-11-16,Słupsk,1801-11-03,Stettin,Cemetery in Stettin,Influenza,440,367
+563,4,Julia,Kwiatkowska,F,1787-10-09,Sopot,,,,,393,336
+564,4,Genowefa,Kwiatkowska,F,1787-06-14,Chojnice,,,,,370,423
+565,4,Tomasz,Kwiatkowski,M,1787-12-24,Koszalin,,,,,356,425
+567,4,Maria,Wiśniewska,F,1787-05-27,Olsztyn,,,,,396,391
+569,4,Piotr,Kowalski,M,1787-02-07,Płock,,,,,338,407
+570,4,Julia,Wiśniewska,F,1787-12-06,Gdynia,1804-02-06,Słupsk,Cemetery in Słupsk,Stroke,440,367
+572,4,Grzegorz,Kwiatkowski,M,1788-10-08,Stargard,,,,,313,401
+574,4,Zuzanna,Piotrowska,F,1788-05-01,Stargard,1791-11-26,Stargard,Cemetery in Stargard,,366,387
+577,4,Franciszek,Wiśniewski,M,1788-09-03,Elbląg,,,,,396,391
+578,4,Jakub,Piotrowski,M,1788-09-11,Legnica,,,,,354,459
+579,4,Natalia,Wiśniewska,F,1788-09-25,Koszalin,,,,,417,380
+580,4,Oliwia,Wiśniewska,F,1788-02-17,Malbork,,,,,440,367
+584,4,Grzegorz,Piotrowski,M,1788-06-20,Świdnica,1788-10-25,Legnica,Cemetery in Legnica,Typhus,404,343
+585,4,Leokadia,Kowalska,F,1788-03-06,Radom,,,,,357,477
+586,4,Maciej,Kwiatkowski,M,1789-03-14,Danzig,,,,,313,401
+587,4,Grzegorz,Kwiatkowski,M,1789-01-13,Malbork,,,,,370,423
+588,4,Zofia,Kwiatkowska,F,1789-07-21,Olsztyn,1793-07-04,Kołobrzeg,Cemetery in Kołobrzeg,Heart failure,356,425
+590,4,Krzysztof,Wiśniewski,M,1789-01-05,Danzig,,,,,417,380
+591,4,Ewa,Kowalska,F,1789-06-04,Siedlce,1790-09-14,Biała Podlaska,Cemetery in Biała Podlaska,Apoplexy,338,407
+595,4,Szymon,Walczak,M,1789-05-06,Kalisz,,,,,427,446
+597,4,Agnieszka,Piotrowska,F,1790-10-20,Olsztyn,1790-09-19,Elbląg,Cemetery in Elbląg,Stroke,366,387
+600,4,Katarzyna,Wiśniewska,F,1790-01-09,Kołobrzeg,1792-10-22,Słupsk,Cemetery in Słupsk,Stroke,440,367
+602,4,Władysław,Kowalski,M,1790-08-19,Białystok,,,,,357,477
+604,4,Grzegorz,Walczak,M,1790-11-06,Września,,,,,337,461
+607,4,Irena,Kwiatkowska,F,1791-05-16,Elbląg,,,,,313,401
+608,4,Jakub,Kwiatkowski,M,1791-10-19,Sopot,1792-01-16,Chojnice,Cemetery in Chojnice,Consumption,356,425
+609,4,Urszula,Wiśniewska,F,1791-12-26,Gdynia,,,,,396,391
+610,4,Marcin,Piotrowski,M,1791-06-07,Gorzów Wielkopolski,,,,,354,459
+612,4,Adam,Wiśniewski,M,1791-06-08,Kołobrzeg,1793-05-13,Koszalin,Cemetery in Koszalin,War casualty,417,380
+614,4,Maja,Piotrowska,F,1791-02-02,Legnica,1792-10-19,Świdnica,Cemetery in Świdnica,Starvation,404,343
+616,4,Mateusz,Walczak,M,1791-05-25,Thorn,,,,,337,461
+620,4,Zygmunt,Kwiatkowski,M,1792-01-17,Stargard,1796-02-17,Stargard,Cemetery in Stargard,Smallpox,370,423
+621,4,Leon,Kwiatkowski,M,1792-09-17,Chojnice,,,,,356,425
+622,4,Szymon,Wiśniewski,M,1792-06-23,Danzig,,,,,396,391
+623,4,Zuzanna,Kowalska,F,1792-01-04,Lublin,,,,,357,477
+624,4,Wanda,Walczak,F,1792-03-23,Śrem,,,,,427,446
+629,4,Leokadia,Piotrowska,F,1793-01-01,Świdnica,,,,,354,459
+631,4,Józefa,Wiśniewska,F,1793-02-17,Wejherowo,,,,,440,367
+639,4,Józef,Kwiatkowski,M,1794-03-21,Świnoujście,,,,,356,425
+641,4,Adam,Kowalski,M,1794-03-03,Zamość,1794-05-15,Łódź,Cemetery in Łódź,Fever,357,477
+642,4,Danuta,Walczak,F,1794-10-10,Gniezno,1795-01-19,Kalisz,Cemetery in Kalisz,,427,446
+648,4,Adam,Piotrowski,M,1794-11-27,Koszalin,1795-01-04,Słupsk,Cemetery in Słupsk,War casualty,349,443
+649,4,Danuta,Kwiatkowska,F,1795-02-01,Koszalin,,,,,356,425
+650,4,Oliwia,Piotrowska,F,1795-11-21,Jelenia Góra,1796-09-26,Jelenia Góra,Cemetery in Jelenia Góra,,354,459
+651,4,Grażyna,Wiśniewska,F,1795-08-18,Wejherowo,,,,,440,367
+658,4,Dariusz,Kowalski,M,1795-11-21,Chełm,,,,,451,467
+660,4,Grażyna,Wiśniewska,F,1796-05-26,Sopot,1813-09-14,Malbork,Cemetery in Malbork,Pneumonia,440,367
+661,4,Mirosław,Kowalski,M,1796-04-25,Siedlce,,,,,357,477
+667,4,Adam,Walczak,M,1797-10-14,Kalisz,,,,,427,446
+671,4,Zygmunt,Kowalski,M,1797-07-18,Biała Podlaska,,,,,451,467
+672,4,Bartosz,Piotrowski,M,1797-03-18,Świnoujście,,,,,349,443
+676,4,Regina,Kowalska,F,1798-09-08,Siedlce,,,,,357,477
+678,4,Katarzyna,Kowalska,F,1798-01-28,Biała Podlaska,,,,,451,467
+679,4,Kamil,Piotrowski,M,1798-10-27,Słupsk,,,,,349,443
+684,4,Aleksandra,Kowalska,F,1799-05-28,Radom,,,,,451,467
+691,4,Krystyna,Kowalska,F,1800-03-26,Łomża,,,,,357,477
+702,4,Krystyna,Kowalska,F,1801-07-06,Łódź,,,,,451,467
+707,4,Czesław,Kowalski,M,1802-12-21,Chełm,1802-06-06,Skierniewice,Cemetery in Skierniewice,Murder,357,477
+710,4,Tomasz,Kowalski,M,1802-04-14,Siedlce,,,,,451,467
+722,4,Danuta,Kowalska,F,1804-12-12,Lublin,1825-09-22,Piła,Cemetery in Piła,Heart failure,451,467
+479,5,Franciszek,Piotrowski,M,1771-07-14,Zielona Góra,1814-03-28,Wałbrzych,Cemetery in Wałbrzych,Infectious disease,359,353
+489,5,Ryszard,Piotrowski,M,1773-02-22,Świdnica,1798-04-05,Legnica,Cemetery in Legnica,Influenza,359,353
+497,5,Krystyna,Piotrowska,F,1775-04-09,Breslau,,,,,359,353
+505,5,Kazimiera,Piotrowska,F,1778-02-15,Zielona Góra,1779-11-11,Opole,Cemetery in Opole,Drowning,359,353
+507,5,Marek,Piotrowski,M,1778-07-24,Breslau,1824-07-11,Jelenia Góra,Cemetery in Jelenia Góra,Typhus,369,368
+508,5,Zygmunt,Piotrowski,M,1779-09-03,Legnica,,,,,359,353
+514,5,Józefa,Piotrowska,F,1780-12-11,Świdnica,1781-05-04,Opole,Cemetery in Opole,,359,353
+517,5,Maja,Wiśniewska,F,1780-06-05,Gostyń,1784-12-05,Posen,Cemetery in Posen,Unknown,371,364
+520,5,Krzysztof,Piotrowski,M,1781-09-09,Wałbrzych,,,,,369,368
+530,5,Marian,Piotrowski,M,1783-05-09,Jelenia Góra,1806-10-16,Breslau,Cemetery in Breslau,,359,353
+532,5,Wojciech,Wiśniewski,M,1783-01-04,Włocławek,,,,,371,364
+533,5,Danuta,Piotrowska,F,1783-03-11,Opole,,,,,369,368
+541,5,Marian,Piotrowski,M,1784-04-07,Jelenia Góra,,,,,402,428
+544,5,Oliwia,Wiśniewska,F,1785-01-19,Rawicz,1808-09-18,Gostyń,Cemetery in Gostyń,Smallpox,371,364
+545,5,Józef,Piotrowski,M,1785-06-07,Jelenia Góra,1785-07-12,Zielona Góra,Cemetery in Zielona Góra,,369,368
+549,5,Jan,Piotrowski,M,1785-06-15,Breslau,,,,,402,428
+553,5,Katarzyna,Piotrowska,F,1785-12-10,Olsztyn,,,,,430,365
+562,5,Grzegorz,Piotrowski,M,1787-07-16,Opole,,,,,369,368
+566,5,Irena,Piotrowska,F,1787-05-13,Opole,,,,,402,428
+568,5,Danuta,Piotrowska,F,1787-02-02,Stettin,,,,,430,365
+571,5,Genowefa,Kwiatkowska,F,1787-05-07,Elbląg,1826-10-11,Danzig,Cemetery in Danzig,Apoplexy,449,415
+573,5,Andrzej,Wiśniewski,M,1788-04-02,Inowrocław,1826-11-04,Września,Cemetery in Września,,371,364
+576,5,Czesława,Piotrowska,F,1788-09-01,Świdnica,,,,,402,428
+581,5,Regina,Kwiatkowska,F,1788-04-13,Kołobrzeg,,,,,449,415
+589,5,Marian,Piotrowski,M,1789-12-27,Gdynia,,,,,430,365
+592,5,Alicja,Kwiatkowska,F,1789-09-20,Sopot,1789-01-17,Świnoujście,Cemetery in Świnoujście,Stroke,449,415
+593,5,Katarzyna,Wiśniewska,F,1789-03-09,Gdynia,,,,,412,409
+594,5,Grzegorz,Piotrowski,M,1789-05-26,Elbląg,,,,,399,438
+596,5,Halina,Wiśniewska,F,1790-09-19,Leszno,1792-11-19,Bromberg,Cemetery in Bromberg,Apoplexy,371,364
+599,5,Jerzy,Piotrowski,M,1790-05-04,Opole,,,,,402,428
+605,5,Krzysztof,Kwiatkowski,M,1790-05-12,Danzig,,,,,420,422
+606,5,Maria,Piotrowska,F,1790-12-24,Elbląg,,,,,472,389
+611,5,Józef,Piotrowski,M,1791-09-02,Kołobrzeg,,,,,430,365
+613,5,Marianna,Kwiatkowska,F,1791-06-14,Elbląg,,,,,449,415
+615,5,Marek,Piotrowski,M,1791-10-10,Gdynia,,,,,399,438
+617,5,Stefania,Kwiatkowska,F,1791-05-20,Wejherowo,1791-10-27,Świnoujście,Cemetery in Świnoujście,Accident,420,422
+618,5,Aleksandra,Piotrowska,F,1791-06-03,Koszalin,,,,,472,389
+619,5,Filip,Piotrowski,M,1791-07-26,Legnica,1809-05-12,Wałbrzych,Cemetery in Wałbrzych,Consumption,457,464
+625,5,Stefan,Piotrowski,M,1792-06-10,Wałbrzych,,,,,359,471
+626,5,Genowefa,Walczak,F,1792-07-11,Konin,,,,,421,458
+627,5,Maria,Wiśniewska,F,1792-03-12,Kołobrzeg,1792-06-23,Stargard,Cemetery in Stargard,Influenza,418,386
+628,5,Rozalia,Piotrowska,F,1793-07-23,Breslau,1812-02-01,Jelenia Góra,Cemetery in Jelenia Góra,Cholera,402,428
+630,5,Danuta,Piotrowska,F,1793-12-19,Świnoujście,1793-03-16,Koszalin,Cemetery in Koszalin,Infectious disease,430,365
+632,5,Wiktoria,Kwiatkowska,F,1793-01-04,Chojnice,1793-03-13,Wejherowo,Cemetery in Wejherowo,Typhus,449,415
+634,5,Alicja,Wiśniewska,F,1793-12-04,Malbork,,,,,412,409
+635,5,Krzysztof,Piotrowski,M,1793-08-06,Koszalin,1794-05-27,Świnoujście,Cemetery in Świnoujście,Accident,399,438
+636,5,Julian,Kwiatkowski,M,1793-06-23,Danzig,1793-08-18,Koszalin,Cemetery in Koszalin,Fire,420,422
+638,5,Julia,Piotrowska,F,1793-02-12,Wałbrzych,1794-07-16,Wałbrzych,Cemetery in Wałbrzych,Drowning,457,464
+640,5,Ryszard,Piotrowski,M,1794-05-27,Świdnica,1794-02-04,Jelenia Góra,Cemetery in Jelenia Góra,Dysentery,402,428
+643,5,Mirosław,Piotrowski,M,1794-10-12,Zielona Góra,,,,,359,471
+644,5,Krystyna,Walczak,F,1794-12-25,Piła,,,,,421,458
+645,5,Agnieszka,Wiśniewska,F,1794-03-22,Koszalin,,,,,418,386
+646,5,Tadeusz,Wiśniewski,M,1794-04-23,Stargard,,,,,429,384
+647,5,Genowefa,Walczak,F,1794-03-25,Thorn,,,,,448,475
+652,5,Grażyna,Kwiatkowska,F,1795-09-08,Olsztyn,1807-10-21,Olsztyn,Cemetery in Olsztyn,Consumption,449,415
+654,5,Stefania,Wiśniewska,F,1795-07-08,Słupsk,,,,,412,409
+655,5,Michał,Piotrowski,M,1795-09-12,Jelenia Góra,,,,,457,464
+656,5,Tomasz,Wiśniewski,M,1795-09-10,Sopot,1795-06-05,Stargard,Cemetery in Stargard,Dysentery,418,386
+657,5,Genowefa,Wiśniewska,F,1795-04-16,Malbork,,,,,429,384
+659,5,Antoni,Piotrowski,M,1796-03-20,Świnoujście,1797-02-04,Wejherowo,Cemetery in Wejherowo,War casualty,430,365
+664,5,Jerzy,Piotrowski,M,1796-10-19,Stettin,1796-09-16,Chojnice,Cemetery in Chojnice,,445,497
+665,5,Adam,Piotrowski,M,1797-11-01,Wałbrzych,,,,,402,428
+666,5,Michał,Wiśniewski,M,1797-02-02,Elbląg,1800-03-15,Stargard,Cemetery in Stargard,Dysentery,412,409
+668,5,Czesława,Piotrowska,F,1797-12-02,Jelenia Góra,1801-09-20,Opole,Cemetery in Opole,Fire,457,464
+669,5,Anna,Walczak,F,1797-01-28,Włocławek,1797-10-13,Kalisz,Cemetery in Kalisz,Infectious disease,421,458
+670,5,Irena,Wiśniewska,F,1797-08-07,Stettin,,,,,418,386
+673,5,Ludwika,Piotrowska,F,1797-08-08,Gdynia,,,,,445,497
+674,5,Leokadia,Piotrowska,F,1797-06-19,Legnica,,,,,480,465
+675,5,Agnieszka,Piotrowska,F,1797-03-03,Jelenia Góra,,,,,441,461
+677,5,Alicja,Piotrowska,F,1798-04-17,Wałbrzych,,,,,457,464
+681,5,Józefa,Walczak,F,1798-08-17,Rawicz,1801-10-26,Śrem,Cemetery in Śrem,Heart failure,408,492
+682,5,Grażyna,Piotrowska,F,1798-05-19,Wałbrzych,,,,,435,481
+683,5,Kamil,Walczak,M,1798-01-11,Włocławek,,,,,484,486
+685,5,Julian,Piotrowski,M,1799-04-17,Malbork,,,,,445,497
+686,5,Krzysztof,Piotrowski,M,1799-08-04,Gorzów Wielkopolski,1799-06-08,Opole,Cemetery in Opole,Dropsy,480,465
+687,5,Wojciech,Walczak,M,1799-11-14,Włocławek,,,,,408,492
+688,5,Ewa,Piotrowska,F,1799-08-18,Wałbrzych,,,,,435,481
+689,5,Czesław,Piotrowski,M,1799-07-23,Zielona Góra,1799-01-25,Zielona Góra,Cemetery in Zielona Góra,Fever,441,461
+690,5,Tadeusz,Kwiatkowski,M,1799-11-06,Gdynia,1799-06-17,Elbląg,Cemetery in Elbląg,Unknown,450,498
+692,5,Krystyna,Wiśniewska,F,1800-08-09,Słupsk,1801-07-20,Danzig,Cemetery in Danzig,Fire,412,409
+693,5,Helena,Piotrowska,F,1800-05-01,Breslau,,,,,457,464
+694,5,Bartosz,Walczak,M,1800-12-02,Grudziądz,1804-04-23,Thorn,Cemetery in Thorn,Dysentery,421,458
+696,5,Marek,Piotrowski,M,1800-01-21,Kołobrzeg,1816-10-27,Koszalin,Cemetery in Koszalin,Stroke,445,497
+697,5,Dariusz,Piotrowski,M,1800-05-13,Jelenia Góra,,,,,480,465
+698,5,Marcin,Piotrowski,M,1800-12-06,Breslau,,,,,435,481
+699,5,Wiesław,Walczak,M,1800-04-03,Grudziądz,1801-01-24,Posen,Cemetery in Posen,Smallpox,484,486
+700,5,Krzysztof,Kowalski,M,1800-05-15,Chełm,,,,,503,456
+701,5,Kamil,Piotrowski,M,1801-05-24,Legnica,,,,,457,464
+704,5,Kamil,Piotrowski,M,1801-03-26,Legnica,,,,,435,481
+705,5,Elżbieta,Kwiatkowska,F,1801-03-04,Kołobrzeg,,,,,450,498
+706,5,Ewa,Kowalska,F,1801-07-28,Ciechanów,,,,,503,456
+708,5,Leon,Wiśniewski,M,1802-07-22,Sopot,,,,,412,409
+709,5,Franciszek,Walczak,M,1802-06-11,Piła,,,,,421,458
+711,5,Natalia,Piotrowska,F,1802-12-03,Opole,,,,,480,465
+712,5,Agnieszka,Piotrowska,F,1802-07-11,Breslau,1803-01-06,Jelenia Góra,Cemetery in Jelenia Góra,Fire,441,461
+713,5,Barbara,Walczak,F,1802-10-07,Rawicz,,,,,484,486
+714,5,Wiesław,Kowalski,M,1802-12-25,Zamość,1802-10-23,Warszawa,Cemetery in Warszawa,Consumption,503,456
+715,5,Teresa,Piotrowska,F,1803-09-27,Zielona Góra,,,,,457,464
+716,5,Danuta,Piotrowska,F,1803-03-23,Sopot,,,,,445,497
+717,5,Joanna,Piotrowska,F,1803-07-21,Opole,,,,,435,481
+718,5,Józef,Kowalski,M,1803-08-07,Skierniewice,1804-12-09,Ostrołęka,Cemetery in Ostrołęka,Dysentery,503,456
+719,5,Paweł,Kwiatkowski,M,1803-07-10,Chojnice,,,,,491,488
+720,5,Julia,Kowalska,F,1803-11-03,Ciechanów,,,,,495,522
+721,5,Stefania,Piotrowska,F,1804-04-05,Wałbrzych,,,,,457,464
+724,5,Jakub,Piotrowski,M,1804-09-05,Opole,,,,,480,465
+725,5,Szymon,Walczak,M,1804-11-26,Gostyń,,,,,484,486
+726,5,Jan,Kowalski,M,1804-07-04,Ostrołęka,,,,,503,456
+727,5,Helena,Wiśniewska,F,1804-10-25,Świnoujście,1804-04-28,Kołobrzeg,Cemetery in Kołobrzeg,War casualty,417,533
+728,5,Czesław,Piotrowski,M,1805-05-11,Świnoujście,1805-06-23,Chojnice,Cemetery in Chojnice,Cancer,445,497
+729,5,Antoni,Piotrowski,M,1805-11-19,Zielona Góra,,,,,480,465
+730,5,Irena,Kowalska,F,1805-10-07,Płock,,,,,503,456
+731,5,Teresa,Kwiatkowska,F,1805-07-16,Sopot,,,,,491,488
+732,5,Teresa,Kwiatkowska,F,1805-04-18,Danzig,,,,,515,519
+733,5,Maciej,Kowalski,M,1806-06-03,Chełm,1806-09-14,Łomża,Cemetery in Łomża,,503,456
+734,5,Mateusz,Kowalski,M,1806-02-15,Suwałki,1807-03-11,Radom,Cemetery in Radom,Pneumonia,495,522
+735,5,Zygmunt,Wiśniewski,M,1806-11-15,Stargard,1815-06-26,Sopot,Cemetery in Sopot,Typhus,417,533
+736,5,Aleksandra,Piotrowska,F,1806-04-27,Breslau,,,,,507,552
+738,5,Tadeusz,Kwiatkowski,M,1806-03-01,Sopot,,,,,528,523
+739,5,Ludwika,Piotrowska,F,1807-01-25,Olsztyn,,,,,445,497
+740,5,Marian,Piotrowski,M,1807-02-14,Wałbrzych,,,,,480,465
+741,5,Czesław,Walczak,M,1807-06-17,Września,,,,,484,486
+742,5,Marcin,Kowalski,M,1807-02-07,Łomża,,,,,503,456
+743,5,Michał,Kwiatkowski,M,1807-12-04,Świnoujście,,,,,491,488
+744,5,Ludwika,Kowalska,F,1807-09-14,Suwałki,,,,,495,522
+745,5,Kazimierz,Kwiatkowski,M,1807-07-14,Chojnice,,,,,515,519
+748,5,Teresa,Piotrowska,F,1807-08-20,Danzig,,,,,539,526
+749,5,Paweł,Kwiatkowski,M,1807-08-25,Koszalin,1807-03-24,Sopot,Cemetery in Sopot,Fire,528,523
+751,5,Piotr,Wiśniewski,M,1807-02-25,Konin,1808-08-27,Kalisz,Cemetery in Kalisz,War casualty,532,510
+752,5,Tomasz,Kowalski,M,1808-08-18,Płock,1812-11-19,Chełm,Cemetery in Chełm,Infectious disease,495,522
+753,5,Mateusz,Wiśniewski,M,1808-11-19,Chojnice,,,,,417,533
+754,5,Regina,Kwiatkowska,F,1808-02-15,Elbląg,1811-02-11,Słupsk,Cemetery in Słupsk,Accident,515,519
+755,5,Helena,Kwiatkowska,F,1808-02-25,Sopot,,,,,565,580
+757,5,Czesława,Piotrowska,F,1808-08-11,Opole,,,,,513,566
+758,5,Jan,Piotrowski,M,1808-03-02,Zielona Góra,1809-07-17,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Influenza,541,477
+759,5,Zuzanna,Kwiatkowska,F,1808-07-10,Wejherowo,1811-07-17,Kołobrzeg,Cemetery in Kołobrzeg,Accident,547,492
+760,5,Wojciech,Piotrowski,M,1809-06-09,Kołobrzeg,,,,,445,497
+761,5,Rozalia,Walczak,F,1809-06-04,Śrem,,,,,484,486
+762,5,Mirosław,Kwiatkowski,M,1809-12-21,Malbork,,,,,515,519
+763,5,Barbara,Piotrowska,F,1809-12-24,Świdnica,,,,,507,552
+764,5,Krystyna,Kwiatkowska,F,1809-06-27,Danzig,1809-01-07,Gdynia,Cemetery in Gdynia,Apoplexy,528,523
+765,5,Monika,Wiśniewska,F,1809-01-28,Posen,,,,,532,510
+766,5,Jan,Piotrowski,M,1809-11-05,Świnoujście,1810-05-25,Chojnice,Cemetery in Chojnice,Stroke,430,499
+767,5,Władysław,Wiśniewski,M,1809-10-14,Wejherowo,,,,,440,516
+768,5,Ludwika,Kowalska,F,1810-09-24,Radom,1823-06-24,Ostrołęka,Cemetery in Ostrołęka,Stroke,495,522
+769,5,Mateusz,Wiśniewski,M,1810-11-22,Wejherowo,,,,,417,533
+770,5,Władysław,Kwiatkowski,M,1810-07-22,Elbląg,,,,,565,580
+771,5,Andrzej,Piotrowski,M,1810-07-26,Elbląg,,,,,539,526
+772,5,Julian,Kwiatkowski,M,1810-04-06,Elbląg,,,,,528,523
+774,5,Franciszek,Piotrowski,M,1810-05-26,Jelenia Góra,,,,,513,566
+775,5,Stanisław,Piotrowski,M,1810-12-05,Zielona Góra,,,,,541,477
+776,5,Józefa,Kwiatkowska,F,1810-10-06,Elbląg,,,,,547,492
+777,5,Aleksandra,Piotrowska,F,1810-10-06,Breslau,,,,,496,502
+778,5,Marek,Piotrowski,M,1811-05-14,Gdynia,1816-08-18,Sopot,Cemetery in Sopot,Accident,445,497
+779,5,Kazimierz,Wiśniewski,M,1811-11-20,Olsztyn,1812-06-21,Gdynia,Cemetery in Gdynia,Dysentery,417,533
+780,5,Michał,Kwiatkowski,M,1811-04-04,Wejherowo,,,,,515,519
+781,5,Genowefa,Piotrowska,F,1811-08-05,Wałbrzych,,,,,507,552
+782,5,Adam,Wiśniewski,M,1811-07-27,Konin,1811-06-04,Kalisz,Cemetery in Kalisz,Unknown,532,510
+783,5,Leokadia,Piotrowska,F,1811-03-09,Legnica,,,,,496,502
+785,5,Grażyna,Kwiatkowska,F,1811-08-15,Słupsk,1812-05-17,Wejherowo,Cemetery in Wejherowo,,525,531
+786,5,Regina,Piotrowska,F,1811-07-13,Elbląg,1811-08-26,Koszalin,Cemetery in Koszalin,Unknown,548,567
+787,5,Bożena,Wiśniewska,F,1811-01-28,Chojnice,,,,,590,538
+788,5,Ryszard,Kowalski,M,1812-11-16,Białystok,,,,,495,522
+789,5,Rozalia,Kwiatkowska,F,1812-12-09,Elbląg,,,,,515,519
+790,5,Czesław,Kwiatkowski,M,1812-07-04,Wejherowo,,,,,565,580
+792,5,Julian,Kwiatkowski,M,1812-05-12,Słupsk,1813-01-07,Gdynia,Cemetery in Gdynia,Heart failure,528,523
+793,5,Czesław,Piotrowski,M,1812-11-02,Gorzów Wielkopolski,,,,,513,566
+794,5,Kamil,Piotrowski,M,1812-10-26,Świdnica,1813-03-23,Zielona Góra,Cemetery in Zielona Góra,Drowning,541,477
+795,5,Stefan,Kwiatkowski,M,1812-04-04,Sopot,,,,,547,492
+796,5,Franciszek,Kwiatkowski,M,1812-07-26,Kołobrzeg,1814-11-18,Stargard,Cemetery in Stargard,Unknown,525,531
+797,5,Krystyna,Piotrowska,F,1812-06-03,Stettin,,,,,548,567
+798,5,Ryszard,Piotrowski,M,1812-09-04,Jelenia Góra,,,,,433,582
+799,5,Natalia,Piotrowska,F,1813-04-27,Wejherowo,,,,,445,497
+800,5,Zofia,Piotrowska,F,1813-07-24,Sopot,1814-07-01,Koszalin,Cemetery in Koszalin,Murder,539,526
+802,5,Bartosz,Piotrowski,M,1813-09-03,Świdnica,,,,,513,566
+803,5,Szymon,Piotrowski,M,1813-03-18,Gorzów Wielkopolski,,,,,496,502
+805,5,Helena,Wiśniewska,F,1813-10-22,Elbląg,,,,,590,538
+807,5,Barbara,Piotrowska,F,1813-01-26,Opole,,,,,578,606
+808,5,Adam,Walczak,M,1813-01-16,Rawicz,1814-02-12,Września,Cemetery in Września,Plague,604,601
+809,5,Czesław,Piotrowski,M,1813-12-09,Zielona Góra,1816-09-27,Świdnica,Cemetery in Świdnica,,558,553
+810,5,Genowefa,Piotrowska,F,1813-09-16,Opole,,,,,562,551
+811,5,Oliwia,Kowalska,F,1813-11-24,Ostrołęka,1815-10-28,Ostrołęka,Cemetery in Ostrołęka,Cholera,602,555
+812,5,Małgorzata,Kowalska,F,1814-03-25,Chełm,,,,,495,522
+813,5,Jan,Piotrowski,M,1814-03-02,Jelenia Góra,,,,,507,552
+814,5,Aleksandra,Kwiatkowska,F,1814-11-20,Danzig,1815-12-02,Koszalin,Cemetery in Koszalin,Fever,528,523
+815,5,Jan,Wiśniewski,M,1814-12-23,Włocławek,1815-10-15,Śrem,Cemetery in Śrem,Stroke,532,510
+816,5,Maciej,Piotrowski,M,1814-02-20,Gorzów Wielkopolski,1814-07-19,Świdnica,Cemetery in Świdnica,Cancer,513,566
+817,5,Julia,Kwiatkowska,F,1814-03-08,Gdynia,,,,,547,492
+818,5,Wiktoria,Kwiatkowska,F,1814-08-15,Stettin,1815-04-01,Stettin,Cemetery in Stettin,Pneumonia,525,531
+819,5,Michał,Piotrowski,M,1814-04-18,Sopot,1818-05-17,Stargard,Cemetery in Stargard,Fire,548,567
+820,5,Stefania,Piotrowska,F,1814-11-28,Legnica,1814-06-28,Zielona Góra,Cemetery in Zielona Góra,Cancer,479,564
+821,5,Grzegorz,Piotrowski,M,1814-11-21,Świdnica,1815-12-22,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Fire,549,623
+822,5,Stanisław,Piotrowski,M,1814-08-07,Jelenia Góra,,,,,562,551
+823,5,Aleksandra,Piotrowska,F,1814-06-09,Breslau,,,,,599,585
+824,5,Barbara,Kwiatkowska,F,1814-08-10,Danzig,,,,,621,624
+826,5,Jakub,Piotrowski,M,1815-01-22,Słupsk,1815-02-19,Świnoujście,Cemetery in Świnoujście,Unknown,445,497
+827,5,Maciej,Kowalski,M,1815-02-03,Radom,,,,,495,522
+828,5,Łukasz,Kwiatkowski,M,1815-06-21,Olsztyn,,,,,515,519
+829,5,Halina,Kwiatkowska,F,1815-08-02,Chojnice,1816-10-14,Danzig,Cemetery in Danzig,Heart failure,565,580
+830,5,Wiesław,Piotrowski,M,1815-09-07,Kołobrzeg,,,,,539,526
+831,5,Oliwia,Wiśniewska,F,1815-06-08,Rawicz,,,,,532,510
+832,5,Leon,Piotrowski,M,1815-12-20,Legnica,,,,,513,566
+833,5,Zofia,Piotrowska,F,1815-04-26,Breslau,,,,,496,502
+834,5,Marian,Piotrowski,M,1815-06-15,Chojnice,,,,,548,567
+835,5,Szymon,Wiśniewski,M,1815-10-23,Stettin,1816-05-27,Sopot,Cemetery in Sopot,,590,538
+837,5,Bożena,Piotrowska,F,1815-10-20,Breslau,,,,,578,606
+838,5,Danuta,Piotrowska,F,1815-09-19,Zielona Góra,1815-05-05,Wałbrzych,Cemetery in Wałbrzych,Stroke,558,553
+839,5,Elżbieta,Piotrowska,F,1815-05-02,Opole,1815-12-17,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Dysentery,479,564
+840,5,Łukasz,Kowalski,M,1815-08-27,Chełm,,,,,602,555
+841,5,Julia,Piotrowska,F,1815-02-12,Gorzów Wielkopolski,1816-11-24,Legnica,Cemetery in Legnica,Dropsy,599,585
+842,5,Krystyna,Kwiatkowska,F,1815-10-27,Słupsk,,,,,621,624
+844,5,Wanda,Piotrowska,F,1815-11-19,Olsztyn,,,,,611,529
+847,5,Monika,Piotrowska,F,1816-09-03,Gorzów Wielkopolski,,,,,507,552
+848,5,Zygmunt,Kwiatkowski,M,1816-01-01,Sopot,,,,,528,523
+850,5,Maria,Walczak,F,1816-04-20,Kościan,,,,,604,601
+851,5,Grzegorz,Piotrowski,M,1816-11-12,Wałbrzych,,,,,549,623
+852,5,Szymon,Kwiatkowski,M,1816-06-09,Świnoujście,,,,,621,624
+855,5,Zuzanna,Wiśniewska,F,1816-05-14,Śrem,,,,,573,607
+857,5,Tadeusz,Wiśniewski,M,1817-07-08,Thorn,,,,,532,510
+858,5,Maciej,Piotrowski,M,1817-06-14,Jelenia Góra,1817-01-11,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Fire,513,566
+859,5,Regina,Kwiatkowska,F,1817-06-22,Gdynia,,,,,525,531
+860,5,Marcin,Wiśniewski,M,1817-01-27,Kołobrzeg,,,,,590,538
+861,5,Krzysztof,Piotrowski,M,1817-01-05,Zielona Góra,,,,,578,606
+862,5,Grzegorz,Piotrowski,M,1817-06-13,Legnica,,,,,558,553
+864,5,Wojciech,Piotrowski,M,1817-11-03,Wałbrzych,,,,,562,551
+865,5,Szymon,Kowalski,M,1817-01-03,Łódź,,,,,602,555
+866,5,Szymon,Piotrowski,M,1817-09-17,Jelenia Góra,1821-12-18,Opole,Cemetery in Opole,Murder,599,585
+868,5,Tadeusz,Piotrowski,M,1817-11-03,Sopot,,,,,611,529
+870,5,Grzegorz,Wiśniewski,M,1817-07-12,Września,1818-12-14,Grudziądz,Cemetery in Grudziądz,War casualty,573,607
+873,5,Alicja,Kwiatkowska,F,1818-01-20,Stettin,,,,,565,580
+874,5,Leon,Kwiatkowski,M,1818-12-09,Malbork,,,,,528,523
+876,5,Elżbieta,Piotrowska,F,1818-11-13,Opole,1819-07-08,Jelenia Góra,Cemetery in Jelenia Góra,Influenza,513,566
+878,5,Krystyna,Piotrowska,F,1818-11-16,Jelenia Góra,1819-07-01,Zielona Góra,Cemetery in Zielona Góra,Cholera,578,606
+879,5,Ewa,Piotrowska,F,1818-01-23,Wejherowo,,,,,611,529
+882,5,Julia,Wiśniewska,F,1818-05-14,Leszno,,,,,573,607
+887,5,Ludwika,Wiśniewska,F,1819-01-20,Leszno,,,,,532,510
+888,5,Małgorzata,Kwiatkowska,F,1819-07-21,Olsztyn,,,,,525,531
+889,5,Marian,Wiśniewski,M,1819-06-08,Malbork,,,,,590,538
+891,5,Paweł,Walczak,M,1819-12-23,Włocławek,,,,,604,601
+892,5,Stefania,Piotrowska,F,1819-04-08,Wałbrzych,,,,,558,553
+893,5,Marianna,Piotrowska,F,1819-12-10,Wałbrzych,,,,,549,623
+894,5,Alicja,Kowalska,F,1819-12-04,Białystok,1819-01-05,Ostrołęka,Cemetery in Ostrołęka,Cancer,602,555
+895,5,Jakub,Piotrowski,M,1819-08-02,Breslau,,,,,599,585
+896,5,Tomasz,Kwiatkowski,M,1819-03-20,Gdynia,,,,,621,624
+899,5,Ewa,Wiśniewska,F,1819-04-16,Grudziądz,1824-10-15,Leszno,Cemetery in Leszno,Infectious disease,573,607
+900,5,Antoni,Kwiatkowski,M,1819-11-25,Koszalin,,,,,572,663
+902,5,Mateusz,Piotrowski,M,1820-03-17,Legnica,1824-07-08,Legnica,Cemetery in Legnica,Unknown,507,552
+904,5,Marian,Wiśniewski,M,1820-02-22,Grudziądz,,,,,532,510
+906,5,Agnieszka,Piotrowska,F,1820-06-02,Świdnica,,,,,578,606
+907,5,Andrzej,Piotrowski,M,1820-12-04,Jelenia Góra,,,,,549,623
+908,5,Ewa,Kwiatkowska,F,1820-08-06,Malbork,,,,,621,624
+913,5,Halina,Kwiatkowska,F,1820-06-10,Danzig,,,,,587,675
+914,5,Piotr,Kwiatkowski,M,1821-10-11,Stargard,,,,,565,580
+915,5,Grażyna,Kwiatkowska,F,1821-01-17,Sopot,,,,,525,531
+916,5,Jan,Wiśniewski,M,1821-11-05,Danzig,,,,,590,538
+917,5,Genowefa,Piotrowska,F,1821-12-08,Legnica,,,,,558,553
+918,5,Małgorzata,Piotrowska,F,1821-01-07,Gorzów Wielkopolski,,,,,549,623
+919,5,Filip,Kowalski,M,1821-05-22,Biała Podlaska,,,,,602,555
+920,5,Agnieszka,Piotrowska,F,1821-10-17,Gorzów Wielkopolski,,,,,599,585
+923,5,Alicja,Wiśniewska,F,1821-01-11,Grudziądz,,,,,573,607
+925,5,Leon,Kwiatkowski,M,1821-03-08,Gdynia,1822-10-28,Danzig,Cemetery in Danzig,Infectious disease,572,663
+927,5,Kazimiera,Kowalska,F,1821-08-01,Białystok,,,,,569,706
+928,5,Kamil,Kwiatkowski,M,1821-02-05,Koszalin,,,,,587,675
+929,5,Joanna,Kwiatkowska,F,1821-11-06,Danzig,,,,,639,631
+930,5,Jan,Kwiatkowski,M,1822-03-20,Elbląg,1822-07-12,Słupsk,Cemetery in Słupsk,Infectious disease,565,580
+931,5,Leon,Wiśniewski,M,1822-12-13,Kołobrzeg,,,,,590,538
+933,5,Marek,Piotrowski,M,1822-10-18,Breslau,,,,,549,623
+937,5,Jakub,Kowalski,M,1822-11-01,Ciechanów,1823-07-23,Ciechanów,Cemetery in Ciechanów,Fever,569,706
+938,5,Józef,Kwiatkowski,M,1822-04-04,Gdynia,1824-09-13,Stargard,Cemetery in Stargard,Cholera,587,675
+939,5,Zofia,Piotrowska,F,1822-02-17,Stettin,,,,,672,705
+940,5,Wanda,Kwiatkowska,F,1822-04-06,Wejherowo,,,,,540,673
+941,5,Genowefa,Wiśniewska,F,1822-08-09,Thorn,1822-04-23,Kościan,Cemetery in Kościan,Cholera,633,722
+942,5,Regina,Kwiatkowska,F,1823-12-03,Elbląg,,,,,565,580
+944,5,Danuta,Kwiatkowska,F,1823-08-13,Stettin,,,,,525,531
+945,5,Andrzej,Piotrowski,M,1823-10-26,Legnica,1823-09-21,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Dysentery,549,623
+950,5,Czesława,Kwiatkowska,F,1823-09-03,Chojnice,,,,,639,631
+952,5,Franciszek,Walczak,M,1823-02-18,Inowrocław,,,,,683,609
+953,5,Maja,Piotrowska,F,1823-12-05,Wejherowo,,,,,679,677
+954,5,Łukasz,Wiśniewski,M,1823-06-13,Sopot,,,,,622,654
+955,5,Ryszard,Wiśniewski,M,1824-05-15,Słupsk,,,,,590,538
+956,5,Julian,Kowalski,M,1824-10-08,Skierniewice,,,,,602,555
+959,5,Aleksandra,Wiśniewska,F,1824-08-14,Kalisz,1825-04-18,Śrem,Cemetery in Śrem,Infectious disease,573,607
+962,5,Urszula,Kwiatkowska,F,1824-02-12,Gdynia,,,,,572,663
+963,5,Tadeusz,Kwiatkowski,M,1824-03-11,Wejherowo,,,,,587,675
+964,5,Marek,Piotrowski,M,1824-06-22,Stargard,,,,,672,705
+965,5,Halina,Wiśniewska,F,1824-09-17,Gniezno,,,,,633,722
+966,5,Maja,Walczak,F,1824-05-19,Ostrów Wielkopolski,,,,,683,609
+967,5,Zofia,Walczak,F,1824-04-03,Gostyń,,,,,687,651
+968,5,Wanda,Wiśniewska,F,1824-08-12,Wejherowo,,,,,622,654
+969,5,Aleksandra,Kwiatkowska,F,1825-08-14,Chojnice,,,,,525,531
+970,5,Zofia,Kwiatkowska,F,1825-01-07,Koszalin,,,,,572,663
+971,5,Franciszek,Kowalski,M,1825-10-05,Skierniewice,,,,,569,706
+972,5,Agnieszka,Kwiatkowska,F,1825-03-14,Stettin,,,,,540,673
+974,5,Maria,Walczak,F,1825-02-12,Bromberg,,,,,683,609
+975,5,Szymon,Piotrowski,M,1825-03-14,Chojnice,,,,,679,677
+976,5,Krystyna,Wiśniewska,F,1825-07-12,Danzig,,,,,622,654
+977,5,Czesław,Kwiatkowski,M,1826-05-11,Sopot,,,,,565,580
+981,5,Leon,Wiśniewski,M,1826-04-28,Grudziądz,,,,,573,607
+983,5,Joanna,Piotrowska,F,1826-04-05,Wejherowo,,,,,672,705
+985,5,Aleksandra,Wiśniewska,F,1826-08-25,Malbork,,,,,622,654
+986,5,Łukasz,Piotrowski,M,1826-06-11,Świdnica,,,,,610,736
+988,5,Stefan,Walczak,M,1826-12-19,Leszno,,,,,667,674
+989,5,Mateusz,Kwiatkowski,M,1827-10-01,Gdynia,,,,,565,580
+990,5,Rozalia,Kwiatkowska,F,1827-03-20,Elbląg,,,,,525,531
+991,5,Julian,Wiśniewski,M,1827-05-07,Włocławek,,,,,573,607
+993,5,Józefa,Kwiatkowska,F,1827-07-13,Stargard,,,,,572,663
+994,5,Jadwiga,Kwiatkowska,F,1827-08-19,Słupsk,,,,,587,675
+995,5,Wojciech,Walczak,M,1827-09-21,Września,,,,,683,609
+996,5,Wiktoria,Walczak,F,1827-09-24,Gostyń,,,,,687,651
+997,5,Wanda,Piotrowska,F,1827-05-25,Koszalin,,,,,679,677
+998,5,Wiesław,Piotrowski,M,1827-05-19,Kołobrzeg,,,,,637,676
+999,5,Helena,Piotrowska,F,1827-06-02,Gorzów Wielkopolski,,,,,610,736
+1000,5,Leon,Walczak,M,1827-11-02,Włocławek,,,,,616,713

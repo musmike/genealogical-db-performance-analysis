@@ -60,12 +60,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [Benchmark]
         public async Task<int> _Ps03() {
-            int rowsCount = await driver.ExecuteConsumingAsync(repo.PgScenario3, 
-                scratch, (r, s) => {
-                s.City                = r.GetString(0);
-                s.QuarterCenturyStart = r.GetInt32(1);
-                s.BirthCount          = r.GetInt64(2);
-            });
+            int rowsCount = await driver.ExecuteConsumingAsync(repo.PgScenario3, scratch, PostgresMappers.MapSc03);
             
             if (rowsCount != expectedCount) {
                 throw new InvalidOperationException(

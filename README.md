@@ -107,7 +107,7 @@ pip install matplotlib
 python main.py
 ```
 
-This will generate three datasets into `data_generator/output/` and automatically create multiple diagnostic charts (e.g., `population_growth.png`, `network_topology.png`), a detailed dataset summary, an expected results directory with query validation parameters, and automatically patch the benchmark SQL/Cypher queries with valid parameters for each dataset:
+This will generate three datasets into data_generator/output/ and automatically create multiple diagnostic charts (e.g., population_growth.png, network_topology.png), a detailed dataset summary, and an expected results directory with query validation parameters. The expected results will be provided in two places: in a descriptive form inside the output directory, and additionally as structured JSON and CSV files located in the benchmark script directory. It will also automatically patch the benchmark SQL/Cypher queries with valid parameters for each dataset.
 
 | Directory | Population | Generations |
 |-----------|-----------|-------------|

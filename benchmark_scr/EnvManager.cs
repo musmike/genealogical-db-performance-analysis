@@ -3,10 +3,10 @@ namespace benchmark_scr {
 
         public static void PreparePostgres() {
             Console.WriteLine("\n[EnvManager] Ensuring neo4j_db is stopped...");
-            BashRunner.RunAsync("docker", "stop", "neo4j_db").GetAwaiter().GetResult();
+            BashRunner.RunAsync("docker", true, "stop", "neo4j_db").GetAwaiter().GetResult();
             
             Console.WriteLine("[EnvManager] Ensuring postgres_db is running...");
-            BashRunner.RunAsync("docker", "start", "postgres_db").GetAwaiter().GetResult();
+            BashRunner.RunAsync("docker", true, "start", "postgres_db").GetAwaiter().GetResult();
             
             Console.WriteLine("[EnvManager] Waiting for PostgreSQL to become ready...");
             WaitForPostgres().GetAwaiter().GetResult();
@@ -17,10 +17,10 @@ namespace benchmark_scr {
 
         public static void PrepareNeo4j() {
             Console.WriteLine("\n[EnvManager] Ensuring postgres_db is stopped...");
-            BashRunner.RunAsync("docker", "stop", "postgres_db").GetAwaiter().GetResult();
+            BashRunner.RunAsync("docker", true, "stop", "postgres_db").GetAwaiter().GetResult();
             
             Console.WriteLine("[EnvManager] Ensuring neo4j_db is running...");
-            BashRunner.RunAsync("docker", "start", "neo4j_db").GetAwaiter().GetResult();
+            BashRunner.RunAsync("docker", true, "start", "neo4j_db").GetAwaiter().GetResult();
             
             Console.WriteLine("[EnvManager] Waiting for Neo4j to become ready (this may take several seconds)...");
             WaitForNeo4j().GetAwaiter().GetResult();
@@ -28,11 +28,11 @@ namespace benchmark_scr {
             Thread.Sleep(2000); // Give the database some time to fully stabilize background processes
             Console.WriteLine("[EnvManager] Neo4j environment ready.\n");
         }
-
+        
         private static async Task WaitForPostgres() {
             while (true) {
                 var code = await BashRunner.RunAsync(
-                    "docker", "exec", "postgres_db", "pg_isready", "-U", "user"
+                    "docker", true, "exec", "postgres_db", "pg_isready", "-U", "user"
                 );
 
                 if (code == 0) return;
@@ -44,7 +44,7 @@ namespace benchmark_scr {
         private static async Task WaitForNeo4j() {
             while (true) {
                 var code = await BashRunner.RunAsync(
-                    "docker", "exec", "neo4j_db",
+                    "docker", true, "exec", "neo4j_db",
                     "cypher-shell", "-u", "neo4j", "-p", "password", "RETURN 1;"
                 );
 

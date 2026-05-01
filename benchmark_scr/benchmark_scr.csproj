@@ -21,4 +21,11 @@
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Remove="BenchmarkDotNet.Bin\**" />
+		<Compile Remove="BenchmarkDotNet.Artifacts\**" />
+		<None Remove="BenchmarkDotNet.Bin\**" />
+		<None Remove="BenchmarkDotNet.Artifacts\**" />
+	</ItemGroup>
 </Project>

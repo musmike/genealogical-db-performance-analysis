@@ -98,7 +98,7 @@ static IConfig Neo4jImportConfig(Dataset dataset) {
 }
 
 
-enum Dataset {
+public enum Dataset {
     small,
     medium,
     large

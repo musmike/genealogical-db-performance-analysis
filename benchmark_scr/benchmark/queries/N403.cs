@@ -59,13 +59,7 @@ namespace benchmark_scr.benchmark.queries {
         [Benchmark]
         public async Task<int> _N403()
         {
-            int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario3, 
-                scratch, (r, s) =>
-            {
-                s.City                = r[0].As<string>();
-                s.QuarterCenturyStart = r[1].As<int>();
-                s.BirthCount          = r[2].As<long>();
-            });
+            int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario3, scratch, Neo4jMappers.MapSc03);
             
             if (rowsCount != expectedCount) {
                 throw new InvalidOperationException(

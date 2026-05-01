@@ -59,21 +59,7 @@ namespace benchmark_scr.benchmark.queries {
         [Benchmark]
         public async Task<int> _N406()
         {
-            int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario6, 
-                scratch, (r, s) =>
-            {
-                s.ParentId         = r[0].As<int>();
-                s.GivenName        = r[1].As<string?>();
-                s.Surname          = r[2].As<string?>();
-                s.Sex              = r[3].As<string>();
-                s.BirthDate        = r[4] is LocalDate bd ? new DateOnly(bd.Year, bd.Month, bd.Day) : null;
-                s.BirthPlace       = r[5].As<string?>();
-                s.AgeAtFirstChild  = r[6].As<int>();
-                s.AgeDiffDays      = r[7].As<int>();
-                s.ChildId          = r[8].As<int>();
-                s.ChildBirthDate   = r[9] is LocalDate cbd ? new DateOnly(cbd.Year, cbd.Month, cbd.Day) : null;
-                s.ChildBirthPlace  = r[10].As<string?>();
-            });
+            int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario6, scratch, Neo4jMappers.MapSc06);
             
             if (rowsCount != expectedCount) {
                 throw new InvalidOperationException(

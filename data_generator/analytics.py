@@ -771,7 +771,10 @@ class AnalyticsEngine:
             "Pg08": 6,
             "Neo08": 48,
             "Pg09": 4,
-            "Neo09": 8
+            "Neo09": 8,
+            "TotalPeople": len(self.people),
+            "TotalFamilies": len(self.families),
+            "TotalFamilyChildren": sum(len(f.children) for f in self.families.values())
         }
 
         counts_file = os.path.join(project_root, "benchmark_scr", "scenarios", f"expected_counts_{size_str}.json")
@@ -779,6 +782,42 @@ class AnalyticsEngine:
             json.dump(expected_counts, f, indent=4)
 
         print(f"[{self.target_population}] Saved validation expected counts to '{counts_file}'.")
+
+        # ---------------- CSV Data export ----------------
+        import csv
+        exp_dir = os.path.join(project_root, "benchmark_scr", "scenarios", f"expected_data_{size_str}")
+        os.makedirs(exp_dir, exist_ok=True)
+
+        def export_csv(name, headers, rows):
+            if rows is None or len(rows) == 0:
+                return
+            filepath = os.path.join(exp_dir, f"{name}.csv")
+            with open(filepath, 'w', newline='', encoding='utf-8') as f:
+                w = csv.writer(f)
+                w.writerow(headers)
+                for r in rows:
+                    w.writerow(["" if x == 'NULL' or x is None else str(x) for x in r])
+
+        export_csv("Sc01",
+                   ["LcaId", "GivenName", "Surname", "Sex", "BirthDate", "BirthPlace", "DeathDate", "DeathPlace",
+                    "PathFromA", "PathFromB", "TotalDist"],
+                   rows_01 if best_pair_info and best_pair_info['total_dist'] == target_lca_expected else [])
+        export_csv("Sc02",
+                   ["PersonId", "GivenName", "Surname", "Sex", "BirthDate", "BirthPlace", "DeathDate", "DeathPlace"],
+                   rows_02)
+        export_csv("Sc03", ["City", "QuarterCenturyStart", "BirthCount"], rows_03)
+        export_csv("Sc04",
+                   ["RelativeId", "Generation", "GivenName", "Surname", "Sex", "BirthDate", "BirthPlace", "DeathDate",
+                    "DeathPlace", "BurialPlace", "CauseOfDeath", "FatherId", "MotherId"],
+                   rows_04 if best_ancestor_person_id else [])
+        export_csv("Sc05",
+                   ["RelativeId", "Generation", "GivenName", "Surname", "Sex", "BirthDate", "BirthPlace", "DeathDate",
+                    "DeathPlace", "BurialPlace", "CauseOfDeath", "FatherId", "MotherId"],
+                   rows_05 if best_descendant_person_id else [])
+        export_csv("Sc06", ["ParentId", "GivenName", "Surname", "Sex", "BirthDate", "BirthPlace", "AgeAtFirstChild",
+                            "AgeDiffDays", "ChildId", "ChildBirthDate", "ChildBirthPlace"], rows_06)
+
+        print(f"[{self.target_population}] Saved validation CSV data to '{exp_dir}'.")
 
         self._plot_population_growth()
         self._plot_age_distribution_living()

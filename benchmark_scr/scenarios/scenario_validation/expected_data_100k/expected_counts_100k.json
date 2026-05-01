@@ -16,5 +16,8 @@
     "Pg08": 6,
     "Neo08": 48,
     "Pg09": 4,
-    "Neo09": 8
+    "Neo09": 8,
+    "TotalPeople": 100000,
+    "TotalFamilies": 42542,
+    "TotalFamilyChildren": 99802
 }

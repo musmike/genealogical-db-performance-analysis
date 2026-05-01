@@ -1,0 +1,746 @@
+RelativeId,Generation,GivenName,Surname,Sex,BirthDate,BirthPlace,DeathDate,DeathPlace,BurialPlace,CauseOfDeath,FatherId,MotherId
+8397,1,Wanda,Malinowska,F,1808-08-03,Chojnice,,,,,7074,7213
+8640,1,Julian,Krawczyk,M,1812-05-01,Wejherowo,,,,,7183,7418
+7074,2,Mateusz,Malinowski,M,1782-07-19,Elbląg,,,,,5532,5739
+7183,2,Marian,Krawczyk,M,1784-04-10,Danzig,,,,,5535,5997
+7213,2,Marianna,Malinowska,F,1784-02-20,Gdynia,,,,,6020,6212
+7418,2,Helena,Piotrowska,F,1789-07-06,Chojnice,,,,,6071,6327
+5532,3,Piotr,Malinowski,M,1744-06-14,Kołobrzeg,1803-01-11,Malbork,Cemetery in Malbork,Pneumonia,4618,4665
+5535,3,Piotr,Krawczyk,M,1744-02-15,Gdynia,1813-06-06,Stettin,Cemetery in Stettin,Unknown,4322,4651
+5739,3,Wiktoria,Malinowska,F,1750-12-10,Wejherowo,1805-05-07,Danzig,Cemetery in Danzig,Unknown,4936,4873
+5997,3,Danuta,Michalska,F,1757-08-07,Grudziądz,1810-08-24,Sopot,Cemetery in Sopot,War casualty,4716,5012
+6020,3,Maciej,Malinowski,M,1757-07-12,Danzig,1815-09-10,Stargard,Cemetery in Stargard,,5262,5402
+6071,3,Leon,Piotrowski,M,1759-04-25,Elbląg,1833-11-15,Stettin,Cemetery in Stettin,,4984,4756
+6212,3,Joanna,Michalska,F,1762-06-24,Sopot,1823-09-24,Stettin,Cemetery in Stettin,Influenza,4298,5360
+6327,3,Rozalia,Krawczyk,F,1765-01-21,Wejherowo,1826-05-06,Kołobrzeg,Cemetery in Kołobrzeg,Plague,5379,5304
+4298,4,Piotr,Michalski,M,1703-02-28,Malbork,1767-08-23,Sopot,Cemetery in Sopot,Plague,3290,3855
+4322,4,Zygmunt,Krawczyk,M,1704-09-25,Kołobrzeg,1757-05-16,Kołobrzeg,Cemetery in Kołobrzeg,,3201,3474
+4618,4,Ryszard,Malinowski,M,1715-09-09,Olsztyn,1781-10-24,Stettin,Cemetery in Stettin,Stroke,3866,3864
+4651,4,Krystyna,Kowalska,F,1716-03-15,Opole,1771-09-20,Wejherowo,Cemetery in Wejherowo,Drowning,3897,3856
+4665,4,Julia,Malinowska,F,1716-01-04,Gdynia,1768-01-18,Świnoujście,Cemetery in Świnoujście,Accident,4093,3982
+4716,4,Ryszard,Michalski,M,1718-09-21,Kalisz,1772-07-08,Gostyń,Cemetery in Gostyń,,3603,4028
+4756,4,Czesława,Piotrowska,F,1719-03-01,Stargard,1778-11-09,Olsztyn,Cemetery in Olsztyn,Murder,4128,3975
+4873,4,Helena,Michalska,F,1723-02-03,Elbląg,1784-10-21,Danzig,Cemetery in Danzig,Murder,4170,3798
+4936,4,Czesław,Malinowski,M,1725-06-01,Stettin,1798-02-23,Sopot,Cemetery in Sopot,Dysentery,3731,4109
+4984,4,Szymon,Piotrowski,M,1727-10-28,Elbląg,1796-01-03,Świnoujście,Cemetery in Świnoujście,,4197,4427
+5012,4,Katarzyna,Michalska,F,1728-02-22,Września,1801-02-24,Gdynia,Cemetery in Gdynia,Consumption,4237,4392
+5262,4,Krzysztof,Malinowski,M,1736-02-18,Sopot,1797-03-15,Wejherowo,Cemetery in Wejherowo,Stroke,4452,4626
+5304,4,Józefa,Krawczyk,F,1738-03-08,Malbork,1809-04-16,Świnoujście,Cemetery in Świnoujście,Apoplexy,4207,4345
+5360,4,Kazimiera,Dąbrowska,F,1739-01-19,Ostrów Wielkopolski,1812-05-22,Olsztyn,Cemetery in Olsztyn,Apoplexy,4464,4653
+5379,4,Tomasz,Krawczyk,M,1740-02-28,Danzig,1780-06-17,Malbork,Cemetery in Malbork,Apoplexy,4481,4448
+5402,4,Urszula,Malinowska,F,1740-01-21,Słupsk,1792-08-12,Olsztyn,Cemetery in Olsztyn,Cancer,4524,4559
+3201,5,Filip,Krawczyk,M,1660-09-10,Malbork,1706-11-19,Stettin,Cemetery in Stettin,Drowning,2635,2734
+3290,5,Adam,Michalski,M,1664-10-11,Elbląg,1728-02-19,Sopot,Cemetery in Sopot,Heart failure,2338,2544
+3474,5,Barbara,Michalska,F,1671-05-06,Włocławek,1718-07-25,Świnoujście,Cemetery in Świnoujście,Fire,2720,2874
+3603,5,Kazimierz,Michalski,M,1677-12-06,Grudziądz,1729-12-26,Grudziądz,Cemetery in Grudziądz,Accident,2948,2879
+3731,5,Władysław,Malinowski,M,1682-11-14,Gdynia,1747-06-01,Świnoujście,Cemetery in Świnoujście,War casualty,3027,2914
+3798,5,Katarzyna,Krawczyk,F,1684-06-19,Świnoujście,1758-11-15,Koszalin,Cemetery in Koszalin,Influenza,3087,3149
+3855,5,Małgorzata,Krawczyk,F,1686-05-22,Świnoujście,1757-08-13,Stettin,Cemetery in Stettin,Consumption,3199,3257
+3856,5,Genowefa,Kowalska,F,1686-11-06,Świdnica,1760-02-21,Legnica,Cemetery in Legnica,Dropsy,2776,3066
+3864,5,Wiktoria,Piotrowska,F,1687-04-16,Chojnice,1739-11-06,Danzig,Cemetery in Danzig,Infectious disease,3152,3120
+3866,5,Wojciech,Malinowski,M,1687-11-04,Olsztyn,1727-04-11,Elbląg,Cemetery in Elbląg,,3146,3032
+3897,5,Adam,Kowalski,M,1688-11-07,Jelenia Góra,1732-01-12,Opole,Cemetery in Opole,,3181,3116
+3975,5,Małgorzata,Krawczyk,F,1691-03-02,Wejherowo,1768-10-10,Olsztyn,Cemetery in Olsztyn,Dysentery,3087,3149
+3982,5,Barbara,Michalska,F,1691-05-11,Leszno,1721-02-27,Stargard,Cemetery in Stargard,Dysentery,3094,3214
+4028,5,Ewa,Dąbrowska,F,1693-09-19,Kalisz,1773-04-07,Grudziądz,Cemetery in Grudziądz,Murder,3253,3130
+4093,5,Ryszard,Malinowski,M,1695-06-19,Kołobrzeg,1751-03-07,Danzig,Cemetery in Danzig,Pneumonia,3383,3465
+4109,5,Jadwiga,Piotrowska,F,1696-04-13,Malbork,1767-07-06,Stargard,Cemetery in Stargard,Consumption,3216,3235
+4128,5,Marian,Piotrowski,M,1696-05-28,Chojnice,1777-02-23,Wejherowo,Cemetery in Wejherowo,,2723,3159
+4170,5,Franciszek,Michalski,M,1698-08-20,Elbląg,1772-11-01,Malbork,Cemetery in Malbork,Dropsy,3369,3506
+4197,5,Józef,Piotrowski,M,1699-08-22,Sopot,1758-08-04,Kołobrzeg,Cemetery in Kołobrzeg,Heart failure,3414,3493
+4207,5,Bartosz,Krawczyk,M,1700-07-23,Koszalin,1737-08-14,Gdynia,Cemetery in Gdynia,Cancer,3482,3498
+4237,5,Stanisław,Michalski,M,1701-09-10,Leszno,1758-08-07,Inowrocław,Cemetery in Inowrocław,,3513,3630
+4345,5,Oliwia,Michalska,F,1705-01-27,Kołobrzeg,1754-01-17,Olsztyn,Cemetery in Olsztyn,Apoplexy,3746,3754
+4392,5,Wiktoria,Nowakowska,F,1707-04-26,Konin,1762-09-07,Grudziądz,Cemetery in Grudziądz,Influenza,3544,3501
+4427,5,Wiktoria,Michalska,F,1708-11-01,Słupsk,1770-01-13,Kołobrzeg,Cemetery in Kołobrzeg,Drowning,3290,3855
+4448,5,Leokadia,Malinowska,F,1709-04-21,Olsztyn,1800-06-02,Danzig,Cemetery in Danzig,Dropsy,3643,3794
+4452,5,Leon,Malinowski,M,1709-07-23,Stettin,1785-12-12,Danzig,Cemetery in Danzig,War casualty,3705,3793
+4464,5,Henryk,Dąbrowski,M,1709-12-19,Konin,1764-05-16,Inowrocław,Cemetery in Inowrocław,Smallpox,3817,3632
+4481,5,Kamil,Krawczyk,M,1710-04-22,Chojnice,1783-11-27,Stargard,Cemetery in Stargard,,3800,3729
+4524,5,Marcin,Malinowski,M,1712-05-03,Stettin,1780-04-17,Malbork,Cemetery in Malbork,,3643,3794
+4559,5,Agnieszka,Michalska,F,1713-11-12,Inowrocław,1769-01-15,Chojnice,Cemetery in Chojnice,Starvation,3680,3938
+4626,5,Rozalia,Michalska,F,1715-08-26,Gniezno,1765-03-23,Gdynia,Cemetery in Gdynia,Stroke,3789,3977
+4653,5,Elżbieta,Grabowska,F,1716-07-05,Białystok,1763-04-22,Kościan,Cemetery in Kościan,Cholera,3910,4044
+2338,6,Franciszek,Michalski,M,1619-08-10,Sopot,1672-05-07,Stargard,Cemetery in Stargard,Murder,1740,1734
+2544,6,Krystyna,Krawczyk,F,1628-01-10,Słupsk,1687-04-11,Olsztyn,Cemetery in Olsztyn,,2090,2200
+2635,6,Michał,Krawczyk,M,1634-06-08,Olsztyn,1697-09-28,Sopot,Cemetery in Sopot,Dropsy,1969,2013
+2720,6,Szymon,Michalski,M,1639-11-28,Konin,1697-11-24,Rawicz,Cemetery in Rawicz,Starvation,2076,2107
+2723,6,Bartosz,Piotrowski,M,1639-02-11,Wejherowo,1710-11-09,Stettin,Cemetery in Stettin,Smallpox,2337,2277
+2734,6,Alicja,Malinowska,F,1640-01-28,Elbląg,1696-11-14,Słupsk,Cemetery in Słupsk,,2193,2312
+2776,6,Andrzej,Kowalski,M,1642-04-09,Świdnica,1694-12-21,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Fever,2073,2224
+2874,6,Jadwiga,Grabowska,F,1646-03-05,Ciechanów,1705-04-17,Posen,Cemetery in Posen,Stroke,2230,2334
+2879,6,Katarzyna,Michalska,F,1646-04-25,Thorn,1701-07-10,Bromberg,Cemetery in Bromberg,,2350,2360
+2914,6,Irena,Krawczyk,F,1648-02-26,Olsztyn,1707-12-23,Olsztyn,Cemetery in Olsztyn,,2131,2212
+2948,6,Wojciech,Michalski,M,1649-11-28,Kalisz,1702-07-05,Śrem,Cemetery in Śrem,Accident,2292,2382
+3027,6,Stefan,Malinowski,M,1652-11-25,Danzig,1698-05-12,Świnoujście,Cemetery in Świnoujście,Murder,2413,2404
+3032,6,Genowefa,Malinowska,F,1653-10-28,Chojnice,1698-07-25,Wejherowo,Cemetery in Wejherowo,Fever,2286,2336
+3066,6,Urszula,Piotrowska,F,1654-11-13,Breslau,1719-06-03,Świdnica,Cemetery in Świdnica,Typhus,2448,2339
+3087,6,Leon,Krawczyk,M,1655-06-03,Elbląg,1716-02-09,Elbląg,Cemetery in Elbląg,Dysentery,2135,2472
+3094,6,Filip,Michalski,M,1655-01-19,Włocławek,1703-05-03,Kościan,Cemetery in Kościan,,2358,2569
+3116,6,Marianna,Malinowska,F,1656-01-12,Chojnice,1724-03-16,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Unknown,2160,2455
+3120,6,Alicja,Jabłońska,F,1656-05-09,Gdynia,1722-04-14,Danzig,Cemetery in Danzig,Fever,2638,2614
+3130,6,Czesława,Michalska,F,1657-03-01,Konin,1724-11-21,Leszno,Cemetery in Leszno,Cancer,2358,2569
+3146,6,Grzegorz,Malinowski,M,1658-11-16,Koszalin,1701-10-02,Sopot,Cemetery in Sopot,,2610,2527
+3149,6,Rozalia,Malinowska,F,1658-10-03,Chojnice,1699-01-13,Danzig,Cemetery in Danzig,,2385,2538
+3152,6,Michał,Piotrowski,M,1658-10-01,Koszalin,1708-02-19,Chojnice,Cemetery in Chojnice,Fire,2376,2619
+3159,6,Urszula,Grabowska,F,1658-11-20,Ostrołęka,1716-06-24,Elbląg,Cemetery in Elbląg,Cholera,2665,2680
+3181,6,Piotr,Kowalski,M,1659-08-22,Wałbrzych,1721-05-10,Breslau,Cemetery in Breslau,Heart failure,2626,2724
+3199,6,Mirosław,Krawczyk,M,1660-01-12,Stargard,1697-05-07,Danzig,Cemetery in Danzig,Infectious disease,2248,2668
+3214,6,Józefa,Michalska,F,1661-03-13,Konin,1732-01-11,Posen,Cemetery in Posen,Cancer,2388,2556
+3216,6,Wiesław,Piotrowski,M,1661-12-02,Sopot,1723-05-13,Sopot,Cemetery in Sopot,,2376,2619
+3235,6,Marianna,Jabłońska,F,1661-03-06,Gdynia,1736-12-14,Chojnice,Cemetery in Chojnice,,2717,2636
+3253,6,Andrzej,Dąbrowski,M,1662-08-11,Ostrów Wielkopolski,1710-04-02,Gostyń,Cemetery in Gostyń,Pneumonia,2495,2686
+3257,6,Czesława,Malinowska,F,1662-07-22,Stettin,1732-04-06,Koszalin,Cemetery in Koszalin,Stroke,2622,2697
+3369,6,Krzysztof,Michalski,M,1666-12-03,Sopot,1708-03-19,Wejherowo,Cemetery in Wejherowo,War casualty,2244,2699
+3383,6,Jerzy,Malinowski,M,1667-01-11,Olsztyn,1699-03-15,Danzig,Cemetery in Danzig,Dysentery,2620,2751
+3414,6,Tadeusz,Piotrowski,M,1668-04-23,Świnoujście,1709-07-06,Sopot,Cemetery in Sopot,Pneumonia,,
+3465,6,Genowefa,Piotrowska,F,1670-02-09,Elbląg,1725-05-25,Koszalin,Cemetery in Koszalin,Cholera,2708,2865
+3482,6,Adam,Krawczyk,M,1671-08-04,Wejherowo,1728-11-14,Malbork,Cemetery in Malbork,Fever,2781,3072
+3493,6,Teresa,Jabłońska,F,1672-02-13,Danzig,1716-04-09,Danzig,Cemetery in Danzig,Fire,2721,2886
+3498,6,Halina,Malinowska,F,1672-12-24,Sopot,1714-05-07,Gdynia,Cemetery in Gdynia,,2896,2963
+3501,6,Wanda,Nowakowska,F,1672-11-11,Inowrocław,1737-09-17,Gniezno,Cemetery in Gniezno,Dysentery,2868,2950
+3506,6,Maria,Krawczyk,F,1672-12-09,Świnoujście,1749-11-09,Kołobrzeg,Cemetery in Kołobrzeg,Murder,2719,2976
+3513,6,Bartosz,Michalski,M,1673-07-23,Rawicz,1715-03-19,Śrem,Cemetery in Śrem,Accident,2720,2874
+3544,6,Szymon,Nowakowski,M,1674-03-23,Gostyń,1724-12-28,Śrem,Cemetery in Śrem,Typhus,2866,2998
+3630,6,Helena,Michalska,F,1678-11-13,Września,1749-01-19,Posen,Cemetery in Posen,Consumption,2969,2937
+3632,6,Zofia,Michalska,F,1678-12-25,Bromberg,1727-06-27,Grudziądz,Cemetery in Grudziądz,Plague,2823,2986
+3643,6,Wojciech,Malinowski,M,1678-05-12,Gdynia,1717-08-21,Stargard,Cemetery in Stargard,Consumption,3027,2914
+3680,6,Piotr,Michalski,M,1680-04-03,Piła,1720-02-18,Rawicz,Cemetery in Rawicz,Plague,2969,2937
+3705,6,Tadeusz,Malinowski,M,1681-12-21,Świnoujście,1731-06-05,Słupsk,Cemetery in Słupsk,Murder,3075,2999
+3729,6,Krystyna,Malinowska,F,1682-08-09,Malbork,1751-07-08,Stargard,Cemetery in Stargard,Smallpox,2984,2953
+3746,6,Grzegorz,Michalski,M,1682-10-17,Chojnice,1734-12-13,Malbork,Cemetery in Malbork,Fever,3013,3196
+3754,6,Anna,Jabłońska,F,1683-10-11,Słupsk,1741-02-19,Olsztyn,Cemetery in Olsztyn,Typhus,3035,2918
+3789,6,Ryszard,Michalski,M,1684-05-09,Śrem,1723-05-18,Konin,Cemetery in Konin,War casualty,,
+3793,6,Jadwiga,Krawczyk,F,1684-06-10,Świnoujście,1747-07-19,Olsztyn,Cemetery in Olsztyn,,3124,2959
+3794,6,Julia,Michalska,F,1684-05-26,Kołobrzeg,1733-07-18,Sopot,Cemetery in Sopot,Typhus,2791,3045
+3800,6,Łukasz,Krawczyk,M,1684-03-25,Sopot,1748-11-17,Słupsk,Cemetery in Słupsk,Typhus,3201,3086
+3817,6,Piotr,Dąbrowski,M,1685-06-05,Ostrów Wielkopolski,1745-12-15,Kościan,Cemetery in Kościan,Fire,,
+3910,6,Paweł,Grabowski,M,1688-11-21,Skierniewice,1734-12-09,Chełm,Cemetery in Chełm,Infectious disease,3221,3246
+3938,6,Barbara,Michalska,F,1689-03-08,Kościan,1740-04-13,Inowrocław,Cemetery in Inowrocław,Cancer,3114,3293
+3977,6,Oliwia,Dąbrowska,F,1691-07-28,Kościan,1740-09-10,Thorn,Cemetery in Thorn,,3253,3130
+4044,6,Julia,Grabowska,F,1693-12-25,Lublin,1731-03-02,Siedlce,Cemetery in Siedlce,Plague,3391,3340
+1734,7,Maria,Majewska,F,1583-03-25,Zakopane,1655-06-05,Danzig,Cemetery in Danzig,Murder,1175,1213
+1740,7,Jan,Michalski,M,1583-10-24,Stettin,1639-11-19,Słupsk,Cemetery in Słupsk,War casualty,1303,1356
+1969,7,Piotr,Krawczyk,M,1596-11-20,Chojnice,1639-10-05,Wejherowo,Cemetery in Wejherowo,Infectious disease,1552,1507
+2013,7,Ludwika,Jabłońska,F,1598-11-03,Gdynia,1660-09-15,Koszalin,Cemetery in Koszalin,Typhus,1576,1509
+2073,7,Mirosław,Kowalski,M,1602-01-05,Zielona Góra,1684-01-05,Jelenia Góra,Cemetery in Jelenia Góra,,1619,1602
+2076,7,Andrzej,Michalski,M,1602-10-12,Leszno,1656-09-12,Włocławek,Cemetery in Włocławek,Infectious disease,1655,1726
+2090,7,Łukasz,Krawczyk,M,1603-01-24,Malbork,1662-12-04,Kołobrzeg,Cemetery in Kołobrzeg,War casualty,1702,1683
+2107,7,Agnieszka,Kowalska,F,1604-03-24,Świdnica,1666-12-26,Grudziądz,Cemetery in Grudziądz,Plague,1657,1687
+2131,7,Bartosz,Krawczyk,M,1606-10-04,Stettin,1684-11-17,Słupsk,Cemetery in Słupsk,Influenza,1679,1794
+2135,7,Kamil,Krawczyk,M,1606-10-04,Danzig,1684-08-09,Danzig,Cemetery in Danzig,,1643,1714
+2160,7,Łukasz,Malinowski,M,1608-07-16,Olsztyn,1671-12-07,Chojnice,Cemetery in Chojnice,Fever,1665,1818
+2193,7,Tomasz,Malinowski,M,1610-06-17,Chojnice,1678-02-19,Kołobrzeg,Cemetery in Kołobrzeg,Infectious disease,1785,1609
+2200,7,Stefania,Malinowska,F,1611-04-27,Świnoujście,1668-11-20,Kołobrzeg,Cemetery in Kołobrzeg,Infectious disease,1372,1757
+2212,7,Agnieszka,Michalska,F,1612-11-02,Kołobrzeg,1652-11-17,Malbork,Cemetery in Malbork,Fire,1740,1734
+2224,7,Alicja,Mazur,F,1612-09-20,Zielona Góra,1700-06-21,Wałbrzych,Cemetery in Wałbrzych,Pneumonia,1802,1822
+2230,7,Zygmunt,Grabowski,M,1612-04-22,Łódź,1689-05-11,Ostrołęka,Cemetery in Ostrołęka,Typhus,1806,1876
+2244,7,Michał,Michalski,M,1614-01-25,Słupsk,1684-03-18,Gdynia,Cemetery in Gdynia,Influenza,1674,1813
+2248,7,Tomasz,Krawczyk,M,1614-11-12,Kołobrzeg,1660-02-23,Chojnice,Cemetery in Chojnice,Smallpox,1753,1820
+2277,7,Danuta,Jabłońska,F,1616-11-16,Zamość,1690-05-22,Chojnice,Cemetery in Chojnice,Consumption,1599,1695
+2286,7,Paweł,Malinowski,M,1616-12-28,Sopot,1681-10-22,Elbląg,Cemetery in Elbląg,Stroke,1712,1873
+2292,7,Mateusz,Michalski,M,1616-10-19,Kalisz,1692-02-12,Konin,Cemetery in Konin,Murder,1613,1982
+2312,7,Zofia,Grabowska,F,1617-07-05,Łomża,1668-06-01,Kołobrzeg,Cemetery in Kołobrzeg,Typhus,1805,1864
+2334,7,Monika,Krawczyk,F,1618-06-12,Malbork,1679-08-27,Ostrołęka,Cemetery in Ostrołęka,War casualty,1997,1980
+2336,7,Katarzyna,Michalska,F,1618-08-15,Ostrów Wielkopolski,1672-10-11,Wejherowo,Cemetery in Wejherowo,Cholera,1901,1957
+2337,7,Czesław,Piotrowski,M,1618-04-27,Słupsk,1677-04-19,Danzig,Cemetery in Danzig,Apoplexy,1898,1924
+2339,7,Wiktoria,Kowalska,F,1619-03-01,Legnica,1709-08-02,Zielona Góra,Cemetery in Zielona Góra,Consumption,1767,1807
+2350,7,Adam,Michalski,M,1619-05-19,Gniezno,1688-08-23,Rawicz,Cemetery in Rawicz,War casualty,1937,1955
+2358,7,Wiesław,Michalski,M,1619-04-06,Ostrów Wielkopolski,1667-07-10,Thorn,Cemetery in Thorn,Influenza,1901,1957
+2360,7,Barbara,Michalska,F,1619-04-09,Bromberg,1682-06-15,Inowrocław,Cemetery in Inowrocław,Smallpox,1910,1900
+2376,7,Paweł,Piotrowski,M,1620-04-23,Gdynia,1671-02-18,Olsztyn,Cemetery in Olsztyn,Cholera,1898,1924
+2382,7,Maria,Michalska,F,1620-04-27,Włocławek,1662-10-04,Piła,Cemetery in Piła,,2060,1940
+2385,7,Stanisław,Malinowski,M,1621-06-28,Elbląg,1678-11-25,Wejherowo,Cemetery in Wejherowo,Dropsy,1712,1873
+2388,7,Stefan,Michalski,M,1621-08-01,Września,1696-05-04,Grudziądz,Cemetery in Grudziądz,Influenza,1640,1930
+2404,7,Katarzyna,Michalska,F,1622-09-16,Ostrów Wielkopolski,1681-01-17,Wejherowo,Cemetery in Wejherowo,Dropsy,1613,1982
+2413,7,Kazimierz,Malinowski,M,1622-06-26,Koszalin,1675-07-09,Wejherowo,Cemetery in Wejherowo,Smallpox,1843,1818
+2448,7,Henryk,Piotrowski,M,1624-01-25,Wałbrzych,1689-04-22,Legnica,Cemetery in Legnica,Consumption,2010,1941
+2455,7,Teresa,Michalska,F,1624-09-12,Śrem,1664-03-17,Stettin,Cemetery in Stettin,Dropsy,1910,1900
+2472,7,Anna,Nowakowska,F,1625-01-16,Konin,1707-02-19,Olsztyn,Cemetery in Olsztyn,Influenza,1949,2025
+2495,7,Andrzej,Dąbrowski,M,1626-12-24,Września,1695-02-24,Kalisz,Cemetery in Kalisz,Accident,2012,2040
+2527,7,Anna,Krawczyk,F,1627-06-06,Danzig,1711-10-15,Sopot,Cemetery in Sopot,Accident,2088,1982
+2538,7,Grażyna,Malinowska,F,1628-07-11,Stargard,1673-06-02,Elbląg,Cemetery in Elbląg,Starvation,1768,2034
+2556,7,Grażyna,Krawczyk,F,1629-07-06,Słupsk,1671-02-05,Grudziądz,Cemetery in Grudziądz,Plague,2045,2072
+2569,7,Anna,Michalska,F,1630-03-09,Grudziądz,1672-04-21,Inowrocław,Cemetery in Inowrocław,Pneumonia,1912,2011
+2610,7,Zygmunt,Malinowski,M,1632-10-19,Wejherowo,1674-11-05,Malbork,Cemetery in Malbork,Infectious disease,2147,2099
+2614,7,Alicja,Krawczyk,F,1632-05-16,Słupsk,1694-07-27,Chojnice,Cemetery in Chojnice,Influenza,1753,2139
+2619,7,Stefania,Krawczyk,F,1633-03-05,Kołobrzeg,1710-11-10,Stettin,Cemetery in Stettin,Murder,2090,2200
+2620,7,Antoni,Malinowski,M,1633-05-10,Kołobrzeg,1698-08-27,Sopot,Cemetery in Sopot,Stroke,2108,2096
+2622,7,Mirosław,Malinowski,M,1633-08-19,Malbork,1674-06-23,Świnoujście,Cemetery in Świnoujście,Drowning,2147,2099
+2626,7,Krzysztof,Kowalski,M,1633-02-04,Breslau,1705-01-14,Breslau,Cemetery in Breslau,,2026,1830
+2636,7,Aleksandra,Michalska,F,1634-11-04,Olsztyn,1679-02-06,Elbląg,Cemetery in Elbląg,Fever,1975,2125
+2638,7,Kamil,Jabłoński,M,1634-09-10,Elbląg,1671-12-28,Koszalin,Cemetery in Koszalin,,1976,2167
+2665,7,Franciszek,Grabowski,M,1636-01-17,Łomża,1713-09-10,Skierniewice,Cemetery in Skierniewice,Starvation,2043,1933
+2668,7,Urszula,Majewska,F,1636-01-05,Kielce,1685-04-24,Chojnice,Cemetery in Chojnice,Heart failure,2119,2184
+2680,7,Zuzanna,Jabłońska,F,1637-10-05,Wejherowo,1695-02-05,Warszawa,Cemetery in Warszawa,Fire,1976,2167
+2686,7,Anna,Malinowska,F,1637-12-25,Sopot,1721-12-13,Gniezno,Cemetery in Gniezno,Pneumonia,2193,2312
+2697,7,Urszula,Dąbrowska,F,1637-08-02,Inowrocław,1713-07-25,Gdynia,Cemetery in Gdynia,Fire,1946,2351
+2699,7,Agnieszka,Michalska,F,1638-02-20,Elbląg,1682-05-15,Gdynia,Cemetery in Gdynia,Fever,1975,2125
+2708,7,Bartosz,Piotrowski,M,1638-11-07,Stargard,1708-10-15,Malbork,Cemetery in Malbork,Apoplexy,2337,2277
+2717,7,Antoni,Jabłoński,M,1639-08-13,Stargard,1683-07-05,Stettin,Cemetery in Stettin,,1976,2167
+2719,7,Władysław,Krawczyk,M,1639-09-06,Malbork,1702-01-11,Wejherowo,Cemetery in Wejherowo,,2120,2154
+2721,7,Julian,Jabłoński,M,1639-11-06,Kołobrzeg,1696-08-22,Elbląg,Cemetery in Elbląg,,2165,2221
+2724,7,Oliwia,Kowalska,F,1639-02-20,Świdnica,1695-03-12,Legnica,Cemetery in Legnica,Stroke,2231,2323
+2751,7,Julia,Malinowska,F,1641-04-09,Malbork,1667-09-17,Kołobrzeg,Cemetery in Kołobrzeg,Consumption,,
+2781,7,Wojciech,Krawczyk,M,1642-08-06,Olsztyn,1684-10-07,Słupsk,Cemetery in Słupsk,Starvation,2181,2352
+2791,7,Bartosz,Michalski,M,1643-06-16,Gdynia,1694-02-19,Kołobrzeg,Cemetery in Kołobrzeg,Apoplexy,1975,2125
+2823,7,Franciszek,Michalski,M,1644-12-17,Ostrów Wielkopolski,1704-06-26,Thorn,Cemetery in Thorn,Cholera,2149,2241
+2865,7,Julia,Malinowska,F,1645-08-22,Świnoujście,1717-08-16,Sopot,Cemetery in Sopot,Fire,2286,2336
+2866,7,Ryszard,Nowakowski,M,1645-10-04,Thorn,1704-09-02,Leszno,Cemetery in Leszno,Stroke,2421,2392
+2868,7,Zygmunt,Nowakowski,M,1645-03-15,Inowrocław,1732-08-05,Piła,Cemetery in Piła,Unknown,2415,2346
+2886,7,Jadwiga,Michalska,F,1646-08-06,Gostyń,1706-01-27,Elbląg,Cemetery in Elbląg,Unknown,2358,2441
+2896,7,Filip,Malinowski,M,1647-06-16,Wejherowo,1707-04-16,Malbork,Cemetery in Malbork,,2299,2445
+2918,7,Katarzyna,Malinowska,F,1648-05-21,Chojnice,1697-09-03,Stargard,Cemetery in Stargard,Dropsy,2203,2282
+2937,7,Monika,Michalska,F,1649-06-06,Kościan,1697-11-24,Bromberg,Cemetery in Bromberg,,2350,2360
+2950,7,Barbara,Michalska,F,1649-09-21,Kościan,1718-04-21,Września,Cemetery in Września,Cholera,2443,2501
+2953,7,Irena,Michalska,F,1649-02-07,Malbork,1704-01-25,Malbork,Cemetery in Malbork,Starvation,2402,2529
+2959,7,Irena,Krawczyk,F,1649-09-27,Kołobrzeg,1720-01-15,Olsztyn,Cemetery in Olsztyn,Stroke,2484,2470
+2963,7,Natalia,Krawczyk,F,1650-10-22,Wejherowo,1707-03-17,Wejherowo,Cemetery in Wejherowo,Apoplexy,2131,2212
+2969,7,Jan,Michalski,M,1650-09-23,Posen,1717-05-06,Thorn,Cemetery in Thorn,Unknown,2464,2463
+2976,7,Zuzanna,Malinowska,F,1650-09-11,Kołobrzeg,1705-10-07,Elbląg,Cemetery in Elbląg,Fever,2247,2435
+2984,7,Stanisław,Malinowski,M,1651-11-16,Olsztyn,1696-08-22,Chojnice,Cemetery in Chojnice,Cancer,2286,2336
+2986,7,Joanna,Piotrowska,F,1651-09-03,Świdnica,1714-01-12,Konin,Cemetery in Konin,Typhus,,
+2998,7,Katarzyna,Krawczyk,F,1651-09-01,Olsztyn,1729-10-05,Bromberg,Cemetery in Bromberg,Typhus,2135,2472
+2999,7,Halina,Jabłońska,F,1651-10-08,Stargard,1717-05-08,Wejherowo,Cemetery in Wejherowo,Dysentery,2487,2426
+3013,7,Maciej,Michalski,M,1652-09-18,Danzig,1705-04-23,Świnoujście,Cemetery in Świnoujście,Influenza,2402,2529
+3035,7,Ignacy,Jabłoński,M,1653-12-18,Kołobrzeg,1710-05-18,Koszalin,Cemetery in Koszalin,Murder,2348,2419
+3045,7,Wiktoria,Krawczyk,F,1653-09-03,Stettin,1706-07-05,Stargard,Cemetery in Stargard,Drowning,2467,2585
+3072,7,Zofia,Malinowska,F,1654-04-24,Stettin,1727-12-17,Koszalin,Cemetery in Koszalin,Stroke,2610,2527
+3075,7,Julian,Malinowski,M,1654-09-17,Gdynia,1697-03-14,Olsztyn,Cemetery in Olsztyn,Smallpox,2385,2538
+3086,7,Wiktoria,Michalska,F,1655-12-25,Gdynia,1701-08-21,Gdynia,Cemetery in Gdynia,War casualty,2338,2544
+3114,7,Szymon,Michalski,M,1656-04-04,Leszno,1723-06-04,Września,Cemetery in Września,Heart failure,2560,2565
+3124,7,Kazimierz,Krawczyk,M,1656-04-24,Olsztyn,1701-10-22,Świnoujście,Cemetery in Świnoujście,Drowning,2607,2184
+3196,7,Rozalia,Jabłońska,F,1660-10-17,Stargard,1712-08-05,Malbork,Cemetery in Malbork,Murder,,
+3221,7,Andrzej,Grabowski,M,1661-06-06,Siedlce,1703-01-27,Biała Podlaska,Cemetery in Biała Podlaska,Influenza,2370,2578
+3246,7,Agnieszka,Grabowska,F,1662-12-17,Łódź,1707-05-08,Ciechanów,Cemetery in Ciechanów,War casualty,2502,2598
+3293,7,Aleksandra,Michalska,F,1664-01-18,Gostyń,1736-10-20,Ostrów Wielkopolski,Cemetery in Ostrów Wielkopolski,War casualty,2460,2662
+3340,7,Józefa,Grabowska,F,1665-08-25,Lublin,1733-10-27,Skierniewice,Cemetery in Skierniewice,Stroke,2667,2843
+3391,7,Piotr,Grabowski,M,1667-06-23,Chełm,1726-06-02,Ostrołęka,Cemetery in Ostrołęka,Cancer,2725,2738
+1175,8,Władysław,Majewski,M,1541-08-19,Sandomierz,1612-08-06,Przemyśl,Cemetery in Przemyśl,Heart failure,859,861
+1213,8,Stefania,Szymańska,F,1544-12-27,Nowy Sącz,1592-04-05,Tarnobrzeg,Cemetery in Tarnobrzeg,Cancer,889,952
+1303,8,Julian,Michalski,M,1553-07-10,Gdynia,1630-06-07,Stettin,Cemetery in Stettin,War casualty,990,954
+1356,8,Ewa,Michalska,F,1556-12-05,Leszno,1614-06-05,Wejherowo,Cemetery in Wejherowo,Dysentery,1011,1057
+1372,8,Ryszard,Malinowski,M,1558-10-12,Chojnice,1612-03-01,Słupsk,Cemetery in Słupsk,,1002,1017
+1507,8,Grażyna,Majewska,F,1568-08-25,Kielce,1618-02-13,Olsztyn,Cemetery in Olsztyn,Cancer,1155,1081
+1509,8,Anna,Jabłońska,F,1568-04-23,Chełm,1629-05-26,Elbląg,Cemetery in Elbląg,Unknown,1075,1076
+1552,8,Marian,Krawczyk,M,1570-07-13,Elbląg,1621-01-25,Świnoujście,Cemetery in Świnoujście,Fever,974,1090
+1576,8,Krzysztof,Jabłoński,M,1571-10-01,Elbląg,1640-07-18,Słupsk,Cemetery in Słupsk,Apoplexy,1228,1255
+1599,8,Mateusz,Jabłoński,M,1573-09-15,Biała Podlaska,1618-05-01,Lublin,Cemetery in Lublin,,1153,1241
+1602,8,Maja,Wojciechowska,F,1573-03-24,Wałbrzych,1622-03-26,Legnica,Cemetery in Legnica,,1272,1227
+1609,8,Barbara,Szymańska,F,1573-04-27,Tarnów,1636-02-21,Olsztyn,Cemetery in Olsztyn,Murder,1285,1207
+1613,8,Marian,Michalski,M,1573-04-18,Września,1624-01-23,Grudziądz,Cemetery in Grudziądz,Typhus,1083,1119
+1619,8,Marian,Kowalski,M,1574-11-17,Breslau,1629-11-22,Opole,Cemetery in Opole,,1211,1251
+1640,8,Leon,Michalski,M,1576-03-05,Ostrów Wielkopolski,1650-01-25,Bromberg,Cemetery in Bromberg,Fire,1172,1164
+1643,8,Czesław,Krawczyk,M,1576-10-19,Koszalin,1637-12-08,Elbląg,Cemetery in Elbląg,,1210,1163
+1655,8,Antoni,Michalski,M,1577-01-16,Kalisz,1623-06-22,Włocławek,Cemetery in Włocławek,Stroke,1172,1164
+1657,8,Józef,Kowalski,M,1577-03-28,Breslau,1646-08-02,Opole,Cemetery in Opole,Murder,1238,1273
+1665,8,Paweł,Malinowski,M,1577-11-07,Świnoujście,1616-10-21,Koszalin,Cemetery in Koszalin,Heart failure,1314,1301
+1674,8,Grzegorz,Michalski,M,1578-08-15,Wejherowo,1623-01-14,Gdynia,Cemetery in Gdynia,Plague,1173,1253
+1679,8,Piotr,Krawczyk,M,1578-12-17,Danzig,1635-02-25,Malbork,Cemetery in Malbork,Cholera,1312,1369
+1683,8,Bożena,Jabłońska,F,1579-04-20,Gdynia,1621-01-18,Malbork,Cemetery in Malbork,Plague,1252,1194
+1687,8,Bożena,Krawczyk,F,1579-09-17,Biała Podlaska,1633-05-16,Jelenia Góra,Cemetery in Jelenia Góra,Heart failure,1145,1326
+1695,8,Natalia,Majewska,F,1580-09-17,Bochnia,1650-07-09,Stettin,Cemetery in Stettin,Murder,1175,1213
+1702,8,Jerzy,Krawczyk,M,1580-09-16,Stettin,1656-11-19,Gdynia,Cemetery in Gdynia,Apoplexy,1312,1369
+1712,8,Tomasz,Malinowski,M,1581-11-18,Słupsk,1636-04-27,Słupsk,Cemetery in Słupsk,Dropsy,1354,1331
+1714,8,Józefa,Krawczyk,F,1581-12-04,Skierniewice,1656-03-04,Gdynia,Cemetery in Gdynia,Accident,1158,1308
+1726,8,Czesława,Krawczyk,F,1582-06-09,Koszalin,1620-02-05,Gostyń,Cemetery in Gostyń,Pneumonia,1310,1404
+1753,8,Czesław,Krawczyk,M,1584-03-14,Gdynia,1637-03-27,Słupsk,Cemetery in Słupsk,Apoplexy,1310,1404
+1757,8,Józefa,Michalska,F,1584-06-15,Inowrocław,1633-11-25,Świnoujście,Cemetery in Świnoujście,,1392,1339
+1767,8,Ignacy,Kowalski,M,1585-07-28,Gorzów Wielkopolski,1628-12-20,Legnica,Cemetery in Legnica,Accident,1156,1267
+1768,8,Bartosz,Malinowski,M,1585-08-18,Olsztyn,1661-08-27,Elbląg,Cemetery in Elbląg,,1294,1263
+1785,8,Marian,Malinowski,M,1586-11-12,Danzig,1622-09-13,Koszalin,Cemetery in Koszalin,Consumption,1309,1370
+1794,8,Teresa,Krawczyk,F,1586-02-16,Chełm,1663-03-23,Elbląg,Cemetery in Elbląg,Consumption,1410,1308
+1802,8,Kazimierz,Mazur,M,1587-03-21,Wałbrzych,1646-05-25,Wałbrzych,Cemetery in Wałbrzych,Heart failure,1282,1341
+1805,8,Marian,Grabowski,M,1587-12-05,Ostrołęka,1639-11-24,Skierniewice,Cemetery in Skierniewice,Plague,1332,1307
+1806,8,Krzysztof,Grabowski,M,1587-07-25,Ciechanów,1638-07-19,Łódź,Cemetery in Łódź,,1280,1396
+1807,8,Bożena,Krawczyk,F,1587-05-07,Łomża,1628-09-16,Jelenia Góra,Cemetery in Jelenia Góra,Smallpox,1403,1367
+1813,8,Katarzyna,Dąbrowska,F,1587-10-18,Włocławek,1644-04-04,Świnoujście,Cemetery in Świnoujście,Fire,1387,1515
+1818,8,Marianna,Michalska,F,1588-01-10,Słupsk,1646-04-07,Koszalin,Cemetery in Koszalin,Stroke,1290,1351
+1820,8,Anna,Krawczyk,F,1588-01-25,Gdynia,1629-03-15,Sopot,Cemetery in Sopot,Apoplexy,1421,1363
+1822,8,Maja,Jabłońska,F,1588-08-10,Łódź,1630-09-09,Jelenia Góra,Cemetery in Jelenia Góra,Smallpox,1394,1405
+1830,8,Halina,Nowakowska,F,1588-12-18,Posen,1656-08-19,Zielona Góra,Cemetery in Zielona Góra,,1503,1425
+1843,8,Kamil,Malinowski,M,1589-12-03,Koszalin,1661-10-28,Świnoujście,Cemetery in Świnoujście,Dropsy,1336,1401
+1864,8,Maria,Jabłońska,F,1590-02-09,Ciechanów,1653-02-27,Ostrołęka,Cemetery in Ostrołęka,Murder,1394,1405
+1873,8,Wiktoria,Krawczyk,F,1590-03-12,Warszawa,1671-05-02,Stargard,Cemetery in Stargard,Unknown,1469,1501
+1876,8,Danuta,Wojciechowska,F,1590-07-09,Wałbrzych,1652-03-06,Siedlce,Cemetery in Siedlce,Stroke,1277,1533
+1898,8,Michał,Piotrowski,M,1592-09-20,Sopot,1651-06-10,Gdynia,Cemetery in Gdynia,Influenza,1279,1377
+1900,8,Monika,Michalska,F,1592-06-20,Bromberg,1671-02-10,Kościan,Cemetery in Kościan,Fever,1450,1484
+1901,8,Marcin,Michalski,M,1592-01-08,Konin,1654-01-21,Śrem,Cemetery in Śrem,,1333,1519
+1910,8,Tomasz,Michalski,M,1592-04-28,Inowrocław,1673-07-13,Grudziądz,Cemetery in Grudziądz,,1409,1493
+1912,8,Antoni,Michalski,M,1592-06-12,Śrem,1640-06-17,Grudziądz,Cemetery in Grudziądz,Dysentery,1536,1457
+1924,8,Aleksandra,Michalska,F,1593-08-20,Ostrów Wielkopolski,1656-04-06,Słupsk,Cemetery in Słupsk,Influenza,1452,1468
+1930,8,Wiktoria,Michalska,F,1593-02-08,Posen,1658-04-17,Gostyń,Cemetery in Gostyń,Cancer,1348,1492
+1933,8,Zuzanna,Michalska,F,1594-06-14,Konin,1655-08-13,Siedlce,Cemetery in Siedlce,,1333,1519
+1937,8,Józef,Michalski,M,1594-06-14,Inowrocław,1669-11-25,Konin,Cemetery in Konin,Pneumonia,1470,1553
+1940,8,Zuzanna,Krawczyk,F,1594-04-08,Sopot,1646-09-16,Września,Cemetery in Września,Smallpox,1552,1507
+1941,8,Monika,Jabłońska,F,1594-08-08,Biała Podlaska,1645-12-25,Zielona Góra,Cemetery in Zielona Góra,,,
+1946,8,Leon,Dąbrowski,M,1595-05-16,Włocławek,1647-03-02,Rawicz,Cemetery in Rawicz,,1387,1515
+1949,8,Henryk,Nowakowski,M,1595-05-09,Grudziądz,1671-04-22,Gniezno,Cemetery in Gniezno,Fire,1503,1425
+1955,8,Krystyna,Nowakowska,F,1595-08-20,Śrem,1639-04-10,Gostyń,Cemetery in Gostyń,Apoplexy,1592,1478
+1957,8,Aleksandra,Michalska,F,1595-07-16,Ostrów Wielkopolski,1650-12-18,Grudziądz,Cemetery in Grudziądz,Unknown,1508,1596
+1975,8,Maciej,Michalski,M,1596-03-01,Sopot,1673-05-02,Sopot,Cemetery in Sopot,Cholera,1465,1370
+1976,8,Marcin,Jabłoński,M,1596-04-18,Stargard,1656-07-18,Słupsk,Cemetery in Słupsk,Fire,1576,1509
+1980,8,Czesława,Krawczyk,F,1597-07-16,Lublin,1678-06-14,Danzig,Cemetery in Danzig,Infectious disease,,
+1982,8,Joanna,Michalska,F,1597-07-23,Śrem,1655-05-15,Elbląg,Cemetery in Elbląg,Smallpox,1520,1529
+1997,8,Mateusz,Krawczyk,M,1597-09-10,Danzig,1663-10-21,Stargard,Cemetery in Stargard,Smallpox,1585,1577
+2010,8,Wiesław,Piotrowski,M,1598-11-04,Opole,1673-09-20,Jelenia Góra,Cemetery in Jelenia Góra,,1324,1428
+2011,8,Czesława,Wojciechowska,F,1598-11-09,Breslau,1635-01-17,Piła,Cemetery in Piła,War casualty,1578,1499
+2012,8,Paweł,Dąbrowski,M,1598-11-08,Rawicz,1645-09-24,Śrem,Cemetery in Śrem,War casualty,1593,1565
+2025,8,Ludwika,Majewska,F,1599-03-06,Krosno,1675-03-22,Gniezno,Cemetery in Gniezno,,1538,1664
+2026,8,Czesław,Kowalski,M,1599-09-02,Legnica,1680-10-11,Jelenia Góra,Cemetery in Jelenia Góra,Smallpox,1632,1561
+2034,8,Regina,Krawczyk,F,1599-03-20,Danzig,1665-08-09,Koszalin,Cemetery in Koszalin,,1310,1629
+2040,8,Agnieszka,Jabłońska,F,1600-02-16,Skierniewice,1660-02-09,Warszawa,Cemetery in Warszawa,Apoplexy,1516,1570
+2043,8,Bartosz,Grabowski,M,1600-11-25,Łomża,1660-08-11,Warszawa,Cemetery in Warszawa,Unknown,1415,1667
+2045,8,Mirosław,Krawczyk,M,1600-06-28,Malbork,1644-09-16,Wejherowo,Cemetery in Wejherowo,Fever,1585,1577
+2060,8,Mateusz,Michalski,M,1601-05-26,Ostrów Wielkopolski,1673-01-20,Leszno,Cemetery in Leszno,Heart failure,1671,1729
+2072,8,Ewa,Grabowska,F,1602-08-17,Ciechanów,1658-07-13,Gdynia,Cemetery in Gdynia,Dropsy,1548,1614
+2088,8,Władysław,Krawczyk,M,1603-05-28,Elbląg,1640-06-05,Świnoujście,Cemetery in Świnoujście,Stroke,1310,1629
+2096,8,Rozalia,Michalska,F,1603-07-19,Thorn,1686-05-24,Malbork,Cemetery in Malbork,Drowning,1633,1515
+2099,8,Zuzanna,Grabowska,F,1604-08-24,Ciechanów,1667-12-02,Gdynia,Cemetery in Gdynia,,1415,1667
+2108,8,Szymon,Malinowski,M,1604-01-22,Sopot,1669-10-11,Słupsk,Cemetery in Słupsk,Accident,1691,1791
+2119,8,Jakub,Majewski,M,1605-02-22,Nowy Sącz,1653-05-28,Bochnia,Cemetery in Bochnia,,1513,1775
+2120,8,Stefan,Krawczyk,M,1605-03-19,Chojnice,1656-05-10,Gdynia,Cemetery in Gdynia,Apoplexy,1656,1463
+2125,8,Teresa,Kowalska,F,1606-08-03,Legnica,1644-06-28,Gdynia,Cemetery in Gdynia,,1612,1668
+2139,8,Czesława,Jabłońska,F,1607-10-01,Stargard,1643-06-17,Chojnice,Cemetery in Chojnice,Drowning,1591,1718
+2147,8,Grzegorz,Malinowski,M,1607-03-27,Danzig,1667-04-13,Sopot,Cemetery in Sopot,Typhus,1386,1807
+2149,8,Dariusz,Michalski,M,1608-01-11,Inowrocław,1683-01-28,Śrem,Cemetery in Śrem,Infectious disease,1671,1729
+2154,8,Alicja,Malinowska,F,1608-11-20,Malbork,1670-04-27,Danzig,Cemetery in Danzig,Typhus,1691,1791
+2165,8,Łukasz,Jabłoński,M,1609-04-18,Wejherowo,1667-06-24,Sopot,Cemetery in Sopot,Stroke,1591,1718
+2167,8,Ewa,Michalska,F,1609-02-01,Malbork,1667-08-25,Wejherowo,Cemetery in Wejherowo,Cholera,1740,1734
+2181,8,Michał,Krawczyk,M,1610-08-12,Kołobrzeg,1671-12-12,Świnoujście,Cemetery in Świnoujście,Smallpox,1643,1714
+2184,8,Agnieszka,Wojciechowska,F,1610-12-05,Opole,1690-03-12,Chojnice,Cemetery in Chojnice,Drowning,1780,1472
+2203,8,Maciej,Malinowski,M,1611-06-12,Słupsk,1697-07-19,Gdynia,Cemetery in Gdynia,Apoplexy,1768,1817
+2221,8,Natalia,Nowakowska,F,1612-01-04,Piła,1692-12-01,Kołobrzeg,Cemetery in Kołobrzeg,Drowning,1744,1629
+2231,8,Szymon,Kowalski,M,1612-11-26,Legnica,1675-07-17,Opole,Cemetery in Opole,Infectious disease,1857,1799
+2241,8,Barbara,Jabłońska,F,1614-10-20,Warszawa,1685-04-09,Gostyń,Cemetery in Gostyń,Fever,1599,1695
+2247,8,Filip,Malinowski,M,1614-09-12,Sopot,1651-01-13,Elbląg,Cemetery in Elbląg,Typhus,1768,1817
+2282,8,Maja,Michalska,F,1616-01-19,Słupsk,1680-10-05,Świnoujście,Cemetery in Świnoujście,,1758,1902
+2299,8,Szymon,Malinowski,M,1617-03-22,Danzig,1707-10-24,Chojnice,Cemetery in Chojnice,Accident,1665,1818
+2323,8,Elżbieta,Piotrowska,F,1618-03-09,Świdnica,1677-09-28,Wałbrzych,Cemetery in Wałbrzych,Starvation,1733,1821
+2346,8,Marianna,Michalska,F,1619-04-12,Śrem,1677-07-19,Leszno,Cemetery in Leszno,Dropsy,,
+2348,8,Józef,Jabłoński,M,1619-08-20,Wejherowo,1663-04-08,Elbląg,Cemetery in Elbląg,Dysentery,1983,1837
+2351,8,Alicja,Michalska,F,1619-02-25,Thorn,1638-02-26,Włocławek,Cemetery in Włocławek,Cancer,1874,1877
+2352,8,Zofia,Michalska,F,1619-10-22,Ostrów Wielkopolski,1673-06-07,Kołobrzeg,Cemetery in Kołobrzeg,War casualty,1452,1842
+2370,8,Henryk,Grabowski,M,1620-03-07,Lublin,1679-07-03,Ostrołęka,Cemetery in Ostrołęka,,1899,1815
+2392,8,Helena,Piotrowska,F,1621-03-24,Wałbrzych,1677-10-17,Gniezno,Cemetery in Gniezno,Infectious disease,2010,1941
+2402,8,Filip,Michalski,M,1622-12-03,Olsztyn,1685-04-16,Elbląg,Cemetery in Elbląg,Dysentery,1674,1813
+2415,8,Zygmunt,Nowakowski,M,1622-03-22,Rawicz,1685-02-24,Września,Cemetery in Września,Fire,1906,1970
+2419,8,Maria,Jabłońska,F,1622-10-27,Białystok,1685-06-12,Wejherowo,Cemetery in Wejherowo,Drowning,1978,1998
+2421,8,Dariusz,Nowakowski,M,1622-08-07,Września,1688-03-10,Ostrów Wielkopolski,Cemetery in Ostrów Wielkopolski,Pneumonia,1971,2021
+2426,8,Aleksandra,Krawczyk,F,1623-09-04,Malbork,1678-10-20,Danzig,Cemetery in Danzig,Plague,1997,1980
+2435,8,Kazimiera,Krawczyk,F,1623-02-24,Suwałki,1703-11-18,Inowrocław,Cemetery in Inowrocław,Dysentery,1903,2078
+2441,8,Wanda,Jabłońska,F,1623-11-23,Ciechanów,1648-12-05,Ostrów Wielkopolski,Cemetery in Ostrów Wielkopolski,,1642,2031
+2443,8,Łukasz,Michalski,M,1623-03-15,Włocławek,1670-01-26,Rawicz,Cemetery in Rawicz,Dysentery,1655,2037
+2445,8,Ewa,Michalska,F,1624-08-08,Elbląg,1683-04-26,Słupsk,Cemetery in Słupsk,Pneumonia,1674,1813
+2460,8,Michał,Michalski,M,1624-04-21,Bromberg,1689-08-23,Kalisz,Cemetery in Kalisz,Stroke,1719,2029
+2463,8,Małgorzata,Michalska,F,1624-02-15,Inowrocław,1672-12-12,Gniezno,Cemetery in Gniezno,Apoplexy,1860,2066
+2464,8,Józef,Michalski,M,1625-12-20,Włocławek,1666-02-13,Rawicz,Cemetery in Rawicz,Infectious disease,1613,1982
+2467,8,Wojciech,Krawczyk,M,1625-04-16,Stettin,1685-08-27,Stargard,Cemetery in Stargard,Cancer,,
+2470,8,Kazimiera,Piotrowska,F,1625-01-25,Słupsk,1675-03-09,Danzig,Cemetery in Danzig,Dysentery,1898,1924
+2484,8,Czesław,Krawczyk,M,1625-08-20,Elbląg,1666-04-14,Wejherowo,Cemetery in Wejherowo,War casualty,2045,2072
+2487,8,Michał,Jabłoński,M,1626-03-03,Stargard,1676-04-04,Stargard,Cemetery in Stargard,Starvation,1983,1837
+2501,8,Czesława,Krawczyk,F,1626-01-01,Malbork,1676-06-25,Thorn,Cemetery in Thorn,Drowning,1969,2013
+2502,8,Władysław,Grabowski,M,1626-10-09,Skierniewice,1679-08-12,Chełm,Cemetery in Chełm,,,
+2529,8,Barbara,Michalska,F,1628-09-04,Konin,1699-09-13,Olsztyn,Cemetery in Olsztyn,Influenza,1891,2053
+2560,8,Franciszek,Michalski,M,1629-07-14,Thorn,1672-09-04,Bromberg,Cemetery in Bromberg,Drowning,1966,2035
+2565,8,Natalia,Nowakowska,F,1630-02-03,Rawicz,1704-01-05,Śrem,Cemetery in Śrem,Consumption,1906,1970
+2578,8,Wanda,Grabowska,F,1631-10-18,Skierniewice,1687-03-01,Biała Podlaska,Cemetery in Biała Podlaska,Dropsy,1967,1972
+2585,8,Leokadia,Malinowska,F,1631-02-12,Gdynia,1703-09-15,Stettin,Cemetery in Stettin,Cholera,1768,2034
+2598,8,Oliwia,Grabowska,F,1632-04-15,Płock,1687-04-25,Biała Podlaska,Cemetery in Biała Podlaska,Stroke,2049,2050
+2607,8,Filip,Krawczyk,M,1632-03-23,Sopot,1703-10-15,Słupsk,Cemetery in Słupsk,Murder,2074,1995
+2662,8,Krystyna,Michalska,F,1635-12-08,Kalisz,1683-10-05,Piła,Cemetery in Piła,Typhus,2149,2241
+2667,8,Marek,Grabowski,M,1636-07-20,Lublin,1693-03-09,Ciechanów,Cemetery in Ciechanów,,2017,2123
+2725,8,Wiesław,Grabowski,M,1639-06-04,Ciechanów,1685-08-01,Biała Podlaska,Cemetery in Biała Podlaska,Unknown,1783,2250
+2738,8,Julia,Krawczyk,F,1640-05-24,Lublin,1702-10-19,Łódź,Cemetery in Łódź,Heart failure,2162,2342
+2843,8,Teresa,Majewska,F,1644-08-03,Jasło,1691-04-08,Chełm,Cemetery in Chełm,Dropsy,2319,2321
+859,9,Wojciech,Majewski,M,1508-07-18,Ostrowiec Świętokrzyski,1549-06-28,Przemyśl,Cemetery in Przemyśl,Consumption,540,596
+861,9,Natalia,Woźniak,F,1508-03-12,Łódź,1544-04-17,Zakopane,Cemetery in Zakopane,Typhus,638,587
+889,9,Mirosław,Szymański,M,1513-03-15,Tarnobrzeg,1564-04-23,Oświęcim,Cemetery in Oświęcim,Dropsy,666,681
+952,9,Helena,Sikora,F,1521-06-09,Przemyśl,1591-04-07,Tarnobrzeg,Cemetery in Tarnobrzeg,,653,779
+954,9,Zofia,Krawczyk,F,1521-10-28,Świnoujście,1563-04-12,Stettin,Cemetery in Stettin,,688,794
+974,9,Henryk,Krawczyk,M,1524-05-26,Elbląg,1602-10-17,Danzig,Cemetery in Danzig,Cancer,697,731
+990,9,Łukasz,Michalski,M,1525-06-11,Wejherowo,1589-01-11,Stettin,Cemetery in Stettin,,800,753
+1002,9,Mateusz,Malinowski,M,1526-04-16,Wejherowo,1582-04-22,Stettin,Cemetery in Stettin,Cholera,787,828
+1011,9,Bartosz,Michalski,M,1527-05-04,Włocławek,1572-06-03,Września,Cemetery in Września,Dysentery,767,814
+1017,9,Marianna,Krawczyk,F,1528-09-26,Danzig,1600-05-23,Stargard,Cemetery in Stargard,War casualty,697,731
+1057,9,Katarzyna,Krawczyk,F,1531-01-13,Chełm,1559-12-07,Kościan,Cemetery in Kościan,Plague,817,848
+1075,9,Zygmunt,Jabłoński,M,1533-04-28,Łódź,1573-04-24,Białystok,Cemetery in Białystok,Typhus,755,785
+1076,9,Zuzanna,Malinowska,F,1533-10-22,Stettin,1582-10-17,Legnica,Cemetery in Legnica,Stroke,743,788
+1081,9,Helena,Michalska,F,1533-05-25,Rawicz,1569-06-25,Oświęcim,Cemetery in Oświęcim,Plague,812,745
+1083,9,Szymon,Michalski,M,1533-03-03,Gniezno,1582-05-11,Grudziądz,Cemetery in Grudziądz,Influenza,806,832
+1090,9,Grażyna,Malinowska,F,1534-12-21,Stettin,1603-08-23,Słupsk,Cemetery in Słupsk,Fire,829,862
+1119,9,Helena,Krawczyk,F,1536-05-09,Świnoujście,1598-02-02,Gostyń,Cemetery in Gostyń,Fire,765,905
+1145,9,Antoni,Krawczyk,M,1538-07-05,Warszawa,1610-12-25,Łódź,Cemetery in Łódź,Consumption,927,879
+1153,9,Leon,Jabłoński,M,1539-02-18,Łomża,1592-07-02,Zamość,Cemetery in Zamość,Dysentery,769,888
+1155,9,Jakub,Majewski,M,1539-08-03,Oświęcim,1607-08-19,Jasło,Cemetery in Jasło,Influenza,,
+1156,9,Paweł,Kowalski,M,1539-08-01,Jelenia Góra,1605-06-04,Legnica,Cemetery in Legnica,Apoplexy,790,835
+1158,9,Marcin,Krawczyk,M,1539-11-26,Ostrołęka,1582-11-11,Płock,Cemetery in Płock,,927,879
+1163,9,Alicja,Malinowska,F,1540-02-25,Wejherowo,1591-12-07,Stargard,Cemetery in Stargard,Pneumonia,829,862
+1164,9,Anna,Nowakowska,F,1540-04-11,Thorn,1602-08-10,Leszno,Cemetery in Leszno,Apoplexy,774,834
+1172,9,Dariusz,Michalski,M,1541-11-09,Rawicz,1581-02-24,Kalisz,Cemetery in Kalisz,War casualty,775,876
+1173,9,Władysław,Michalski,M,1541-08-06,Stargard,1604-12-07,Gdynia,Cemetery in Gdynia,Pneumonia,810,836
+1194,9,Natalia,Majewska,F,1543-05-09,Rzeszów,1587-07-13,Malbork,Cemetery in Malbork,Dysentery,820,858
+1207,9,Krystyna,Majewska,F,1544-05-11,Tarnów,1587-09-18,Legnica,Cemetery in Legnica,Influenza,859,861
+1210,9,Filip,Krawczyk,M,1544-03-13,Danzig,1594-11-01,Słupsk,Cemetery in Słupsk,Murder,902,922
+1211,9,Tomasz,Kowalski,M,1544-01-17,Zielona Góra,1597-12-17,Opole,Cemetery in Opole,Fire,914,849
+1227,9,Rozalia,Górska,F,1545-12-27,Zielona Góra,1623-07-15,Legnica,Cemetery in Legnica,Starvation,898,956
+1228,9,Wojciech,Jabłoński,M,1545-09-08,Stettin,1607-05-20,Wejherowo,Cemetery in Wejherowo,Heart failure,875,940
+1238,9,Adam,Kowalski,M,1546-06-15,Jelenia Góra,1608-09-01,Opole,Cemetery in Opole,Drowning,921,888
+1241,9,Stefania,Woźniak,F,1546-09-15,Ciechanów,1598-08-13,Radom,Cemetery in Radom,Dropsy,910,984
+1251,9,Wanda,Piotrowska,F,1547-04-12,Zielona Góra,1636-02-07,Wałbrzych,Cemetery in Wałbrzych,Accident,977,958
+1252,9,Maciej,Jabłoński,M,1547-10-07,Chojnice,1598-02-12,Słupsk,Cemetery in Słupsk,Plague,918,1034
+1253,9,Irena,Kowalska,F,1547-11-14,Świdnica,1604-01-17,Koszalin,Cemetery in Koszalin,Dysentery,925,987
+1255,9,Joanna,Michalska,F,1548-08-10,Thorn,1593-06-04,Słupsk,Cemetery in Słupsk,Typhus,887,907
+1263,9,Grażyna,Michalska,F,1549-11-25,Elbląg,1620-09-05,Malbork,Cemetery in Malbork,Heart failure,896,928
+1267,9,Maja,Krawczyk,F,1549-12-04,Słupsk,1599-10-11,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Unknown,897,945
+1272,9,Piotr,Wojciechowski,M,1549-12-27,Opole,1635-06-06,Opole,Cemetery in Opole,Stroke,936,1025
+1273,9,Genowefa,Michalska,F,1549-02-25,Chojnice,1627-05-09,Jelenia Góra,Cemetery in Jelenia Góra,Influenza,990,954
+1277,9,Maciej,Wojciechowski,M,1550-07-15,Breslau,1594-06-23,Zielona Góra,Cemetery in Zielona Góra,Cholera,911,951
+1279,9,Michał,Piotrowski,M,1550-11-04,Chojnice,1614-12-01,Danzig,Cemetery in Danzig,Cancer,965,1031
+1280,9,Stefan,Grabowski,M,1550-03-17,Radom,1597-06-06,Radom,Cemetery in Radom,Infectious disease,1044,962
+1282,9,Marek,Mazur,M,1550-07-04,Świdnica,1612-04-23,Opole,Cemetery in Opole,War casualty,1001,1051
+1285,9,Łukasz,Szymański,M,1551-02-26,Sanok,1580-11-09,Tarnów,Cemetery in Tarnów,Smallpox,889,952
+1290,9,Bartosz,Michalski,M,1551-09-13,Świnoujście,1604-06-07,Chojnice,Cemetery in Chojnice,Heart failure,990,954
+1294,9,Józef,Malinowski,M,1551-08-08,Gdynia,1599-10-26,Kołobrzeg,Cemetery in Kołobrzeg,,1021,862
+1301,9,Małgorzata,Michalska,F,1552-06-13,Leszno,1604-09-20,Koszalin,Cemetery in Koszalin,,1039,1049
+1307,9,Danuta,Michalska,F,1553-08-21,Bromberg,1612-09-13,Kościan,Cemetery in Kościan,War casualty,947,980
+1308,9,Katarzyna,Mazur,F,1553-01-12,Opole,1618-09-10,Lublin,Cemetery in Lublin,Murder,,
+1309,9,Bartosz,Malinowski,M,1553-10-26,Koszalin,1593-01-17,Słupsk,Cemetery in Słupsk,Stroke,1021,862
+1310,9,Kazimierz,Krawczyk,M,1553-07-27,Olsztyn,1606-06-28,Malbork,Cemetery in Malbork,Starvation,1040,1023
+1312,9,Tadeusz,Krawczyk,M,1553-08-28,Słupsk,1629-08-07,Wejherowo,Cemetery in Wejherowo,Infectious disease,1010,1054
+1314,9,Stanisław,Malinowski,M,1553-11-15,Sopot,1607-08-10,Koszalin,Cemetery in Koszalin,Accident,1003,940
+1324,9,Grzegorz,Piotrowski,M,1554-08-17,Jelenia Góra,1624-03-08,Jelenia Góra,Cemetery in Jelenia Góra,,1000,997
+1326,9,Kazimiera,Grabowska,F,1554-04-25,Biała Podlaska,1600-05-23,Chełm,Cemetery in Chełm,,1014,963
+1331,9,Teresa,Michalska,F,1555-02-24,Danzig,1611-08-09,Stettin,Cemetery in Stettin,Unknown,990,954
+1332,9,Grzegorz,Grabowski,M,1555-08-20,Ostrołęka,1599-05-21,Płock,Cemetery in Płock,Cholera,1044,962
+1333,9,Łukasz,Michalski,M,1555-11-20,Leszno,1615-09-08,Posen,Cemetery in Posen,Dropsy,947,980
+1336,9,Krzysztof,Malinowski,M,1555-11-11,Wejherowo,1628-09-03,Danzig,Cemetery in Danzig,Fire,1033,1013
+1339,9,Grażyna,Piotrowska,F,1555-05-06,Gorzów Wielkopolski,1617-10-21,Piła,Cemetery in Piła,Plague,1019,958
+1341,9,Teresa,Szymańska,F,1556-01-12,Kielce,1613-10-07,Wałbrzych,Cemetery in Wałbrzych,Plague,889,952
+1348,9,Tadeusz,Michalski,M,1556-02-23,Września,1618-06-06,Włocławek,Cemetery in Włocławek,Pneumonia,1039,1049
+1351,9,Irena,Grabowska,F,1556-12-26,Warszawa,1639-03-04,Koszalin,Cemetery in Koszalin,,1014,963
+1354,9,Jerzy,Malinowski,M,1556-10-24,Gdynia,1616-06-24,Świnoujście,Cemetery in Świnoujście,War casualty,1042,1020
+1363,9,Bożena,Malinowska,F,1557-11-28,Chojnice,1606-04-18,Olsztyn,Cemetery in Olsztyn,Plague,1042,1020
+1367,9,Teresa,Michalska,F,1558-09-01,Słupsk,1609-02-14,Łódź,Cemetery in Łódź,Smallpox,990,954
+1369,9,Krystyna,Mazur,F,1558-06-14,Świdnica,1585-12-09,Gdynia,Cemetery in Gdynia,Consumption,1001,1051
+1370,9,Wiktoria,Mazur,F,1558-05-11,Legnica,1617-06-04,Kołobrzeg,Cemetery in Kołobrzeg,Fire,957,1079
+1377,9,Halina,Piotrowska,F,1558-03-18,Świdnica,1607-03-06,Malbork,Cemetery in Malbork,,1058,1061
+1386,9,Stanisław,Malinowski,M,1559-05-15,Koszalin,1608-03-21,Kołobrzeg,Cemetery in Kołobrzeg,Starvation,1002,1017
+1387,9,Jakub,Dąbrowski,M,1559-02-12,Śrem,1600-12-04,Gostyń,Cemetery in Gostyń,Plague,976,992
+1392,9,Mateusz,Michalski,M,1559-03-25,Włocławek,1618-01-17,Września,Cemetery in Września,Pneumonia,1011,1057
+1394,9,Henryk,Jabłoński,M,1559-10-08,Łódź,1604-12-24,Suwałki,Cemetery in Suwałki,Pneumonia,1052,1041
+1396,9,Elżbieta,Michalska,F,1560-11-25,Kołobrzeg,1617-02-08,Gostyń,Cemetery in Gostyń,,990,954
+1401,9,Stefania,Piotrowska,F,1560-06-20,Elbląg,1607-04-05,Słupsk,Cemetery in Słupsk,Influenza,1045,1062
+1403,9,Mateusz,Krawczyk,M,1560-05-06,Warszawa,1605-04-07,Biała Podlaska,Cemetery in Biała Podlaska,Unknown,1035,984
+1404,9,Bożena,Nowakowska,F,1560-11-11,Inowrocław,1596-03-28,Kołobrzeg,Cemetery in Kołobrzeg,,1092,1050
+1405,9,Zofia,Krawczyk,F,1560-06-15,Suwałki,1628-05-19,Zielona Góra,Cemetery in Zielona Góra,Infectious disease,1073,1038
+1409,9,Julian,Michalski,M,1560-04-21,Rawicz,1621-03-21,Ostrów Wielkopolski,Cemetery in Ostrów Wielkopolski,Influenza,1083,1063
+1410,9,Filip,Krawczyk,M,1560-03-10,Ostrołęka,1624-03-22,Ostrołęka,Cemetery in Ostrołęka,Dysentery,927,1097
+1415,9,Leon,Grabowski,M,1561-02-18,Suwałki,1634-04-13,Skierniewice,Cemetery in Skierniewice,Apoplexy,1014,963
+1421,9,Dariusz,Krawczyk,M,1561-03-07,Koszalin,1628-03-16,Wejherowo,Cemetery in Wejherowo,Typhus,1010,1088
+1425,9,Urszula,Michalska,F,1562-07-19,Śrem,1614-10-21,Opole,Cemetery in Opole,,998,991
+1428,9,Regina,Piotrowska,F,1562-11-22,Gorzów Wielkopolski,1630-04-11,Wałbrzych,Cemetery in Wałbrzych,,1058,1061
+1450,9,Dariusz,Michalski,M,1563-11-01,Leszno,1607-02-03,Thorn,Cemetery in Thorn,Typhus,1011,955
+1452,9,Władysław,Michalski,M,1564-06-20,Włocławek,1631-06-26,Ostrów Wielkopolski,Cemetery in Ostrów Wielkopolski,,947,980
+1457,9,Alicja,Nowakowska,F,1564-01-22,Rawicz,1621-02-14,Grudziądz,Cemetery in Grudziądz,Fire,1122,1154
+1463,9,Helena,Michalska,F,1565-11-08,Śrem,1610-06-04,Elbląg,Cemetery in Elbląg,Drowning,1083,1063
+1465,9,Antoni,Michalski,M,1565-12-25,Słupsk,1604-04-04,Słupsk,Cemetery in Słupsk,Heart failure,1117,1167
+1468,9,Maria,Michalska,F,1565-03-06,Śrem,1614-09-16,Rawicz,Cemetery in Rawicz,Influenza,1011,955
+1469,9,Andrzej,Krawczyk,M,1565-05-25,Warszawa,1601-09-25,Biała Podlaska,Cemetery in Biała Podlaska,Apoplexy,1158,1132
+1470,9,Łukasz,Michalski,M,1565-02-27,Śrem,1626-06-27,Konin,Cemetery in Konin,Unknown,975,1091
+1472,9,Rozalia,Jabłońska,F,1565-06-22,Siedlce,1632-09-28,Opole,Cemetery in Opole,,1113,1209
+1478,9,Irena,Majewska,F,1566-02-14,Bochnia,1604-04-19,Świdnica,Cemetery in Świdnica,Murder,,
+1484,9,Elżbieta,Nowakowska,F,1566-05-16,Bromberg,1613-01-08,Malbork,Cemetery in Malbork,Cholera,1122,1154
+1492,9,Katarzyna,Nowakowska,F,1566-08-21,Piła,1623-01-27,Thorn,Cemetery in Thorn,Accident,,
+1493,9,Ludwika,Majewska,F,1566-03-05,Nowy Sącz,1638-07-01,Konin,Cemetery in Konin,Fever,1196,1208
+1499,9,Krystyna,Grabowska,F,1567-10-13,Białystok,1606-05-01,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Murder,1169,1068
+1501,9,Jadwiga,Grabowska,F,1567-02-19,Radom,1625-02-18,Ciechanów,Cemetery in Ciechanów,Unknown,1067,1097
+1503,9,Tadeusz,Nowakowski,M,1567-07-21,Ostrów Wielkopolski,1605-02-28,Bromberg,Cemetery in Bromberg,Infectious disease,1214,1096
+1508,9,Bartosz,Michalski,M,1568-08-25,Inowrocław,1632-10-21,Śrem,Cemetery in Śrem,Plague,1083,1063
+1513,9,Franciszek,Majewski,M,1568-07-27,Tarnobrzeg,1651-06-16,Tarnobrzeg,Cemetery in Tarnobrzeg,Accident,1080,1085
+1515,9,Katarzyna,Nowakowska,F,1568-09-06,Thorn,1618-07-03,Grudziądz,Cemetery in Grudziądz,Smallpox,1122,1154
+1516,9,Jerzy,Jabłoński,M,1568-08-08,Płock,1637-02-06,Warszawa,Cemetery in Warszawa,Heart failure,1113,1209
+1519,9,Anna,Nowakowska,F,1568-09-18,Thorn,1634-01-07,Grudziądz,Cemetery in Grudziądz,Infectious disease,1214,1096
+1520,9,Leon,Michalski,M,1568-07-07,Śrem,1654-06-22,Bromberg,Cemetery in Bromberg,Typhus,1172,1164
+1529,9,Teresa,Krawczyk,F,1569-03-12,Chełm,1627-04-10,Leszno,Cemetery in Leszno,Drowning,1158,1132
+1533,9,Joanna,Majewska,F,1569-02-19,Jasło,1633-02-14,Skierniewice,Cemetery in Skierniewice,Typhus,1196,1208
+1536,9,Stefan,Michalski,M,1569-06-26,Włocławek,1620-04-05,Września,Cemetery in Września,Cholera,1172,1164
+1538,9,Paweł,Majewski,M,1569-01-14,Sanok,1650-11-18,Sandomierz,Cemetery in Sandomierz,Accident,1171,1245
+1548,9,Józef,Grabowski,M,1570-05-02,Chełm,1640-11-15,Lublin,Cemetery in Lublin,Fire,1169,1068
+1553,9,Marianna,Michalska,F,1570-08-12,Włocławek,1637-06-17,Gniezno,Cemetery in Gniezno,Pneumonia,,
+1561,9,Halina,Górska,F,1570-03-13,Opole,1633-09-21,Zielona Góra,Cemetery in Zielona Góra,Starvation,1174,1142
+1565,9,Barbara,Majewska,F,1571-01-04,Tarnobrzeg,1612-03-17,Gniezno,Cemetery in Gniezno,Dropsy,1128,1235
+1570,9,Barbara,Grabowska,F,1571-12-16,Białystok,1610-10-26,Biała Podlaska,Cemetery in Biała Podlaska,Smallpox,1219,1015
+1577,9,Józefa,Michalska,F,1571-01-12,Kościan,1631-11-28,Sopot,Cemetery in Sopot,Murder,1239,1226
+1578,9,Wojciech,Wojciechowski,M,1572-12-10,Jelenia Góra,1642-08-19,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Infectious disease,1166,1089
+1585,9,Tomasz,Krawczyk,M,1572-03-24,Sopot,1631-04-25,Kołobrzeg,Cemetery in Kołobrzeg,Accident,1210,1163
+1591,9,Tomasz,Jabłoński,M,1572-09-28,Elbląg,1622-05-10,Gdynia,Cemetery in Gdynia,Dropsy,1252,1194
+1592,9,Krzysztof,Nowakowski,M,1572-11-06,Śrem,1594-08-20,Grudziądz,Cemetery in Grudziądz,Fire,1116,1179
+1593,9,Julian,Dąbrowski,M,1573-06-23,Kalisz,1648-04-23,Włocławek,Cemetery in Włocławek,Fever,1192,1183
+1596,9,Alicja,Majewska,F,1573-01-12,Kielce,1641-07-22,Kalisz,Cemetery in Kalisz,Cancer,1196,1208
+1612,9,Zygmunt,Kowalski,M,1573-01-11,Jelenia Góra,1625-05-11,Breslau,Cemetery in Breslau,Typhus,1156,1267
+1614,9,Teresa,Krawczyk,F,1574-05-03,Białystok,1640-11-26,Ciechanów,Cemetery in Ciechanów,Murder,1158,1132
+1629,9,Alicja,Majewska,F,1575-07-13,Zakopane,1641-11-20,Kościan,Cemetery in Kościan,War casualty,1196,1208
+1632,9,Henryk,Kowalski,M,1575-05-12,Gorzów Wielkopolski,1611-08-27,Wałbrzych,Cemetery in Wałbrzych,Consumption,1256,1270
+1633,9,Leon,Michalski,M,1575-01-08,Thorn,1602-02-13,Śrem,Cemetery in Śrem,Unknown,1284,1269
+1642,9,Bartosz,Jabłoński,M,1576-11-02,Radom,1624-08-28,Łódź,Cemetery in Łódź,Drowning,1153,1241
+1656,9,Stanisław,Krawczyk,M,1577-09-02,Koszalin,1624-07-16,Gdynia,Cemetery in Gdynia,Cholera,1210,1163
+1664,9,Genowefa,Malinowska,F,1577-10-16,Słupsk,1650-10-01,Tarnobrzeg,Cemetery in Tarnobrzeg,Fever,1021,1319
+1667,9,Teresa,Michalska,F,1578-08-26,Września,1640-03-28,Chełm,Cemetery in Chełm,Fever,1224,1185
+1668,9,Anna,Wojciechowska,F,1578-01-25,Opole,1636-06-27,Breslau,Cemetery in Breslau,War casualty,1272,1227
+1671,9,Adam,Michalski,M,1578-03-09,Września,1648-01-01,Gniezno,Cemetery in Gniezno,Murder,1284,1269
+1691,9,Jan,Malinowski,M,1579-10-12,Stargard,1648-03-27,Słupsk,Cemetery in Słupsk,Smallpox,1354,1331
+1718,9,Helena,Malinowska,F,1581-02-28,Olsztyn,1647-07-15,Siedlce,Cemetery in Siedlce,Unknown,1309,1370
+1719,9,Tomasz,Michalski,M,1581-07-24,Śrem,1665-04-08,Kościan,Cemetery in Kościan,,1392,1339
+1729,9,Stefania,Krawczyk,F,1582-04-03,Białystok,1648-04-09,Kalisz,Cemetery in Kalisz,Heart failure,1380,1334
+1733,9,Marcin,Piotrowski,M,1582-03-17,Wałbrzych,1630-05-11,Opole,Cemetery in Opole,Typhus,1324,1152
+1744,9,Wiesław,Nowakowski,M,1583-11-27,Gniezno,1638-10-04,Gostyń,Cemetery in Gostyń,,1236,1306
+1758,9,Władysław,Michalski,M,1584-12-06,Stettin,1662-01-06,Świnoujście,Cemetery in Świnoujście,Fire,1290,1351
+1775,9,Czesława,Krawczyk,F,1585-12-28,Danzig,1624-02-10,Jasło,Cemetery in Jasło,Plague,1317,1500
+1780,9,Franciszek,Wojciechowski,M,1586-11-11,Gorzów Wielkopolski,1651-05-10,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Smallpox,1271,1428
+1783,9,Mirosław,Grabowski,M,1586-03-24,Chełm,1655-11-15,Łomża,Cemetery in Łomża,Smallpox,1299,1385
+1791,9,Marianna,Malinowska,F,1586-12-25,Gdynia,1642-07-20,Słupsk,Cemetery in Słupsk,Unknown,1336,1401
+1799,9,Marianna,Krawczyk,F,1587-11-11,Chełm,1655-05-06,Opole,Cemetery in Opole,Starvation,1145,1326
+1815,9,Stefania,Dąbrowska,F,1587-01-27,Konin,1633-02-16,Płock,Cemetery in Płock,Influenza,,
+1817,9,Bożena,Michalska,F,1588-12-16,Kalisz,1617-04-16,Kołobrzeg,Cemetery in Kołobrzeg,Infectious disease,1392,1339
+1821,9,Oliwia,Grabowska,F,1588-11-22,Skierniewice,1653-10-19,Tarnów,Cemetery in Tarnów,Starvation,1280,1396
+1837,9,Teresa,Piotrowska,F,1589-12-23,Olsztyn,1670-02-14,Olsztyn,Cemetery in Olsztyn,,1279,1377
+1842,9,Julia,Michalska,F,1589-01-01,Włocławek,1664-07-22,Ostrowiec Świętokrzyski,Cemetery in Ostrowiec Świętokrzyski,Plague,1450,1484
+1857,9,Andrzej,Kowalski,M,1590-10-21,Świdnica,1663-02-22,Wałbrzych,Cemetery in Wałbrzych,,1156,1267
+1860,9,Henryk,Michalski,M,1590-02-21,Konin,1630-09-08,Grudziądz,Cemetery in Grudziądz,War casualty,1392,1339
+1874,9,Henryk,Michalski,M,1590-03-11,Gniezno,1665-08-16,Bromberg,Cemetery in Bromberg,Cholera,1452,1468
+1877,9,Regina,Michalska,F,1590-11-06,Gostyń,1648-12-20,Bromberg,Cemetery in Bromberg,Apoplexy,1409,1493
+1891,9,Marcin,Michalski,M,1591-09-04,Gostyń,1637-08-04,Inowrocław,Cemetery in Inowrocław,Plague,1520,1529
+1899,9,Ryszard,Grabowski,M,1592-11-11,Biała Podlaska,1649-09-17,Łódź,Cemetery in Łódź,Heart failure,1345,1352
+1902,9,Teresa,Dąbrowska,F,1592-07-14,Leszno,1669-04-27,Sopot,Cemetery in Sopot,,1387,1515
+1903,9,Jan,Krawczyk,M,1592-02-04,Łódź,1646-06-20,Ostrołęka,Cemetery in Ostrołęka,,1451,1497
+1906,9,Filip,Nowakowski,M,1592-11-08,Rawicz,1654-08-22,Rawicz,Cemetery in Rawicz,,1503,1425
+1966,9,Marek,Michalski,M,1596-11-14,Bromberg,1658-03-01,Inowrocław,Cemetery in Inowrocław,War casualty,1409,1493
+1967,9,Grzegorz,Grabowski,M,1596-10-12,Ostrołęka,1672-02-14,Płock,Cemetery in Płock,Stroke,1518,1498
+1970,9,Agnieszka,Majewska,F,1596-07-27,Nowy Sącz,1670-11-09,Grudziądz,Cemetery in Grudziądz,Accident,1631,1582
+1971,9,Tadeusz,Nowakowski,M,1596-10-01,Gostyń,1659-07-21,Posen,Cemetery in Posen,,1571,1440
+1972,9,Monika,Kowalska,F,1596-09-20,Gorzów Wielkopolski,1691-11-02,Płock,Cemetery in Płock,Heart failure,1559,1564
+1978,9,Wiesław,Jabłoński,M,1597-01-27,Lublin,1683-01-13,Łomża,Cemetery in Łomża,,1394,1405
+1983,9,Stefan,Jabłoński,M,1597-12-28,Sopot,1660-01-25,Koszalin,Cemetery in Koszalin,Consumption,1252,1532
+1995,9,Zuzanna,Jabłońska,F,1597-02-22,Świnoujście,1662-11-22,Wejherowo,Cemetery in Wejherowo,Cancer,1228,1609
+1998,9,Regina,Grabowska,F,1597-05-09,Radom,1653-07-27,Białystok,Cemetery in Białystok,Fever,1540,1533
+2017,9,Piotr,Grabowski,M,1598-11-22,Łódź,1641-08-20,Siedlce,Cemetery in Siedlce,Murder,1448,1678
+2021,9,Irena,Majewska,F,1599-04-19,Bochnia,1650-03-03,Leszno,Cemetery in Leszno,Stroke,1631,1582
+2029,9,Stefania,Jabłońska,F,1599-09-02,Ostrołęka,1644-03-18,Posen,Cemetery in Posen,,1431,1635
+2031,9,Wanda,Krawczyk,F,1599-02-15,Suwałki,1643-09-26,Białystok,Cemetery in Białystok,Dysentery,1607,1685
+2035,9,Teresa,Michalska,F,1600-02-23,Kościan,1655-10-17,Inowrocław,Cemetery in Inowrocław,Cholera,1450,1484
+2037,9,Maja,Majewska,F,1600-09-19,Sandomierz,1623-11-21,Śrem,Cemetery in Śrem,Influenza,1486,1460
+2049,9,Jakub,Grabowski,M,1600-04-26,Białystok,1692-12-03,Płock,Cemetery in Płock,Influenza,1548,1614
+2050,9,Ludwika,Nowakowska,F,1600-07-25,Września,1649-06-28,Siedlce,Cemetery in Siedlce,Fever,1275,1396
+2053,9,Maja,Krawczyk,F,1600-06-20,Stettin,1639-01-06,Zielona Góra,Cemetery in Zielona Góra,Dysentery,1702,1683
+2066,9,Zuzanna,Majewska,F,1602-08-16,Ostrowiec Świętokrzyski,1660-06-18,Breslau,Cemetery in Breslau,Smallpox,1631,1582
+2074,9,Filip,Krawczyk,M,1602-09-20,Gdynia,1661-11-17,Słupsk,Cemetery in Słupsk,Accident,1702,1683
+2078,9,Anna,Michalska,F,1602-04-23,Świnoujście,1648-08-28,Suwałki,Cemetery in Suwałki,Dropsy,1480,1739
+2123,9,Czesława,Michalska,F,1606-07-28,Sopot,1652-06-07,Siedlce,Cemetery in Siedlce,Stroke,1567,1598
+2162,9,Piotr,Krawczyk,M,1608-01-23,Radom,1641-02-22,Płock,Cemetery in Płock,Murder,1707,1763
+2250,9,Barbara,Michalska,F,1614-06-22,Olsztyn,1683-05-03,Opole,Cemetery in Opole,Plague,1758,1902
+2319,9,Szymon,Majewski,M,1617-01-22,Krosno,1674-05-04,Rzeszów,Cemetery in Rzeszów,Influenza,1905,1973
+2321,9,Ludwika,Piotrowska,F,1617-11-09,Jelenia Góra,1657-09-11,Sandomierz,Cemetery in Sandomierz,Pneumonia,1727,1561
+2342,9,Katarzyna,Grabowska,F,1619-05-20,Białystok,1700-10-18,Lublin,Cemetery in Lublin,Cholera,1899,1815
+540,10,Łukasz,Majewski,M,1464-09-04,Bochnia,1514-03-26,Krosno,Cemetery in Krosno,Influenza,346,323
+587,10,Teresa,Nowakowska,F,1470-10-16,Posen,1527-02-14,Skierniewice,Cemetery in Skierniewice,Consumption,337,339
+596,10,Stefania,Grabowska,F,1471-12-17,Warszawa,1526-07-23,Zamość,Cemetery in Zamość,Cholera,458,413
+638,10,Franciszek,Woźniak,M,1476-10-22,Zamość,1524-10-05,Biała Podlaska,Cemetery in Biała Podlaska,Pneumonia,460,485
+653,10,Stefan,Sikora,M,1478-05-17,Rzeszów,1533-12-17,Tarnów,Cemetery in Tarnów,Infectious disease,319,415
+666,10,Ryszard,Szymański,M,1479-10-22,Tarnobrzeg,1521-03-18,Kielce,Cemetery in Kielce,Apoplexy,446,450
+681,10,Marianna,Górska,F,1481-10-17,Opole,1537-03-16,Biała Podlaska,Cemetery in Biała Podlaska,Murder,418,489
+688,10,Bartosz,Krawczyk,M,1482-08-02,Wejherowo,1544-12-14,Sopot,Cemetery in Sopot,Consumption,,
+697,10,Adam,Krawczyk,M,1484-07-20,Koszalin,1548-12-05,Chojnice,Cemetery in Chojnice,Apoplexy,333,475
+731,10,Czesława,Mazur,F,1491-08-23,Gorzów Wielkopolski,1541-05-01,Malbork,Cemetery in Malbork,Fire,545,554
+743,10,Marian,Malinowski,M,1493-03-24,Stargard,1543-06-20,Świnoujście,Cemetery in Świnoujście,Cancer,573,570
+745,10,Krystyna,Dąbrowska,F,1494-09-10,Włocławek,1552-10-10,Posen,Cemetery in Posen,Dysentery,496,516
+753,10,Halina,Krawczyk,F,1495-02-24,Lublin,1562-03-26,Elbląg,Cemetery in Elbląg,Infectious disease,523,532
+755,10,Józef,Jabłoński,M,1495-04-05,Łomża,1572-10-12,Białystok,Cemetery in Białystok,Cancer,547,546
+765,10,Julian,Krawczyk,M,1496-05-11,Sopot,1542-07-11,Słupsk,Cemetery in Słupsk,Apoplexy,563,585
+767,10,Henryk,Michalski,M,1496-10-09,Bromberg,1567-03-28,Leszno,Cemetery in Leszno,Accident,572,636
+769,10,Kamil,Jabłoński,M,1497-05-24,Radom,1540-06-20,Siedlce,Cemetery in Siedlce,Influenza,547,546
+774,10,Jakub,Nowakowski,M,1497-05-01,Bromberg,1574-04-12,Bromberg,Cemetery in Bromberg,Dysentery,609,584
+775,10,Michał,Michalski,M,1497-09-23,Włocławek,1550-09-16,Rawicz,Cemetery in Rawicz,Pneumonia,572,636
+779,10,Irena,Grabowska,F,1498-11-01,Łódź,1553-10-26,Biała Podlaska,Cemetery in Biała Podlaska,Accident,555,559
+785,10,Teresa,Majewska,F,1499-04-27,Krosno,1549-06-19,Suwałki,Cemetery in Suwałki,Pneumonia,540,596
+787,10,Paweł,Malinowski,M,1499-02-17,Wejherowo,1545-09-22,Sopot,Cemetery in Sopot,Apoplexy,598,670
+788,10,Oliwia,Walczak,F,1499-05-11,Śrem,1547-05-21,Opole,Cemetery in Opole,Typhus,571,603
+790,10,Andrzej,Kowalski,M,1499-12-22,Breslau,1549-04-04,Świdnica,Cemetery in Świdnica,Cholera,647,623
+794,10,Teresa,Nowakowska,F,1500-03-23,Konin,1573-09-11,Sopot,Cemetery in Sopot,,568,602
+800,10,Stanisław,Michalski,M,1501-05-16,Malbork,1580-02-21,Stargard,Cemetery in Stargard,Accident,589,595
+806,10,Tadeusz,Michalski,M,1501-03-01,Piła,1578-05-06,Września,Cemetery in Września,Apoplexy,630,658
+810,10,Stefan,Michalski,M,1501-04-09,Gdynia,1557-12-03,Sopot,Cemetery in Sopot,Typhus,625,560
+812,10,Ryszard,Michalski,M,1502-08-02,Piła,1567-10-19,Włocławek,Cemetery in Włocławek,Stroke,572,636
+814,10,Bożena,Walczak,F,1502-09-18,Gniezno,1549-07-23,Leszno,Cemetery in Leszno,Pneumonia,571,603
+817,10,Kamil,Krawczyk,M,1502-04-19,Warszawa,1544-12-09,Łódź,Cemetery in Łódź,Dysentery,479,605
+820,10,Jakub,Majewski,M,1503-02-13,Ostrowiec Świętokrzyski,1581-08-09,Bochnia,Cemetery in Bochnia,Murder,540,596
+828,10,Monika,Krawczyk,F,1504-07-04,Sopot,1543-11-20,Koszalin,Cemetery in Koszalin,Typhus,563,585
+829,10,Bartosz,Malinowski,M,1504-02-05,Kołobrzeg,1547-08-07,Olsztyn,Cemetery in Olsztyn,War casualty,598,670
+832,10,Wanda,Krawczyk,F,1504-12-26,Stettin,1583-06-21,Śrem,Cemetery in Śrem,,637,664
+834,10,Monika,Nowakowska,F,1504-07-04,Września,1586-04-12,Śrem,Cemetery in Śrem,Smallpox,659,656
+835,10,Halina,Jabłońska,F,1504-12-11,Lublin,1562-10-19,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Typhus,521,693
+836,10,Barbara,Wojciechowska,F,1504-08-27,Breslau,1566-09-14,Koszalin,Cemetery in Koszalin,Dysentery,687,578
+848,10,Maria,Majewska,F,1505-06-08,Kraków,1575-04-20,Rzeszów,Cemetery in Rzeszów,Accident,671,689
+849,10,Teresa,Michalska,F,1506-11-28,Włocławek,1580-09-21,Opole,Cemetery in Opole,,572,636
+858,10,Regina,Michalska,F,1508-06-05,Ostrów Wielkopolski,1560-08-23,Kielce,Cemetery in Kielce,Smallpox,572,636
+862,10,Teresa,Grabowska,F,1508-01-25,Siedlce,1572-06-21,Słupsk,Cemetery in Słupsk,Apoplexy,675,672
+875,10,Stanisław,Jabłoński,M,1510-08-07,Słupsk,1547-05-21,Wejherowo,Cemetery in Wejherowo,,649,643
+876,10,Aleksandra,Wiśniewska,F,1510-06-09,Stettin,1577-04-18,Gostyń,Cemetery in Gostyń,Dropsy,628,736
+879,10,Zofia,Nowakowska,F,1511-09-07,Rawicz,1557-07-09,Lublin,Cemetery in Lublin,War casualty,641,706
+887,10,Łukasz,Michalski,M,1512-08-27,Kościan,1577-12-21,Konin,Cemetery in Konin,,569,714
+888,10,Julia,Piotrowska,F,1512-06-21,Gdynia,1593-11-10,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Accident,674,721
+896,10,Wiesław,Michalski,M,1513-10-02,Koszalin,1565-12-01,Malbork,Cemetery in Malbork,War casualty,633,739
+897,10,Szymon,Krawczyk,M,1513-06-09,Świnoujście,1567-03-15,Elbląg,Cemetery in Elbląg,,697,731
+898,10,Marian,Górski,M,1514-05-15,Wałbrzych,1586-08-15,Jelenia Góra,Cemetery in Jelenia Góra,Drowning,667,724
+902,10,Tadeusz,Krawczyk,M,1514-06-23,Kołobrzeg,1597-09-21,Stettin,Cemetery in Stettin,Heart failure,697,731
+905,10,Irena,Jabłońska,F,1515-05-21,Olsztyn,1562-12-09,Kalisz,Cemetery in Kalisz,Plague,649,643
+907,10,Agnieszka,Wojciechowska,F,1515-08-06,Zielona Góra,1573-06-10,Kościan,Cemetery in Kościan,Stroke,699,738
+910,10,Filip,Woźniak,M,1515-01-07,Chełm,1553-12-25,Ciechanów,Cemetery in Ciechanów,Apoplexy,648,760
+911,10,Michał,Wojciechowski,M,1515-08-01,Świdnica,1578-02-04,Jelenia Góra,Cemetery in Jelenia Góra,Fire,682,766
+914,10,Andrzej,Kowalski,M,1515-01-07,Wałbrzych,1576-04-24,Zielona Góra,Cemetery in Zielona Góra,Dysentery,692,745
+918,10,Leon,Jabłoński,M,1517-09-21,Gdynia,1576-08-13,Elbląg,Cemetery in Elbląg,Consumption,649,643
+921,10,Ignacy,Kowalski,M,1517-11-22,Opole,1577-03-07,Legnica,Cemetery in Legnica,Drowning,541,717
+922,10,Krystyna,Wojciechowska,F,1517-03-24,Legnica,1563-03-07,Stettin,Cemetery in Stettin,Drowning,682,766
+925,10,Jakub,Kowalski,M,1517-08-02,Breslau,1606-06-28,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Typhus,692,745
+927,10,Ryszard,Krawczyk,M,1517-03-15,Białystok,1563-01-21,Łódź,Cemetery in Łódź,Starvation,746,749
+928,10,Kazimiera,Piotrowska,F,1518-03-22,Kołobrzeg,1595-01-26,Świnoujście,Cemetery in Świnoujście,Heart failure,674,721
+936,10,Jakub,Wojciechowski,M,1519-02-20,Opole,1551-06-24,Wałbrzych,Cemetery in Wałbrzych,War casualty,699,738
+940,10,Grażyna,Krawczyk,F,1519-04-14,Chełm,1571-04-27,Sopot,Cemetery in Sopot,,746,749
+945,10,Kazimiera,Piotrowska,F,1520-08-01,Malbork,1579-12-23,Chełm,Cemetery in Chełm,Cancer,674,721
+947,10,Dariusz,Michalski,M,1520-08-17,Kalisz,1575-12-06,Rawicz,Cemetery in Rawicz,Plague,728,751
+951,10,Danuta,Krawczyk,F,1521-09-25,Słupsk,1602-04-15,Świdnica,Cemetery in Świdnica,Dysentery,697,731
+955,10,Ewa,Piotrowska,F,1521-04-28,Opole,1573-03-13,Rawicz,Cemetery in Rawicz,Starvation,763,733
+956,10,Anna,Jabłońska,F,1521-09-26,Płock,1589-04-05,Breslau,Cemetery in Breslau,,755,785
+957,10,Ryszard,Mazur,M,1521-10-19,Gorzów Wielkopolski,1589-07-07,Jelenia Góra,Cemetery in Jelenia Góra,Typhus,747,752
+958,10,Leokadia,Mazur,F,1521-07-18,Zielona Góra,1570-08-13,Świdnica,Cemetery in Świdnica,,782,726
+962,10,Barbara,Dąbrowska,F,1522-02-06,Kościan,1582-01-06,Ostrołęka,Cemetery in Ostrołęka,Plague,720,804
+963,10,Małgorzata,Jabłońska,F,1522-07-02,Zamość,1587-04-14,Płock,Cemetery in Płock,Heart failure,755,785
+965,10,Jan,Piotrowski,M,1523-09-24,Sopot,1568-06-04,Chojnice,Cemetery in Chojnice,Pneumonia,674,721
+975,10,Józef,Michalski,M,1524-09-14,Rawicz,1577-07-17,Piła,Cemetery in Piła,Starvation,728,751
+976,10,Grzegorz,Dąbrowski,M,1524-01-26,Śrem,1566-12-02,Włocławek,Cemetery in Włocławek,Plague,720,804
+977,10,Krzysztof,Piotrowski,M,1524-01-24,Breslau,1551-01-09,Zielona Góra,Cemetery in Zielona Góra,Apoplexy,763,733
+980,10,Zofia,Malinowska,F,1524-09-16,Elbląg,1572-11-02,Piła,Cemetery in Piła,Dysentery,598,793
+984,10,Leokadia,Dąbrowska,F,1525-03-28,Ostrów Wielkopolski,1581-06-22,Płock,Cemetery in Płock,Cancer,720,804
+987,10,Joanna,Mazur,F,1525-04-05,Świdnica,1563-08-05,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Fire,782,726
+991,10,Ludwika,Krawczyk,F,1525-07-24,Kołobrzeg,1599-11-01,Gostyń,Cemetery in Gostyń,,809,737
+992,10,Agnieszka,Michalska,F,1525-05-07,Gostyń,1615-06-18,Inowrocław,Cemetery in Inowrocław,Drowning,767,814
+997,10,Czesława,Sikora,F,1526-10-15,Bochnia,1586-08-24,Świdnica,Cemetery in Świdnica,Smallpox,653,779
+998,10,Wiesław,Michalski,M,1526-08-19,Inowrocław,1587-05-24,Bromberg,Cemetery in Bromberg,Apoplexy,728,751
+1000,10,Grzegorz,Piotrowski,M,1526-11-03,Jelenia Góra,1586-06-10,Świdnica,Cemetery in Świdnica,Drowning,763,733
+1001,10,Bartosz,Mazur,M,1526-12-12,Breslau,1592-08-20,Breslau,Cemetery in Breslau,Dropsy,782,726
+1003,10,Jakub,Malinowski,M,1526-09-01,Stargard,1574-10-19,Stettin,Cemetery in Stettin,War casualty,598,793
+1010,10,Piotr,Krawczyk,M,1527-01-18,Stargard,1597-10-26,Stettin,Cemetery in Stettin,Cancer,818,797
+1013,10,Regina,Krawczyk,F,1527-10-23,Chojnice,1592-01-11,Gdynia,Cemetery in Gdynia,Starvation,825,816
+1014,10,Szymon,Grabowski,M,1527-09-13,Łomża,1592-05-27,Radom,Cemetery in Radom,Influenza,811,863
+1015,10,Małgorzata,Krawczyk,F,1527-10-19,Chełm,1599-01-06,Chełm,Cemetery in Chełm,Drowning,817,848
+1019,10,Andrzej,Piotrowski,M,1528-05-05,Opole,1590-08-19,Świdnica,Cemetery in Świdnica,Unknown,763,733
+1020,10,Regina,Zielińska,F,1528-01-14,Chojnice,1608-06-11,Słupsk,Cemetery in Słupsk,Fire,690,742
+1021,10,Jerzy,Malinowski,M,1528-01-01,Słupsk,1605-01-06,Słupsk,Cemetery in Słupsk,Accident,787,828
+1023,10,Stefania,Malinowska,F,1528-10-20,Stettin,1571-06-02,Słupsk,Cemetery in Słupsk,Starvation,748,761
+1025,10,Józefa,Michalska,F,1528-06-03,Sopot,1599-01-10,Inowrocław,Cemetery in Inowrocław,Cholera,772,844
+1031,10,Zofia,Krawczyk,F,1529-06-05,Malbork,1595-03-02,Kościan,Cemetery in Kościan,Dropsy,818,797
+1033,10,Wojciech,Malinowski,M,1529-04-22,Olsztyn,1568-09-13,Stargard,Cemetery in Stargard,Influenza,748,761
+1034,10,Rozalia,Michalska,F,1529-04-03,Świnoujście,1572-04-23,Chojnice,Cemetery in Chojnice,,772,844
+1035,10,Szymon,Krawczyk,M,1529-03-14,Biała Podlaska,1581-12-19,Ciechanów,Cemetery in Ciechanów,Stroke,817,848
+1038,10,Ludwika,Malinowska,F,1529-07-25,Wejherowo,1606-06-05,Białystok,Cemetery in Białystok,Plague,829,862
+1039,10,Ryszard,Michalski,M,1529-06-15,Thorn,1578-11-01,Września,Cemetery in Września,Influenza,789,819
+1040,10,Julian,Krawczyk,M,1530-03-05,Danzig,1578-02-24,Sopot,Cemetery in Sopot,Dysentery,697,731
+1041,10,Julia,Woźniak,F,1530-01-01,Skierniewice,1582-07-26,Ciechanów,Cemetery in Ciechanów,Dysentery,719,835
+1042,10,Szymon,Malinowski,M,1530-08-26,Chojnice,1589-01-24,Wejherowo,Cemetery in Wejherowo,Fever,743,788
+1044,10,Maciej,Grabowski,M,1530-06-28,Skierniewice,1607-08-27,Siedlce,Cemetery in Siedlce,Starvation,811,863
+1045,10,Władysław,Piotrowski,M,1530-07-06,Olsztyn,1620-07-09,Danzig,Cemetery in Danzig,Drowning,629,801
+1049,10,Irena,Nowakowska,F,1530-01-14,Gniezno,1574-10-24,Rawicz,Cemetery in Rawicz,Cholera,773,893
+1050,10,Genowefa,Michalska,F,1530-08-11,Ostrów Wielkopolski,1589-12-11,Thorn,Cemetery in Thorn,Influenza,,
+1051,10,Urszula,Krawczyk,F,1531-09-15,Wejherowo,1590-10-08,Świdnica,Cemetery in Świdnica,Influenza,,
+1052,10,Kamil,Jabłoński,M,1531-05-24,Chełm,1586-08-18,Biała Podlaska,Cemetery in Biała Podlaska,Smallpox,755,785
+1054,10,Ewa,Malinowska,F,1531-01-23,Koszalin,1557-02-18,Stettin,Cemetery in Stettin,,743,788
+1058,10,Leon,Piotrowski,M,1531-12-04,Zielona Góra,1600-01-21,Jelenia Góra,Cemetery in Jelenia Góra,Drowning,768,827
+1061,10,Teresa,Malinowska,F,1531-08-23,Stettin,1591-02-25,Breslau,Cemetery in Breslau,Murder,829,862
+1062,10,Maja,Michalska,F,1531-02-25,Leszno,1594-10-20,Słupsk,Cemetery in Słupsk,Dropsy,789,819
+1063,10,Regina,Michalska,F,1531-10-13,Bromberg,1570-01-14,Włocławek,Cemetery in Włocławek,Heart failure,775,876
+1067,10,Krzysztof,Grabowski,M,1532-02-11,Ostrołęka,1582-06-27,Skierniewice,Cemetery in Skierniewice,Smallpox,811,863
+1068,10,Czesława,Krawczyk,F,1532-09-07,Łódź,1596-11-27,Łódź,Cemetery in Łódź,Plague,817,848
+1073,10,Leon,Krawczyk,M,1532-03-22,Warszawa,1587-07-24,Lublin,Cemetery in Lublin,Plague,718,903
+1079,10,Kazimiera,Nowakowska,F,1533-07-15,Rawicz,1604-12-21,Zielona Góra,Cemetery in Zielona Góra,Typhus,774,834
+1080,10,Andrzej,Majewski,M,1533-06-13,Nowy Sącz,1601-01-23,Oświęcim,Cemetery in Oświęcim,Apoplexy,820,858
+1085,10,Oliwia,Krawczyk,F,1533-11-03,Olsztyn,1574-01-27,Kraków,Cemetery in Kraków,Apoplexy,765,905
+1088,10,Natalia,Michalska,F,1534-07-23,Malbork,1585-07-06,Danzig,Cemetery in Danzig,War casualty,772,844
+1089,10,Leokadia,Piotrowska,F,1534-03-01,Świdnica,1584-07-11,Opole,Cemetery in Opole,Murder,768,827
+1091,10,Alicja,Michalska,F,1534-02-20,Bromberg,1603-03-16,Lublin,Cemetery in Lublin,Stroke,789,819
+1092,10,Zygmunt,Nowakowski,M,1534-07-02,Grudziądz,1586-04-26,Inowrocław,Cemetery in Inowrocław,Drowning,773,893
+1096,10,Józefa,Szymańska,F,1534-01-27,Oświęcim,1608-07-26,Posen,Cemetery in Posen,,650,849
+1097,10,Katarzyna,Jabłońska,F,1534-05-24,Ciechanów,1584-07-16,Radom,Cemetery in Radom,Stroke,708,808
+1113,10,Stefan,Jabłoński,M,1535-12-25,Radom,1590-09-02,Siedlce,Cemetery in Siedlce,Influenza,769,888
+1116,10,Zygmunt,Nowakowski,M,1536-10-11,Posen,1622-04-17,Piła,Cemetery in Piła,Fever,773,893
+1117,10,Tomasz,Michalski,M,1536-02-02,Słupsk,1583-09-26,Sopot,Cemetery in Sopot,Consumption,810,836
+1122,10,Krzysztof,Nowakowski,M,1536-05-21,Konin,1608-07-28,Gostyń,Cemetery in Gostyń,Influenza,864,853
+1128,10,Marek,Majewski,M,1537-02-24,Przemyśl,1606-09-28,Sandomierz,Cemetery in Sandomierz,,820,858
+1132,10,Wanda,Jabłońska,F,1537-02-18,Biała Podlaska,1575-12-28,Łódź,Cemetery in Łódź,Cholera,769,888
+1142,10,Jadwiga,Wojciechowska,F,1538-09-04,Gorzów Wielkopolski,1608-05-06,Legnica,Cemetery in Legnica,Dropsy,882,931
+1152,10,Katarzyna,Górska,F,1539-12-21,Gorzów Wielkopolski,1593-11-10,Legnica,Cemetery in Legnica,War casualty,867,870
+1154,10,Katarzyna,Michalska,F,1539-06-01,Świnoujście,1588-01-27,Leszno,Cemetery in Leszno,Heart failure,837,903
+1166,10,Tomasz,Wojciechowski,M,1540-02-09,Zielona Góra,1603-12-28,Świdnica,Cemetery in Świdnica,Starvation,882,931
+1167,10,Natalia,Jabłońska,F,1540-06-05,Wejherowo,1602-03-14,Stettin,Cemetery in Stettin,Apoplexy,883,890
+1169,10,Kazimierz,Grabowski,M,1540-03-16,Łódź,1604-10-14,Ostrołęka,Cemetery in Ostrołęka,Pneumonia,845,920
+1171,10,Stefan,Majewski,M,1541-12-07,Kraków,1624-05-05,Przemyśl,Cemetery in Przemyśl,Cholera,820,858
+1174,10,Wojciech,Górski,M,1541-11-24,Breslau,1592-09-24,Świdnica,Cemetery in Świdnica,Pneumonia,867,870
+1179,10,Anna,Dąbrowska,F,1541-03-04,Piła,1581-04-11,Piła,Cemetery in Piła,,913,857
+1183,10,Ludwika,Nowakowska,F,1542-08-01,Września,1608-04-25,Inowrocław,Cemetery in Inowrocław,Plague,774,834
+1185,10,Genowefa,Michalska,F,1542-10-03,Gostyń,1589-08-19,Gostyń,Cemetery in Gostyń,War casualty,775,876
+1192,10,Józef,Dąbrowski,M,1542-06-17,Thorn,1610-02-19,Grudziądz,Cemetery in Grudziądz,Pneumonia,913,857
+1196,10,Tomasz,Majewski,M,1543-12-22,Krosno,1630-08-21,Krosno,Cemetery in Krosno,Consumption,839,884
+1208,10,Wiktoria,Wojciechowska,F,1544-03-19,Świdnica,1588-05-11,Rzeszów,Cemetery in Rzeszów,Dysentery,882,931
+1209,10,Stefania,Krawczyk,F,1544-02-03,Łódź,1587-10-18,Ostrołęka,Cemetery in Ostrołęka,Starvation,927,879
+1214,10,Piotr,Nowakowski,M,1544-03-28,Kalisz,1603-03-03,Kalisz,Cemetery in Kalisz,Influenza,885,955
+1219,10,Andrzej,Grabowski,M,1544-04-28,Ostrołęka,1580-12-17,Ciechanów,Cemetery in Ciechanów,Influenza,824,843
+1224,10,Marian,Michalski,M,1545-08-01,Leszno,1594-07-15,Leszno,Cemetery in Leszno,Fire,887,907
+1226,10,Ewa,Nowakowska,F,1545-08-19,Thorn,1599-07-08,Grudziądz,Cemetery in Grudziądz,,885,955
+1235,10,Ludwika,Szymańska,F,1546-05-12,Oświęcim,1625-10-03,Rzeszów,Cemetery in Rzeszów,Murder,889,952
+1236,10,Władysław,Nowakowski,M,1546-09-01,Gostyń,1628-08-01,Kościan,Cemetery in Kościan,Infectious disease,885,955
+1239,10,Antoni,Michalski,M,1546-10-14,Gniezno,1572-04-09,Thorn,Cemetery in Thorn,War casualty,838,912
+1245,10,Wanda,Szymańska,F,1547-01-23,Nowy Sącz,1603-09-16,Oświęcim,Cemetery in Oświęcim,Dysentery,889,952
+1256,10,Szymon,Kowalski,M,1548-01-05,Breslau,1624-10-14,Świdnica,Cemetery in Świdnica,Fire,921,888
+1269,10,Maria,Jabłońska,F,1549-03-10,Olsztyn,1620-09-11,Września,Cemetery in Września,Plague,918,1034
+1270,10,Danuta,Kowalska,F,1549-12-26,Świdnica,1590-12-17,Gorzów Wielkopolski,Cemetery in Gorzów Wielkopolski,Cholera,925,987
+1271,10,Zygmunt,Wojciechowski,M,1549-05-03,Zielona Góra,1593-03-22,Zielona Góra,Cemetery in Zielona Góra,Fever,946,983
+1275,10,Jerzy,Nowakowski,M,1550-11-01,Września,1627-10-21,Włocławek,Cemetery in Włocławek,,885,955
+1284,10,Dariusz,Michalski,M,1551-09-13,Września,1613-08-16,Kalisz,Cemetery in Kalisz,,887,907
+1299,10,Wojciech,Grabowski,M,1552-10-21,Płock,1593-05-23,Ciechanów,Cemetery in Ciechanów,Apoplexy,1044,962
+1306,10,Ludwika,Grabowska,F,1553-11-04,Lublin,1616-10-08,Świdnica,Cemetery in Świdnica,Dysentery,1044,962
+1317,10,Jakub,Krawczyk,M,1554-01-10,Stargard,1585-08-27,Malbork,Cemetery in Malbork,Influenza,897,945
+1319,10,Anna,Mazur,F,1554-05-06,Opole,1594-09-05,Wejherowo,Cemetery in Wejherowo,Influenza,964,1015
+1334,10,Wiktoria,Mazur,F,1555-12-24,Zielona Góra,1642-10-20,Radom,Cemetery in Radom,Accident,957,1079
+1345,10,Łukasz,Grabowski,M,1556-02-01,Białystok,1621-10-02,Radom,Cemetery in Radom,Typhus,1044,962
+1352,10,Maja,Malinowska,F,1556-11-28,Sopot,1628-10-16,Chełm,Cemetery in Chełm,Infectious disease,1002,1017
+1380,10,Marian,Krawczyk,M,1558-03-05,Biała Podlaska,1610-10-08,Biała Podlaska,Cemetery in Biała Podlaska,Fever,1073,1038
+1385,10,Maria,Michalska,F,1559-09-05,Leszno,1633-02-25,Tarnów,Cemetery in Tarnów,War casualty,1039,1049
+1431,10,Marcin,Jabłoński,M,1562-09-19,Skierniewice,1628-04-08,Lublin,Cemetery in Lublin,War casualty,1052,1041
+1440,10,Elżbieta,Michalska,F,1563-10-03,Leszno,1617-05-21,Thorn,Cemetery in Thorn,Fire,998,991
+1448,10,Józef,Grabowski,M,1563-02-28,Płock,1628-08-05,Płock,Cemetery in Płock,Pneumonia,1151,1086
+1451,10,Filip,Krawczyk,M,1563-07-19,Chełm,1633-08-28,Radom,Cemetery in Radom,Murder,1158,1132
+1460,10,Aleksandra,Malinowska,F,1565-01-18,Koszalin,1631-07-06,Elbląg,Cemetery in Elbląg,Heart failure,1002,1017
+1480,10,Bartosz,Michalski,M,1566-02-23,Wejherowo,1619-03-26,Gdynia,Cemetery in Gdynia,Stroke,1117,1167
+1486,10,Leon,Majewski,M,1566-08-25,Kraków,1605-09-03,Ostrowiec Świętokrzyski,Cemetery in Ostrowiec Świętokrzyski,,1128,1235
+1497,10,Joanna,Majewska,F,1567-02-17,Krosno,1631-03-13,Płock,Cemetery in Płock,Influenza,1080,1085
+1498,10,Maria,Michalska,F,1567-08-01,Piła,1618-10-13,Zamość,Cemetery in Zamość,,975,1091
+1500,10,Zuzanna,Michalska,F,1567-12-13,Sopot,1621-01-19,Skierniewice,Cemetery in Skierniewice,Heart failure,1173,1114
+1518,10,Marek,Grabowski,M,1568-03-05,Biała Podlaska,1645-05-18,Łomża,Cemetery in Łomża,Dropsy,1067,1097
+1532,10,Krystyna,Michalska,F,1569-08-24,Stettin,1601-10-10,Elbląg,Cemetery in Elbląg,War casualty,1173,1114
+1540,10,Piotr,Grabowski,M,1569-09-20,Łódź,1648-10-23,Łódź,Cemetery in Łódź,Pneumonia,1219,1015
+1559,10,Ignacy,Kowalski,M,1570-12-23,Jelenia Góra,1615-12-12,Jelenia Góra,Cemetery in Jelenia Góra,Apoplexy,1211,1251
+1564,10,Wanda,Krawczyk,F,1571-02-17,Suwałki,1631-05-04,Jelenia Góra,Cemetery in Jelenia Góra,,1158,1132
+1567,10,Jan,Michalski,M,1571-07-27,Olsztyn,1650-12-09,Sopot,Cemetery in Sopot,,1173,1114
+1571,10,Stanisław,Nowakowski,M,1571-10-18,Gniezno,1639-06-06,Thorn,Cemetery in Thorn,Accident,1148,1217
+1582,10,Krystyna,Michalska,F,1572-02-02,Śrem,1625-06-28,Tarnobrzeg,Cemetery in Tarnobrzeg,Dropsy,1224,1185
+1598,10,Julia,Michalska,F,1573-06-27,Włocławek,1618-08-14,Wejherowo,Cemetery in Wejherowo,Unknown,1172,1164
+1607,10,Michał,Krawczyk,M,1573-11-12,Suwałki,1651-05-07,Skierniewice,Cemetery in Skierniewice,Murder,1212,1249
+1631,10,Adam,Majewski,M,1575-08-22,Bochnia,1624-08-20,Zakopane,Cemetery in Zakopane,Cholera,1155,1276
+1635,10,Marianna,Krawczyk,F,1575-06-01,Stargard,1639-06-24,Radom,Cemetery in Radom,,1040,1107
+1678,10,Grażyna,Krawczyk,F,1578-11-03,Stargard,1598-08-14,Skierniewice,Cemetery in Skierniewice,Unknown,,
+1685,10,Jadwiga,Kowalska,F,1579-08-07,Gorzów Wielkopolski,1634-09-24,Płock,Cemetery in Płock,Heart failure,1156,1267
+1707,10,Stanisław,Krawczyk,M,1580-10-08,Łódź,1637-09-19,Suwałki,Cemetery in Suwałki,Murder,1380,1334
+1727,10,Szymon,Piotrowski,M,1582-10-15,Opole,1648-07-01,Zielona Góra,Cemetery in Zielona Góra,Typhus,1353,1357
+1739,10,Joanna,Grabowska,F,1583-04-16,Ciechanów,1644-02-09,Zielona Góra,Cemetery in Zielona Góra,,1299,1385
+1763,10,Julia,Krawczyk,F,1584-01-10,Łomża,1650-10-03,Ostrołęka,Cemetery in Ostrołęka,Cholera,1403,1367
+1905,10,Grzegorz,Majewski,M,1592-04-09,Tarnobrzeg,1639-04-26,Bochnia,Cemetery in Bochnia,Stroke,1486,1460
+1973,10,Monika,Piotrowska,F,1596-11-11,Jelenia Góra,1618-02-24,Zakopane,Cemetery in Zakopane,Dysentery,1324,1428
