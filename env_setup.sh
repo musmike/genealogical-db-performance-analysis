@@ -2,7 +2,7 @@
 
 # ==============================================================
 # Setup script for Ubuntu Server 24.04 LTS
-# Installs: Docker Engine 29.3.0, .NET 9 SDK, OpenSSH
+# Installs: Docker Engine 29.3.0, .NET 9 SDK, Python 3.13, OpenSSH
 # Disables: unnecessary background services
 # Optimizes: CPU governor, swap, journald
 # ==============================================================
@@ -190,6 +190,34 @@ sudo apt update -y
 sudo apt install -y dotnet-sdk-9.0
 sudo apt-mark hold dotnet-sdk-9.0
 
+
+# ================================================================================================
+# Install Python 3.13 and set up virtual environment for chart generation and analysis scripts
+# ================================================================================================
+
+echo -e "\n=== Installing Python 3.13 and virtual environments ==="
+
+sudo add-apt-repository -y ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install -y python3.13 python3.13-venv
+
+cd data_generator
+
+sudo rm -rf .venv
+python3.13 -m venv .venv
+source .venv/bin/activate
+pip install matplotlib==3.10.1
+
+cd ../analysis_scr
+
+sudo rm -rf .venv
+python3.13 -m venv .venv
+source .venv/bin/activate
+pip install matplotlib==3.10.1 pandas==2.3.0 scipy==1.15.1
+
+cd ..
+
+
 # ==============================================================
 # Start databases via Docker Compose
 # ==============================================================
@@ -201,5 +229,5 @@ echo "Docker services prepared. Check status with: sudo docker ps"
 
 # ==============================================================
 echo -e "\n=== Setup complete ==="
-echo "REBOOT REQUIRED to apply Docker group changes."
+echo "REBOOT REQUIRED to apply changes."
 echo "After reboot, run the benchmark suite — see README.md"

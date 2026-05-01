@@ -777,7 +777,8 @@ class AnalyticsEngine:
             "TotalFamilyChildren": sum(len(f.children) for f in self.families.values())
         }
 
-        counts_file = os.path.join(project_root, "benchmark_scr", "scenarios", f"expected_counts_{size_str}.json")
+        counts_file = os.path.join(project_root, "benchmark_scr", "scenarios", "scenario_validation",
+                                   f"expected_data_{size_str}", f"expected_counts_{size_str}.json")
         with open(counts_file, 'w', encoding='utf-8') as f:
             json.dump(expected_counts, f, indent=4)
 
@@ -785,7 +786,7 @@ class AnalyticsEngine:
 
         # ---------------- CSV Data export ----------------
         import csv
-        exp_dir = os.path.join(project_root, "benchmark_scr", "scenarios", f"expected_data_{size_str}")
+        exp_dir = os.path.join(project_root, "benchmark_scr", "scenarios", "scenario_validation", f"expected_data_{size_str}")
         os.makedirs(exp_dir, exist_ok=True)
 
         def export_csv(name, headers, rows):

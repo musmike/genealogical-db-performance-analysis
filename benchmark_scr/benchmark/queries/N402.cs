@@ -2,7 +2,6 @@
 using benchmark_scr.monitoring;
 using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
-using Neo4j.Driver;
 
 namespace benchmark_scr.benchmark.queries {
     public class N402 {
@@ -12,6 +11,7 @@ namespace benchmark_scr.benchmark.queries {
         private MemoryMonitor monitor = null!;
         private PersonScratch scratch = null!;
         private int expectedCount;
+        private List<string> statements = null!;
 
         public N402() {
             path = Configg.basePath;
@@ -36,6 +36,8 @@ namespace benchmark_scr.benchmark.queries {
             monitor = new MemoryMonitor(env, nameof(N402));
             monitor.Start();
             
+            statements = Neo4jDriver.SplitCypherStatements(repo.NeoScenario2);
+            
             scratch = new PersonScratch();
             expectedCount = repo.ExpectedCounts.GetValueOrDefault("Neo02", -1);
             
@@ -59,7 +61,7 @@ namespace benchmark_scr.benchmark.queries {
         [Benchmark]
         public async Task<int> _N402()
         {
-            int rowsCount = await driver.ExecuteReadConsumingAsync(repo.NeoScenario2, scratch, Neo4jMappers.MapSc02);
+            int rowsCount = await driver.ExecuteReadStatementsConsumingAsync(statements, scratch, Neo4jMappers.MapSc02);
             
             if (rowsCount != expectedCount) {
                 throw new InvalidOperationException(

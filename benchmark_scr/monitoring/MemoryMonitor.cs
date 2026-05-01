@@ -89,7 +89,7 @@ namespace benchmark_scr.monitoring {
         }
 
         public static async Task StabilizeAsync() {
-            await Task.Delay(2000);
+            await Task.Delay(1000);
         }
 
         public void Export() {

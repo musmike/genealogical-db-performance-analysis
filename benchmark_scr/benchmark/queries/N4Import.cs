@@ -46,9 +46,9 @@ namespace benchmark_scr.benchmark.queries {
         public async Task Cleanup() {
             BashRunner.RunAsync("bash", true, repo.Neo4jCreateDbScript)
                 .GetAwaiter().GetResult();
-            driver.ExecuteWriteScriptAsync(repo.Neo4jCreateIndexesCypher)
+            driver.ExecuteWriteCypherAsync(repo.Neo4jCreateIndexesCypher)
                 .GetAwaiter().GetResult();
-            driver.ExecuteWriteScriptAsync("CALL db.awaitIndexes();")
+            driver.ExecuteWriteCypherAsync("CALL db.awaitIndexes();")
                 .GetAwaiter().GetResult();
             await validator.ValidateNeo4jAsync();
         }

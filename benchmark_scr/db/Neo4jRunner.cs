@@ -7,7 +7,7 @@ public class Neo4jDriver : IAsyncDisposable {
         _driver = GraphDatabase.Driver(uri, AuthTokens.Basic(user, password));
     }
     
-    private static List<string> SplitCypherStatements(string cypher) {
+    public static List<string> SplitCypherStatements(string cypher) {
         var lines = cypher
             .Split('\n')
             .Select(l => l.Trim())
@@ -28,47 +28,23 @@ public class Neo4jDriver : IAsyncDisposable {
             await _driver.DisposeAsync();
     }
     
-    public async Task<List<IResultSummary>> ExecuteWriteScriptAsync(string cypher) {
-        var statements = SplitCypherStatements(cypher);
-
-        await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
-
-        return await session.ExecuteWriteAsync(async tx =>
-        {
-            var summaries = new List<IResultSummary>();
-
-            foreach(var stmt in statements) {
-                var cursor = await tx.RunAsync(stmt);
-                summaries.Add(await cursor.ConsumeAsync());
-            }
-
-            return summaries;
-        });
-    }
-    
-    public async Task<int> ExecuteReadConsumingAsync<T>(string cypher, T scratch, Action<IRecord, T> map) {
-    
-        var statements = SplitCypherStatements(cypher);
+    public async Task<int> ExecuteReadStatementsConsumingAsync<T>(List<string> statements, T scratch, Action<IRecord, T> map) {
         await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
 
         return await session.ExecuteReadAsync(async tx => {
             int totalCount = 0;
-            
             foreach (var stmt in statements) {
                 var cursor = await tx.RunAsync(stmt);
-                
                 while (await cursor.FetchAsync()) {
                     map(cursor.Current, scratch);
                     totalCount++;
                 }
             }
-            
             return totalCount;
         });
     }
     
-    public async Task<int> ExecuteWriteScriptCountAsync(string cypher) {
-        var statements = SplitCypherStatements(cypher);
+    public async Task<int> ExecuteWriteStatementsAsync(List<string> statements) {
         await using var session = _driver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
 
         return await session.ExecuteWriteAsync(async tx => {
@@ -84,5 +60,15 @@ public class Neo4jDriver : IAsyncDisposable {
             }
             return totalAffected;
         });
+    }
+    
+    public async Task<int> ExecuteWriteCypherAsync(string cypher) {
+        var statements = SplitCypherStatements(cypher);
+        return await ExecuteWriteStatementsAsync(statements);
+    }
+    
+    public async Task<int> ExecuteReadCypherConsumingAsync<T>(string cypher, T scratch, Action<IRecord, T> map) {
+        var statements = SplitCypherStatements(cypher);
+        return await ExecuteReadStatementsConsumingAsync(statements, scratch, map);
     }
 }

@@ -2,6 +2,31 @@
 
 This guide explains how to replicate the database performance study environment.
 
+## Experimental Environment
+
+The benchmarks were conducted using the following hardware and software stack. To ensure the reproducibility of the results, it is recommended to run the tests in a closely matched environment:
+
+| Category | Component | Specification |
+| :--- | :--- | :--- |
+| **Hardware** | **CPU** | Intel® Core™ i7-10700K, 3.8 GHz, up to 5.10 GHz, 16M Cache |
+| | **RAM** | Kingston FURY 32GB (2x16GB) 3600MHz CL16 |
+| | **Storage** | Samsung 1TB M.2 PCIe NVMe 970 EVO Plus |
+| **System** | **OS** | Ubuntu Server 24.04.04 LTS (minimized) |
+| | **Kernel** | Linux 6.8.0-111-generic |
+| **Docker** | **Engine** | 29.3.0 |
+| | **Container Limits** | 8 GB RAM, 4 CPU Cores (dedicated per database instance) |
+| **Software** | **PostgreSQL** | 17.9 |
+| | **Neo4j** | 5.26.23-enterprise (LTS) |
+| | **.NET SDK** | 9.0.115 |
+| | **Npgsql (C#)** | 10.0.2 |
+| | **Neo4j.Driver (C#)** | 6.0.0 |
+| | **BenchmarkDotNet (C#)** | 0.15.8 |
+| | **Python** | 3.13 |
+| | **Matplotlib (Python)** | 3.10.1 |
+| | **Pandas (Python)** | 2.3.0 |
+| | **SciPy (Python)** | 1.15.1 |
+
+
 ## 1. Install Ubuntu Server 24.04 LTS
 
 During the installation, choose the following options:
@@ -31,14 +56,14 @@ cd <repository_folder>
 
 ## 3. Set up the environment
 
-Run the environment setup script `env_setup.sh` to install all required dependencies (including Docker and the .NET SDK) and apply system-level optimizations to ensure stable and reproducible benchmark results. You will be required to enter your sudo password during execution, as administrative privileges are needed.
+Run the environment setup script `env_setup.sh` to install all required dependencies (including Docker, Python and the .NET SDK) and apply system-level optimizations to ensure stable and reproducible benchmark results. You will be required to enter your sudo password during execution, as administrative privileges are needed.
 
 ```bash
 chmod +x env_setup.sh
 ./env_setup.sh
 ```
 
-Once the script completes, **reboot the system** to apply group changes (e.g., Docker permissions):
+Once the script completes, **reboot the system** to apply group changes:
 
 ```bash
 sudo reboot
@@ -74,7 +99,7 @@ python3.13 -m venv .venv
 source .venv/bin/activate
 
 # Install required packages and generate charts
-pip install matplotlib pandas scipy
+pip install matplotlib==3.10.1 pandas==2.3.0 scipy==1.15.1
 python scr.py
 ```
 *Note: The generated charts will be saved in your `results/` directory.*
@@ -99,7 +124,7 @@ sudo apt install -y python3.13 python3.13-venv
 cd data_generator
 python3.13 -m venv .venv
 source .venv/bin/activate
-pip install matplotlib
+pip install matplotlib==3.10.1
 ```
 
 ### Run Data Generator

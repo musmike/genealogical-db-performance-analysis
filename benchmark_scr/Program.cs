@@ -51,8 +51,8 @@ static IConfig PostgresConfig(Dataset dataset) {
     return DefaultConfig.Instance
         .AddJob(Job.Default
             .WithId($"pg-{dataset}")
-            .WithWarmupCount(5)
-            .WithIterationCount(20))
+            .WithWarmupCount(10)
+            .WithIterationCount(30))
         .AddLogger(ConsoleLogger.Default)
         .AddDiagnoser(MemoryDiagnoser.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
@@ -65,8 +65,8 @@ static IConfig Neo4jConfig(Dataset dataset) {
         .AddDiagnoser(MemoryDiagnoser.Default)
         .AddJob(Job.Default
             .WithId($"neo4j-{dataset}")
-            .WithWarmupCount(5)
-            .WithIterationCount(20))
+            .WithWarmupCount(10)
+            .WithIterationCount(30))
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j")) 
         .AddLogger(ConsoleLogger.Default);

@@ -28,7 +28,8 @@ namespace benchmark_scr.queries
                 _ => throw new Exception("Unknown dataset")
             };
 
-            _expectedDataDir = Path.Combine(AppContext.BaseDirectory, "scenarios/scenario_validation", $"expected_data_{suffix}");
+            _expectedDataDir = Path.Combine(AppContext.BaseDirectory, "scenarios", "scenario_validation",
+                $"expected_data_{suffix}");
             _jsonOptions = new JsonSerializerOptions { IncludeFields = true };
 
             _exp01 = ReadCsv("Sc01").Select(c => new LcaScratch {
@@ -189,11 +190,11 @@ namespace benchmark_scr.queries
             await using var n4j = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
 
             long totalPpl = 0, totalFam = 0, totalChild = 0;
-            await n4j.ExecuteReadConsumingAsync("MATCH (n:Person) RETURN count(n)", new object(),
+            await n4j.ExecuteReadCypherConsumingAsync("MATCH (n:Person) RETURN count(n)", new object(),
                 (r, _) => totalPpl = r[0].As<long>());
-            await n4j.ExecuteReadConsumingAsync("MATCH (n:Family) RETURN count(n)", new object(),
+            await n4j.ExecuteReadCypherConsumingAsync("MATCH (n:Family) RETURN count(n)", new object(),
                 (r, _) => totalFam = r[0].As<long>());
-            await n4j.ExecuteReadConsumingAsync(
+            await n4j.ExecuteReadCypherConsumingAsync(
                 "MATCH ()-[r:HAS_BIOLOGICAL_CHILD|HAS_ADOPTED_CHILD|HAS_FOSTER_CHILD]->() RETURN count(r)",
                 new object(), (r, _) => totalChild = r[0].As<long>());
             
@@ -202,9 +203,9 @@ namespace benchmark_scr.queries
             AssertEquals(totalChild, _expCounts["TotalFamilyChildren"], "Neo4j Import - FamilyChildren");
             
             var neoIndexes = new List<string>();
-            await n4j.ExecuteReadConsumingAsync("SHOW INDEXES YIELD name, state WHERE state = 'ONLINE' RETURN name", 
+            await n4j.ExecuteReadCypherConsumingAsync("SHOW INDEXES YIELD name, state WHERE state = 'ONLINE' RETURN name", 
                 neoIndexes, (r, list) => list.Add(r[0].As<string>()));
-            await n4j.ExecuteReadConsumingAsync("SHOW CONSTRAINTS YIELD name", neoIndexes, 
+            await n4j.ExecuteReadCypherConsumingAsync("SHOW CONSTRAINTS YIELD name", neoIndexes, 
                 (r, list) => list.Add(r[0].As<string>()));
             
             string[] requiredNeoIndexes = { 
@@ -221,7 +222,7 @@ namespace benchmark_scr.queries
             }
 
             var act01 = new List<LcaScratch>();
-            await n4j.ExecuteReadConsumingAsync(_repo.NeoScenario1, act01, (r, list) => {
+            await n4j.ExecuteReadCypherConsumingAsync(_repo.NeoScenario1, act01, (r, list) => {
                 var s = new LcaScratch();
                 Neo4jMappers.MapSc01(r, s);
                 list.Add(s);
@@ -230,7 +231,7 @@ namespace benchmark_scr.queries
             AssertDeepEqual(act01, _exp01, "Neo01");
 
             var act02 = new List<PersonScratch>();
-            await n4j.ExecuteReadConsumingAsync(_repo.NeoScenario2, act02, (r, list) => {
+            await n4j.ExecuteReadCypherConsumingAsync(_repo.NeoScenario2, act02, (r, list) => {
                 var s = new PersonScratch();
                 Neo4jMappers.MapSc02(r, s);
                 list.Add(s);
@@ -239,7 +240,7 @@ namespace benchmark_scr.queries
             AssertDeepEqual(act02, _exp02, "Neo02");
 
             var act03 = new List<BirthStatScratch>();
-            await n4j.ExecuteReadConsumingAsync(_repo.NeoScenario3, act03, (r, list) => {
+            await n4j.ExecuteReadCypherConsumingAsync(_repo.NeoScenario3, act03, (r, list) => {
                 var s = new BirthStatScratch();
                 Neo4jMappers.MapSc03(r, s);
                 list.Add(s);
@@ -248,7 +249,7 @@ namespace benchmark_scr.queries
             AssertDeepEqual(act03, _exp03, "Neo03");
 
             var act04 = new List<RelativeScratch>();
-            await n4j.ExecuteReadConsumingAsync(_repo.NeoScenario4, act04, (r, list) => {
+            await n4j.ExecuteReadCypherConsumingAsync(_repo.NeoScenario4, act04, (r, list) => {
                 var s = new RelativeScratch();
                 Neo4jMappers.MapRelative(r, s);
                 list.Add(s);
@@ -257,7 +258,7 @@ namespace benchmark_scr.queries
             AssertDeepEqual(act04, _exp04, "Neo04");
 
             var act05 = new List<RelativeScratch>();
-            await n4j.ExecuteReadConsumingAsync(_repo.NeoScenario5, act05, (r, list) => {
+            await n4j.ExecuteReadCypherConsumingAsync(_repo.NeoScenario5, act05, (r, list) => {
                 var s = new RelativeScratch();
                 Neo4jMappers.MapRelative(r, s);
                 list.Add(s);
@@ -266,7 +267,7 @@ namespace benchmark_scr.queries
             AssertDeepEqual(act05, _exp05, "Neo05");
 
             var act06 = new List<YoungestParentScratch>();
-            await n4j.ExecuteReadConsumingAsync(_repo.NeoScenario6, act06, (r, list) => {
+            await n4j.ExecuteReadCypherConsumingAsync(_repo.NeoScenario6, act06, (r, list) => {
                 var s = new YoungestParentScratch();
                 Neo4jMappers.MapSc06(r, s);
                 list.Add(s);
@@ -274,15 +275,15 @@ namespace benchmark_scr.queries
             act06 = act06.OrderBy(x => x.ParentId).ThenBy(x => x.ChildId).ToList();
             AssertDeepEqual(act06, _exp06, "Neo06");
 
-            var aff07 = await n4j.ExecuteWriteScriptCountAsync(_repo.NeoScenario7);
+            var aff07 = await n4j.ExecuteWriteCypherAsync(_repo.NeoScenario7);
             AssertEquals(aff07, _expCounts["Neo07"], "Neo07 Update execution");
-            var aff07_rev = await n4j.ExecuteWriteScriptCountAsync(_repo.NeoReverse7);
+            var aff07_rev = await n4j.ExecuteWriteCypherAsync(_repo.NeoReverse7);
             AssertEquals(aff07_rev, _expCounts["Neo07"], "Neo07 Reverse update execution");
 
-            var aff08 = await n4j.ExecuteWriteScriptCountAsync(_repo.NeoScenario8);
+            var aff08 = await n4j.ExecuteWriteCypherAsync(_repo.NeoScenario8);
             AssertEquals(aff08, _expCounts["Neo08"], "Neo08 Insert execution");
 
-            var aff09 = await n4j.ExecuteWriteScriptCountAsync(_repo.NeoScenario9);
+            var aff09 = await n4j.ExecuteWriteCypherAsync(_repo.NeoScenario9);
             AssertEquals(aff09, _expCounts["Neo09"], "Neo09 Delete execution");
 
             Console.WriteLine("[Validator] Neo4j pre-flight checks PASSED.");

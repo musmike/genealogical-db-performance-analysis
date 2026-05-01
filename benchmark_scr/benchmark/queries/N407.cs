@@ -9,6 +9,7 @@ namespace benchmark_scr.benchmark.queries {
         private readonly string path;
         private MemoryMonitor monitor = null!;
         private int expectedAffected;
+        private List<string> statements = null!;
 
         public N407() {
             path = Configg.basePath;
@@ -33,6 +34,8 @@ namespace benchmark_scr.benchmark.queries {
             monitor = new MemoryMonitor(env, nameof(N407));
             monitor.Start();
             
+            statements = Neo4jDriver.SplitCypherStatements(repo.NeoScenario7);
+            
             expectedAffected = repo.ExpectedCounts.GetValueOrDefault("Neo07", -1);
             
             if (expectedAffected == -1) {
@@ -49,7 +52,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [Benchmark]
         public async Task<int> _N407() {
-            int objsCount = await driver.ExecuteWriteScriptCountAsync(repo.NeoScenario7);
+            int objsCount = await driver.ExecuteWriteStatementsAsync(statements);
             
             if (objsCount != expectedAffected) {
                 throw new InvalidOperationException(
@@ -63,7 +66,7 @@ namespace benchmark_scr.benchmark.queries {
         [IterationCleanup]
         public void _N407Cleanup() {
             MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
-            driver.ExecuteWriteScriptAsync(repo.NeoReverse7)
+            driver.ExecuteWriteCypherAsync(repo.NeoReverse7)
                 .GetAwaiter().GetResult();
         }
         
