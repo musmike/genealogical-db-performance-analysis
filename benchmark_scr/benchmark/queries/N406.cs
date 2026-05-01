@@ -86,6 +86,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [GlobalCleanup]
         public void Cleanup() {
+            monitor.Dispose();
             monitor.Export();
         }
     }

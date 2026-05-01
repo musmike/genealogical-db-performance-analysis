@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 
 namespace benchmark_scr.monitoring {
-    internal class MemoryMonitor:IDisposable {
+    internal class MemoryMonitor : IDisposable {
         private readonly string _postgresPath;
         private readonly string _n4jPath;
 
@@ -11,6 +11,7 @@ namespace benchmark_scr.monitoring {
         private readonly int[] _iterationBuffer;
 
         private int _index;
+        private readonly Lock _lock = new();
         private int _currentIteration;
 
         private Timer? _timer;
@@ -39,7 +40,7 @@ namespace benchmark_scr.monitoring {
         }
 
         public void NextIteration() {
-            _currentIteration++;
+            Interlocked.Increment(ref _currentIteration);
         }
 
         private static string GetContainerId(string containerName) {
@@ -68,15 +69,14 @@ namespace benchmark_scr.monitoring {
         }
 
         private void Sample() {
-            if(_index >= _pgBuffer.Length)
-                return;
-
-            _pgBuffer[_index] = ReadMem(_postgresPath);
-            _n4jBuffer[_index] = ReadMem(_n4jPath);
-            _timestamps[_index] = DateTime.UtcNow.Ticks;
-            _iterationBuffer[_index] = _currentIteration;
-
-            _index++;
+            lock (_lock) {
+                if (_index >= _pgBuffer.Length) return;
+                _pgBuffer[_index] = ReadMem(_postgresPath);
+                _n4jBuffer[_index] = ReadMem(_n4jPath);
+                _timestamps[_index] = DateTime.UtcNow.Ticks;
+                _iterationBuffer[_index] = _currentIteration;
+                _index++;
+            }
         }
 
         private static long ReadMem(string cgroup) {

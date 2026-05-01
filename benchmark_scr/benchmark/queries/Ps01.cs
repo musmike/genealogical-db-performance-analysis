@@ -4,7 +4,6 @@ using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
 
 namespace benchmark_scr.benchmark.queries {
-    [MemoryDiagnoser]
     public class Ps01 {
         private PostgresDriver driver = null!;
         private QueryRepo repo = null!;
@@ -87,6 +86,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [GlobalCleanup]
         public void Cleanup() {
+            monitor.Dispose();
             monitor.Export();
         }
     }

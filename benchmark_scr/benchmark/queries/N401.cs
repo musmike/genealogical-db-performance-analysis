@@ -5,7 +5,6 @@ using BenchmarkDotNet.Attributes;
 using Neo4j.Driver;
 
 namespace benchmark_scr.benchmark.queries {
-    [MemoryDiagnoser]
     public class N401 {
         private Neo4jDriver driver = null!;
         private QueryRepo repo = null!;
@@ -84,6 +83,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [GlobalCleanup]
         public void Cleanup() {
+            monitor.Dispose();
             monitor.Export();
         }
     }

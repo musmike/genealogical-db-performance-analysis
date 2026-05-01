@@ -62,13 +62,14 @@ namespace benchmark_scr.benchmark.queries {
 
         [IterationCleanup]
         public void _N407Cleanup() {
+            MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
             driver.ExecuteWriteScriptAsync(repo.NeoReverse7)
                 .GetAwaiter().GetResult();
-            MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
         
         [GlobalCleanup]
         public void Cleanup() {
+            monitor.Dispose();
             monitor.Export();
         }
     }

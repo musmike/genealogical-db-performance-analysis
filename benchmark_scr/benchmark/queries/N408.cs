@@ -62,13 +62,14 @@ namespace benchmark_scr.benchmark.queries {
         
         [IterationCleanup]
         public void _N408Cleanup() {
+            MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
             driver.ExecuteWriteScriptAsync(repo.NeoScenario9)
                 .GetAwaiter().GetResult();
-            MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
         }
         
         [GlobalCleanup]
         public void Cleanup() {
+            monitor.Dispose();
             monitor.Export();
         }
     }

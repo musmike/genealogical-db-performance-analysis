@@ -84,6 +84,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [GlobalCleanup]
         public void Cleanup() {
+            monitor.Dispose();
             monitor.Export();
             
             driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = true);");

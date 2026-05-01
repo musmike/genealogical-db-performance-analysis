@@ -2,7 +2,6 @@
 using BenchmarkDotNet.Attributes;
 
 namespace benchmark_scr.benchmark.queries {
-    [MemoryDiagnoser]
     public class PsImport {
         private PostgresDriver driver = null!;
         private QueryRepo repo = null!;
