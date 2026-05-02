@@ -1,7 +1,5 @@
 // Constraints for the node "Person"
-CREATE CONSTRAINT person_sex_required
-FOR (p:Person)
-REQUIRE p.sex IS NOT NULL;
+CREATE CONSTRAINT person_sex_required IF NOT EXISTS FOR (p:Person) REQUIRE p.sex IS NOT NULL;
 
 
 // ============================================================
@@ -52,9 +50,7 @@ CREATE INDEX idx_person_place_birthdate IF NOT EXISTS FOR (p:Person) ON (p.birth
 // Scenario 07: Place Name Update
 // ============================================================
 
-CREATE INDEX person_birthPlace IF NOT EXISTS FOR (p:Person) ON (p.birthPlace);
-CREATE INDEX person_deathPlace IF NOT EXISTS FOR (p:Person) ON (p.deathPlace);
-CREATE INDEX family_marriagePlace IF NOT EXISTS FOR (f:Family) ON (f.marriagePlace);
+// No additional indexes needed.
 
 
 // ============================================================
