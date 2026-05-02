@@ -8,7 +8,7 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo = null!;
         private readonly string path;
         private DatabaseValidator validator = null!;
-        private string _env = null!;
+        private string env = null!;
 
         public N4Import() {
             path = Configg.basePath;
@@ -16,10 +16,9 @@ namespace benchmark_scr.benchmark.queries {
 
         [GlobalSetup]
         public void Setup() {
-            var env = Environment.GetEnvironmentVariable("DATASET");
-            _env = env;
+            env = Environment.GetEnvironmentVariable("DATASET")!;
 
-            if(string.IsNullOrWhiteSpace(env))
+            if (string.IsNullOrWhiteSpace(env))
                 throw new Exception("DATASET env var is missing");
 
             Console.WriteLine($"RAW DATASET: {env}");
@@ -51,8 +50,9 @@ namespace benchmark_scr.benchmark.queries {
                 .GetAwaiter().GetResult();
             driver.ExecuteWriteCypherAsync(repo.Neo4jCreateIndexesCypher)
                 .GetAwaiter().GetResult();
-            DiskSizeCollector.ExportNeo4j(_env, driver);
-            await validator.ValidateNeo4jAsync();
+            DiskSizeCollector.ExportNeo4j(env, driver);
+            await validator.ValidateNeo4jAsync(driver);
+            await driver.DisposeAsync();
         }
     }
 }

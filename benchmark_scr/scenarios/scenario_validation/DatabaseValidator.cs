@@ -77,12 +77,9 @@ namespace benchmark_scr.queries
             return File.ReadAllLines(path).Skip(1).Select(l => l.Split(',')).ToList();
         }
 
-        public async Task ValidatePostgresAsync() {
+        public async Task ValidatePostgresAsync(PostgresDriver pg) {
             Console.WriteLine("\n[Validator] Starting PostgreSQL pre-flight checks...");
-            using var pg =
-                new PostgresDriver("Host=localhost;Port=5432;Username=user;Password=password;Database=benchmarkdb");
-            pg.Open();
-
+            
             long totalPpl = 0, totalFam = 0, totalChild = 0;
             await pg.ExecuteConsumingAsync("SELECT COUNT(*) FROM people;", new object(),
                 (r, _) => totalPpl = r.GetInt64(0));
@@ -185,10 +182,9 @@ namespace benchmark_scr.queries
             Console.WriteLine("[Validator] PostgreSQL pre-flight checks PASSED.");
         }
 
-        public async Task ValidateNeo4jAsync() {
+        public async Task ValidateNeo4jAsync(Neo4jDriver n4j) {
             Console.WriteLine("\n[Validator] Starting Neo4j pre-flight checks...");
-            await using var n4j = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
-
+            
             long totalPpl = 0, totalFam = 0, totalChild = 0;
             await n4j.ExecuteReadCypherConsumingAsync("MATCH (n:Person) RETURN count(n)", new object(),
                 (r, _) => totalPpl = r[0].As<long>());

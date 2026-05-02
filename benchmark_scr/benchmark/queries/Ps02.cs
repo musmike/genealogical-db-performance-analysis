@@ -55,7 +55,7 @@ namespace benchmark_scr.benchmark.queries {
         
         [IterationCleanup]
         public void IterationCleanup() {
-            MemoryMonitor.StabilizeAsync().GetAwaiter().GetResult();
+            MemoryMonitor.Stabilize();
         }
         
         [Benchmark]
@@ -76,6 +76,7 @@ namespace benchmark_scr.benchmark.queries {
         public void Cleanup() {
             monitor.Dispose();
             monitor.Export();
+            driver.Dispose();
         }
     }
 }
