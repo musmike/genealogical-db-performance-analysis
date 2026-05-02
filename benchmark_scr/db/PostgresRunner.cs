@@ -25,6 +25,11 @@ public class PostgresDriver:IDisposable {
         cmd.ExecuteNonQuery();
     }
     
+    public T ExecuteScalar<T>(string sql) {
+        using var cmd = new NpgsqlCommand(sql, _connection);
+        return (T)cmd.ExecuteScalar()!;
+    }
+    
     public async Task<int> ExecuteConsumingAsync<T>(string sql, T scratch, Action<NpgsqlDataReader, T> map) {
     
         await using var cmd = new NpgsqlCommand(sql, _connection);

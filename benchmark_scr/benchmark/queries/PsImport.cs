@@ -1,4 +1,5 @@
-﻿using benchmark_scr.queries;
+﻿using benchmark_scr.monitoring;
+using benchmark_scr.queries;
 using BenchmarkDotNet.Attributes;
 
 namespace benchmark_scr.benchmark.queries {
@@ -7,6 +8,7 @@ namespace benchmark_scr.benchmark.queries {
         private QueryRepo repo = null!;
         private readonly string path;
         private DatabaseValidator validator = null!;
+        private string _env = null!;
 
         public PsImport() {
             path = Configg.basePath;
@@ -15,6 +17,7 @@ namespace benchmark_scr.benchmark.queries {
         [GlobalSetup]
         public void Setup() {
             var env = Environment.GetEnvironmentVariable("DATASET");
+            _env = env;
 
             if(string.IsNullOrWhiteSpace(env))
                 throw new Exception("DATASET env var is missing");
@@ -47,12 +50,7 @@ namespace benchmark_scr.benchmark.queries {
         public async Task Cleanup() {
             driver.Open();
             driver.ExecuteNonQuery(repo.PgCreateIndexesSql);
-            driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
-            driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
-            driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
-            driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = true);");
-            driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = true);");
-            driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = true);");
+            DiskSizeCollector.ExportPostgres(_env, driver);
             await validator.ValidatePostgresAsync();
         }
     }
