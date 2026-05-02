@@ -103,8 +103,6 @@ sudo systemctl enable --now disable-thp.service
 # Prevents dynamic frequency scaling from causing jitter in benchmark results
 # ==============================================================
 echo -e "\n=== Setting CPU governor to performance ==="
-sudo apt install -y cpufrequtils
-echo 'GOVERNOR="performance"' | sudo tee /etc/default/cpufrequtils
 
 for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do
     echo performance | sudo tee "$cpu"
@@ -112,16 +110,17 @@ done
 
 # ==============================================================
 # Ensure CPU governor is set to performance after every reboot
+# and disable Intel Turbo Boost to prevent thermal throttling jitter
 # ==============================================================
 echo -e "\n=== Creating systemd service for CPU performance governor ==="
 sudo tee /etc/systemd/system/perf-cpu.service > /dev/null <<'EOF'
 [Unit]
-Description=Set CPU governor to performance
+Description=Set CPU governor to performance and disable Turbo Boost
 After=multi-user.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c 'for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo performance | tee $cpu; done'
+ExecStart=/bin/bash -c 'for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo performance | tee $cpu; done; if [ -f /sys/devices/system/cpu/intel_pstate/no_turbo ]; then echo 1 | tee /sys/devices/system/cpu/intel_pstate/no_turbo; fi'
 
 [Install]
 WantedBy=multi-user.target

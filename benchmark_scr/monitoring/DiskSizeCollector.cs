@@ -11,7 +11,26 @@ namespace benchmark_scr.monitoring {
             driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = true);");
             driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = true);");
             driver.ExecuteNonQuery("CHECKPOINT;");
-            long bytes = driver.ExecuteScalar<long>("SELECT pg_database_size('benchmarkdb');");
+            
+            long oid = driver.ExecuteScalar<long>("SELECT oid FROM pg_database WHERE datname = 'benchmarkdb';");
+            
+            var psi = new ProcessStartInfo {
+                FileName = "docker",
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+            psi.ArgumentList.Add("exec");
+            psi.ArgumentList.Add("postgres_db");
+            psi.ArgumentList.Add("du");
+            psi.ArgumentList.Add("-sb");
+            psi.ArgumentList.Add($"/var/lib/postgresql/data/base/{oid}");
+
+            using var process = Process.Start(psi)!;
+            var output = process.StandardOutput.ReadToEnd().Trim();
+            process.WaitForExit();
+            
+            long bytes = long.Parse(output.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries)[0]);
             Export(dataset, "postgres", bytes);
         }
 
@@ -29,14 +48,13 @@ namespace benchmark_scr.monitoring {
             psi.ArgumentList.Add("neo4j_db");
             psi.ArgumentList.Add("du");
             psi.ArgumentList.Add("-sb");
-            psi.ArgumentList.Add("/data/databases/benchmarkdb");
+            psi.ArgumentList.Add("/data/databases/benchmarkdb"); 
 
             using var process = Process.Start(psi)!;
             var output = process.StandardOutput.ReadToEnd().Trim();
             process.WaitForExit();
 
-            // format: "123456\t/data/databases/benchmarkdb"
-            long bytes = long.Parse(output.Split('\t')[0]);
+            long bytes = long.Parse(output.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries)[0]);
             Export(dataset, "neo4j", bytes);
         }
 

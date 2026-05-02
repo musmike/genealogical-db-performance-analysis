@@ -58,8 +58,18 @@ services:
     networks:
       - benchmark_net
 
-    cpuset: "0-3"
+    cpuset: "0-7"
     mem_limit: 8g
+
+    # If memswap_limit is set to the same value as memory, 
+    # and memory is set to a positive integer, the container does not have access to swap.
+    memswap_limit: 8g
+
+    # Increase file descriptor limit to avoid "too many open files" errors
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
 
 
   neo4j:
@@ -74,17 +84,17 @@ services:
       NEO4J_server_metrics_enabled: "false"
       NEO4J_server_cypher_parallel_worker__limit: "-100"
 
-      # Heap initial and max set equal to avoid JVM heap resize overhead during execution.
-      NEO4J_server_memory_heap_initial__size: 2G
-      NEO4J_server_memory_heap_max__size: 2G
 
-      # Set transaction memory limit to 4GB to allow larger transactions if needed during benchmarks
-      NEO4J_dbms_memory_transaction_total_max: 4G
+      # --- Memory configuration based on Neo4j memory recommendation tool output ---
+
+      # Heap initial and max set equal to avoid JVM heap resize overhead during execution.
+      NEO4J_server_memory_heap_initial__size: 3600m
+      NEO4J_server_memory_heap_max__size: 3600m
 
       # Page cache is the primary data cache for nodes, relationships, and properties.
-      # Set to 4GB to fit within the 8GB container memory limit alongside the heap (2GB)
-      # and JVM/OS overhead (~2GB).
-      NEO4J_server_memory_pagecache_size: 4G
+      # Set to 2GB to fit within the 8GB container memory limit alongside the heap and JVM/OS overhead.
+      NEO4J_server_memory_pagecache_size: 2g
+
 
       # Disable query execution logging to eliminate log I/O overhead during benchmarks.
       NEO4J_db_logs_query_enabled: "OFF"
@@ -104,8 +114,18 @@ services:
     networks:
       - benchmark_net
 
-    cpuset: "4-7"
+    cpuset: "0-7"
     mem_limit: 8g
+
+    # If memswap_limit is set to the same value as memory, 
+    # and memory is set to a positive integer, the container does not have access to swap.
+    memswap_limit: 8g
+
+    # Increase file descriptor limit to avoid "too many open files" errors
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
 
 
 networks:

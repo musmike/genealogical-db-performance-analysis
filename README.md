@@ -8,13 +8,13 @@ The benchmarks were conducted using the following hardware and software stack. T
 
 | Category | Component | Specification |
 | :--- | :--- | :--- |
-| **Hardware** | **CPU** | Intel® Core™ i7-10700K, 3.8 GHz, up to 5.10 GHz, 16M Cache |
+| **Hardware** | **CPU** | Intel Core i7-10700K, 3.8 GHz, up to 5.10 GHz, 16M Cache |
 | | **RAM** | Kingston FURY 32GB (2x16GB) 3600MHz CL16 |
 | | **Storage** | Samsung 1TB M.2 PCIe NVMe 970 EVO Plus |
 | **System** | **OS** | Ubuntu Server 24.04.04 LTS (minimized) |
 | | **Kernel** | Linux 6.8.0-111-generic |
 | **Docker** | **Engine** | 29.3.0 |
-| | **Container Limits** | 8 GB RAM, 4 CPU Cores (dedicated per database instance) |
+| | **Container Limits** | 8 GB RAM, 8 CPUs (shared, one database active at a time) |
 | **Software** | **PostgreSQL** | 17.9 |
 | | **Neo4j** | 5.26.23-enterprise (LTS) |
 | | **.NET SDK** | 9.0.115 |
