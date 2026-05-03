@@ -5,6 +5,9 @@ using BenchmarkDotNet.Exporters.Csv;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
+using BenchmarkDotNet.Columns;
+using Perfolizer.Mathematics.OutlierDetection;
+
 
 
 var datasetArg = args.FirstOrDefault();
@@ -52,11 +55,15 @@ static IConfig PostgresConfig(Dataset dataset) {
         .AddJob(Job.Default
             .WithId($"pg-{dataset}")
             .WithWarmupCount(10)
-            .WithIterationCount(30))
+            .WithIterationCount(30)
+            .WithOutlierMode(OutlierMode.DontRemove))
         .AddLogger(ConsoleLogger.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithOptions(ConfigOptions.Default)
-        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "postgres"));
+        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "postgres"))
+        .AddColumn(StatisticColumn.Median)
+        .AddColumn(StatisticColumn.P95)
+        .AddColumn(StatisticColumn.Max);
 }
 
 static IConfig Neo4jConfig(Dataset dataset)
@@ -65,23 +72,31 @@ static IConfig Neo4jConfig(Dataset dataset)
         .AddJob(Job.Default
             .WithId($"neo4j-{dataset}")
             .WithWarmupCount(10)
-            .WithIterationCount(30))
+            .WithIterationCount(30)
+            .WithOutlierMode(OutlierMode.DontRemove))
         .AddLogger(ConsoleLogger.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithOptions(ConfigOptions.Default)
-        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j"));
+        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j"))
+        .AddColumn(StatisticColumn.Median)
+        .AddColumn(StatisticColumn.P95)
+        .AddColumn(StatisticColumn.Max);
 }
 
 static IConfig PostgresImportConfig(Dataset dataset) {
     return DefaultConfig.Instance
         .AddJob(Job.Default
             .WithId($"pg-{dataset}-import")
-            .WithWarmupCount(2).
-            WithIterationCount(10))
+            .WithWarmupCount(2)
+            .WithIterationCount(10)
+            .WithOutlierMode(OutlierMode.DontRemove))
         .AddLogger(ConsoleLogger.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithOptions(ConfigOptions.Default)
-        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "postgres"));
+        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "postgres"))
+        .AddColumn(StatisticColumn.Median)
+        .AddColumn(StatisticColumn.P95)
+        .AddColumn(StatisticColumn.Max);
 }
 
 static IConfig Neo4jImportConfig(Dataset dataset)
@@ -90,11 +105,15 @@ static IConfig Neo4jImportConfig(Dataset dataset)
         .AddJob(Job.Default
             .WithId($"neo4j-{dataset}-import")
             .WithWarmupCount(2)
-            .WithIterationCount(10))
+            .WithIterationCount(10)
+            .WithOutlierMode(OutlierMode.DontRemove))
         .AddLogger(ConsoleLogger.Default)
         .AddExporter(CsvMeasurementsExporter.Default)
         .WithOptions(ConfigOptions.Default)
-        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j"));
+        .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j"))
+        .AddColumn(StatisticColumn.Median)
+        .AddColumn(StatisticColumn.P95)
+        .AddColumn(StatisticColumn.Max);
 }
 
 

@@ -110,17 +110,16 @@ done
 
 # ==============================================================
 # Ensure CPU governor is set to performance after every reboot
-# and disable Intel Turbo Boost to prevent thermal throttling jitter
 # ==============================================================
 echo -e "\n=== Creating systemd service for CPU performance governor ==="
 sudo tee /etc/systemd/system/perf-cpu.service > /dev/null <<'EOF'
 [Unit]
-Description=Set CPU governor to performance and disable Turbo Boost
+Description=Set CPU governor to performance
 After=multi-user.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c 'for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo performance | tee $cpu; done; if [ -f /sys/devices/system/cpu/intel_pstate/no_turbo ]; then echo 1 | tee /sys/devices/system/cpu/intel_pstate/no_turbo; fi'
+ExecStart=/bin/bash -c 'for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo performance | tee $cpu; done'
 
 [Install]
 WantedBy=multi-user.target
@@ -222,6 +221,7 @@ cd ..
 # ==============================================================
 
 echo -e "\n=== Starting Docker Compose services ==="
+sudo docker compose -f benchmark_scr/db_setup/docker-compose.yml down -v
 sudo docker compose -f benchmark_scr/db_setup/docker-compose.yml up -d
 
 echo "Docker services prepared. Check status with: sudo docker ps"

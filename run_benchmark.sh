@@ -47,7 +47,7 @@ for size in "${DATASETS[@]}"; do
     rm -rf "$REPO_ROOT/results/$FOLDER_NAME"
 
     echo ">>> Testing dataset: $size <<<"
-    "./$BASE_DIR/benchmark_scr" "$size"
+    nice -n -10 "./$BASE_DIR/benchmark_scr" "$size"
 done
 
 cd "$REPO_ROOT"
