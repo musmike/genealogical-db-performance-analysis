@@ -34,6 +34,7 @@ namespace benchmark_scr.benchmark.queries {
 
             driver.Open();
             monitor = new MemoryMonitor(env, nameof(Ps09));
+            monitor.SetPhase(BenchmarkPhase.GlobalSetup);
             monitor.Start();
             
             expectedCount = repo.ExpectedCounts.GetValueOrDefault("Pg09", -1);
@@ -51,13 +52,16 @@ namespace benchmark_scr.benchmark.queries {
         
         [IterationSetup]
         public void _Ps09Setup() {
+            monitor.NextIteration();
+            monitor.SetPhase(BenchmarkPhase.IterationSetup);
+            
             driver.ExecuteNonQuery(repo.PgScenario8);
             
             driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
             driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
             driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
             
-            monitor.NextIteration();
+            monitor.SetPhase(BenchmarkPhase.Measurement);
         }
         
         [Benchmark]
@@ -75,6 +79,8 @@ namespace benchmark_scr.benchmark.queries {
         
         [IterationCleanup]
         public void IterationCleanup() {
+            monitor.SetPhase(BenchmarkPhase.IterationCleanup);
+            
             driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
             driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
             driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
@@ -84,6 +90,8 @@ namespace benchmark_scr.benchmark.queries {
         
         [GlobalCleanup]
         public void Cleanup() {
+            monitor.SetPhase(BenchmarkPhase.GlobalCleanup);
+            
             monitor.Dispose();
             monitor.Export();
             

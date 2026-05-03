@@ -2,12 +2,20 @@
 using Neo4j.Driver;
 
 namespace benchmark_scr.monitoring {
-
+    public enum BenchmarkPhase {
+        GlobalSetup = 0,
+        IterationSetup = 1,
+        Measurement = 2,
+        IterationCleanup = 3,
+        GlobalCleanup = 4
+    }
+    
     internal class MemoryMonitor : IDisposable {
         private struct HeapSample {
             public long Value;
             public long Timestamp;
             public int Iteration;
+            public int Phase;
         }
 
         private readonly string _postgresPath;
@@ -17,6 +25,7 @@ namespace benchmark_scr.monitoring {
         private readonly long[] _n4jBuffer = new long[200_000];
         private readonly long[] _timestamps = new long[200_000];
         private readonly int[] _iterationBuffer = new int[200_000];
+        private readonly int[] _phaseBuffer = new int[200_000];
         private int _index;
         private readonly object _lock = new();
         
@@ -24,8 +33,9 @@ namespace benchmark_scr.monitoring {
         private int _heapIndex;
 
         private int _currentIteration;
+        private int _currentPhase;
         private Timer? _timer;
-        private IDriver? _jmxDriver;
+        private IDriver _neo4jDriver = null!;
         
         private readonly bool _isNeo4j;
         private readonly string _dataset;
@@ -48,16 +58,21 @@ namespace benchmark_scr.monitoring {
         public void NextIteration() {
             Interlocked.Increment(ref _currentIteration);
         }
+        
+        public void SetPhase(BenchmarkPhase phase) {
+            Volatile.Write(ref _currentPhase, (int)phase); 
+        }
 
         public void Start() {
             _pgMemStream = OpenCgroupFile(_postgresPath);
             _n4jMemStream = OpenCgroupFile(_n4jPath);
             
-            _jmxDriver = GraphDatabase.Driver(
-                "bolt://localhost:7687",
-                AuthTokens.Basic("neo4j", "password")
-            );
-            
+            if (_isNeo4j) {
+                _neo4jDriver = GraphDatabase.Driver(
+                    "bolt://localhost:7687", AuthTokens.Basic("neo4j", "password")
+                );
+            }
+
             _timer = new Timer(_ => Sample(), null, 0, 30);
         }
 
@@ -77,13 +92,14 @@ namespace benchmark_scr.monitoring {
                 _n4jBuffer[_index] = ReadMem(_n4jMemStream, _n4jByteBuffer);
                 _timestamps[_index] = DateTime.UtcNow.Ticks;
                 _iterationBuffer[_index] = Volatile.Read(ref _currentIteration);
+                _phaseBuffer[_index] = Volatile.Read(ref _currentPhase);
 
                 _index++;
             }
         }
         
         private async Task<long> ReadNeo4jHeapAsync() {
-            await using var session = _jmxDriver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
+            await using var session = _neo4jDriver.AsyncSession(o => o.WithDatabase("benchmarkdb"));
             var result = await session.RunAsync(@"
             CALL dbms.queryJmx('java.lang:type=Memory')
             YIELD attributes
@@ -94,11 +110,12 @@ namespace benchmark_scr.monitoring {
         }
         
         public void RecordNeo4jHeap() {
-            if (!_isNeo4j || _jmxDriver == null) return;
+            if (!_isNeo4j || _neo4jDriver == null) return;
             try {
                 long heap = ReadNeo4jHeapAsync().GetAwaiter().GetResult();
                 long timestamp = DateTime.UtcNow.Ticks;
                 int iteration = Volatile.Read(ref _currentIteration);
+                int phase = Volatile.Read(ref _currentPhase);
                 
                 int idx = Interlocked.Increment(ref _heapIndex) - 1;
                 
@@ -107,7 +124,8 @@ namespace benchmark_scr.monitoring {
                 _heapSamples[idx] = new HeapSample {
                     Value = heap,
                     Timestamp = timestamp,
-                    Iteration = iteration
+                    Iteration = iteration,
+                    Phase = phase
                 };
             }
             catch { }
@@ -155,21 +173,23 @@ namespace benchmark_scr.monitoring {
             
             var memPath = Path.Combine(dirPath, $"memory_{_benchmarkName}.csv");
             using (var w = new StreamWriter(memPath)) {
-                w.WriteLine("iteration,timestamp,postgres_bytes,neo4j_bytes");
+                w.WriteLine("iteration,timestamp,phase,postgres_bytes,neo4j_bytes");
                 for (int i = 0; i < _index; i++) {
-                    w.WriteLine($"{_iterationBuffer[i]},{_timestamps[i]},{_pgBuffer[i]},{_n4jBuffer[i]}");
+                    string phaseName = ((BenchmarkPhase)_phaseBuffer[i]).ToString();
+                    w.WriteLine($"{_iterationBuffer[i]},{_timestamps[i]},{phaseName},{_pgBuffer[i]},{_n4jBuffer[i]}");
                 }
             }
             
             if (_isNeo4j && _heapIndex > 0) {
                 var heapPath = Path.Combine(dirPath, $"heap_{_benchmarkName}.csv");
                 using (var w = new StreamWriter(heapPath)) {
-                    w.WriteLine("iteration,timestamp,neo4j_heap_bytes");
+                    w.WriteLine("iteration,timestamp,phase,neo4j_heap_bytes");
                     
                     int count = Math.Min(_heapIndex, _heapSamples.Length);
                     for (int i = 0; i < count; i++) {
                         var s = _heapSamples[i];
-                        w.WriteLine($"{s.Iteration},{s.Timestamp},{s.Value}");
+                        string phaseName = ((BenchmarkPhase)s.Phase).ToString();
+                        w.WriteLine($"{s.Iteration},{s.Timestamp},{phaseName},{s.Value}");
                     }
                 }
             }
@@ -179,7 +199,7 @@ namespace benchmark_scr.monitoring {
             _timer?.Dispose();
             _pgMemStream?.Dispose();
             _n4jMemStream?.Dispose();
-            _jmxDriver?.Dispose();
+            if (_isNeo4j) _neo4jDriver.Dispose();
         }
     }
 }

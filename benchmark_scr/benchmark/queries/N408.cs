@@ -33,6 +33,7 @@ namespace benchmark_scr.benchmark.queries {
             driver = new Neo4jDriver("bolt://localhost:7687", "neo4j", "password");
             monitor = new MemoryMonitor(env, nameof(N408));
                         
+            monitor.SetPhase(BenchmarkPhase.GlobalSetup);
             monitor.Start();
             monitor.RecordNeo4jHeap();
             
@@ -50,6 +51,9 @@ namespace benchmark_scr.benchmark.queries {
         [IterationSetup]
         public void IterationSetup() {
             monitor.NextIteration();
+            monitor.SetPhase(BenchmarkPhase.IterationSetup);
+            
+            monitor.SetPhase(BenchmarkPhase.Measurement);
         }
         
         [Benchmark]
@@ -67,6 +71,8 @@ namespace benchmark_scr.benchmark.queries {
         
         [IterationCleanup]
         public void _N408Cleanup() {
+            monitor.SetPhase(BenchmarkPhase.IterationCleanup);
+            
             monitor.RecordNeo4jHeap(); 
             driver.ExecuteWriteCypherAsync(repo.NeoScenario9)
                 .GetAwaiter().GetResult();
@@ -75,6 +81,8 @@ namespace benchmark_scr.benchmark.queries {
         
         [GlobalCleanup]
         public void Cleanup() {
+            monitor.SetPhase(BenchmarkPhase.GlobalCleanup);
+            
             monitor.RecordNeo4jHeap();
             monitor.Dispose();
             monitor.Export();

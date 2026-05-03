@@ -206,9 +206,7 @@ namespace benchmark_scr.queries
             
             string[] requiredNeoIndexes = { 
                 "person_sex_required", "person_id_unique", 
-                "person_surname_birthdate", "idx_person_place_birthdate", 
-                "person_birthPlace", "person_deathPlace", 
-                "family_marriagePlace", "family_id_unique" 
+                "person_surname_birthdate", "idx_person_place_birthdate", "family_id_unique"
             };
             
             foreach (var idx in requiredNeoIndexes) {

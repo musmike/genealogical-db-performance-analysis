@@ -12,7 +12,7 @@ namespace benchmark_scr.monitoring {
             driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = true);");
             driver.ExecuteNonQuery("CHECKPOINT;");
             
-            long oid = driver.ExecuteScalar<long>("SELECT oid FROM pg_database WHERE datname = 'benchmarkdb';");
+            uint oid = driver.ExecuteScalar<uint>("SELECT oid FROM pg_database WHERE datname = 'benchmarkdb';");
             
             var psi = new ProcessStartInfo {
                 FileName = "docker",

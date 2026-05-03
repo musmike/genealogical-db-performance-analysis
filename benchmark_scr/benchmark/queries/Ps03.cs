@@ -36,6 +36,7 @@ namespace benchmark_scr.benchmark.queries {
 
             driver.Open();
             monitor = new MemoryMonitor(env, nameof(Ps03));
+            monitor.SetPhase(BenchmarkPhase.GlobalSetup);
             monitor.Start();
             
             scratch = new BirthStatScratch();
@@ -51,10 +52,15 @@ namespace benchmark_scr.benchmark.queries {
         [IterationSetup]
         public void IterationSetup() {
             monitor.NextIteration();
+            monitor.SetPhase(BenchmarkPhase.IterationSetup);
+            
+            monitor.SetPhase(BenchmarkPhase.Measurement);
         }
         
         [IterationCleanup]
         public void IterationCleanup() {
+            monitor.SetPhase(BenchmarkPhase.IterationCleanup);
+            
             MemoryMonitor.Stabilize();
         }
         
@@ -73,6 +79,8 @@ namespace benchmark_scr.benchmark.queries {
         
         [GlobalCleanup]
         public void Cleanup() {
+            monitor.SetPhase(BenchmarkPhase.GlobalCleanup);
+            
             monitor.Dispose();
             monitor.Export();
             driver.Dispose();

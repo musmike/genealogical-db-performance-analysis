@@ -12,16 +12,16 @@ The benchmarks were conducted using the following hardware and software stack. T
 | | **RAM** | Kingston FURY 32GB (2x16GB) 3600MHz CL16 |
 | | **Storage** | Samsung 1TB M.2 PCIe NVMe 970 EVO Plus |
 | **System** | **OS** | Ubuntu Server 24.04.04 LTS (minimized) |
-| | **Kernel** | Linux 6.8.0-111-generic |
+| | **Kernel** | Linux 6.8.0-110-generic |
 | **Docker** | **Engine** | 29.3.0 |
 | | **Container Limits** | 8 GB RAM, 8 CPUs (shared, one database active at a time) |
 | **Software** | **PostgreSQL** | 17.9 |
 | | **Neo4j** | 5.26.23-enterprise (LTS) |
-| | **.NET SDK** | 9.0.115 |
+| | **.NET SDK** | 9.0.116 |
 | | **Npgsql (C#)** | 10.0.2 |
 | | **Neo4j.Driver (C#)** | 6.0.0 |
 | | **BenchmarkDotNet (C#)** | 0.15.8 |
-| | **Python** | 3.13 |
+| | **Python** | 3.13.13 |
 | | **Matplotlib (Python)** | 3.10.1 |
 | | **Pandas (Python)** | 2.3.0 |
 | | **SciPy (Python)** | 1.15.1 |

@@ -24,7 +24,7 @@ public class Neo4jDriver : IAsyncDisposable {
     }
 
     public async ValueTask DisposeAsync() {
-        if(_driver != null)
+        if (_driver != null)
             await _driver.DisposeAsync();
     }
     

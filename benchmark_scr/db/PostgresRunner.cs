@@ -1,6 +1,6 @@
 ﻿using Npgsql;
 
-public class PostgresDriver:IDisposable {
+public class PostgresDriver : IDisposable {
     private readonly string _connectionString;
     private NpgsqlConnection _connection = null!;
 
