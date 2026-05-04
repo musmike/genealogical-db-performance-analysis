@@ -1,0 +1,212 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14/" /p:OutDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14/bin/Release/net9.0/" /p:OutputPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14/bin/Release/net9.0/" /p:PublishDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14/publish/" in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14
+// command took 1.06 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14/" /p:OutDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14/bin/Release/net9.0/" /p:OutputPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14/bin/Release/net9.0/" /p:PublishDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14/publish/" --output "/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14/bin/Release/net9.0/" in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14
+// command took 4.55 sec and exited with 0
+// ***** Done, took 00:00:05 (5.62 sec)   *****
+// Found 1 benchmarks:
+//   N403._N403: neo4j-medium(OutlierMode=DontRemove, InvocationCount=1, IterationCount=30, UnrollFactor=1, WarmupCount=10)
+
+// **************************
+// Benchmark: N403._N403: neo4j-medium(OutlierMode=DontRemove, InvocationCount=1, IterationCount=30, UnrollFactor=1, WarmupCount=10)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet benchmark_scr-neo4j-medium-14.dll --anonymousPipes 124 125 --benchmarkName benchmark_scr.benchmark.queries.N403._N403 --job neo4j-medium --benchmarkId 0 in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-neo4j-medium-14/bin/Release/net9.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: neo4j-medium(OutlierMode=DontRemove, InvocationCount=1, IterationCount=30, UnrollFactor=1, WarmupCount=10)
+
+RAW DATASET: medium
+[EnvManager] Ensuring postgres_db is stopped...
+[EnvManager] Ensuring neo4j_db is running...
+[EnvManager] Waiting for Neo4j to become ready (this may take several seconds)...
+[EnvManager] Neo4j environment ready.
+OverheadJitting  1: 1 op, 160186.00 ns, 160.1860 us/op
+WorkloadJitting  1: 1 op, 46762233.00 ns, 46.7622 ms/op
+
+OverheadWarmup   1: 1 op, 473.00 ns, 473.0000 ns/op
+OverheadWarmup   2: 1 op, 214.00 ns, 214.0000 ns/op
+OverheadWarmup   3: 1 op, 214.00 ns, 214.0000 ns/op
+OverheadWarmup   4: 1 op, 172.00 ns, 172.0000 ns/op
+OverheadWarmup   5: 1 op, 190.00 ns, 190.0000 ns/op
+OverheadWarmup   6: 1 op, 167.00 ns, 167.0000 ns/op
+
+OverheadActual   1: 1 op, 242.00 ns, 242.0000 ns/op
+OverheadActual   2: 1 op, 268.00 ns, 268.0000 ns/op
+OverheadActual   3: 1 op, 234.00 ns, 234.0000 ns/op
+OverheadActual   4: 1 op, 212.00 ns, 212.0000 ns/op
+OverheadActual   5: 1 op, 182.00 ns, 182.0000 ns/op
+OverheadActual   6: 1 op, 177.00 ns, 177.0000 ns/op
+OverheadActual   7: 1 op, 205.00 ns, 205.0000 ns/op
+OverheadActual   8: 1 op, 197.00 ns, 197.0000 ns/op
+OverheadActual   9: 1 op, 207.00 ns, 207.0000 ns/op
+OverheadActual  10: 1 op, 188.00 ns, 188.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 181.00 ns, 181.0000 ns/op
+OverheadActual  13: 1 op, 142.00 ns, 142.0000 ns/op
+OverheadActual  14: 1 op, 194.00 ns, 194.0000 ns/op
+OverheadActual  15: 1 op, 195.00 ns, 195.0000 ns/op
+OverheadActual  16: 1 op, 182.00 ns, 182.0000 ns/op
+OverheadActual  17: 1 op, 198.00 ns, 198.0000 ns/op
+OverheadActual  18: 1 op, 211.00 ns, 211.0000 ns/op
+OverheadActual  19: 1 op, 183.00 ns, 183.0000 ns/op
+OverheadActual  20: 1 op, 213.00 ns, 213.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 19902073.00 ns, 19.9021 ms/op
+WorkloadWarmup   2: 1 op, 19562513.00 ns, 19.5625 ms/op
+WorkloadWarmup   3: 1 op, 15735545.00 ns, 15.7355 ms/op
+WorkloadWarmup   4: 1 op, 15619594.00 ns, 15.6196 ms/op
+WorkloadWarmup   5: 1 op, 12309351.00 ns, 12.3094 ms/op
+WorkloadWarmup   6: 1 op, 10727618.00 ns, 10.7276 ms/op
+WorkloadWarmup   7: 1 op, 10508746.00 ns, 10.5087 ms/op
+WorkloadWarmup   8: 1 op, 10645657.00 ns, 10.6457 ms/op
+WorkloadWarmup   9: 1 op, 22675744.00 ns, 22.6757 ms/op
+WorkloadWarmup  10: 1 op, 14147722.00 ns, 14.1477 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 13419295.00 ns, 13.4193 ms/op
+WorkloadActual   2: 1 op, 12553308.00 ns, 12.5533 ms/op
+WorkloadActual   3: 1 op, 12744486.00 ns, 12.7445 ms/op
+WorkloadActual   4: 1 op, 12207216.00 ns, 12.2072 ms/op
+WorkloadActual   5: 1 op, 10874451.00 ns, 10.8745 ms/op
+WorkloadActual   6: 1 op, 10056589.00 ns, 10.0566 ms/op
+WorkloadActual   7: 1 op, 10224212.00 ns, 10.2242 ms/op
+WorkloadActual   8: 1 op, 10018398.00 ns, 10.0184 ms/op
+WorkloadActual   9: 1 op, 9885950.00 ns, 9.8860 ms/op
+WorkloadActual  10: 1 op, 10285822.00 ns, 10.2858 ms/op
+WorkloadActual  11: 1 op, 9434234.00 ns, 9.4342 ms/op
+WorkloadActual  12: 1 op, 9093593.00 ns, 9.0936 ms/op
+WorkloadActual  13: 1 op, 9044145.00 ns, 9.0441 ms/op
+WorkloadActual  14: 1 op, 8820390.00 ns, 8.8204 ms/op
+WorkloadActual  15: 1 op, 9210722.00 ns, 9.2107 ms/op
+WorkloadActual  16: 1 op, 8863292.00 ns, 8.8633 ms/op
+WorkloadActual  17: 1 op, 8783441.00 ns, 8.7834 ms/op
+WorkloadActual  18: 1 op, 8225547.00 ns, 8.2255 ms/op
+WorkloadActual  19: 1 op, 8440019.00 ns, 8.4400 ms/op
+WorkloadActual  20: 1 op, 8753750.00 ns, 8.7538 ms/op
+WorkloadActual  21: 1 op, 8628813.00 ns, 8.6288 ms/op
+WorkloadActual  22: 1 op, 8504539.00 ns, 8.5045 ms/op
+WorkloadActual  23: 1 op, 8687971.00 ns, 8.6880 ms/op
+WorkloadActual  24: 1 op, 8828707.00 ns, 8.8287 ms/op
+WorkloadActual  25: 1 op, 8871160.00 ns, 8.8712 ms/op
+WorkloadActual  26: 1 op, 8694686.00 ns, 8.6947 ms/op
+WorkloadActual  27: 1 op, 8641918.00 ns, 8.6419 ms/op
+WorkloadActual  28: 1 op, 8551923.00 ns, 8.5519 ms/op
+WorkloadActual  29: 1 op, 8942800.00 ns, 8.9428 ms/op
+WorkloadActual  30: 1 op, 8776429.00 ns, 8.7764 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 13419097.50 ns, 13.4191 ms/op
+WorkloadResult   2: 1 op, 12553110.50 ns, 12.5531 ms/op
+WorkloadResult   3: 1 op, 12744288.50 ns, 12.7443 ms/op
+WorkloadResult   4: 1 op, 12207018.50 ns, 12.2070 ms/op
+WorkloadResult   5: 1 op, 10874253.50 ns, 10.8743 ms/op
+WorkloadResult   6: 1 op, 10056391.50 ns, 10.0564 ms/op
+WorkloadResult   7: 1 op, 10224014.50 ns, 10.2240 ms/op
+WorkloadResult   8: 1 op, 10018200.50 ns, 10.0182 ms/op
+WorkloadResult   9: 1 op, 9885752.50 ns, 9.8858 ms/op
+WorkloadResult  10: 1 op, 10285624.50 ns, 10.2856 ms/op
+WorkloadResult  11: 1 op, 9434036.50 ns, 9.4340 ms/op
+WorkloadResult  12: 1 op, 9093395.50 ns, 9.0934 ms/op
+WorkloadResult  13: 1 op, 9043947.50 ns, 9.0439 ms/op
+WorkloadResult  14: 1 op, 8820192.50 ns, 8.8202 ms/op
+WorkloadResult  15: 1 op, 9210524.50 ns, 9.2105 ms/op
+WorkloadResult  16: 1 op, 8863094.50 ns, 8.8631 ms/op
+WorkloadResult  17: 1 op, 8783243.50 ns, 8.7832 ms/op
+WorkloadResult  18: 1 op, 8225349.50 ns, 8.2253 ms/op
+WorkloadResult  19: 1 op, 8439821.50 ns, 8.4398 ms/op
+WorkloadResult  20: 1 op, 8753552.50 ns, 8.7536 ms/op
+WorkloadResult  21: 1 op, 8628615.50 ns, 8.6286 ms/op
+WorkloadResult  22: 1 op, 8504341.50 ns, 8.5043 ms/op
+WorkloadResult  23: 1 op, 8687773.50 ns, 8.6878 ms/op
+WorkloadResult  24: 1 op, 8828509.50 ns, 8.8285 ms/op
+WorkloadResult  25: 1 op, 8870962.50 ns, 8.8710 ms/op
+WorkloadResult  26: 1 op, 8694488.50 ns, 8.6945 ms/op
+WorkloadResult  27: 1 op, 8641720.50 ns, 8.6417 ms/op
+WorkloadResult  28: 1 op, 8551725.50 ns, 8.5517 ms/op
+WorkloadResult  29: 1 op, 8942602.50 ns, 8.9426 ms/op
+WorkloadResult  30: 1 op, 8776231.50 ns, 8.7762 ms/op
+
+// AfterAll
+// Benchmark Process 80441 has exited with code 0.
+
+Mean = 9.602 ms, StdErr = 0.257 ms (2.68%), N = 30, StdDev = 1.408 ms
+Min = 8.225 ms, Q1 = 8.709 ms, Median = 8.907 ms, Q3 = 10.047 ms, Max = 13.419 ms
+IQR = 1.338 ms, LowerFence = 6.703 ms, UpperFence = 12.053 ms
+ConfidenceInterval = [8.661 ms; 10.543 ms] (CI 99.9%), Margin = 0.941 ms (9.80% of Mean)
+Skewness = 1.42, Kurtosis = 3.81, MValue = 2.38
+
+// ** Remained 0 (0.0 %) benchmark(s) to run. Estimated finish 2026-05-04 19:24 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  home/musmike/genealogical-db-performance-analysis/results/medium/neo4j/results/benchmark_scr.benchmark.queries.N403-report.csv
+  home/musmike/genealogical-db-performance-analysis/results/medium/neo4j/results/benchmark_scr.benchmark.queries.N403-report-github.md
+  home/musmike/genealogical-db-performance-analysis/results/medium/neo4j/results/benchmark_scr.benchmark.queries.N403-report.html
+  home/musmike/genealogical-db-performance-analysis/results/medium/neo4j/results/benchmark_scr.benchmark.queries.N403-measurements.csv
+
+// * Detailed results *
+N403._N403: neo4j-medium(OutlierMode=DontRemove, InvocationCount=1, IterationCount=30, UnrollFactor=1, WarmupCount=10)
+Runtime = .NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 9.602 ms, StdErr = 0.257 ms (2.68%), N = 30, StdDev = 1.408 ms
+Min = 8.225 ms, Q1 = 8.709 ms, Median = 8.907 ms, Q3 = 10.047 ms, Max = 13.419 ms
+IQR = 1.338 ms, LowerFence = 6.703 ms, UpperFence = 12.053 ms
+ConfidenceInterval = [8.661 ms; 10.543 ms] (CI 99.9%), Margin = 0.941 ms (9.80% of Mean)
+Skewness = 1.42, Kurtosis = 3.81, MValue = 2.38
+-------------------- Histogram --------------------
+[ 8.123 ms ;  9.313 ms) | @@@@@@@@@@@@@@@@@@@
+[ 9.313 ms ; 10.455 ms) | @@@@@@
+[10.455 ms ; 11.881 ms) | @
+[11.881 ms ; 13.070 ms) | @@@
+[13.070 ms ; 14.014 ms) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, Linux Ubuntu 24.04.4 LTS (Noble Numbat)
+Intel Core i7-10700K CPU 3.80GHz (Max: 0.80GHz), 1 CPU, 16 logical and 8 physical cores
+.NET SDK 9.0.116
+  [Host]       : .NET 9.0.15 (9.0.15), X64 RyuJIT x86-64-v3
+  neo4j-medium : .NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3
+
+Job=neo4j-medium  OutlierMode=DontRemove  InvocationCount=1  
+IterationCount=30  UnrollFactor=1  WarmupCount=10  
+
+| Method | Mean     | Error     | StdDev   | Median   | Q1       | Q3       | Max      | Min      | P95      |
+|------- |---------:|----------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
+| _N403  | 9.602 ms | 0.9408 ms | 1.408 ms | 8.907 ms | 8.709 ms | 10.05 ms | 13.42 ms | 8.225 ms | 12.66 ms |
+
+// * Warnings *
+MinIterationTime
+  N403._N403: neo4j-medium -> The minimum observed iteration time is 8.226ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Hints *
+Outliers
+  N403._N403: neo4j-medium -> 4 outliers were detected (12.21 ms..13.42 ms)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Median : Value separating the higher half of all measurements (50th percentile)
+  Q1     : Quartile 1 (25th percentile)
+  Q3     : Quartile 3 (75th percentile)
+  Max    : Maximum
+  Min    : Minimum
+  P95    : Percentile 95
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:01:26 (86.3 sec), executed benchmarks: 1
+
+Global total time: 00:01:31 (91.92 sec), executed benchmarks: 1
+// * Artifacts cleanup *
+Artifacts cleanup is finished

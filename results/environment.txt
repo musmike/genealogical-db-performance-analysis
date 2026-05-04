@@ -1,6 +1,6 @@
 ==================================================
  BENCHMARK ENVIRONMENT SNAPSHOT
- Generated: 2026-05-04 17:00:56 UTC
+ Generated: 2026-05-04 20:17:31 UTC
 ==================================================
 
 --- Operating System ---
@@ -12,22 +12,22 @@ Architecture: x86_64
 Model: Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz
 Logical cores: 16
 Frequency per core (MHz):
-  cpu0: 4710 MHz
-  cpu1: 4794 MHz
-  cpu10: 4741 MHz
-  cpu11: 4744 MHz
-  cpu12: 800 MHz
-  cpu13: 4747 MHz
-  cpu14: 4745 MHz
-  cpu15: 800 MHz
-  cpu2: 4748 MHz
-  cpu3: 4798 MHz
-  cpu4: 4734 MHz
-  cpu5: 4808 MHz
-  cpu6: 4828 MHz
-  cpu7: 4808 MHz
-  cpu8: 4762 MHz
-  cpu9: 4705 MHz
+  cpu0: 4701 MHz
+  cpu1: 4699 MHz
+  cpu10: 4713 MHz
+  cpu11: 4699 MHz
+  cpu12: 4700 MHz
+  cpu13: 4699 MHz
+  cpu14: 4699 MHz
+  cpu15: 4690 MHz
+  cpu2: 4711 MHz
+  cpu3: 4700 MHz
+  cpu4: 4700 MHz
+  cpu5: 4700 MHz
+  cpu6: 4701 MHz
+  cpu7: 4700 MHz
+  cpu8: 4704 MHz
+  cpu9: 4700 MHz
 Governor: performance
 Max frequency (cpu0): 5100 MHz
 Turbo Boost / Core Performance Boost:
@@ -35,7 +35,7 @@ Turbo Boost / Core Performance Boost:
 
 --- Memory ---
 Total RAM: 31Gi
-Available at snapshot time: 26Gi
+Available at snapshot time: 25Gi
 Swap: disabled
 
 --- Storage ---
@@ -89,8 +89,8 @@ matplotlib: 3.10.1
 
 --- Docker Containers at Benchmark Time ---
 NAMES         IMAGE                      STATUS
-postgres_db   postgres:17.9              Up 54 seconds
-neo4j_db      neo4j:5.26.23-enterprise   Up 49 minutes
+postgres_db   postgres:17.9              Up 1 second
+neo4j_db      neo4j:5.26.23-enterprise   Up 26 minutes
 
 --- Docker Container Resource Limits ---
 [postgres_db]

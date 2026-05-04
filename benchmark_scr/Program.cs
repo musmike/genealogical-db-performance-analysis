@@ -63,7 +63,10 @@ static IConfig PostgresConfig(Dataset dataset) {
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "postgres"))
         .AddColumn(StatisticColumn.Median)
         .AddColumn(StatisticColumn.P95)
-        .AddColumn(StatisticColumn.Max);
+        .AddColumn(StatisticColumn.Q1)
+        .AddColumn(StatisticColumn.Q3)
+        .AddColumn(StatisticColumn.Max)
+        .AddColumn(StatisticColumn.Min);
 }
 
 static IConfig Neo4jConfig(Dataset dataset)
@@ -80,7 +83,10 @@ static IConfig Neo4jConfig(Dataset dataset)
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j"))
         .AddColumn(StatisticColumn.Median)
         .AddColumn(StatisticColumn.P95)
-        .AddColumn(StatisticColumn.Max);
+        .AddColumn(StatisticColumn.Q1)
+        .AddColumn(StatisticColumn.Q3)
+        .AddColumn(StatisticColumn.Max)
+        .AddColumn(StatisticColumn.Min);
 }
 
 static IConfig PostgresImportConfig(Dataset dataset) {
@@ -96,7 +102,10 @@ static IConfig PostgresImportConfig(Dataset dataset) {
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "postgres"))
         .AddColumn(StatisticColumn.Median)
         .AddColumn(StatisticColumn.P95)
-        .AddColumn(StatisticColumn.Max);
+        .AddColumn(StatisticColumn.Q1)
+        .AddColumn(StatisticColumn.Q3)
+        .AddColumn(StatisticColumn.Max)
+        .AddColumn(StatisticColumn.Min);
 }
 
 static IConfig Neo4jImportConfig(Dataset dataset)
@@ -113,7 +122,10 @@ static IConfig Neo4jImportConfig(Dataset dataset)
         .WithArtifactsPath(Path.Combine(Configg.repoRoot, "results", dataset.ToString(), "neo4j"))
         .AddColumn(StatisticColumn.Median)
         .AddColumn(StatisticColumn.P95)
-        .AddColumn(StatisticColumn.Max);
+        .AddColumn(StatisticColumn.Q1)
+        .AddColumn(StatisticColumn.Q3)
+        .AddColumn(StatisticColumn.Max)
+        .AddColumn(StatisticColumn.Min);
 }
 
 
