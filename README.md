@@ -15,6 +15,7 @@ The benchmarks were conducted using the following hardware and software stack. T
 | | **Kernel** | Linux 6.8.0-110-generic |
 | **Docker** | **Engine** | 29.3.0 |
 | | **Container Limits** | 8 GB RAM, 8 CPUs (shared, one database active at a time) |
+| | **Docker Compose** | 5.1.3 |
 | **Software** | **PostgreSQL** | 17.9 |
 | | **Neo4j** | 5.26.23-enterprise (LTS) |
 | | **.NET SDK** | 9.0.116 |

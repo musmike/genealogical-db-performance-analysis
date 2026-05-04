@@ -1,0 +1,103 @@
+==================================================
+ BENCHMARK ENVIRONMENT SNAPSHOT
+ Generated: 2026-05-04 17:00:56 UTC
+==================================================
+
+--- Operating System ---
+Ubuntu 24.04.4 LTS
+Kernel: 6.8.0-110-generic
+Architecture: x86_64
+
+--- CPU ---
+Model: Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz
+Logical cores: 16
+Frequency per core (MHz):
+  cpu0: 4710 MHz
+  cpu1: 4794 MHz
+  cpu10: 4741 MHz
+  cpu11: 4744 MHz
+  cpu12: 800 MHz
+  cpu13: 4747 MHz
+  cpu14: 4745 MHz
+  cpu15: 800 MHz
+  cpu2: 4748 MHz
+  cpu3: 4798 MHz
+  cpu4: 4734 MHz
+  cpu5: 4808 MHz
+  cpu6: 4828 MHz
+  cpu7: 4808 MHz
+  cpu8: 4762 MHz
+  cpu9: 4705 MHz
+Governor: performance
+Max frequency (cpu0): 5100 MHz
+Turbo Boost / Core Performance Boost:
+  Enabled (Intel)
+
+--- Memory ---
+Total RAM: 31Gi
+Available at snapshot time: 26Gi
+Swap: disabled
+
+--- Storage ---
+Block devices:
+NAME    MODEL                          SIZE ROTA TYPE
+sda     WDC WD20EZRZ-00Z               1.8T    1 disk
+sdb     CT2000BX500SSD1                1.8T    0 disk
+nvme0n1 KIOXIA-EXCERIA SSD           931.5G    0 disk
+nvme1n1 Samsung SSD 970 EVO Plus 1TB 931.5G    0 disk
+
+Mount points:
+/dev/nvme1n1p6 ext4      147G   18G  122G /
+/dev/nvme1n1p1 vfat       96M   38M   59M /boot/efi
+
+--- Kernel Settings & Background Services ---
+Transparent Huge Pages: always madvise [never]
+THP defrag: always defer defer+madvise madvise [never]
+journald: Storage=volatile
+Dirty ratio: 20% (default: 20%)
+Swappiness: 60 (default: 60)
+
+Disabled Services Status (should be 'inactive' or 'not installed'):
+  unattended-upgrades:      inactive
+  snapd:                    inactive
+  multipathd:               inactive
+  thermald:                 inactive
+  bluetooth:                inactive
+  cups:                     inactive
+  avahi-daemon:             inactive
+
+--- Software Versions ---
+.NET SDK: 9.0.116
+Python: Python 3.13.13
+Docker Engine: 29.3.0
+docker compose: 5.1.3
+PostgreSQL DB: postgres (PostgreSQL) 17.9 (Debian 17.9-1.pgdg13+1)
+Neo4j DB: Cypher-Shell 5.26.23
+
+--- C# NuGet Packages (from .csproj) ---
+BenchmarkDotNet: 0.15.8
+Neo4j.Driver: 6.0.0
+Npgsql: 10.0.2
+
+--- Python Packages (analysis_scr venv) ---
+matplotlib: 3.10.1
+pandas: 2.3.0
+scipy: 1.15.1
+
+--- Python Packages (data_generator venv) ---
+matplotlib: 3.10.1
+
+--- Docker Containers at Benchmark Time ---
+NAMES         IMAGE                      STATUS
+postgres_db   postgres:17.9              Up 54 seconds
+neo4j_db      neo4j:5.26.23-enterprise   Up 49 minutes
+
+--- Docker Container Resource Limits ---
+[postgres_db]
+  Memory limit: 8 GB
+  Memory+swap limit: 8 GB (Swap DISABLED explicitly)
+  CPUset: 0-7
+[neo4j_db]
+  Memory limit: 8 GB
+  Memory+swap limit: 8 GB (Swap DISABLED explicitly)
+  CPUset: 0-7

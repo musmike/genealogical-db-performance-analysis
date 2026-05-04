@@ -97,29 +97,22 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now disable-thp.service
 
 
-
 # ==============================================================
-# CPU governor — set to performance mode
-# Prevents dynamic frequency scaling from causing jitter in benchmark results
+# Ensure CPU governor is set to performance and Turbo Boost is ENABLED
+# after every reboot. Prevents frequency drops during benchmarks.
 # ==============================================================
-echo -e "\n=== Setting CPU governor to performance ==="
-
-for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do
-    echo performance | sudo tee "$cpu"
-done
-
-# ==============================================================
-# Ensure CPU governor is set to performance after every reboot
-# ==============================================================
-echo -e "\n=== Creating systemd service for CPU performance governor ==="
+echo -e "\n=== Creating systemd service for CPU performance & Turbo Boost ==="
 sudo tee /etc/systemd/system/perf-cpu.service > /dev/null <<'EOF'
 [Unit]
-Description=Set CPU governor to performance
+Description=Set CPU governor to performance and enable Turbo Boost
 After=multi-user.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c 'for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo performance | tee $cpu; done'
+ExecStart=/bin/bash -c '\
+  for cpu in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo performance > $cpu 2>/dev/null || true; done; \
+  if [ -f /sys/devices/system/cpu/intel_pstate/no_turbo ]; then echo 0 > /sys/devices/system/cpu/intel_pstate/no_turbo 2>/dev/null || true; fi; \
+  if [ -f /sys/devices/system/cpu/cpufreq/boost ]; then echo 1 > /sys/devices/system/cpu/cpufreq/boost 2>/dev/null || true; fi'
 
 [Install]
 WantedBy=multi-user.target
