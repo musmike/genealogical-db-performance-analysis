@@ -9,7 +9,7 @@ namespace benchmark_scr.benchmark.queries {
         private readonly string path;
         private MemoryMonitor monitor = null!;
         private int expectedAffected;
-        private List<string> statements = null!;
+        private List<string> sc8_statements = null!;
 
         public N408() {
             path = Configg.basePath;
@@ -37,7 +37,7 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
             monitor.RecordNeo4jHeap();
             
-            statements = Neo4jDriver.SplitCypherStatements(repo.NeoScenario8);
+            sc8_statements = Neo4jDriver.SplitCypherStatements(repo.NeoScenario8);
             
             expectedAffected = repo.ExpectedCounts.GetValueOrDefault("Neo08", -1);
             
@@ -52,13 +52,16 @@ namespace benchmark_scr.benchmark.queries {
         public void IterationSetup() {
             monitor.NextIteration();
             monitor.SetPhase(BenchmarkPhase.IterationSetup);
+
+            driver.ExecuteWriteCypherAsync("RETURN 1;")
+                .GetAwaiter().GetResult();
             
             monitor.SetPhase(BenchmarkPhase.Measurement);
         }
         
         [Benchmark]
         public async Task<int> _N408() {
-            int objsCount = await driver.ExecuteWriteStatementsAsync(statements);
+            int objsCount = await driver.ExecuteWriteStatementsAsync(sc8_statements);
             
             if (objsCount != expectedAffected) {
                 throw new InvalidOperationException(
@@ -80,13 +83,13 @@ namespace benchmark_scr.benchmark.queries {
         }
         
         [GlobalCleanup]
-        public void Cleanup() {
+        public async Task Cleanup() {
             monitor.SetPhase(BenchmarkPhase.GlobalCleanup);
             
             monitor.RecordNeo4jHeap();
             monitor.Dispose();
             monitor.Export();
-            driver.DisposeAsync().GetAwaiter().GetResult();
+            await driver.DisposeAsync();
         }
     }
 }

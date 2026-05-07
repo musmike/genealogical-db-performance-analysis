@@ -11,7 +11,7 @@ namespace benchmark_scr.benchmark.queries {
         private MemoryMonitor monitor = null!;
         private YoungestParentScratch scratch = null!;
         private int expectedCount;
-        private List<string> statements = null!;
+        private List<string> sc6_statements = null!;
 
         public N406() {
             path = Configg.basePath;
@@ -39,7 +39,7 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
             monitor.RecordNeo4jHeap();
             
-            statements = Neo4jDriver.SplitCypherStatements(repo.NeoScenario6);
+            sc6_statements = Neo4jDriver.SplitCypherStatements(repo.NeoScenario6);
 
             scratch = new YoungestParentScratch();
             expectedCount = repo.ExpectedCounts.GetValueOrDefault("Neo06", -1);
@@ -55,6 +55,9 @@ namespace benchmark_scr.benchmark.queries {
         public void IterationSetup() {
             monitor.NextIteration();
             monitor.SetPhase(BenchmarkPhase.IterationSetup);
+
+            driver.ExecuteWriteCypherAsync("RETURN 1;")
+                .GetAwaiter().GetResult();
             
             monitor.SetPhase(BenchmarkPhase.Measurement);
         }
@@ -70,7 +73,7 @@ namespace benchmark_scr.benchmark.queries {
         [Benchmark]
         public async Task<int> _N406()
         {
-            int rowsCount = await driver.ExecuteReadStatementsConsumingAsync(statements, scratch, Neo4jMappers.MapSc06);
+            int rowsCount = await driver.ExecuteReadStatementsConsumingAsync(sc6_statements, scratch, Neo4jMappers.MapSc06);
             
             if (rowsCount != expectedCount) {
                 throw new InvalidOperationException(
@@ -82,13 +85,13 @@ namespace benchmark_scr.benchmark.queries {
         }
         
         [GlobalCleanup]
-        public void Cleanup() {
+        public async Task Cleanup() {
             monitor.SetPhase(BenchmarkPhase.GlobalCleanup);
             
             monitor.RecordNeo4jHeap();
             monitor.Dispose();
             monitor.Export();
-            driver.DisposeAsync().GetAwaiter().GetResult();
+            await driver.DisposeAsync();
         }
     }
 }

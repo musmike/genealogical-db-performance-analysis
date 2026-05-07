@@ -48,16 +48,18 @@ namespace benchmark_scr.benchmark.queries {
             driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = false);");
             driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = false);");
             driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = false);");
+            
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
         }
         
         [IterationSetup]
         public void IterationSetup() {
             monitor.NextIteration();
             monitor.SetPhase(BenchmarkPhase.IterationSetup);
-            
-            driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
-            driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
-            driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
+
+            driver.ExecuteScalar<int>("SELECT 1;");
             
             monitor.SetPhase(BenchmarkPhase.Measurement);
         }

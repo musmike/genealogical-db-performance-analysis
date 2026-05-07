@@ -1,0 +1,214 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9/" /p:OutDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9/bin/Release/net9.0/" /p:OutputPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9/bin/Release/net9.0/" /p:PublishDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9/publish/" in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9
+// command took 1.08 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9/" /p:OutDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9/bin/Release/net9.0/" /p:OutputPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9/bin/Release/net9.0/" /p:PublishDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9/publish/" --output "/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9/bin/Release/net9.0/" in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9
+// command took 4.5 sec and exited with 0
+// ***** Done, took 00:00:05 (5.58 sec)   *****
+// Found 1 benchmarks:
+//   Ps08._Ps08: pg-medium(OutlierMode=DontRemove, InvocationCount=1, IterationCount=30, UnrollFactor=1, WarmupCount=10)
+
+// **************************
+// Benchmark: Ps08._Ps08: pg-medium(OutlierMode=DontRemove, InvocationCount=1, IterationCount=30, UnrollFactor=1, WarmupCount=10)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet benchmark_scr-pg-medium-9.dll --anonymousPipes 92 117 --benchmarkName benchmark_scr.benchmark.queries.Ps08._Ps08 --job pg-medium --benchmarkId 0 in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-9/bin/Release/net9.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: pg-medium(OutlierMode=DontRemove, InvocationCount=1, IterationCount=30, UnrollFactor=1, WarmupCount=10)
+
+RAW DATASET: medium
+[EnvManager] Ensuring neo4j_db is stopped...
+[EnvManager] Ensuring postgres_db is running...
+[EnvManager] Waiting for PostgreSQL to become ready...
+[EnvManager] PostgreSQL environment ready.
+OverheadJitting  1: 1 op, 165427.00 ns, 165.4270 us/op
+WorkloadJitting  1: 1 op, 7420602.00 ns, 7.4206 ms/op
+
+OverheadWarmup   1: 1 op, 281.00 ns, 281.0000 ns/op
+OverheadWarmup   2: 1 op, 206.00 ns, 206.0000 ns/op
+OverheadWarmup   3: 1 op, 219.00 ns, 219.0000 ns/op
+OverheadWarmup   4: 1 op, 236.00 ns, 236.0000 ns/op
+OverheadWarmup   5: 1 op, 243.00 ns, 243.0000 ns/op
+OverheadWarmup   6: 1 op, 227.00 ns, 227.0000 ns/op
+OverheadWarmup   7: 1 op, 227.00 ns, 227.0000 ns/op
+OverheadWarmup   8: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 225.00 ns, 225.0000 ns/op
+OverheadActual   2: 1 op, 248.00 ns, 248.0000 ns/op
+OverheadActual   3: 1 op, 210.00 ns, 210.0000 ns/op
+OverheadActual   4: 1 op, 231.00 ns, 231.0000 ns/op
+OverheadActual   5: 1 op, 234.00 ns, 234.0000 ns/op
+OverheadActual   6: 1 op, 218.00 ns, 218.0000 ns/op
+OverheadActual   7: 1 op, 209.00 ns, 209.0000 ns/op
+OverheadActual   8: 1 op, 226.00 ns, 226.0000 ns/op
+OverheadActual   9: 1 op, 229.00 ns, 229.0000 ns/op
+OverheadActual  10: 1 op, 250.00 ns, 250.0000 ns/op
+OverheadActual  11: 1 op, 245.00 ns, 245.0000 ns/op
+OverheadActual  12: 1 op, 252.00 ns, 252.0000 ns/op
+OverheadActual  13: 1 op, 230.00 ns, 230.0000 ns/op
+OverheadActual  14: 1 op, 223.00 ns, 223.0000 ns/op
+OverheadActual  15: 1 op, 184.00 ns, 184.0000 ns/op
+OverheadActual  16: 1 op, 178.00 ns, 178.0000 ns/op
+OverheadActual  17: 1 op, 169.00 ns, 169.0000 ns/op
+OverheadActual  18: 1 op, 173.00 ns, 173.0000 ns/op
+OverheadActual  19: 1 op, 191.00 ns, 191.0000 ns/op
+OverheadActual  20: 1 op, 154.00 ns, 154.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 9093743.00 ns, 9.0937 ms/op
+WorkloadWarmup   2: 1 op, 8462261.00 ns, 8.4623 ms/op
+WorkloadWarmup   3: 1 op, 8751923.00 ns, 8.7519 ms/op
+WorkloadWarmup   4: 1 op, 8579983.00 ns, 8.5800 ms/op
+WorkloadWarmup   5: 1 op, 8682202.00 ns, 8.6822 ms/op
+WorkloadWarmup   6: 1 op, 9458070.00 ns, 9.4581 ms/op
+WorkloadWarmup   7: 1 op, 8362842.00 ns, 8.3628 ms/op
+WorkloadWarmup   8: 1 op, 8554433.00 ns, 8.5544 ms/op
+WorkloadWarmup   9: 1 op, 8413188.00 ns, 8.4132 ms/op
+WorkloadWarmup  10: 1 op, 8679402.00 ns, 8.6794 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 8501381.00 ns, 8.5014 ms/op
+WorkloadActual   2: 1 op, 8649687.00 ns, 8.6497 ms/op
+WorkloadActual   3: 1 op, 8555869.00 ns, 8.5559 ms/op
+WorkloadActual   4: 1 op, 8517822.00 ns, 8.5178 ms/op
+WorkloadActual   5: 1 op, 8467568.00 ns, 8.4676 ms/op
+WorkloadActual   6: 1 op, 8348609.00 ns, 8.3486 ms/op
+WorkloadActual   7: 1 op, 8344035.00 ns, 8.3440 ms/op
+WorkloadActual   8: 1 op, 8380923.00 ns, 8.3809 ms/op
+WorkloadActual   9: 1 op, 8555363.00 ns, 8.5554 ms/op
+WorkloadActual  10: 1 op, 8423435.00 ns, 8.4234 ms/op
+WorkloadActual  11: 1 op, 8540959.00 ns, 8.5410 ms/op
+WorkloadActual  12: 1 op, 8353816.00 ns, 8.3538 ms/op
+WorkloadActual  13: 1 op, 8442140.00 ns, 8.4421 ms/op
+WorkloadActual  14: 1 op, 8384553.00 ns, 8.3846 ms/op
+WorkloadActual  15: 1 op, 8552921.00 ns, 8.5529 ms/op
+WorkloadActual  16: 1 op, 8440724.00 ns, 8.4407 ms/op
+WorkloadActual  17: 1 op, 2846486.00 ns, 2.8465 ms/op
+WorkloadActual  18: 1 op, 8576196.00 ns, 8.5762 ms/op
+WorkloadActual  19: 1 op, 8266405.00 ns, 8.2664 ms/op
+WorkloadActual  20: 1 op, 2604914.00 ns, 2.6049 ms/op
+WorkloadActual  21: 1 op, 8476686.00 ns, 8.4767 ms/op
+WorkloadActual  22: 1 op, 2556012.00 ns, 2.5560 ms/op
+WorkloadActual  23: 1 op, 2755981.00 ns, 2.7560 ms/op
+WorkloadActual  24: 1 op, 8544978.00 ns, 8.5450 ms/op
+WorkloadActual  25: 1 op, 8447862.00 ns, 8.4479 ms/op
+WorkloadActual  26: 1 op, 8455715.00 ns, 8.4557 ms/op
+WorkloadActual  27: 1 op, 8499881.00 ns, 8.4999 ms/op
+WorkloadActual  28: 1 op, 8439678.00 ns, 8.4397 ms/op
+WorkloadActual  29: 1 op, 8490282.00 ns, 8.4903 ms/op
+WorkloadActual  30: 1 op, 8369731.00 ns, 8.3697 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 8501157.00 ns, 8.5012 ms/op
+WorkloadResult   2: 1 op, 8649463.00 ns, 8.6495 ms/op
+WorkloadResult   3: 1 op, 8555645.00 ns, 8.5556 ms/op
+WorkloadResult   4: 1 op, 8517598.00 ns, 8.5176 ms/op
+WorkloadResult   5: 1 op, 8467344.00 ns, 8.4673 ms/op
+WorkloadResult   6: 1 op, 8348385.00 ns, 8.3484 ms/op
+WorkloadResult   7: 1 op, 8343811.00 ns, 8.3438 ms/op
+WorkloadResult   8: 1 op, 8380699.00 ns, 8.3807 ms/op
+WorkloadResult   9: 1 op, 8555139.00 ns, 8.5551 ms/op
+WorkloadResult  10: 1 op, 8423211.00 ns, 8.4232 ms/op
+WorkloadResult  11: 1 op, 8540735.00 ns, 8.5407 ms/op
+WorkloadResult  12: 1 op, 8353592.00 ns, 8.3536 ms/op
+WorkloadResult  13: 1 op, 8441916.00 ns, 8.4419 ms/op
+WorkloadResult  14: 1 op, 8384329.00 ns, 8.3843 ms/op
+WorkloadResult  15: 1 op, 8552697.00 ns, 8.5527 ms/op
+WorkloadResult  16: 1 op, 8440500.00 ns, 8.4405 ms/op
+WorkloadResult  17: 1 op, 2846262.00 ns, 2.8463 ms/op
+WorkloadResult  18: 1 op, 8575972.00 ns, 8.5760 ms/op
+WorkloadResult  19: 1 op, 8266181.00 ns, 8.2662 ms/op
+WorkloadResult  20: 1 op, 2604690.00 ns, 2.6047 ms/op
+WorkloadResult  21: 1 op, 8476462.00 ns, 8.4765 ms/op
+WorkloadResult  22: 1 op, 2555788.00 ns, 2.5558 ms/op
+WorkloadResult  23: 1 op, 2755757.00 ns, 2.7558 ms/op
+WorkloadResult  24: 1 op, 8544754.00 ns, 8.5448 ms/op
+WorkloadResult  25: 1 op, 8447638.00 ns, 8.4476 ms/op
+WorkloadResult  26: 1 op, 8455491.00 ns, 8.4555 ms/op
+WorkloadResult  27: 1 op, 8499657.00 ns, 8.4997 ms/op
+WorkloadResult  28: 1 op, 8439454.00 ns, 8.4395 ms/op
+WorkloadResult  29: 1 op, 8490058.00 ns, 8.4901 ms/op
+WorkloadResult  30: 1 op, 8369507.00 ns, 8.3695 ms/op
+
+// AfterAll
+// Benchmark Process 28266 has exited with code 0.
+
+Mean = 7.693 ms, StdErr = 0.365 ms (4.74%), N = 30, StdDev = 1.998 ms
+Min = 2.556 ms, Q1 = 8.358 ms, Median = 8.445 ms, Q3 = 8.513 ms, Max = 8.649 ms
+IQR = 0.156 ms, LowerFence = 8.124 ms, UpperFence = 8.747 ms
+ConfidenceInterval = [6.358 ms; 9.027 ms] (CI 99.9%), Margin = 1.335 ms (17.35% of Mean)
+Skewness = -2.05, Kurtosis = 5.28, MValue = 2
+
+// ** Remained 0 (0.0 %) benchmark(s) to run. Estimated finish 2026-05-07 17:23 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  home/musmike/genealogical-db-performance-analysis/results/medium/postgres/results/benchmark_scr.benchmark.queries.Ps08-report.csv
+  home/musmike/genealogical-db-performance-analysis/results/medium/postgres/results/benchmark_scr.benchmark.queries.Ps08-report-github.md
+  home/musmike/genealogical-db-performance-analysis/results/medium/postgres/results/benchmark_scr.benchmark.queries.Ps08-report.html
+  home/musmike/genealogical-db-performance-analysis/results/medium/postgres/results/benchmark_scr.benchmark.queries.Ps08-measurements.csv
+
+// * Detailed results *
+Ps08._Ps08: pg-medium(OutlierMode=DontRemove, InvocationCount=1, IterationCount=30, UnrollFactor=1, WarmupCount=10)
+Runtime = .NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 7.693 ms, StdErr = 0.365 ms (4.74%), N = 30, StdDev = 1.998 ms
+Min = 2.556 ms, Q1 = 8.358 ms, Median = 8.445 ms, Q3 = 8.513 ms, Max = 8.649 ms
+IQR = 0.156 ms, LowerFence = 8.124 ms, UpperFence = 8.747 ms
+ConfidenceInterval = [6.358 ms; 9.027 ms] (CI 99.9%), Margin = 1.335 ms (17.35% of Mean)
+Skewness = -2.05, Kurtosis = 5.28, MValue = 2
+-------------------- Histogram --------------------
+[1.712 ms ; 3.545 ms) | @@@@
+[3.545 ms ; 5.233 ms) | 
+[5.233 ms ; 6.920 ms) | 
+[6.920 ms ; 7.614 ms) | 
+[7.614 ms ; 9.493 ms) | @@@@@@@@@@@@@@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, Linux Ubuntu 24.04.4 LTS (Noble Numbat)
+Intel Core i7-10700K CPU 3.80GHz (Max: 0.80GHz), 1 CPU, 16 logical and 8 physical cores
+.NET SDK 9.0.116
+  [Host]    : .NET 9.0.15 (9.0.15), X64 RyuJIT x86-64-v3
+  pg-medium : .NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3
+
+Job=pg-medium  OutlierMode=DontRemove  InvocationCount=1  
+IterationCount=30  UnrollFactor=1  WarmupCount=10  
+
+| Method | Mean     | Error    | StdDev   | Median   | Q1       | Q3       | Max      | Min      | P95      |
+|------- |---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
+| _Ps08  | 7.693 ms | 1.335 ms | 1.998 ms | 8.445 ms | 8.358 ms | 8.513 ms | 8.649 ms | 2.556 ms | 8.567 ms |
+
+// * Warnings *
+MinIterationTime
+  Ps08._Ps08: pg-medium -> The minimum observed iteration time is 2.556ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Hints *
+Outliers
+  Ps08._Ps08: pg-medium -> 4 outliers were detected (2.56 ms..2.85 ms)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Median : Value separating the higher half of all measurements (50th percentile)
+  Q1     : Quartile 1 (25th percentile)
+  Q3     : Quartile 3 (75th percentile)
+  Max    : Maximum
+  Min    : Minimum
+  P95    : Percentile 95
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:01:26 (86.96 sec), executed benchmarks: 1
+
+Global total time: 00:01:32 (92.54 sec), executed benchmarks: 1
+// * Artifacts cleanup *
+Artifacts cleanup is finished

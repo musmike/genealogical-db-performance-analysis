@@ -1,6 +1,6 @@
 ==================================================
  BENCHMARK ENVIRONMENT SNAPSHOT
- Generated: 2026-05-04 20:17:31 UTC
+ Generated: 2026-05-07 18:24:09 UTC
 ==================================================
 
 --- Operating System ---
@@ -12,22 +12,22 @@ Architecture: x86_64
 Model: Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz
 Logical cores: 16
 Frequency per core (MHz):
-  cpu0: 4701 MHz
+  cpu0: 4706 MHz
   cpu1: 4699 MHz
-  cpu10: 4713 MHz
-  cpu11: 4699 MHz
-  cpu12: 4700 MHz
-  cpu13: 4699 MHz
-  cpu14: 4699 MHz
-  cpu15: 4690 MHz
-  cpu2: 4711 MHz
+  cpu10: 4700 MHz
+  cpu11: 4700 MHz
+  cpu12: 4701 MHz
+  cpu13: 4695 MHz
+  cpu14: 4701 MHz
+  cpu15: 4693 MHz
+  cpu2: 4700 MHz
   cpu3: 4700 MHz
-  cpu4: 4700 MHz
-  cpu5: 4700 MHz
-  cpu6: 4701 MHz
-  cpu7: 4700 MHz
-  cpu8: 4704 MHz
-  cpu9: 4700 MHz
+  cpu4: 4701 MHz
+  cpu5: 4699 MHz
+  cpu6: 4709 MHz
+  cpu7: 4699 MHz
+  cpu8: 4698 MHz
+  cpu9: 4699 MHz
 Governor: performance
 Max frequency (cpu0): 5100 MHz
 Turbo Boost / Core Performance Boost:
@@ -80,11 +80,13 @@ Neo4j.Driver: 6.0.0
 Npgsql: 10.0.2
 
 --- Python Packages (analysis_scr venv) ---
+pip version: pip 26.0.1 from /home/musmike/genealogical-db-performance-analysis/analysis_scr/.venv/lib/python3.13/site-packages/pip (python 3.13)
 matplotlib: 3.10.1
 pandas: 2.3.0
 scipy: 1.15.1
 
 --- Python Packages (data_generator venv) ---
+pip version: pip 26.0.1 from /home/musmike/genealogical-db-performance-analysis/data_generator/.venv/lib/python3.13/site-packages/pip (python 3.13)
 matplotlib: 3.10.1
 
 --- Docker Containers at Benchmark Time ---

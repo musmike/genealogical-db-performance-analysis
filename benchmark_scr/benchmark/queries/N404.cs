@@ -11,7 +11,7 @@ namespace benchmark_scr.benchmark.queries {
         private MemoryMonitor monitor = null!;
         private RelativeScratch scratch = null!;
         private int expectedCount;
-        private List<string> statements = null!;
+        private List<string> sc4_statements = null!;
 
         public N404() {
             path = Configg.basePath;
@@ -39,7 +39,7 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
             monitor.RecordNeo4jHeap();
             
-            statements = Neo4jDriver.SplitCypherStatements(repo.NeoScenario4);
+            sc4_statements = Neo4jDriver.SplitCypherStatements(repo.NeoScenario4);
 
             scratch = new RelativeScratch();
             expectedCount = repo.ExpectedCounts.GetValueOrDefault("Neo04", -1);
@@ -55,6 +55,9 @@ namespace benchmark_scr.benchmark.queries {
         public void IterationSetup() {
             monitor.NextIteration();
             monitor.SetPhase(BenchmarkPhase.IterationSetup);
+
+            driver.ExecuteWriteCypherAsync("RETURN 1;")
+                .GetAwaiter().GetResult();
             
             monitor.SetPhase(BenchmarkPhase.Measurement);
         }
@@ -70,7 +73,7 @@ namespace benchmark_scr.benchmark.queries {
         [Benchmark]
         public async Task<int> _N404()
         {
-            int rowsCount = await driver.ExecuteReadStatementsConsumingAsync(statements, scratch, Neo4jMappers.MapRelative);
+            int rowsCount = await driver.ExecuteReadStatementsConsumingAsync(sc4_statements, scratch, Neo4jMappers.MapRelative);
             
             if (rowsCount != expectedCount) {
                 throw new InvalidOperationException(
@@ -82,13 +85,13 @@ namespace benchmark_scr.benchmark.queries {
         }
         
         [GlobalCleanup]
-        public void Cleanup() {
+        public async Task Cleanup() {
             monitor.SetPhase(BenchmarkPhase.GlobalCleanup);
             
             monitor.RecordNeo4jHeap();
             monitor.Dispose();
             monitor.Export();
-            driver.DisposeAsync().GetAwaiter().GetResult();
+            await driver.DisposeAsync();
         }
     }
 }

@@ -1,0 +1,161 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1/" /p:OutDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1/bin/Release/net9.0/" /p:OutputPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1/bin/Release/net9.0/" /p:PublishDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1/publish/" in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1
+// command took 1.08 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1/" /p:OutDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1/bin/Release/net9.0/" /p:OutputPath="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1/bin/Release/net9.0/" /p:PublishDir="/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1/publish/" --output "/home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1/bin/Release/net9.0/" in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1
+// command took 4.51 sec and exited with 0
+// ***** Done, took 00:00:05 (5.65 sec)   *****
+// Found 1 benchmarks:
+//   PsImport.Import: pg-medium-import(OutlierMode=DontRemove, InvocationCount=1, IterationCount=10, UnrollFactor=1, WarmupCount=2)
+
+// **************************
+// Benchmark: PsImport.Import: pg-medium-import(OutlierMode=DontRemove, InvocationCount=1, IterationCount=10, UnrollFactor=1, WarmupCount=2)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet benchmark_scr-pg-medium-import-1.dll --anonymousPipes 120 121 --benchmarkName benchmark_scr.benchmark.queries.PsImport.Import --job pg-medium-import --benchmarkId 0 in /home/musmike/genealogical-db-performance-analysis/benchmark_scr/BenchmarkDotNet.Bin/benchmark_scr-pg-medium-import-1/bin/Release/net9.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: pg-medium-import(OutlierMode=DontRemove, InvocationCount=1, IterationCount=10, UnrollFactor=1, WarmupCount=2)
+
+RAW DATASET: medium
+[EnvManager] Ensuring neo4j_db is stopped...
+[EnvManager] Ensuring postgres_db is running...
+[EnvManager] Waiting for PostgreSQL to become ready...
+[EnvManager] PostgreSQL environment ready.
+OverheadJitting  1: 1 op, 123814.00 ns, 123.8140 us/op
+WorkloadJitting  1: 1 op, 91205966.00 ns, 91.2060 ms/op
+
+OverheadWarmup   1: 1 op, 418.00 ns, 418.0000 ns/op
+OverheadWarmup   2: 1 op, 193.00 ns, 193.0000 ns/op
+OverheadWarmup   3: 1 op, 176.00 ns, 176.0000 ns/op
+OverheadWarmup   4: 1 op, 197.00 ns, 197.0000 ns/op
+OverheadWarmup   5: 1 op, 156.00 ns, 156.0000 ns/op
+OverheadWarmup   6: 1 op, 221.00 ns, 221.0000 ns/op
+OverheadWarmup   7: 1 op, 174.00 ns, 174.0000 ns/op
+
+OverheadActual   1: 1 op, 283.00 ns, 283.0000 ns/op
+OverheadActual   2: 1 op, 202.00 ns, 202.0000 ns/op
+OverheadActual   3: 1 op, 272.00 ns, 272.0000 ns/op
+OverheadActual   4: 1 op, 276.00 ns, 276.0000 ns/op
+OverheadActual   5: 1 op, 213.00 ns, 213.0000 ns/op
+OverheadActual   6: 1 op, 289.00 ns, 289.0000 ns/op
+OverheadActual   7: 1 op, 197.00 ns, 197.0000 ns/op
+OverheadActual   8: 1 op, 217.00 ns, 217.0000 ns/op
+OverheadActual   9: 1 op, 185.00 ns, 185.0000 ns/op
+OverheadActual  10: 1 op, 190.00 ns, 190.0000 ns/op
+OverheadActual  11: 1 op, 178.00 ns, 178.0000 ns/op
+OverheadActual  12: 1 op, 236.00 ns, 236.0000 ns/op
+OverheadActual  13: 1 op, 386.00 ns, 386.0000 ns/op
+OverheadActual  14: 1 op, 218.00 ns, 218.0000 ns/op
+OverheadActual  15: 1 op, 245.00 ns, 245.0000 ns/op
+OverheadActual  16: 1 op, 199.00 ns, 199.0000 ns/op
+OverheadActual  17: 1 op, 205.00 ns, 205.0000 ns/op
+OverheadActual  18: 1 op, 231.00 ns, 231.0000 ns/op
+OverheadActual  19: 1 op, 175.00 ns, 175.0000 ns/op
+OverheadActual  20: 1 op, 187.00 ns, 187.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 92972836.00 ns, 92.9728 ms/op
+WorkloadWarmup   2: 1 op, 92486984.00 ns, 92.4870 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 83936038.00 ns, 83.9360 ms/op
+WorkloadActual   2: 1 op, 85102802.00 ns, 85.1028 ms/op
+WorkloadActual   3: 1 op, 96003668.00 ns, 96.0037 ms/op
+WorkloadActual   4: 1 op, 92244369.00 ns, 92.2444 ms/op
+WorkloadActual   5: 1 op, 90442263.00 ns, 90.4423 ms/op
+WorkloadActual   6: 1 op, 90278530.00 ns, 90.2785 ms/op
+WorkloadActual   7: 1 op, 85009878.00 ns, 85.0099 ms/op
+WorkloadActual   8: 1 op, 89704098.00 ns, 89.7041 ms/op
+WorkloadActual   9: 1 op, 86056226.00 ns, 86.0562 ms/op
+WorkloadActual  10: 1 op, 92224366.00 ns, 92.2244 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 83935823.00 ns, 83.9358 ms/op
+WorkloadResult   2: 1 op, 85102587.00 ns, 85.1026 ms/op
+WorkloadResult   3: 1 op, 96003453.00 ns, 96.0035 ms/op
+WorkloadResult   4: 1 op, 92244154.00 ns, 92.2442 ms/op
+WorkloadResult   5: 1 op, 90442048.00 ns, 90.4420 ms/op
+WorkloadResult   6: 1 op, 90278315.00 ns, 90.2783 ms/op
+WorkloadResult   7: 1 op, 85009663.00 ns, 85.0097 ms/op
+WorkloadResult   8: 1 op, 89703883.00 ns, 89.7039 ms/op
+WorkloadResult   9: 1 op, 86056011.00 ns, 86.0560 ms/op
+WorkloadResult  10: 1 op, 92224151.00 ns, 92.2242 ms/op
+
+[Validator] Starting PostgreSQL pre-flight checks...
+[Validator] PostgreSQL pre-flight checks PASSED.
+// AfterAll
+// Benchmark Process 24273 has exited with code 0.
+
+Mean = 89.100 ms, StdErr = 1.245 ms (1.40%), N = 10, StdDev = 3.937 ms
+Min = 83.936 ms, Q1 = 85.341 ms, Median = 89.991 ms, Q3 = 91.779 ms, Max = 96.003 ms
+IQR = 6.438 ms, LowerFence = 75.684 ms, UpperFence = 101.435 ms
+ConfidenceInterval = [83.148 ms; 95.052 ms] (CI 99.9%), Margin = 5.952 ms (6.68% of Mean)
+Skewness = 0.16, Kurtosis = 1.58, MValue = 2
+
+// ** Remained 0 (0.0 %) benchmark(s) to run. Estimated finish 2026-05-07 17:11 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  home/musmike/genealogical-db-performance-analysis/results/medium/postgres/results/benchmark_scr.benchmark.queries.PsImport-report.csv
+  home/musmike/genealogical-db-performance-analysis/results/medium/postgres/results/benchmark_scr.benchmark.queries.PsImport-report-github.md
+  home/musmike/genealogical-db-performance-analysis/results/medium/postgres/results/benchmark_scr.benchmark.queries.PsImport-report.html
+  home/musmike/genealogical-db-performance-analysis/results/medium/postgres/results/benchmark_scr.benchmark.queries.PsImport-measurements.csv
+
+// * Detailed results *
+PsImport.Import: pg-medium-import(OutlierMode=DontRemove, InvocationCount=1, IterationCount=10, UnrollFactor=1, WarmupCount=2)
+Runtime = .NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 89.100 ms, StdErr = 1.245 ms (1.40%), N = 10, StdDev = 3.937 ms
+Min = 83.936 ms, Q1 = 85.341 ms, Median = 89.991 ms, Q3 = 91.779 ms, Max = 96.003 ms
+IQR = 6.438 ms, LowerFence = 75.684 ms, UpperFence = 101.435 ms
+ConfidenceInterval = [83.148 ms; 95.052 ms] (CI 99.9%), Margin = 5.952 ms (6.68% of Mean)
+Skewness = 0.16, Kurtosis = 1.58, MValue = 2
+-------------------- Histogram --------------------
+[82.597 ms ; 87.394 ms) | @@@@
+[87.394 ms ; 93.372 ms) | @@@@@
+[93.372 ms ; 98.402 ms) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, Linux Ubuntu 24.04.4 LTS (Noble Numbat)
+Intel Core i7-10700K CPU 3.80GHz (Max: 0.80GHz), 1 CPU, 16 logical and 8 physical cores
+.NET SDK 9.0.116
+  [Host]           : .NET 9.0.15 (9.0.15), X64 RyuJIT x86-64-v3
+  pg-medium-import : .NET 9.0.15 (9.0.15, 9.0.1526.17522), X64 RyuJIT x86-64-v3
+
+Job=pg-medium-import  OutlierMode=DontRemove  InvocationCount=1  
+IterationCount=10  UnrollFactor=1  WarmupCount=2  
+
+| Method | Mean     | Error    | StdDev   | Median   | Q1       | Q3       | Max      | Min      | P95      |
+|------- |---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|
+| Import | 89.10 ms | 5.952 ms | 3.937 ms | 89.99 ms | 85.34 ms | 91.78 ms | 96.00 ms | 83.94 ms | 94.31 ms |
+
+// * Warnings *
+MinIterationTime
+  PsImport.Import: pg-medium-import -> The minimum observed iteration time is 83.936ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Median : Value separating the higher half of all measurements (50th percentile)
+  Q1     : Quartile 1 (25th percentile)
+  Q3     : Quartile 3 (75th percentile)
+  Max    : Maximum
+  Min    : Minimum
+  P95    : Percentile 95
+  1 ms   : 1 Millisecond (0.001 sec)
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:14 (14.8 sec), executed benchmarks: 1
+
+Global total time: 00:00:20 (20.53 sec), executed benchmarks: 1
+// * Artifacts cleanup *
+Artifacts cleanup is finished

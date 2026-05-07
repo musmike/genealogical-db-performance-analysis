@@ -53,6 +53,8 @@ namespace benchmark_scr.benchmark.queries {
         public void IterationSetup() {
             monitor.NextIteration();
             monitor.SetPhase(BenchmarkPhase.IterationSetup);
+
+            driver.ExecuteScalar<int>("SELECT 1;");
             
             monitor.SetPhase(BenchmarkPhase.Measurement);
         }

@@ -180,6 +180,7 @@ mkdir -p "$REPO_ROOT/results"
 
     echo ""
     echo "--- Python Packages (analysis_scr venv) ---"
+    echo "pip version: $(sudo -u "$ACTUAL_USER" analysis_scr/.venv/bin/pip --version 2>/dev/null || echo 'N/A')"
     sudo -u "$ACTUAL_USER" analysis_scr/.venv/bin/pip show matplotlib pandas scipy 2>/dev/null \
         | grep -E "^(Name|Version):" \
         | paste - - \
@@ -187,6 +188,7 @@ mkdir -p "$REPO_ROOT/results"
 
     echo ""
     echo "--- Python Packages (data_generator venv) ---"
+    echo "pip version: $(sudo -u "$ACTUAL_USER" data_generator/.venv/bin/pip --version 2>/dev/null || echo 'N/A')"
     sudo -u "$ACTUAL_USER" data_generator/.venv/bin/pip show matplotlib 2>/dev/null \
         | grep -E "^(Name|Version):" \
         | paste - - \

@@ -10,5 +10,4 @@ docker exec neo4j_db \
   --relationships=WIFE_OF=/import/1k/neo4j/rels_wife_of.csv \
   --relationships=HAS_BIOLOGICAL_CHILD=/import/1k/neo4j/rels_has_biological_child.csv \
   --relationships=HAS_ADOPTED_CHILD=/import/1k/neo4j/rels_has_adopted_child.csv \
-  --relationships=HAS_FOSTER_CHILD=/import/1k/neo4j/rels_has_foster_child.csv \
-  1>/dev/null
+  --relationships=HAS_FOSTER_CHILD=/import/1k/neo4j/rels_has_foster_child.csv

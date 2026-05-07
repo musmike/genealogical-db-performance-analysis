@@ -23,6 +23,7 @@ The benchmarks were conducted using the following hardware and software stack. T
 | | **Neo4j.Driver (C#)** | 6.0.0 |
 | | **BenchmarkDotNet (C#)** | 0.15.8 |
 | | **Python** | 3.13.13 |
+| | **Pip** | 26.0.1 |
 | | **Matplotlib (Python)** | 3.10.1 |
 | | **Pandas (Python)** | 2.3.0 |
 | | **SciPy (Python)** | 1.15.1 |

@@ -1,6 +1,7 @@
 using System.Text.Json;
 using benchmark_scr.benchmark.readmodels;
 using Neo4j.Driver;
+using System.Text;
 
 namespace benchmark_scr.queries
 {
@@ -74,7 +75,37 @@ namespace benchmark_scr.queries
         private List<string[]> ReadCsv(string name) {
             var path = Path.Combine(_expectedDataDir, $"{name}.csv");
             if (!File.Exists(path)) return new List<string[]>();
-            return File.ReadAllLines(path).Skip(1).Select(l => l.Split(',')).ToList();
+            return File.ReadAllLines(path).Skip(1).Select(ParseCsvLine).ToList();
+        }
+
+        private static string[] ParseCsvLine(string line) {
+            var result = new List<string>();
+            var current = new StringBuilder();
+            bool inQuotes = false;
+
+            for (int i = 0; i < line.Length; i++) {
+                char c = line[i];
+
+                if (c == '\"') {
+                    if (inQuotes && i + 1 < line.Length && line[i + 1] == '\"') {
+                        current.Append('\"');
+                        i++;
+                    } else {
+                        inQuotes = !inQuotes;
+                    }
+                }
+                else if (c == ',' && !inQuotes) {
+                    result.Add(current.ToString());
+                    current.Clear();
+                }
+                else {
+                    current.Append(c);
+                }
+            }
+
+            result.Add(current.ToString());
+
+            return result.ToArray();
         }
 
         public async Task ValidatePostgresAsync(PostgresDriver pg) {

@@ -45,11 +45,10 @@ namespace benchmark_scr.benchmark.queries {
         }
 
         [GlobalCleanup]
-        public async Task Cleanup() {
-            BashRunner.RunAsync("bash", true, repo.Neo4jCreateDbScript)
-                .GetAwaiter().GetResult();
-            driver.ExecuteWriteCypherAsync(repo.Neo4jCreateIndexesCypher)
-                .GetAwaiter().GetResult();
+        public async Task Cleanup()
+        {
+            await BashRunner.RunAsync("bash", true, repo.Neo4jCreateDbScript);
+            await driver.ExecuteWriteCypherAsync(repo.Neo4jCreateIndexesCypher);
             DiskSizeCollector.ExportNeo4j(env, driver);
             await validator.ValidateNeo4jAsync(driver);
             await driver.DisposeAsync();

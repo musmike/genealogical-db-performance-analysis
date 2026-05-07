@@ -48,6 +48,12 @@ namespace benchmark_scr.benchmark.queries {
             driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = false);");
             driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = false);");
             driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = false);");
+
+            driver.ExecuteNonQuery(repo.PgScenario8);
+
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
+            driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
         }
         
         [IterationSetup]
@@ -55,11 +61,7 @@ namespace benchmark_scr.benchmark.queries {
             monitor.NextIteration();
             monitor.SetPhase(BenchmarkPhase.IterationSetup);
             
-            driver.ExecuteNonQuery(repo.PgScenario8);
-            
-            driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
-            driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
-            driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
+            driver.ExecuteScalar<int>("SELECT 1;");
             
             monitor.SetPhase(BenchmarkPhase.Measurement);
         }
@@ -81,6 +83,8 @@ namespace benchmark_scr.benchmark.queries {
         public void IterationCleanup() {
             monitor.SetPhase(BenchmarkPhase.IterationCleanup);
             
+            driver.ExecuteNonQuery(repo.PgScenario8);
+
             driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
             driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
             driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
@@ -94,7 +98,8 @@ namespace benchmark_scr.benchmark.queries {
             
             monitor.Dispose();
             monitor.Export();
-            
+
+            driver.ExecuteNonQuery(repo.PgScenario9);
             driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = true);");
             driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = true);");
             driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = true);");

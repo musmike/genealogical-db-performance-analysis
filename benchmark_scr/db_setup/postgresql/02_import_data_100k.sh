@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Import data using psql COPY command
 docker exec postgres_db psql -q -U user -d benchmarkdb -c "\
 CREATE TABLE IF NOT EXISTS people (
     id                INTEGER,

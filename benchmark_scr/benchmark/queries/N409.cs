@@ -9,7 +9,7 @@ namespace benchmark_scr.benchmark.queries {
         private readonly string path;
         private MemoryMonitor monitor = null!;
         private int expectedAffected;
-        private List<string> statements = null!;
+        private List<string> sc9_statements = null!;
 
         public N409() {
             path = Configg.basePath;
@@ -37,7 +37,7 @@ namespace benchmark_scr.benchmark.queries {
             monitor.Start();
             monitor.RecordNeo4jHeap();
             
-            statements = Neo4jDriver.SplitCypherStatements(repo.NeoScenario9);
+            sc9_statements = Neo4jDriver.SplitCypherStatements(repo.NeoScenario9);
             
             expectedAffected = repo.ExpectedCounts.GetValueOrDefault("Neo09", -1);
             
@@ -46,11 +46,14 @@ namespace benchmark_scr.benchmark.queries {
                     "Expected count for Neo09 is missing in configuration."
                 );
             }
+
+            driver.ExecuteWriteCypherAsync(repo.NeoScenario8)
+                .GetAwaiter().GetResult();
         }
 
         [Benchmark]
         public async Task<int> _N409() {
-            int objsCount = await driver.ExecuteWriteStatementsAsync(statements);
+            int objsCount = await driver.ExecuteWriteStatementsAsync(sc9_statements);
             
             if (objsCount != expectedAffected) {
                 throw new InvalidOperationException(
@@ -66,7 +69,7 @@ namespace benchmark_scr.benchmark.queries {
             monitor.NextIteration();
             monitor.SetPhase(BenchmarkPhase.IterationSetup);
             
-            driver.ExecuteWriteCypherAsync(repo.NeoScenario8)
+            driver.ExecuteWriteCypherAsync("RETURN 1;")
                 .GetAwaiter().GetResult();
             
             monitor.SetPhase(BenchmarkPhase.Measurement);
@@ -76,18 +79,23 @@ namespace benchmark_scr.benchmark.queries {
         public void IterationCleanup() {
             monitor.SetPhase(BenchmarkPhase.IterationCleanup);
             
+            driver.ExecuteWriteCypherAsync(repo.NeoScenario8)
+                .GetAwaiter().GetResult();
+
             monitor.RecordNeo4jHeap(); 
             MemoryMonitor.Stabilize();
         }
         
         [GlobalCleanup]
-        public void Cleanup() {
+        public async Task Cleanup() {
             monitor.SetPhase(BenchmarkPhase.GlobalCleanup);
             
             monitor.RecordNeo4jHeap();
+
+            await driver.ExecuteWriteCypherAsync(repo.NeoScenario9);
             monitor.Dispose();
             monitor.Export();
-            driver.DisposeAsync().GetAwaiter().GetResult();
+            await driver.DisposeAsync();
         }
     }
 }

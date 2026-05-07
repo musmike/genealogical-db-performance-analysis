@@ -2,7 +2,7 @@
 using Neo4j.Driver;
 
 namespace benchmark_scr.monitoring {
-    public enum BenchmarkPhase {
+    internal enum BenchmarkPhase {
         GlobalSetup = 0,
         IterationSetup = 1,
         Measurement = 2,
