@@ -5,6 +5,7 @@ from scipy import stats
 from scipy.stats import t as t_dist
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
+from matplotlib.ticker import MultipleLocator
 import os
 import re
 
@@ -40,6 +41,111 @@ def choose_display_unit(values):
         return "μs", 1e3
     else:
         return "ms", 1
+
+def tukey_upper_filter(values, k=1.5, return_mask=False):
+    arr = np.asarray(values, dtype=float)
+    arr = arr[np.isfinite(arr)]
+
+    if arr.size < 4:
+        mask = np.ones(arr.size, dtype=bool)
+        return (arr, mask) if return_mask else arr
+
+    q1 = np.percentile(arr, 25)
+    q3 = np.percentile(arr, 75)
+    iqr = q3 - q1
+
+    if iqr == 0:
+        mask = np.ones(arr.size, dtype=bool)
+        return (arr, mask) if return_mask else arr
+
+    upper_fence = q3 + k * iqr
+    mask = arr <= upper_fence
+    filtered = arr[mask]
+
+    return (filtered, mask) if return_mask else filtered
+
+def summarize_values(values):
+    filtered = tukey_upper_filter(values)
+    n = len(filtered)
+
+    if n == 0:
+        return {
+            "n": 0,
+            "mean": np.nan,
+            "error": np.nan,
+            "std": np.nan,
+        }
+
+    mean = np.mean(filtered)
+
+    std = np.std(filtered, ddof=1) if n > 1 else 0.0
+
+    error = std / np.sqrt(n) if n > 1 else 0.0
+
+    return {
+        "n": n,
+        "mean": mean,
+        "error": error,
+        "std": std,
+    }
+
+def remove_outliers_from_dataframe(df, value_column="mean", k=1.5):
+    values = df[value_column].to_numpy(dtype=float)
+
+    finite_mask = np.isfinite(values)
+    filtered_values, retained_mask = tukey_upper_filter(
+        values[finite_mask], k=k, return_mask=True
+    )
+
+    full_mask = np.zeros(len(df), dtype=bool)
+    full_mask[np.where(finite_mask)[0]] = retained_mask
+
+    return df.loc[full_mask].reset_index(drop=True)
+
+def load_raw_folder(pattern, n_files, value_column=4):
+    if value_column not in (4, 5):
+        raise ValueError("value_column must be 4 or 5 (1-based indexing).")
+
+    col_idx = value_column - 1
+    results = []
+
+    for i in range(1, n_files + 1):
+        path = Path(pattern.format(i))
+        if not path.exists():
+            continue
+
+        try:
+            df = pd.read_csv(path)
+
+            if col_idx >= df.shape[1]:
+                raise ValueError(
+                    f"{path.name} has only {df.shape[1]} columns; "
+                    f"cannot read column {value_column}."
+                )
+
+            series = pd.to_numeric(df.iloc[:, col_idx], errors="coerce").dropna()
+
+            if series.empty:
+                raise ValueError(
+                    f"No numeric values found in column {value_column}."
+                )
+
+            values_kb = series.to_numpy(dtype=float) / 1024.0
+
+            stats = summarize_values(values_kb)
+
+            results.append({
+                "file": path.name,
+                "n": stats["n"],
+                "mean": stats["mean"],
+                "error": stats["error"],
+                "std": stats["std"],
+            })
+
+        except Exception as e:
+            print(f"Failed to load {path}: {e}")
+
+    return pd.DataFrame(results)
 
 def parse_with_unit(value):
     if isinstance(value, (int, float)):
@@ -359,6 +465,229 @@ def plot_multi_benchmark_report(
     print(f"Saved {n_tasks} multi-task plots to {output_dir}/")
 
 
+def prepare_three_way_memory_plot_data(pg_df, neo4j_df, neo4j_heap_df):
+    min_len = min(len(pg_df), len(neo4j_df), len(neo4j_heap_df))
+
+    rows = []
+    for i in range(min_len):
+        rows.append({
+            "group": f"S0{i+1}",
+            "pg_mean": pg_df.iloc[i]["mean"],
+            "pg_error": pg_df.iloc[i]["error"],
+            "neo4j_mean": neo4j_df.iloc[i]["mean"],
+            "neo4j_error": neo4j_df.iloc[i]["error"],
+            "heap_mean": neo4j_heap_df.iloc[i]["mean"],
+            "heap_error": neo4j_heap_df.iloc[i]["error"],
+        })
+
+    return pd.DataFrame(rows)
+
+
+def plot_memory_scenarios_for_dataset(
+    pg_df,
+    neo4j_df,
+    neo4j_heap_df,
+    title,
+    output_path="../results/benchmark_plots",
+    dataset_name=None,
+    figsize=(12, 6),
+    fmt="png",
+    memory_limit_mib=2048
+):
+    plot_df = prepare_three_way_memory_plot_data(
+        pg_df,
+        neo4j_df,
+        neo4j_heap_df
+    )
+
+    if plot_df.empty:
+        raise ValueError("No data available for plotting.")
+
+
+    pg_means = plot_df["pg_mean"].to_numpy()
+    pg_errs = plot_df["pg_error"].to_numpy()
+
+    neo_means = plot_df["neo4j_mean"].to_numpy()
+    neo_errs = plot_df["neo4j_error"].to_numpy()
+
+    heap_means = plot_df["heap_mean"].to_numpy()
+    heap_errs = plot_df["heap_error"].to_numpy()
+
+    groups = plot_df["group"].tolist()
+    x = np.arange(len(groups))
+
+    # Narrow bars.
+    width = 0.18
+
+    fig, ax = plt.subplots(figsize=figsize)
+
+
+    bars_pg = ax.bar(
+        x - width,
+        pg_means,
+        width,
+        # yerr=pg_errs,
+        capsize=4,
+        color="orange",
+        label="PostgreSQL"
+    )
+
+    bars_neo = ax.bar(
+        x,
+        neo_means,
+        width,
+        # yerr=neo_errs,
+        capsize=4,
+        color="steelblue",
+        label="Neo4j"
+    )
+
+    bars_heap = ax.bar(
+        x + width,
+        heap_means,
+        width,
+        # yerr=heap_errs,
+        capsize=4,
+        color="seagreen",
+        label="Neo4j Heap"
+    )
+
+
+    memory_limit_kb = memory_limit_mib * 1024
+
+    ax.axhline(
+        memory_limit_kb,
+        linestyle=":",
+        linewidth=2,
+        color="black",
+        label=f"{memory_limit_mib} MiB"
+    )
+
+
+    def kb_to_mib(v):
+        return v / 1024.0
+
+    max_val = np.nanmax([
+        np.nanmax(pg_means),
+        np.nanmax(neo_means),
+        np.nanmax(heap_means)
+    ])
+
+    label_offset = max_val * 0.015
+
+    for bar_group in (bars_pg, bars_neo, bars_heap):
+        for bar in bar_group:
+            value_kb = bar.get_height()
+
+            if np.isnan(value_kb):
+                continue
+
+            ax.text(
+                bar.get_x() + bar.get_width() / 2,
+                value_kb + label_offset,
+                f"{kb_to_mib(value_kb):.1f} MiB",
+                ha="center",
+                va="bottom",
+                fontsize=8
+            )
+
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(groups)
+
+    tick_step_kb = 1000 * 1024  # 1000 MiB in KB
+
+    ax.yaxis.set_major_locator(MultipleLocator(tick_step_kb))
+    ax.yaxis.set_major_formatter(
+        lambda x, pos: f"{x / 1024:.0f}"
+    )
+
+    ax.set_ylabel("Memory usage [MiB]")
+    ax.set_title(title)
+
+    ax.grid(axis="y", alpha=0.3)
+
+
+    ax.set_ylim(top=ax.get_ylim()[1] * 1.12)
+
+
+    ax.legend(
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.12),
+        ncol=4,
+        frameon=True
+    )
+
+    plt.tight_layout()
+
+    if output_path is not None:
+        os.makedirs(output_path, exist_ok=True)
+
+        if dataset_name:
+            filename = os.path.join(
+                output_path,
+                f"{dataset_name}_memory_scenarios.{fmt}"
+            )
+        else:
+            filename = os.path.join(
+                output_path,
+                f"memory_scenarios.{fmt}"
+            )
+
+        plt.savefig(filename, dpi=300, bbox_inches="tight")
+
+    plt.show()
+
+    return plot_df
+
+
+def generate_memory_scenario_plots(
+    scenario_count=9,
+    output_path="../results/benchmark_plots",
+    fmt="png",
+    memory_limit_mib=2048
+):
+    results = {}
+
+    for dt in dataset_strings:
+        pth = f"{base_path}{dt}/memory/"
+
+
+        pg = load_raw_folder(
+            pth + "memory_Ps0{}.csv",
+            scenario_count,
+            value_column=4
+        )
+
+        n4 = load_raw_folder(
+            pth + "memory_N40{}.csv",
+            scenario_count,
+            value_column=5
+        )
+
+        n4h = load_raw_folder(
+            pth + "heap_N40{}.csv",
+            scenario_count,
+            value_column=4
+        )
+
+        title = f"{dt.capitalize() + " Dataset"} Memory Usage by Scenario"
+
+        plot_df = plot_memory_scenarios_for_dataset(
+            pg_df=pg,
+            neo4j_df=n4,
+            neo4j_heap_df=n4h,
+            title=title,
+            dataset_name=dt,
+            output_path=output_path,
+            fmt=fmt,
+            memory_limit_mib=memory_limit_mib
+        )
+
+        results[dt] = plot_df
+
+    return results
+
 dtrps = []
 for dt in dataset_strings:
     n4j = load_summary_folder(base_path + dt + "/neo4j/results/benchmark_scr.benchmark.queries.N40{}-report.csv", 9)
@@ -411,4 +740,51 @@ for dt in dataset_strings:
     })
     rp = generate_report(df)
     dtirps.append(rp)
+
+
 plot_multi_benchmark_report(dtirps, importDt=True, titleSuff="Mean Import Time")
+
+pg_dtmrps = []
+neo4j_dtmrps = []
+neo4jh_dtmrps = []
+for dt in dataset_strings:
+    pth = f"{base_path}{dt}/memory/"
+
+    pg = load_raw_folder(
+        pth + "memory_Ps0{}.csv",
+        9,
+        value_column=4
+    )
+
+    n4 = load_raw_folder(
+        pth + "memory_N40{}.csv",
+        9,
+        value_column=5
+    )
+
+    n4h = load_raw_folder(
+        pth + "heap_N40{}.csv",
+        9,
+        value_column=4
+    )
+    pg_st = summarize_values(pg["mean"].dropna().to_numpy())
+    n4_st = summarize_values(n4["mean"].dropna().to_numpy())
+    n4h_st = summarize_values(n4h["mean"].dropna().to_numpy())
+    pg_dtmrps.append({
+        "file": dt,
+        **pg_st
+    })
+    neo4j_dtmrps.append({
+        "file":dt,
+        **n4_st
+    })
+    neo4jh_dtmrps.append({
+        "file":dt,
+        **n4h_st
+    })
+
+pg_df = pd.DataFrame(pg_dtmrps)
+n4_df = pd.DataFrame(neo4j_dtmrps)
+n4h_df = pd.DataFrame(neo4jh_dtmrps)
+
+generate_memory_scenario_plots()
