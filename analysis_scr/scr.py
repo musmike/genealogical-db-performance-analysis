@@ -632,7 +632,6 @@ def plot_memory_scenarios_for_dataset(
 
         plt.savefig(filename, dpi=300, bbox_inches="tight")
 
-    plt.show()
 
     return plot_df
 
@@ -641,7 +640,7 @@ def generate_memory_scenario_plots(
     scenario_count=9,
     output_path="../results/benchmark_plots",
     fmt="png",
-    memory_limit_mib=2048
+    memory_limit_mib=3600
 ):
     results = {}
 
@@ -737,6 +736,125 @@ for dt in dataset_strings:
     rp = generate_report(df)
     dtirps.append(rp)
 
+def plot_disk_usage_comparison(
+    output_path="../results/benchmark_plots",
+    filename="disk_usage_comparison.png",
+    figsize=(9, 6)
+):
+    import os
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+
+
+    def bytes_to_mib(v):
+        return v / (1024.0 * 1024.0)
+
+
+    fig, axes = plt.subplots(
+        1,
+        len(dataset_strings),
+        figsize=figsize,
+        sharey=False
+    )
+
+
+
+    for i, (ax, size) in enumerate(zip(axes, dataset_strings)):
+
+        disk_dir = os.path.join(
+            base_path,
+            size,
+            "disk"
+        )
+
+        neo_path = os.path.join(
+            disk_dir,
+            "disk_size_neo4j.csv"
+        )
+
+        pg_path = os.path.join(
+            disk_dir,
+            "disk_size_postgres.csv"
+        )
+
+
+        neo_df = pd.read_csv(neo_path)
+        pg_df = pd.read_csv(pg_path)
+
+
+        neo_bytes = pd.to_numeric(
+            neo_df.iloc[0, 1],
+            errors="coerce"
+        )
+
+        pg_bytes = pd.to_numeric(
+            pg_df.iloc[0, 1],
+            errors="coerce"
+        )
+
+
+        neo_mib = bytes_to_mib(neo_bytes)
+        pg_mib = bytes_to_mib(pg_bytes)
+
+
+        labels = ["PostgreSQL", "Neo4j"]
+        values = [pg_mib, neo_mib]
+        colors = ["orange", "steelblue"]
+
+        bars = ax.bar(
+            labels,
+            values,
+            color=colors,
+            width=0.35
+        )
+
+
+        for bar, value in zip(bars, values):
+            ax.text(
+                bar.get_x() + bar.get_width() / 2,
+                value,
+                f"{value:.1f} MiB",
+                ha="center",
+                va="bottom",
+                fontsize=9,
+                fontweight="bold"
+            )
+
+
+        ax.set_title(f"{size.capitalize()} Dataset")
+        if i == 0:
+            ax.set_ylabel("Disk usage [MiB]")
+        ax.grid(axis="y", alpha=0.3)
+
+        ax.set_ylim(top=max(values) * 1.15)
+
+
+    fig.suptitle(
+        "Database Disk Usage Comparison",
+        fontsize=16,
+        fontweight="bold"
+    )
+
+    plt.tight_layout()
+
+
+    os.makedirs(output_path, exist_ok=True)
+
+    full_output = os.path.join(
+        output_path,
+        filename
+    )
+
+    plt.savefig(
+        full_output,
+        dpi=300,
+        bbox_inches="tight"
+    )
+
+
+    return full_output
+
 
 plot_multi_benchmark_report(dtirps, importDt=True, titleSuff="Mean Import Time")
 
@@ -784,3 +902,4 @@ n4_df = pd.DataFrame(neo4j_dtmrps)
 n4h_df = pd.DataFrame(neo4jh_dtmrps)
 
 generate_memory_scenario_plots()
+plot_disk_usage_comparison()
