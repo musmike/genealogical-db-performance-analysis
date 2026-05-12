@@ -220,17 +220,14 @@ def generate_report(df):
 
     df["pooled_std"] = df.apply(pooled_std, axis=1)
 
-    # t-student test
-    df["t_stat"] = (
-        df["mean_A"] - df["mean_B"]
-    ) / (df["pooled_std"] * np.sqrt(2 / df["n_A"]))
+    # welch's t-test
+    df["t_stat"] = df.apply(welch_t, axis=1)
+    df["df"] = df.apply(welch_df, axis=1)
 
-    df["df"] = df["n_A"] + df["n_B"] - 2
-
-    # p-value
     df["p_value"] = df.apply(
         lambda r: 2 * t_dist.sf(abs(r["t_stat"]), r["df"])
-        if not np.isnan(r["t_stat"]) else np.nan,
+        if np.isfinite(r["t_stat"]) and np.isfinite(r["df"])
+        else np.nan,
         axis=1
     )
 
@@ -492,7 +489,7 @@ def plot_memory_scenarios_for_dataset(
     dataset_name=None,
     figsize=(12, 6),
     fmt="png",
-    memory_limit_mib=2048
+    memory_limit_mib=3600
 ):
     plot_df = prepare_three_way_memory_plot_data(
         pg_df,
@@ -516,7 +513,6 @@ def plot_memory_scenarios_for_dataset(
     groups = plot_df["group"].tolist()
     x = np.arange(len(groups))
 
-    # Narrow bars.
     width = 0.18
 
     fig, ax = plt.subplots(figsize=figsize)
@@ -595,7 +591,7 @@ def plot_memory_scenarios_for_dataset(
     ax.set_xticks(x)
     ax.set_xticklabels(groups)
 
-    tick_step_kb = 1000 * 1024  # 1000 MiB in KB
+    tick_step_kb = 1000 * 1024
 
     ax.yaxis.set_major_locator(MultipleLocator(tick_step_kb))
     ax.yaxis.set_major_formatter(
