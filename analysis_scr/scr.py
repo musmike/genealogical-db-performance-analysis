@@ -288,6 +288,12 @@ def plot_multi_benchmark_report(
 
     os.makedirs(output_dir, exist_ok=True)
 
+    def fmt_sig(x):
+        if abs(x) < 10:
+            return f"{x:.1f}"
+        else:
+            return f"{x:g}"
+
     def _plot(font_offset=0, show_stats=True, suffix=""):
         n_pairs = len(dtrps)
         n_tasks = len(dtrps[0])
@@ -356,7 +362,7 @@ def plot_multi_benchmark_report(
 
                     ax.text(
                         x, y,
-                        f"{mean:.2f}",
+                        f"{mean:.1f}" if mean < 100 else f"{int(mean)}",
                         ha="left",
                         va="center",
                         fontsize=10 + font_offset,
@@ -418,7 +424,7 @@ def plot_multi_benchmark_report(
                     filename = os.path.join(output_dir, f"task_{i+1}_{suffix}.{fmt}")
 
                 plt.subplots_adjust(left=0.12, right=0.88)
-                plt.savefig(filename, dpi=300)
+                plt.savefig(filename, dpi=300 + 50 * font_offset)
                 plt.close()
 
     _plot(font_offset=0, show_stats=True, suffix="default")
@@ -458,6 +464,8 @@ def plot_memory_scenarios_for_dataset(
     memory_limit_mib=3600
 ):
 
+    
+
     def _plot(font_offset=0, suffix=""):
         plot_df = prepare_three_way_memory_plot_data(
             pg_df, neo4j_df, neo4j_heap_df
@@ -481,10 +489,26 @@ def plot_memory_scenarios_for_dataset(
             fig, ax = plt.subplots(figsize=figsize)
 
             bars_pg = ax.bar(x - width, pg_means, width, color="orange", label="PostgreSQL")
-            bars_neo = ax.bar(x, neo_means, width, color="steelblue", label="Neo4j")
+            bars_neo = ax.bar(x, neo_means, width, color="powderblue", label="Neo4j")
             bars_heap = ax.bar(x + width, heap_means, width, color="seagreen", label="Neo4j Heap")
-
+            def add_values(bar_container):
+                for bar in bar_container:
+                    h = bar.get_height()
+                    if np.isnan(h):
+                        continue
+                    ax.text(
+                        bar.get_x() + bar.get_width() / 2,
+                        h,
+                        f"{h / 1000:.0f}",
+                        ha="center",
+                        va="bottom",
+                        fontsize=9 + font_offset
+                    )
+            add_values(bars_pg)
+            add_values(bars_neo)
+            add_values(bars_heap)
             ax.set_xticks(x)
+            g_groups = [g[0] + g[2:] for g in groups]
             ax.set_xticklabels(groups)
 
             ax.set_ylabel("Memory usage [MB]")
