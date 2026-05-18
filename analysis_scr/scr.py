@@ -23,6 +23,7 @@ task_strings = ["Lowest Common Ancestor",
 
 dataset_strings = ["small", "medium", "large"]
 dataset_nums = ["1k", "10k", "100k"]
+dataset_nums_short = ["1000", "10000", "100000"]
 
 UNIT_TO_MS = {
     "ns": 1e-6,
@@ -130,7 +131,7 @@ def load_raw_folder(pattern, n_files, value_column=4):
                     f"No numeric values found in column {value_column}."
                 )
 
-            values_kb = series.to_numpy(dtype=float) / 1024.0
+            values_kb = series.to_numpy(dtype=float) / 1000.0
 
             stats = summarize_values(values_kb)
 
@@ -252,7 +253,7 @@ def generate_report(df):
             return "invalid"
 
         stat_sig = row["p_value"] < 0.05
-        practical_sig = abs(row["effect_size"]) > 0.2  # small effect threshold
+        practical_sig = abs(row["effect_size"]) > 0.2  
 
         if stat_sig and practical_sig:
             return "significant"
@@ -276,8 +277,6 @@ def print_summary(report_df):
 
 def plot_multi_benchmark_report(
     dtrps,
-    titlePref="",
-    titleSuff="",
     importDt=False,
     output_dir="../results/benchmark_plots",
     fmt="png"
@@ -289,177 +288,144 @@ def plot_multi_benchmark_report(
 
     os.makedirs(output_dir, exist_ok=True)
 
-    n_pairs = len(dtrps)
-    n_tasks = len(dtrps[0])
+    def _plot(font_offset=0, show_stats=True, suffix=""):
+        n_pairs = len(dtrps)
+        n_tasks = len(dtrps[0])
 
-    for i in range(n_tasks):
-        fig, ax = plt.subplots(figsize=(9, 5))
+        for i in range(n_tasks):
 
+            with plt.rc_context({
+                "font.size": plt.rcParams["font.size"] + font_offset
+            }):
 
-        flat_values = []
-        for rp in dtrps:
-            row = rp.iloc[i]
-            flat_values += [
-                row["mean_A"], row["mean_B"],
-                row["error_A"], row["error_B"]
-            ]
+                fig, ax = plt.subplots(figsize=(9, 5))
 
-        unit, scale = choose_display_unit(flat_values)
+                flat_values = []
+                for rp in dtrps:
+                    row = rp.iloc[i]
+                    flat_values += [
+                        row["mean_A"], row["mean_B"],
+                        row["error_A"], row["error_B"]
+                    ]
 
+                unit, scale = choose_display_unit(flat_values)
 
-        all_means, all_errs = [], []
-        y_positions, pair_centers = [], []
+                all_means, all_errs = [], []
+                y_positions, pair_centers = [], []
 
-        colors = {"n4j": "steelblue", "pst": "orange"}
+                colors = {"n4j": "steelblue", "pst": "orange"}
 
-        inner_gap = 0.85
-        group_gap = 2.4
-        y = 0
+                inner_gap = 0.85
+                group_gap = 2.4
+                y = 0
 
-        for p in range(n_pairs):
-            row = dtrps[p].iloc[i]
+                for p in range(n_pairs):
+                    row = dtrps[p].iloc[i]
 
-            mean_A = row["mean_A"] * scale
-            mean_B = row["mean_B"] * scale
-            err_A = row["error_A"] * scale
-            err_B = row["error_B"] * scale
+                    mean_A = row["mean_A"] * scale
+                    mean_B = row["mean_B"] * scale
+                    err_A = row["error_A"] * scale
+                    err_B = row["error_B"] * scale
 
-            y_A = y
-            y_B = y + inner_gap
+                    y_A = y
+                    y_B = y + inner_gap
 
-            y_positions += [y_A, y_B]
-            pair_centers.append((y_A + y_B) / 2)
+                    y_positions += [y_A, y_B]
+                    pair_centers.append((y_A + y_B) / 2)
 
-            all_means += [mean_A, mean_B]
-            all_errs += [err_A, err_B]
+                    all_means += [mean_A, mean_B]
+                    all_errs += [err_A, err_B]
 
-            y += group_gap
+                    y += group_gap
 
-
-        bars = ax.barh(
-            y_positions,
-            all_means,
-            xerr=all_errs,
-            capsize=6,
-            color=[colors["n4j"], colors["pst"]] * n_pairs
-        )
-
-
-        ax.set_xscale("symlog", linthresh=max(all_means) * 0.01)
-
-
-        ax.margins(x=0.23, y=0.15)
-        ax.set_xlim(left=0)
-
-        for bar, mean, err in zip(bars, all_means, all_errs):
-
-            x = bar.get_width() + err + (bar.get_width() * 0.16)
-            y = bar.get_y() + bar.get_height() / 2
-
-            ax.text(
-                x,
-                y,
-                f"{mean:.2f} {unit}",
-                ha="left",
-                va="center",
-                fontsize=9,
-                fontweight="bold"
-            )
-
-
-        for idx, center in enumerate(pair_centers):
-            ax.text(
-                -0.05,
-                center,
-                dataset_nums[idx],
-                transform=ax.get_yaxis_transform(),
-                ha="right",
-                va="center",
-                fontsize=9,
-                fontweight="bold",
-                alpha=0.85
-            )
-
-        for p in range(n_pairs):
-            row = dtrps[p].iloc[i]
-            base = p * 2
-
-            bar_A = bars[base]
-            bar_B = bars[base + 1]
-
-            y_top = max( bar_A.get_y() + bar_A.get_height(), bar_B.get_y() + bar_B.get_height() ) + 0.25
-
-            x_center = 0.5
-
-            if np.isnan(row["p_value"]):
-                text = "p-value: n/a"
-            else:
-                text = f"p-value= {row['p_value']:.2g}, Hedges' g= {row["effect_size"]:.2f}"
-
-            ax.text(
-                x_center,
-                y_top,
-                text,
-                transform=ax.get_yaxis_transform(),
-                ha="center",
-                va="bottom",
-                fontsize=9,
-                bbox=dict(
-                    facecolor="white",
-                    edgecolor="none",
-                    alpha=0.7,
-                    boxstyle="round,pad=0.2"
+                bars = ax.barh(
+                    y_positions,
+                    all_means,
+                    xerr=all_errs,
+                    capsize=6,
+                    color=[colors["n4j"], colors["pst"]] * n_pairs
                 )
-            )
 
-        for p in range(n_pairs):
-            row = dtrps[p].iloc[i]
-            base = p * 2
+                ax.set_xscale("symlog", linthresh=max(all_means) * 0.01)
+                ax.margins(x=0.23, y=0.15)
+                ax.set_xlim(left=0)
 
-            bar_A = bars[base]
-            bar_B = bars[base + 1]
+                for bar, mean, err in zip(bars, all_means, all_errs):
+                    x = bar.get_width() + err + (bar.get_width() * 0.16)
+                    y = bar.get_y() + bar.get_height() / 2
 
-            if row["significance"] == "significant":
-                if row["winner"] == "A":
-                    bar_A.set_edgecolor("green")
-                    bar_A.set_linewidth(2)
-                    bar_B.set_edgecolor("red")
-                    bar_B.set_linewidth(2)
+                    ax.text(
+                        x, y,
+                        f"{mean:.2f}",
+                        ha="left",
+                        va="center",
+                        fontsize=10 + font_offset,
+                        fontweight="bold"
+                    )
+
+                if show_stats:
+                    for p in range(n_pairs):
+                        row = dtrps[p].iloc[i]
+                        base = p * 2
+
+                        bar_A = bars[base]
+                        bar_B = bars[base + 1]
+
+                        y_top = max(
+                            bar_A.get_y() + bar_A.get_height(),
+                            bar_B.get_y() + bar_B.get_height()
+                        ) + 0.25
+
+                        if np.isnan(row["p_value"]):
+                            text = "p-value: n/a"
+                        else:
+                            text = f"p-value= {row['p_value']:.2g}, Hedges' g= {row['effect_size']:.2f}"
+
+                        ax.text(
+                            0.5,
+                            y_top,
+                            text,
+                            transform=ax.get_yaxis_transform(),
+                            ha="center",
+                            va="bottom",
+                            fontsize=10 + font_offset,
+                            bbox=dict(
+                                facecolor="white",
+                                edgecolor="none",
+                                alpha=0.7,
+                                boxstyle="round,pad=0.2"
+                            )
+                        )
+
+                extra_space = group_gap * 0.5
+
+                ax.set_ylim(-2, y + extra_space)
+                ax.set_ylabel("Dataset's number of people")
+                ax.set_yticks(pair_centers)
+                ax.set_yticklabels(dataset_nums_short)
+                ax.set_xlabel(f"Execution time [{unit}]")
+
+                legend_elements = [
+                    Patch(facecolor=colors["pst"], label="PostgreSQL"),
+                    Patch(facecolor=colors["n4j"], label="Neo4j"),
+                ]
+
+                ax.legend(handles=legend_elements, loc="lower right", fontsize=7)
+
+                if importDt:
+                    filename = os.path.join(output_dir, f"import_{suffix}.{fmt}")
                 else:
-                    bar_B.set_edgecolor("green")
-                    bar_B.set_linewidth(2)
-                    bar_A.set_edgecolor("red")
-                    bar_A.set_linewidth(2)
+                    filename = os.path.join(output_dir, f"task_{i+1}_{suffix}.{fmt}")
 
-        extra_space = group_gap * 0.5
+                plt.subplots_adjust(left=0.12, right=0.88)
+                plt.savefig(filename, dpi=300)
+                plt.close()
 
-        ax.set_ylim(-2, y + extra_space)
-        ax.set_yticks([])
-        ax.set_xlabel(f"Execution time [{unit}]")
+    _plot(font_offset=0, show_stats=True, suffix="default")
 
-        legend_elements = [
-            Patch(facecolor=colors["pst"], label="PostgreSQL"),
-            Patch(facecolor=colors["n4j"], label="Neo4j"),
-            Patch(facecolor="white", edgecolor="green", linewidth=2, label="Faster (significant)"),
-            Patch(facecolor="white", edgecolor="red", linewidth=2, label="Slower (significant)")
-        ]
-            
-        ax.legend(handles=legend_elements, loc="lower right", fontsize=7)
+    _plot(font_offset=2, show_stats=False, suffix="scaled")
 
-        if importDt:
-            ax.set_title(f"{titlePref} Data {titleSuff}")
-            filename = os.path.join(output_dir, f"import_.{fmt}")
-        else:
-            ax.set_title(f"{titlePref} {task_strings[i]} {titleSuff}")
-            filename = os.path.join(output_dir, f"task_{i+1}.{fmt}")
-
-
-        plt.subplots_adjust(left=0.12, right=0.88)
-
-        plt.savefig(filename, dpi=300)
-        plt.close()
-
-    print(f"Saved {n_tasks} multi-task plots to {output_dir}/")
+    print(f"Saved scaled + default plots to {output_dir}/")
 
 
 def prepare_three_way_memory_plot_data(pg_df, neo4j_df, neo4j_heap_df):
@@ -491,149 +457,63 @@ def plot_memory_scenarios_for_dataset(
     fmt="png",
     memory_limit_mib=3600
 ):
-    plot_df = prepare_three_way_memory_plot_data(
-        pg_df,
-        neo4j_df,
-        neo4j_heap_df
-    )
 
-    if plot_df.empty:
-        raise ValueError("No data available for plotting.")
+    def _plot(font_offset=0, suffix=""):
+        plot_df = prepare_three_way_memory_plot_data(
+            pg_df, neo4j_df, neo4j_heap_df
+        )
 
+        if plot_df.empty:
+            raise ValueError("No data available for plotting.")
 
-    pg_means = plot_df["pg_mean"].to_numpy()
-    pg_errs = plot_df["pg_error"].to_numpy()
+        with plt.rc_context({
+            "font.size": plt.rcParams["font.size"] + font_offset
+        }):
 
-    neo_means = plot_df["neo4j_mean"].to_numpy()
-    neo_errs = plot_df["neo4j_error"].to_numpy()
+            pg_means = plot_df["pg_mean"].to_numpy()
+            neo_means = plot_df["neo4j_mean"].to_numpy()
+            heap_means = plot_df["heap_mean"].to_numpy()
 
-    heap_means = plot_df["heap_mean"].to_numpy()
-    heap_errs = plot_df["heap_error"].to_numpy()
+            groups = plot_df["group"].tolist()
+            x = np.arange(len(groups))
+            width = 0.18
 
-    groups = plot_df["group"].tolist()
-    x = np.arange(len(groups))
+            fig, ax = plt.subplots(figsize=figsize)
 
-    width = 0.18
+            bars_pg = ax.bar(x - width, pg_means, width, color="orange", label="PostgreSQL")
+            bars_neo = ax.bar(x, neo_means, width, color="steelblue", label="Neo4j")
+            bars_heap = ax.bar(x + width, heap_means, width, color="seagreen", label="Neo4j Heap")
 
-    fig, ax = plt.subplots(figsize=figsize)
+            ax.set_xticks(x)
+            ax.set_xticklabels(groups)
 
-
-    bars_pg = ax.bar(
-        x - width,
-        pg_means,
-        width,
-        # yerr=pg_errs,
-        capsize=4,
-        color="orange",
-        label="PostgreSQL"
-    )
-
-    bars_neo = ax.bar(
-        x,
-        neo_means,
-        width,
-        # yerr=neo_errs,
-        capsize=4,
-        color="steelblue",
-        label="Neo4j"
-    )
-
-    bars_heap = ax.bar(
-        x + width,
-        heap_means,
-        width,
-        # yerr=heap_errs,
-        capsize=4,
-        color="seagreen",
-        label="Neo4j Heap"
-    )
-
-
-    memory_limit_kb = memory_limit_mib * 1024
-
-    ax.axhline(
-        memory_limit_kb,
-        linestyle=":",
-        linewidth=2,
-        color="black",
-        label=f"{memory_limit_mib} MiB"
-    )
-
-
-    def kb_to_mib(v):
-        return v / 1024.0
-
-    max_val = np.nanmax([
-        np.nanmax(pg_means),
-        np.nanmax(neo_means),
-        np.nanmax(heap_means)
-    ])
-
-    label_offset = max_val * 0.015
-
-    for bar_group in (bars_pg, bars_neo, bars_heap):
-        for bar in bar_group:
-            value_kb = bar.get_height()
-
-            if np.isnan(value_kb):
-                continue
-
-            ax.text(
-                bar.get_x() + bar.get_width() / 2,
-                value_kb + label_offset,
-                f"{kb_to_mib(value_kb):.1f} MiB",
-                ha="center",
-                va="bottom",
-                fontsize=8
+            ax.set_ylabel("Memory usage [MB]")
+            ax.set_xlabel("Scenarios")
+            ax.grid(axis="y", alpha=0.3)
+            tick_step_kb = 1000 * 1000
+            ax.yaxis.set_major_locator(MultipleLocator(tick_step_kb))
+            ax.yaxis.set_major_formatter( lambda x, pos: f"{x / 1000:.0f}" )
+            ax.legend(
+                loc="upper center",
+                bbox_to_anchor=(0.5, -0.12),
+                ncol=4,
+                frameon=True
             )
 
+            plt.tight_layout()
 
-    ax.set_xticks(x)
-    ax.set_xticklabels(groups)
+            if output_path:
+                os.makedirs(output_path, exist_ok=True)
+                name = dataset_name or "memory"
+                filename = os.path.join(output_path, f"{name}_{suffix}.{fmt}")
+                plt.savefig(filename, dpi=300, bbox_inches="tight")
 
-    tick_step_kb = 1000 * 1024
+            plt.close()
 
-    ax.yaxis.set_major_locator(MultipleLocator(tick_step_kb))
-    ax.yaxis.set_major_formatter(
-        lambda x, pos: f"{x / 1024:.0f}"
-    )
+    _plot(0, "default")
+    _plot(2, "scaled")
 
-    ax.set_ylabel("Memory usage [MiB]")
-    ax.set_title(title)
-
-    ax.grid(axis="y", alpha=0.3)
-
-
-    ax.set_ylim(top=ax.get_ylim()[1] * 1.12)
-
-
-    ax.legend(
-        loc="upper center",
-        bbox_to_anchor=(0.5, -0.12),
-        ncol=4,
-        frameon=True
-    )
-
-    plt.tight_layout()
-
-    if output_path is not None:
-        os.makedirs(output_path, exist_ok=True)
-
-        if dataset_name:
-            filename = os.path.join(
-                output_path,
-                f"{dataset_name}_memory_scenarios.{fmt}"
-            )
-        else:
-            filename = os.path.join(
-                output_path,
-                f"memory_scenarios.{fmt}"
-            )
-
-        plt.savefig(filename, dpi=300, bbox_inches="tight")
-
-
-    return plot_df
+    return None
 
 
 def generate_memory_scenario_plots(
@@ -709,7 +589,7 @@ for dt in dataset_strings:
     dtrps.append(rp)
 
 
-plot_multi_benchmark_report(dtrps, titleSuff="Query Mean Execution Time")
+plot_multi_benchmark_report(dtrps)
 
 dtirps = []
 for dt in dataset_strings:
@@ -748,7 +628,7 @@ def plot_disk_usage_comparison(
 
 
     def bytes_to_mib(v):
-        return v / (1024.0 * 1024.0)
+        return v / (1000.0 * 1000.0)
 
 
     fig, axes = plt.subplots(
@@ -814,7 +694,7 @@ def plot_disk_usage_comparison(
             ax.text(
                 bar.get_x() + bar.get_width() / 2,
                 value,
-                f"{value:.1f} MiB",
+                f"{value:.1f}",
                 ha="center",
                 va="bottom",
                 fontsize=9,
@@ -824,7 +704,7 @@ def plot_disk_usage_comparison(
 
         ax.set_title(f"{size.capitalize()} Dataset")
         if i == 0:
-            ax.set_ylabel("Disk usage [MiB]")
+            ax.set_ylabel("Disk usage [MB]")
         ax.grid(axis="y", alpha=0.3)
 
         ax.set_ylim(top=max(values) * 1.15)
@@ -856,7 +736,7 @@ def plot_disk_usage_comparison(
     return full_output
 
 
-plot_multi_benchmark_report(dtirps, importDt=True, titleSuff="Mean Import Time")
+plot_multi_benchmark_report(dtirps, importDt=True)
 
 pg_dtmrps = []
 neo4j_dtmrps = []
