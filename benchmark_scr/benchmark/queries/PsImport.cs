@@ -50,6 +50,11 @@ namespace benchmark_scr.benchmark.queries {
             driver.Open();
             driver.ExecuteNonQuery(repo.PgCreateIndexesSql);
             DiskSizeCollector.ExportPostgres(env, driver);
+
+            driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = true);");
+            driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = true);");
+            driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = true);");
+
             await validator.ValidatePostgresAsync(driver);
             driver.Dispose();
         }

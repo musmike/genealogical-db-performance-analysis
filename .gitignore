@@ -10,7 +10,6 @@
 
 results/**/*.md
 results/**/*.html
-results/**/*.png
 
 
 # =========================
@@ -85,4 +84,3 @@ Thumbs.db
 
 /benchmark_scr/obj
 /analysis_scr/.venv
-/**/*.log

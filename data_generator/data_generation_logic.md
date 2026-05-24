@@ -29,7 +29,7 @@ Running this script performs a Monte Carlo simulation over thousands of combinat
 1. **Growth Shape:** Rejects scenarios with sudden population drops (>4%) or extended stagnation periods.
 2. **Graph Depth:** Ensures the maximum tree depth matches constraints.
 3. **LCA Target:** Verifies that at least one pair of individuals satisfies the required Lowest Common Ancestor distance.
-4. **Ancestor Discovery (Scenario 04):** Validates the degree of pedigree collapse by ensuring the simulation yields a sufficient number of distinct biological ancestors (e.g., >800 for 10 generations, and >8000 for 15 generations).
+4. **Ancestor Discovery (Scenario 04):** Validates the degree of pedigree collapse by ensuring the simulation yields a sufficient number of distinct biological ancestors (e.g., >700 for 10 generations, and >10000 for 20 generations).
 
 When an optimal configuration is found, the script outputs the exact Python code to paste into `config.py`.
 
@@ -62,7 +62,7 @@ simulating realistic record sparsity.
 ## Simulation Engine (`engine.py`)
 
 The simulation advances year-by-year from `start_year` until the target
-population count is reached or exceeded.
+population count is reached.
 
 ### Founding generation & Immigration
 `initial_pairs` married couples are created at `start_year`. 

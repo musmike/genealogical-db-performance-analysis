@@ -846,29 +846,37 @@ class AnalyticsEngine:
         else:
             dataset_label = "100k"
 
-        plt.figure(figsize=(10, 6))
-        plt.plot(years, alive_counts, color=colors.get(self.target_population, "tab:grey"), linewidth=3)
-        plt.title(f"Population Growth: {dataset_label.upper()} Target", fontsize=16, fontweight='bold')
-        plt.xlabel("Simulation Year", fontsize=12)
-        plt.ylabel("Living Population", fontsize=12)
-        plt.grid(True, which="both", linestyle='--', alpha=0.7)
-        plt.tight_layout()
+        configs = [
+            {"suffix": "", "figsize": (10, 6), "title_fs": 16, "label_fs": 12, "tick_fs": 10, "lw": 3, "dpi": 300},
+            {"suffix": "_paper", "figsize": (4.5, 3), "title_fs": 10, "label_fs": 8, "tick_fs": 7, "lw": 1.5,
+             "dpi": 600}
+        ]
 
-        output_image = os.path.join(self.output_dir, f"population_growth.png")
-        plt.savefig(output_image, dpi=300)
-        print(f"[{self.target_population}] Graph saved to: {output_image}")
-        plt.close()
+        for cfg in configs:
+            plt.figure(figsize=cfg["figsize"])
+            plt.plot(years, alive_counts, color=colors.get(self.target_population, "tab:grey"), linewidth=cfg["lw"])
+            plt.xlabel("Simulation Year", fontsize=cfg["label_fs"])
+            plt.ylabel("Living Population", fontsize=cfg["label_fs"])
+            plt.xticks(fontsize=cfg["tick_fs"])
+            plt.yticks(fontsize=cfg["tick_fs"])
+            plt.grid(True, which="both", linestyle='--', alpha=0.7)
+            plt.tight_layout()
+
+            output_image = os.path.join(self.output_dir, f"population_growth{cfg['suffix']}.png")
+            plt.savefig(output_image, dpi=cfg["dpi"])
+            print(f"[{self.target_population}] Graph saved to: {output_image}")
+            plt.close()
 
     def _plot_age_distribution_living(self):
         """Generates a Population Pyramid chart split by sex."""
 
         def format_pct(x):
             if x < 1e-9:
-                return "0%"
+                return "0"
             elif x < 0.1:
-                return "<0.1%"
+                return "<0.1"
             else:
-                return f"{x:.1f}%"
+                return f"{x:.1f}"
 
         males = Counter()
         females = Counter()
@@ -899,50 +907,60 @@ class AnalyticsEngine:
         y_pos = range(len(bins))
         labels = [f"{b}-{b + 4}" if b < 100 else "100+" for b in bins]
 
-        plt.figure(figsize=(10, 8))
-
-        plt.barh(y_pos, [-m for m in m_pct], height=0.95, color='steelblue')
-        plt.barh(y_pos, f_pct, height=0.95, color='lightcoral')
-
         dataset_label = f"{self.target_population // 1000}k" if self.target_population >= 1000 else str(
             self.target_population)
-        plt.title(f"Population Pyramid (Living): {dataset_label.upper()}", fontsize=16, fontweight='bold', pad=30)
-
         max_pct = max(max(m_pct) if m_pct else 0, max(f_pct) if f_pct else 0)
         limit = max_pct + (max_pct * 0.25) + 0.1
-        plt.xlim(-limit, limit)
 
-        ax = plt.gca()
-        ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{abs(x):.0f}%"))
+        configs = [
+            {"suffix": "", "figsize": (10, 8), "title_fs": 16, "label_fs": 12, "tick_fs": 10, "gender_fs": 14,
+             "pct_fs": 9, "pad": 30, "dpi": 300},
+            {"suffix": "_paper", "figsize": (4.5, 4), "title_fs": 10, "label_fs": 8, "tick_fs": 7, "gender_fs": 9,
+             "pct_fs": 6, "pad": 15, "dpi": 600}
+        ]
 
-        ax.spines['top'].set_visible(False)
-        ax.spines['right'].set_visible(False)
-        ax.spines['left'].set_visible(True)
-        ax.tick_params(axis='y', length=0)
+        for cfg in configs:
+            plt.figure(figsize=cfg["figsize"])
 
-        plt.yticks(y_pos, labels, fontsize=10)
-        plt.xlabel("Population Percentage (%)", fontsize=12)
+            plt.barh(y_pos, [-m for m in m_pct], height=0.95, color='steelblue')
+            plt.barh(y_pos, f_pct, height=0.95, color='lightcoral')
 
-        plt.text(-limit / 2, len(bins), 'Male', ha='center', va='bottom', fontsize=14)
-        plt.text(limit / 2, len(bins), 'Female', ha='center', va='bottom', fontsize=14)
+            plt.xlim(-limit, limit)
 
-        for i, (m, f) in enumerate(zip(m_pct, f_pct)):
-            if m > 0:
-                label = format_pct(m)
-                if label:
-                    plt.text(-m - (limit * 0.02), i, label, va='center', ha='right', fontsize=9)
+            ax = plt.gca()
+            ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{abs(x):.0f}"))
 
-            if f > 0:
-                label = format_pct(f)
-                if label:
-                    plt.text(f + (limit * 0.02), i, label, va='center', ha='left', fontsize=9)
+            ax.spines['top'].set_visible(False)
+            ax.spines['right'].set_visible(False)
+            ax.spines['left'].set_visible(True)
+            ax.tick_params(axis='y', length=0)
+            ax.tick_params(axis='x', labelsize=cfg["tick_fs"])
 
-        plt.tight_layout()
+            plt.yticks(y_pos, labels, fontsize=cfg["tick_fs"])
 
-        output_image = os.path.join(self.output_dir, "population_pyramid.png")
-        plt.savefig(output_image, dpi=300)
-        print(f"[{self.target_population}] Graph saved to: {output_image}")
-        plt.close()
+            plt.xlabel("Population Percentage (%)", fontsize=cfg["label_fs"])
+            plt.ylabel("Age Group (Years)", fontsize=cfg["label_fs"])
+
+            plt.text(-limit / 2, len(bins), 'Male', ha='center', va='bottom', fontsize=cfg["gender_fs"])
+            plt.text(limit / 2, len(bins), 'Female', ha='center', va='bottom', fontsize=cfg["gender_fs"])
+
+            for i, (m, f) in enumerate(zip(m_pct, f_pct)):
+                if m > 0:
+                    label = format_pct(m)
+                    if label:
+                        plt.text(-m - (limit * 0.02), i, label, va='center', ha='right', fontsize=cfg["pct_fs"])
+
+                if f > 0:
+                    label = format_pct(f)
+                    if label:
+                        plt.text(f + (limit * 0.02), i, label, va='center', ha='left', fontsize=cfg["pct_fs"])
+
+            plt.tight_layout()
+
+            output_image = os.path.join(self.output_dir, f"population_pyramid{cfg['suffix']}.png")
+            plt.savefig(output_image, dpi=cfg["dpi"])
+            print(f"[{self.target_population}] Graph saved to: {output_image}")
+            plt.close()
 
     def _plot_generated_per_quarter(self):
         """Generates a Spindle Diagram to visualize the width of the genealogical tree."""
@@ -960,33 +978,38 @@ class AnalyticsEngine:
 
         dataset_label = f"{self.target_population // 1000}k" if self.target_population >= 1000 else str(
             self.target_population)
-
-        plt.figure(figsize=(10, 10))
-        plt.barh(y=quarters, width=counts, height=25, left=lefts, color='darkseagreen', edgecolor='black', alpha=0.8)
-
-        plt.title(f"Genealogical Tree Width per Generation: {dataset_label.upper()}", fontsize=16, fontweight='bold')
-        plt.ylabel("Generation (Simulation Year)", fontsize=12)
-        plt.xlabel("New Individuals Generated", fontsize=12)
-
         max_c = max(counts)
         padding = (max_c / 2) * 1.08
-        plt.xlim(-padding, padding)
-
         step = 25 if len(quarters) <= 20 else (100 if len(quarters) > 40 else 50)
-        plt.yticks(range(quarters[0], quarters[-1] + 25, step))
 
-        ax = plt.gca()
-        ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{abs(int(x))}"))
-        ax.invert_yaxis()
+        configs = [
+            {"suffix": "", "figsize": (10, 10), "title_fs": 16, "label_fs": 12, "tick_fs": 10, "dpi": 300},
+            {"suffix": "_paper", "figsize": (4.5, 4.5), "title_fs": 10, "label_fs": 8, "tick_fs": 7, "dpi": 600}
+        ]
 
-        plt.axvline(0, color='black', linewidth=1, linestyle='--')
-        plt.grid(axis='x', linestyle='--', alpha=0.5)
-        plt.tight_layout()
+        for cfg in configs:
+            plt.figure(figsize=cfg["figsize"])
+            plt.barh(y=quarters, width=counts, height=25, left=lefts, color='darkseagreen', edgecolor='black',
+                     alpha=0.8)
+            plt.ylabel("Generation (Simulation Year)", fontsize=cfg["label_fs"])
+            plt.xlabel("New Individuals Generated", fontsize=cfg["label_fs"])
 
-        output_image = os.path.join(self.output_dir, "tree_width_generations.png")
-        plt.savefig(output_image, dpi=300)
-        print(f"[{self.target_population}] Graph saved to: {output_image}")
-        plt.close()
+            plt.xlim(-padding, padding)
+            plt.yticks(range(quarters[0], quarters[-1] + 25, step), fontsize=cfg["tick_fs"])
+            plt.xticks(fontsize=cfg["tick_fs"])
+
+            ax = plt.gca()
+            ax.xaxis.set_major_formatter(FuncFormatter(lambda x, pos: f"{abs(int(x))}"))
+            ax.invert_yaxis()
+
+            plt.axvline(0, color='black', linewidth=1, linestyle='--')
+            plt.grid(axis='x', linestyle='--', alpha=0.5)
+            plt.tight_layout()
+
+            output_image = os.path.join(self.output_dir, f"tree_width_generations{cfg['suffix']}.png")
+            plt.savefig(output_image, dpi=cfg["dpi"])
+            print(f"[{self.target_population}] Graph saved to: {output_image}")
+            plt.close()
 
     def _plot_network_topology(self, max_depth: int, depths: dict, bio_children_map: dict):
         """Generates a full network topology graph (nodes and edges per generation)."""
@@ -1038,48 +1061,62 @@ class AnalyticsEngine:
                         lines.append([p_coord, coords[child_id]])
                         line_colors.append(color)
 
-        plt.figure(figsize=(12, 10))
-        ax = plt.gca()
-
         if self.target_population <= 1000:
-            line_alpha, line_width, node_size = 0.5, 0.5, 5
+            base_alpha, base_width, base_node = 0.5, 0.5, 5
         elif self.target_population <= 10000:
-            line_alpha, line_width, node_size = 0.15, 0.2, 1.0
+            base_alpha, base_width, base_node = 0.15, 0.2, 1.0
         else:
-            line_alpha, line_width, node_size = 0.02, 0.05, 0.05
-
-        lc = LineCollection(lines, colors=line_colors, linewidths=line_width, alpha=line_alpha, zorder=1)
-        ax.add_collection(lc)
-
-        x_vals = [coords[pid][0] for pid in coords]
-        y_vals = [coords[pid][1] for pid in coords]
-        ax.scatter(x_vals, y_vals, color='black', s=node_size, zorder=2)
-
-        for d in range(1, vis_max_depth + 1):
-            count = len(gen_nodes.get(d, []))
-            if count > 0:
-                ax.text(0.96, d, f"n={count}", va='center', ha='left', fontsize=9, color='black')
-
-        ax.invert_yaxis()
-
-        step = 5 if vis_max_depth > 25 else 1
-        ax.set_yticks(range(1, vis_max_depth + 1, step))
-        ax.set_ylabel("Generation", fontsize=12)
-        ax.set_xticks([])
-
-        for spine in ax.spines.values():
-            spine.set_visible(False)
-        ax.tick_params(axis='y', length=0)
+            base_alpha, base_width, base_node = 0.02, 0.05, 0.05
 
         dataset_label = f"{self.target_population // 1000}k" if self.target_population >= 1000 else str(
             self.target_population)
-        plt.title(f"Full Pedigree Network Topology: {dataset_label.upper()}", fontsize=16, fontweight='bold')
 
-        plt.tight_layout()
-        output_image = os.path.join(self.output_dir, "network_topology.png")
-        plt.savefig(output_image, dpi=300)
-        print(f"[{self.target_population}] Graph saved to: {output_image}")
-        plt.close()
+        configs = [
+            {"suffix": "", "figsize": (12, 10), "title_fs": 16, "label_fs": 12, "tick_fs": 10, "text_fs": 9,
+             "scale": 1.0, "dpi": 300},
+            {"suffix": "_paper", "figsize": (5.5, 4.5), "title_fs": 10, "label_fs": 8, "tick_fs": 7, "text_fs": 5,
+             "scale": 0.6, "dpi": 600}
+        ]
+
+        for cfg in configs:
+            plt.figure(figsize=cfg["figsize"])
+            ax = plt.gca()
+
+            lw = base_width * cfg["scale"]
+            ns = base_node * cfg["scale"]
+
+            lc = LineCollection(lines, colors=line_colors, linewidths=lw, alpha=base_alpha, zorder=1)
+            ax.add_collection(lc)
+
+            x_vals = [coords[pid][0] for pid in coords]
+            y_vals = [coords[pid][1] for pid in coords]
+            ax.scatter(x_vals, y_vals, color='black', s=ns, zorder=2)
+
+            ax.text(0.96, 1.01, "n = number of individuals", transform=ax.get_xaxis_transform(),
+                    va='bottom', ha='left', fontsize=cfg["text_fs"], color='dimgray', style='italic')
+
+            for d in range(1, vis_max_depth + 1):
+                count = len(gen_nodes.get(d, []))
+                if count > 0:
+                    ax.text(0.96, d, f"n={count}", va='center', ha='left', fontsize=cfg["text_fs"], color='black')
+
+            ax.invert_yaxis()
+
+            step = 5 if vis_max_depth > 25 else 1
+            ax.set_yticks(range(1, vis_max_depth + 1, step))
+            ax.tick_params(axis='y', labelsize=cfg["tick_fs"])
+            ax.set_ylabel("Generation", fontsize=cfg["label_fs"])
+            ax.set_xticks([])
+
+            for spine in ax.spines.values():
+                spine.set_visible(False)
+            ax.tick_params(axis='y', length=0)
+
+            plt.tight_layout()
+            output_image = os.path.join(self.output_dir, f"network_topology{cfg['suffix']}.png")
+            plt.savefig(output_image, dpi=cfg["dpi"])
+            print(f"[{self.target_population}] Graph saved to: {output_image}")
+            plt.close()
 
     def _update_scenario_files(
             self,

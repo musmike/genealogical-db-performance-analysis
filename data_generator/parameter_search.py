@@ -170,14 +170,14 @@ def check_lca_exists(people, families, target_lca):
 def check_ancestors_target(people, families, target_pop):
     """
     Checks if there is an individual with enough distinct biological ancestors.
-    Depth limits: 1k (5 gen -> max 62), 10k (10 gen -> max 2046), 100k (15 gen -> max 65534).
+    Depth limits: 1k (5 gen -> max 62), 10k (10 gen -> max 2046), 100k (20 gen -> max 2097150).
     """
     if target_pop == 1000:
         target_depth, required_count = 5, 58
     elif target_pop == 10000:
         target_depth, required_count = 10, 700
     else:
-        target_depth, required_count = 15, 7000
+        target_depth, required_count = 20, 10000
 
     youngest_ids = sorted(people.keys(), key=lambda x: people[x].birth_date, reverse=True)[:200]
 

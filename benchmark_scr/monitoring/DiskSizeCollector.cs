@@ -7,9 +7,6 @@ namespace benchmark_scr.monitoring {
             driver.ExecuteNonQuery("VACUUM (ANALYZE) people;");
             driver.ExecuteNonQuery("VACUUM (ANALYZE) families;");
             driver.ExecuteNonQuery("VACUUM (ANALYZE) family_children;");
-            driver.ExecuteNonQuery("ALTER TABLE people SET (autovacuum_enabled = true);");
-            driver.ExecuteNonQuery("ALTER TABLE families SET (autovacuum_enabled = true);");
-            driver.ExecuteNonQuery("ALTER TABLE family_children SET (autovacuum_enabled = true);");
             driver.ExecuteNonQuery("CHECKPOINT;");
             
             uint oid = driver.ExecuteScalar<uint>("SELECT oid FROM pg_database WHERE datname = 'benchmarkdb';");
@@ -36,6 +33,8 @@ namespace benchmark_scr.monitoring {
 
         public static void ExportNeo4j(string dataset, Neo4jDriver driver) {
             driver.ExecuteWriteCypherAsync("CALL db.awaitIndexes();")
+                .GetAwaiter().GetResult();
+            driver.ExecuteWriteCypherAsync("CALL db.checkpoint();")
                 .GetAwaiter().GetResult();
             
             var psi = new ProcessStartInfo {
