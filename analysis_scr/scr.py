@@ -440,7 +440,7 @@ def prepare_three_way_memory_plot_data(pg_df, neo4j_df, neo4j_heap_df):
     rows = []
     for i in range(min_len):
         rows.append({
-            "group": f"S0{i+1}",
+            "group": f"S{i+1}",
             "pg_mean": pg_df.iloc[i]["mean"],
             "pg_error": pg_df.iloc[i]["error"],
             "neo4j_mean": neo4j_df.iloc[i]["mean"],
