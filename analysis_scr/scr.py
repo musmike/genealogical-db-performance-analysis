@@ -23,7 +23,7 @@ task_strings = ["Lowest Common Ancestor",
 
 dataset_strings = ["small", "medium", "large"]
 dataset_nums = ["1k", "10k", "100k"]
-dataset_nums_short = ["1000", "10000", "100000"]
+dataset_nums_short = ["1,000", "10,000", "100,000"]
 
 UNIT_TO_MS = {
     "ns": 1e-6,
