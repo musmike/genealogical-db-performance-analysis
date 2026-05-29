@@ -467,6 +467,8 @@ def plot_memory_scenarios_for_dataset(
     
 
     def _plot(font_offset=0, suffix=""):
+
+
         plot_df = prepare_three_way_memory_plot_data(
             pg_df, neo4j_df, neo4j_heap_df
         )
@@ -488,9 +490,9 @@ def plot_memory_scenarios_for_dataset(
 
             fig, ax = plt.subplots(figsize=figsize)
 
-            bars_pg = ax.bar(x - width, pg_means, width, color="orange", label="PostgreSQL")
+            bars_pg = ax.bar(x - width - 0.05, pg_means, width, color="orange", label="PostgreSQL")
             bars_neo = ax.bar(x, neo_means, width, color="powderblue", label="Neo4j")
-            bars_heap = ax.bar(x + width, heap_means, width, color="seagreen", label="Neo4j Heap")
+            bars_heap = ax.bar(x + width + 0.05, heap_means, width, color="seagreen", label="Neo4j Heap")
             def add_values(bar_container):
                 for bar in bar_container:
                     h = bar.get_height()
@@ -525,7 +527,9 @@ def plot_memory_scenarios_for_dataset(
             )
 
             plt.tight_layout()
-
+            ymin, ymax = ax.get_ylim()
+            padding = 0.05 * (ymax - ymin)
+            ax.set_ylim(ymin, ymax + padding)
             if output_path:
                 os.makedirs(output_path, exist_ok=True)
                 name = dataset_name or "memory"
@@ -535,7 +539,7 @@ def plot_memory_scenarios_for_dataset(
             plt.close()
 
     _plot(0, "default")
-    _plot(2, "scaled")
+    _plot(8, "scaled")
 
     return None
 
