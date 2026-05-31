@@ -66,8 +66,7 @@ def tukey_upper_filter(values, k=1.5, return_mask=False):
     return (filtered, mask) if return_mask else filtered
 
 def summarize_values(values):
-    filtered = tukey_upper_filter(values)
-    n = len(filtered)
+    n = len(values)
 
     if n == 0:
         return {
@@ -77,9 +76,9 @@ def summarize_values(values):
             "std": np.nan,
         }
 
-    mean = np.mean(filtered)
+    mean = np.mean(values)
 
-    std = np.std(filtered, ddof=1) if n > 1 else 0.0
+    std = np.std(values, ddof=1) if n > 1 else 0.0
 
     error = std / np.sqrt(n) if n > 1 else 0.0
 
@@ -89,19 +88,6 @@ def summarize_values(values):
         "error": error,
         "std": std,
     }
-
-def remove_outliers_from_dataframe(df, value_column="mean", k=1.5):
-    values = df[value_column].to_numpy(dtype=float)
-
-    finite_mask = np.isfinite(values)
-    filtered_values, retained_mask = tukey_upper_filter(
-        values[finite_mask], k=k, return_mask=True
-    )
-
-    full_mask = np.zeros(len(df), dtype=bool)
-    full_mask[np.where(finite_mask)[0]] = retained_mask
-
-    return df.loc[full_mask].reset_index(drop=True)
 
 def load_raw_folder(pattern, n_files, value_column=4):
     if value_column not in (4, 5):
@@ -124,7 +110,38 @@ def load_raw_folder(pattern, n_files, value_column=4):
                     f"cannot read column {value_column}."
                 )
 
-            series = pd.to_numeric(df.iloc[:, col_idx], errors="coerce").dropna()
+
+            iterations = pd.to_numeric(df.iloc[:, 0], errors="coerce")
+
+
+            df = df[(iterations >= 11) & (iterations <= 41)].copy()
+
+            type_col = df.iloc[:, 2].astype(str)
+
+            selected_parts = []
+
+            for iteration in range(11, 42):
+                iter_df = df[df.iloc[:, 0] == iteration]
+
+                if iter_df.empty:
+                    continue
+
+
+                measurements = iter_df[iter_df.iloc[:, 2].astype(str) == "Measurement"]
+
+
+                abc_rows = iter_df[iter_df.iloc[:, 2].astype(str) == "IterationCleanup"]
+                first_abc = abc_rows.iloc[[0]] if not abc_rows.empty else iter_df.iloc[0:0]
+
+                selected_parts.append(measurements)
+                selected_parts.append(first_abc)
+
+            selected = pd.concat(selected_parts, ignore_index=True)
+
+            series = pd.to_numeric(
+                selected.iloc[:, col_idx],
+                errors="coerce"
+            ).dropna()
 
             if series.empty:
                 raise ValueError(
@@ -178,12 +195,19 @@ def load_summary_folder(pattern, n):
         try:
             df = pd.read_csv(path)
             row = df.iloc[0]
+
+            n_samp = int(row["IterationCount"])
+            mean = parse_with_unit(row["Mean"])
+            std = parse_with_unit(row["StdDev"])
+            tcrit = t_dist.ppf(0.975, n_samp -1)
+            ci95 = tcrit * std / np.sqrt(n_samp)
+
             results.append({
                 "file": path.name,
-                "n": int(row["IterationCount"]),
-                "mean": parse_with_unit(row["Mean"]),
-                "error": parse_with_unit(row["Error"]),
-                "std": parse_with_unit(row["StdDev"])
+                "n": n_samp,
+                "mean": mean,
+                "error": ci95,
+                "std": std
             })
         except Exception as e:
             print(f"Failed to load {path}: {e}")
@@ -289,10 +313,7 @@ def plot_multi_benchmark_report(
     os.makedirs(output_dir, exist_ok=True)
 
     def fmt_sig(x):
-        if abs(x) < 10:
-            return f"{x:.1f}"
-        else:
-            return f"{x:g}"
+        return f"{x:.1f}"
 
     def _plot(font_offset=0, show_stats=True, suffix=""):
         n_pairs = len(dtrps)
@@ -316,7 +337,7 @@ def plot_multi_benchmark_report(
 
                 unit, scale = choose_display_unit(flat_values)
 
-                all_means, all_errs = [], []
+                all_means, all_errs, all_stds = [], [], []
                 y_positions, pair_centers = [], []
 
                 colors = {"n4j": "steelblue", "pst": "orange"}
@@ -332,6 +353,8 @@ def plot_multi_benchmark_report(
                     mean_B = row["mean_B"] * scale
                     err_A = row["error_A"] * scale
                     err_B = row["error_B"] * scale
+                    std_A = row["std_A"] * scale
+                    std_B = row["std_B"] * scale
 
                     y_A = y
                     y_B = y + inner_gap
@@ -341,28 +364,32 @@ def plot_multi_benchmark_report(
 
                     all_means += [mean_A, mean_B]
                     all_errs += [err_A, err_B]
+                    all_stds += [std_A, std_B]
 
                     y += group_gap
 
                 bars = ax.barh(
                     y_positions,
                     all_means,
-                    xerr=all_errs,
+                    xerr=all_stds,
                     capsize=6,
                     color=[colors["n4j"], colors["pst"]] * n_pairs
                 )
 
-                ax.set_xscale("symlog", linthresh=max(all_means) * 0.01)
+                if i in (1, 2, 7, 8):
+                    ax.set_xscale("linear")
+                else:
+                    ax.set_xscale("symlog", linthresh=max(all_means) * 0.01)
                 ax.margins(x=0.23, y=0.15)
                 ax.set_xlim(left=0)
 
                 for bar, mean, err in zip(bars, all_means, all_errs):
-                    x = bar.get_width() + err + (bar.get_width() * 0.16)
+                    x = bar.get_width() + err*1.2 + (bar.get_width() * 0.16)
                     y = bar.get_y() + bar.get_height() / 2
 
                     ax.text(
                         x, y,
-                        f"{mean:.1f}" if mean < 100 else f"{int(mean)}",
+                        f"{mean:.1f}" if not importDt else f"{int(mean)}",
                         ha="left",
                         va="center",
                         fontsize=10 + font_offset,
@@ -394,7 +421,7 @@ def plot_multi_benchmark_report(
                             transform=ax.get_yaxis_transform(),
                             ha="center",
                             va="bottom",
-                            fontsize=10 + font_offset,
+                            fontsize=13 + font_offset,
                             bbox=dict(
                                 facecolor="white",
                                 edgecolor="none",
@@ -406,9 +433,13 @@ def plot_multi_benchmark_report(
                 extra_space = group_gap * 0.5
 
                 ax.set_ylim(-2, y + extra_space)
-                ax.set_ylabel("Dataset's number of people")
+                ax.set_ylabel("Dataset's number of people", labelpad= 20)
                 ax.set_yticks(pair_centers)
-                ax.set_yticklabels(dataset_nums_short)
+                ax.set_yticklabels(dataset_nums_short,
+                                   rotation=90,
+                                   va="center",
+                                   ha="center")
+                ax.tick_params(axis="y", pad=12, labelsize = font_offset + 9)
                 ax.set_xlabel(f"Execution time [{unit}]")
 
                 legend_elements = [
@@ -416,20 +447,20 @@ def plot_multi_benchmark_report(
                     Patch(facecolor=colors["n4j"], label="Neo4j"),
                 ]
 
-                ax.legend(handles=legend_elements, loc="lower right", fontsize=7)
+                ax.legend(handles=legend_elements, loc="lower right", fontsize= 13 if font_offset > 0 else 7)
 
                 if importDt:
                     filename = os.path.join(output_dir, f"import_{suffix}.{fmt}")
                 else:
                     filename = os.path.join(output_dir, f"task_{i+1}_{suffix}.{fmt}")
 
-                plt.subplots_adjust(left=0.12, right=0.88)
+                plt.tight_layout()
                 plt.savefig(filename, dpi=300 + 50 * font_offset)
                 plt.close()
 
     _plot(font_offset=0, show_stats=True, suffix="default")
 
-    _plot(font_offset=2, show_stats=False, suffix="scaled")
+    _plot(font_offset=7, show_stats=False, suffix="scaled")
 
     print(f"Saved scaled + default plots to {output_dir}/")
 
