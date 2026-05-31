@@ -114,13 +114,13 @@ def load_raw_folder(pattern, n_files, value_column=4):
             iterations = pd.to_numeric(df.iloc[:, 0], errors="coerce")
 
 
-            df = df[(iterations >= 11) & (iterations <= 41)].copy()
+            df = df[(iterations >= 12) & (iterations <= 41)].copy()
 
             type_col = df.iloc[:, 2].astype(str)
 
             selected_parts = []
 
-            for iteration in range(11, 42):
+            for iteration in range(12, 42):
                 iter_df = df[df.iloc[:, 0] == iteration]
 
                 if iter_df.empty:
@@ -384,7 +384,7 @@ def plot_multi_benchmark_report(
                 ax.set_xlim(left=0)
 
                 for bar, mean, err in zip(bars, all_means, all_errs):
-                    x = bar.get_width() + err*1.2 + (bar.get_width() * 0.16)
+                    x = bar.get_width() + err + (bar.get_width() * 0.05)
                     y = bar.get_y() + bar.get_height() / 2
 
                     ax.text(
