@@ -371,7 +371,7 @@ def plot_multi_benchmark_report(
                 bars = ax.barh(
                     y_positions,
                     all_means,
-                    xerr=all_stds,
+                    xerr=all_errs,
                     capsize=6,
                     color=[colors["n4j"], colors["pst"]] * n_pairs
                 )
