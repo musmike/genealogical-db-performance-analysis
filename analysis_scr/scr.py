@@ -389,7 +389,7 @@ def plot_multi_benchmark_report(
 
                     ax.text(
                         x, y,
-                        f"{mean:.1f}" if not importDt else f"{int(mean)}",
+                        f"{mean:.1f}" if not importDt else f"{round(mean)}",
                         ha="left",
                         va="center",
                         fontsize=10 + font_offset,
